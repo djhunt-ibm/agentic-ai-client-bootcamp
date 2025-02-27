@@ -1,1 +1,1 @@
-# agentic-ai-client-bootcamp
+# watsonx Agentic AI Bootcamp
