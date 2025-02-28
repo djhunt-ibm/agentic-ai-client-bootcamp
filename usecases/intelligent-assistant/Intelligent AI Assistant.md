@@ -69,8 +69,91 @@ You have now built your first agent! This agent can answer questions and will ra
 
 ### Define a custom tool
 
-Next we will add a custom tool to our agent, that is, a tool calling an API, for which no tool already exists in the catalog. In our example, we call an API providing current traffic information for a specific location, using a service called 
-...
+Next we will add a custom tool to our agent, that is, a tool calling an API, for which no tool already exists in the catalog. In our example, we call an API providing current traffic information for a specific location, using a service called here.com.
+
+These elements must be specified when defining a custom tool for your agent:
+- a name
+- the Tool description. This is important, because it is this description the agent uses to determine if using the tool will help in creating the answer to the request.
+- the Input JSON Schema. This defines the input parameters that the agent passes into the tool when calling it. In our sample case, it is the longitude and the latitude of the location we are retrieving traffic information for. Here is what it looks like in our case:
+```
+{
+ "longitude": {
+  "title": "Longitude",
+  "description": "The longitude of the location",
+  "type": "string"
+ },
+ "latitude": {
+  "title": "Latitude",
+  "description": "The latitude of the location",
+  "type": "string"
+ }
+}
+```
+- the Python code. This implements the tool. Note that you cannot define any extra packages to be installed and imported, in other words, it has to be 'vanilla' Python code at this time. This is the Python code we use for the custom tool returning traffic information:
+<div> <pre>
+<code id="codeblock2">
+def send_get_request(longitude, latitude):
+
+  json_data = {}
+  param_in = f"circle:{latitude},{longitude};r=10000"
+  param_locationReferencing = "none"
+
+  api_key = "5LKs1vJzQqVVHBcJIWyNlg7yBqJNDBcBAn--YYBbC04"
+  api_url = "https://data.traffic.hereapi.com/v7/incidents"
+        
+  requests = __import__("requests")
+
+    
+    # Construct the query parameters
+  params = {
+        "in": param_in,
+        "locationReferencing": param_locationReferencing,
+        "apiKey": api_key
+  }
+
+  try:
+        # Send GET request with parameters
+        response = requests.get(api_url, params=params, headers={"Accept": "application/json"})
+
+        # Check if the request was successful
+        if response.status_code == 200:
+            json_data =  response.json()  # Return JSON response
+        else:
+            return {"error": f"Request failed with status {response.status_code}", "details": response.text}
+
+  except requests.RequestException as e:
+        return {"error": "Request exception occurred", "details": str(e)}
+
+  structured_data = {"incidents": []}
+
+    # Check if "results" exist in the JSON
+  if "results" in json_data:
+        for result in json_data["results"]:
+            # Extract description if it exists
+            if "incidentDetails" in result and "description" in result["incidentDetails"]:
+                structured_data["incidents"].append(result["incidentDetails"]["description"]["value"])
+
+  return structured_data
+</code>
+</pre><button onclick="copyToClipboard()">Copy</button></div>
+
+<script>
+function copyToClipboard() {
+  const code = document.getElementById("code-block").innerText;
+  navigator.clipboard.writeText(code).then(() => {
+    alert("Copied to clipboard!");
+  }).catch(err => {
+    console.error("Error copying text: ", err);
+  });
+}
+</script>
+
+Here is what your custom tool definition looks like when it's all done. And again, feel free to explore, possibly using a different API call to create your own custom tool.
+
+![alt text](images/image8.png)
+
+After you hit Save, we are ready to test our agent with the new custom tool. In the preview window, you can type in a question about traffic at a random location, for example: "Tell me about the traffic situation around the Sydney Opera House".
+
 
 ## watsonx Orchestrate
 
