@@ -191,6 +191,25 @@ When you select the deployed agent and go to the Code tab, you see the Python co
 
 ![alt text](images/image15.png)
 
+## CodeEngine (to be removed later)
+
+Currently, the deployed agent cannot directly be configured as an external agent in watsonx Orchestrate. Instead, we need to deploy an endpoint that satifies requests from watsonx Orchestrate and converts them into the interface required by the agent. We will use the CodeEngine service for this. Instructions for how to do it can be found [here](https://github.com/watson-developer-cloud/watsonx-orchestrate-developer-toolkit/tree/main/external_agent/examples/agent_builder).
+
+Note that this extra step is expected to be removed soon.
+
 ## watsonx Orchestrate
 
-In the second stage of building the solution, we build the actual assistant the end user interacts with, and configure it to use the agent we built in Step 1.
+In the second stage of building the solution, we build the actual assistant the end user interacts with, and configure it to use the agent we built and deployed above.
+
+In the watsonx Orchestrate console, select `AI agent configuration` and go to the `Agents` tab.
+
+![alt text](iamges/image16.png)
+
+Click on `Add agent` at the top right of the page. Enter information about your agent. Make sure you also add a meaningful description of what your agent does, since that will help the "supervisory agent" to identify your agent as suitable when being asked about traffic details.
+Your instructor will give you the endpoint URL you enter. It should end in `/chat/completions`. 
+
+![alt text](images/image17.png)
+
+Now let's test it out! Select `Chat` from the hambuerger menu at the top left corner of the screen. Then enter a question about traffic information, which should be forwarded to our dpeloyed agent.
+
+![alt text](images/image18.png)
