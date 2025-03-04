@@ -11,7 +11,7 @@ In this bootcamp, you will build and deploy an Agentic AI application prototype 
 # Agenda
 
 ## 1. Learning
-Find the materials for:
+Here you can find the materials for:
 - Introduction to agents
 - watsonx.ai fundamentals and demo
 - watsonx.orchestrate fundamentals and demo
