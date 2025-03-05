@@ -25,8 +25,4 @@ Select a usecase from the following list:
 
 ## 3. Implementation
 
-The core of the bootcamp is the hands-on implementation of an enterprise usecase. You can use the [hands-on lab guides for implementing a pre-defined usecase](https://github.ibm.com/skol/agentic-ai-client-bootcamp/tree/main/usecases). Or if you're bringing your own usecase, you can leverage some of the existing Agentic AI assets.
-
-The client can either bring their own usecase or select from the 
-
-Or work with our team on bringing to life your own usecase
+The core of the bootcamp is the hands-on implementation of an enterprise usecase. You can use the [hands-on lab guides for implementing a pre-defined usecase](https://github.ibm.com/skol/agentic-ai-client-bootcamp/tree/main/usecases). Or if you're bringing your own usecase, you can leverage some of the existing [Agentic AI assets](https://github.ibm.com/skol/agentic-ai-client-bootcamp/tree/main/usecases/byo-usecase).
