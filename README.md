@@ -18,10 +18,10 @@ Here you can find the materials for:
 
 ## 2. Usecase definition
 Select a usecase from the following list:
-- Intelligent assistant
-- HR automation
-- Business automation
-- Bring your own usecase
+- [Intelligent assistant](https://github.ibm.com/skol/agentic-ai-client-bootcamp/tree/main/usecases/intelligent-assistant)
+- [HR automation](https://github.ibm.com/skol/agentic-ai-client-bootcamp/tree/main/usecases/ask-hr)
+- [Business automation](https://github.ibm.com/skol/agentic-ai-client-bootcamp/tree/main/usecases/business-automation)
+- [Bring your own usecase](https://github.ibm.com/skol/agentic-ai-client-bootcamp/tree/main/usecases/byo-usecase)
 
 ## 3. Implementation
 
