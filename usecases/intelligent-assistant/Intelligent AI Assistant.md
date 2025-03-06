@@ -191,6 +191,208 @@ When you select the deployed agent and go to the Code tab, you see the Python co
 
 ![alt text](images/image15.png)
 
+## CodeEngine (to be removed later)
+
+Currently, the deployed agent cannot directly be configured as an external agent in watsonx Orchestrate. Instead, we need to deploy an endpoint that satifies requests from watsonx Orchestrate and converts them into the interface required by the agent. We will use the CodeEngine service for this. Instructions for how to do it can be found [here](https://github.com/watson-developer-cloud/watsonx-orchestrate-developer-toolkit/tree/main/external_agent/examples/agent_builder).
+
+Note that this extra step is expected to be removed soon.
+
 ## watsonx Orchestrate
 
-In the second stage of building the solution, we build the actual assistant the end user interacts with, and configure it to use the agent we built in Step 1.
+In the second stage of building the solution, we build the actual assistant the end user interacts with, and configure it to use the agent we built and deployed above.
+
+In the watsonx Orchestrate console, select `AI agent configuration` and go to the `Agents` tab.
+
+![alt text](iamges/image16.png)
+
+Click on `Add agent` at the top right of the page. Enter information about your agent. Make sure you also add a meaningful description of what your agent does, since that will help the "supervisory agent" to identify your agent as suitable when being asked about traffic details.
+Your instructor will give you the endpoint URL you enter. It should end in `/chat/completions`. 
+
+![alt text](images/image17.png)
+
+Now let's test it out! Select `Chat` from the hambuerger menu at the top left corner of the screen. Then enter a question about traffic information, which should be forwarded to our dpeloyed agent.
+
+![alt text](images/image18.png)
+
+Now let's add more assistants to the system, to handle other inquries and requests that may come from the Warehouse Manager user. In the watsonx Orchestrate console, select `AI assistant builder`. Then select the `View all assistants link to open up the list of all assistants you have defined in your system.
+
+![alt text](images/image19.png)
+
+Now click on `Create assistant`. In this section, we will create the Dock Manager assistant that can answer questions about the current status of product arrivals and departures at the warehouse dock. 
+Go ahead and give your assistant a name, for example, "Dock Manager". It is always a good idea to add a description, too. 
+
+![alt text](images/image20.png)
+
+Click on `Create assistant`. Once the new assistand has been created, you will see a view with lots of information that you should spend some time exploring, if you are not already familiar with it. Most importantly, it gives you an overview of the architecure of your assistant, and you will note that a lot of default behavior has already been filled in. 
+
+![alt text](images/image21.png)
+
+Note that there are a number of actions the assistant can take, based on the input it receives. For general questions where no suitable action can be found, it will either route the question to a Large Language Model (a small IBM Granite model by default) or search for content in, say, a Vector Database, if one has been configured. 
+If all else fails, the assistant will offer to connect the user with a Live agent, however, by default none is configured.
+
+You might also see an option at the top of the screen offering you to enable watsonx generative AI features. Feel free to select the link and turn those on. This will allow the system to collect information from the user as needed, without the need to explicitly configure it.
+
+![alt text](images/image22.png)
+
+Back in the assistant builder screen, note how you can expand a menu on the left of the screen. Go to the `Actions` page.
+
+![alt text](images/image23.png)
+
+Here we will create our first action. Click on `Create Action`.
+
+![alt text](images/image24.png)
+
+First, we enter a question that the user might ask, and which will trigger this action to be invoked. We want to create a "Dock Manager" assistant, so the question we enter here could be something like "What's the current status of the warehouse docks?". We can additional variations of questions that will trigger this action later. 
+Note how the system picks a default model that is used to answer the request. We will accept the deault setting here, which is an IBM Granite model.
+Next, we add some knowledge data that helps the Large Language Model return a good result. In our example, we are shortcutting the connection to the dock status system (assuming it might accessible via API call) and instead hardcode some data into the knowledge section. This would be replaced later to implement a real solution.
+
+For our example, copy and paste this content into the Knowledge section:
+```
+Current Docks Operations
+    {
+      "dock_id": 1,
+      "trucks": [
+        {
+          "truck_id": "T001",
+          "status": "Unloading",
+          "ETA": "2 hours",
+          "details": {
+            "SKU": "199464599",
+            "Payload_Quantity": 250,
+            "Surplus_Status": "Received surplus"
+          }
+        },
+        {
+          "truck_id": "T002",
+          "status": "Unloading",
+          "ETA": "1.5 hours",
+          "details": {
+            "SKU": "226814212",
+            "Payload_Quantity": 150,
+            "Surplus_Status": "No Surplus"
+          }
+        },
+        {
+          "truck_id": "T003",
+          "status": "Unloading",
+          "ETA": "1 hour",
+          "details": {
+            "SKU": "404108299",
+            "Payload_Quantity": 200,
+            "Surplus_Status": "No Surplus"
+          }
+        }
+      ]
+    },
+    {
+      "dock_id": 2,
+      "trucks": [
+        {
+          "truck_id": "T004",
+          "status": "Unloading",
+          "ETA": "1.5 hours",
+          "details": {
+            "SKU": "102209199",
+            "Payload_Quantity": 50,
+            "Surplus_Status": "Received surplus"
+          }
+        },
+        {
+          "truck_id": "T005",
+          "status": "Unloading",
+          "ETA": "2 hours",
+          "details": {
+            "SKU": "148183199",
+            "Payload_Quantity": 80,
+            "Surplus_Status": "No Surplus"
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+![alt text](images/image25.png)
+
+Finally we are ready to enter the actual prompt that is used in the action. For our example, you can use the following prompt:
+```
+Provide a concise summary of the current warehouse dock operations in a textual format. 
+You need to include the the truck payload descriptions as a concise bullet-point list.
+```
+
+![alt text](images/image26.png)
+
+We can easily tet our action by selecting the Preview button at the bottom right of the screen. A chat window pops up where we can enter a question and see how the Action reacts.
+Try it out by entering the question that we have defined in the `Customer starts with:` section: 
+```
+What's the current status of the warehouse docks?
+```
+
+The result should look like what is shown below. 
+
+![alt text](images/image27.png)
+
+Feel free to experiment further with variations of questions and adjust the Prompt Instructions as needed.
+
+Next we want to add a second action to our assistant, this time one that handles requests for recommendations about surplus data. Create a new Action and enter the following:
+- Customer starts with: `How can we handle the surplus on T001?`
+- Knowledge:
+```
+Optimized Surplus Allocations Agent:
+[
+    {
+      "truck_id": "T004",
+      "SKU": "102209199",
+      "total_surplus": 15,
+      "allocation": [
+        {
+          "destination": "Marketing",
+          "units": 12
+        },
+        {
+          "destination": "Relocation",
+          "units": 3
+        }
+      ],
+      "total_cost": 69
+    },
+    {
+      "truck_id": "T001",
+      "SKU": "199464599",
+      "total_surplus": 50,
+      "allocation": [
+        {
+          "destination": "Holding",
+          "units": 15
+        },
+        {
+          "destination": "Marketing",
+          "units": 19
+        },
+        {
+          "destination": "Relocation",
+          "units": 12
+        },
+        {
+          "destination": "Dropship",
+          "units": 4
+        }
+      ],
+      "total_cost": 684
+    }
+  ]
+}
+```
+- Prompt Instructions: 
+```
+You are an assistant for sending report on  optimal allocation of surplus units. Use the provided Optimized Surplus Allocations Agent to answer questions related to each truck.  When asked how to handle surplus, provide a distribution strategy based on allocations unit for each method along with truck id, Product SKU, total cost, surplus unit.
+```
+
+![alt text](images/image28.png)
+
+Open the Preview window again and test the new action. Note that the preview works for the entire assistant, in other words, it can invoke both of the actions we have created, based on input. So, you could string two questions together. 
+Question 1: `What's the status of the warehouse dock?`
+Question 2: `How can we handle the surplus on T001?`
+
+![alt text](images/image29.png)
