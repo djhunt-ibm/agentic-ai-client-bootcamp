@@ -1,5 +1,20 @@
 # Use case: Intelligent AI Assistant
 
+## Table of Contents
+
+- [Use case: Intelligent AI Assistant](#use-case-intelligent-ai-assistant)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Sample Use case description](#sample-use-case-description)
+  - [Agent Lab - Creating your first agent](#agent-lab---creating-your-first-agent)
+    - [Define a custom tool](#define-a-custom-tool)
+    - [Deploy your agent](#deploy-your-agent)
+  - [CodeEngine (to be removed later)](#codeengine-to-be-removed-later)
+  - [watsonx Orchestrate](#watsonx-orchestrate)
+    - [AI agent configuration](#ai-agent-configuration)
+    - [Assistant Builder](#assistant-builder)
+
+## Introduction
 This use case describes a scenario where a user leverages an AI assistant via chat / natural language interface, to help with the execution of tasks that require the selection of the right agent to satisfy each request.
 
 Agents can be configured in the system and will be selected if they satisfy the taks at hand, based on their description.
@@ -156,7 +171,7 @@ After you hit Save, we are ready to test our agent with the new custom tool. In 
 
 ...to be completed, this part is currently not working...
 
-## Deploy your agent
+### Deploy your agent
 
 Now that we have tested our agent and it performs to our satisfaction, we can deploy it, which makes it available for external consumption. The system will generate the required LangGraph code and deploy it into a `Deployment Space`. If none exists in your environment, you need to go and create one. You can find the link to Deployments in the 'hamburger menu' on the top left of the watsonx console. In the Deployments view, it will show you any deployment spaces you mgiht have. If there is none, go ahead and create one, by clicking on the `New deployment space` button.
 
@@ -201,6 +216,7 @@ Note that this extra step is expected to be removed soon.
 
 In the second stage of building the solution, we build the actual assistant the end user interacts with, and configure it to use the agent we built and deployed above.
 
+### AI agent configuration
 In the watsonx Orchestrate console, select `AI agent configuration` and go to the `Agents` tab.
 
 ![alt text](images/image16.png)
@@ -213,6 +229,8 @@ Your instructor will give you the endpoint URL you enter. It should end in `/cha
 Now let's test it out! Select `Chat` from the hambuerger menu at the top left corner of the screen. Then enter a question about traffic information, which should be forwarded to our dpeloyed agent.
 
 ![alt text](images/image18.png)
+
+### Assistant Builder
 
 Now let's add more assistants to the system, to handle other inquries and requests that may come from the Warehouse Manager user. In the watsonx Orchestrate console, select `AI assistant builder`. Then select the `View all assistants link to open up the list of all assistants you have defined in your system.
 
