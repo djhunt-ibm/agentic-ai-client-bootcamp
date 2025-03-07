@@ -203,7 +203,7 @@ In the second stage of building the solution, we build the actual assistant the 
 
 In the watsonx Orchestrate console, select `AI agent configuration` and go to the `Agents` tab.
 
-![alt text](iamges/image16.png)
+![alt text](images/image16.png)
 
 Click on `Add agent` at the top right of the page. Enter information about your agent. Make sure you also add a meaningful description of what your agent does, since that will help the "supervisory agent" to identify your agent as suitable when being asked about traffic details.
 Your instructor will give you the endpoint URL you enter. It should end in `/chat/completions`. 
