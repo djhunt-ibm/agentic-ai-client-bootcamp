@@ -9,7 +9,7 @@
 
 2.  Click on “+” icon to create a project.
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/092e17a5-b5c6-47fd-b667-9bda4d7a1d79)
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/3dc02304-7426-4cea-8fd6-77299198ac43">
 
 2.a. Enter the name of your project, select storage from available storages and finally click on create. A new project will be created.
 
