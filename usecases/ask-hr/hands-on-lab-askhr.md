@@ -166,7 +166,8 @@ Click on “Connect”
 
 33.	From the menu select "Skill Studio".
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/19152edd-7191-4526-810f-0351fa2d1bf6)
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/a9419c75-acce-4606-9cbe-cdda5751a96c">
+
 
 
 33.	Click on "Create".
