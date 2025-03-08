@@ -41,12 +41,12 @@
 
 9.	Switch back to the homepage. Open Agent Lab.
 
-<img width="452" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/258da929-2784-4683-8572-c47cfffda0ae">
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/258da929-2784-4683-8572-c47cfffda0ae">
 
 
 10.	In “Instructions” field, paste this prompt “You are a helpful Human Resources Assistant that uses tools to answer questions in detail. Please use website https://www.cipd.org/en/knowledge/factsheets/hr-policies-factsheet/ to give answers to user questions. When greeted, say “Hi, I am HR agent, How can I help you?”
 
-<img width="452" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/ec4c28c4-7a9b-4a4c-bcaf-247bb44263bf">
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/ec4c28c4-7a9b-4a4c-bcaf-247bb44263bf">
 
 
 11.	From “Added tools” section remove already added tools.
