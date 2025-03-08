@@ -168,55 +168,61 @@ Click on “Connect”
 
 <img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/a9419c75-acce-4606-9cbe-cdda5751a96c">
 
+34.	Click on "Create".
+
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/ec2aa069-e656-4c15-8384-c8df331d97f1">
+
+35.	Select "Import API" from the dropdown.
+
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/deb710ef-0ba8-4c28-9855-c400b83fe340">
+
+36.	Select "From a file".
+
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/4afc210b-ab47-4e23-a6f5-1673b2fce70a">
 
 
-33.	Click on "Create".
+37.	Drag or Select the open specs file and click on "next".
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/32b089fc-22e7-426a-835a-cdb550ef378e)
-
-34.	Select "Import API" from the dropdown.
-
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/46bf4b2b-380b-4de3-a7b3-a308a8031cd6)
-
-35.	Select "From a file".
-
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/6027b093-973c-4de6-a991-a1a2b7ed4468)
-
-36.	Drag or Select the open specs file and click on "next".
-
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/42829963-363d-4ebd-9698-682e340f0861)
-
-37.	Select all checkboxes and click on "Add".
-
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/d0c2ca2a-6683-441c-971a-1aaa1b66e0da)
-
-38.	Once the skills are imported, click in three dots against imported "Update address" skill.
-
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/c065efd3-77fc-43e0-90f0-4053caea1daf)
-
-39.	Select "Enhance this skill".
-
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/b3dfe7c2-31f5-48ce-a836-b9cd8e5c9bd4)
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/e378d080-2048-4886-b0e4-a463b26931ba">
 
 
-40.	Click on "Publish".
+38.	Select all checkboxes and click on "Add".
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/ce4b7303-4333-4a5b-b2c9-8d78ae7783bc)
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/d4bfb3db-e321-4443-aa9e-cbd54279e413">
 
 
-41.	Repeat last 3 steps for other imported skills as well.
+39.	Once the skills are imported, click in three dots against imported "Update address" skill.
 
-42.	Once the skills are published, from menu go to "Skill sets".
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/fc24b459-2bdc-4018-8b9b-1a87d15d3fbd">
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/228a1ed2-7d1c-4c26-9720-a0943d223e47)
 
-43.	From the dropdown, select "Orchestrate Agent Skills".
+40.	Select "Enhance this skill".
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/cbeeef2f-cc42-4e09-be57-98256d7a227e)
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/1db79135-58c7-43d2-aedf-bfc8d431de2d">
+
+
+41.	Click on "Publish".
+
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/93be512b-2659-498a-8b81-dd3f5db6ae34">
+
+
+
+42.	Repeat last 3 steps for other imported skills as well.
+
+43.	Once the skills are published, from menu go to "Skill sets".
+
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/b9b8b7e7-2861-4f9e-be06-4709869ad210">
+
+
+44.	From the dropdown, select "Orchestrate Agent Skills".
+
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/1925835f-def2-4019-b698-443aac79b7cc">
+
 
 44.	Click on "Connections". Your imported skills should be grouped in one app automatically. By clicking on arrow, search for that app. Click on three dots against that app and then click on "Connect app".
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/7be03259-eb6c-4b78-aeda-b137bf8b1c01)
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/035bb58c-1310-4c13-ba7d-8256758a66de">
+
 
 
 45.	Select "Team credentials" and click on "Connect app".
