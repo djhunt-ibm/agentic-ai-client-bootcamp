@@ -11,136 +11,160 @@
 
 <img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/3dc02304-7426-4cea-8fd6-77299198ac43">
 
-2.a. Enter the name of your project, select storage from available storages and finally click on create. A new project will be created.
+3. Enter the name of your project, select storage from available storages and finally click on create. A new project will be created.
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/435e66c7-ccac-4cb3-9894-3a7a9682d1b5)
-
-3.	Click on hamburger icon on top left and select “Access (IAM)”.
-
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/ff8c1558-3dd3-4dac-a959-ec73ed1ae7bd)
-
-4.	In next screen, select “API Keys” from menu.
-
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/84502dbb-847e-4669-b8fb-c3537af0c5f7)
-
-5.	Click on “Create”.
-
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/9dd51568-2e5e-4247-9855-f0b8cc8ebde5)
-
-6.	Give your API key a name, then click on “Create”.
-
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/8dbaaf0d-701d-47e2-bb50-02ece08743ad)
-
-7.	Copy the API key that is shown after clicking on “create”. Paste it somewhere, it’ll be used in later steps.
-
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/08e78454-4215-4c4c-a345-eb4e47e4e96a)
-
-8.	Switch back to the homepage. Open Agent Lab.
-
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/3d3d326e-1ffd-4840-9dd3-f42b916df25e)
-
-9.	In “Instructions” field, paste this prompt “You are a helpful Human Resources Assistant that uses tools to answer questions in detail. Please use website https://www.cipd.org/en/knowledge/factsheets/hr-policies-factsheet/ to give answers to user questions. When greeted, say “Hi, I am HR agent, How can I help you?”
-
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/89d76397-f6a4-443b-9db3-5ac5eec87dce)
-
-10.	From “Added tools” section remove already added tools.
-
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/f9babe58-af67-4949-84c6-59929de8d245)
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/05530e3f-212e-4537-98b9-05ab3b060444">
 
 
-11.	Then click on “Add a tool”.
+4.	Click on hamburger icon on top left and select “Access (IAM)”.
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/f0b9951c-9f4a-4c95-bb9c-3d19fde31733)
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/5d2e2af8-cdb1-4c1f-b00a-d4d55ccf9497">
 
-12.	Enable “Webcrawler” tool and close this tools window.
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/39278f5c-c4d8-4ccc-86e1-59387b7f9a39)
+5.	In next screen, select “API Keys” from menu.
 
-13.	Click on “Deploy”.
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/e49244b0-be8c-490f-97ff-92f2c21a2faf">
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/beb17362-bb32-4d1c-b302-49f56ffac6f7)
+6.	Click on “Create”.
 
-14. Enter Deployment name and select “Deployment Space”. If there are no deployment space you need to create one. Then click on “Deploy”.
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/e2ed166c-bde2-4dca-a01d-f2c5471096b4">
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/3f6a67f3-3641-4dd8-9242-f2cf46b52304)
+7.	Give your API key a name, then click on “Create”.
 
-15.	Wait for the status to change to “Deployed” from “Initializing”.
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/cffaf1ac-7853-4ec5-a3b2-b4cd16d84689">
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/3e11b861-3e30-4264-a830-6d5c3d894d22)
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/3f615f68-d477-4049-a872-7f736f65bf57)
+8.	Copy the API key that is shown after clicking on “create”. Paste it somewhere, it’ll be used in later steps.
 
-16.	Click on the name of the deployment you just deployed.
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/3d61701d-19c9-45fd-8f75-37ac267cb08f">
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/52ede322-af38-4888-93fd-aec3b494595f)
 
-17.	Copy and paste deployment id as shown in below image. You will need it in later step.
+9.	Switch back to the homepage. Open Agent Lab.
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/0060ea89-bd3f-4480-889e-5c7a665fd622)
+<img width="452" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/258da929-2784-4683-8572-c47cfffda0ae">
 
-18.	From menu, select “Deployments”.
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/87bf8b8f-298a-4260-b7e4-80404eca4be5)
+10.	In “Instructions” field, paste this prompt “You are a helpful Human Resources Assistant that uses tools to answer questions in detail. Please use website https://www.cipd.org/en/knowledge/factsheets/hr-policies-factsheet/ to give answers to user questions. When greeted, say “Hi, I am HR agent, How can I help you?”
 
-19.	Select “Spaces” and open the space where you deployed the agent.
+<img width="452" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/ec4c28c4-7a9b-4a4c-bcaf-247bb44263bf">
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/c0e46167-d1e1-473e-9d18-f5cf31cd192f)
 
-20.	Under “manage” section, you’ll find “Space GUID”. Copy and paste it somewhere.
+11.	From “Added tools” section remove already added tools.
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/9fef8f92-6ff5-4cb6-9de9-ba0a93022aea)
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/984a6ed6-2dd0-48a6-8c13-d3e96c1489d8">
 
-21.	Open the url https://multi-agent-external.1slrp41syyn5.us-south.codeengine.appdomain.cloud.
+
+
+12.	Then click on “Add a tool”.
+
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/9181f1e2-f59b-4ebd-9a1e-8bbf9268880e">
+
+
+13.	Enable “Webcrawler” tool and close this tools window.
+
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/4d0dd677-bd32-42a9-8d75-a86b2c1d639c">
+
+
+14.	Click on “Deploy”.
+
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/56514107-071a-474e-97fb-a1be4387b940">
+
+
+15. Enter Deployment name and select “Deployment Space”. If there are no deployment space you need to create one. Then click on “Deploy”.
+
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/4ef5d3ee-4626-4c47-bce9-0c5dc0ffa8ee">
+
+
+16.	Wait for the status to change to “Deployed” from “Initializing”.
+
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/2d65d715-b00a-44a4-abab-51c816247c52">
+
+
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/6d129685-9446-4f4e-9df1-a8b8243d4c47">
+
+
+17.	Click on the name of the deployment you just deployed.
+
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/9147fd79-a431-419b-a822-ad7cfbbf3f37">
+
+
+18.	Copy and paste deployment id as shown in below image. You will need it in later step.
+
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/924e373b-a339-4712-bdd5-9ea1df405808">
+
+
+19.	From menu, select “Deployments”.
+
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/2b00598c-64d4-451b-90b6-3b60f35128ce">
+
+
+20.	Select “Spaces” and open the space where you deployed the agent.
+
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/f13d25ff-34a4-4da9-933e-8afc7925a5e5">
+
+
+21.	Under “manage” section, you’ll find “Space GUID”. Copy and paste it somewhere.
+
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/2ef97b73-71b3-42e1-aa41-5026d4abf9e1">
+
+
+22.	Open the url https://multi-agent-external.1slrp41syyn5.us-south.codeengine.appdomain.cloud.
 Paste “Deployment ID” and “Space ID” that you copied in previous steps. 
 Click on “Generate Token”.
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/5077513b-9d7f-4aa5-bde9-789fa959c8ad)
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/e146759f-3c72-44e1-9b7e-6a5f1411dfc5">
 
-22.	A token will be generated. Copy and paste it somewhere.
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/0472b3f0-5a33-427c-a56e-0275fd46f2e3)
+23.	A token will be generated. Copy and paste it somewhere.
 
-23.	Go to “Watsonx Orchestrate” homepage. 
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/bfe888ce-b292-40dc-ba61-0366323b904d">
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/dee4595e-52c6-420c-9a0c-c50bb1674c32)
 
-24.	Click on hamburger menu on top left and select “AI agent configuration” from menu.
+24.	Go to “Watsonx Orchestrate” homepage. 
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/301540da-a3dd-462a-9e36-3c14800a550b)
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/d52bd45a-a258-48f4-a3e0-08e22fa1471c">
 
-25.	Click on “Agents“
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/7e5fb891-47f2-4cd8-9b6f-0dfd829061c8)
+25.	Click on hamburger menu on top left and select “AI agent configuration” from menu.
 
-26.	Clcik on “Add Agent +”.
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/71052104-3af3-4eb5-81e0-df24a284449e">
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/f1c5aad8-7cd8-4f93-a95d-a87f4cfc33b6)
+26.	Click on “Agents“
 
-27.	Give a name to your agent. Enter the description “This HR agent is an AI-powered assistant designed to handle common HR queries efficiently. It can, provide policy information and answer frequently asked questions.”
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/af55c0b0-6266-432c-ac61-a7ab507b4f56">
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/9b9fc350-8456-45e1-a08a-87b030471eae)
 
-28.	Under “Authentication type”, select “Bearer Token”, enter the generated token you copied, In “Service Instance URL” section , enter code-engine-url/chat/completions.
+27.	Clcik on “Add Agent +”.
+
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/92bdca12-bd71-43ee-acd2-1ca9f12e025b">
+
+28.	Give a name to your agent. Enter the description “This HR agent is an AI-powered assistant designed to handle common HR queries efficiently. It can, provide policy information and answer frequently asked questions.”
+
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/a6a82239-bcd6-4366-9900-9a3ee7bc5168">
+
+
+29.	Under “Authentication type”, select “Bearer Token”, enter the generated token you copied, In “Service Instance URL” section , enter code-engine-url/chat/completions.
 
 Click on “Connect”
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/7c0ebc9d-42a7-4682-8104-8d74d67f3dc0)
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/d8ab4e91-6c48-4844-b7ce-101a0be49de2">
 
 
+30.	Now you can see your agent in this page.
 
-29.	Now you can see your agent in this page.
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/1feaa9b4-d90f-43c6-83ca-a4756dcf6408">
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/eca781c4-1561-4705-a9b1-06c5cd1465c1)
 
-30.	From menu, select “chat”.
+31.	From menu, select “chat”.
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/2edec37b-a049-463b-84d3-6b160cf815c2)
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/fa6ad4de-4273-473c-b258-4c312c1724c7">
 
-31.	You can enter you HR queries here and see the responses.
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/9908ed1a-ab35-41e7-b0b7-fc86cf4ba94d)
+32.	You can enter you HR queries here and see the responses.
 
-32.	From the menu select "Skill Studio".
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/097b0436-9dd3-4521-a0b5-11f8a4c25d61">
+
+33.	From the menu select "Skill Studio".
 
 ![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/19152edd-7191-4526-810f-0351fa2d1bf6)
 
