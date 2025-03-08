@@ -4,7 +4,7 @@
 
 1.	Login into your Watsonx account. This is Homepage of Watsonx AI.
 
-<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/62e9c23b-1beb-4e9c-bfbc-1db5f54a64a5">
+<img width="1750" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/9ce08947-675b-4e74-bba3-9b6693492610">
 
 
 2.  Click on “+” icon to create a project.
