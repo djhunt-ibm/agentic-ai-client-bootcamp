@@ -125,7 +125,7 @@ Follow these steps to successfully create the Comparison Agent.
 
 ## Getting the Space ID for Deployment on Code Engine
 
-To deploy your agent on Code Engine, follow these steps to get your Space ID:
+To deploy your agent on Code Engine, follow the steps available in instruct lab how to deploy your agents to get your Space ID:
 
 ### Space ID
 
@@ -153,7 +153,7 @@ Repeat the same step for all the agents, as shown in the image below
 
 ## Deploying Agents on Code Engine
 
-Follow the instructions in the Code Engine instructor guide to get the deployment link. Open that link.
+Please refer to the [Code Engine instructor](https://github.ibm.com/skol/agentic-ai-client-bootcamp-instructors/blob/main/environment-setup/external-agent-builder/Readme.md) guide for deployment instructions. Once you obtain the deployment link, kindly open it.
 
 You will reach the page shown in the image below. Follow these two steps to generate the Bearer Token:
 
