@@ -8,7 +8,7 @@
   - [Introduction](#introduction)
   - [Sample Use case description](#sample-use-case-description)
   - [Agent Lab - Creating your first agent](#agent-lab---creating-your-first-agent)
-    - [Using a tool](#define-a-custom-tool)
+    - [Using a tool](#using-a-tool)
     - [Deploy your agent](#deploy-your-agent)
   - [watsonx Orchestrate](#watsonx-orchestrate)
     - [AI agent configuration](#ai-agent-configuration)
@@ -22,7 +22,7 @@
 
 This use-case targets developing and deploying an AskHR agent leveraging IBM watsonx Orchestrate and watsonx.ai, as depicted in the provided architecture diagram. This agent will empower employees to interact with HR systems and access information efficiently through conversational AI.
 
-## Agent Lab - Creating your first agent
+### Agent Lab - Creating your first agent
 
 1.	Login into your Watsonx account. This is Homepage of Watsonx AI.
 
@@ -70,7 +70,7 @@ This use-case targets developing and deploying an AskHR agent leveraging IBM wat
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image39.png">
 
-
+### Define a custom tool
 11.	From “Added tools” section remove already added tools.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image40.png">
