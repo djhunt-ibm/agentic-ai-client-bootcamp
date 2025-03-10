@@ -8,35 +8,35 @@
 
 
 2.  Click on “+” icon to create a project.
+3.  
+<img width="1000" alt="image" src="hands-on-lab-assets/image31.png">
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/3dc02304-7426-4cea-8fd6-77299198ac43">
+4. Enter the name of your project, select storage from available storages and finally click on create. A new project will be created.
 
-3. Enter the name of your project, select storage from available storages and finally click on create. A new project will be created.
-
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/05530e3f-212e-4537-98b9-05ab3b060444">
+<img width="1000" alt="image" src="hands-on-lab-assets/image32.png">
 
 
 4.	Click on hamburger icon on top left and select “Access (IAM)”.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/5d2e2af8-cdb1-4c1f-b00a-d4d55ccf9497">
+<img width="1000" alt="image" src="hands-on-lab-assets/image33.png">
 
 
 5.	In next screen, select “API Keys” from menu.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/e49244b0-be8c-490f-97ff-92f2c21a2faf">
+<img width="1000" alt="image" src="hands-on-lab-assets/image34.png">
 
 6.	Click on “Create”.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/e2ed166c-bde2-4dca-a01d-f2c5471096b4">
+<img width="1000" alt="image" src="hands-on-lab-assets/image35.png">
 
 7.	Give your API key a name, then click on “Create”.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/cffaf1ac-7853-4ec5-a3b2-b4cd16d84689">
+<img width="1000" alt="image" src="hands-on-lab-assets/image36.png">
 
 
 8.	Copy the API key that is shown after clicking on “create”. Paste it somewhere, it’ll be used in later steps.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/3d61701d-19c9-45fd-8f75-37ac267cb08f">
+<img width="1000" alt="image" src="hands-on-lab-assets/image37.png">
 
 
 9.	Switch back to the homepage. Open Agent Lab.
