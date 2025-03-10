@@ -8,10 +8,10 @@
 
 
 2.  Click on “+” icon to create a project.
-3.  
+  
 <img width="1000" alt="image" src="hands-on-lab-assets/image31.png">
 
-4. Enter the name of your project, select storage from available storages and finally click on create. A new project will be created.
+3. Enter the name of your project, select storage from available storages and finally click on create. A new project will be created.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image32.png">
 
@@ -90,22 +90,22 @@
 
 18.	Copy and paste deployment id as shown in below image. You will need it in later step.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/924e373b-a339-4712-bdd5-9ea1df405808">
+<img width="1000" alt="image" src="hands-on-lab-assets/image48.png">
 
 
 19.	From menu, select “Deployments”.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/2b00598c-64d4-451b-90b6-3b60f35128ce">
+<img width="1000" alt="image" src="hands-on-lab-assets/image49.png">
 
 
 20.	Select “Spaces” and open the space where you deployed the agent.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/f13d25ff-34a4-4da9-933e-8afc7925a5e5">
+<img width="1000" alt="image" src="hands-on-lab-assets/image50.png">
 
 
 21.	Under “manage” section, you’ll find “Space GUID”. Copy and paste it somewhere.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/2ef97b73-71b3-42e1-aa41-5026d4abf9e1">
+<img width="1000" alt="image" src="hands-on-lab-assets/image51.png">
 
 
 22.	Open the url https://multi-agent-external.1slrp41syyn5.us-south.codeengine.appdomain.cloud.
