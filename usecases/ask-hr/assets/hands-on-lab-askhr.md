@@ -1,6 +1,25 @@
 
 # AskHR - Agent setup hands on lab
 
+## Table of Contents
+
+- [Use case: Intelligent AI Assistant](#use-case-intelligent-ai-assistant)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Sample Use case description](#sample-use-case-description)
+  - [Agent Lab - Creating your first agent](#agent-lab---creating-your-first-agent)
+    - [Define a custom tool](#define-a-custom-tool)
+    - [Deploy your agent](#deploy-your-agent)
+  - [CodeEngine (to be removed later)](#codeengine-to-be-removed-later)
+  - [watsonx Orchestrate](#watsonx-orchestrate)
+    - [AI agent configuration](#ai-agent-configuration)
+    - [Assistant Builder](#assistant-builder)
+
+## Introduction
+
+## Sample Use case description
+
+
 ## Watsonx AI
 
 1.	Login into your Watsonx account. This is Homepage of Watsonx AI.
