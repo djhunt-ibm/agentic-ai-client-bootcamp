@@ -12,7 +12,7 @@
     - [Deploy your agent](#deploy-your-agent)
   - [watsonx Orchestrate](#watsonx-orchestrate)
     - [AI agent configuration](#ai-agent-configuration)
-    - [Agent configuration using skills](#skills)
+    - [Skill Studio](#skill-studio)
 
 ## Introduction
 
@@ -184,6 +184,8 @@ Click on “Connect”
 33.	You can enter you HR queries here and see the responses.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image63.png">
+
+### Skill Studio
 
 34.	From the menu select "Skill Studio".
 
