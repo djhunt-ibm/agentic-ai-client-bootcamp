@@ -41,51 +41,51 @@
 
 9.	Switch back to the homepage. Open Agent Lab.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/258da929-2784-4683-8572-c47cfffda0ae">
+<img width="1000" alt="image" src="hands-on-lab-assets/image38.png">
 
 
 10.	In “Instructions” field, paste this prompt “You are a helpful Human Resources Assistant that uses tools to answer questions in detail. Please use website https://www.cipd.org/en/knowledge/factsheets/hr-policies-factsheet/ to give answers to user questions. When greeted, say “Hi, I am HR agent, How can I help you?”
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/ec4c28c4-7a9b-4a4c-bcaf-247bb44263bf">
+<img width="1000" alt="image" src="hands-on-lab-assets/image39.png">
 
 
 11.	From “Added tools” section remove already added tools.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/984a6ed6-2dd0-48a6-8c13-d3e96c1489d8">
+<img width="1000" alt="image" src="hands-on-lab-assets/image40.png">
 
 
 
 12.	Then click on “Add a tool”.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/9181f1e2-f59b-4ebd-9a1e-8bbf9268880e">
+<img width="1000" alt="image" src="hands-on-lab-assets/image41.png">
 
 
 13.	Enable “Webcrawler” tool and close this tools window.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/4d0dd677-bd32-42a9-8d75-a86b2c1d639c">
+<img width="1000" alt="image" src="hands-on-lab-assets/image42.png">
 
 
 14.	Click on “Deploy”.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/56514107-071a-474e-97fb-a1be4387b940">
+<img width="1000" alt="image" src="hands-on-lab-assets/image43.png">
 
 
 15. Enter Deployment name and select “Deployment Space”. If there are no deployment space you need to create one. Then click on “Deploy”.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/4ef5d3ee-4626-4c47-bce9-0c5dc0ffa8ee">
+<img width="1000" alt="image" src="hands-on-lab-assets/image44.png">
 
 
 16.	Wait for the status to change to “Deployed” from “Initializing”.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/2d65d715-b00a-44a4-abab-51c816247c52">
+<img width="1000" alt="image" src="hands-on-lab-assets/image45.png">
 
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/6d129685-9446-4f4e-9df1-a8b8243d4c47">
+<img width="1000" alt="image" src="hands-on-lab-assets/image46.png">
 
 
 17.	Click on the name of the deployment you just deployed.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/9147fd79-a431-419b-a822-ad7cfbbf3f37">
+<img width="1000" alt="image" src="hands-on-lab-assets/image47.png">
 
 
 18.	Copy and paste deployment id as shown in below image. You will need it in later step.
