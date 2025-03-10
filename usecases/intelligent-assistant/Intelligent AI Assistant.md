@@ -13,6 +13,7 @@
   - [watsonx Orchestrate](#watsonx-orchestrate)
     - [AI agent configuration](#ai-agent-configuration)
     - [Assistant Builder](#assistant-builder)
+  - [Summary](#summary)
 
 ## Introduction
 This use case describes a scenario where a user leverages an AI assistant via chat / natural language interface, to help with the execution of tasks that require the selection of the right agent to satisfy each request.
@@ -105,10 +106,7 @@ These elements must be specified when defining a custom tool for your agent:
 }
 ```
 - the Python code. This implements the tool. Note that you cannot define any extra packages to be installed and imported, in other words, it has to be 'vanilla' Python code at this time. This is the Python code we use for the custom tool returning traffic information:
-<div> <pre>
-<code id="codeblock2">
-def send_get_request(longitude, latitude):
-
+```
   json_data = {}
   param_in = f"circle:{latitude},{longitude};r=10000"
   param_locationReferencing = "none"
@@ -149,27 +147,12 @@ def send_get_request(longitude, latitude):
                 structured_data["incidents"].append(result["incidentDetails"]["description"]["value"])
 
   return structured_data
-</code>
-</pre><button onclick="copyToClipboard()">Copy</button></div>
-
-<script>
-function copyToClipboard() {
-  const code = document.getElementById("code-block").innerText;
-  navigator.clipboard.writeText(code).then(() => {
-    alert("Copied to clipboard!");
-  }).catch(err => {
-    console.error("Error copying text: ", err);
-  });
-}
-</script>
-
+```
 Here is what your custom tool definition looks like when it's all done. And again, feel free to explore, possibly using a different API call to create your own custom tool.
 
 ![alt text](images/image8.png)
 
 After you hit Save, we are ready to test our agent with the new custom tool. In the preview window, you can type in a question about traffic at a random location, for example: "Tell me about the traffic situation around the Sydney Opera House".
-
-...to be completed, this part is currently not working...
 
 ### Deploy your agent
 
@@ -226,7 +209,7 @@ Your instructor will give you the endpoint URL you enter. It should end in `/cha
 
 ![alt text](images/image17.png)
 
-Now let's test it out! Select `Chat` from the hambuerger menu at the top left corner of the screen. Then enter a question about traffic information, which should be forwarded to our dpeloyed agent.
+Now let's test it out! Select `Chat` from the hamburger menu at the top left corner of the screen. Then enter a question about traffic information, which should be forwarded to our dpeloyed agent.
 
 ![alt text](images/image18.png)
 
@@ -341,7 +324,7 @@ You need to include the the truck payload descriptions as a concise bullet-point
 
 ![alt text](images/image26.png)
 
-We can easily tet our action by selecting the Preview button at the bottom right of the screen. A chat window pops up where we can enter a question and see how the Action reacts.
+We can easily test our action by selecting the Preview button at the bottom right of the screen. A chat window pops up where we can enter a question and see how the Action reacts.
 Try it out by entering the question that we have defined in the `Customer starts with:` section: 
 ```
 What's the current status of the warehouse docks?
@@ -414,3 +397,104 @@ Question 1: `What's the status of the warehouse dock?`
 Question 2: `How can we handle the surplus on T001?`
 
 ![alt text](images/image29.png)
+
+Before we can use this assistant in the chat, we need to "publish" it. Go to the left of the screen to expend the side menu and select `Publish`.
+
+![alt text](images/image32.png)
+
+The following screen shows you the unpublished content, go ahead and click on the `Publish` button.
+
+![alt text](images/image30.png)
+
+Now as an additional exercise, create yet another assistant that handles the notification emails. We won't add the screenshots here, but instead just give you the data to enter. Think of it as a test of your newly acquired skills.
+
+- Assistant name: `Warehouse Secretary`
+- Customer starts with: 
+  - `Generate a notification email for the dropship team for SKU: 23232464599 of 10 units`
+  - `Generate a notification email for the relocation team for SKU: 983244534599 of 20 units`
+  - `Generate a notification email for the marketing team for SKU: 8932464599 of 10 units`
+  - `Generate a notification email for the holding team for SKU: 549464599 of 15 units`
+- Knowledge: 
+```
+Example1:
+Input: 
+Generate a notification email for the marketing team for item 223456789 for 25 units
+Output:
+Subject: Notification of Surplus Units for SKU# 223456789 
+
+Marketing Team,
+This email is to inform you that there are 25 surplus units of item 223456789 available. Please review and coordinate any necessary marketing efforts for these additional units.
+
+Warehouse Management
+
+Example2:
+Input:  Generate a notification email for the holding team for item 112334343 for  10 units
+Output:
+
+Subject: Notification of Surplus Units for SKU#112334343
+
+Holding Team,
+This email is to notify you that there are 10 units of item 112334343 in surplus which need to be stored in the inventory. Please take necessary actions.
+
+Warehouse Management
+
+Example3:
+Input:  Generate a notification email for the dropship team for SKU: 88245464599 of 10 units
+Output:
+Subject: Notification of Surplus Units for SKU#88245464599
+
+Dropship Team,
+This email is to notify you that there are 10 units of item 88245464599 in surplus. Please review and adjust shipping schedules as needed to accommodate these additional units.
+
+Warehouse Management
+
+
+Example 4:
+Input:   Generate a notification email for the relocation team for SKU: 765004599 of 9 units
+Output: 
+Subject: Notification of Surplus Units for SKU#765004599
+
+Relocation Team,
+This email is to notify you that there are 9 units of item 765004599 in surplus. Please review and coordinate any necessary relocation efforts for these additional units.
+
+Warehouse Management
+```
+- Prompt: 
+```
+Write a concise and professional draft email about the surplus in the inventory.  
+The email should directly begin with the subject line, followed by the email body without any introductory statements or preambles.
+Use your knowledge of email writing as a guide to structure and tone, but do not limit yourself to specific teams or predefined examples. 
+Assume the audience and content are general unless specified otherwise. 
+Avoid mentioning any knowledge limitations or referencing specific teams unless explicitly required.
+```
+After you have tested the assistant in the Preview, go ahead and Publish it.
+
+To plug it all together, we will now add the two new assistants to the AI Agent configuration. Select `AI agent configuration` from the hamburger menu. Select `Assistants`.
+
+![alt text](images/image33.png)
+
+Now click on `Add assistant`.
+
+![alt text](images/image34.png)
+
+First we'll add the Dock Manager assistant. Make sure you give it a good description, since this description is what helps the AI Agent pick the right assistant for the task. You can enter text like what is shown in the screenshot below. Then click on `Connect`.
+
+![alt text](images/image35.png)
+
+Next add the Warehouse Secretaty assistant. Don't forget to give it meaningful description.
+You should now see two assistants that have been added.
+
+![alt text](images/image36.png)
+
+We are now ready to run our agentic solution in the chat. Select `Chat` from the hamburger menu. In the chat window, let's ask some questions to see if the agent picks the right assistant, or forwards the request to the external agent we built in watsonx.ai.
+
+![alt text](images/image37.png)
+
+## Summary
+
+In this lab, we went through the use case of an operational manager at a warehouse, which uses an agentic solution to handle arriving and possibly surplus products. We started by building an agent based on the LangGraph framework, using Agent Lab in watsonx.ai. The agent utilizes a tool that makes an external API call to retrieve up to date traffic information. Once deployed, we could configure it as an external agent in watsonx Orchestrate. There, we also defined a couple of assistants, both of which use a large language model. 
+After we had all configured to be used by the AI Agent chat, we can interact with the solution through a chat interface, and the system will delegate to he right place.
+
+Note that the intention of this exercise is to provide you with a starting point. Some parts of this solution are simulated, and would have to be fully implemented for a real solution. Moreover, a true agentic solution would add a reasoning layer on top of what you have built here, which allows coming up with a plan for handling, in this case, warehouse situation autonomously, making its own decisions along the way. We believe that those solutions are yet to become real.
+
+But hopefully it triggered some ideas for you about how to make it work in your business environment.
