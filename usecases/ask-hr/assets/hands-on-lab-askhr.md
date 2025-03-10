@@ -118,6 +118,7 @@ Click on “Generate Token”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image54.png">
 
+## Watsonx Orchestrate
 
 25.	Go to “Watsonx Orchestrate” homepage. 
 <img width="1000" alt="image" src="hands-on-lab-assets/image55.png">
