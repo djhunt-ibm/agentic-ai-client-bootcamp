@@ -306,7 +306,7 @@ Then click on "Connect App" on top right, if not already connected.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image24.png">
 
-64.	Then click on profile icon, then settings , then click on chat and switch to AI chat again.
+
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image26.png">
 
@@ -318,7 +318,7 @@ Then click on "Connect App" on top right, if not already connected.
 
 
 
-<img width="1000" alt="image" src="hands-on-lab-assets/image27.png">
+<img width="1000" alt="image" src="hands-on-lab-assets/image28.png">
 
 66.	Use your imported skills in chat.
 
