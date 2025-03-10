@@ -1,6 +1,7 @@
 
 # AskHR - Agent setup hands on lab
 
+## Watsonx AI
 
 1.	Login into your Watsonx account. This is Homepage of Watsonx AI.
 
