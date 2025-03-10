@@ -4,7 +4,7 @@
 
 1.	Login into your Watsonx account. This is Homepage of Watsonx AI.
 
-<img width="1000" alt="image" src="hands-on-lab-assets/image31.png">
+<img width="1000" alt="image" src="hands-on-lab-assets/image30.png">
 
 
 2.  Click on “+” icon to create a project.
