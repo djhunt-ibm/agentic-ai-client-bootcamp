@@ -70,7 +70,7 @@ This use-case targets developing and deploying an AskHR agent leveraging IBM wat
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image39.png">
 
-### Define a custom tool
+### Using a tool
 11.	From “Added tools” section remove already added tools.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image40.png">
