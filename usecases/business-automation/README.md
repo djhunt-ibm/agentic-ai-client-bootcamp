@@ -1,6 +1,11 @@
 # **Business Automation using IBM’s Agentic Framework**
 
+https://media.github.ibm.com/user/116052/files/b5f454f2-a322-4ef9-bd24-8cf4cc06b6a9
+
+
 ![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/451557/227c2bec-ffb2-4391-8a4b-2a407f2a5804)
+
+https://github.ibm.com/skol/agentic-ai-client-bootcamp/edit/main/usecases/business-automation/video/Demo.mp4
 
 ## Introduction
 
