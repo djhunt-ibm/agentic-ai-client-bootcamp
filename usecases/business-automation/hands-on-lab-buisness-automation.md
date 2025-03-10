@@ -2,6 +2,29 @@
 
 This guide will help you create a **Business Automation Use Case** using Agent Lab and Watsonx Orchestrate.  
 
+## Table of Contents  
+- [System Architecture](#system-architecture)  
+- [Creating Agents](#creating-agents)  
+  - [Product Search Agent](#product-search-agent)  
+    - [Setup](#setup)  
+    - [Configuration](#configuration)  
+    - [Tools](#tools)  
+  - [Link Search Agent](#link-search-agent)  
+    - [Setup](#setup-1)  
+    - [Configuration](#configuration-1)  
+    - [Tools](#tools-1)  
+  - [Comparison Agent](#comparison-agent)  
+    - [Setup](#setup-2)  
+    - [Configuration](#configuration-2)  
+    - [Tools](#tools-2)  
+- [Getting the Space ID for Deployment on Code Engine](#getting-the-space-id-for-deployment-on-code-engine)  
+  - [Space ID](#space-id)  
+  - [Deployment](#deployment)  
+- [Deploying Agents on Code Engine](#deploying-agents-on-code-engine)  
+- [Integration with Watsonx Orchestrate](#integration-with-watsonx-orchestrate)  
+- [Agent Descriptions](#agent-descriptions)  
+- [Demo Video](#demo-video)  
+
 ## System Architecture  
 Below is an overview of the system:  
 
