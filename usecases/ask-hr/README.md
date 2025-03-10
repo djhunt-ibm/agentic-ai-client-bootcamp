@@ -14,7 +14,7 @@ Business story : [here](assets/AskHR_business_story.md)
 
 Business challenge : [here](assets/AskHR_business_challenge.md)
 
-Architectural diagram : [here](assets/AskHR_architecture.md)
+Architecture diagram : [here](assets/AskHR_architecture.md)
 
 Methodology : [here](assets/AskHR_methodology.md)
 
