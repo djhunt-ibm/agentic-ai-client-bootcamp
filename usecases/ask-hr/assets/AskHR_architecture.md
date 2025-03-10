@@ -1,1 +1,1 @@
-<img alt="architecture" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/usecases/ask-hr/arch_diagm.png">
+<img width="1000" alt="image" src="arch_diagm.png">
