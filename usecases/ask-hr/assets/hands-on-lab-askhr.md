@@ -22,7 +22,7 @@
 
 This use-case targets developing and deploying an AskHR agent leveraging IBM watsonx Orchestrate and watsonx.ai, as depicted in the provided architecture diagram. This agent will empower employees to interact with HR systems and access information efficiently through conversational AI.
 
-## Watsonx AI
+## Agent Lab - Creating your first agent
 
 1.	Login into your Watsonx account. This is Homepage of Watsonx AI.
 
