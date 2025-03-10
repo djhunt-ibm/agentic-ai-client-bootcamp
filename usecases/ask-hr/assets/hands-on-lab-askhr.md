@@ -163,163 +163,163 @@ Click on “Connect”
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image1.png">
 
-34.	Click on "Create".
+35.	Click on "Create".
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/ec2aa069-e656-4c15-8384-c8df331d97f1">
+<img width="1000" alt="image" src="hands-on-lab-assets/image2.png">
 
-35.	Select "Import API" from the dropdown.
+36.	Select "Import API" from the dropdown.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/deb710ef-0ba8-4c28-9855-c400b83fe340">
+<img width="1000" alt="image" src="hands-on-lab-assets/image3.png">
 
-36.	Select "From a file".
+37.	Select "From a file".
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/4afc210b-ab47-4e23-a6f5-1673b2fce70a">
-
-
-37.	Drag or Select the open specs file and click on "next".
-
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/e378d080-2048-4886-b0e4-a463b26931ba">
+<img width="1000" alt="image" src="hands-on-lab-assets/image4.png">
 
 
-38.	Select all checkboxes and click on "Add".
+38.	Drag or Select the open specs file and click on "next".
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/d4bfb3db-e321-4443-aa9e-cbd54279e413">
-
-
-39.	Once the skills are imported, click in three dots against imported "Update address" skill.
-
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/fc24b459-2bdc-4018-8b9b-1a87d15d3fbd">
+<img width="1000" alt="image" src="hands-on-lab-assets/image5.png">
 
 
-40.	Select "Enhance this skill".
+39.	Select all checkboxes and click on "Add".
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/1db79135-58c7-43d2-aedf-bfc8d431de2d">
-
-
-41.	Click on "Publish".
-
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/93be512b-2659-498a-8b81-dd3f5db6ae34">
+<img width="1000" alt="image" src="hands-on-lab-assets/image6.png">
 
 
+40.	Once the skills are imported, click in three dots against imported "Update address" skill.
 
-42.	Repeat last 3 steps for other imported skills as well.
-
-43.	Once the skills are published, from menu go to "Skill sets".
-
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/b9b8b7e7-2861-4f9e-be06-4709869ad210">
+<img width="1000" alt="image" src="hands-on-lab-assets/image7.png">
 
 
-44.	From the dropdown, select "Orchestrate Agent Skills".
+41.	Select "Enhance this skill".
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/1925835f-def2-4019-b698-443aac79b7cc">
+<img width="1000" alt="image" src="hands-on-lab-assets/image8.png">
 
 
-45.	Click on "Connections". Your imported skills should be grouped in one app automatically. By clicking on arrow, search for that app. Click on three dots against that app and then click on "Connect app".
+42.	Click on "Publish".
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/035bb58c-1310-4c13-ba7d-8256758a66de">
+<img width="1000" alt="image" src="hands-on-lab-assets/image9.png">
 
 
 
-46.	Select "Team credentials" and click on "Connect app".
+43.	Repeat last 3 steps for other imported skills as well.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/7223b561-0c4e-4c75-b8d1-5a1554fef72d">
+44.	Once the skills are published, from menu go to "Skill sets".
 
-
-47.	Enter your credentials and click on "Connect app".
-
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/cbcf717b-0d6e-468e-92d3-bd18566d64b7">
+<img width="1000" alt="image" src="hands-on-lab-assets/image10.png">
 
 
+45.	From the dropdown, select "Orchestrate Agent Skills".
 
-48.	Once thats done, click on skills and then click on "Manage skills".
-
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/ee0a4edc-ff6c-4e77-a374-20b9311b938b">
+<img width="1000" alt="image" src="hands-on-lab-assets/image11.png">
 
 
-49.	Click on app in which your skills are grouped.
+46.	Click on "Connections". Your imported skills should be grouped in one app automatically. By clicking on arrow, search for that app. Click on three dots against that app and then click on "Connect app".
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/2d45bee9-fbaa-4e3b-86f4-03bb54a24db1">
+<img width="1000" alt="image" src="hands-on-lab-assets/image11.1.png">
 
 
 
-50.	Check if "Get Time Off Balance", "Get User Profile", "Request Time Off", "Update address" and "Update Title" skills are added. If not already added, click on "Add skill + " for all skills you want to add. 
+47.	Select "Team credentials" and click on "Connect app".
+
+<img width="1000" alt="image" src="hands-on-lab-assets/image11.2.png">
+
+
+48.	Enter your credentials and click on "Connect app".
+
+<img width="1000" alt="image" src="hands-on-lab-assets/image12.png">
+
+
+
+49.	Once thats done, click on skills and then click on "Manage skills".
+
+<img width="1000" alt="image" src="hands-on-lab-assets/image13.png">
+
+
+50.	Click on app in which your skills are grouped.
+
+<img width="1000" alt="image" src="hands-on-lab-assets/image14.png">
+
+
+
+51.	Check if "Get Time Off Balance", "Get User Profile", "Request Time Off", "Update address" and "Update Title" skills are added. If not already added, click on "Add skill + " for all skills you want to add. 
 Then click on "Connect App" on top right, if not already connected.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/5ca3ed07-adb5-4e57-bf50-913e83cdae19">
+<img width="1000" alt="image" src="hands-on-lab-assets/image15.png">
 
 
 
-51.	From menu, click on "AI agent configuration".
+52.	From menu, click on "AI agent configuration".
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/789fc782-b525-4e5d-b249-ebd77301894e">
-
-
-
-52.	Select "Apps and skills" and click on the app your skills are grouped into.
-
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/de01fadf-4fc1-44ad-8c32-707d260650ee">
+<img width="1000" alt="image" src="hands-on-lab-assets/image16.png">
 
 
-53.	Click on "Add to chat +" for Get Time off Balance.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/90e12af0-eac2-4db3-b915-d7187be770e0">
+53.	Select "Apps and skills" and click on the app your skills are grouped into.
 
-
-54.	Enter the description of this skill, "To get time off balance data" Then click on "Add skill".
-
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/853ffcc6-ea15-4e8e-9de1-88822b747c30">
-
-55.	Similarly add all the imported skills with following descriptions as follows. Get User Profile : to get complete profile data of user. Request Time Off : to request time off, apply for leaves Update Address : To update user address Update Title : To update user Title
-
-56.	Now click on your profile icon in top right and select "settings"
-
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/80fc9071-476b-44a8-97a7-2f562c3d797d">
-
-57.	Click on "chat", then "Switch to legacy chat", then click on "Change to legacy chat" as shown in below image.
-
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/ef1a853b-d914-40b3-a1da-546d53661fba">
+<img width="1000" alt="image" src="hands-on-lab-assets/image17.png">
 
 
-58.	From menu, select "Skill sets"
+54.	Click on "Add to chat +" for Get Time off Balance.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/714edcb7-a215-4b55-8eef-cb72a2cc4e19">
-
-
-59.	Select "Team Skills" in dropdown, then click on "connections".
-
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/d9b7c319-8692-485e-ae22-f124bbdc18ae">
+<img width="1000" alt="image" src="hands-on-lab-assets/image18.png">
 
 
-60.	Search for the app your skills are grouped into and connet it by clicking on 3 dots.
+55.	Enter the description of this skill, "To get time off balance data" Then click on "Add skill".
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/06c38686-ea10-4ea0-b34e-1d8506d00bb5">
+<img width="1000" alt="image" src="hands-on-lab-assets/image19.png">
+
+56.	Similarly add all the imported skills with following descriptions as follows. Get User Profile : to get complete profile data of user. Request Time Off : to request time off, apply for leaves Update Address : To update user address Update Title : To update user Title
+
+57.	Now click on your profile icon in top right and select "settings"
+
+<img width="1000" alt="image" src="hands-on-lab-assets/image20.png">
+
+58.	Click on "chat", then "Switch to legacy chat", then click on "Change to legacy chat" as shown in below image.
+
+<img width="1000" alt="image" src="hands-on-lab-assets/image21.png">
 
 
-61.	Click on "skills" and then "Manage skills".
+59.	From menu, select "Skill sets"
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/b71b1a59-41c2-4064-81000-0559bd72c027">
+<img width="1000" alt="image" src="hands-on-lab-assets/image22.png">
 
 
-62.	Search for the app, where skills are imported, click on it.
+60.	Select "Team Skills" in dropdown, then click on "connections".
+
+<img width="1000" alt="image" src="hands-on-lab-assets/image22.1.png">
+
+
+61.	Search for the app your skills are grouped into and connet it by clicking on 3 dots.
+
+<img width="1000" alt="image" src="hands-on-lab-assets/image22.2.png">
+
+
+62.	Click on "skills" and then "Manage skills".
+
+<img width="1000" alt="image" src="hands-on-lab-assets/image23.png">
+
+
+63.	Search for the app, where skills are imported, click on it.
 
   Then click on "add skills +" for all the skills you imported and then connect app using "Connect App" button in top right.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/7271f2eb-7333-4617-bd27-4de07c628046">
+<img width="1000" alt="image" src="hands-on-lab-assets/image24.png">
 
 
-63.	Then click on profile icon, then settings , then click on chat and switch to AI chat again.
+64.	Then click on profile icon, then settings , then click on chat and switch to AI chat again.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/75d6799c-3337-4b93-a92e-7fe9270b4c3e">
+<img width="1000" alt="image" src="hands-on-lab-assets/image25.png">
 
 
 65.	From menu click on "chat".
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/ff50910d-eb13-466c-9c43-94bc1710e7f6">
+<img width="1000" alt="image" src="hands-on-lab-assets/image26.png">
 
 
 66.	Use your imported skills in chat.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/d116c979-54aa-4ff9-a79f-5d4debe7ccfd">
+<img width="1000" alt="image" src="hands-on-lab-assets/image27.png">
 
 
 
