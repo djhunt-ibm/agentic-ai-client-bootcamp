@@ -285,12 +285,12 @@ Then click on "Connect App" on top right, if not already connected.
 <img width="1000" alt="image" src="hands-on-lab-assets/image22.png">
 
 
-60.	Select "Team Skills" in dropdown, then click on "connections".
+60.	Select "Team Skills" in dropdown.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image22.1.png">
 
 
-61.	Search for the app your skills are grouped into and connet it by clicking on 3 dots.
+61. Then click on "connections".Search for the app your skills are grouped into and connet it by clicking on 3 dots.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image22.2.png">
 
