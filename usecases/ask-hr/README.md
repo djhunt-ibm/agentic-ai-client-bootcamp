@@ -1,5 +1,5 @@
 # AskHR
-<img alt="AskHR" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/usecases/ask-hr/hr_landscape.jpg">
+<img alt="AskHR" src="assets/hr_landscape.jpg">
 ## Introduction
 
 This methodology outlines the steps for developing and deploying an AskHR agent leveraging IBM watsonx Orchestrate and watsonx.ai, as depicted in the provided architecture diagram. This agent will empower employees to interact with HR systems and access information efficiently through conversational AI.
