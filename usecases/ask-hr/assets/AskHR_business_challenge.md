@@ -1,6 +1,6 @@
 # HR Workflows Struggling to Get the Right Information to the Right Users in a Timely Manner
 
-![Alt text](business_challenge_assets/1.png)
+<img width="50" alt="image" src="business_challenge_assets/1.png">
 - Fragmented Systems and Tools
 Many organizations still use outdated or disconnected HR systems, causing data silos and inefficiencies. This fragmentation leads to difficulties in accessing accurate, up-to-date information, affecting decision-making and workflow.
 
