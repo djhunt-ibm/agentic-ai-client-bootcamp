@@ -146,6 +146,7 @@ Click on “Generate Token”.
 25.	Go to “Watsonx Orchestrate” homepage. 
 <img width="1000" alt="image" src="hands-on-lab-assets/image55.png">
 
+### AI agent configuration
 
 26.	Click on hamburger menu on top left and select “AI agent configuration” from menu.
 
