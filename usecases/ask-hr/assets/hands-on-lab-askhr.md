@@ -64,48 +64,47 @@
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image42.png">
 
-
-14.	Click on “Deploy”.
-
+14. Close this window.
+15. 
 <img width="1000" alt="image" src="hands-on-lab-assets/image43.png">
 
-
-15. Enter Deployment name and select “Deployment Space”. If there are no deployment space you need to create one. Then click on “Deploy”.
+16.	Click on “Deploy”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image44.png">
 
-
-16.	Wait for the status to change to “Deployed” from “Initializing”.
+15. Enter Deployment name and select “Deployment Space”. If there are no deployment space you need to create one. Then click on “Deploy”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image45.png">
 
+16.	Wait for the status to change to “Deployed” from “Initializing”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image46.png">
 
-
-17.	Click on the name of the deployment you just deployed.
-
 <img width="1000" alt="image" src="hands-on-lab-assets/image47.png">
 
-
-18.	Copy and paste deployment id as shown in below image. You will need it in later step.
+17.	Click on the name of the deployment you just deployed.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image48.png">
 
 
-19.	From menu, select “Deployments”.
+18.	Copy and paste deployment id as shown in below image. You will need it in later step.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image49.png">
 
 
-20.	Select “Spaces” and open the space where you deployed the agent.
+19.	From menu, select “Deployments”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image50.png">
 
 
-21.	Under “manage” section, you’ll find “Space GUID”. Copy and paste it somewhere.
+20.	Select “Spaces” and open the space where you deployed the agent.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image51.png">
+
+
+21.	Under “manage” section, you’ll find “Space GUID”. Copy and paste it somewhere.
+
+<img width="1000" alt="image" src="hands-on-lab-assets/image52.png">
 
 
 22.	Open the url https://multi-agent-external.1slrp41syyn5.us-south.codeengine.appdomain.cloud.
