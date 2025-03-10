@@ -3,7 +3,7 @@
 
 ## Table of Contents
 
-- [Use case: Intelligent AI Assistant](#use-case-intelligent-ai-assistant)
+- [Use case: AskHR](#use-case-askHR)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Sample Use case description](#sample-use-case-description)
