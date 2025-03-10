@@ -12,8 +12,8 @@ Therefore, the goal of this use case is to create an AI enabled system that supp
 
 The artifacts for the use-case:
 
-Usecase story and Methodology : 
+[Usecase story and Methodology](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/usecases/business-automation/Business_Automation_V1.pptx)
 
-One pager:
+[One pager](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/usecases/business-automation/Business%20Automation%20One%20Pager%20template.pptx)
 
-Step-by-step hands-on guide : 
+[Step-by-step hands-on guide](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/usecases/business-automation/hands-on-lab-buisness-automation.md)
