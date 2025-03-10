@@ -7,7 +7,7 @@ The morning starts with a team meeting, where Bill is briefed on the company’s
 
 By mid-morning, Bill receives an urgent request from the payroll team. There’s a data discrepancy in employee hours, and the team needs clarification before they can process the payments. The request has to go through multiple levels of authorization before Bill can provide the required information, leading to further delays. As an HR professional, Bill understands the importance of maintaining the security and integrity of this sensitive data. However, the slow manual processes often lead to missed deadlines, putting the company’s credibility at risk. There has to be a better way.
 
-<img width="350" alt="image" src="business_story_assets/1.png">
+<img width="50" alt="image" src="business_story_assets/1.png">
 
 
 In the afternoon, Bill’s day takes a positive turn. He’s introduced to a new solution—watsonx.Orchestrate, a tool designed to solve the very issues he’s been facing. It promises to streamline HR workflows and ensure that the right information is delivered to the right people at the right time.
@@ -21,7 +21,7 @@ The platform also reassures Bill by providing tools with limited permissions for
 
 
 
-<img width="350" alt="image" src="business_story_assets/2.png">
+<img width="50" alt="image" src="business_story_assets/2.png">
 
 
 As Bill reviews the system, he realizes how scalable this solution is. His company is growing rapidly, and the demands on HR workflows are only going to increase. With watsonx.Orchestrate’s pre-built skills, the system can easily adapt to the changing needs of the company as it expands. Whether it’s onboarding new employees, processing payroll, or handling sensitive compliance data, Bill can rest assured that the system will scale with the business.
@@ -30,4 +30,4 @@ By the end of the day, Bill feels a renewed sense of confidence. He no longer ha
 
 The day winds down, but Bill knows that with watsonx.Orchestrate by his side, the future of HR management at his company is looking brighter than ever before.
 
-<img width="350" alt="image" src="business_story_assets/3.png">
+<img width="50" alt="image" src="business_story_assets/3.png">
