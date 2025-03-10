@@ -65,107 +65,103 @@
 <img width="1000" alt="image" src="hands-on-lab-assets/image42.png">
 
 14. Close this window.
-15. 
+ 
 <img width="1000" alt="image" src="hands-on-lab-assets/image43.png">
 
-16.	Click on “Deploy”.
+15.	Click on “Deploy”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image44.png">
 
-15. Enter Deployment name and select “Deployment Space”. If there are no deployment space you need to create one. Then click on “Deploy”.
+16. Enter Deployment name and select “Deployment Space”. If there are no deployment space you need to create one. Then click on “Deploy”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image45.png">
 
-16.	Wait for the status to change to “Deployed” from “Initializing”.
+17.	Wait for the status to change to “Deployed” from “Initializing”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image46.png">
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image47.png">
 
-17.	Click on the name of the deployment you just deployed.
+18.	Click on the name of the deployment you just deployed.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image48.png">
 
 
-18.	Copy and paste deployment id as shown in below image. You will need it in later step.
+19.	Copy and paste deployment id as shown in below image. You will need it in later step.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image49.png">
 
 
-19.	From menu, select “Deployments”.
+20.	From menu, select “Deployments”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image50.png">
 
 
-20.	Select “Spaces” and open the space where you deployed the agent.
+21.	Select “Spaces” and open the space where you deployed the agent.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image51.png">
 
 
-21.	Under “manage” section, you’ll find “Space GUID”. Copy and paste it somewhere.
+22.	Under “manage” section, you’ll find “Space GUID”. Copy and paste it somewhere.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image52.png">
 
 
-22.	Open the url https://multi-agent-external.1slrp41syyn5.us-south.codeengine.appdomain.cloud.
+23.	Open the url https://multi-agent-external.1slrp41syyn5.us-south.codeengine.appdomain.cloud.
 Paste “Deployment ID” and “Space ID” that you copied in previous steps. 
 Click on “Generate Token”.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/e146759f-3c72-44e1-9b7e-6a5f1411dfc5">
+<img width="1000" alt="image" src="hands-on-lab-assets/image53.png">
+
+24.	A token will be generated. Copy and paste it somewhere.
+
+<img width="1000" alt="image" src="hands-on-lab-assets/image54.png">
 
 
-23.	A token will be generated. Copy and paste it somewhere.
-
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/bfe888ce-b292-40dc-ba61-0366323b904d">
-
-
-24.	Go to “Watsonx Orchestrate” homepage. 
-
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/d52bd45a-a258-48f4-a3e0-08e22fa1471c">
+25.	Go to “Watsonx Orchestrate” homepage. 
+<img width="1000" alt="image" src="hands-on-lab-assets/image55.png">
 
 
-25.	Click on hamburger menu on top left and select “AI agent configuration” from menu.
+26.	Click on hamburger menu on top left and select “AI agent configuration” from menu.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/71052104-3af3-4eb5-81e0-df24a284449e">
+<img width="1000" alt="image" src="hands-on-lab-assets/image56.png">
 
-26.	Click on “Agents“
+27.	Click on “Agents“
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/af55c0b0-6266-432c-ac61-a7ab507b4f56">
-
-
-27.	Clcik on “Add Agent +”.
-
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/92bdca12-bd71-43ee-acd2-1ca9f12e025b">
-
-28.	Give a name to your agent. Enter the description “This HR agent is an AI-powered assistant designed to handle common HR queries efficiently. It can, provide policy information and answer frequently asked questions.”
-
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/a6a82239-bcd6-4366-9900-9a3ee7bc5168">
+<img width="1000" alt="image" src="hands-on-lab-assets/image57.png">
 
 
-29.	Under “Authentication type”, select “Bearer Token”, enter the generated token you copied, In “Service Instance URL” section , enter code-engine-url/chat/completions.
+28.	Clcik on “Add Agent +”.
+
+<img width="1000" alt="image" src="hands-on-lab-assets/image58.png">
+
+29.	Give a name to your agent. Enter the description “This HR agent is an AI-powered assistant designed to handle common HR queries efficiently. It can, provide policy information and answer frequently asked questions.”
+
+<img width="1000" alt="image" src="hands-on-lab-assets/image59.png">
+
+
+30.	Under “Authentication type”, select “Bearer Token”, enter the generated token you copied, In “Service Instance URL” section , enter code-engine-url/chat/completions.
 
 Click on “Connect”
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/d8ab4e91-6c48-4844-b7ce-101a0be49de2">
+<img width="1000" alt="image" src="hands-on-lab-assets/image60.png">
 
 
-30.	Now you can see your agent in this page.
+31.	Now you can see your agent in this page.
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/1feaa9b4-d90f-43c6-83ca-a4756dcf6408">
+<img width="1000" alt="image" src="hands-on-lab-assets/image61.png">
 
+32.	From menu, select “chat”.
 
-31.	From menu, select “chat”.
+<img width="1000" alt="image" src="hands-on-lab-assets/image62.png">
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/fa6ad4de-4273-473c-b258-4c312c1724c7">
+33.	You can enter you HR queries here and see the responses.
 
+<img width="1000" alt="image" src="hands-on-lab-assets/image63.png">
 
-32.	You can enter you HR queries here and see the responses.
+34.	From the menu select "Skill Studio".
 
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/097b0436-9dd3-4521-a0b5-11f8a4c25d61">
-
-33.	From the menu select "Skill Studio".
-
-<img width="1000" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/a9419c75-acce-4606-9cbe-cdda5751a96c">
+<img width="1000" alt="image" src="hands-on-lab-assets/image1.png">
 
 34.	Click on "Create".
 
