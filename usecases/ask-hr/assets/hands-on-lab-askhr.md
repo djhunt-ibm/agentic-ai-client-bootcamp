@@ -90,6 +90,8 @@ This use-case targets developing and deploying an AskHR agent leveraging IBM wat
  
 <img width="1000" alt="image" src="hands-on-lab-assets/image43.png">
 
+### Deploy your agent
+
 15.	Click on “Deploy”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image44.png">
