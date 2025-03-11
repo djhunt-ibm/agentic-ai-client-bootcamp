@@ -28,297 +28,297 @@ This use-case targets developing and deploying an AskHR agent leveraging IBM wat
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image30.png">
 
-3.	Click on hamburger icon on top left and select “Access (IAM)”.
+2.	Click on hamburger icon on top left and select “Access (IAM)”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image33.png">
 
 
-4.	In next screen, select “API Keys” from menu.
+3.	In next screen, select “API Keys” from menu.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image34.png">
 
-5.	Click on “Create”.
+4.	Click on “Create”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image35.png">
 
-6.	Give your API key a name, then click on “Create”.
+5.	Give your API key a name, then click on “Create”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image36.png">
 
 
-7.	Copy the API key that is shown after clicking on “create”. Paste it somewhere, it’ll be used in later steps.
+6.	Copy the API key that is shown after clicking on “create”. Paste it somewhere, it’ll be used in later steps.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image37.png">
 
 
-8.	Switch back to the homepage. Open Agent Lab.
+7.	Switch back to the homepage. Open Agent Lab.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image38.png">
 
 
-9.	In “Instructions” field, paste this prompt “You are a helpful Human Resources Assistant that uses tools to answer questions in detail. Please use website https://www.cipd.org/en/knowledge/factsheets/hr-policies-factsheet/ to give answers to user questions. When greeted, say “Hi, I am HR agent, How can I help you?”
+8.	In “Instructions” field, paste this prompt “You are a helpful Human Resources Assistant that uses tools to answer questions in detail. Please use website https://www.cipd.org/en/knowledge/factsheets/hr-policies-factsheet/ to give answers to user questions. When greeted, say “Hi, I am HR agent, How can I help you?”
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image39.png">
 
 ### Using a tool
-10.	From “Added tools” section remove already added tools.
+9.	From “Added tools” section remove already added tools.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image40.png">
 
 
 
-11.	Then click on “Add a tool”.
+10.	Then click on “Add a tool”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image41.png">
 
 
-12.	Enable “Webcrawler” tool and close this tools window.
+11.	Enable “Webcrawler” tool and close this tools window.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image42.png">
 
-13. Close this window.
+12. Close this window.
  
 <img width="1000" alt="image" src="hands-on-lab-assets/image43.png">
 
 ### Deploy your agent
 
-14.	Click on “Deploy”.
+13.	Click on “Deploy”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image44.png">
 
-15. Enter Deployment name and select “Deployment Space”. If there are no deployment space you need to create one. Then click on “Deploy”.
+14. Enter Deployment name and select “Deployment Space”. If there are no deployment space you need to create one. Then click on “Deploy”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image45.png">
 
-16.	Wait for the status to change to “Deployed” from “Initializing”.
+15.	Wait for the status to change to “Deployed” from “Initializing”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image46.png">
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image47.png">
 
-17.	Click on the name of the deployment you just deployed.
+16.	Click on the name of the deployment you just deployed.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image48.png">
 
 
-18.	Copy and paste deployment id as shown in below image. You will need it in later step.
+17.	Copy and paste deployment id as shown in below image. You will need it in later step.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image49.png">
 
 
-19.	From menu, select “Deployments”.
+18.	From menu, select “Deployments”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image50.png">
 
 
-20.	Select “Spaces” and open the space where you deployed the agent.
+19.	Select “Spaces” and open the space where you deployed the agent.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image51.png">
 
 
-21.	Under “manage” section, you’ll find “Space GUID”. Copy and paste it somewhere.
+20.	Under “manage” section, you’ll find “Space GUID”. Copy and paste it somewhere.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image52.png">
 
 
-22.	Open the url https://multi-agent-external.1slrp41syyn5.us-south.codeengine.appdomain.cloud.
+21.	Open the url https://multi-agent-external.1slrp41syyn5.us-south.codeengine.appdomain.cloud.
 Paste “Deployment ID” and “Space ID” that you copied in previous steps. 
 Click on “Generate Token”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image53.png">
 
-23.	A token will be generated. Copy and paste it somewhere.
+22.	A token will be generated. Copy and paste it somewhere.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image54.png">
 
 ## Watsonx Orchestrate
 
-24.	Go to “Watsonx Orchestrate” homepage. 
+23.	Go to “Watsonx Orchestrate” homepage. 
 <img width="1000" alt="image" src="hands-on-lab-assets/image55.png">
 
 ### AI agent configuration
 
-25.	Click on hamburger menu on top left and select “AI agent configuration” from menu.
+24.	Click on hamburger menu on top left and select “AI agent configuration” from menu.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image56.png">
 
-26.	Click on “Agents“
+25.	Click on “Agents“
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image57.png">
 
 
-27.	Click on “Add Agent +”.
+26.	Click on “Add Agent +”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image58.png">
 
-28.	Give a name to your agent. Enter the description: 'This HR agent is an AI-powered assistant designed to handle common HR queries efficiently. It can provide policy information and answer frequently asked questions.”
+27.	Give a name to your agent. Enter the description: 'This HR agent is an AI-powered assistant designed to handle common HR queries efficiently. It can provide policy information and answer frequently asked questions.”
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image59.png">
 
 
-29.	Under “Authentication type”, select “Bearer Token”, enter the generated token you copied, In “Service Instance URL” section , enter code-engine-url/chat/completions.
+28.	Under “Authentication type”, select “Bearer Token”, enter the generated token you copied, In “Service Instance URL” section , enter code-engine-url/chat/completions.
 
 Click on “Connect”
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image60.png">
 
 
-30.	Now you can see your agent in this page.
+29.	Now you can see your agent in this page.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image61.png">
 
-31.	From menu, select “chat”.
+30.	From menu, select “chat”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image62.png">
 
-32.	You can enter you HR queries here and see the responses.
+31.	You can enter you HR queries here and see the responses.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image63.png">
 
 ### Skill Studio
 
-33.	From the menu select "Skill Studio".
+32.	From the menu select "Skill Studio".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image1.png">
 
-34.	Click on "Create".
+33.	Click on "Create".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image2.png">
 
-35.	Select "Import API" from the dropdown.
+34.	Select "Import API" from the dropdown.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image3.png">
 
-36.	Select "From a file".
+35.	Select "From a file".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image4.png">
 
 
-37.	Drag or Select the open specs file and click on "next".
+36.	Drag or Select the open specs file and click on "next".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image5.png">
 
 
-38.	Select all checkboxes and click on "Add".
+37.	Select all checkboxes and click on "Add".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image6.png">
 
 
-39.	Once the skills are imported, Click on the three dots against the 'Update address' skill.
+38.	Once the skills are imported, Click on the three dots against the 'Update address' skill.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image7.png">
 
 
-40.	Select 'Enhance this skill'.
+39.	Select 'Enhance this skill'.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image8.png">
 
 
-41.	Click on 'Publish'..
+40.	Click on 'Publish'..
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image9.png">
 
 
 
-42.	Repeat last 3 steps for other imported skills as well.
+41.	Repeat last 3 steps for other imported skills as well.
 
-43.	Once the skills are published, from menu go to "Skill sets".
+42.	Once the skills are published, from menu go to "Skill sets".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image10.png">
 
 
-44.	From the dropdown, select "Orchestrate Agent Skills".
+43.	From the dropdown, select "Orchestrate Agent Skills".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image11.png">
 
 
-45.	Click on "Connections". Your imported skills should be grouped in one app automatically. By clicking on arrow, search for that app. Click on three dots against that app and then click on "Connect app".
+44.	Click on "Connections". Your imported skills should be grouped in one app automatically. By clicking on arrow, search for that app. Click on three dots against that app and then click on "Connect app".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image11.1.png">
 
 
 
-46.	Select "Team credentials" and click on "Connect app".
+45.	Select "Team credentials" and click on "Connect app".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image11.2.png">
 
 
-47.	Enter your credentials and click on "Connect app".
+46.	Enter your credentials and click on "Connect app".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image12.png">
 
 
 
-48.	Once thats done, click on skills and then click on "Manage skills".
+47.	Once thats done, click on skills and then click on "Manage skills".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image13.png">
 
 
-49.	Click on app in which your skills are grouped.
+48.	Click on app in which your skills are grouped.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image14.png">
 
 
 
-50.	Check if "Get Time Off Balance", "Get User Profile", "Request Time Off", "Update address" and "Update Title" skills are added. If not already added, click on "Add skill + " for all skills you want to add. 
+49.	Check if "Get Time Off Balance", "Get User Profile", "Request Time Off", "Update address" and "Update Title" skills are added. If not already added, click on "Add skill + " for all skills you want to add. 
 Then click on "Connect App" on top right, if not already connected.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image15.png">
 
 
 
-51.	From menu, click on "AI agent configuration".
+50.	From menu, click on "AI agent configuration".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image16.png">
 
 
 
-52.	Select "Apps and skills" and click on the app your skills are grouped into.
+51.	Select "Apps and skills" and click on the app your skills are grouped into.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image17.png">
 
 
-53.	Click on "Add to chat +" for Get Time off Balance.
+52.	Click on "Add to chat +" for Get Time off Balance.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image18.png">
 
 
-54.	Enter the description of this skill, "To get time off balance data" Then click on "Add skill".
+53.	Enter the description of this skill, "To get time off balance data" Then click on "Add skill".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image19.png">
 
-55.	Similarly add all the imported skills with following descriptions as follows. Get User Profile : to get complete profile data of user. Request Time Off : to request time off, apply for leaves Update Address : To update user address Update Title : To update user Title
+54.	Similarly add all the imported skills with following descriptions as follows. Get User Profile : to get complete profile data of user. Request Time Off : to request time off, apply for leaves Update Address : To update user address Update Title : To update user Title
 
-56.	Now click on your profile icon in top right and select "settings"
+55.	Now click on your profile icon in top right and select "settings"
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image20.png">
 
-57.	Click on "chat", then "Switch to legacy chat", then click on "Change to legacy chat" as shown in below image.
+56.	Click on "chat", then "Switch to legacy chat", then click on "Change to legacy chat" as shown in below image.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image21.png">
 
 
-58.	From menu, select "Skill sets"
+57.	From menu, select "Skill sets"
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image22.png">
 
 
-59.	Select "Team Skills" in dropdown.
+58.	Select "Team Skills" in dropdown.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image22.1.png">
 
 
-60. Then click on "connections".Search for the app your skills are grouped into and connet it by clicking on 3 dots.
+59. Then click on "connections".Search for the app your skills are grouped into and connet it by clicking on 3 dots.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image22.2.png">
 
 
-61.	Click on "skills" and then "Manage skills".
+60.	Click on "skills" and then "Manage skills".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image23.png">
 
 
-62.	Search for the app, where skills are imported, click on it.
+61.	Search for the app, where skills are imported, click on it.
 
   Then click on "add skills +" for all the skills you imported and then connect app using "Connect App" button in top right.
 
@@ -328,17 +328,17 @@ Then click on "Connect App" on top right, if not already connected.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image26.png">
 
-63.	Then click on profile icon, then settings , then click on chat version and switch to AI chat again.
+62.	Then click on profile icon, then settings , then click on chat version and switch to AI chat again.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image27.png">
 
-64.	From menu click on "chat".
+63.	From menu click on "chat".
 
 
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image28.png">
 
-65.	Use your imported skills in chat.
+64.	Use your imported skills in chat.
 <img width="1000" alt="image" src="hands-on-lab-assets/image29.png">
 
 End of Document
