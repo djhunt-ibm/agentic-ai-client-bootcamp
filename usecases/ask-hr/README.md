@@ -18,6 +18,6 @@ Architecture diagram : [here](assets/AskHR_architecture.md)
 
 Methodology : [here](assets/AskHR_methodology.md)
 
-One pager: [here](assets/AskHR_one_pager.md)
+One pager: [here](https://ibm.box.com/s/ef5i26l13te9vxi57mi26k95jrxhxhqz)
 
 Step-by-step hands-on guide : [here](assets/hands-on-lab-askhr.md)
