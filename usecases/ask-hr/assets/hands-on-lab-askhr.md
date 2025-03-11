@@ -157,11 +157,11 @@ Click on “Generate Token”.
 <img width="1000" alt="image" src="hands-on-lab-assets/image57.png">
 
 
-28.	Clcik on “Add Agent +”.
+28.	Click on “Add Agent +”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image58.png">
 
-29.	Give a name to your agent. Enter the description “This HR agent is an AI-powered assistant designed to handle common HR queries efficiently. It can, provide policy information and answer frequently asked questions.”
+29.	Give a name to your agent. Enter the description: 'This HR agent is an AI-powered assistant designed to handle common HR queries efficiently. It can provide policy information and answer frequently asked questions.”
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image59.png">
 
@@ -214,17 +214,17 @@ Click on “Connect”
 <img width="1000" alt="image" src="hands-on-lab-assets/image6.png">
 
 
-40.	Once the skills are imported, click in three dots against imported "Update address" skill.
+40.	Once the skills are imported, Click on the three dots against the 'Update address' skill.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image7.png">
 
 
-41.	Select "Enhance this skill".
+41.	Select 'Enhance this skill'.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image8.png">
 
 
-42.	Click on "Publish".
+42.	Click on 'Publish'..
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image9.png">
 
