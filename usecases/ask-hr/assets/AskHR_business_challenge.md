@@ -6,12 +6,12 @@
 Many organizations still use outdated or disconnected HR systems, causing data silos and inefficiencies. This fragmentation leads to difficulties in accessing accurate, up-to-date information, affecting decision-making and workflow.
 
 <img width="50" alt="image" src="business_challenge_assets/2.png">
-- **Lack of Automation**
+- __Lack of Automation__
 
 Despite technological advances, many HR tasks like onboarding, payroll, and time tracking remain manual, which is time-consuming and error-prone. Automating these processes can improve efficiency, reduce errors, and ensure timely actions.
 
 <img width="50" alt="image" src="business_challenge_assets/3.png">
-- **Slow Response Times**
+- __ Slow Response Times __
 
 HR teams often face delays in responding to employee queries about benefits, leave, or policies. Slow approvals and decision-making create bottlenecks, reducing overall efficiency.
 
