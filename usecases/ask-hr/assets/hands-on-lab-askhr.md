@@ -308,10 +308,17 @@ Then click on "Connect App" on top right, if not already connected.
 <img width="1000" alt="image" src="hands-on-lab-assets/image22.1.png">
 
 
-59. Then click on "connections".Search for the app your skills are grouped into and connet it by clicking on 3 dots.
+59. Then click on "connections".Search for the app your skills are grouped into. Click on 3 dots and then click on "Connect app".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image22.2.png">
 
+59.a Select "Team Credentials", then click on "Connect app".
+
+<img width="1000" alt="image" src="hands-on-lab-assets/image22.3.png">
+
+59.b Enter your credentials, then click on "Connect app".
+
+<img width="1000" alt="image" src="hands-on-lab-assets/image22.4.png">
 
 60.	Click on "skills" and then "Manage skills".
 
