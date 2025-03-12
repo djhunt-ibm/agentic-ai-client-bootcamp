@@ -15,6 +15,6 @@ This powerful solution streamlined HR processes by automating routine tasks, pro
 
 Architecture diagram : [here](assets/AskHR_architecture.md)
 
-Download One pager: [here](https://ibm.box.com/s/ef5i26l13te9vxi57mi26k95jrxhxhqz)
+Download One pager: [here](https://ibm.box.com/s/tevk3cwye9z65gouz0ep0riwu0oe3sex)
 
 Step-by-step hands-on guide : [here](assets/hands-on-lab-askhr.md)
