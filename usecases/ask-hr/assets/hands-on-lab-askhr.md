@@ -24,7 +24,7 @@ This use-case targets developing and deploying an AskHR agent leveraging IBM wat
 
 ### Agent Lab - Creating your first agent
 
-1.	Login into your Watsonx account. This is Homepage of Watsonx AI.
+1.	Login into your watsonx account. This is Homepage of watsonx AI.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image30.png">
 
@@ -131,9 +131,9 @@ Click on “Generate Token”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image54.png">
 
-## Watsonx Orchestrate
+## watsonx Orchestrate
 
-23.	Go to “Watsonx Orchestrate” homepage. 
+23.	Go to “watsonx Orchestrate” homepage. 
 <img width="1000" alt="image" src="hands-on-lab-assets/image55.png">
 
 ### AI agent configuration
