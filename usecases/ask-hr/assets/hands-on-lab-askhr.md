@@ -96,7 +96,7 @@ This use-case targets developing and deploying an AskHR agent leveraging IBM wat
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image47.png">
 
-16.	Click on the name of the deployment you just deployed.
+16.	Click on the deployment you just deployed.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image48.png">
 
