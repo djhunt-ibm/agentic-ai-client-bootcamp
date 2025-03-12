@@ -155,11 +155,16 @@ Now that we have tested our agent and it performs to our satisfaction, we can de
 
 You can give your deployment space any name (must be unique within the account), and select `Development` as the Deployment stage. Make sure that you have a storage service and a watsonx.ai Runtime service selected. Even though the watsonx.ai Runtime field says it is optional, it is not optional for the deployment of our agent. 
 
-Back in the Agent Lab UI, you can now simply click on the `Deploy` button at the top right of the screen. In the following window, if it asks you to create a User API key, use the provided link to create one.
+Back in the Agent Lab UI, you can now simply click on the `Deploy` button at the top right of the screen. 
+
+![alt text](images/image38.png)
+
+In the following window, if it asks you to create a User API key, use the provided link to create one. Note that the link is all the way to the right of the window and opens a new browser tab. Once you have created your API key, you can come back to this tab and click on `Reload`.
+Make sure you have selected the deployment space you created earlier. Click Deploy.
 
 ![alt text](images/image10.png)
 
-Make sure you have selected the deployment space you created earlier. Click Deploy. Back on the Deployments page, you can now the new deployment being run.
+ Back on the Deployments page, you can now the new deployment being run.
 
 ![alt text](images/image11.png)
 
