@@ -1,6 +1,6 @@
 # watsonx Agentic AI Bootcamp
 
-![alt text](img/agentic-bootcamp.png)
+![alt text](/agentic-bootcamp.png)
 
 In this bootcamp, you will build and deploy an Agentic AI application prototype for an enterprise use case.
 
