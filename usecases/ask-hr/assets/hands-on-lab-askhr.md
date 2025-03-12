@@ -156,7 +156,7 @@ Click on “Generate Token”.
 <img width="1000" alt="image" src="hands-on-lab-assets/image59.png">
 
 
-28.	Under “Authentication type”, select “Bearer Token”, enter the generated token you copied, In “Service Instance URL” section , enter code-engine-url/chat/completions.
+28.	Under “Authentication type”, select “Bearer Token”, enter the generated token you copied, In “Service Instance URL” section , enter "https://multi-agent-external.1slrp41syyn5.us-south.codeengine.appdomain.cloud/chat/completions".
 
 Click on “Connect”
 
