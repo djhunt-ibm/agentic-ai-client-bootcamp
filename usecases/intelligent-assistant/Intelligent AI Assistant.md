@@ -65,6 +65,10 @@ Now you can study what the tool offers:
 
 ![alt text](images/image7.png)
 
+The picture below shows what the configuration for your new agent might look like. Note that we haven't added any starter questions here. Those will be covered later when integrating with watsonx Orchestrate.
+
+![alt text](images/image39.png)
+
 Let's explore the environment a bit further. To start, remove the Google search tool from the agent, by clicking on the trash bin icon.
 In the Agent preview window, type in a question about something the model has most likely not been trained with. For example, enter "What is the current exchange rate between US dollars and Euro?" The response will look similar to what is shown in the screenshot below.
 
