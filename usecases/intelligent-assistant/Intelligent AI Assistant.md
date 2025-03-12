@@ -5,7 +5,6 @@
 - [Use case: Intelligent AI Assistant](#use-case-intelligent-ai-assistant)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
-  - [Sample Use case description](#sample-use-case-description)
   - [Agent Lab - Creating your first agent](#agent-lab---creating-your-first-agent)
     - [Define a custom tool](#define-a-custom-tool)
     - [Deploy your agent](#deploy-your-agent)
@@ -26,19 +25,13 @@ We will show you how to build a sample of this scenario in two stages:
 1. Use the watsonx.ai Agent Lab low-code tool to define an agent that leverages a set of tools. One of the tools is a custom tool for which we will add Python code that implements its function (which is calling a REST API to a public service on the Internet). We then deploy this agent in watsonx.ai, so that it can be invoked from the AI assistant, which we build in Stage 2.
 2. Use the watsonx Orchestrate Assistant Builder tool to define an assistant that gets exposed as a chat frontend. We will also define one or more agents that the assistant can use to answer the user's request.
 
-<div style="border: 2px solid black; padding: 10px;">
-Even though we will take you through a complete and working example, you should also consider making changes that fit your desired use case better, and only take this description as a reference point that guides you along your own implementation.
-</div>
-
-## Sample Use case description
-
-In our example, we are looking at the persona of a warehouse manager who wants to manage arrivals and departures of product at the docks of a particular warehouse. 
-
-We envision two phases in which this can be rolled out: in the first phase, the user actively guides the system along the intended path of action. For example, we can ask the system about the status of a specific dock, to retrieve the current number and ID of trucks loading and unloading, as well as details about the products they contain. As a next step, we ask the system to make recommendations about the handling of a certain product that is in surplus. In response, the system will make a recommendation that is most cost effective. The user can then instruct the system to follow the recommendation - or take any other action, of course. The system will notify the user when the change has been made, other stakeholders have been notified (say, by email), and update the overall status of the warehouse inventory. 
-
 There is an argument to be made that a truly agentic solution would show a higher degree of autonomy. To address a particular problem, or ask, an agentic solution will make a plan, then start executing this plan, checking its effectiveness towards a good outcome and possibly revise the plan accordingly, all in an automated fashion and without human intervention. Applying that to the scenario described above, we simply take out the "human in the loop", by letting the system analyze the status of the dock, decide what to do with surplus product, notify stakeholders of the decision (say, return surplus to original warehouse), and update systems of record. The flow will fundamentally be the same, and it can use the same set of agents, but will add a controller of sorts on top.
 
 In this exercise, we will take you through a rudimentary implementation of the first stage, because we believe that is realistically what enterprises will do in the near future. But it provides a path to mature to the second phase.
+
+<div style="border: 2px solid black; padding: 10px;">
+Even though we will take you through a complete and working example, you should also consider making changes that fit your desired use case better, and only take this description as a reference point that guides you along your own implementation.
+</div>
 
 ## Agent Lab - Creating your first agent
 
