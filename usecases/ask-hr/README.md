@@ -7,7 +7,7 @@ TechCorp Inc., a global IT leader with a workforce of 100,000 employees, faced a
 With this use-case, we are planning to tackle such a challenge by adopting an enterprise-grade platform, WatsonX, equipped with Agentic capabilities.
 This powerful solution streamlined HR processes by automating routine tasks, providing real-time analytics, and offering personalized employee experiences. With WatsonX's AI-driven insights let's see how TechCorp was able to optimize its HR operations, reduce administrative overhead, and ensure a more efficient and effective management of its vast workforce, ultimately fostering a more agile and engaged company culture.
 
-<img alt="oneslider" src="one_slider_r2.png">
+<img alt="oneslider" src="assets/one_slider_r2.png">
 
 
 ## Artifacts
