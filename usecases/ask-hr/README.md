@@ -7,21 +7,14 @@ TechCorp Inc., a global IT leader with a workforce of 100,000 employees, faced a
 With this use-case, we are planning to tackle such a challenge by adopting an enterprise-grade platform, WatsonX, equipped with Agentic capabilities.
 This powerful solution streamlined HR processes by automating routine tasks, providing real-time analytics, and offering personalized employee experiences. With WatsonX's AI-driven insights let's see how TechCorp was able to optimize its HR operations, reduce administrative overhead, and ensure a more efficient and effective management of its vast workforce, ultimately fostering a more agile and engaged company culture.
 
-<img alt="AskHR" src="assets/arch_diagm.png">
+<img alt="AskHR" src="one_slider_r2.png">
 
 
 ## Artifacts
 
-The artifacts for the use-case:
-
-Business story : [here](assets/AskHR_business_story.md)
-
-Business challenge : [here](assets/AskHR_business_challenge.md)
 
 Architecture diagram : [here](assets/AskHR_architecture.md)
 
-Methodology : [here](assets/AskHR_methodology.md)
-
-One pager: [here](https://ibm.box.com/s/ef5i26l13te9vxi57mi26k95jrxhxhqz)
+Download One pager: [here](https://ibm.box.com/s/ef5i26l13te9vxi57mi26k95jrxhxhqz)
 
 Step-by-step hands-on guide : [here](assets/hands-on-lab-askhr.md)
