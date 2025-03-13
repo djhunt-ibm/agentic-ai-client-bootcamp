@@ -38,7 +38,31 @@ Even though we will take you through a complete and working example, you should 
 For the first stage of implementation of our agentic solution, we use the watsonx.ai Agent Lab tool. 
 > Note that this feature is currently in beta, so its design may change from the screenshots you see below.
 
-We assume you are logged into your watsonx.ai environment, and created a project that will hold the assets you create. If you haven't done so, go ahead and create a project - and don't forget to associate it with your watsonx.ai Runtime instance.
+As a starting point, we assume you are logged into your watsonx.ai environment, and have opened the console in your browser. The first thing we need to do is create a project that will hold all the assets we will create. In the top left corner of the console, you will note what we call the "hamburger menu".
+
+![alt text](images/image40.png)
+
+When you click on it, you will see a number of menu options, allowing you to directly jump to the right view for the work you are trying to do. Since we want to create a new project, select the `View all projects` option.
+
+![alt text](images/image41.png)
+
+Now click on the blue `New project` button on the right side of the screen. In the `Create a project` view, you enter a unique name for your project, optionally give it a description and select an available storage service instance, which will hold all the data.
+
+![alt text](images/image42.png)
+
+Then click on `Create`. In the projects view, go to the `Manage` tab.
+
+![alt text](images/image43.png)
+
+In the Manage view, go to `Services & Integrations`, and click on `Associate service`, as shown below.
+
+![alt text](images/image44.png)
+
+In the Associate service view, select a service that is of type watsonx.ai Runtime, and click on `Associate`.
+
+![alt text](images/image45.png)
+
+The project is now ready for you to create an agent!
 
 ![alt text](images/image1.png)
 
