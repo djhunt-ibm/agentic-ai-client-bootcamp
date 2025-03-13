@@ -8,7 +8,7 @@
   - [Agent Lab - Creating your first agent](#agent-lab---creating-your-first-agent)
     - [Define a custom tool](#define-a-custom-tool)
     - [Deploy your agent](#deploy-your-agent)
-  - [CodeEngine (to be removed later)](#codeengine-to-be-removed-later)
+  - [CodeEngine](#codeengine)
   - [watsonx Orchestrate](#watsonx-orchestrate)
     - [AI agent configuration](#ai-agent-configuration)
     - [Assistant Builder](#assistant-builder)
@@ -105,6 +105,10 @@ Now let's add the Google search tool back. Click on `Add a tool`, clear the chat
 You have now built your first agent! This agent can answer questions and will reach out to Google to find information the model doesn't have. 
 
 ### Define a custom tool
+
+> **Important Note:** At the time of this writing, the custom tool function in Agent Lab has been disabled. We  expect it to be reenabled soon, but until then, the steps described below will not work.
+> As a workaround, we recommend you skip the definition of the custom tool and just leave the Google search tool on the agent. This tool cannot return current traffic information, so when asked, the agent will return just some generic text about traffic. 
+> This will not break any of the things we do in watsonx Orchestrate below. You just won't see the agent return the expected traffic information.  
 
 Next we will add a custom tool to our agent, that is, a tool calling an API, for which no tool already exists in the catalog. In our example, we call an API providing current traffic information for a specific location, using a service called here.com.
 
@@ -215,11 +219,11 @@ When you select the deployed agent and go to the Code tab, you see the Python co
 
 ![alt text](images/image15.png)
 
-## CodeEngine (to be removed later)
+## CodeEngine
 
-Currently, the deployed agent cannot directly be configured as an external agent in watsonx Orchestrate. Instead, we need to deploy an endpoint that satifies requests from watsonx Orchestrate and converts them into the interface required by the agent. We will use the CodeEngine service for this. Instructions for how to do it can be found [here](https://github.com/watson-developer-cloud/watsonx-orchestrate-developer-toolkit/tree/main/external_agent/examples/agent_builder).
-
-Note that this extra step is expected to be removed soon.
+> **Important note:** Currently, the deployed agent cannot directly be configured as an external agent in watsonx Orchestrate. Instead, we need to deploy an endpoint that satifies requests from watsonx Orchestrate and converts them into the interface required by the agent. We will use the CodeEngine service for this. 
+> We have instructions for a single CodeEngine endpoint that can cover many agents [here](https://github.ibm.com/skol/agentic-ai-client-bootcamp-instructors/blob/main/environment-setup/external-agent-builder/Readme.md). Alternative instructions, which show how to deploy a single CodeEngine endpoint for each agent, can be found [here](https://github.com/watson-developer-cloud/watsonx-orchestrate-developer-toolkit/tree/main/external_agent/examples/agent_builder).
+> Note that this extra step is expected to be removed in an upcoming new release of watsonx Orchestrate.
 
 ## watsonx Orchestrate
 
