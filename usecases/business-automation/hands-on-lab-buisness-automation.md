@@ -10,7 +10,6 @@
 - [Getting the Space ID for Deployment on Code Engine](#getting-the-space-id-for-deployment-on-code-engine)
 - [Deploying Agents on Code Engine](#deploying-agents-on-code-engine)
 - [Integration with Watsonx Orchestrate](#integration-with-watsonx-orchestrate)
-- [Agent Descriptions](#agent-descriptions)
 - [Demo Video](#demo-video) 
 
 ## Introduction  
@@ -268,4 +267,7 @@ This agent is designed to compare the given data with additional information gat
 
 ## Demo Video
 
-[![Demo](images/wxo_home.png)](video/Demo.mp4)
+![Demo](video/Demo_video.mp4)
+
+
+
