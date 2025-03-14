@@ -122,7 +122,7 @@ This use-case targets developing and deploying an AskHR agent leveraging IBM wat
 
 
 21.	Open the url https://multi-agent-external.1slrp41syyn5.us-south.codeengine.appdomain.cloud.
-Paste “Deployment ID”, “Space ID”, "API Key" and "Watsonx URL" that you copied in previous steps. 
+Paste “Deployment ID”, “Space ID”, "API Key" and "watsonx URL" that you copied in previous steps. 
 Click on “Generate Token”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image53.png">
