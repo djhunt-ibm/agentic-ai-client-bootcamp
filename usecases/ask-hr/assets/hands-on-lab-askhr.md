@@ -121,7 +121,9 @@ This use-case targets developing and deploying an AskHR agent leveraging IBM wat
 <img width="1000" alt="image" src="hands-on-lab-assets/image52.png">
 
 
-21.	Open the url https://multi-agent-external.1slrp41syyn5.us-south.codeengine.appdomain.cloud.
+21.	Please refer to the [Code Engine instructor](https://github.ibm.com/skol/agentic-ai-client-bootcamp-instructors/blob/main/environment-setup/external-agent-builder/Readme.md) guide for deployment instructions. Once you obtain the deployment link, kindly open it.
+
+You will reach the page shown in the image below.
 Paste “Deployment ID”, “Space ID”, "API Key" and "watsonx URL" that you copied in previous steps. 
 Click on “Generate Token”.
 
