@@ -1,5 +1,7 @@
 # Prerequisite Steps
 
+Follow this step-by-step guide to create a Project ID and generate an API key.
+
 1. Log in to your **Watsonx AI** account. Once logged in, you will land on the homepage.  
 
    ![Watsonx Homepage](/environment-setup/assets/home-page.png)  

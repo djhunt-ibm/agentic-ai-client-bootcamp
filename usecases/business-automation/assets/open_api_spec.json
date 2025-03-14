@@ -48,17 +48,29 @@
         ],
         "responses": {
           "200": {
-            "description": "Product details retrieved successfully.",
+            "description": "Successful response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProductInfo"
+                  "type": "string"
                 }
               }
             }
           },
           "404": {
-            "description": "Product not found."
+            "description": "Product not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "detail": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }

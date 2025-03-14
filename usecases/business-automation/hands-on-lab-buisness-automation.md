@@ -129,7 +129,7 @@ Here's the corrected version with proper grammar and clarity:
 32. You can now interact with the skills as shown below.  
    ![Demo Skills](assets/demo_skill.png)  
 
-Before starting the Agent creation, ensure you have generated your project ID and API key. Refer to [api_key_project_id_setup.md](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/environment-setup/api_key_prooject_id_setup.md) for guidance.
+Before starting the Agent creation, ensure you have generated your project ID and API key. Refer to [api_key_project_id_setup.md](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/environment-setup/api_key_project_id_setup.md) for guidance.
 
 ## Agent Lab 
 
