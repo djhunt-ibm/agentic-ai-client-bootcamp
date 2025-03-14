@@ -4,7 +4,7 @@
 - [Introduction](#introduction)
 - [Use Case Description](#use-case-description)
 - [Adding Custom Skills](#adding-custom-skills)
-- [Agent Creation](#agent-creation)
+- [Agent Lab](#agent-lab)
   - [Link Search Agent](#link-search-agent)
   - [Comparison Agent](#comparison-agent)
 - [Getting the Space ID for Deployment on Code Engine](#getting-the-space-id-for-deployment-on-code-engine)
@@ -21,7 +21,7 @@
 
 The sales department of ABC Motor Corp, an automotive large player, when preparing sales proposals, they were spending a lot of time understanding the features of competing products and comparing them with their own products. ABC Motor Corp, needs an automated competitive analysis system to help their sales teams quickly identify and position their products against competitors. Traditionally, gathering competitor insights required extensive manual research, making it inefficient and prone to outdated information. Therefore, the goal of this use case is to create an AI enabled system that support the customer's competitive analysis and market research.
 
-## Adding Custom Skill 
+## Adding Custom Skills 
 
 After your instructor has completed the **Product APP** setup, request the server URL from them. Open the [OPEN_API_SPEC File](open_api_spec.json) and replace the default server URL with the one provided.
 
@@ -129,49 +129,57 @@ Here's the corrected version with proper grammar and clarity:
 32. You can now interact with the skills as shown below.  
    ![Demo Skills](assets/demo_skill.png)  
 
-Note before starting the Agent creation make sure you have generated your project Id and API key refer [api_key_project_id_setup.md](http:)
+Before starting the Agent creation, ensure you have generated your project ID and API key. Refer to [api_key_project_id_setup.md](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/environment-setup/api_key_prooject_id_setup.md) for guidance.
 
-## Agent Creation  
-We will create three agents as part of this setup:  
+## Agent Lab 
+
+We will create two agents as part of this setup:  
 1. **Link Search Agent**  
 2. **Comparison Agent**  
 
-Let's start with the **Link Search Agent**.     
+From the Home page of Agnet Lab, click on the 
+Build an AI agent to automate tasks
+
+![Home page](assets/agent_lab_home.png) 
+
+Let's start with the **Link Search Agent**. 
 
 ### Link Search Agent  
 #### Setup  
-- Enter a **name** for the agent as shown in the image.  
-- Add a **description** (optional).  
-
+1. Enter a **name** for the agent as shown in the image.
+2. Add a **description** (optional).
 ![Setup](assets/setup_link_search_agent.png)  
 
-#### Configuration  
-- Enter the **Instructions** as shown in the image. These instructions guide your agent on what tasks it should perform.  
-- Choose **LangGraph** as the framework.  
-- Select **ReAct** as the architecture.  
-
-![Configuration](images/configuration_link_search_agent.png)  
+#### Configuration    
+1. Choose **LangGraph** as the framework.  
+2. Select **ReAct** as the architecture. 
+3. Enter the **Instructions** as shown in the image. These instructions guide your agent on what tasks it should perform. You can use this prompt for it "You are a skilled assistant specialized in locating URLs for similar products with matching features. Provide a maximum of three URLs with name of the product."
+![Configuration](assets/configuration_link_search_agent.png)  
 
 #### Tools  
-- Select **Google Search** as the tool to gather data.  
+1. Click on the Add Tool.
+![Add Tool](assets/add_tool.png)
 
-![Tool](images/tool_link_search_agent.png)  
+2. Select **Google Search** as the tool to gather data.  
+![Tool](assets/tool_link_search_agent.png)  
 
-Once the agent is created, test it on the right-hand side of the chat section, as shown in the image below.  
-
-Click on the **Save As** button to save your agent (marked as number 1 in the image). Then, click on the **Deploy** button to deploy the agent (marked as number 2 in the image). Deployment may take 1-2 minutes.  
-
-![Link Search Agent Chat](images/chat_link_search_agent.png)  
-
+#### Saving and Deploying
+1. Once the agent is created, test it on the right-hand side of the chat section, as shown in the image below.
+2. Click on the **Save As** button to save your Agent
+3. click on the **Deploy** button to deploy the agent.
+![Link Search Agent Chat](assets/chat_link_agent.png) 
+4. After clicking on the save as button select Agent (marked as 1) and Click Save ((marked as 2))
+![Link Search Agent Chat](assets/saveas_link_agent.png)
+5. After clicking the deployoment button make sure your Targeted deployemnt has been seleceted if not please select it.(marked as 1), click Deploy to deploy the agent (marked as 2)
+![Link Search Agent Chat](assets/deployment_config.png)
 Follow these steps to successfully create the Link Search Agent.  
 
 ---
 
 ### Comparison Agent  
 #### Setup  
-- Enter a **name** for the agent as shown in the image.  
-- Add a **description** (optional).  
-
+1. Enter a **name** for the agent as shown in the image.  
+2. Add a **description** (optional).  
 ![Setup](images/setup_comparison_agent.png)  
 
 #### Configuration  
