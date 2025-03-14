@@ -44,10 +44,11 @@ This system leverages 2 AI agents and an Orchestrate agent that collaborate seam
 
 <img width="979" alt="image" src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/451557/952b54c4-28a4-4ef6-82b4-ef08991d9297">
 
+
 The use case leverages wxO skills to get product specific data (name, features) from the product catalogue followed by two specialized agents developed within the watsonx.ai's Agent Lab, all of which are integrated into watsonx Orchestrate. Through the watsonx Orchestrate chat assistant, these agents & skills communicate seamlessly to provide comprehensive insights and facilitate informed decision-making. 
   * **Product Search wxO skills** : These skills are designed to search for a specified product and retrieve its details and features in a structured format from the product catalog. It ensures clarity and organization by presenting key product information systematically, making it easy to understand and use.
   * **Link Search Agent** : This agent is expert in finding URLs or links for similar products that share matching features, ensuring users can explore alternatives efficiently.
-  * **Comparison Agent** : This agent is designed to compare the given data with additional information gathered from Google search results. Its task is to carefully analyse the input data, extract key insights, and identify both differences and similarities. The findings should be presented in a well-structured table format, making it easy to understand and compare the information briefly.
+  * **Comparison Agent** : This agent is designed to compare competitor products using these links, extract key insights, and return a SWOT analysis of all products. The findings should be presented in a well-structured table format, making it easy to understand and compare the information briefly.
 
 ## Detailed Instructions
 
