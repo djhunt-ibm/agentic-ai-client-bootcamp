@@ -1,122 +1,149 @@
-# Business Automation - Step-by-Step Guide  
+# Use case: Business Automation   
 
-This guide will help you create a **Business Automation Use Case** using Agent Lab and Watsonx Orchestrate.  
+## Table of Contents
+- [Introduction](#introduction)
+- [Use Case Description](#use-case-description)
+- [Adding Custom Skills](#adding-custom-skills)
+- [Agent Creation](#agent-creation)
+  - [Link Search Agent](#link-search-agent)
+  - [Comparison Agent](#comparison-agent)
+- [Getting the Space ID for Deployment on Code Engine](#getting-the-space-id-for-deployment-on-code-engine)
+- [Deploying Agents on Code Engine](#deploying-agents-on-code-engine)
+- [Integration with Watsonx Orchestrate](#integration-with-watsonx-orchestrate)
+- [Agent Descriptions](#agent-descriptions)
+- [Demo Video](#demo-video) 
 
-## Table of Contents  
-- [System Architecture](#system-architecture)  
-- [Prerequisite Steps](#prerequisite-steps) 
-- [Agent Creation](#agent-creation)  
-  - [Product Search Agent](#product-search-agent)  
-    - [Setup](#setup)  
-    - [Configuration](#configuration)  
-    - [Tools](#tools)  
-  - [Link Search Agent](#link-search-agent)  
-    - [Setup](#setup-1)  
-    - [Configuration](#configuration-1)  
-    - [Tools](#tools-1)  
-  - [Comparison Agent](#comparison-agent)  
-    - [Setup](#setup-2)  
-    - [Configuration](#configuration-2)  
-    - [Tools](#tools-2)  
-- [Getting the Space ID for Deployment on Code Engine](#getting-the-space-id-for-deployment-on-code-engine)  
-  - [Space ID](#space-id)  
-  - [Deployment](#deployment)  
-- [Deploying Agents on Code Engine](#deploying-agents-on-code-engine)  
-- [Integration with Watsonx Orchestrate](#integration-with-watsonx-orchestrate)  
-- [Agent Descriptions](#agent-descriptions)  
-- [Demo Video](#demo-video)  
+## Introduction  
 
-## System Architecture  
-Below is an overview of the system:  
+![Architecture](assets/architecture.png)  
 
-![Architecture](images/architecture.png)  
+## Use Case Description
 
-### Prerequisite Steps
+The sales department of ABC Motor Corp, an automotive large player, when preparing sales proposals, they were spending a lot of time understanding the features of competing products and comparing them with their own products. ABC Motor Corp, needs an automated competitive analysis system to help their sales teams quickly identify and position their products against competitors. Traditionally, gathering competitor insights required extensive manual research, making it inefficient and prone to outdated information. Therefore, the goal of this use case is to create an AI enabled system that support the customer's competitive analysis and market research.
 
-1. Log in to your **Watsonx AI** account. Once logged in, you will land on the homepage.  
+## Adding Custom Skill 
 
-   ![Watsonx Homepage](images/home_page.png)  
+After your instructor has completed the **Product APP** setup, request the server URL from them. Open the [OPEN_API_SPEC File](open_api_spec.json) and replace the default server URL with the one provided.
 
-2. Click on the **"+"** icon to create a new project.  
+![Server URL](assets/json_url.png)
 
-   ![Create Project](images/project_plus.png)  
+Now, let's add this JSON file as a skill in **watsonx Orchestrate** by importing it.
 
-3. Enter a name for your project.  
-4. Select a storage option from the available choices.  
-5. Click **"Create"** to finalize the setup.  
-
-   ![Project Details](images/create_project.png)  
-
-   Your new project is now ready to use.  
-
-6. Click on the **hamburger menu (☰)** in the top-left corner and select **"Access (IAM)"**.  
-
-   ![Access IAM](images/access_iam.png)  
-
-7. In the left-hand menu, click on **"API Keys"**.  
-
-   ![API Keys Menu](images/api_key.png)  
-
-8. Click **"Create"** to generate a new API key.  
-
-   ![API Key Page](images/api_key_page.png)  
-
-9. Enter a name for your API key and click **"Create"**.  
-
-   ![Create Api key](images/create_api_key_button.png)  
-
-10. **Copy your API key** and save it in a secure location. You will need it in later steps.  
-
-    ![Api Key Show](images/api_key_show.png)  
-
-11. Return to the Watsonx AI **homepage** and open **Agent Lab** to start building your agent. 
-![Agent Lab](images/agent_lab.png) 
-
-Now that we have created both the Project and the API Key, we will proceed with the creation of our agents.
-
-## Agent Creation  
-We will create three agents as part of this setup:  
-1. **Product Search Agent**  
-2. **Link Search Agent**  
-3. **Comparison Agent**  
-
-Let's start with the **Product Search Agent**.  
-
-## Product Search Agent  
-#### Setup  
-- Enter a **name** for the agent as shown in the image.  
-- Add a **description** (optional).  
-
-![Setup](images/setup_product_search_agent.png)  
-
-#### Configuration  
-- Enter the **Instructions** as shown in the image. These instructions guide your agent on what tasks it should perform.  
-- Choose **LangGraph** as the framework.  
-- Select **ReAct** as the architecture.  
-
-![Configuration](images/configuration_product_search_agent.png)  
-
-#### Tools  
-- Select **Google Search** as the tool to gather data.  
-
-![Tool](images/tool_product_search_agent.png)  
-
-Once the agent is created, test it on the right-hand side of the chat section, as shown in the image below.  
-
-Click on the **Save As** button to save your agent (marked as number 1 in the image). Then, click on the **Deploy** button to deploy the agent (marked as number 2 in the image). Deployment may take 1-2 minutes.  
-
-![Product Search Agent Chat](images/chat_product_search_agent.png)  
-
-Follow these steps to successfully create the Product Search Agent.  
+Here's the corrected version with proper grammar and clarity:  
 
 ---
 
-## Link Search Agent  
+1. Open the **watsonx Orchestrate** home page and click on the menu icon (hamburger) as shown below.  
+   ![Home Page](assets/hamburger_home_page.png)  
+
+2. From the menu, select **Skill Studio**.  
+   ![Skill Studio](assets/skill_studio.png)  
+
+3. To import the API, click **Create** (marked as 1), then select **Import API** (marked as 2).  
+   ![Skill Page](assets/skill_page_steps.png)  
+
+4. Click the **From File** tab (marked as 1) and upload the [OPEN_API_SPEC File](open_api_spec.json) (marked as 2).  
+   ![Upload Spec](assets/upload_spec.png)  
+
+5. After uploading, confirm that the file name appears (marked as 1), then click **Next** to proceed (marked as 2).  
+   ![File Upload](assets/file_uploaded.png)  
+
+6. Accept the API by selecting the checkboxes (marked as 1), then click **Next** (marked as 2).  
+   ![API Selection](assets/api_name.png)  
+
+7. Once completed, all your skills will appear in **Skill Studio** under **Skills** but will be labeled **Ready to Publish**. You need to publish them before using them.  
+   ![Skill Studio Skills](assets/skill_studio_skills.png)  
+
+8. To publish a skill, click on the three vertical dots (marked as 1), then select **Enhance the Skill** (marked as 2).  
+   ![Title Skill](assets/title_skill.png)  
+
+9. In the **Get Product Detail by Title** skill, some configurations are needed. Click on the **Output** tab (marked as 1), then scroll down to the **Table** section. At the bottom of the table, enter the name of your variable, which will be displayed on the chat screen (marked as 2). Then, click the **Publish** button to publish your skill (marked as 3).  
+   ![Title Skill Config](assets/title_skill_config.png)  
+
+10. Once your **Get Product Detail by Title** skill is published, click on the three vertical dots (marked as 1) again and select **Enhance the Skill** to publish it.  
+   ![Product Skill](assets/product_skill.png)  
+
+11. For the **Get Product Title** skill, simply click **Publish**—no changes are required.  
+   ![Product Skill Config](assets/product_skill_config.png)  
+
+12. Once all skills are published, their status will change to **Published**.  
+   ![All Published](assets/all_published.png)  
+
+13. Now, we need to add our skills from the **Skill Catalog**. Click on the hamburger menu and select **Skill Catalog**.  
+   ![Skill Catalog](assets/skill_catalog.png)  
+
+14. In the search bar, type **Product** (marked as 1) and select **Product Information API** (marked as 2).  
+   ![Search APP](assets/search_app.png)  
+
+15. To add the skill, you first need to connect the API. Click on **Connect**.  
+   ![Connect APP](assets/connect_catalog.png)  
+
+16. Enter the API key to connect the app (use your TechZone instance API key) (marked as 1), then click **Connect App** (marked as 2).  
+   ![API Connection](assets/api_catalog.png)  
+
+17. After connecting the API, it will show as **Connected**.  
+   ![API Connected](assets/app_connected.png)  
+
+18. Now, we need to connect the app from the **Skill Set** as well. Click on the hamburger menu and select **Skill Set**.  
+   ![Skill Set](assets/skill_set.png)  
+
+19. On the **Skill Set** page, search for **Orchestrate Agent Skillset**.  
+   ![Search Skill Set](assets/search_skill_set.png)  
+
+20. In the **Connections** tab (marked as 1), search for **Product Information API** by navigating through the pages. Click on the three vertical dots and select **Connect App**.  
+   ![Connect App](assets/connect_set.png)  
+
+21. Click **Connect App** as shown below.  
+   ![Connect App](assets/connect_api_button.png)  
+
+22. Enter the API key (TechZone API key) (marked as 1) and click **Connect App** (marked as 2).  
+   ![API Skill Set](assets/api_skill_set.png)  
+
+23. Once connected, the API will display the user's email ID in the **Connected By** column.  
+   ![Connected by](assets/connected_by.png)  
+
+24. Since we have connected the app from the **Skill Set**, we now need to add the skill to the chat. Open the hamburger menu and select **AI Agent Configurations**.  
+   ![AI Agent Config](assets/ai_agent_config.png)  
+
+25. Click on **Apps and Skills** (marked as 1), then select **Product Information API** (marked as 2).  
+   ![Apps and Skills](assets/apps_skill.png)  
+
+26. Add both API-related skills to the chat as shown below.  
+   ![Apps and Skills](assets/add_chat.png)  
+
+27. First, add the **Get Product Details by Title** skill by clicking **Add to Chat**.  
+   ![First Skills](assets/add_chat_1.png)  
+
+28. Do not change the description; keep it as shown in the image below, then click **Add Skill**.  
+   ![First Skills](assets/description_skill_1.png)  
+
+29. Next, add the **Get Product Titles** skill to the chat.  
+   ![Second Skills](assets/add_chat_2.png)  
+
+30. Once both skills are connected, it will look like this:  
+   ![Chat Connected](assets/chat_connect.png)  
+
+31. From the hamburger menu, navigate to **Chat**.  
+   ![Chat](assets/chat_from_skill.png)  
+
+32. You can now interact with the skills as shown below.  
+   ![Demo Skills](assets/demo_skill.png)  
+
+Note before starting the Agent creation make sure you have generated your project Id and API key refer [api_key_project_id_setup.md](http:)
+
+## Agent Creation  
+We will create three agents as part of this setup:  
+1. **Link Search Agent**  
+2. **Comparison Agent**  
+
+Let's start with the **Link Search Agent**.     
+
+### Link Search Agent  
 #### Setup  
 - Enter a **name** for the agent as shown in the image.  
 - Add a **description** (optional).  
 
-![Setup](images/setup_link_search_agent.png)  
+![Setup](assets/setup_link_search_agent.png)  
 
 #### Configuration  
 - Enter the **Instructions** as shown in the image. These instructions guide your agent on what tasks it should perform.  
@@ -140,7 +167,7 @@ Follow these steps to successfully create the Link Search Agent.
 
 ---
 
-## Comparison Agent  
+### Comparison Agent  
 #### Setup  
 - Enter a **name** for the agent as shown in the image.  
 - Add a **description** (optional).  
