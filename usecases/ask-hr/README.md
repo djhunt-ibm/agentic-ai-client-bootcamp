@@ -19,7 +19,7 @@ In this lab, we will see how the out-of-the-box prebuilt skills  in watsonx.orch
 
 ## Business value
 
-![alt text](assets/arch_diagm.png)
+The usage of an AI backed system to optimize the HR process can have multi-dimensional impacts. Starting from quick resolution time, high user satisfaction, increased revenue, reducing employee burnout, this can have huge business value. On the other hand, leveraging the agentic capablities will come with its own additional set of values viz, improved data safety, more grounded responses without hallucinations and there by improved brand experience. 
 
 ## Architecture
 
