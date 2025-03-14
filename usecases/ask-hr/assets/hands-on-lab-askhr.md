@@ -6,7 +6,7 @@
 - [Use case: AskHR](#use-case-askHR)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
-  - [Sample Use case description](#sample-use-case-description)
+  - [Use case description](#sample-use-case-description)
   - [Agent Lab - Creating your first agent](#agent-lab---creating-your-first-agent)
     - [Using a tool](#using-a-tool)
     - [Deploy your agent](#deploy-your-agent)
