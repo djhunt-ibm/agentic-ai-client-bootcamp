@@ -57,13 +57,13 @@ Here's the corrected version with proper grammar and clarity:
 8. To publish a skill, click on the three vertical dots (marked as 1), then select **Enhance the Skill** (marked as 2).  
    ![Title Skill](assets/title_skill.png)  
 
-9. In the **Get Product Detail by Title** skill, some configurations are needed. Click on the **Output** tab (marked as 1), then scroll down to the **Table** section. At the bottom of the table, enter the name of your variable, which will be displayed on the chat screen (marked as 2). Then, click the **Publish** button to publish your skill (marked as 3).  
-   ![Title Skill Config](assets/title_skill_config.png)  
+9. In the **Get product details by title** skill, click the **Publish** button to publish your skill.  
+   ![Title Skill Config](assets/get_product_details_by_title.png)  
 
-10. Once your **Get Product Detail by Title** skill is published, click on the three vertical dots (marked as 1) again and select **Enhance the Skill** to publish it.  
+10. Once your **Get product details by title** skill is published, click on the three vertical dots (marked as 1) again and select **Enhance the Skill** to publish it.  
    ![Product Skill](assets/product_skill.png)  
 
-11. For the **Get Product Title** skill, simply click **Publish**—no changes are required.  
+11. For the **Get product titles** skill, simply click **Publish**—no changes are required.  
    ![Product Skill Config](assets/product_skill_config.png)  
 
 12. Once all skills are published, their status will change to **Published**.  
@@ -111,13 +111,13 @@ Here's the corrected version with proper grammar and clarity:
 26. Add both API-related skills to the chat as shown below.  
    ![Apps and Skills](assets/add_chat.png)  
 
-27. First, add the **Get Product Details by Title** skill by clicking **Add to Chat**.  
+27. First, add the **Get product details by title** skill by clicking **Add to Chat**.  
    ![First Skills](assets/add_chat_1.png)  
 
 28. Do not change the description; keep it as shown in the image below, then click **Add Skill**.  
    ![First Skills](assets/description_skill_1.png)  
 
-29. Next, add the **Get Product Titles** skill to the chat.  
+29. Next, add the **Get product titles** skill to the chat.  
    ![Second Skills](assets/add_chat_2.png)  
 
 30. Once both skills are connected, it will look like this:  
@@ -153,7 +153,10 @@ Let's start with the **Link Search Agent**.
 #### Configuration    
 1. Choose **LangGraph** as the framework.  
 2. Select **ReAct** as the architecture. 
-3. Enter the **Instructions** as shown in the image. These instructions guide your agent on what tasks it should perform. You can use this prompt for it "You are a skilled assistant specialized in locating URLs for similar products with matching features. Provide a maximum of three URLs with name of the product."
+3. Enter the **Instructions** as shown in the image. These instructions guide your agent on what tasks it should perform. You can use below prompt for it.
+```
+You are a skilled assistant specialized in locating URLs for similar products with matching features. Provide a maximum of three URLs with name of the product.
+```
 ![Configuration](assets/configuration_link_search_agent.png)  
 
 #### Tools  
@@ -172,36 +175,17 @@ Let's start with the **Link Search Agent**.
 ![Link Search Agent Chat](assets/saveas_link_agent.png)
 5. After clicking the deployoment button make sure your Targeted deployemnt has been seleceted if not please select it.(marked as 1), click Deploy to deploy the agent (marked as 2)
 ![Link Search Agent Chat](assets/deployment_config.png)
+
 Follow these steps to successfully create the Link Search Agent.  
 
 ---
 
-### Comparison Agent  
-#### Setup  
-1. Enter a **name** for the agent as shown in the image.  
-2. Add a **description** (optional).  
-![Setup](images/setup_comparison_agent.png)  
-
-#### Configuration  
-- Enter the **Instructions** as shown in the image. These instructions guide your agent on what tasks it should perform.  
-- Choose **LangGraph** as the framework.  
-- Select **ReAct** as the architecture.  
-
-![Configuration](images/configuration_comparison_agent.png)  
-
-#### Tools  
-- Select **Google Search** as the tool to gather data.  
-
-![Tool](images/tool_comparison_agent.png)  
-
-Once the agent is created, test it on the right-hand side of the chat section, as shown in the image below.  
-
-Click on the **Save As** button to save your agent (marked as number 1 in the image). Then, click on the **Deploy** button to deploy the agent (marked as number 2 in the image). Deployment may take 1-2 minutes.  
-
-![Comparison Agent Chat](images/chat_comparison_agent.png)  
-
-Follow these steps to successfully create the Comparison Agent.
-
+### Comparison Agent 
+For this agent, follow the same steps outlined in the [Link Search Agent](#link-search-agent). However, for the Instructions specific to the Comparison Agent, use the prompt below while keeping all other steps unchanged.
+```
+You are an expert of automobile industry combining given details present in your context window. You have to use the given links to generate the comparison. Your task is to analyse and compare products on the following parameters strictly: Range, Pricing, Acceleration, Top Speed, Interior and Safety Features If a parameter is not applicable, mark it as N/A. Additionally, perform a SWOT analysis of top products (Strengths, Weaknesses, Opportunities, and Threats) Present the comparison in 3 tables one for the comparison , second for the rating numerical rating (X/5) and a star rating (★ out of ★★★★★) for each parameter  and  third for the SWOT analysis. Give heading to each table . After every table give two divider.
+```
+---
 ## Getting the Space ID for Deployment on Code Engine
 
 To deploy your agent on Code Engine, follow the steps available in instruct lab how to deploy your agents to get your Space ID:
@@ -209,75 +193,78 @@ To deploy your agent on Code Engine, follow the steps available in instruct lab 
 ### Space ID
 
 1. Go to the home page of Agent Lab. 
-![Home](images/home.png)   
+![Home](assets/home_agent_lab.png)   
 
 2. Click the hamburger menu and choose Deployment.
-![Deploment Selection](images/deployment.png)  
+![Deploment Selection](assets/deployment_agnet_lab.png)  
 
-3. On the Deployment page, find Deployment Space and click on it.
-![Spaces](images/spaces.png)  
+3. On the Deployment page, find Deployment Space tab (marked as 1) and then click on your deployment space(marked as 2).
+![Spaces](assets/space.png)  
 
 4. Click on the Manage tab and copy your Space ID.
-![Manage](images/manage.png) 
+![Manage](assets/manage.png) 
 
 ### Deployment
 
-On the Deployment Space page, select the agent. It will take you to the deployment page, where you can get the Deployment ID.
+1. On the Deployment Space page, select the Asset. This will take you to the deployment page, where you can obtain the Deployment ID. Wait until your Agent is fully deployed.  
+![Deployment Started](assets/deployment_started.png)  
 
-![Deployment Space](images/deployments_space.png)
+2. After deployment, the status will change to **Deployed**.  
+![Deployment Space](assets/deployed_status.png)  
 
-![URL Deployment](images/url_deployment.png)
+3. Retrieve the Deployment ID from the URL.  
+![URL Deployment](assets/deployment_id.png)  
 
-Repeat the same step for all the agents, as shown in the image below
+Repeat these steps for Comparison Agent.
 
 ## Deploying Agents on Code Engine
 
-Please refer to the [Code Engine instructor](https://github.ibm.com/skol/agentic-ai-client-bootcamp-instructors/blob/main/environment-setup/external-agent-builder/Readme.md) guide for deployment instructions. Once you obtain the deployment link, kindly open it.
+For deployment, you need a Code Engine URL, which you can request from your instructor. Once you receive the deployment link, please open it.
 
 You will reach the page shown in the image below. Follow these two steps to generate the Bearer Token:
 
-1. Enter the Deployment ID and Space ID, then click on the Generate Token button.
-![Token generator](images/token_generation.png)
+1. Enter the Deployment ID, Space ID, API-KEY and Wastsonx URL then click on the Generate Token button.
+![Token generator](assets/generate_token.png)
 
 2. Copy the Bearer Token.
-![Generated Token](images/generated_token.png)
+![Generated Token](assets/token.png)
 
 The Space ID remains constant for all agents, but each Deployment ID has a unique Bearer Token.
 
-Repeat these steps for all the remaining agents to get their respective Bearer Tokens.
+Repeat these steps for Comparison Agent to get its respective Bearer Tokens.
 
 ## Integration with Watsonx Orchestrate
 
 1. Go to the home page of Watsonx Orchestrate.
-![WxO Home](images/wxo_home.png)
+![WxO Home](assets/wxo_home.png)
 
 2. Click the hamburger menu and choose AI Agent Configuration.
-![AI Agent Configuration](images/agent_config.png)
+![AI Agent Configuration](assets/agent_config.png)
 
 3. On the Configuration page, select Agents.
-![Agents](images/agent_config_page.png)
+![Agents](assets/agent_config_page.png)
 
-4. On the Agents page, click the New Agent button.
-![Add Agent](images/add_agent.png)
+4. On the Agents page, click the Add Agent button.
+![Add Agent](assets/add_agent.png)
 
 5. Enter all the details as shown in the image and select "Bearer Token" instead of "API Key."
-![Bearer Token](images/bearer_token.png)
+
+   Add this in description 
+   ```
+   This agent is an expert in finding URLs or links for similar products that share matching features, ensuring users can explore alternatives efficiently.
+   ```
+   ![Bearer Token](assets/connect.png)
 
 6. Click the Connect button to integrate the agents with Watsonx Orchestrate.
-![Connect](images/connect.png)
+   ![Connect](assets/bearer_token.png)
 
-Repeat these steps for all the remaining agents to integrate them in Watsonx Orchestrate.
+Repeat these steps for Comparison Agent to integrate it in watsonx Orchestrate.
 
-## Agent Descriptions
+For comparison Agent use the below description
 
-1. Link Search Agent: This agent is an expert in finding URLs or links for similar products that share matching features, ensuring users can explore alternatives efficiently.
-
-2. Comparison Agent: This agent is designed to compare the given data with additional information gathered from Google search results. Its task is to carefully analyze the input data, extract key insights, and identify both differences and similarities. The findings should be presented in a well-structured table format, making it easy to understand and compare the information at a glance.
-
-After completing the integration, your flow will appear as shown below.
-
-![Flow](images/flow.png)
-
+```
+This agent is designed to compare the given data with additional information gathered from Google search results. Its task is to carefully analyze the input data, extract key insights, and identify both differences and similarities. The findings should be presented in a well-structured table format, making it easy to understand and compare the information at a glance.
+```
 
 ## Demo Video
 
