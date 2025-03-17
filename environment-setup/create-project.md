@@ -24,17 +24,17 @@ If you do not know yous instance, go to your techzone reservations list https://
 
 **Note:** The instance at the top right tends to change to your default personal account every time you switch/go back to a new page. Thus, it's always good to check the top right corner every time you switch to a new page.
 
-![check-right-instance](images/check-right-instance.png)
+![check-right-instance](check-right-instance.png)
 
 ### 3. Create a new project<a name="new-project"></a>
 ---
 Now, we can go ahead and create a new project. In the **Projects** section at the bottom, click the "+" symbol next to it to create a new project.
 
-![create-new-project](images/create-new-project.png)
+![create-new-project](create-new-project.png)
 
 Enter a **unique name** for your project, include both your first and last name and any other information you would like.
 
-![unique-name](images/unique-name.png)
+![unique-name](unique-name.png)
 
 ### Cloud Object Storage (COS)
 It is likely there is also already a Cloud Object Storage instance selected for you, with a name that starts with "itzcos-..." If so, you don't have to do anything! 
@@ -43,7 +43,7 @@ Otherwise you may be prompted to select from multiple instances. Please consult 
 
 **However**, if there is no instance available, please follow the directions [here](COS_troubleshooting.md) to resolve the issue.
 
-![select-instance](images/select-instance.png)
+![select-instance](select-instance.png)
 
 ### Click Create
 Now go ahead and click Create. It may take a few seconds to officially be created.
@@ -54,15 +54,15 @@ With the project created, you should be directed to the project home page. Go ah
 
 Click on "Services and Integrations" in the left side-bar. Then click on "Associate service."
 
-![manage-tab](images/manage-tab.png)
+![manage-tab](manage-tab.png)
 
-Select the service listed with "Type" = "runtime" and click **Associate**. 
+Select the service listed with "Type" = "watsonx.ai Runtime" and click **Associate**. 
 
-![select-wml-service](images/select-wml-service.png)
+![select-runtime-service](select-runtime-service.png)
 
 **Note:** If you can't find the service, remove all filters from the "Locations" dropdown. If you see 2+ Watson Machine Learning services, select the one where "Group" = the same *environment* name of the instance. The *environment* name can be found on https://techzone.ibm.com/my/reservations. 
 
-![techzone](images/techzone.png)
+![techzone](techzone.png)
 
 
 Time to get to get started with Lab 1!
