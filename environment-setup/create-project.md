@@ -1,7 +1,9 @@
 # Lab 0: Project Setup - New Project
 ---
 ## Summary
-In this lab, we will be walking through how to create your own project to complete the following labs in the bootcamp. It is important we create a project in the right environment, or else it can cause issues down the line if done incorrectly!
+Before stating lab 1, we will be walking through how to create your own project to get familiar with watsonx.ai and ensure you have accessed your environment for the class. 
+
+It is important we create a project in the right environment, or else it will cause issues down the line!
 
 ## Table of Contents
 
@@ -13,6 +15,7 @@ In this lab, we will be walking through how to create your own project to comple
 ### 1. Log in to watsonx<a name="log-in-to-watsonx"></a>
 ---
 Next, follow this link to log in to watsonx: https://dataplatform.cloud.ibm.com/wx/home?context=wx
+
 Please accept the Terms & Conditions!
 
 ### 2. Check that you are in the right instance<a name="check-instance"></a>
@@ -39,8 +42,6 @@ Enter a **unique name** for your project, include both your first and last name 
 It is likely there is also already a Cloud Object Storage instance selected for you, with a name that starts with "itzcos-..." If so, you don't have to do anything! 
 
 Otherwise you may be prompted to select from multiple instances. Please consult with your bootcamp lead which COS instance to select.
-
-**However**, if there is no instance available, please follow the directions [here](COS_troubleshooting.md) to resolve the issue.
 
 ![select-instance](assets/select-instance.png)
 
