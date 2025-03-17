@@ -92,7 +92,7 @@ This use-case targets developing and deploying an AskHR agent leveraging IBM wat
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image44.png">
 
-14. Enter Deployment name and select “Deployment Space”. Then click on “Deploy”.(If there are no deployment space you need to create one using  [this](#/deployment_space_creation.md) guide.)
+14. Enter Deployment name and select “Deployment Space”. Then click on “Deploy”.(If there are no deployment space you need to create one using  [this](#deployment_space_creation.md) guide.)
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image45.png">
 
