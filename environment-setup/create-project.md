@@ -30,7 +30,11 @@ If you do not know yous instance, go to your techzone reservations list https://
 
 ### 3. Create a new project<a name="new-project"></a>
 ---
-Now, we can go ahead and create a new project. In the **Projects** section at the bottom, click the "+" symbol next to it to create a new project.
+Now, we can go ahead and create a new project. 
+
+In the **Projects** section, you can simply select the the "+" symbol to create a new project.
+ 
+Or use the link here to trigger a [New Project](https://dataplatform.cloud.ibm.com/projects/new-project?context=wx) creation.
 
 ![create-new-project](assets/create-new-project.png)
 
