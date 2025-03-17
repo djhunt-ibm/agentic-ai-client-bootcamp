@@ -1,7 +1,7 @@
 # Environment Setup
 
 
-**Note:**: 🚧🔨 In this page you will find instructions for the clients to setup their environments. In addition to instructions here,  [additional client resources](https://ibm.ent.box.com/folder/311792211722?s=b1cg58cuvxy2300acma7xsjip0e5rhzj) can be shared from Box.
+**Note:**: 🚧🔨 In this page you will find instructions for the clients to setup their environments. In addition to instructions here,  [additional assets and resources](https://ibm.box.com/s/7sxz8a43zy4cj2rlxjuagjkvawypot80) can be shared from Box.
 
 For this camp, we have created the [Agentic AI Bootcamp TechZone bundle](https://ibm.biz/tz-agenticAI-camp), which has all the components needed for the hands-on labs, including: 
 
