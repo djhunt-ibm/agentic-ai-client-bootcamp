@@ -12,7 +12,7 @@ This is the [Agentic AI Bootcamp TechZone bundle](https://ibm.biz/tz-agenticAI-c
 - Container Registry
 - watsonx.governance (for the demo)
 
-### [Create your IBMid] (environment-setup/create-IBMID)
-### [Access your class instance] (environment-setup/access-env)
-### [Setup your first project] (environment-setup/create-project)
+### [Create your IBMid] (create-IBMID)
+### [Access your class instance] (access-env)
+### [Setup your first project] (create-project)
 ### Create your API key. 
