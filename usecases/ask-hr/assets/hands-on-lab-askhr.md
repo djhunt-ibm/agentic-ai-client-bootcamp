@@ -28,6 +28,12 @@ This use-case targets developing and deploying an AskHR agent leveraging IBM wat
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image30.png">
 
+1.1 For agent creation, you'll be needing a project. Click on "+" icon against "Projects" as shown in below image.
+<img width="1000" alt="image" src="hands-on-lab-assets/image31.png">
+
+1.2 Give your a project a name, then click on "Create".
+<img width="1000" alt="image" src="hands-on-lab-assets/image32.png">
+
 2.	Click on hamburger icon on top left and select “Access (IAM)”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image33.png">
