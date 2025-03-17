@@ -1,7 +1,7 @@
-# Lab 0: Project Setup - New Project
+# Project Setup - New Project
 ---
 ## Summary
-Before stating lab 1, we will be walking through how to create your own project to get familiar with watsonx.ai and ensure you have accessed your environment for the class. 
+Before starting for first technical lab, we will be walking through how to create your own project to get familiar with watsonx.ai and ensure you have accessed your environment for the class. 
 
 It is important we create a project in the right environment, or else it will cause issues down the line!
 
@@ -69,4 +69,4 @@ Select the service listed with "Type" = "watsonx.ai Runtime" and click **Associa
 ![techzone](assets/techzone.png)
 
 
-Time to get to get started with Lab 1!
+Time to get to get started with your first use case!
