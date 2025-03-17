@@ -202,7 +202,7 @@ Click on “Connect”
 <img width="1000" alt="image" src="hands-on-lab-assets/image4.png">
 
 
-36.	Drag or Select the open specs file ([openapi.json](/assets/openapi.json)) and click on "next".
+36.	Drag or Select the open specs file ([openapi.json](openapi.json)) and click on "next".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image5.png">
 
