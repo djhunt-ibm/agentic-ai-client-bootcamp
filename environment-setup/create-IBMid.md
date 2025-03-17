@@ -1,6 +1,6 @@
 # Create your IBMid
 
-**Note:**  Follow these brief instructions to create an IBMID. These are specifically for our Business Partners and clients who may not have accessed a TechZone environment previously. 
+**Note:**  Follow these brief instructions to create an IBMID. These are specifically for our Business Partners and clients who may not have accessed a TechZone environment previously. IBM employees do not need to register.
 
 1. Start by accessing the [IBMid Registration Page](https://www.ibm.com/account/reg/signup?formid=urx-19776&)
 2. Enter the required information in the fields provided. (Email address, name, company, and country.)
