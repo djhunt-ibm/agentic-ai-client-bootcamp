@@ -1,4 +1,5 @@
 # AskHR
+<img alt="AskHR" src="assets/beta.png" width="50"> This usecase is currently in beta. Try it out and give us feedback. <img alt="AskHR" src="assets/hr_landscape.jpg">
 
 <img alt="AskHR" src="assets/hr_landscape.jpg">
 
