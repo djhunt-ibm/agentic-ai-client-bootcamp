@@ -2,13 +2,10 @@
 
 ![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/451557/b9fb42fc-4aa1-4010-b850-5c8f20e3e05a)
 
-## Introduction
+## The Problem
 
-The sales department of ABC Motors Corp, an automotive large player, when preparing sales proposals, they were spending a lot of time understanding the features of competing products and comparing them with their own products.
-ABC Motor Corp, needs an automated competitive analysis system to help their sales teams quickly identify and position their products against competitors. Traditionally, gathering competitor insights required extensive manual research, making it inefficient and prone to outdated information.
-Therefore, the goal of this use case is to create an AI enabled system that support the customer's competitive analysis and market research.
+The sales department of ABC Motors Corp, an automotive large player, when preparing sales proposals, they were spending a lot of time understanding the features of competing products and comparing them with their own products. Sales teams were spending excessive time manually researching competitor products and comparing them with their own. This process was:
 
-## Business Challeneges
 ### Time-consuming competitive research  
 Sales teams spend excessive time manually gathering competitor insights, delaying decision-making and reducing productivity.
 
@@ -24,6 +21,17 @@ Without real-time competitive intelligence, businesses struggle to adapt pricing
 ### Lack of automation in sales intelligence 
 Manual processes for feature extraction, web search, and competitor analysis lead to inconsistent data and missed sales opportunities.
 
+## Objective
+To address these challenges, ABC Motors Corp aims to implement an AI-enabled Competitive Intelligence System that automates market research and competitor analysis. ABC Motor Corp, needs an automated competitive analysis system to help their sales teams quickly identify and position their products against competitors. Traditionally, gathering competitor insights required extensive manual research, making it inefficient and prone to outdated information.
+Therefore, the goal of this use case is to create an AI enabled system that support the customer's competitive analysis and market research. This system will:
+
+* Extract products from the company’s product catalog.
+* Identify and extract key features of each product.
+* Search for competitor products based on key attributes.
+* Generate a structured competitive comparison table with price, features, and differentiators.
+* Perform SWOT Analysis (Strengths, Weaknesses, Opportunities, and Threats) to provide deeper strategic insights.
+
+By automating these tasks, the company aims to accelerate sales processes, improve data accuracy, and enable sales teams to make informed decisions faster.
 
 ## Business Value
 
