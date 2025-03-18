@@ -268,12 +268,14 @@ Click on “Connect”
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image8.png">
 
-40. Under "input", put "Hello! What's your name?" in name section. Then click on "Publish".
-<img width="1000" alt="image" src="hands-on-lab-assets/image8.1.png">
+40. Under "input", put "Hello! What's your name?" in name section and "What's your new address" in new_address section. Then click on "Publish".
+<img width="1000" alt="image" src="hands-on-lab-assets/image8.5.png">
 
 
 In a similar way,	You need to do modifications according to the below images, in all the skils by enhancing skills and then publish the skills.
+
 To do this, first click on three dots against the skill name, then click on "Enhance this skill", then click on "Input" and refer below images for modifications:
+
 For Request Time Off skill:
 <img width="1000" alt="image" src="hands-on-lab-assets/image8.2.png">
 
@@ -283,7 +285,8 @@ For Get User Profile skill:
 For Update Title skill:
 <img width="1000" alt="image" src="hands-on-lab-assets/image8.4.png">
 
-For Update Address skill:
+For Get Time Off Balance skill:
+<img width="1000" alt="image" src="hands-on-lab-assets/image8.1.png">
 
 42.	Once all the skills are published, from menu go to "Skill sets".
 
