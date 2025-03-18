@@ -190,8 +190,10 @@ Click on “Generate Token”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image59.png">
 
+28. For deployment, you need a Code Engine URL, which you can request from your instructor. Once you receive the deployment link, please open it.
 
-28.	Under “Authentication type”, select “Bearer Token”, enter the generated token you copied, In “Service Instance URL” section , enter "https://multi-agent-external.1slrp41syyn5.us-south.codeengine.appdomain.cloud/chat/completions".
+You will reach the page shown in the image below. Follow these two steps to generate the Bearer Token:
+28.	Under “Authentication type”, select “Bearer Token”, enter the generated token you copied, In “Service Instance URL” section , enter the  Code Engine URL.
 
 Click on “Connect”
 
