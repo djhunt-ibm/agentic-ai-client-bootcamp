@@ -1,6 +1,8 @@
  # 🥇 Business Automation - Competitive Insights 
 
-![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/451557/b9fb42fc-4aa1-4010-b850-5c8f20e3e05a)
+<!--![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/451557/b9fb42fc-4aa1-4010-b850-5c8f20e3e05a)-->
+![image](assets/hypercar.png)
+
 
 ## 🤔 The Problem
 
