@@ -115,12 +115,18 @@ This use-case targets developing and deploying an AskHR agent leveraging IBM wat
 
 Your agent is saved, you  can make changes in it later if you want to experiment with it.
 
-13.	Click on “Deploy”.
+13.	Click on “Deploy”. (For next steps ypu'll need a deployment space. If there are no deployment space you need to create one using  [this](deployment_space_creation.md) guide.)
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image44.png">
 
-14. Enter Deployment name and select “Deployment Space”. Then click on “Deploy”.(If there are no deployment space you need to create one using  [this](deployment_space_creation.md) guide.)
+14. Once you click on deploy, You need to create user api key.  Click on "Create"
+<img width="1000" alt="image" src="hands-on-lab-assets/image44.0.1.png">
 
+14.1 You'll be directed to another webpage. Click on "Create a key".
+<img width="1000" alt="image" src="hands-on-lab-assets/image44.0.2.png">
+
+Once key is created, navigate back to deployment page.
+14.2  Enter Deployment name and select “Deployment Space”.
 <img width="1000" alt="image" src="hands-on-lab-assets/image45.png">
 
 15.	Wait for the status to change to “Deployed” from “Initializing”.
