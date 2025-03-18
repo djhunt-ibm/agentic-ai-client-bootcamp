@@ -1,7 +1,6 @@
 # AskHR
 <img alt="AskHR" src="assets/beta.png" width="50"> This usecase is currently in beta. Try it out and give us feedback. <img alt="AskHR" src="assets/hr_landscape.jpg">
 
-<img alt="AskHR" src="assets/hr_landscape.jpg">
 
 One of the main challenges faced by any big organization is the HR operation management. As companies grow in size, it would be come increasingly difficult to get to the information faster and execute things with ease. With the advent of Agentic systems, and the power or reasoning models, it becomes easier to have a single entry point for doing mostly every HR operations.
 
