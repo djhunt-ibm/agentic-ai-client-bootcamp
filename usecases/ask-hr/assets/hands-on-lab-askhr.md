@@ -276,7 +276,7 @@ In a similar way,	You need to do modifications according to the below images, in
 
 To do this, first click on three dots against the skill name, then click on "Enhance this skill", then click on "Input" and refer below images for modifications:
 
-For Request Time Off skill:
+For Request Time Off skill:  Make sure the order of from_date and end_date fields is correct as shown in image. If it's not, you need to drag from_date before end_date section.
 <img width="1000" alt="image" src="hands-on-lab-assets/image8.2.png">
 
 For Get User Profile skill:
