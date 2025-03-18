@@ -4,7 +4,7 @@
 
 ## 🤔 The Problem
 
-ABC Motors Corp's sales department faced challenges in preparing sales proposals due to inefficient competitive research.
+ABC Motors Corp's sales department faced challenges in preparing sales proposals for their new line of high performance vehicles. Every time they release a new model, the competitive analysis team spends a great amount of time and resources to deliver their insights. Issues inculde: 
 
 - Manual research delays decisions and reduces productivity.
 
