@@ -61,7 +61,15 @@ This use-case targets developing and deploying an AskHR agent leveraging IBM wat
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image38.png">
 
+7.1 Click on "Associate service".
+<img width="1000" alt="image" src="hands-on-lab-assets/image38.1.png">
 
+7.2 Make sure "Global" and the region of your cloud account is selected in dropdown.
+ <img width="1000" alt="image" src="hands-on-lab-assets/image38.3.png">
+
+7.3  Select available watsonx.ai runtime service. (Look for the service with Type "watsonx.ai runtime")
+ <img width="1000" alt="image" src="hands-on-lab-assets/image38.4.png">
+ 
 8.	In “Instructions” field, paste this prompt “You are a helpful Human Resources Assistant that uses tools to answer questions in detail. Please use website https://www.cipd.org/en/knowledge/factsheets/hr-policies-factsheet/ to give answers to user questions. When greeted, say “Hi, I am HR agent, How can I help you?”
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image39.png">
