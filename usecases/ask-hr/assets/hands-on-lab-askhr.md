@@ -1,5 +1,5 @@
 
-# AskHR: Build an Agentic AI System to automate HR tasks
+# 🧑‍💼 AskHR: Automate HR tasks with Agentic AI
 
 ## Table of Contents
 
@@ -18,18 +18,19 @@ This use-case targets developing and deploying an AskHR agent leveraging IBM wat
 
 We have 4 skills in watsonx Orchestrate, which leverages custom skills to connect to a simulated Human Capital Management System storing the employee data. Another agent in watsonx.ai can answer user queries using a grounded data source. Integrating these 5 agents, we will see how most of the routine HR operations can be brought under a single powerful Agent.
 
-## Architecture
+## 🏛️ Architecture
 
 <img width="1000" alt="image" src="arch_diagm.png">
 
 
-## Implementation
+## 👨🏻‍💻 Implementation
 
 ### Pre-requisites
 
-Check with your instructor to make sure all systems are up and running before you continue.
+- Check with your instructor to make sure all systems are up and running before you continue.
+- If you're an instructor running this lab, check the Instructor's guides to set up all environments and systems.
 
-### Agent Lab - Creating your first agent
+### 🤖 Agent Lab - Creating your first agent
 
 
 1.	Login into your watsonx account using [this](https://dataplatform.cloud.ibm.com/wx/home?context=wx). This is Homepage of watsonx AI.
