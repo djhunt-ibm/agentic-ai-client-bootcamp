@@ -24,7 +24,7 @@ This use-case targets developing and deploying an AskHR agent leveraging IBM wat
 
 ### Agent Lab - Creating your first agent
 
-1.	Login into your watsonx account. This is Homepage of watsonx AI.
+1.	Login into your watsonx account using [this](https://dataplatform.cloud.ibm.com/wx/home?context=wx). This is Homepage of watsonx AI.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image30.png">
 
