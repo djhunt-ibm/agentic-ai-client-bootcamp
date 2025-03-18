@@ -1,4 +1,4 @@
-# watsonx Agentic AI Bootcamp
+# 🤖 watsonx Agentic AI Bootcamp
 
 ![alt text](/agentic-bootcamp.png)
 
