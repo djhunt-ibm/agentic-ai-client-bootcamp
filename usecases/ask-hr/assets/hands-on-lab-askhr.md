@@ -27,8 +27,8 @@ We have 4 skills in watsonx Orchestrate, which leverages custom skills to connec
 
 ### Pre-requisites
 
-- Check with your instructor to make sure all systems are up and running before you continue.
-- If you're an instructor running this lab, check the Instructor's guides to set up all environments and systems.
+- Check with your instructor to make sure **all systems** are up and running before you continue.
+- If you're an instructor running this lab, check the **Instructor's guides** to set up all environments and systems.
 
 ### 🤖 Agent Lab - Creating your first agent
 
