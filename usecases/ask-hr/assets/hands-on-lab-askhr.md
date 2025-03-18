@@ -167,8 +167,18 @@ Click on “Generate Token”.
 <img width="1000" alt="image" src="hands-on-lab-assets/image54.png">
 
 ## watsonx Orchestrate
+22.1 Navigate to [IBM Cloud](https://cloud.ibm.com).
+<img width="1000" alt="image" src="hands-on-lab-assets/image54.1.png">
 
-23.	Go to “watsonx Orchestrate” homepage. 
+22.2 From menu, select "Resources list".
+<img width="1000" alt="image" src="hands-on-lab-assets/image54.2.png">
+22.3 Under AI / MAchine Learning, select Watson Orchestrate and click on it.
+<img width="1000" alt="image" src="hands-on-lab-assets/image54.3.png">
+
+22.4 Click on "Launch watsonx Orchestrate". 
+<img width="1000" alt="image" src="hands-on-lab-assets/image54.4.png">
+
+23.	This is watsonx Orchestrate homepage. 
 <img width="1000" alt="image" src="hands-on-lab-assets/image55.png">
 
 ### AI agent configuration
