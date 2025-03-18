@@ -125,7 +125,9 @@ Your agent is saved, you  can make changes in it later if you want to experiment
 14.1 You'll be directed to another webpage. Click on "Create a key".
 <img width="1000" alt="image" src="hands-on-lab-assets/image44.0.2.png">
 
-Once key is created, navigate back to deployment page.
+14.2 Once key is created, navigate back to deployment page. Click on "reload".
+<img width="1000" alt="image" src="hands-on-lab-assets/image44.1.png">
+
 14.2  Enter Deployment name and select “Deployment Space”.
 <img width="1000" alt="image" src="hands-on-lab-assets/image45.png">
 
