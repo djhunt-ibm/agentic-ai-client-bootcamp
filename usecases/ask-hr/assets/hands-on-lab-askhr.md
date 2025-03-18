@@ -183,7 +183,7 @@ Click on “Generate Token”.
 
 ### AI agent configuration
 
-24.	Click on hamburger menu on top left and select “AI agent configuration” from menu.
+24.	Click on hamburger menu on top left and select “AI agent configuration” from menu. If you don't see  “AI agent configuration” in menu, try [this](# Common issues and troubleshoot steps)
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image56.png">
 
@@ -393,4 +393,16 @@ Then click on "Connect App" on top right, if not already connected.
 64.	Use your imported skills in chat.
 <img width="1000" alt="image" src="hands-on-lab-assets/image29.png">
 
+
+# Common issues and troubleshoot steps
+
+Sometimes, when you open watsonx orchestrate homepage, the legacy chat is activated and one needs to manually activate AI Chat. Follow steps below to activate AI chat:
+
+1. Click on profile icon in top right and click on settings.
+
+<img width="1000" alt="image" src="/usecase-setup/askhr/code_engine_setup/app_deployment_images/image20.png">
+
+ 2. Then click on chat version and switch to AI chat.
+
+    <img width="1000" alt="image" src="/usecase-setup/askhr/code_engine_setup/app_deployment_images/image27.png">
 End of Document
