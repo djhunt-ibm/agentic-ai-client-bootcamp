@@ -191,7 +191,7 @@ Click on “Generate Token”.
 <img width="1000" alt="image" src="hands-on-lab-assets/image59.png">
 
 
-28.	Under “Authentication type”, select “Bearer Token”, enter the generated token you copied, In “Service Instance URL” section , enter the  Code Engine URL.
+28.	Under “Authentication type”, select “Bearer Token”, enter the generated token you copied, In “Service Instance URL” section , enter the  Code Engine URL recieved from instructor.
 
 Click on “Connect”
 
