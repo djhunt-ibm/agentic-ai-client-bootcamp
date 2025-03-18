@@ -6,17 +6,13 @@
 
 The sales department of ABC Motors Corp, an automotive large player, when preparing sales proposals, they were spending a lot of time understanding the features of competing products and comparing them with their own products. Sales teams were spending excessive time manually researching competitor products and comparing them with their own. This process was:
 
-### Time-consuming competitive research  
-Sales teams spend excessive time manually gathering competitor insights, delaying decision-making and reducing productivity.
+- Time-consuming competitive research: sales teams spend excessive time manually gathering competitor insights, delaying decision-making and reducing productivity.
 
-### Inefficient product positioning 
-Lack of structured competitor comparison leads to weak sales pitches, making it harder to highlight unique selling points effectively.
+- Inefficient product positioning: Lack of structured competitor comparison leads to weak sales pitches, making it harder to highlight unique selling points effectively.
 
-### Data overload & irrelevant information 
-Traditional search methods yield excessive or low-quality data, making it difficult to extract meaningful competitor insights.
+- Data overload & irrelevant information: traditional search methods yield excessive or low-quality data, making it difficult to extract meaningful competitor insights.
 
-### Delayed response to market changes 
-Without real-time competitive intelligence, businesses struggle to adapt pricing, features, and strategies based on evolving market trends.
+- Delayed response to market changes: Without real-time competitive intelligence, businesses struggle to adapt pricing, features, and strategies based on evolving market trends.
 
 ### Lack of automation in sales intelligence 
 Manual processes for feature extraction, web search, and competitor analysis lead to inconsistent data and missed sales opportunities.
@@ -42,7 +38,7 @@ By automating these tasks, the company aims to accelerate sales processes, impro
 ## Architecture
 
 To streamline the competitive analysis process, we have designed a Multi-Agent AI Automation System that autonomously extracts and analyzes product data. This system leverages a collaborative multi-agent approach, ensuring efficiency, accuracy, and real-time insights for sales and strategy teams. The architecture consists of specialized AI agents working together to perform key functions:
-  * To extracts products from the product catalog
+  * To extract products from the product catalog
   * Extract features of the product from the product catalog,
   * Searches for competitor products
   * Generates a structured competitive comparison table
