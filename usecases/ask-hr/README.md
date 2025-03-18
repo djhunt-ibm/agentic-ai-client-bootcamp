@@ -11,7 +11,7 @@ TechCorp Inc., a global IT leader with a workforce of 100,000 employees, faced a
 ## 🎯 Objective
 
 With this use-case, we are planning to tackle such a challenge by adopting an enterprise-grade platform, watsonx, equipped with Agentic capabilities.
-In this lab, we will see how the out-of-the-box prebuilt skills  in watsonx.orchestrate can connect to HR management tools viz Workday, Successfactors etc or create custom skills to connect to any such systems easily. With watsonx.ai's agent driven insights let's see how TechCorp was able to fast-track information retrieval, reduce administrative overhead, and ensure a more efficient and effective management of its vast workforce.
+In this lab, we will see how the out-of-the-box prebuilt skills  in watsonx Orchestrate can connect to HR management tools such as Workday, SuccessFactors, etc., or create custom skills to connect to any such systems easily. With watsonx.ai's agent driven insights let's help TechCorp fast-track information retrieval, reduce administrative overhead, and ensure a more efficient and effective workforce.
 
 
 ## 📈 Business value
