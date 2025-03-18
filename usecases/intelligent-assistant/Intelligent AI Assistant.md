@@ -33,6 +33,11 @@ In this exercise, we will take you through a rudimentary implementation of the f
 Even though we will take you through a complete and working example, you should also consider making changes that fit your desired use case better, and only take this description as a reference point that guides you along your own implementation.
 </div>
 
+### Pre-requisites
+
+- Check with your instructor to make sure **all systems** are up and running before you continue.
+- If you're an instructor running this lab, check the **Instructor's guides** to set up all environments and systems.
+
 ## Agent Lab - Creating your first agent
 
 For the first stage of implementation of our agentic solution, we use the watsonx.ai Agent Lab tool. 
