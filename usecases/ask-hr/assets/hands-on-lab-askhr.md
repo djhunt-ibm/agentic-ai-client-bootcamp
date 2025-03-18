@@ -97,6 +97,21 @@ This use-case targets developing and deploying an AskHR agent leveraging IBM wat
 <img width="1000" alt="image" src="hands-on-lab-assets/image43.png">
 
 ### Deploy your agent
+12.1. For next steps, you need to create a deployment space using [this](deployment_space_creation.md) guide.)
+12.2 Save your agent by clicking on Save icon, then select "Save as".
+    
+<img width="1000" alt="image" src="hands-on-lab-assets/image43.1.png">
+
+12.3 Select "Agent" in Agent type, check the checkbox ""View the project after saving", then click on "save".
+<img width="1000" alt="image" src="hands-on-lab-assets/image43.2.png">
+
+12.4 Click on the agent that just got created.
+<img width="1000" alt="image" src="hands-on-lab-assets/image43.3.png">
+
+12.5 Click on "Edit".
+<img width="1000" alt="image" src="hands-on-lab-assets/image43.4.png">
+
+Your agent is saved, you  can make changes in it later if you want to experiment with it.
 
 13.	Click on “Deploy”.
 
