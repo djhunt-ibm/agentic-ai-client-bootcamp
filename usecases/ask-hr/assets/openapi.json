@@ -6,7 +6,7 @@
     },
     "servers": [
         {
-            "url": "https://prof-mgnt.1rqct68sp2fr.us-south.codeengine.appdomain.cloud",
+            "url": "https://hr-skills-app.1rqct68sp2fr.us-south.codeengine.appdomain.cloud",
             "description": "Production server"
         }
     ],
