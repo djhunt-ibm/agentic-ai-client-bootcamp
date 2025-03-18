@@ -4,7 +4,7 @@
 ## Table of Contents
 
 - [Use case description](#use-case-description)
-- [Architecture](#architecture)
+- [Architecture](#-architecture)
 - [Agent Lab - Creating your first agent](#agent-lab---creating-your-first-agent)
   - [Using a tool](#using-a-tool)
   - [Deploy your agent](#deploy-your-agent)
@@ -12,7 +12,7 @@
   - [AI agent configuration](#ai-agent-configuration)
   - [Skill Studio](#skill-studio)
 
-## 📙 Use case description
+## Use case description
 
 This use-case targets developing and deploying an AskHR agent leveraging IBM watsonx Orchestrate and watsonx.ai, as depicted in the provided architecture diagram. This agent will empower employees to interact with HR systems and access information efficiently through conversational AI. 
 
