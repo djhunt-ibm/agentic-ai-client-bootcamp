@@ -4,7 +4,7 @@
 ## Table of Contents
 
 - [Use case description](#use-case-description)
-- [Architecture](#--architecture)
+- [Architecture](#architecture)
 - [Agent Lab - Creating your first agent](#agent-lab---creating-your-first-agent)
   - [Using a tool](#using-a-tool)
   - [Deploy your agent](#deploy-your-agent)
