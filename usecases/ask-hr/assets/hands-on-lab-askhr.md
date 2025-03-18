@@ -183,7 +183,7 @@ Click on “Generate Token”.
 
 ### AI agent configuration
 
-24.	Click on hamburger menu on top left and select “AI agent configuration” from menu. If you don't see  “AI agent configuration” in menu, try [this](# Common issues and troubleshoot steps)
+24.	Click on hamburger menu on top left and select “AI agent configuration” from menu. If you don't see  “AI agent configuration” in menu, try [this](#Common-issues-and-troubleshoot-steps)
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image56.png">
 
