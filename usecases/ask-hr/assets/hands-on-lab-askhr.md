@@ -60,7 +60,8 @@ This use-case targets developing and deploying an AskHR agent leveraging IBM wat
 7.	Switch back to the homepage. Open Agent Lab.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image38.png">
-
+7.0 Click on both checkboxes, then click on "Skip tour."
+<img width="1000" alt="image" src="hands-on-lab-assets/image38.0.png">
 7.1 Click on "Associate service".
 <img width="1000" alt="image" src="hands-on-lab-assets/image38.1.png">
 
