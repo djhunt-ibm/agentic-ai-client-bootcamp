@@ -1,7 +1,7 @@
-# Use case: Business Automation   
+# 👨🏻‍💻 Use case: Business Automation   
 
 ## Table of Contents
-- [Introduction](#introduction)
+- [Architecture](#architecture)
 - [Use Case Description](#use-case-description)
 - [Adding Custom Skills](#adding-custom-skills)
 - [Agent Lab](#agent-lab)
@@ -12,17 +12,23 @@
 - [Integration with Watsonx Orchestrate](#integration-with-watsonx-orchestrate)
 - [Demo Video](#demo-video) 
 
-## Introduction  
+## 🏛Architecture  
 
 ![Architecture](assets/architecture.png)  
 
-## Use Case Description
+##  Use Case Description
 
 The sales department of ABC Motor Corp, an automotive large player, when preparing sales proposals, they were spending a lot of time understanding the features of competing products and comparing them with their own products. ABC Motor Corp, needs an automated competitive analysis system to help their sales teams quickly identify and position their products against competitors. Traditionally, gathering competitor insights required extensive manual research, making it inefficient and prone to outdated information. Therefore, the goal of this use case is to create an AI enabled system that support the customer's competitive analysis and market research.
+
+## Pre-requisites
+
+- Check with your instructor to make sure **all systems** are up and running before you continue.
+- If you're an instructor running this lab, check the **Instructor's guides** to set up all environments and systems.
 
 ## Adding Custom Skills 
 
 After your instructor has completed the **Product APP** setup, request the server URL from them. Open the [OPEN_API_SPEC File](open_api_spec.json) and replace the default server URL with the one provided.
+
 
 ![Server URL](assets/json_url.png)
 
