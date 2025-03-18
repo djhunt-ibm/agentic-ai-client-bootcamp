@@ -1,28 +1,36 @@
 
-# AskHR - Agent setup hands on lab
+# AskHR: Build an Agentic AI System to automate HR tasks
 
 ## Table of Contents
 
-- [Use case: AskHR](#use-case-askHR)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Use case description](#use-case-description)
-  - [Agent Lab - Creating your first agent](#agent-lab---creating-your-first-agent)
-    - [Using a tool](#using-a-tool)
-    - [Deploy your agent](#deploy-your-agent)
-  - [watsonx Orchestrate](#watsonx-orchestrate)
-    - [AI agent configuration](#ai-agent-configuration)
-    - [Skill Studio](#skill-studio)
-
-## Introduction
-
-<img width="1000" alt="image" src="arch_diagm.png">
+- [Use case description](#use-case-description)
+- [Architecture](#architecture)
+- [Agent Lab - Creating your first agent](#agent-lab---creating-your-first-agent)
+  - [Using a tool](#using-a-tool)
+  - [Deploy your agent](#deploy-your-agent)
+- [watsonx Orchestrate](#watsonx-orchestrate)
+  - [AI agent configuration](#ai-agent-configuration)
+  - [Skill Studio](#skill-studio)
 
 ## Use case description
 
-This use-case targets developing and deploying an AskHR agent leveraging IBM watsonx Orchestrate and watsonx.ai, as depicted in the provided architecture diagram. This agent will empower employees to interact with HR systems and access information efficiently through conversational AI. we have 4 skills in watsonx.orchestrate which leverages custom skills to connect to a dummy HR Application storing the employee data. Another agent in watsonx.ai can answer user queries using a grounded data source. Integrating these 5 agents, we will see how most of the routine HR operations can be brought under a single powerful Agent.
+This use-case targets developing and deploying an AskHR agent leveraging IBM watsonx Orchestrate and watsonx.ai, as depicted in the provided architecture diagram. This agent will empower employees to interact with HR systems and access information efficiently through conversational AI. 
+
+We have 4 skills in watsonx Orchestrate, which leverages custom skills to connect to a simulated Human Capital Management System storing the employee data. Another agent in watsonx.ai can answer user queries using a grounded data source. Integrating these 5 agents, we will see how most of the routine HR operations can be brought under a single powerful Agent.
+
+## Architecture
+
+<img width="1000" alt="image" src="arch_diagm.png">
+
+
+## Implementation
+
+### Pre-requisites
+
+Check with your instructor to make sure all systems are up and running before you continue.
 
 ### Agent Lab - Creating your first agent
+
 
 1.	Login into your watsonx account using [this](https://dataplatform.cloud.ibm.com/wx/home?context=wx). This is Homepage of watsonx AI.
    Copy the watsonx.ai URL and paste somewhere.
