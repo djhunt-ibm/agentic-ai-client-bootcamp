@@ -25,8 +25,9 @@ This use-case targets developing and deploying an AskHR agent leveraging IBM wat
 ### Agent Lab - Creating your first agent
 
 1.	Login into your watsonx account using [this](https://dataplatform.cloud.ibm.com/wx/home?context=wx). This is Homepage of watsonx AI.
+   Copy the watsonx.ai URL and paste somewhere.
 
-<img width="1000" alt="image" src="hands-on-lab-assets/image30.png">
+<img width="1000" alt="image" src="hands-on-lab-assets/image30.1.png">
 
 1.1 For agent creation, you'll be needing a project. Click on "+" icon against "Projects" as shown in below image.
 <img width="1000" alt="image" src="hands-on-lab-assets/image31.png">
@@ -166,7 +167,7 @@ Your agent is saved, you  can make changes in it later if you want to experiment
 21. For deployment, you need a Code Engine URL, which you can request from your instructor. Once you receive the deployment link, please open it.
 
 You will reach the page shown in the image below. Follow these two steps to generate the Bearer Token:
-Paste “Deployment ID” (refer step 17), “Space ID” (refer step 20), "API Key" (refer step 6) and "watsonx URL". 
+Paste “Deployment ID” (refer step 17), “Space ID” (refer step 20), "API Key" (refer step 6) and "watsonx URL (refer step 1)". 
 Click on “Generate Token”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image53.png">
