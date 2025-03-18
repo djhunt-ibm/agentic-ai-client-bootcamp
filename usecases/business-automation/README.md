@@ -4,22 +4,17 @@
 
 ## The Problem
 
-The sales department of ABC Motors Corp, an automotive large player, when preparing sales proposals, they were spending a lot of time understanding the features of competing products and comparing them with their own products. Sales teams were spending excessive time manually researching competitor products and comparing them with their own. This process was:
+ABC Motors Corp's sales department faced challenges in preparing sales proposals due to inefficient competitive research.
 
-- Time-consuming competitive research: sales teams spend excessive time manually gathering competitor insights, delaying decision-making and reducing productivity.
+- Manual research delays decisions and reduces productivity.
 
-- Inefficient product positioning: Lack of structured competitor comparison leads to weak sales pitches, making it harder to highlight unique selling points effectively.
+- Weak positioning hampers sales differentiation.
 
-- Data overload & irrelevant information: traditional search methods yield excessive or low-quality data, making it difficult to extract meaningful competitor insights.
-
-- Delayed response to market changes: Without real-time competitive intelligence, businesses struggle to adapt pricing, features, and strategies based on evolving market trends.
-
-### Lack of automation in sales intelligence 
-Manual processes for feature extraction, web search, and competitor analysis lead to inconsistent data and missed sales opportunities.
+- Slow response to market changes without real-time intelligence.
 
 ## Objective
-To address these challenges, ABC Motors Corp aims to implement an AI-enabled Competitive Intelligence System that automates market research and competitor analysis. ABC Motor Corp, needs an automated competitive analysis system to help their sales teams quickly identify and position their products against competitors. Traditionally, gathering competitor insights required extensive manual research, making it inefficient and prone to outdated information.
-Therefore, the goal of this use case is to create an AI enabled system that support the customer's competitive analysis and market research. This system will:
+
+ABC Motors Corp plans to implement an AI-powered Competitive Intelligence System to automate market research and competitor analysis. This system will help sales teams quickly identify and position their products against competitors, overcoming the inefficiencies of manual research and outdated insights. The goal is to create an AI-enabled system that supports competitive analysis and market research by:
 
 * Extract products from the company’s product catalog.
 * Identify and extract key features of each product.
