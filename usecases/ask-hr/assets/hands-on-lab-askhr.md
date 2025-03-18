@@ -98,6 +98,8 @@ This use-case targets developing and deploying an AskHR agent leveraging IBM wat
 
 ### Deploy your agent
 12.1. For next steps, you need to create a deployment space using [this](deployment_space_creation.md) guide.)
+
+
 12.2 Save your agent by clicking on Save icon, then select "Save as".
     
 <img width="1000" alt="image" src="hands-on-lab-assets/image43.1.png">
