@@ -400,9 +400,9 @@ Sometimes, when you open watsonx orchestrate homepage, the legacy chat is activa
 
 1. Click on profile icon in top right and click on settings.
 
-<img width="1000" alt="image" src="/usecase-setup/askhr/code_engine_setup/app_deployment_images/image20.png">
+<img width="1000" alt="image" src="/usecase-setup/askhr/code_engine_setup/app_deployment_images/image64.1.png">
 
  2. Then click on chat version and switch to AI chat.
 
-    <img width="1000" alt="image" src="/usecase-setup/askhr/code_engine_setup/app_deployment_images/image27.png">
+    <img width="1000" alt="image" src="/usecase-setup/askhr/code_engine_setup/app_deployment_images/image64.2.png">
 End of Document
