@@ -154,9 +154,9 @@ Your agent is saved, you  can make changes in it later if you want to experiment
 <img width="1000" alt="image" src="hands-on-lab-assets/image52.png">
 
 
-21.	Please refer to the [Code Engine instructor](https://github.ibm.com/skol/agentic-ai-client-bootcamp-instructors/blob/main/environment-setup/external-agent-builder/Readme.md) guide for deployment instructions. Once you obtain the deployment link, kindly open it.
+21. For deployment, you need a Code Engine URL, which you can request from your instructor. Once you receive the deployment link, please open it.
 
-You will reach the page shown in the image below.
+You will reach the page shown in the image below. Follow these two steps to generate the Bearer Token:
 Paste “Deployment ID”, “Space ID”, "API Key" and "watsonx URL" that you copied in previous steps. 
 Click on “Generate Token”.
 
@@ -190,9 +190,7 @@ Click on “Generate Token”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image59.png">
 
-28. For deployment, you need a Code Engine URL, which you can request from your instructor. Once you receive the deployment link, please open it.
 
-You will reach the page shown in the image below. Follow these two steps to generate the Bearer Token:
 28.	Under “Authentication type”, select “Bearer Token”, enter the generated token you copied, In “Service Instance URL” section , enter the  Code Engine URL.
 
 Click on “Connect”
