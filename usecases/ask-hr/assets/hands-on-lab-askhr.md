@@ -257,8 +257,12 @@ Click on “Connect”
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image4.png">
 
+35.1 Refer this [openapi.json](openapi.json). In this file, the value of "url" should be the URL of deployed API that your instructor will provide you after they have completed the APP setup. Paste that URL in file as shown below and save this file.
 
-36.	Drag or Select the open specs file ([openapi.json](openapi.json)) and click on "next".
+<img width="1000" alt="image" src="hands-on-lab-assets/image4.1.png">
+
+
+36.	Drag or Select the saved open specs file and click on "next".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image5.png">
 
