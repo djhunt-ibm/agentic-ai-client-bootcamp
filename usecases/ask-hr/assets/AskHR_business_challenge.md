@@ -4,7 +4,7 @@
 
 **Fragmented Systems and Tools**
 
-Many organizations still use outdated or disconnected HR systems, causing data silos and inefficiencies. This fragmentation leads to difficulties in accessing accurate, up-to-date information, affecting decision-making and workflow.
+Many organizations still use outdated or disconnected HR systems, causing data silos and inefficiencies. This fragmentation leads to difficulties in accessing accurate, up-to-date information, which impacts timely decision-making and workflow.
 
 <img width="50" alt="image" src="business_challenge_assets/2.png">
 
@@ -22,7 +22,7 @@ HR teams often face delays in responding to employee queries about benefits, lea
 
 **Inefficient Communication Channels**
 
-Relying on outdated communication methods like email and paper forms slows HR processes. The lack of centralized platforms for documents and updates leads to miscommunication, although modern HR software can help if adopted.
+Relying on outdated communication methods like email and paper forms slows many HR processes. The lack of centralized platforms for documents and updates leads to miscommunication, although modern HR software can help if adopted.
 
 <img width="50" alt="image" src="business_challenge_assets/5.png">
 
@@ -52,7 +52,7 @@ HR must comply with data protection laws like GDPR, CCPA, and HIPAA. Failure to 
 
 **Secure Data Sharing**
 
-Collaborating across departments often requires sharing sensitive data. Insecure file-sharing can lead to breaches. Secure platforms and encryption are essential to protect data and ensure compliance.
+Collaborating across departments often requires sharing sensitive data. Insecure file-sharing can lead to data breaches. Secure platforms and encryption are essential to protect data and ensure compliance.
 
 <img width="50" alt="image" src="business_challenge_assets/10.png">
 

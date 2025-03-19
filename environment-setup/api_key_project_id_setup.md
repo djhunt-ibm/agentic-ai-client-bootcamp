@@ -2,7 +2,7 @@
 
 Follow this step-by-step guide to create a Project ID and generate an API key.
 
-1. Log in to your **Watsonx AI** account. Once logged in, you will land on the homepage.  
+1. Log into your **Watsonx AI** account. Once logged in, you will be navigated to the homepage.  
 
    ![Watsonx Homepage](/environment-setup/assets/home-page.png)  
 
@@ -38,7 +38,7 @@ Follow this step-by-step guide to create a Project ID and generate an API key.
 
     ![Api Key Show](/environment-setup/assets/copy-api-key.png)  
 
-11. Return to the Watsonx AI **homepage** and open **Agent Lab** to start building your agent. 
+11. Return to the watsonx AI **homepage** and open **Agent Lab** to start building your agent. 
 ![Agent Lab](/environment-setup/assets/agent-lab.png) 
 
 Now that we have created both the Project ID and the API Key, we will proceed with the creation of our agents.

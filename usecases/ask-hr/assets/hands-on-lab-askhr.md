@@ -14,7 +14,7 @@
 
 ## Use case description
 
-This use-case targets developing and deploying an AskHR agent leveraging IBM watsonx Orchestrate and watsonx.ai, as depicted in the provided architecture diagram. This agent will empower employees to interact with HR systems and access information efficiently through conversational AI. 
+This use case targets developing and deploying an AskHR agent leveraging IBM watsonx Orchestrate and watsonx.ai, as depicted in the provided architecture diagram. This agent will empower employees to interact with HR systems and access information efficiently through conversational AI. 
 
 We have 4 skills in watsonx Orchestrate, which leverages custom skills to connect to a simulated Human Capital Management System storing the employee data. Another agent in watsonx.ai can answer user queries using a grounded data source. Integrating these 5 agents, we will see how most of the routine HR operations can be brought under a single powerful Agent.
 
@@ -33,36 +33,36 @@ We have 4 skills in watsonx Orchestrate, which leverages custom skills to connec
 ### Agent Lab - Creating your first agent
 
 
-1.	Login into your watsonx account using [this](https://dataplatform.cloud.ibm.com/wx/home?context=wx). This is Homepage of watsonx AI.
+1.	Log into your watsonx account using [this](https://dataplatform.cloud.ibm.com/wx/home?context=wx). This is the Homepage of watsonx AI.
    Copy the watsonx.ai URL and paste somewhere.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image30.1.png">
 
-1.1 For agent creation, you'll be needing a project. Click on "+" icon against "Projects" as shown in below image.
+1.1 For agent creation, you'll be needing a project. Click the "+" icon against "Projects" as shown in the below image.
 <img width="1000" alt="image" src="hands-on-lab-assets/image31.png">
 
-1.2 Give your a project a name, select storage from available storages, then click on "Create".
+1.2 Give your project a name, select storage from available storages, then click on "Create".
 <img width="1000" alt="image" src="hands-on-lab-assets/image32.png">
 
-2.	Click on hamburger icon on top left and select “Access (IAM)”.
+2.	Click on the "hamburger menu" on top left and select “Access (IAM)”. (If you already have an IBM Cloud ApiKey, you can skip this step.)
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image33.png">
 
 
-3.	In next screen, select “API Keys” from menu.
+3.	In the next screen, select “API Keys” from the menu. (If you already have an IBM Cloud ApiKey, you can skip this step.)
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image34.png">
 
-4.	Click on “Create”.
+4.	Click on “Create”. (If you already have an IBM Cloud ApiKey, you can skip this step.)
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image35.png">
 
-5.	Give your API key a name, then click on “Create”.
+5.	Give your API key a name, then click on “Create”. (If you already have an IBM Cloud ApiKey, you can skip this step.)
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image36.png">
 
 
-6.	Copy the API key that is shown after clicking on “create”. Paste it somewhere, it’ll be used in later steps.
+6.	Copy the API key that is shown after clicking on “Create”. Paste it somewhere as it will be needed in later steps. (If you already have an IBM Cloud ApiKey, you can skip this step.)
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image37.png">
 
@@ -75,20 +75,20 @@ We have 4 skills in watsonx Orchestrate, which leverages custom skills to connec
 7.1 Click on "Associate service".
 <img width="1000" alt="image" src="hands-on-lab-assets/image38.1.png">
 
-7.2 Make sure "Global" and the region of your cloud account is selected in dropdown.
+7.2 Make sure "Global" and the region of your cloud account is selected in the drop-down.
  <img width="1000" alt="image" src="hands-on-lab-assets/image38.3.png">
 
-7.3  Select available watsonx.ai runtime service. (Look for the service with Type "watsonx.ai Runtime")
+7.3  Select available watsonx.ai runtime service. (Look for the service with Type "watsonx.ai Runtime".)
  <img width="1000" alt="image" src="hands-on-lab-assets/image38.4.png">
 
-7.4 Once that's done, navigate to agent lab again (by clicking on hamburger menu in top left and then clicking on "Home", then clicking on "Agent Lab")
+7.4 Once that's done, navigate to the Agent Lab again (by clicking on the "hamburger menu" in top left and then clicking on "Home", then clicking on "Agent Lab")
 
-8.	In “Instructions” field, paste this prompt “You are a helpful Human Resources Assistant that uses tools to answer questions in detail. Please use website https://www.cipd.org/en/knowledge/factsheets/hr-policies-factsheet/ to give answers to user questions. When greeted, say “Hi, I am HR agent, How can I help you?”
+8.	In the “Instructions” field, paste this prompt “You are a helpful Human Resources Assistant that uses tools to answer questions in detail. Please use the website https://www.cipd.org/en/knowledge/factsheets/hr-policies-factsheet/ to give answers to user questions. When greeted, say “Hi, I am an HR agent. How can I help you?”
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image39.png">
 
 ### Using a tool
-9.	From “Added tools” section remove already added tools.
+9.	From the “Added tools” section, remove already added tools.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image40.png">
 
@@ -111,35 +111,35 @@ We have 4 skills in watsonx Orchestrate, which leverages custom skills to connec
 12.1. For next steps, you need to create a deployment space using [this](deployment_space_creation.md) guide.)
 
 
-12.2 Save your agent by clicking on Save icon, then select "Save as".
+12.2 Save your agent by clicking the Save icon, then select "Save as".
     
 <img width="1000" alt="image" src="hands-on-lab-assets/image43.1.png">
 
-12.3 Select "Agent" in Agent type, check the checkbox ""View the project after saving", then click on "save".
+12.3 Select "Agent" in Agent type, check the checkbox ""View the project after saving", then click the "Save" button.
 <img width="1000" alt="image" src="hands-on-lab-assets/image43.2.png">
 
-12.4 Click on the agent that just got created.
+12.4 Click on the agent that was just created.
 <img width="1000" alt="image" src="hands-on-lab-assets/image43.3.png">
 
 12.5 Click on "Edit".
 <img width="1000" alt="image" src="hands-on-lab-assets/image43.4.png">
 
-Your agent is saved, you  can make changes in it later if you want to experiment with it.
+Your agent is now saved and you can make changes later if you want to experiment with it.
 
-13.	Click on “Deploy”. (For next steps ypu'll need a deployment space. If there are no deployment space you need to create one using  [this](deployment_space_creation.md) guide.)
+13.	Click on “Deploy”. (For the next steps, you'll need a deployment space. If there are no deployment spaces, you need to create one using  [this](deployment_space_creation.md) guide.)
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image44.png">
 
-14. Once you click on deploy, You need to create user api key.  Click on "Create"
+14. Once you click on deploy, you need to create a user api key.  Click on "Create".
 <img width="1000" alt="image" src="hands-on-lab-assets/image44.0.1.png">
 
 14.1 You'll be directed to another webpage. Click on "Create a key".
 <img width="1000" alt="image" src="hands-on-lab-assets/image44.0.2.png">
 
-14.2 Once key is created, navigate back to deployment page. Click on "reload".
+14.2 Once a key is created, navigate back to deployment page. Click on "Reload".
 <img width="1000" alt="image" src="hands-on-lab-assets/image44.1.png">
 
-14.2  Enter Deployment name and select “Deployment Space”.
+14.2  Enter the Deployment name and select “Deployment Space”.
 <img width="1000" alt="image" src="hands-on-lab-assets/image45.png">
 
 15.	Wait for the status to change to “Deployed” from “Initializing”.
@@ -153,12 +153,12 @@ Your agent is saved, you  can make changes in it later if you want to experiment
 <img width="1000" alt="image" src="hands-on-lab-assets/image48.png">
 
 
-17.	Copy and paste deployment id as shown in below image. You will need it in later step.
+17.	Copy and paste the deployment id as shown in below image. You will need it in a later step.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image49.png">
 
 
-18.	From menu, select “Deployments”.
+18.	From the menu, select “Deployments”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image50.png">
 
@@ -168,15 +168,15 @@ Your agent is saved, you  can make changes in it later if you want to experiment
 <img width="1000" alt="image" src="hands-on-lab-assets/image51.png">
 
 
-20.	Under “manage” section, you’ll find “Space GUID”. Copy and paste it somewhere.
+20.	Under the “Manage” section, you’ll find “Space GUID”. Copy and paste it somewhere.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image52.png">
 
 
-21. For deployment, you need a Code Engine URL, which you can request from your instructor. Once you receive the deployment link, please open it.
+21. For deployment, you need a CodeEngine URL, which you can request from your instructor. Once you receive the deployment link, please open it.
 
 You will reach the page shown in the image below. Follow these two steps to generate the Bearer Token:
-Paste “Deployment ID” (refer step 17), “Space ID” (refer step 20), "API Key" (refer step 6) and "watsonx URL (refer step 1)". 
+Paste “Deployment ID” (refer to step 17), “Space ID” (refer to step 20), "API Key" (refer to step 6) and "watsonx URL (refer to step 1)". 
 Click on “Generate Token”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image53.png">
@@ -191,22 +191,22 @@ Click on “Generate Token”.
 
 22.2 From menu, select "Resources list".
 <img width="1000" alt="image" src="hands-on-lab-assets/image54.2.png">
-22.3 Under AI / MAchine Learning, select Watson Orchestrate and click on it.
+22.3 Under AI / Machine Learning, select watsonx Orchestrate and click on it.
 <img width="1000" alt="image" src="hands-on-lab-assets/image54.3.png">
 
 22.4 Click on "Launch watsonx Orchestrate". 
 <img width="1000" alt="image" src="hands-on-lab-assets/image54.4.png">
 
-23.	This is watsonx Orchestrate homepage. 
+23.	This is the watsonx Orchestrate homepage. 
 <img width="1000" alt="image" src="hands-on-lab-assets/image55.png">
 
 ### AI agent configuration
 
-24.	Click on hamburger menu on top left and select “AI agent configuration” from menu. If you don't see  “AI agent configuration” in menu, try [this](#Common-issues-and-troubleshoot-steps)
+24.	Click on the "hamburger menu" on top left and select “AI agent configuration” from the menu. If you don't see “AI agent configuration” in the menu, try [this](#Common-issues-and-troubleshoot-steps).
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image56.png">
 
-25.	Click on “Agents“
+25.	Click on “Agents".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image57.png">
 
@@ -220,9 +220,9 @@ Click on “Generate Token”.
 <img width="1000" alt="image" src="hands-on-lab-assets/image59.png">
 
 
-28.	Under “Authentication type”, select “Bearer Token”, enter the generated token you copied, In “Service Instance URL” section , enter the  Code Engine URL recieved from instructor.
+28.	Under “Authentication type”, select “Bearer Token” and enter the generated token you copied. In the “Service Instance URL” section, enter the CodeEngine URL received from your bootcamp instructor.
 
-Click on “Connect”
+Click on “Connect”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image60.png">
 
@@ -231,7 +231,7 @@ Click on “Connect”
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image61.png">
 
-30.	From menu, select “chat”.
+30.	From the menu, select “Chat”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image62.png">
 
@@ -241,7 +241,7 @@ Click on “Connect”
 
 ### Skill Studio
 
-32.	From the menu select "Skill Studio".
+32.	From the menu, select "Skill Studio".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image1.png">
 
@@ -249,7 +249,7 @@ Click on “Connect”
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image2.png">
 
-34.	Select "Import API" from the dropdown.
+34.	Select "Import API" from the drop-down.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image3.png">
 
@@ -257,8 +257,12 @@ Click on “Connect”
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image4.png">
 
+35.1 Refer to this [openapi.json](openapi.json). In this file, the value of "url" should be the URL of deployed API that your instructor will provide after they have completed the APP setup. Paste that URL in the file as shown below and save this file.
 
-36.	Drag or Select the open specs file ([openapi.json](openapi.json)) and click on "next".
+<img width="1000" alt="image" src="hands-on-lab-assets/image4.1.png">
+
+
+36.	Drag or Select the saved open specs file and click on "Next".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image5.png">
 
@@ -268,7 +272,7 @@ Click on “Connect”
 <img width="1000" alt="image" src="hands-on-lab-assets/image6.png">
 
 
-38.	Once the skills are imported, Click on the three dots against the 'Update address' skill.
+38.	Once the skills are imported, click on the three dots against the 'Update address' skill.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image7.png">
 
@@ -277,13 +281,13 @@ Click on “Connect”
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image8.png">
 
-40. Under "input", put "Hello! What's your name?" in name section and "What's your new address" in new_address section. Then click on "Publish".
+40. Under "input", put "Hello! What's your name?" in the name section and "What's your new address" in the new_address section. Then, click on "Publish".
 <img width="1000" alt="image" src="hands-on-lab-assets/image8.5.png">
 
 
-In a similar way,	You need to do modifications according to the below images, in all the skils by enhancing skills and then publish the skills.
+In a similar way,	you need to do modifications according to the below images in all the skills by enhancing skills and then publishing the skills.
 
-To do this, first click on three dots against the skill name, then click on "Enhance this skill", then click on "Input" and refer below images for modifications:
+To do this, first click on the three dots against the skill name and click on "Enhance this skill". Then click on "Input" and refer to the below images for modifications:
 
 For Request Time Off skill:  Make sure the order of from_date and end_date fields is correct as shown in image. If it's not, you need to drag from_date before end_date section.
 <img width="1000" alt="image" src="hands-on-lab-assets/image8.2.png">
@@ -297,17 +301,17 @@ For Update Title skill:
 For Get Time Off Balance skill:
 <img width="1000" alt="image" src="hands-on-lab-assets/image8.1.png">
 
-42.	Once all the skills are published, from menu go to "Skill sets".
+42.	Once all the skills are published, from the menu, go to "Skill sets".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image10.png">
 
 
-43.	From the dropdown, select "Orchestrate Agent Skills".
+43.	From the drop-down, select "Orchestrate Agent Skills".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image11.png">
 
 
-44.	Click on "Connections". Your imported skills should be grouped in one app automatically. By clicking on arrow, search for that app. Click on three dots against that app and then click on "Connect app".
+44.	Click on "Connections". Your imported skills should be grouped in one app automatically. By clicking on the arrow, search for that app. Click on the three dots against that app and then click "Connect app".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image11.1.png">
 
@@ -318,13 +322,13 @@ For Get Time Off Balance skill:
 <img width="1000" alt="image" src="hands-on-lab-assets/image11.2.png">
 
 
-46.	Enter your credentials and click on "Connect app".
+46.	Enter your credentials and click on "Connect app". (You can use dummy credentials test/test for this.)
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image12.png">
 
 
 
-47.	Once thats done, click on skills and then click on "Manage skills".
+47.	Once that is done, click on skills and then click on "Manage skills".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image13.png">
 
@@ -335,14 +339,14 @@ For Get Time Off Balance skill:
 
 
 
-49.	Check if "Get Time Off Balance", "Get User Profile", "Request Time Off", "Update address" and "Update Title" skills are added. If not already added, click on "Add skill + " for all skills you want to add. 
-Then click on "Connect App" on top right, if not already connected.
+49.	Check if "Get Time Off Balance", "Get User Profile", "Request Time Off", "Update address", and "Update Title" skills are added. If not, click on "Add skill + " for all skills you want to add. 
+Then, click on "Connect App" on top right, if not already connected.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image15.png">
 
 
 
-50.	From menu, click on "AI agent configuration".
+50.	From the menu, click on "AI agent configuration".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image16.png">
 
@@ -358,13 +362,13 @@ Then click on "Connect App" on top right, if not already connected.
 <img width="1000" alt="image" src="hands-on-lab-assets/image18.png">
 
 
-53.	Enter the description of this skill, "To get time off balance data" Then click on "Add skill".
+53.	Enter the description of this skill, "To get time off balance data". Then, click on "Add skill".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image19.png">
 
-54.	Similarly add all the imported skills with following descriptions as follows. Get User Profile : to get complete profile data of user. Request Time Off : to request time off, apply for leaves Update Address : To update user address Update Title : To update user Title
+54.	Similarly, add all the imported skills with the following descriptions. Get User Profile: to get complete profile data of user. Request Time Off: to request time off, apply for leaves. Update Address: To update user address. Update Title: To update user Title
 
-55.	Now click on your profile icon in top right and select "settings"
+55.	Now, click on your profile icon in the top right and select "Settings".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image20.png">
 
@@ -373,17 +377,17 @@ Then click on "Connect App" on top right, if not already connected.
 <img width="1000" alt="image" src="hands-on-lab-assets/image21.png">
 
 
-57.	From menu, select "Skill sets"
+57.	From the menu, select "Skill sets".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image22.png">
 
 
-58.	Select "Team Skills" in dropdown.
+58.	Select "Team Skills" in the drop-down.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image22.1.png">
 
 
-59. Then click on "connections".Search for the app your skills are grouped into. Click on 3 dots and then click on "Connect app".
+59. Then, click on "connections". Search for the app your skills are grouped into. Click on the 3 dots and then click on "Connect app".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image22.2.png">
 
@@ -391,18 +395,17 @@ Then click on "Connect App" on top right, if not already connected.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image22.3.png">
 
-59.b Enter your credentials, then click on "Connect app".
-
+59.b Enter your credentials, then click on "Connect app".  (You can use dummy credentials test/test for this.)
 <img width="1000" alt="image" src="hands-on-lab-assets/image22.4.png">
 
-60.	Click on "skills" and then "Manage skills".
+60.	Click on "Skills" and then "Manage skills".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image23.png">
 
 
-61.	Search for the app, where skills are imported, click on it.
+61.	Search for the app, where skills are imported and click on it.
 
-  Then click on "add skills +" for all the skills you imported and then connect app using "Connect App" button in top right.
+  Then, click on "Add skills +" for all the skills you imported and then connect app using "Connect App" button in top right.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image24.png">
 
@@ -410,29 +413,40 @@ Then click on "Connect App" on top right, if not already connected.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image26.png">
 
-62.	Then click on profile icon, then settings , then click on chat version and switch to AI chat again.
+62.	Then, click on the profile icon, then settings, then click on chat version and switch to AI chat again.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image27.png">
 
-63.	From menu click on "chat".
+63.	From the menu, click on "Chat".
 
 
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image28.png">
 
-64.	Use your imported skills in chat.
+64.	Test any of imported skills in chat.
 <img width="1000" alt="image" src="hands-on-lab-assets/image29.png">
 
+65. Again, click on the profile icon, then settings.
+<img width="1000" alt="image" src="hands-on-lab-assets/image29.1.png">
+
+66. Click on "Skill configurations". Set "number of form fields" to 0.
+<img width="1000" alt="image" src="hands-on-lab-assets/image29.2.png">
+
+67. From the menu, click on "Chat".
+<img width="1000" alt="image" src="hands-on-lab-assets/image28.png">
+
+68. Use your imported skills in chat. To get the list of already present user names in database, download it from [here](users_data.xlsx).
+<img width="1000" alt="image" src="hands-on-lab-assets/image29.4.png">
 
 # Common issues and troubleshoot steps
 
-Sometimes, when you open watsonx orchestrate homepage, the legacy chat is activated and one needs to manually activate AI Chat. Follow steps below to activate AI chat:
+Sometimes, when you open the watsonx Orchestrate homepage, the legacy chat is activated, and someone needs to manually activate the AI Chat. Follow the steps below to activate the AI chat:
 
-1. Click on profile icon in top right and click on settings.
+1. Click on the profile icon in the top right and click on Settings.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image64.1.png">
 
- 2. Then click on chat version and switch to AI chat.
+ 2. Then, click on the chat version and switch to AI chat.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image64.2.png">
 End of Document
