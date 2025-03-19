@@ -435,7 +435,7 @@ Then click on "Connect App" on top right, if not already connected.
 67. From menu click on "chat".
 <img width="1000" alt="image" src="hands-on-lab-assets/image28.png">
 
-68. Use your imported skills in chat.
+68. Use your imported skills in chat. To get the list of already present user names in database , download it from [here](users_data.xlsx).
 <img width="1000" alt="image" src="hands-on-lab-assets/image29.4.png">
 
 # Common issues and troubleshoot steps
