@@ -15,7 +15,7 @@ Clearly define the scope of the AskHR agent, including supported functionalities
 Establish measurable objectives, such as reduced HR ticket volume, improved employee satisfaction, and faster response times.
 
 - Technical Feasibility Assessment:
-Evaluate the existing HR systems and data sources for compatibility with IBM Watsonx Orchestrate.
+Evaluate the existing HR systems and data sources for compatibility with IBM watsonx Orchestrate.
 Assess the availability of APIs and data access mechanisms.
 Determine the need for custom integrations or data transformations.
 
@@ -27,28 +27,28 @@ Implement data encryption and anonymization techniques as needed.
 ## Phase 2: Development and Configuration
 
 - Environment Setup:
-Provision IBM Watsonx Orchestrate and IBM Watsonx AI instances.
-Configure Code Engine for deploying custom code and integrations.
+Provision IBM watsonx Orchestrate and IBM watsonx AI instances.
+Configure CodeEngine for deploying custom code and integrations.
 Set up necessary integrations with HR systems and data sources.
 
 - Skill Studio Development:
-Utilize Skill Studio in Watsonx Orchestrate to create individual skills for each identified use case.
+Utilize Skill Studio in watsonx Orchestrate to create individual skills for each identified use case.
 Define the skill's trigger phrases, input parameters, and output responses.
 Leverage OpenAPI specifications to integrate with HR systems and retrieve/update data.
-Develop custom code in Code Engine for complex logic or data transformations.
+Develop custom code in CodeEngine for complex logic or data transformations.
 
 - AI Agent Configuration:
-Configure the HR Agent in Watsonx Orchestrate to orchestrate the execution of individual skills.
+Configure the HR Agent in watsonx Orchestrate to orchestrate the execution of individual skills.
 Define the agent's conversation flow and decision-making logic.
 Implement natural language understanding (NLU) models to accurately interpret employee requests.
 
 - Agent Lab Development:
-Utilize Agent Lab in Watsonx AI to develop and train the conversational AI model.
+Utilize Agent Lab in watsonx AI to develop and train the conversational AI model.
 Define intents and entities based on the identified use cases.
 Train the model with sample conversations to improve accuracy and fluency.
 
 - Web Search and Crawler Tool Integration:
-Integrate the Web search and crawler tool in Agent Lab to enable access to external information sources, such as company websites or knowledge bases.
+Integrate the Web Search and Crawler tool in Agent Lab to enable access to external information sources, such as company websites or knowledge bases.
 Configure the tool to extract relevant information and present it to the employee in a conversational format. ic initiatives.
 
 
@@ -96,4 +96,4 @@ Personalization: Personalize the agent's responses based on the employee's role,
 Scalability: Design the architecture to be scalable to accommodate future growth and increasing demand.
 Security: Implement robust security measures to protect sensitive employee data.
 Accessibility: Ensure the agent is accessible to all employees, including those with disabilities.
-By following this methodology, organizations can successfully implement an AskHR agent with IBM Watsonx Orchestrate, empowering employees with self-service HR capabilities and improving overall HR efficiency. This approach fosters a more engaging and productive employee experience, allowing HR teams to focus on strategic initiatives.
+By following this methodology, organizations can successfully implement an AskHR agent with IBM watsonx Orchestrate, empowering employees with self-service HR capabilities and improving overall HR efficiency. This approach fosters a more engaging and productive employee experience, allowing HR teams to focus on strategic initiatives.
