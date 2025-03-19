@@ -6,7 +6,7 @@
 
 ## 🤔 The Problem
 
-ABC Motors Corp's sales department faced challenges in preparing sales proposals for their new line of high performance vehicles. Every time they release a new model, the competitive analysis team spends a great amount of time and resources to deliver their insights. Issues inculde: 
+ABC Motors Corp's sales department faced challenges in preparing sales proposals for their new line of high performance vehicles. Every time they release a new model, the competitive analysis team spends a great amount of time and resources to deliver their insights. Issues include: 
 
 - Manual research delays decisions and reduces productivity.
 
@@ -39,7 +39,7 @@ To streamline the competitive analysis process, we have designed a Multi-Agent A
   * Extract features of the product from the product catalog,
   * Searches for competitor products
   * Generates a structured competitive comparison table
-  * Strength Weakness Opportunity & Threat (SWOT) Analysis
+  * Strengths, Weaknesses, Opportunities, and Threats (SWOT) Analysis
 
 This system leverages 2 AI agents and an Orchestrate agent that collaborate seamlessly to automate competitive research, enhance sales pitch effectiveness, and reduce manual effort.
 
