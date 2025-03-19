@@ -17,7 +17,7 @@ The implementation of an Agentic AI-enabled system for warehouse management is e
 ![alt text](images/Intelligent%20Assistant%20Architecture.jpeg)
 
 ## Demo Video
-You can find a video demo of the solution ![here](https://ibm.box.com/s/eooi4wdj8vq5z48pfemdhe2rgo91yarp).
+You can find a video demo of the solution ![here](./Intelligent%20Assistant%20Demo.mp4).
 
 ## Step-by-step Hands-on Lab
 You can find step-by-step instructions in [this document](./Intelligent%20AI%20Assistant.md). It shows how you can implement the use case using watsonx.ai and watsonx Orchestrate. 
