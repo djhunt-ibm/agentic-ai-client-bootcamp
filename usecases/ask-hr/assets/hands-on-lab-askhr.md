@@ -322,7 +322,7 @@ For Get Time Off Balance skill:
 <img width="1000" alt="image" src="hands-on-lab-assets/image11.2.png">
 
 
-46.	Enter your credentials and click on "Connect app".
+46.	Enter your credentials and click on "Connect app". (You can use dummy credentials test/test for this)
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image12.png">
 
@@ -395,8 +395,7 @@ Then click on "Connect App" on top right, if not already connected.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image22.3.png">
 
-59.b Enter your credentials, then click on "Connect app".
-
+59.b Enter your credentials, then click on "Connect app".  (You can use dummy credentials test/test for this)
 <img width="1000" alt="image" src="hands-on-lab-assets/image22.4.png">
 
 60.	Click on "skills" and then "Manage skills".
