@@ -420,9 +420,20 @@ Then click on "Connect App" on top right, if not already connected.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image28.png">
 
-64.	Use your imported skills in chat.
+64.	Test any of imported skills in chat.
 <img width="1000" alt="image" src="hands-on-lab-assets/image29.png">
 
+65. Again click on profile icon, then settings.
+<img width="1000" alt="image" src="hands-on-lab-assets/image29.1.png">
+
+66. Click on "Skill configurations". Set "number of form fields" to 0.
+<img width="1000" alt="image" src="hands-on-lab-assets/image29.2.png">
+
+67. From menu click on "chat".
+<img width="1000" alt="image" src="hands-on-lab-assets/image28.png">
+
+68. Use your imported skills in chat.
+<img width="1000" alt="image" src="hands-on-lab-assets/image29.4.png">
 
 # Common issues and troubleshoot steps
 
