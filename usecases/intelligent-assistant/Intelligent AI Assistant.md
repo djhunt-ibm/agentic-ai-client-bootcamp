@@ -5,6 +5,7 @@
 - [Use case: Intelligent AI Assistant](#use-case-intelligent-ai-assistant)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
+    - [Pre-requisites](#pre-requisites)
   - [Agent Lab - Creating your first agent](#agent-lab---creating-your-first-agent)
     - [Define a custom tool](#define-a-custom-tool)
     - [Deploy your agent](#deploy-your-agent)
@@ -43,23 +44,43 @@ Even though we will take you through a complete and working example, you should 
 For the first stage of implementation of our agentic solution, we use the watsonx.ai Agent Lab tool. 
 > Note that this feature is currently in beta, so its design may change from the screenshots you see below.
 
-As a starting point, we assume you are logged into your watsonx.ai environment, and have opened the console in your browser. The first thing we need to do is create a project that will hold all the assets we will create. In the top left corner of the console, you will note what we call the "hamburger menu".
+As a starting point, we assume you are logged into your [watsonx.ai environment](https://dataplatform.cloud.ibm.com/wx/home?context=wx), and have opened the console in your browser. The first thing we need to do is copy the `watsonx.ai URL`, which we will need later. Click on the icon next to the URL as shown below to copy it to your clipboard and save it. 
+
+![alt text](images/image50.png)
+
+In the top left corner of the console, you will note what we call the "hamburger menu".
 
 ![alt text](images/image40.png)
 
-When you click on it, you will see a number of menu options, allowing you to directly jump to the right view for the work you are trying to do. Since we want to create a new project, select the `View all projects` option.
+When you click on it, you will see a number of menu options, allowing you to directly jump to the right view for the work you are trying to do. We need to create an IBM Cloud API key next. Select the `Access (IAM)` menu option.
+
+![alt text](images/image55.png)
+
+This will lead us to the Identity and Access Management section of the IBM Cloud console, where we can create an API key. Select the `API keys` menu option, and click on `Create`.
+
+![alt text](images/image56.png)
+
+In the following screen, give your new key a name, leave all the default values and click on `Create`.
+
+![alt text](images/image57.png)
+
+After the new key was created, it will be shown on the screen. Make sure you copy the key somewhere, because when you close this view, you will not be able to see the value of the key again! We will need this value later in this lab.
+
+![alt text](images/image58.png)
+
+In watsonx, all "assets" you create are stored in a "project". An agent is one such asset, so before we build it, we need to create a project for it. Switch back to the [watsonx console](https://dataplatform.cloud.ibm.com/wx/home?context=wx), and select the `View all projects` option from the "hamburger menu".
 
 ![alt text](images/image41.png)
 
-Now click on the blue `New project` button on the right side of the screen. In the `Create a project` view, you enter a unique name for your project, optionally give it a description and select an available storage service instance, which will hold all the data.
+Now click on the blue `New project` button on the right side of the screen. In the `Create a project` view, you enter a unique name for your project, optionally give it a description and select an available storage service instance, which will hold all the data. There should only be one optin for the storage.
 
 ![alt text](images/image42.png)
 
-Then click on `Create`. In the projects view, go to the `Manage` tab.
+Then click on `Create`. In the Projects view, go to the `Manage` tab.
 
 ![alt text](images/image43.png)
 
-In the Manage view, go to `Services & Integrations`, and click on `Associate service`, as shown below.
+In the Manage section, go to `Services & Integrations`, and click on `Associate service`, as shown below.
 
 ![alt text](images/image44.png)
 
@@ -112,7 +133,7 @@ You have now built your first agent! This agent can answer questions and will re
 ### Define a custom tool
 
 > **Important Note:** At the time of this writing, the custom tool function in Agent Lab has been disabled. We  expect it to be reenabled soon, but until then, the steps described below will not work.
-> As a workaround, we recommend you skip the definition of the custom tool and just leave the Google search tool on the agent. This tool cannot return current traffic information, so when asked, the agent will return just some generic text about traffic. 
+> As a workaround, we recommend you **skip the definition of the custom tool** and just leave the Google search tool on the agent. This tool cannot return current traffic information, so when asked, the agent will return just some generic text about traffic. 
 > This will not break any of the things we do in watsonx Orchestrate below. You just won't see the agent return the expected traffic information.  
 
 Next we will add a custom tool to our agent, that is, a tool calling an API, for which no tool already exists in the catalog. In our example, we call an API providing current traffic information for a specific location, using a service called here.com.
@@ -196,7 +217,11 @@ Back in the Agent Lab UI, you can now simply click on the `Deploy` button at the
 
 ![alt text](images/image38.png)
 
-In the following window, if it asks you to create a User API key, use the provided link to create one. Note that the link is all the way to the right of the window and opens a new browser tab. Once you have created your API key, you can come back to this tab and click on `Reload`.
+In the following window, if it asks you to create a User API key, use the provided link to create one. Note that the link is all the way to the right of the window and opens a new browser tab. 
+
+![alt text](images/image46.png)
+
+Once you have created your API key, you can come back to this tab and click on `Reload`.
 Make sure you have selected the deployment space you created earlier. Click Deploy.
 
 ![alt text](images/image10.png)
@@ -205,7 +230,9 @@ Make sure you have selected the deployment space you created earlier. Click Depl
 
 ![alt text](images/image11.png)
 
-Once the deployment is complete, you can click on it and see the endpoint URLs under which this agent can now be invoked. You will need this endpoint information later when configuring the agent in watsonx Orchestrate.
+Once the deployment is complete, you can click on it and see the endpoint URLs under which this agent can now be invoked. The `Deployment ID` is part of the endpoint URL, as shown in the screenshot below. Copy and paste this ID to a file, because you will need it in a later step.
+
+![alt text](images/image47.png)
 
 Here you can also test your agent to ensure the deployment was done successfully. The easiest way to do that is on the Preview tab. There, you can enter the message you want to send to your agent. 
 
@@ -224,27 +251,63 @@ When you select the deployed agent and go to the Code tab, you see the Python co
 
 ![alt text](images/image15.png)
 
+One more thing we need to do: capture the `Space GUID` for your deployment space. Just like the Deployment ID we saved away earlier, we need this GUID later. 
+Switch from the `Assets` to the `Manage` tab, and click on the icon next to the `Space GUID` field to copy it to the clipboard. Paste it into a file somewhere, so that you can find it later.
+
+![alt text](images/image48.png)
+
 ## CodeEngine
 
 > **Important note:** Currently, the deployed agent cannot directly be configured as an external agent in watsonx Orchestrate. Instead, we need to deploy an endpoint that satifies requests from watsonx Orchestrate and converts them into the interface required by the agent. We will use the CodeEngine service for this. 
-> We have instructions for a single CodeEngine endpoint that can cover many agents [here](https://github.ibm.com/skol/agentic-ai-client-bootcamp-instructors/blob/main/environment-setup/external-agent-builder/Readme.md). Alternative instructions, which show how to deploy a single CodeEngine endpoint for each agent, can be found [here](https://github.com/watson-developer-cloud/watsonx-orchestrate-developer-toolkit/tree/main/external_agent/examples/agent_builder).
 > Note that this extra step is expected to be removed in an upcoming new release of watsonx Orchestrate.
+
+For the CodeEngine connector to work with your deployed agent, you need to generate a bearer token. Your instructor will give you a URL to load into your browser for that purpose. Once loaded, it looks like shown below.
+
+![alt text](images/image49.png)
+
+Into the provided form, you have copy the following values, all of which you collected earlier.
+- Deployment ID. Copied from the deployed agent screen.
+- Space GUID. Copied from the Manage tab in the Deployment space view.
+- API Key. This is the IBM Cloud API key you creater earlier.
+- Watsonx URL. This is the watsonx.ai URL that we saved at the very beginning of this lab.
+
+Once you have filled in the right values, click on `Generate Token`. Copy and paste the generated token from the webpage somewhere, because we will need it later.
+
+![alt text](images/image51.png)
 
 ## watsonx Orchestrate
 
 In the second stage of building the solution, we build the actual assistant the end user interacts with, and configure it to use the agent we built and deployed above.
 
+To get to the watsonx Orchestrate console, go the [Resources list on the IBM Cloud homepage](https://cloud.ibm.com/resources).
+
+![alt text](images/image52.png)
+
+Expand the `AI / Machine Learning` section and select the resource that has `watsonx Orchestrate` in the Product column, as shown above. Next, click on the `Launch watsonx Orchestrate` button.
+
+![alt text](images/image53.png)
+
+This opens the watsonx Orchestrate console.
+
+![alt text](images/image54.png)
+
 ### AI agent configuration
-In the watsonx Orchestrate console, select `AI agent configuration` and go to the `Agents` tab.
+In the watsonx Orchestrate console, from the "hamburger menu" at the top left, select `AI agent configuration` and go to the `Agents` tab.
 
 ![alt text](images/image16.png)
 
-Click on `Add agent` at the top right of the page. Enter information about your agent. Make sure you also add a meaningful description of what your agent does, since that will help the "supervisory agent" to identify your agent as suitable when being asked about traffic details.
-Your instructor will give you the endpoint URL you enter. It should end in `/chat/completions`. 
+Click on `Add agent` at the top right of the page. Enter information about your agent. 
+- Name: Traffic Manager
+- Description of agent capabilities: An agent that can return traffic information and incidents at a specific location. (Note that this description is what helps the "supervisory agent" to identify your agent as suitable when being asked about traffic details.)
+- Authentication type: Bearer token
+- Bearer token: (Copy the token that you generated earlier, right after you deployed your agent.)
+- Service instance URL: (Your instructor will give you the endpoint URL you enter. It should end in `/chat/completions`.) 
 
 ![alt text](images/image17.png)
 
-Now let's test it out! Select `Chat` from the hamburger menu at the top left corner of the screen. Then enter a question about traffic information, which should be forwarded to our dpeloyed agent.
+Click on `Connect`. This will make your agent available to the chat function.
+
+Now let's test it out! Select `Chat` from the hamburger menu at the top left corner of the screen. Then enter a question about traffic information, which should be forwarded to our deployed agent.
 
 ![alt text](images/image18.png)
 
