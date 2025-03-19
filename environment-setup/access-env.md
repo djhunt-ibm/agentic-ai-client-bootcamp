@@ -2,7 +2,7 @@
 
 **Note:** Follow these intructions for accessing your instance of the class environment in order to successfully complete the Agentic AI class. 
 
-When you are invited to the the class environment, you'll receive email. This message is from IBM Technology Zone <noreply@techzone.ibm.com> inviting you to join the account where your class environment is located.
+When you are invited to the class environment, you'll receive an email. This message is from IBM Technology Zone <noreply@techzone.ibm.com> inviting you to join the account where your class environment is located.
 
 In the email, look for the link in the sentence **"Please go HERE to accept your invitation."** (Highlighted in the screenshot below.)
 
