@@ -27,7 +27,7 @@ The sales department of ABC Motor Corp, an automotive large player, when prepari
 
 ## Adding Custom Skills 
 
-After your instructor has completed the **Product APP** setup, request the server URL from them. Open the [OPEN_API_SPEC File](open_api_spec.json) and replace the default server URL with the one provided.
+After your instructor has completed the **Product APP** setup, request the server URL from them. Open the [OPEN_API_SPEC File](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/usecases/business-automation/assets/open_api_spec.json) and replace the default server URL with the one provided.
 
 
 ![Server URL](assets/json_url.png)
@@ -273,7 +273,7 @@ This agent is designed to compare the given data with additional information gat
 
 ## Demo Video
 
-![Demo](video/Demo_video.mp4)
+![Demo](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/usecases/business-automation/video/Demo_video.mov)
 
 
 
