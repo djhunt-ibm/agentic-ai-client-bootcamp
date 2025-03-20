@@ -10,6 +10,7 @@
 - [Getting the Space ID for Deployment on Code Engine](#getting-the-space-id-for-deployment-on-code-engine)
 - [Deploying Agents on Code Engine](#deploying-agents-on-code-engine)
 - [Integration with Watsonx Orchestrate](#integration-with-watsonx-orchestrate)
+- [Experience Skills & Agents in Action](#experience-skills--agents-in-action)
 - [Demo Video](#demo-video) 
 
 ## 🏛Architecture  
@@ -274,6 +275,18 @@ For comparison Agent use the below description
 ```
 This agent is designed to compare the given data with additional information gathered from Google search results. Its task is to carefully analyze the input data, extract key insights, and identify both differences and similarities. The findings should be presented in a well-structured table format, making it easy to understand and compare the information at a glance.
 ```
+## Experience Skills & Agents in Action
+After completing all the steps mentioned above, you can interact with this use case:  
+
+1. **Response from the Product Catalog Skill**  
+   ![Skill Response](assets/response_form_skill.png)  
+
+2. **Response from the Link Search Agent**  
+   ![Link Search Agent Response](assets/response_from_link_agent.png)  
+
+3. **Response from the Comparison Agent**  
+   ![Comparison Agent Response](assets/response_from_comp_agent_1.png)  
+   ![Comparison Agent Response 2](assets/response_from_comp_agent_2.png)
 
 ## Demo Video
 
