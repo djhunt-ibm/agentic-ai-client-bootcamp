@@ -341,8 +341,18 @@ Here we will create our first action. Click on `Create Action`.
 
 ![alt text](images/image24.png)
 
-First, we enter a question that the user might ask, and which will trigger this action to be invoked. We want to create a "Dock Manager" assistant, so the question we enter here could be something like "What's the current status of the warehouse docks?". We can additional variations of questions that will trigger this action later. 
+On the following page, the tool will ask you what type of Action you want to create. Select the `AI-guided action` option.
+
+![alt text](images/image59.png)
+
+First, we need to enter a question that the user might ask, and which will trigger this action to be invoked. We want to create a "Dock Manager" assistant, so the question we enter here could be something like "What's the current status of the warehouse docks?". We can additional variations of questions that will trigger this action later. After you enter the question, click on Save.
+
+![alt text](images/image60.png)
+
 Note how the system picks a default model that is used to answer the request. We will accept the deault setting here, which is an IBM Granite model.
+
+![alt text](images/image61.png)
+
 Next, we add some knowledge data that helps the Large Language Model return a good result. In our example, we are shortcutting the connection to the dock status system (assuming it might accessible via API call) and instead hardcode some data into the knowledge section. This would be replaced later to implement a real solution.
 
 For our example, copy and paste this content into the Knowledge section:
