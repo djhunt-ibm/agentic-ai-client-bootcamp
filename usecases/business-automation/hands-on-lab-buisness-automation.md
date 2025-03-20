@@ -83,7 +83,7 @@ Here's the corrected version with proper grammar and clarity:
 15. To add the skill, you first need to connect the API. Click on **Connect**.  
    ![Connect APP](assets/connect_catalog.png)  
 
-16. Enter the API key to connect the app (use your TechZone instance API key) (marked as 1), then click **Connect App** (marked as 2).  
+16. Enter any dummy value to connect the app (use your TechZone instance API key) (marked as 1), then click **Connect App** (marked as 2).  
    ![API Connection](assets/api_catalog.png)  
 
 17. After connecting the API, it will show as **Connected**.  
@@ -101,7 +101,7 @@ Here's the corrected version with proper grammar and clarity:
 21. Click **Connect App** as shown below.  
    ![Connect App](assets/connect_api_button.png)  
 
-22. Enter the API key (TechZone API key) (marked as 1) and click **Connect App** (marked as 2).  
+22. Enter any dummy value  (marked as 1) and click **Connect App** (marked as 2).  
    ![API Skill Set](assets/api_skill_set.png)  
 
 23. Once connected, the API will display the user's email ID in the **Connected By** column.  
