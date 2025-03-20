@@ -297,7 +297,8 @@ Follow the steps above, then try interacting with the use case using these sampl
    ![Link Search Agent Response](assets/response_from_link_agent.png)  
 
 3. Comparison Agent
-To compare the retrieved data, ask:
+
+   To compare the retrieved data, ask:
    ```
    give me the comparison of above data
    ```
