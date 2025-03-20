@@ -38,7 +38,7 @@ We have 4 skills in watsonx Orchestrate, which leverages custom skills to connec
 
 
 1.	Log into your watsonx account using [this](https://dataplatform.cloud.ibm.com/wx/home?context=wx). This is the Homepage of watsonx AI.
-   Copy the watsonx.ai URL and paste somewhere.
+   Copy the watsonx.ai URL and paste in a file.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image30.1.png">
 
@@ -66,7 +66,7 @@ We have 4 skills in watsonx Orchestrate, which leverages custom skills to connec
 <img width="1000" alt="image" src="hands-on-lab-assets/image36.png">
 
 
-6.	Copy the API key that is shown after clicking on “Create”. Paste it somewhere as it will be needed in later steps. (If you already have an IBM Cloud ApiKey, you can skip this step.)
+6.	Copy the API key that is shown after clicking on “Create”. Paste it in a file as it will be needed in later steps. (If you already have an IBM Cloud ApiKey, you can skip this step.)
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image37.png">
 
@@ -157,7 +157,7 @@ Your agent is now saved and you can make changes later if you want to experiment
 <img width="1000" alt="image" src="hands-on-lab-assets/image48.png">
 
 
-17.	Copy and paste the deployment id as shown in below image. You will need it in a later step.
+17.	Copy and paste the deployment id in a file as shown in below image. You will need it in a later step.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image49.png">
 
@@ -172,7 +172,7 @@ Your agent is now saved and you can make changes later if you want to experiment
 <img width="1000" alt="image" src="hands-on-lab-assets/image51.png">
 
 
-20.	Under the “Manage” section, you’ll find “Space GUID”. Copy and paste it somewhere.
+20.	Under the “Manage” section, you’ll find “Space GUID”. Copy and paste it in a file.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image52.png">
 
@@ -185,7 +185,7 @@ Click on “Generate Token”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image53.png">
 
-22.	A token will be generated. Copy and paste it somewhere.
+22.	A token will be generated. Copy and paste it in a file.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image54.png">
 
@@ -206,7 +206,7 @@ Click on “Generate Token”.
 
 ### AI agent configuration
 
-24.	Click on the "hamburger menu" on top left and select “AI agent configuration” from the menu. If you don't see “AI agent configuration” in the menu, try [this](#Common-issues-and-troubleshoot-steps).
+24.	Click on the "hamburger menu" on top left and select “AI agent configuration” from the menu. **Note** : If you don't see “AI agent configuration” in the menu, try [this](#Common-issues-and-troubleshoot-steps).
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image56.png">
 
