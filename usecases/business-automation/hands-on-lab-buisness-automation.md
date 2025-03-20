@@ -308,7 +308,5 @@ Now, explore and experience the power of Skills & Agents in action! 🚀
 
 ## Demo Video
 
-![Demo](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/usecases/business-automation/video/Demo_video.mov)
-
-
+Click [here](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/usecases/business-automation/video/Demo_video.mov) to watch all the skills and agents in action.
 
