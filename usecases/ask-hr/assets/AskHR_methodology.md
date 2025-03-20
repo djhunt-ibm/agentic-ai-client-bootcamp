@@ -49,7 +49,7 @@ Train the model with sample conversations to improve accuracy and fluency.
 
 - Web Search and Crawler Tool Integration:
 Integrate the Web Search and Crawler tool in Agent Lab to enable access to external information sources, such as company websites or knowledge bases.
-Configure the tool to extract relevant information and present it to the employee in a conversational format. ic initiatives.
+Configure the tool to extract relevant information and present it to the employee in a conversational format.
 
 
 ## Phase 3: Testing and Validation
