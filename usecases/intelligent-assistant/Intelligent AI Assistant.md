@@ -18,20 +18,20 @@
 ## Introduction
 This use case describes a scenario where a user leverages an AI assistant via chat / natural language interface, to help with the execution of tasks that require the selection of the right agent to satisfy each request.
 
-Agents can be configured in the system and will be selected if they satisfy the task at hand, based on their description.
+Agents can be configured in the system to address specific needs of the organization. Based on the descriptions given, these agents will be selected if they satisfy the task at hand.
 
-Each agent, in turn, is connected with an LLM that support function calling, so that it can leverage one or more tools, again based on each tool's description.
+Each agent, in turn, is connected with a Large Language Model (LLM) that supports function calling, so that it can leverage one or more tools, again based on each tool's description.
 
 We will show you how to build a sample of this scenario in two stages:
-1. Use the watsonx.ai Agent Lab low-code tool to define an agent that leverages a set of tools. One of the tools is a custom tool for which we will add Python code that implements its function (which is calling a REST API to a public service on the Internet). We then deploy this agent in watsonx.ai, so that it can be invoked from the AI assistant, which we build in Stage 2.
+1. Use the watsonx.ai Agent Lab low-code tool to define an agent that leverages a set of tools. One of the tools is a custom tool for which we will add Python code that implements its function (which is calling a REST API to a public service on the Internet). We then deploy this agent in watsonx.ai, so that it can be invoked from the AI assistant, which we will build in Stage 2.
 2. Use the watsonx Orchestrate Assistant Builder tool to define an assistant that gets exposed as a chat frontend. We will also define one or more agents that the assistant can use to answer the user's request.
 
-There is an argument to be made that a truly agentic solution would show a higher degree of autonomy. To address a particular problem, or ask, an agentic solution will make a plan, then start executing this plan, checking its effectiveness towards a good outcome and possibly revise the plan accordingly, all in an automated fashion and without human intervention. Applying that to the scenario described above, we simply take out the "human in the loop", by letting the system analyze the status of the dock, decide what to do with surplus product, notify stakeholders of the decision (say, return surplus to original warehouse), and update systems of record. The flow will fundamentally be the same, and it can use the same set of agents, but will add a controller of sorts on top.
+There is an argument to be made that a truly agentic solution would show a higher degree of autonomy. To address a particular problem, or ask, an agentic solution will make a plan, execute this plan, check its effectiveness towards a good outcome, and possibly revise the plan as needed, all in an automated fashion and without human intervention. Applying that to the scenario described above, we simply take out the "human in the loop", by letting the system analyze the status of the dock, decide what to do with surplus product, notify stakeholders of the decision (say, return surplus to original warehouse), and update systems of record. The flow will fundamentally be the same, and it can use the same set of agents, but will add a controller of sorts on top.
 
-In this exercise, we will take you through a rudimentary implementation of the first stage, because we believe that is realistically what enterprises will do in the near future. But it provides a path to mature to the second phase.
+In this exercise, we will take you through a rudimentary implementation of the first stage, because we believe that is realistically what enterprises will do in the near future. This  path allows for more progression (or maturity) in the second phase.
 
 <div style="border: 2px solid black; padding: 10px;">
-Even though we will take you through a complete and working example, you should also consider making changes that fit your desired use case better, and only take this description as a reference point that guides you along your own implementation.
+Even though we will take you through a complete and working example, you should also consider making changes that fit your desired use case, and only take this description as a reference point that guides you along your own implementation.
 </div>
 
 ### Pre-requisites
@@ -44,7 +44,7 @@ Even though we will take you through a complete and working example, you should 
 For the first stage of implementation of our agentic solution, we use the watsonx.ai Agent Lab tool. 
 > Note that this feature is currently in beta, so its design may change from the screenshots you see below.
 
-As a starting point, we assume you are logged into your [watsonx.ai environment](https://dataplatform.cloud.ibm.com/wx/home?context=wx), and have opened the console in your browser. The first thing we need to do is copy the `watsonx.ai URL`, which we will need later. Click on the icon next to the URL as shown below to copy it to your clipboard and save it. 
+As a starting point, we assume you are logged into your [watsonx.ai environment](https://dataplatform.cloud.ibm.com/wx/home?context=wx) and have opened the console in your browser. The first thing we need to do is copy the `watsonx.ai URL`, which we will need later. Click on the icon next to the URL as shown below to copy it to your clipboard and save it. 
 
 ![alt text](images/image50.png)
 
@@ -72,15 +72,15 @@ In watsonx, all "assets" you create are stored in a "project". An agent is one s
 
 ![alt text](images/image41.png)
 
-Now click on the blue `New project` button on the right side of the screen. In the `Create a project` view, you enter a unique name for your project, optionally give it a description and select an available storage service instance, which will hold all the data. There should only be one optin for the storage.
+Now, click on the blue `New project` button on the right side of the screen. In the `Create a project` view, enter a unique name for your project, optionally give it a description and select an available storage service instance, which will hold all the data. There should only be one optin for the storage.
 
 ![alt text](images/image42.png)
 
-Then click on `Create`. In the Projects view, go to the `Manage` tab.
+Then, click on `Create`. In the Projects view, go to the `Manage` tab.
 
 ![alt text](images/image43.png)
 
-In the Manage section, go to `Services & Integrations`, and click on `Associate service`, as shown below.
+In the Manage section, go to `Services & Integrations` and click on `Associate service`, as shown below.
 
 ![alt text](images/image44.png)
 
@@ -100,7 +100,7 @@ This opens up the Agent Lab user interface. To make sure you won't forget later,
 
 ![alt text](images/image3.png)
 
-At this point, we will not generate any notebook form it, since we are only just starting. So, save it as an Agent. Note how it will not let you pick a name for your asset, it will be listed as `watsonx Agent` in your project.
+At this point, since we are just starting, a notebook is not yet generated. Therefore, save it as an `Agent`. Note how it will not let you pick a name for your asset, it will be listed as `watsonx Agent` in your project.
 
 ![alt text](images/image4.png)
 
@@ -120,11 +120,18 @@ The picture below shows what the configuration for your new agent might look lik
 ![alt text](images/image39.png)
 
 Let's explore the environment a bit further. To start, remove the Google search tool from the agent, by clicking on the trash bin icon.
+
+![alt text](images/image63.png)
+
 In the Agent preview window, type in a question about something the model has most likely not been trained with. For example, enter "What is the current exchange rate between US dollars and Euro?" The response will look similar to what is shown in the screenshot below.
 
 ![alt text](images/image5.png)
 
-Now let's add the Google search tool back. Click on `Add a tool`, clear the chat, and add the tool back to your agent. Now ask the same question as before in the preview window. This time, the agent will realize the model has not been trained with this information, so it will call the tool to retrieve it. If you expand the "How did I get this answer?" section, you can find details about the steps the agent took.
+Now let's add the Google search tool back. Clear the chat, click on `Add a tool`, and add the tool back to your agent. 
+
+![alt text](images/image64.png)
+
+Now ask the same question as before in the preview window. This time, the agent will realize the model has not been trained with this information, so it will call the tool to retrieve it. If you expand the "How did I get this answer?" section, you can find details about the steps the agent took.
 
 ![alt text](images/image6.png)
 
@@ -207,7 +214,7 @@ After you hit Save, we are ready to test our agent with the new custom tool. In 
 
 ### Deploy your agent
 
-Now that we have tested our agent and it performs to our satisfaction, we can deploy it, which makes it available for external consumption. The system will generate the required LangGraph code and deploy it into a `Deployment Space`. If none exists in your environment, you need to go and create one. You can find the link to Deployments in the 'hamburger menu' on the top left of the watsonx console. In the Deployments view, it will show you any deployment spaces you might have. If there is none, go ahead and create one, by clicking on the `New deployment space` button.
+Now that we have tested our agent and it performs to our satisfaction, we can deploy it, which makes it available for external consumption. The system will generate the required LangGraph code and deploy it into a `Deployment Space`. You can find the link to Deployments in the 'hamburger menu' on the top left of the watsonx console. In the Deployments view, it will show you any deployment spaces you might have. If there is none, go ahead and create one, by clicking on the `New deployment space` button.
 
 ![alt text](images/image9.png)
 
@@ -226,7 +233,7 @@ Make sure you have selected the deployment space you created earlier. Click Depl
 
 ![alt text](images/image10.png)
 
- Back on the Deployments page, you can now the new deployment being run.
+ Back on the Deployments page, you can now see the new deployment being run.
 
 ![alt text](images/image11.png)
 
@@ -258,7 +265,7 @@ Switch from the `Assets` to the `Manage` tab, and click on the icon next to the 
 
 ## CodeEngine
 
-> **Important note:** Currently, the deployed agent cannot directly be configured as an external agent in watsonx Orchestrate. Instead, we need to deploy an endpoint that satifies requests from watsonx Orchestrate and converts them into the interface required by the agent. We will use the CodeEngine service for this. 
+> **Important note:** Currently, the deployed agent cannot directly be configured as an external agent in watsonx Orchestrate. Instead, we need to deploy an endpoint that satisfies requests from watsonx Orchestrate and converts them into the interface required by the agent. We will use the CodeEngine service for this. 
 > Note that this extra step is expected to be removed in an upcoming new release of watsonx Orchestrate.
 
 For the CodeEngine connector to work with your deployed agent, you need to generate a bearer token. Your instructor will give you a URL to load into your browser for that purpose. Once loaded, it looks like shown below.
@@ -303,6 +310,8 @@ Click on `Add agent` at the top right of the page. Enter information about your 
 - Bearer token: (Copy the token that you generated earlier, right after you deployed your agent.)
 - Service instance URL: (Your instructor will give you the endpoint URL you enter. It should end in `/chat/completions`.) 
 
+After you have entered all the information, you click on `Connect`.
+
 ![alt text](images/image17.png)
 
 Click on `Connect`. This will make your agent available to the chat function.
@@ -313,7 +322,7 @@ Now let's test it out! Select `Chat` from the hamburger menu at the top left cor
 
 ### Assistant Builder
 
-Now let's add a couple of assistants to the system, to handle other inquries and requests that may come from the Warehouse Manager user. In the watsonx Orchestrate console, select `AI assistant builder` from the "hamburger menu". Then select the `View all assistants link to open up the list of all assistants you have defined in your system.
+Now let's add a couple of assistants to the system to handle other inquries and requests that may come from the Warehouse Manager user. In the watsonx Orchestrate console, select `AI assistant builder` from the "hamburger menu". Then select the `View all assistants` link to open up the list of all assistants you have defined in your system.
 
 ![alt text](images/image19.png)
 
@@ -325,7 +334,7 @@ Go ahead and give your assistant a name, for example, "Dock Manager". It is alwa
 
 ![alt text](images/image20.png)
 
-Click on `Create assistant`. Once the new assistand has been created, you will see a view with lots of information that you should spend some time exploring, if you are not already familiar with it. Most importantly, it gives you an overview of the architecture of your assistant, and you will note that a lot of default behavior has already been filled in. 
+Click on `Create assistant`. Once the new assistant has been created, you will see a view with lots of information that you should spend some time exploring, if you are not already familiar with it. Most importantly, it gives you an overview of the architecture of your assistant, and you will note that a lot of default behavior has already been filled in. 
 
 ![alt text](images/image21.png)
 
@@ -352,7 +361,7 @@ First, we need to enter a question that the user might ask, and which will trigg
 
 ![alt text](images/image60.png)
 
-Note how the system picks a default model that is used to answer the request. We will accept the deault setting here, which is an IBM Granite model.
+Note how the system picks a default model that is used to answer the request. We will accept the default setting here, which is an IBM Granite model.
 
 ![alt text](images/image61.png)
 
@@ -430,7 +439,7 @@ Current Docks Operations
 Finally we are ready to enter the actual prompt that is used in the action. For our example, you can use the following prompt:
 ```
 Provide a concise summary of the current warehouse dock operations in a textual format. 
-You need to include the the truck payload descriptions as a concise bullet-point list.
+You need to include the truck payload descriptions as a concise bullet-point list.
 ```
 
 ![alt text](images/image26.png)
@@ -592,7 +601,7 @@ First we'll add the Dock Manager assistant. Make sure you give it a good descrip
 
 ![alt text](images/image35.png)
 
-Next add the Warehouse Secretaty assistant. Don't forget to give it meaningful description.
+Next add the Warehouse Secretary assistant. Don't forget to give it meaningful description.
 You should now see two assistants that have been added.
 
 ![alt text](images/image36.png)
