@@ -457,8 +457,6 @@ Sometimes, when you open the watsonx Orchestrate homepage, the legacy chat is ac
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image64.2.png">
 
-# Demo Video:
-[Link](hands-on-lab-assets/Demo_askHR.mov)  
 
 End of Document
 
