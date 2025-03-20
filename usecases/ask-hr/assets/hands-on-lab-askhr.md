@@ -267,12 +267,9 @@ Click on “Connect”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image4.png">
 
-35.1 Refer to this [openapi.json](openapi.json). In this file, the value of "url" should be the URL of deployed API that your instructor will provide after they have completed the APP setup. Paste that URL in the file as shown below and save this file.
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image4.1.png">
 
 
-36.	Drag or Select the saved open specs file and click on "Next".
+36.	Your instructor will provide an open specs file after they have completed the APP setup. Drag or select that open specs file and click on "Next".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image5.png">
 
@@ -459,4 +456,9 @@ Sometimes, when you open the watsonx Orchestrate homepage, the legacy chat is ac
  2. Then, click on the chat version and switch to AI chat.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image64.2.png">
+
+# Demo Video:
+[Link](hands-on-lab-assets/Demo_askHR.mov)  
+
 End of Document
+
