@@ -87,6 +87,10 @@ We have 4 skills in watsonx Orchestrate, which leverages custom skills to connec
 
 7.4 Once that's done, navigate to the Agent Lab again (by clicking on the "hamburger menu" in top left and then clicking on "Home", then clicking on "Agent Lab")
 
+7.5 Enter a name for the agent as shown in the image.
+    Add a description (optional).
+  <img width="1000" alt="image" src="hands-on-lab-assets/image38.5.png">   
+
 8.	In the “Instructions” field, paste this prompt “You are a helpful Human Resources Assistant that uses tools to answer questions in detail. Please use the website https://www.cipd.org/en/knowledge/factsheets/hr-policies-factsheet/ to give answers to user questions. When greeted, say “Hi, I am an HR agent. How can I help you?”
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image39.png">
@@ -110,6 +114,8 @@ We have 4 skills in watsonx Orchestrate, which leverages custom skills to connec
 12. Close this window.
  
 <img width="1000" alt="image" src="hands-on-lab-assets/image43.png">
+12.0. Once the agent is created, test it on the right-hand side of the chat section, as shown in the image below.
+<img width="1000" alt="image" src="hands-on-lab-assets/image43.0.png">
 
 ### Deploy your agent
 12.1. For next steps, you need to create a deployment space using [this](deployment_space_creation.md) guide.)
