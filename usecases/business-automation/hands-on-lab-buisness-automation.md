@@ -276,17 +276,35 @@ For comparison Agent use the below description
 This agent is designed to compare the given data with additional information gathered from Google search results. Its task is to carefully analyze the input data, extract key insights, and identify both differences and similarities. The findings should be presented in a well-structured table format, making it easy to understand and compare the information at a glance.
 ```
 ## Experience Skills & Agents in Action
-After completing all the steps mentioned above, you can interact with this use case:  
+Follow the steps above, then try interacting with the use case using these sample queries:
 
-1. **Response from the Product Catalog Skill**  
+1. Product APP Skill 
+
+   Ask the following questions to get responses from the Product APP:
+   ```
+   Q1: what are the Products of ABC Motors.
+   Q2. get me the info of Velocity S1.
+   ```
    ![Skill Response](assets/response_form_skill.png)  
 
-2. **Response from the Link Search Agent**  
+
+2. Link Search Agent
+
+   Use this query to retrieve competitor links:
+   ```
+   provide me the links of competitors of above product
+   ```
    ![Link Search Agent Response](assets/response_from_link_agent.png)  
 
-3. **Response from the Comparison Agent**  
+3. Comparison Agent
+To compare the retrieved data, ask:
+   ```
+   give me the comparison of above data
+   ```
    ![Comparison Agent Response](assets/response_from_comp_agent_1.png)  
    ![Comparison Agent Response 2](assets/response_from_comp_agent_2.png)
+
+Now, explore and experience the power of Skills & Agents in action! 🚀 
 
 ## Demo Video
 
