@@ -313,11 +313,14 @@ Now let's test it out! Select `Chat` from the hamburger menu at the top left cor
 
 ### Assistant Builder
 
-Now let's add more assistants to the system, to handle other inquries and requests that may come from the Warehouse Manager user. In the watsonx Orchestrate console, select `AI assistant builder`. Then select the `View all assistants link to open up the list of all assistants you have defined in your system.
+Now let's add a couple of assistants to the system, to handle other inquries and requests that may come from the Warehouse Manager user. In the watsonx Orchestrate console, select `AI assistant builder` from the "hamburger menu". Then select the `View all assistants link to open up the list of all assistants you have defined in your system.
 
 ![alt text](images/image19.png)
 
 Now click on `Create assistant`. In this section, we will create the Dock Manager assistant that can answer questions about the current status of product arrivals and departures at the warehouse dock. 
+
+![alt text](images/image62.png)
+
 Go ahead and give your assistant a name, for example, "Dock Manager". It is always a good idea to add a description, too. 
 
 ![alt text](images/image20.png)
