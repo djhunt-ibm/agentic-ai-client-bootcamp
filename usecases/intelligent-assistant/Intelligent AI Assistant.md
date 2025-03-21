@@ -142,6 +142,7 @@ You have now built your first agent! This agent can answer questions and will re
 > **Important Note:** At the time of this writing, the custom tool function in Agent Lab has been disabled. We  expect it to be reenabled soon, but until then, the steps described below will not work.
 > As a workaround, we recommend you **skip the definition of the custom tool** and just leave the Google search tool on the agent. This tool cannot return current traffic information, so when asked, the agent will return just some generic text about traffic. 
 > This will not break any of the things we do in watsonx Orchestrate below. You just won't see the agent return the expected traffic information.  
+> If the Custom Tools button is disabled, please proceed to [this section](#deploy-your-agent).
 
 Next we will add a custom tool to our agent, that is, a tool calling an API, for which no tool already exists in the catalog. In our example, we call an API providing current traffic information for a specific location, using a service called here.com.
 
