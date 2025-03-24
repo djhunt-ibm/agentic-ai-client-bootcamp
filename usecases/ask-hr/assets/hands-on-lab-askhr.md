@@ -48,25 +48,25 @@ We have 4 skills in watsonx Orchestrate, which leverages custom skills to connec
 1.2 Give your project a name, select storage from available storages, then click on "Create".
 <img width="1000" alt="image" src="hands-on-lab-assets/image32.png">
 
-2.	Click on the "hamburger menu" on top left and select “Access (IAM)”. (If you already have an IBM Cloud ApiKey, you can skip this step.)
+2.	Click on the "hamburger menu" on top left and select “Access (IAM)”. (If you already have an IBM Cloud API key, you can skip this step.)
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image33.png">
 
 
-3.	In the next screen, select “API Keys” from the menu. (If you already have an IBM Cloud ApiKey, you can skip this step.)
+3.	In the next screen, select “API Keys” from the menu. (If you already have an IBM Cloud API key, you can skip this step.)
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image34.png">
 
-4.	Click on “Create”. (If you already have an IBM Cloud ApiKey, you can skip this step.)
+4.	Click on “Create”. (If you already have an IBM Cloud API key, you can skip this step.)
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image35.png">
 
-5.	Give your API key a name, then click on “Create”. (If you already have an IBM Cloud ApiKey, you can skip this step.)
+5.	Give your API key a name, then click on “Create”. (If you already have an IBM Cloud API key, you can skip this step.)
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image36.png">
 
 
-6.	Copy the API key that is shown after clicking on “Create”. Paste it in a file as it will be needed in later steps. (If you already have an IBM Cloud ApiKey, you can skip this step.)
+6.	Copy the API key that is shown after clicking on “Create”. Paste it in a file as it will be needed in later steps. (If you already have an IBM Cloud API key, you can skip this step.)
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image37.png">
 
