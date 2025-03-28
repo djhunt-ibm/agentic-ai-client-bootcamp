@@ -136,11 +136,9 @@ Repeat these steps for Comparison Agent to get its respective Bearer Tokens.
 
 ## Adding Custom Skills 
 
-Request the [OPEN_API_SPEC File](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/usecases/business-automation/assets/open_api_spec.json) after your instructor has completed the **Product APP** setup. Then, replace the default server URL with the one provided by the instructor.
+Request the **OPEN_API_SPEC File** from your instructor after they have completed the **Product APP** setup.  
 
-![Server URL](assets/json_url.png)
-
-In **watsonx Orchestrate**, import skills by uploading the **OPEN_API_SPEC** file.  
+After receiving the file, import skills in **watsonx Orchestrate** by uploading the **OPEN_API_SPEC** file.
 
 ---
 
