@@ -25,6 +25,6 @@ The usage of an AI-backed system to optimize the HR process can have multi-dimen
 <img alt="AskHR" src="assets/arch_diagm.png">
 
 
-## 📄 Detailed instructions
+## 📄 Hands-on ste-by-step lab
 
 Please find the step-by-step instructions [here](assets/hands-on-lab-askhr.md) on how you can implement this use case.
