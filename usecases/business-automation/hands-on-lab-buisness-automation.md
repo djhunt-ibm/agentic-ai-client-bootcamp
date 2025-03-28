@@ -3,12 +3,12 @@
 ## Table of Contents
 - [Architecture](#architecture)
 - [Use Case Description](#use-case-description)
-- [Adding Custom Skills](#adding-custom-skills)
 - [Agent Lab](#agent-lab)
   - [Link Search Agent](#link-search-agent)
   - [Comparison Agent](#comparison-agent)
 - [Getting the Space ID for Deployment on Code Engine](#getting-the-space-id-for-deployment-on-code-engine)
 - [Deploying Agents on Code Engine](#deploying-agents-on-code-engine)
+- [Adding Custom Skills](#adding-custom-skills)
 - [Integration with Watsonx Orchestrate](#integration-with-watsonx-orchestrate)
 - [Experience Skills & Agents in Action](#experience-skills--agents-in-action)
 - [Demo Video](#demo-video) 
@@ -26,118 +26,9 @@ The sales department of ABC Motor Corp, an automotive large player, when prepari
 - Check with your instructor to make sure **all systems** are up and running before you continue.
 - If you're an instructor running this lab, check the **Instructor's guides** to set up all environments and systems.
 
-## Adding Custom Skills 
-
-After your instructor has completed the **Product APP** setup, request the server URL from them. Open the [OPEN_API_SPEC File](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/usecases/business-automation/assets/open_api_spec.json) and replace the default server URL with the one provided.
-
-
-![Server URL](assets/json_url.png)
-
-Now, let's add this JSON file as a skill in **watsonx Orchestrate** by importing it.
-
-Here's the corrected version with proper grammar and clarity:  
-
----
-
-1. Open the **watsonx Orchestrate** home page and click on the menu icon (hamburger) as shown below.  
-   ![Home Page](assets/hamburger_home_page.png)  
-
-2. From the menu, select **Skill Studio**.  
-   ![Skill Studio](assets/skill_studio.png)  
-
-3. To import the API, click **Create** (marked as 1), then select **Import API** (marked as 2).  
-   ![Skill Page](assets/skill_page_steps.png)  
-
-4. Click the **From File** tab (marked as 1) and upload the [OPEN_API_SPEC File](open_api_spec.json) (marked as 2).  
-   ![Upload Spec](assets/upload_spec.png)  
-
-5. After uploading, confirm that the file name appears (marked as 1), then click **Next** to proceed (marked as 2).  
-   ![File Upload](assets/file_uploaded.png)  
-
-6. Accept the API by selecting the checkboxes (marked as 1), then click **Next** (marked as 2).  
-   ![API Selection](assets/api_name.png)  
-
-7. Once completed, all your skills will appear in **Skill Studio** under **Skills** but will be labeled **Ready to Publish**. You need to publish them before using them.  
-   ![Skill Studio Skills](assets/skill_studio_skills.png)  
-
-8. To publish a skill, click on the three vertical dots (marked as 1), then select **Enhance the Skill** (marked as 2).  
-   ![Title Skill](assets/title_skill.png)  
-
-9. In the **Get product details by title** skill, click the **Publish** button to publish your skill.  
-   ![Title Skill Config](assets/get_product_details_by_title.png)  
-
-10. After publishing your **Get product details by title** skill, click on the three vertical dots (marked as 1) again and select **Enhance the Skill** to publish the **Get product titles** skill.  
-   ![Product Skill](assets/product_skill.png)  
-
-11. For the **Get product titles** skill, simply click **Publish**—no changes are required.  
-   ![Product Skill Config](assets/product_skill_config.png)  
-
-12. Once all skills are published, their status will change to **Published**.  
-   ![All Published](assets/all_published.png)  
-
-13. Now, we need to add our skills from the **Skill Catalog**. Click on the hamburger menu and select **Skill Catalog**.  
-   ![Skill Catalog](assets/skill_catalog.png)  
-
-14. In the search bar, type **Product** (marked as 1) and select **Product Information API** (marked as 2).  
-   ![Search APP](assets/search_app.png)  
-
-15. To add the skill, you first need to connect the API. Click on **Connect**.  
-   ![Connect APP](assets/connect_catalog.png)  
-
-16. Enter any dummy value to connect the app (marked as 1), then click **Connect App** (marked as 2).  
-   ![API Connection](assets/api_catalog.png)  
-
-17. After connecting the API, it will show as **Connected**.  
-   ![API Connected](assets/app_connected.png)  
-
-18. Now, we need to connect the app from the **Skill Set** as well. Click on the hamburger menu and select **Skill Set**.  
-   ![Skill Set](assets/skill_set.png)  
-
-19. On the **Skill Set** page, search for **Orchestrate Agent Skillset**.  
-   ![Search Skill Set](assets/search_skill_set.png)  
-
-20. In the **Connections** tab (marked as 1), search for **Product Information API** by navigating through the pages. Click on the three vertical dots and select **Connect App**.  
-   ![Connect App](assets/connect_set.png)  
-
-21. Click **Connect App** as shown below.  
-   ![Connect App](assets/connect_api_button.png)  
-
-22. Enter any dummy value (marked as 1) and click **Connect App** (marked as 2).  
-   ![API Skill Set](assets/api_skill_set.png)  
-
-23. Once connected, the API will display the user's email ID in the **Connected By** column.  
-   ![Connected by](assets/connected_by.png)  
-
-24. Since we have connected the app from the **Skill Set**, we now need to add the skill to the chat. Open the hamburger menu and select **AI Agent Configurations**.  
-   ![AI Agent Config](assets/ai_agent_config.png)  
-
-25. Click on **Apps and Skills** (marked as 1), then select **Product Information API** (marked as 2).  
-   ![Apps and Skills](assets/apps_skill.png)  
-
-26. Add both API-related skills to the chat as shown below.  
-   ![Apps and Skills](assets/add_chat.png)  
-
-27. First, add the **Get product details by title** skill by clicking **Add to Chat**.  
-   ![First Skills](assets/add_chat_1.png)  
-
-28. Change the description to "It gets the list of all the products from the database" as shown in the image below, then click **Add Skill**.  
-   ![First Skills](assets/description_skill_1.png)  
-
-29. Next, add the **Get product titles** skill to the chat. Change the description to "It gets the information or titles of the product from the database."as shown in the image below, then click **Add Skill**.
-   ![Second Skills](assets/description_skill_2.png)  
-
-30. Once both skills are connected, it will look like this:  
-   ![Chat Connected](assets/chat_connect.png)  
-
-31. From the hamburger menu, navigate to **Chat**.  
-   ![Chat](assets/chat_from_skill.png)  
-
-32. You can now interact with the skills as shown below.  
-   ![Demo Skills](assets/demo_skill.png)  
-
-Before starting the Agent creation, ensure you have generated your project ID and API key. Refer to [api_key_project_id_setup.md](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/environment-setup/api_key_project_id_setup.md) for guidance.
-
 ## Agent Lab 
+
+>**Note:** Before starting the Agent creation, ensure you have generated your project ID and API key. Refer to [api_key_project_id_setup.md](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/environment-setup/api_key_project_id_setup.md) for guidance.
 
 We will create two agents as part of this setup:  
 1. **Link Search Agent**  
@@ -243,6 +134,112 @@ The Space ID remains constant for all agents, but each Deployment ID has a uniqu
 
 Repeat these steps for Comparison Agent to get its respective Bearer Tokens.
 
+## Adding Custom Skills 
+
+Request the [OPEN_API_SPEC File](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/usecases/business-automation/assets/open_api_spec.json) after your instructor has completed the **Product APP** setup. Then, replace the default server URL with the one provided by the instructor.
+
+![Server URL](assets/json_url.png)
+
+In **watsonx Orchestrate**, import skills by uploading the **OPEN_API_SPEC** file.  
+
+---
+
+1. Open the **watsonx Orchestrate** home page and click on the menu icon (hamburger) as shown below.  
+   ![Home Page](assets/hamburger_home_page.png)  
+
+2. From the menu, select **Skill Studio**.  
+   ![Skill Studio](assets/skill_studio.png)  
+
+3. To import the API, click **Create** (marked as 1), then select **Import API** (marked as 2).  
+   ![Skill Page](assets/skill_page_steps.png)  
+
+4. Click the **From File** tab (marked as 1) and upload the [OPEN_API_SPEC File](open_api_spec.json) (marked as 2).  
+   ![Upload Spec](assets/upload_spec.png)  
+
+5. After uploading, confirm that the file name appears (marked as 1), then click **Next** to proceed (marked as 2).  
+   ![File Upload](assets/file_uploaded.png)  
+
+6. Accept the API by selecting the checkboxes (marked as 1), then click **Next** (marked as 2).  
+   ![API Selection](assets/api_name.png)  
+
+7. Once completed, all your skills will appear in **Skill Studio** under **Skills** but will be labeled **Ready to Publish**. You need to publish them before using them.  
+   ![Skill Studio Skills](assets/skill_studio_skills.png)  
+
+8. To publish a skill, click on the three vertical dots (marked as 1), then select **Enhance the Skill** (marked as 2).  
+   ![Title Skill](assets/title_skill.png)  
+
+9. In the **Get product details by title** skill, click the **Publish** button to publish your skill.  
+   ![Title Skill Config](assets/get_product_details_by_title.png)  
+
+10. After publishing your **Get product details by title** skill, click on the three vertical dots (marked as 1) again and select **Enhance the Skill** to publish the **Get product titles** skill.  
+   ![Product Skill](assets/product_skill.png)  
+
+11. For the **Get product titles** skill, simply click **Publish**—no changes are required.  
+   ![Product Skill Config](assets/product_skill_config.png)  
+
+12. Once all skills are published, their status will change to **Published**.  
+   ![All Published](assets/all_published.png)  
+
+13. Now, we need to add our skills from the **Skill Catalog**. Click on the hamburger menu and select **Skill Catalog**.  
+   ![Skill Catalog](assets/skill_catalog.png)  
+
+14. In the search bar, type **Product** (marked as 1) and select **Product Information API** (marked as 2).  
+   ![Search APP](assets/search_app.png)  
+
+15. To add the skill, you first need to connect the API. Click on **Connect**.  
+   ![Connect APP](assets/connect_catalog.png)  
+
+16. Enter any dummy value to connect the app (marked as 1), then click **Connect App** (marked as 2).  
+   ![API Connection](assets/api_catalog.png)  
+
+17. After connecting the API, it will show as **Connected**.  
+   ![API Connected](assets/app_connected.png)  
+
+18. Now, we need to connect the app from the **Skill Set** as well. Click on the hamburger menu and select **Skill Set**.  
+   ![Skill Set](assets/skill_set.png)  
+
+19. On the **Skill Set** page, search for **Orchestrate Agent Skillset**.  
+   ![Search Skill Set](assets/search_skill_set.png)  
+
+20. In the **Connections** tab (marked as 1), search for **Product Information API** by navigating through the pages. Click on the three vertical dots and select **Connect App**.  
+   ![Connect App](assets/connect_set.png)  
+
+21. Click **Connect App** as shown below.  
+   ![Connect App](assets/connect_api_button.png)  
+
+22. Enter any dummy value (marked as 1) and click **Connect App** (marked as 2).  
+   ![API Skill Set](assets/api_skill_set.png)  
+
+23. Once connected, the API will display the user's email ID in the **Connected By** column.  
+   ![Connected by](assets/connected_by.png)  
+
+24. Since we have connected the app from the **Skill Set**, we now need to add the skill to the chat. Open the hamburger menu and select **AI Agent Configurations**.  
+   ![AI Agent Config](assets/ai_agent_config.png)  
+
+25. Click on **Apps and Skills** (marked as 1), then select **Product Information API** (marked as 2).  
+   ![Apps and Skills](assets/apps_skill.png)  
+
+26. Add both API-related skills to the chat as shown below.  
+   ![Apps and Skills](assets/add_chat.png)  
+
+27. First, add the **Get product details by title** skill by clicking **Add to Chat**.  
+   ![First Skills](assets/add_chat_1.png)  
+
+28. Change the description to "It gets the list of all the products from the database" as shown in the image below, then click **Add Skill**.  
+   ![First Skills](assets/description_skill_1.png)  
+
+29. Next, add the **Get product titles** skill to the chat. Change the description to "It gets the information or titles of the product from the database."as shown in the image below, then click **Add Skill**.
+   ![Second Skills](assets/description_skill_2.png)  
+
+30. Once both skills are connected, it will look like this:  
+   ![Chat Connected](assets/chat_connect.png)  
+
+31. From the hamburger menu, navigate to **Chat**.  
+   ![Chat](assets/chat_from_skill.png)  
+
+32. You can now interact with the skills as shown below.  
+   ![Demo Skills](assets/demo_skill.png)  
+
 ## Integration with Watsonx Orchestrate
 
 1. Go to the home page of Watsonx Orchestrate.
@@ -309,5 +306,5 @@ Now, explore and experience the power of Skills & Agents in action! 🚀
 
 ## Demo Video
 
-Click [here](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/usecases/business-automation/video/Demo_video.mov) to watch all the skills and agents in action.
+You can find a video demo of the solution [here](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/usecases/business-automation/video/Demo_video.mov).
 
