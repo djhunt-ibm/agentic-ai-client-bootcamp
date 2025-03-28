@@ -14,7 +14,7 @@
     "/titles": {
       "get": {
         "summary": "Get product titles",
-        "description": "Retrieve a list of product titles.",
+        "description": "It retrieves product information or titles from the database.",
         "responses": {
           "200": {
             "description": "A list of product titles.",
@@ -35,7 +35,7 @@
     "/product": {
       "get": {
         "summary": "Get product details by title",
-        "description": "Retrieve detailed information of a product using its title.",
+        "description": "It retrieves a list of all products from the database.",
         "parameters": [
           {
             "name": "Title",

@@ -66,7 +66,7 @@ Here's the corrected version with proper grammar and clarity:
 9. In the **Get product details by title** skill, click the **Publish** button to publish your skill.  
    ![Title Skill Config](assets/get_product_details_by_title.png)  
 
-10. Once your **Get product details by title** skill is published, click on the three vertical dots (marked as 1) again and select **Enhance the Skill** to publish it.  
+10. After publishing your **Get product details by title** skill, click on the three vertical dots (marked as 1) again and select **Enhance the Skill** to publish the **Get product titles** skill.  
    ![Product Skill](assets/product_skill.png)  
 
 11. For the **Get product titles** skill, simply click **Publish**—no changes are required.  
@@ -120,7 +120,7 @@ Here's the corrected version with proper grammar and clarity:
 27. First, add the **Get product details by title** skill by clicking **Add to Chat**.  
    ![First Skills](assets/add_chat_1.png)  
 
-28. Change the description to "It gets the list of all the products from the database," as shown in the image below, then click **Add Skill**.  
+28. Change the description to "It gets the list of all the products from the database" as shown in the image below, then click **Add Skill**.  
    ![First Skills](assets/description_skill_1.png)  
 
 29. Next, add the **Get product titles** skill to the chat. Change the description to "It gets the information or titles of the product from the database."as shown in the image below, then click **Add Skill**.
