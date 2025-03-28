@@ -223,10 +223,10 @@ After receiving the file, import skills in **watsonx Orchestrate** by uploading 
 27. First, add the **Get product details by title** skill by clicking **Add to Chat**.  
    ![First Skills](assets/add_chat_1.png)  
 
-28. Change the description to "It gets the list of all the products from the database" as shown in the image below, then click **Add Skill**.  
+28. Do not modify the description as shown in the image below, then click **Add Skill**.  
    ![First Skills](assets/description_skill_1.png)  
 
-29. Next, add the **Get product titles** skill to the chat. Change the description to "It gets the information or titles of the product from the database."as shown in the image below, then click **Add Skill**.
+29. Next, add the **Get product titles** skill to the chat. Do not modify the description as shown in the image below, then click **Add Skill**.
    ![Second Skills](assets/description_skill_2.png)  
 
 30. Once both skills are connected, it will look like this:  
