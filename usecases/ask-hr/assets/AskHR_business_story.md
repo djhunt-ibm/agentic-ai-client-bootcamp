@@ -10,6 +10,6 @@ In the afternoon, Bill’s day takes a turn for the better when he is introduced
 <img width="50" alt="image" src="business_story_assets/2.png">
 
 
-By the end of the day, Bill feels optimistic about the improvements watsonx brings to HR processes. The platform has streamlined communication, faster response times, and maintained data security. Bill no longer has to worry about manual errors or slow processes, allowing him to focus on creating a more efficient work environment. With watsonx’s powerful tools at his disposal, Bill is confident that HR management at the company will continue to improve. He leaves the office with renewed hope for the future.
+By the end of the day, Bill feels optimistic about the improvements watsonx brings to his company's HR processes. The platform has streamlined communication, provided faster response times, and maintained data security. Bill no longer has to worry about manual errors or slow processes, allowing him to focus on creating a more efficient work environment. With watsonx’s powerful tools at his disposal, Bill is confident that HR management at the company will continue to improve. He leaves the office with renewed hope for the future.
 
 <img width="50" alt="image" src="business_story_assets/3.png">

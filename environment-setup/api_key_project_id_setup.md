@@ -2,31 +2,31 @@
 
 Follow this step-by-step guide to create a Project ID and generate an API key.
 
-1. Log into your **Watsonx AI** account. Once logged in, you will be navigated to the homepage.  
+1. Log into your **watsonx AI** account. Once logged in, you will be navigated to the homepage.  
 
    ![Watsonx Homepage](/environment-setup/assets/home-page.png)  
 
-2. Click on the **"+"** icon to create a new project.  
+2. Click the **"+"** icon to create a new project.  
 
    ![Create Project](/environment-setup/assets/add-project.png)  
 
 3. Enter a name for your project.  
 4. Select a storage option from the available choices.  
-5. Click **"Create"** to finalize the setup.  
+5. Click the **"Create"** button to finalize the setup.  
 
    ![Project Details](/environment-setup/assets/create-project.png)  
 
    Your new project is now ready to use.  
 
-6. Click on the **hamburger menu (☰)** in the top-left corner and select **"Access (IAM)"**.  
+6. Click the **hamburger menu (☰)** in the top-left corner and select **"Access (IAM)"**.  
 
    ![Access IAM](/environment-setup/assets/iam-access.png)  
 
-7. In the left-hand menu, click on **"API Keys"**.  
+7. In the left-hand menu, select the **"API Keys"** option.  
 
    ![API Keys Menu](/environment-setup/assets/click-api-key.png)  
 
-8. Click **"Create"** to generate a new API key.  
+8. Click the **"Create"** button to generate a new API key.  
 
    ![API Key Page](/environment-setup/assets/create-api-key.png)  
 

@@ -32,9 +32,9 @@ If you do not know your instance, go to your techzone reservations list https://
 ---
 Now, we can go ahead and create a new project. 
 
-In the **Projects** section, you can simply select the "+" symbol to create a new project.
+In the **Projects** section, click the "+" symbol to create a new project.
  
-Or use the link here to trigger a [New Project](https://dataplatform.cloud.ibm.com/projects/new-project?context=wx) creation.
+Or, use the link here to trigger a [New Project](https://dataplatform.cloud.ibm.com/projects/new-project?context=wx) creation.
 
 ![create-new-project](assets/create-new-project.png)
 
@@ -50,11 +50,11 @@ Otherwise, you may be prompted to select from multiple instances. Please consult
 ![select-instance](assets/select-instance.png)
 
 ### Click Create
-Now go ahead and click Create. It may take a few seconds to officially be created.
+Now, click Create. It may take a few seconds to officially be created.
 
 ### 4. Associate the correct runtime instance<a name="runtime-instance"></a>
 ---
-With the project created, you should be directed to the project home page. Go ahead and select the "Manage" tab.
+With the project created, you should be directed to the project home page. Select the "Manage" tab.
 
 Click on "Services and Integrations" in the left sidebar. Then, click on "Associate service."
 
