@@ -178,64 +178,49 @@ After receiving the file, import skills in **watsonx Orchestrate** by uploading 
 12. Once all skills are published, their status will change to **Published**.  
    ![All Published](assets/all_published.png)  
 
-13. Now, we need to add our skills from the **Skill Catalog**. Click on the hamburger menu and select **Skill Catalog**.  
-   ![Skill Catalog](assets/skill_catalog.png)  
-
-14. In the search bar, type **Product** (marked as 1) and select **Product Information API** (marked as 2).  
-   ![Search APP](assets/search_app.png)  
-
-15. To add the skill, you first need to connect the API. Click on **Connect**.  
-   ![Connect APP](assets/connect_catalog.png)  
-
-16. Enter any dummy value to connect the app (marked as 1), then click **Connect App** (marked as 2).  
-   ![API Connection](assets/api_catalog.png)  
-
-17. After connecting the API, it will show as **Connected**.  
-   ![API Connected](assets/app_connected.png)  
-
-18. Now, we need to connect the app from the **Skill Set** as well. Click on the hamburger menu and select **Skill Set**.  
+13. Now, we need to connect the app from the **Skill Set**. Click on the hamburger menu and select **Skill Set**.  
    ![Skill Set](assets/skill_set.png)  
 
-19. On the **Skill Set** page, search for **Orchestrate Agent Skillset**.  
+14. On the **Skill Set** page, search for **Orchestrate Agent Skillset**.  
    ![Search Skill Set](assets/search_skill_set.png)  
 
-20. In the **Connections** tab (marked as 1), search for **Product Information API** by navigating through the pages. Click on the three vertical dots and select **Connect App**.  
+15. In the **Connections** tab (marked as 1), search for **Product Information API** by navigating through the pages. Click on the three vertical dots and select **Connect App**.  
    ![Connect App](assets/connect_set.png)  
 
-21. Click **Connect App** as shown below.  
+16. Click **Connect App** as shown below.  
    ![Connect App](assets/connect_api_button.png)  
 
-22. Enter any dummy value (marked as 1) and click **Connect App** (marked as 2).  
+17. Enter any dummy value (marked as 1) and click **Connect App** (marked as 2).  
    ![API Skill Set](assets/api_skill_set.png)  
 
-23. Once connected, the API will display the user's email ID in the **Connected By** column.  
+18. Once connected, the API will display the user's email ID in the **Connected By** column.  
    ![Connected by](assets/connected_by.png)  
 
-24. Since we have connected the app from the **Skill Set**, we now need to add the skill to the chat. Open the hamburger menu and select **AI Agent Configurations**.  
+19. Since we have connected the app from the **Skill Set**, we now need to add the skill to the chat. Open the hamburger menu and select **AI Agent Configurations**.  
    ![AI Agent Config](assets/ai_agent_config.png)  
 
-25. Click on **Apps and Skills** (marked as 1), then select **Product Information API** (marked as 2).  
+20. Click on **Apps and Skills** (marked as 1), then select **Product Information API** (marked as 2).  
    ![Apps and Skills](assets/apps_skill.png)  
 
-26. Add both API-related skills to the chat as shown below.  
+21. Add both API-related skills to the chat as shown below.  
    ![Apps and Skills](assets/add_chat.png)  
 
-27. First, add the **Get product details by title** skill by clicking **Add to Chat**.  
+22. First, add the **Get product details by title** skill by clicking **Add to Chat**.  
    ![First Skills](assets/add_chat_1.png)  
 
-28. Do not modify the description as shown in the image below, then click **Add Skill**.  
+23. Do not modify the description as shown in the image below, then click **Add Skill**.  
    ![First Skills](assets/description_skill_1.png)  
 
-29. Next, add the **Get product titles** skill to the chat. Do not modify the description as shown in the image below, then click **Add Skill**.
+24. Next, add the **Get product titles** skill to the chat. Do not modify the description as shown in the image below, then click **Add Skill**.
    ![Second Skills](assets/description_skill_2.png)  
 
-30. Once both skills are connected, it will look like this:  
+25. Once both skills are connected, it will look like this:  
    ![Chat Connected](assets/chat_connect.png)  
 
-31. From the hamburger menu, navigate to **Chat**.  
+26. From the hamburger menu, navigate to **Chat**.  
    ![Chat](assets/chat_from_skill.png)  
 
-32. You can now interact with the skills as shown below.  
+27. You can now interact with the skills as shown below.  
    ![Demo Skills](assets/demo_skill.png)  
 
 ## Integration with Watsonx Orchestrate
