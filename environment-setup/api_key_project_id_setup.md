@@ -40,19 +40,20 @@
 ![Agent Lab](/environment-setup/assets/agent-lab.png) 
 
 
+
 ## Steps to Access Project ID
 
-1. Click on the hamburger menu (three horizontal lines) located at the top-left corner of the screen.
+1. Click on the hamburger menu (three horizontal lines) located at the top-left corner of the screen, You will see view all project options under Project section.
    
    ![Hamburger Menu](/environment-setup/assets/hamburger_click.png) 
 
-2. After opening the menu, find and click on the project you want to work with.
+2. Now you will be redirected to list of Projects, find and click on the project you want to work with.
 
    ![Project Selection](/environment-setup/assets/choose_project.png)  
 
 3. Once inside the project view, click on the "Manage Options" button.
 
-4. After clicking "Manage Options", the project ID will be displayed for furhter use.
+4. After clicking "Manage Options", the Project ID will be displayed copy Project ID for further use.
 
    ![Project ID](/environment-setup/assets/click_manage_get_projectId.png) 
 
