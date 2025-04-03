@@ -384,42 +384,6 @@ Then, click on "Connect App" on top right, if not already connected.
 <img width="1000" alt="image" src="hands-on-lab-assets/image21.png">
 
 
-57.	From the menu, select "Skill sets".
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image22.png">
-
-
-58.	Select "Team Skills" in the drop-down.
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image22.1.png">
-
-
-59. Then, click on "connections". Search for the app your skills are grouped into. Click on the 3 dots and then click on "Connect app".
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image22.2.png">
-
-59.a Select "Team Credentials", then click on "Connect app".
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image22.3.png">
-
-59.b Enter your credentials, then click on "Connect app".  (You can use dummy credentials test/test for this.)
-<img width="1000" alt="image" src="hands-on-lab-assets/image22.4.png">
-
-60.	Click on "Skills" and then "Manage skills".
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image23.png">
-
-
-61.	Search for the app, where skills are imported and click on it.
-
-  Then, click on "Add skills +" for all the skills you imported and then connect app using "Connect App" button in top right.
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image24.png">
-
-
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image26.png">
-
 62.	Then, click on the profile icon, then settings, then click on chat version and switch to AI chat again.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image27.png">
