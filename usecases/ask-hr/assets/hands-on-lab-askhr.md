@@ -333,26 +333,6 @@ For Get Time Off Balance skill:
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image12.png">
 
-
-
-47.	Once that is done, click on skills and then click on "Manage skills".
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image13.png">
-
-
-48.	Click on app in which your skills are grouped.
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image14.png">
-
-
-
-49.	Check if "Get Time Off Balance", "Get User Profile", "Request Time Off", "Update address", and "Update Title" skills are added. If not, click on "Add skill + " for all skills you want to add. 
-Then, click on "Connect App" on top right, if not already connected.
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image15.png">
-
-
-
 50.	From the menu, click on "AI agent configuration".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image16.png">
@@ -374,55 +354,6 @@ Then, click on "Connect App" on top right, if not already connected.
 <img width="1000" alt="image" src="hands-on-lab-assets/image19.png">
 
 54.	Similarly, add all the imported skills with the following descriptions. Get User Profile: to get complete profile data of user. Request Time Off: to request time off, apply for leaves. Update Address: To update user address. Update Title: To update user Title
-
-55.	Now, click on your profile icon in the top right and select "Settings".
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image20.png">
-
-56.	Click on "chat", then "Switch to legacy chat", then click on "Change to legacy chat" as shown in below image.
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image21.png">
-
-
-57.	From the menu, select "Skill sets".
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image22.png">
-
-
-58.	Select "Team Skills" in the drop-down.
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image22.1.png">
-
-
-59. Then, click on "connections". Search for the app your skills are grouped into. Click on the 3 dots and then click on "Connect app".
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image22.2.png">
-
-59.a Select "Team Credentials", then click on "Connect app".
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image22.3.png">
-
-59.b Enter your credentials, then click on "Connect app".  (You can use dummy credentials test/test for this.)
-<img width="1000" alt="image" src="hands-on-lab-assets/image22.4.png">
-
-60.	Click on "Skills" and then "Manage skills".
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image23.png">
-
-
-61.	Search for the app, where skills are imported and click on it.
-
-  Then, click on "Add skills +" for all the skills you imported and then connect app using "Connect App" button in top right.
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image24.png">
-
-
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image26.png">
-
-62.	Then, click on the profile icon, then settings, then click on chat version and switch to AI chat again.
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image27.png">
 
 63. Click on "Skill configurations". Set "number of form fields" to 0.
 <img width="1000" alt="image" src="hands-on-lab-assets/image29.2.png">
