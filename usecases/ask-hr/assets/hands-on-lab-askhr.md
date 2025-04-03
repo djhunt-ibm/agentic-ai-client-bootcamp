@@ -355,6 +355,10 @@ For Get Time Off Balance skill:
 
 54.	Similarly, add all the imported skills with the following descriptions. Get User Profile: to get complete profile data of user. Request Time Off: to request time off, apply for leaves. Update Address: To update user address. Update Title: To update user Title
 
+55.	Now, click on your profile icon in the top right and select "Settings".
+
+<img width="1000" alt="image" src="hands-on-lab-assets/image20.png">
+
 63. Click on "Skill configurations". Set "number of form fields" to 0.
 <img width="1000" alt="image" src="hands-on-lab-assets/image29.2.png">
 
