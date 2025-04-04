@@ -364,6 +364,11 @@ For Get Time Off Balance skill:
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image21.png">
 
+57. From menu, click on "chat".
+<img width="1000" alt="image" src="hands-on-lab-assets/image21.1.1.png">
+
+58. Click on "Dropdown" and check if "Orchestrate agent skillset" is present. If not wait for sometime till it becomes visible.
+<img width="1000" alt="image" src="hands-on-lab-assets/image21.1.2.png">
 
 62.	Then, click on the profile icon, then settings, then click on chat version and switch to AI chat again.
 
