@@ -359,13 +359,13 @@ For Get Time Off Balance skill:
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image20.png">
 
-63. Click on "Skill configurations". Set "number of form fields" to 0.
+56. Click on "Skill configurations". Set "number of form fields" to 0.
 <img width="1000" alt="image" src="hands-on-lab-assets/image29.2.png">
 
-64. From the menu, click on "Chat".
+57. From the menu, click on "Chat".
 <img width="1000" alt="image" src="hands-on-lab-assets/image28.png">
 
-65. Use your imported skills in chat. To get the list of already present user names in database, download it from [here](users_data.xlsx).
+58. Use your imported skills in chat. To get the list of already present user names in database, download it from [here](users_data.xlsx).
 <img width="1000" alt="image" src="hands-on-lab-assets/image29.4.png">
 
 # Common issues and troubleshoot steps
