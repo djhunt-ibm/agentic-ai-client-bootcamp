@@ -1,0 +1,10 @@
+.DS_Store
+.env
+.venv
+autoclaim
+config.py
+cred.crt
+wx_discovery.ipynb
+rag/cred.crt
+rag/wxd_rag_test.ipynb
+data_1

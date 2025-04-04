@@ -1,0 +1,214 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Document Ingestion and Search API",
+      "description": "API to upload and search documents in Elasticsearch, including document processing and model deployment.",
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://auto-insurance-rag.1truewgi7yuo.us-east.codeengine.appdomain.cloud/",
+        "description": "Code Engine Server"
+      }
+    ],
+    "paths": {
+      "/ingest-documents/": {
+        "post": {
+          "summary": "Upload and ingest documents into Elasticsearch",
+          "description": "Processes and uploads documents into Elasticsearch, with an option to deploy a model.",
+          "operationId": "uploadDocuments",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "index_name": {
+                      "type": "string",
+                      "description": "Name of the Elasticsearch index."
+                    },
+                    "chunk_size": {
+                      "type": "integer",
+                      "description": "Size of each document chunk."
+                    },
+                    "overlap_size": {
+                      "type": "integer",
+                      "description": "Overlap size between chunks."
+                    },
+                    "split_delimeter": {
+                      "type": "string",
+                      "description": "Delimiter to split document chunks."
+                    },
+                    "es_model_id": {
+                      "type": "string",
+                      "description": "ID of the model in Elasticsearch."
+                    },
+                    "model_deploy": {
+                      "type": "boolean",
+                      "description": "Flag to create and deploy the model if not already deployed."
+                    }
+                  },
+                  "required": [
+                    "index_name",
+                    "chunk_size",
+                    "overlap_size",
+                    "split_delimeter",
+                    "es_model_id",
+                    "model_deploy"
+                  ]
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Document ingestion initiated successfully.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string",
+                        "example": "Documents are being processed and uploaded."
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Server error during document ingestion",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Error"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/search/": {
+        "get": {
+          "summary": "Search documents in Elasticsearch",
+          "description": "Searches documents in Elasticsearch using the provided query and returns relevant results.",
+          "operationId": "searchDocuments",
+          "parameters": [
+            {
+              "name": "search_query",
+              "in": "query",
+              "required": true,
+              "schema": {
+                "type": "string"
+              },
+              "description": "Search query text for document retrieval."
+            },
+            {
+              "name": "index_name",
+              "in": "query",
+              "required": true,
+              "schema": {
+                "type": "string"
+              },
+              "description": "Name of the Elasticsearch index."
+            },
+            {
+              "name": "es_model_id",
+              "in": "query",
+              "required": true,
+              "schema": {
+                "type": "string"
+              },
+              "description": "ID of the model in Elasticsearch used for text expansion."
+            },
+            {
+              "name": "relevant_chunks",
+              "in": "query",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              },
+              "description": "Number of relevant document chunks to retrieve."
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successfully retrieved search results.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "results": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "text": {
+                              "type": "string",
+                              "description": "Document text snippet."
+                            },
+                            "score": {
+                              "type": "number",
+                              "description": "Relevance score of the document."
+                            },
+                            "metadata": {
+                              "type": "object",
+                              "description": "Metadata of the document."
+                            },
+                            "index": {
+                              "type": "string",
+                              "description": "Index of the document."
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Server error during search operation",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Error"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "securitySchemes":{
+
+        "provider_basic_auth": {
+          "type": "http",
+          "scheme": "basic"
+        }
+        },
+      "schemas": {
+        "Error": {
+          "type": "object",
+          "properties": {
+            "detail": {
+              "type": "string",
+              "description": "Error message describing the issue."
+            }
+          }
+        }
+      }
+    },
+    "security": [
+      {
+        "provider_basic_auth": []
+      }
+    ]
+  }
+  
