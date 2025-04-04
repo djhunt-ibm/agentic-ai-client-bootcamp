@@ -385,7 +385,7 @@ For Get Time Off Balance skill:
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image29.4.png">
 
-If your skills don't work in chat try A in of [this](#Common-issues-and-troubleshoot-steps) section and check again in chat interface.
+If your skills don't work in chat try A of [this](#Common-issues-and-troubleshoot-steps) section and check again in chat interface.
 
 # Common issues and troubleshoot steps
 A. In case following skills don't work in chat try this:
