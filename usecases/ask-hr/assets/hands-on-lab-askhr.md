@@ -334,25 +334,6 @@ For Get Time Off Balance skill:
 <img width="1000" alt="image" src="hands-on-lab-assets/image12.png">
 
 
-
-47.	Once that is done, click on skills and then click on "Manage skills".
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image13.png">
-
-
-48.	Click on app in which your skills are grouped.
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image14.png">
-
-
-
-49.	Check if "Get Time Off Balance", "Get User Profile", "Request Time Off", "Update address", and "Update Title" skills are added. If not, click on "Add skill + " for all skills you want to add. 
-Then, click on "Connect App" on top right, if not already connected.
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image15.png">
-
-
-
 50.	From the menu, click on "AI agent configuration".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image16.png">
