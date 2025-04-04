@@ -381,8 +381,6 @@ For Get Time Off Balance skill:
 <img width="1000" alt="image" src="hands-on-lab-assets/image28.png">
 
 62. Use your imported skills in chat. To get the list of already present user names in database, download it from [here](users_data.xlsx).  
-
-
 <img width="1000" alt="image" src="hands-on-lab-assets/image29.4.png">
 
 
