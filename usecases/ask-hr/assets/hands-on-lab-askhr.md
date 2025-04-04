@@ -212,7 +212,7 @@ Click on “Generate Token”.
 
 ### AI agent configuration
 
-24.	Click on the "hamburger menu" on top left and select “AI agent configuration” from the menu. **Note** : If you don't see “AI agent configuration” in the menu, try B of [this](#Common-issues-and-troubleshoot-steps) section.
+24.	Click on the "hamburger menu" on top left and select “AI agent configuration” from the menu. **Note** : If you don't see “AI agent configuration” in the menu, try [this](#Common-issues-and-troubleshoot-steps) section.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image56.png">
 
@@ -385,33 +385,9 @@ For Get Time Off Balance skill:
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image29.4.png">
 
-If your skills don't work in chat try A of [this](#Common-issues-and-troubleshoot-steps) section and check again in chat interface.
 
 # Common issues and troubleshoot steps
-A. In case following skills don't work in chat try this:
-
-1. click on your profile icon in the top right and select "Settings".
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image20.png">
-
-
-2.	Click on "chat", then "Switch to legacy chat", then click on "Change to legacy chat" as shown in below image.
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image21.png">
-
-3. From menu, click on "chat".
-<img width="1000" alt="image" src="hands-on-lab-assets/image21.1.1.png">
-
-4. Click on "Dropdown" and check if "Orchestrate agent skillset" is present. If not wait for sometime till it becomes visible.
-<img width="1000" alt="image" src="hands-on-lab-assets/image21.1.2.png">
-
-5.	Then, click on the profile icon, then settings, then click on chat version and switch to AI chat again.
-
-<img width="1000" alt="image" src="hands-on-lab-assets/image27.png">
-
-
-
-B.  Sometimes, when you open the watsonx Orchestrate homepage, the legacy chat is activated, and someone needs to manually activate the AI Chat. Follow the steps below to activate the AI chat:
+Sometimes, when you open the watsonx Orchestrate homepage, the legacy chat is activated, and someone needs to manually activate the AI Chat. Follow the steps below to activate the AI chat:
 
 1. Click on the profile icon in the top right and click on Settings.
 
