@@ -19,4 +19,4 @@ COPY . /app/
 EXPOSE 8080
 
 # Command to run the FastAPI application
-CMD ["uvicorn", "RAG_FAST_API:app", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["uvicorn", "RAG_FAST_API_v1:app", "--host", "0.0.0.0", "--port", "8080"]
