@@ -1,0 +1,171 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "WxO File Upload API",
+        "description": "The wxo file upload API takes the input as file and stores in IBM COS.",
+        "version": "0.1.0"
+    },
+    "servers": [
+        {
+            "url": "https://cos-file-upload.1s237iojhkj2.us-south.codeengine.appdomain.cloud"
+        }
+    ],
+    "security": [
+        {
+         "ZENAPIKEY": []
+       }
+     ],
+    "paths": {
+        "/api/file/upload": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/FileUploadResponse"
+                                }
+                            }
+                        },
+                        "description": "Successful Response"
+                    },
+                    "422": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        },
+                        "description": "Validation Error"
+                    },
+                    "500": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Internal Server Error"
+                    }
+                },
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/FileData"
+                            }
+                        }
+                    }
+                },
+                "summary": "Upload log report",
+                "operationId": "process_filestream_api_file_upload_post"
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "ZENAPIKEY": {
+              "type": "apiKey",
+              "name": "Authorization",
+              "in": "header"
+            }
+          },
+        "schemas": {
+            "FileData": {
+                "type": "object",
+                "properties": {
+                    "filedata": {
+                        "type": "string",
+                        "format": "binary",
+                        "title": "Filedata"
+                    },
+                    "original_file_name": {
+                        "type": "string",
+                        "title": "OriginalFileName",
+                        "description": "Original name of the uploaded file"
+                    }
+                },
+                "required": [
+                    "filedata",
+                    "original_file_name"
+                ],
+                "title": "FileData"
+            },
+            "FileUploadResponse": {
+                "type": "object",
+                "properties": {
+                    "info": {
+                        "type": "string",
+                        "example": "success"
+                    },
+                    "file_name": {
+                        "type": "string",
+                        "example": "uploaded_file.txt"
+                    }
+                },
+                "required": ["info", "file_name"],
+                "title": "FileUploadResponse"
+            },
+            "ErrorResponse": {
+                "type": "object",
+                "properties": {
+                    "error": {
+                        "type": "string",
+                        "example": "An error occurred while processing the file."
+                    }
+                },
+                "required": ["error"],
+                "title": "ErrorResponse"
+            },
+            "HTTPValidationError": {
+                "type": "object",
+                "properties": {
+                    "detail": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ValidationError"
+                        },
+                        "title": "Detail"
+                    }
+                },
+                "title": "HTTPValidationError"
+            },
+            "ValidationError": {
+                "type": "object",
+                "properties": {
+                    "loc": {
+                        "type": "array",
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "integer"
+                                }
+                            ]
+                        },
+                        "title": "Location"
+                    },
+                    "msg": {
+                        "type": "string",
+                        "title": "Message"
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "Error Type"
+                    }
+                },
+                "required": [
+                    "loc",
+                    "msg",
+                    "type"
+                ],
+                "title": "ValidationError"
+            }
+        }
+    }
+}

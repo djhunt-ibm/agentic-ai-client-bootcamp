@@ -1,0 +1,125 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "WxO File Upload API",
+        "description": "The wxo file upload API takes the input as file and stores in IBM COS.",
+        "version": "0.1.0"
+    },
+    "servers": [
+        {
+            "url": "https://localhost:8000/"
+        }
+    ],
+    "security": [
+        {
+         "ZENAPIKEY": []
+       }
+     ],
+    "paths": {
+        "/api/file/upload": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {}
+                        },
+                        "description": "Successful Response"
+                    },
+                    "422": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        },
+                        "description": "Validation Error"
+                    }
+                },
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/FileData"
+                            }
+                        }
+                    }
+                },
+                "summary": "Upload log report",
+                "operationId": "process_filestream_api_file_upload_post"
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "ZENAPIKEY": {
+              "type": "apiKey",
+              "name": "Authorization",
+              "in": "header"
+            }
+          },
+        "schemas": {
+            "FileData": {
+                "type": "object",
+                "properties": {
+                    "filedata": {
+                        "type": "string",
+                        "format": "binary",
+                        "title": "Filedata"
+                    }
+                },
+                "required": [
+                    "filedata"
+                ],
+                "title": "FileData"
+            },
+            "HTTPValidationError": {
+                "type": "object",
+                "properties": {
+                    "detail": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ValidationError"
+                        },
+                        "title": "Detail"
+                    }
+                },
+                "title": "HTTPValidationError"
+            },
+            "ValidationError": {
+                "type": "object",
+                "properties": {
+                    "loc": {
+                        "type": "array",
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "integer"
+                                }
+                            ]
+                        },
+                        "title": "Location"
+                    },
+                    "msg": {
+                        "type": "string",
+                        "title": "Message"
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "Error Type"
+                    }
+                },
+                "required": [
+                    "loc",
+                    "msg",
+                    "type"
+                ],
+                "title": "ValidationError"
+            }
+        }
+    }
+}

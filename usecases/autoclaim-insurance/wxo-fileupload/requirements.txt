@@ -1,0 +1,7 @@
+fastapi
+python-multipart
+ibm-cos-sdk
+python-dotenv
+uvicorn
+python-magic
+standard-imghdr
