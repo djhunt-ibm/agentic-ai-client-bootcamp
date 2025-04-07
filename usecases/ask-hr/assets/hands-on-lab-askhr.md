@@ -288,25 +288,13 @@ Click on “Connect”.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image8.png">
 
-40. Under "input", put "Hello! What's your name?" in the name section and "What's your new address" in the new_address section. Then, click on "Publish".
+40. Click on "Publish".
 <img width="1000" alt="image" src="hands-on-lab-assets/image8.5.png">
 
 
-In a similar way,	you need to do modifications according to the below images in all the skills by enhancing skills and then publishing the skills.
+In a similar way,	you need to publish all the skills.
 
-To do this, first click on the three dots against the skill name and click on "Enhance this skill". Then click on "Input" and refer to the below images for modifications:
-
-For Request Time Off skill:  Make sure the order of from_date and end_date fields is correct as shown in image. If it's not, you need to drag from_date before end_date section.
-<img width="1000" alt="image" src="hands-on-lab-assets/image8.2.png">
-
-For Get User Profile skill:
-<img width="1000" alt="image" src="hands-on-lab-assets/image8.3.png">
-
-For Update Title skill:
-<img width="1000" alt="image" src="hands-on-lab-assets/image8.4.png">
-
-For Get Time Off Balance skill:
-<img width="1000" alt="image" src="hands-on-lab-assets/image8.1.png">
+To do this, first click on the three dots against the skill name and click on "Enhance this skill". Then click on "Publish"
 
 42.	Once all the skills are published, from the menu, go to "Skill sets".
 
@@ -318,7 +306,7 @@ For Get Time Off Balance skill:
 <img width="1000" alt="image" src="hands-on-lab-assets/image11.png">
 
 
-44.	Click on "Connections". Your imported skills should be grouped in one app automatically. By clicking on the arrow, search for that app. Click on the three dots against that app and then click "Connect app".
+44.	Click on "Connections". Your imported skills should be grouped in "HR Automation" app automatically. By clicking on the arrow, search for that "HR Automation" app. Click on the three dots against that app and then click "Connect app".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image11.1.png">
 
@@ -340,7 +328,7 @@ For Get Time Off Balance skill:
 
 
 
-51.	Select "Apps and skills" and click on the app your skills are grouped into.
+51.	Select "Apps and skills" and click on the "HR Automation" app.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image17.png">
 

@@ -217,11 +217,28 @@ After receiving the file, import skills in **watsonx Orchestrate** by uploading 
 25. Once both skills are connected, it will look like this:  
    ![Chat Connected](assets/chat_connect.png)  
 
-26. From the hamburger menu, navigate to **Chat**.  
-   ![Chat](assets/chat_from_skill.png)  
+26. Now, click on your profile icon in the top right and select "Settings".
+   ![WxO Home](assets/image20.png)
 
-27. You can now interact with the skills as shown below.  
-   ![Demo Skills](assets/demo_skill.png)  
+27. Click on "chat", then "Switch to legacy chat", then click on "Change to legacy chat" as shown in below image.
+   ![Image](assets/image21.png)  
+
+28. From menu, click on "chat".
+   ![Image](assets/image21.1.1.png)
+
+29. Click on "Dropdown" and check if "Orchestrate agent skillset" is present. If not wait for sometime till it becomes visible.
+   ![Image](assets/image21.1.2.png)
+
+30. Then, click on the profile icon, then settings, then click on chat version and switch to AI chat again.
+   ![Image](assets/image27.png)
+
+31. From the menu, click on "Chat".
+   ![Image](assets/image28.png)
+
+32. You can now interact with the skills as shown below.  
+   ![Image](assets/demo_skill.png)  
+
+
 
 ## Integration with Watsonx Orchestrate
 
