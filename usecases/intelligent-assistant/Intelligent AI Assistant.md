@@ -457,7 +457,7 @@ The result should look like what is shown below.
 
 Feel free to experiment further with variations of questions and adjust the Prompt Instructions as needed.
 
-Next we want to add a second action to our assistant, this time one that handles requests for recommendations about surplus data. Create a new Action and enter the following:
+Next we want to add a second action to our assistant, this time one that handles requests for recommendations about surplus data. Exit out of the current Action by clicking on the 'X' in the upper right corner of the window. Create a new Action and enter the following:
 - Customer starts with: `How can we handle the surplus on T001?`
 - Knowledge:
 ```
