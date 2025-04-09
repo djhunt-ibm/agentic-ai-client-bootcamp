@@ -230,7 +230,7 @@ Click on “Generate Token”.
 <img width="1000" alt="image" src="hands-on-lab-assets/image59.png">
 
 
-49.	Under “Authentication type”, select “Bearer Token” and enter the generated token you copied. In the “Service Instance URL” section, enter the CodeEngine URL received from your bootcamp instructor.
+49.	Under “Authentication type”, select “Bearer Token” and enter the generated token you copied. In the “Service Instance URL” section, enter the CodeEngine URL received from your bootcamp instructor. Note that this URL ends with "/chat/completions"
 
 Click on “Connect”.
 
