@@ -183,7 +183,8 @@ Your agent is now saved and you can make changes later if you want to experiment
 <img width="1000" alt="image" src="hands-on-lab-assets/image52.png">
 
 
-38. For deployment, you need a CodeEngine URL, which you can request from your instructor. Once you receive the deployment link, please open it.
+38. For deployment, you need a CodeEngine URL (URL to generate a bearer token), which you can request from your instructor.
+ Once you receive the deployment link, please open it.
 
 You will reach the page shown in the image below. Follow these two steps to generate the Bearer Token:
 Paste “Deployment ID” (refer to step 17), “Space ID” (refer to step 20), "API Key" (refer to step 6) and "watsonx URL (refer to step 1)". 
