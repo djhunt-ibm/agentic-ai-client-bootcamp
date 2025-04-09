@@ -256,16 +256,16 @@ After receiving the file, import skills in **watsonx Orchestrate** by uploading 
 
 5. Enter all the details as shown in the image
 
-   5.1. From the Authentication Type dropdown, select Bearer Token instead of API Key. You obtained the Bearer Token in Step 2 of [Deploying Agents on Code Engine](#deploying-agents-on-code-engine).
-   
-   5.2. Request the **chat/completion** URL endpoint from your instructor and enter it in the Service Instance URL field.
-   
-   5.3. In the Description section, add the data provided below.
+   5.1. In the Description section, add the data provided below.
 
    ```
    This agent is an expert in finding URLs or links for similar products that share matching features, ensuring users can explore alternatives efficiently.
    ```
-   ![Bearer Token](assets/connect.png)
+   5.2. From the Authentication Type dropdown, select Bearer Token instead of API Key. You obtained the Bearer Token in Step 2 of [Deploying Agents on Code Engine](#deploying-agents-on-code-engine).
+   
+   5.3. Request the **chat/completion** URL endpoint from your instructor and enter it in the Service Instance URL field.
+   
+   ![Bearer Token](assets/bearer_token_updated.png)
 
 6. Click the Connect button to integrate the agents with Watsonx Orchestrate.
    ![Connect](assets/bearer_token.png)
