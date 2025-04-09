@@ -256,7 +256,7 @@ After receiving the file, import skills in **watsonx Orchestrate** by uploading 
 
 5. Enter all the details as shown in the image
 
-   5.1. From the Authentication Type dropdown, select Bearer Token instead of API Key. You obtained the Bearer Token in Step 2 of Deploying Agents on Code Engine.
+   5.1. From the Authentication Type dropdown, select Bearer Token instead of API Key. You obtained the Bearer Token in Step 2 of [Deploying Agents on Code Engine](#deploying-agents-on-code-engine).
    
    5.2. Request the **chat/completion** URL endpoint from your instructor and enter it in the Service Instance URL field.
    
