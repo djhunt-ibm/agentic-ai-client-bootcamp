@@ -11,7 +11,6 @@
 - [Adding Custom Skills](#adding-custom-skills)
 - [Integration with Watsonx Orchestrate](#integration-with-watsonx-orchestrate)
 - [Experience Skills & Agents in Action](#experience-skills--agents-in-action)
-- [Demo Video](#demo-video) 
 
 ## 🏛Architecture  
 
@@ -308,8 +307,3 @@ Follow the steps above, then try interacting with the use case using these sampl
    ![Comparison Agent Response 2](assets/response_from_comp_agent_2.png)
 
 Now, explore and experience the power of Skills & Agents in action! 🚀 
-
-## Demo Video
-
-You can find a video demo of the solution [here](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/usecases/business-automation/video/Final%20Agentic%20Bootcamp%20Video.mp4).
-
