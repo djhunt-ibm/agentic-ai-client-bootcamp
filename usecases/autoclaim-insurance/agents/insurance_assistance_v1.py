@@ -166,7 +166,7 @@ def sum_token_usage(usage_metrics_list):
     return total_usage
 
 
-def agent_workflow(claim_data,policy_data):
+def agent_workflow(claim_data,policy_data,feedback=False):
     json_data_list = list()
     claim_agent = Agent(
         role="Insurance Claim Data Extractor",
@@ -213,6 +213,7 @@ def agent_workflow(claim_data,policy_data):
 
     json_data_list.append(claim_extraction_result.token_usage)
 
+    #will need a feedback input 
     # Define Policy Query Agent: Generates queries to retrieve relevant policy sections
     policy_query_agent = Agent(
         role="Insurance Policy Query Generator",
@@ -224,6 +225,7 @@ def agent_workflow(claim_data,policy_data):
         llm=llm,  # Use the initialized language model
     )
 
+    #add feedback here in prompt
     # Define Task Description for policy query generation
     policy_query_prompt = f"""
     You are an assistant tasked with determining what insurance policy sections to consult for a given auto claim.
@@ -259,7 +261,9 @@ def agent_workflow(claim_data,policy_data):
     policy_query_result = policy_query_crew.kickoff()
 
     json_data_list.append(policy_query_result.token_usage)
-
+    if feedback:
+        print("Feedback loop initiated!!")
+        return json.dumps(policy_query_result.raw)
     # Parsing the raw output and cleaning the queries
     raw_output = policy_query_result.raw
     policy_questions_list = [question.strip() for question in raw_output.split("\n") if question.strip()]
@@ -437,7 +441,7 @@ class Persona(BaseModel):
 
 # API endpoint to trigger the AI process: Processes the claims and provides policy recommendations
 @app.post("/process_claims")
-async def process_claims(file_paths: FilePaths,persona:Persona):
+async def process_claims(file_paths: FilePaths,persona:Persona,feedback=False):
     """Processes the claims using AI models and provides policy recommendations."""
     json_data_list = list()
     try:
@@ -459,6 +463,8 @@ async def process_claims(file_paths: FilePaths,persona:Persona):
         # Return the result with status and policy recommendations
         if persona.persona_type.lower()=="customer":
             return json.dumps(policy_recommendation)
+        elif feedback:
+            return agent_workflow(claim_data,policy_data,feedback)
         else:
             return {
                 "status": "success",
