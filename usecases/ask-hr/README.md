@@ -4,6 +4,7 @@
 
 One of the main challenges faced by any big organization is their HR operations management. As companies grow in size, it becomes increasingly difficult to get information faster and execute tasks with ease. With the advent of Agentic systems, and the power or reasoning models, it becomes easier to have a single entry point for doing mostly every HR operation.
 
+## 🎥 Demo
 
 https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/204b381f-9cbd-4919-ae54-8c7211360239
 
