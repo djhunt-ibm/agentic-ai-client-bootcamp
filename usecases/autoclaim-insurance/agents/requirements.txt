@@ -1,7 +1,0 @@
-fastapi
-pydantic
-python-dotenv
-elasticsearch
-crewai
-ibm-watsonx-ai
-uvicorn
