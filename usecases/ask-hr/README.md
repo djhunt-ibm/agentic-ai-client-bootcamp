@@ -29,7 +29,10 @@ The usage of an AI-backed system to optimize the HR process can have multi-dimen
 
 <img alt="AskHR" src="assets/arch_diagm.png">
 
+> [!IMPORTANT]
+> This lab uses a simulator for a Human Capital Management system. However, this could be easily changed to any real system running in production such as Workday or others.
 
-## 📄 Hands-on ste-by-step lab
+
+## 📄 Hands-on step-by-step lab
 
 Please find the step-by-step instructions [here](assets/hands-on-lab-askhr.md) on how you can implement this use case.
