@@ -50,7 +50,8 @@ To streamline employee interactions with HR systems, we have designed an AI-driv
 ##### HR Agent and App (IBM watsonx Orchestrate):
 The HR agent acts as the central orchestrator, managing user interactions and delegating tasks to appropriate skills in the HR App. It uses the AI Agent Configurator and Skill Studio to define task flows.
 
-##### HR App: A collection of reusable skills powered by OpenAPI and metadata descriptions. Each skill is designed to perform a specific HR-related task, such as:
+##### HR App: 
+A collection of reusable skills powered by OpenAPI and metadata descriptions. Each skill is designed to perform a specific HR-related task, such as:
 
 Checking time-off balances
 
