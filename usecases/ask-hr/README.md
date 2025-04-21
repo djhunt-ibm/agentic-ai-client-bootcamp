@@ -45,6 +45,8 @@ This system leverages watsonx Orchestrate for coordination and watsonx Agent Lab
 <img alt="AskHR" src="assets/arch_diagm.png">
 
 Architecture Components:
+
+
 HR Agent and App (IBM watsonx Orchestrate):
 The HR agent acts as the central orchestrator, managing user interactions and delegating tasks to appropriate skills in the HR App. It uses the AI Agent Configurator and Skill Studio to define task flows.
 
@@ -65,6 +67,11 @@ The Agent Lab houses advanced AI capabilities, including:
 Web search and crawling tools for fetching external HR-related content or policies.
 
 Reasoning agents to understand employee queries contextually and provide accurate guidance.
+
+Code Engine:
+Acts as the connector enabling communication between Orchestrate and the AI agents in the Agent Lab.
+
+
 > [!IMPORTANT]
 > This lab uses a simulator for a Human Capital Management system. However, this could be easily changed to any real system running in production such as Workday or others.
 
