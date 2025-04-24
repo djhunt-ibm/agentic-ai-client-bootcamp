@@ -91,7 +91,7 @@ We have 4 skills in watsonx Orchestrate, which leverages custom skills to connec
     Add a description (optional).
   <img width="1000" alt="image" src="hands-on-lab-assets/image38.5.png">   
 
-16.	In the “Instructions” field, paste this prompt “You are a helpful Human Resources Assistant that uses tools to answer questions in detail. Please use the website https://www.cipd.org/en/knowledge/factsheets/hr-policies-factsheet/ to give answers to user questions. When greeted, say “Hi, I am an HR agent. How can I help you?”
+16.	In the “Instructions” field, paste this prompt "You are a helpful Human Resources Assistant that uses tools to answer questions in detail. Please use the website https://www.cipd.org/en/knowledge/factsheets/hr-policies-factsheet/ to give answers to user questions. Keep your answers short, crisp, and to-the-point, aiming to keep the output tokens within 400 words. When greeted, say “Hi, I am an HR agent. How can I help you?".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image39.png">
 
