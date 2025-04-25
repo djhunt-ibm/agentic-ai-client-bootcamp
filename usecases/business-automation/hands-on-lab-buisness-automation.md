@@ -11,7 +11,6 @@
 - [Adding Custom Skills](#adding-custom-skills)
 - [Integration with Watsonx Orchestrate](#integration-with-watsonx-orchestrate)
 - [Experience Skills & Agents in Action](#experience-skills--agents-in-action)
-- [Demo Video](#demo-video) 
 
 ## 🏛Architecture  
 
@@ -84,7 +83,16 @@ Follow these steps to successfully create the Link Search Agent.
 ### Comparison Agent 
 For this agent, follow the same steps outlined in the [Link Search Agent](#link-search-agent). However, for the Instructions specific to the Comparison Agent, use the prompt below while keeping all other steps unchanged.
 ```
-You are an expert of automobile industry combining given details present in your context window. You have to use the given links to generate the comparison. Your task is to analyse and compare products on the following parameters strictly: Range, Pricing, Acceleration, Top Speed, Interior and Safety Features If a parameter is not applicable, mark it as N/A. Additionally, perform a SWOT analysis of top products (Strengths, Weaknesses, Opportunities, and Threats) Present the comparison in 3 tables one for the comparison , second for the rating numerical rating (X/5) and a star rating (★ out of ★★★★★) for each parameter  and  third for the SWOT analysis. Give heading to each table . After every table give two divider.
+You are an expert of automobile industry combining given details present in your context window. You have to use the given links to generate the comparison. Your task is to analyse and compare products on the following features strictly: Range, Pricing, Acceleration, Top Speed, Interior and Safety Features If a feature is not applicable, mark it as N/A. Additionally, perform a SWOT analysis of top products (Strengths, Weaknesses, Opportunities, and Threats) Present the comparison in 3 tables one for the comparison , second for the rating numerical rating (X/5) and a star rating (★ out of ★★★★★) for each feature  and  third for the SWOT analysis. Give heading to each table . After every table give two divider.
+
+Instructions:
+
+1. Title for Table 1: Feature Comparison
+2. Title for Table 2: Rating Comparison
+3. Make sure that the Rating Comparison table has both the numerical(X/5) and star rating(★ out of ★★★★★)
+4. The products should be the column names in all the tables.
+5. The font size of the Table Title should be 40% bigger as compared to the rest of the text.
+6. Add appropriate space between each section in the table.
 ```
 ---
 ## Getting the Space ID for Deployment on Code Engine
@@ -254,13 +262,18 @@ After receiving the file, import skills in **watsonx Orchestrate** by uploading 
 4. On the Agents page, click the Add Agent button.
 ![Add Agent](assets/add_agent.png)
 
-5. Enter all the details as shown in the image and select "Bearer Token" instead of "API Key."
+5. Enter all the details as shown in the image
 
-   Add this in description 
+   5.1. In the Description section, add the data provided below.
+
    ```
    This agent is an expert in finding URLs or links for similar products that share matching features, ensuring users can explore alternatives efficiently.
    ```
-   ![Bearer Token](assets/connect.png)
+   5.2. From the Authentication Type dropdown, select Bearer Token instead of API Key. You obtained the Bearer Token in Step 2 of [Deploying Agents on Code Engine](#deploying-agents-on-code-engine).
+   
+   5.3. Request the **chat/completion** URL endpoint from your instructor and enter it in the Service Instance URL field.
+   
+   ![Bearer Token](assets/bearer_token_updated.png)
 
 6. Click the Connect button to integrate the agents with Watsonx Orchestrate.
    ![Connect](assets/bearer_token.png)
@@ -279,32 +292,26 @@ Follow the steps above, then try interacting with the use case using these sampl
 
    Ask the following questions to get responses from the Product APP:
    ```
-   Q1: what are the Products of ABC Motors.
-   Q2. get me the info of Velocity S1.
+   Q1: What are the products of ABC Motors.
+   Q2: Get me the info of Velocity S1.
    ```
-   ![Skill Response](assets/response_form_skill.png)  
-
+   ![Skill Response](assets/chat_1.png)  
 
 2. Link Search Agent
 
    Use this query to retrieve competitor links:
    ```
-   provide me the links of competitors of above product
+   Provide me the links of 4 competitors of above product.
    ```
-   ![Link Search Agent Response](assets/response_from_link_agent.png)  
+   ![Link Search Agent Response](assets/chat_2_skill.png)
 
 3. Comparison Agent
 
    To compare the retrieved data, ask:
    ```
-   give me the comparison of above data
+   Give me the comparison of above data.
    ```
-   ![Comparison Agent Response](assets/response_from_comp_agent_1.png)  
-   ![Comparison Agent Response 2](assets/response_from_comp_agent_2.png)
+   ![Comparison Agent Response](assets/chat_3.png)  
+   ![Comparison Agent Response 2](assets/chat_4.png)
 
 Now, explore and experience the power of Skills & Agents in action! 🚀 
-
-## Demo Video
-
-You can find a video demo of the solution [here](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/usecases/business-automation/video/Demo_video.mov).
-

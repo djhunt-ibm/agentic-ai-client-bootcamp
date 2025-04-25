@@ -51,10 +51,21 @@ The use case leverages wxO skills to get product specific data (name, features) 
   * **Link Search Agent** : This agent is expert in finding URLs or links for similar products that share matching features, ensuring users can explore alternatives efficiently.
   * **Comparison Agent** : This agent is designed to compare competitor products using these links, extract key insights, and return a SWOT analysis of all products. The findings should be presented in a well-structured table format, making it easy to understand and compare the information briefly.
 
-## 📝 Detailed Instructions
+> [!IMPORTANT]
+> This lab uses a simulator for a Human Capital Management system. However, this could be easily changed to any real system running in production such as Workday or others.
 
+
+
+## 📝 Step-by-step Hands-on Lab
 You can find step-by-step instructions here :
 
 [Step-by-step hands-on guide](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/usecases/business-automation/hands-on-lab-buisness-automation.md)
+
+## Demo Video
+A video demo of the solution is here:
+
+https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/453165/83bfd0b0-cfb1-406e-8d74-dd9d2febd2db
+
+
 
 It shows how you can implement the use case using watsonx.ai and watsonx Orchestrate. 

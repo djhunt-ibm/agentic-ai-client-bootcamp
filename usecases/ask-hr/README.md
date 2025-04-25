@@ -4,6 +4,11 @@
 
 One of the main challenges faced by any big organization is their HR operations management. As companies grow in size, it becomes increasingly difficult to get information faster and execute tasks with ease. With the advent of Agentic systems, and the power or reasoning models, it becomes easier to have a single entry point for doing mostly every HR operation.
 
+## 🎥 Demo
+
+https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/204b381f-9cbd-4919-ae54-8c7211360239
+
+
 
 ## 🤔 The Problem
 
@@ -22,9 +27,46 @@ The usage of an AI-backed system to optimize the HR process can have multi-dimen
 
 ## 🏛️ Architecture
 
+To streamline employee interactions with HR systems, we have designed an AI-driven AskHR agent using IBM watsonx. This solution leverages a multi-agent orchestration model that ensures intelligent reasoning, seamless action execution, and a responsive experience for employees. The architecture is built with watsonx Orchestrate and watsonx AI, enabling the HR agent to manage a wide range of HR-related queries and requests efficiently.
+
+#### Key capabilities of the AskHR agent:
+
+1. Automates routine HR tasks like checking leave balance, requesting time off, and updating employee details.
+
+2. Enables natural interaction between employees and backend HR systems through an intuitive app interface.
+
+3. Uses reasoning and actioning skills to fetch or update information securely and reliably.
+
+4. Seamlessly integrates with internal systems using OpenAPI connectors.
+
+5. This system leverages watsonx Orchestrate for coordination and watsonx Agent Lab for advanced reasoning and web-based tasks, offering a comprehensive AI-powered HR support experience.
+
+
 <img alt="AskHR" src="assets/arch_diagm.png">
 
+#### Architecture Components:
 
-## 📄 Hands-on ste-by-step lab
+
+##### HR Agent and App (IBM watsonx Orchestrate): The HR agent acts as the central orchestrator, managing user interactions and delegating tasks to appropriate skills in the HR App. It uses the AI Agent Configurator and Skill Studio to define task flows.
+
+##### HR App: A collection of reusable skills powered by OpenAPI and metadata descriptions. Each skill is designed to perform a specific HR-related task, such as:
+Checking time-off balances
+Submitting time-off requests
+Updating personal details (business title, home address)
+
+##### Integration with Human Capital Management (HCM) System: The HR app communicates with the underlying HCM system to fetch or update employee data, ensuring real-time synchronization and accuracy.
+
+##### Agent Lab (IBM watsonx AI): The Agent Lab houses advanced AI capabilities, including:
+Web search and crawling tools for fetching external HR-related content or policies.
+Reasoning agents to understand employee queries contextually and provide accurate guidance.
+
+##### Code Engine: Acts as the connector enabling communication between Orchestrate and the AI agents in the Agent Lab.
+
+
+> [!IMPORTANT]
+> This lab uses a simulator for a Human Capital Management system. However, this could be easily changed to any real system running in production such as Workday or others.
+
+
+## 📄 Hands-on step-by-step lab
 
 Please find the step-by-step instructions [here](assets/hands-on-lab-askhr.md) on how you can implement this use case.
