@@ -91,7 +91,7 @@ We have 4 skills in watsonx Orchestrate, which leverages custom skills to connec
     Add a description (optional).
   <img width="1000" alt="image" src="hands-on-lab-assets/image38.5.png">   
 
-16.	In the “Instructions” field, paste this prompt “You are a helpful Human Resources Assistant that uses tools to answer questions in detail. Please use the website https://www.cipd.org/en/knowledge/factsheets/hr-policies-factsheet/ to give answers to user questions. When greeted, say “Hi, I am an HR agent. How can I help you?”
+16.	In the “Instructions” field, paste this prompt "You are a helpful Human Resources Assistant that uses tools to answer questions in detail. Please use the website https://www.cipd.org/en/knowledge/factsheets/hr-policies-factsheet/ to give answers to user questions. Keep your answers short, crisp, and to-the-point, aiming to keep the output tokens within 400 words. When greeted, say “Hi, I am an HR agent. How can I help you?".
 
 <img width="1000" alt="image" src="hands-on-lab-assets/image39.png">
 
@@ -183,7 +183,8 @@ Your agent is now saved and you can make changes later if you want to experiment
 <img width="1000" alt="image" src="hands-on-lab-assets/image52.png">
 
 
-38. For deployment, you need a CodeEngine URL, which you can request from your instructor. Once you receive the deployment link, please open it.
+38. For deployment, you need a CodeEngine URL (URL to generate a bearer token), which you can request from your instructor.
+ Once you receive the deployment link, please open it.
 
 You will reach the page shown in the image below. Follow these two steps to generate the Bearer Token:
 Paste “Deployment ID” (refer to step 17), “Space ID” (refer to step 20), "API Key" (refer to step 6) and "watsonx URL (refer to step 1)". 
@@ -230,7 +231,7 @@ Click on “Generate Token”.
 <img width="1000" alt="image" src="hands-on-lab-assets/image59.png">
 
 
-49.	Under “Authentication type”, select “Bearer Token” and enter the generated token you copied. In the “Service Instance URL” section, enter the CodeEngine URL received from your bootcamp instructor.
+49.	Under “Authentication type”, select “Bearer Token” and enter the generated token you copied. In the “Service Instance URL” section, enter the CodeEngine URL received from your bootcamp instructor. Note that this URL ends with "/chat/completions"
 
 Click on “Connect”.
 
