@@ -25,7 +25,7 @@
 
 6. From the menu, select "Skill Studio".
 
-<img src="docs/order_management/04_1_skill_studio.png" alt="Skill Studio" width="600"/>
+<img src="./order_management/04_1_skill_studio.png" alt="Skill Studio" width="600"/>
  
 7. On the “Create” button click on arrow and select “Import API”.
 
@@ -37,31 +37,31 @@
 
 9. Select the .yml or .json which contains openapi spec for Order Management.
 
-<img src="./order_management/05_4_import_openapi_from_a_file.png" alt="Select OpenAPI File" width="600"/>
+<img src="./order_management/05_4_import_openapi_file.png" alt="Select OpenAPI File" width="600"/>
 
 10. This will show the filename and click on Next
 
- <img src="./order_management/05_5_import_openapi_from_a_file.png" alt="Click Next" width="600"/>
+ <img src="./order_management/05_5_import_openapi_output.png" alt="Click Next" width="600"/>
 
 11. This will show all skills present in API spec imported in step 9.
 
-<img src="./order_management/05_6_import_openapi_from_a_file.png" alt="Add Skills" width="600"/>
+<img src="./order_management/05_6_import_openapi_show_skills.png" alt="Add Skills" width="600"/>
 
 11. Select all checkboxes and click on "Add".
 
-<img src="./order_management/05_7_import_openapi_from_a_file.png" alt="Select Skills" width="600"/>
+<img src="./order_management/05_7_import_openapi_select_all_skills.png" alt="Select Skills" width="600"/>
 
 12. This will add all the skills and show the status as “Ready to publish”.
 
-<img src="./order_management/05_8_import_openapi_from_a_file.png" alt="Ready to publish" width="600"/>
+<img src="./order_management/05_8_skills_added.png" alt="Ready to publish" width="600"/>
 
 13. Once the skills are imported, click on the three dots against the 'Update address' skill. And Select 'Enhance this skill'.
 
-<img src="./order_management/06_1_enhance_skill.png" alt="Enhance Skill" width="600"/>
+<img src="./order_management/06_1_enhance_skills.png" alt="Enhance Skill" width="600"/>
 
 14. Click on Publish. Similarly do this for all other skills
 
-<img src="./order_management/06_2_enhance_skill.png" alt="Publish Skill" width="600"/>
+<img src="./order_management/06_2_enhance_skills_publish.png" alt="Publish Skill" width="600"/>
 
 15. From the Hamburger Menu click on “Skill catalog”.
 
@@ -82,6 +82,7 @@
 19. Enter username and password and then click on Connect app.
 
 <img src="./order_management/07_7_skill_catalog_connect_app_create_creds.png" alt="Connect App" width="600"/>
+20. Go back to the Hamburger Menu.
  
 21. Then again from the Hamburger Menu Click on “Skill studio”
 
@@ -89,7 +90,7 @@
 
 22. Click on Arrow on Create button and click on Skill Flow.
 
-<img src="./order_management/08_2_skill_studio_create_skill_flow.png" alt="Create Skill Flow" width="600"/>
+<img src="./order_management/08_2_skill_studio_create_skillflow.png" alt="Create Skill Flow" width="600"/>
 
 
 23. Click on edit icon on Untitled name.
@@ -110,11 +111,10 @@
 
 27. Add Get All PO Details
 
-<img src="./order_management/08_6_add_skills_to_skill_flow.png" alt="Add Get All PO Details"" width="600"/>
+<img src="./order_management/08_6_add_skills_to_skill_flow.png" alt="Add Get All PO Details" width="600"/>
 
 28. Click on next “+” icon in the flow after Get All PO Details and then Order Management.
 
-<img src="./order_management/08_8_add_skills_to_skill_flow.png" alt="Skill Flow" width="600"/>
 
 29. Add Get PO Details and click on get PO Details
 
@@ -278,7 +278,7 @@
 
 67. From the Hamburger Menu, go to AI agent configuration.
 
-<img src="./customer_support/12_1_ai_agent_configuration.png" alt="AI Agent Configuration" width="600"/>
+<img src="./order_management/12_1_ai_agent_configuration.png" alt="AI Agent Configuration" width="600"/>
 
 
 68. Click Apps and skills.

@@ -1,0 +1,252 @@
+openapi: 3.0.0
+info:
+  title: Cash Application
+  version: 0.1.0
+  description: Cash Application
+tags:
+
+  - name: Remittance Details
+    description: Operations related to order details
+  - name: Invoice Details
+    description: Get Quotation Details
+  - name: All Remittance Details
+    description: Get all POs
+  - name: Matching Results Rem
+    description: Get Matching Results 
+  - name: Display Confirmation Remittance
+    description: Display Confirmation
+
+
+security:
+  - basicAuth: []
+servers:
+  - url: https://o2c-automation.1tpj0tq2imkv.us-south.codeengine.appdomain.cloud
+paths:
+
+  /get_all_remittances:
+    get:
+      summary: Get all Remittance Details
+      description: Fetch all Remittance Details
+      operationId: fetch_all_remittance_details
+      tags:
+        - All Remittance Details
+      responses:
+        "200":
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AllRemittanceDetails"
+  /remittance/{remittance_id}:
+    get:
+      parameters:
+        - name: remittance_id
+          in: path
+          required: true
+          schema:
+            type: string
+            title: Remittance ID
+      responses:
+        "200":
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemittanceDetails"
+      summary: Get Remittance Details
+      operationId: get_remittance_details_po_get
+      description: Get Remittance Details
+      tags:
+        - Remittance Details
+  /invoice/{invoice_number}:
+    get:
+      parameters:
+        - name: invoice_number
+          in: path
+          required: true
+          schema:
+            type: string
+            title: Invoice Number
+      responses:
+        "200":
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/InvoiceDetails"
+        "422":
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HTTPValidationError"
+      summary: Get Invoice Details
+      operationId: get_invoice_details
+      description: Get Invoice Details
+      tags:
+        - Invoice Details
+  /matching_results_rem/:
+    get:
+      responses:
+        "200":
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MatchingResultsRem"
+        "422":
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HTTPValidationError"
+      summary: Get Matching Results Rem
+      operationId: get_matching_results_rem
+      description: Get Matching Results Rem
+      tags:
+        - Matching Results Rem
+  /display_confirmation_remittance/:
+    get:
+      responses:
+        "200":
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DisplayConfirmationRem"
+        "422":
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HTTPValidationError"
+      summary: Display Confirmation
+      operationId: display_confirmation_remittance
+      description: Display Confirmation Remittance
+      tags:
+        - Display Confirmation Remittance
+
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+  schemas:
+
+    AllRemittanceDetails:
+      type: object
+      properties:
+        Remittance_Records:
+          type: array
+          items:
+            type: object
+            properties:
+              remittance_id:
+                type: string
+                description: Remittance ID
+              payer_name:
+                type: string
+                description: Payer Name
+              payee_name:
+                type: string
+                description: Payee Name
+              payment_date:
+                type: string
+                description: Payment Date
+              payment_method:
+                type: string
+                description: Payment Method
+    RemittanceDetails:
+      type: object
+      properties:
+        Remittance_Details:
+          type: array
+          items:
+            type: object
+            properties:
+              remittance_id:
+                type: string
+                description: Remittance ID
+              invoice_number:
+                type: string
+                description: Invoice Number
+              invoice_amount:
+                type: string
+                description: Payment Amount
+              payment_date:
+                type: string
+                description: Payment Date
+
+
+    InvoiceDetails:
+      type: object
+      properties:
+        Invoice_Details:
+          type: array
+          items:
+            type: object
+            properties:
+              invoice_number:
+                type: string
+                description: Invoice Number
+              invoice_amount:
+                type: string
+                description: Invoice Amount
+
+
+    MatchingResultsRem:
+      type: object
+      properties:
+        Validation_Details:
+          type: array
+          items:
+            type: object
+            properties:
+              entity_name:
+                type: string
+              remittance_data:
+                type: string
+                description: Remittance Details
+              invoice_data:
+                type: string
+                description: Invoice Details
+              matching_result:
+                type: string
+                description: Matching Result
+
+    DisplayConfirmationRem:
+      type: object
+      properties:
+        Confirmation_Message:
+          type: string
+
+    HTTPValidationError:
+      type: object
+      properties:
+        detail:
+          type: array
+          items:
+            $ref: "#/components/schemas/ValidationError"
+          title: Detail
+      title: HTTPValidationError
+    ValidationError:
+      type: object
+      properties:
+        loc:
+          type: array
+          items:
+            anyOf:
+              - type: string
+              - type: integer
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      required:
+        - loc
+        - msg
+        - type
+      title: ValidationError

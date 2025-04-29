@@ -43,8 +43,8 @@ watsonx.orchestrate, crewai, Code Engine, Watson Code Assistant, Elasticsearch
 
 Please find the step-by-step instructions on how you can implement this use case, we have following three workflows.
 
-- [Order Management](./order_management.md)
-[Cash Application](./cash_application.md)
-- [Customer Support](./customer_support.md)
+- [Order Management](./practitioner_docs/order_management.md)
+[Cash Application](./practitioner_docs/cash_application.md)
+- [Customer Support](./practitioner_docs/customer_support.md)
 
 © 2025 IBM Corporation
