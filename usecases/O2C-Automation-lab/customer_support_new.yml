@@ -1,0 +1,87 @@
+openapi: 3.0.0
+info:
+  title: Customer Support New
+  version: 0.1.0
+  description: Customer Support New
+tags:
+  - name: Order Details
+    description: Order Details
+
+security:
+  - basicAuth: []
+servers:
+  - url: https://o2c-automation.1tpj0tq2imkv.us-south.codeengine.appdomain.cloud
+paths:
+
+  /get_order_updates/{order_id}:
+    get:
+      parameters:
+        - name: order_id
+          in: path
+          required: true
+          schema:
+            type: string
+            title: Order ID
+      responses:
+        "200":
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OrderDetails"
+      summary: Get Order Details New
+      operationId: get_order_details_po_get
+      description: Get Order Details New
+      tags:
+        - Order Details
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+  schemas:
+    OrderDetails:
+      type: object
+      properties:
+        Order_Update:
+          type: array
+          items:
+            type: object
+            properties:
+              order_id:
+                type: string
+              order_date:
+                type: string
+              order_update:
+                type: string
+
+    HTTPValidationError:
+      type: object
+      properties:
+        detail:
+          type: array
+          items:
+            $ref: "#/components/schemas/ValidationError"
+          title: Detail
+      title: HTTPValidationError
+    ValidationError:
+      type: object
+      properties:
+        loc:
+          type: array
+          items:
+            anyOf:
+              - type: string
+              - type: integer
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      required:
+        - loc
+        - msg
+        - type
+      title: ValidationError
