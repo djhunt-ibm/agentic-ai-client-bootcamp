@@ -1,6 +1,6 @@
 # 💼 Transforming Order-to-Cash Process
 
-<img alt="Order-to-Cash" src="./order2cash/o2c.png" width="1000">
+<img alt="Order-to-Cash" src="./practitioner_docs/order2cash/o2c.png" width="1000">
 
 Enhancing efficiency and customer satisfaction through automation.
 
@@ -33,7 +33,7 @@ The project involves transforming the order-to-cash process, a critical aspect o
 
 ## 🏛️ Architecture
 
-<img alt="O2C Architecture" src="./order2cash/o2c_architecture.png" width="1000">
+<img alt="O2C Architecture" src="./practitioner_docs/order2cash/o2c_architecture.png" width="1000">
 
 ## 🛠️ Products Used
 
