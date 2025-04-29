@@ -2,6 +2,8 @@
 
 ![alt text](/agentic-bootcamp.png)
 
+**[Click here to go to the latest release!](https://github.ibm.com/skol/agentic-ai-client-bootcamp/releases/latest)**
+
 In this bootcamp, you will build and deploy an Agentic AI application prototype for an enterprise use case.
 
 🚀 You'll learn the concepts behind Agentic AI workflows.
