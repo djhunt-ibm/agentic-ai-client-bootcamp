@@ -3,7 +3,10 @@
 ## 🎥 Demo
 
 
-https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/72ebd062-cd1d-488b-8cce-41bc062b1948
+
+
+https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/ecf20dce-e28a-49df-9aee-123afcfe3d36
+
 
 
 
