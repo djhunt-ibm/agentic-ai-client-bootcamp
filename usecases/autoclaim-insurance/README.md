@@ -1,12 +1,20 @@
 # Seamless Auto Insurance Claim Process with Tailored Recommendations
 
+## 🎥 Demo
+
+
+https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/72ebd062-cd1d-488b-8cce-41bc062b1948
+
+
+
 ## Introduction: 
 Greetings introduce you to WatsonxAutoClaims, a revolutionary digital platform that transforms the auto insurance claim process through the power of Agentic AI.
 Traditionally, filing an insurance claim is a tedious, manual, and often frustrating process. Customers struggle with complex paperwork, poor communication, and long wait times, while claim reviewers are burdened with data overload, fraud detection challenges, and regulatory compliance.
 But what if we could change that? What if we could make claims processing seamless, intelligent, and highly efficient? That’s exactly what WatsonxAutoClaims delivers!
 
-## Problem Statement: 
+## 🤔 The Problem
 Let’s take a quick look at the challenges faced by both customers and claim reviewers in the current process:
+
 ### Customers experience:
   - A complicated, time-consuming claim submission process.
   - Lack of communication and transparency.
@@ -20,6 +28,11 @@ Let’s take a quick look at the challenges faced by both customers and claim re
   - Disputes and regulatory challenges.
 
 Clearly, the current system is outdated and inefficient. Now, let’s see how WatsonxAutoClaims addresses these pain points.
+
+
+
+## 🏛️ Architecture
+![Architecture](data/updated_architecture_autoclaims.png)
 
 ## Solution Overview – WatsonxAutoClaims in Action: 
 Imagine a scenario where a customer is involved in an accident and needs to file a claim.
@@ -39,10 +52,9 @@ Imagine a scenario where a customer is involved in an accident and needs to file
  * The system ensures compliance with insurance regulations.
  * Approved claims are automatically forwarded for payout, reducing settlement time significantly.
 
-## Architecture
-![Architecture](data/updated_architecture_autoclaims.png)
 
-## Business Value & Benefits:
+## 📈 Business value
+
 ### For Customers:
   **Faster submissions & tracking** – No more paperwork hassles.
   
