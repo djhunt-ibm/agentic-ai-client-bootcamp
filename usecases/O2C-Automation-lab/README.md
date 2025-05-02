@@ -45,7 +45,10 @@ The project involves transforming the order-to-cash process, a critical aspect o
 
 ## 🛠️ Products Used
 
-watsonx.orchestrate, crewai, Code Engine, Watson Code Assistant, Elasticsearch
+- watson x orchestrate,
+- watsonx discovery
+- Code Engine
+
 
 ## 📄 Hands-on step-by-step lab
 
