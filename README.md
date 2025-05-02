@@ -15,3 +15,5 @@ Select an enterprise use case, learn about the business story, and implement it 
 - [Intelligent assistant](./usecases/intelligent-assistant)
 - [HR automation](./usecases/ask-hr)
 - [Business automation](./usecases/business-automation)
+- [Order 2 Cash](./usecases/O2C-Automation-lab)
+
