@@ -4,6 +4,14 @@
 
 Enhancing efficiency and customer satisfaction through automation.
 
+## 🎥 Demo
+
+
+
+https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/7ef914f9-ab43-4a66-b2f3-b6485a4ed6b1
+
+
+
 ## 🔍 Problem Statement
 
 The current manual order-to-cash process is plagued by inefficiencies, high manual effort, and errors, leading to disputes, past dues, and negatively impacting customer satisfaction and the bottom line.
