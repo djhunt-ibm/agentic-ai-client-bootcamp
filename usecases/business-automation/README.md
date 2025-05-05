@@ -64,8 +64,6 @@ You can find step-by-step instructions here :
 ## Demo Video
 A video demo of the solution is here:
 
-https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/453165/83bfd0b0-cfb1-406e-8d74-dd9d2febd2db
-
 
 
 It shows how you can implement the use case using watsonx.ai and watsonx Orchestrate. 
