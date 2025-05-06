@@ -59,7 +59,7 @@ This use case utilizes the capabilities of two Orchestrate agents to extract pro
 ## 📝 Step-by-step Hands-on Lab
 You can find step-by-step instructions here :
 
-[Step-by-step hands-on guide](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/usecases/business-automation/hands-on-lab-buisness-automation.md)
+[Step-by-step hands-on guide](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/staging/usecases/business-automation/hands-on-lab-buisness-automation.md)
 
 ## Demo Video
 We're working on a demo video to showcase the features — coming soon!
