@@ -1,7 +1,6 @@
 # 👨🏻‍💻 Use case: Business Automation   
 
 ## Table of Contents
-## Table of Contents
 - [Architecture](#-architecture)
 - [Use Case Description](#use-case-description)
 - [Pre-requisites](#pre-requisites)
