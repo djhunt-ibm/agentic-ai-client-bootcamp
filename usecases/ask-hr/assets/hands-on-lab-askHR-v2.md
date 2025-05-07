@@ -9,7 +9,9 @@
 - Validate that you have access to a credentials file that you instructor will share with you before starting the labs.
 - If you're an instructor running this lab, check the **Instructor's guides** to set up all environments and systems.
 
-In this lab, you'll create three different agents. One is RAG agent, which extracts information from a document to resolve user queries, second agent is HR profile management agent, which lets user check profile 
+
+
+In this lab, you'll create three different agents. One is RAG agent, which extracts information from a document to resolve user queries, second agent is HR profile management agent, which lets user check profile, third agent is Supervisory agent, which delagate tasks to these two agents, RAG agent and HR profile management agent based on the query.
 
 
 ### Step by step instructions to build agents: 
