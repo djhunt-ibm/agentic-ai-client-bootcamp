@@ -26,7 +26,7 @@ In this lab, you'll create three different agents. One is RAG agent, which extra
 3. Click on "Create agent +".
 <img width="1000" alt="image" src="hands-on-lab-assets/step3.png">
 
-# Deploying RAG agent:
+#### Deploying RAG agent:
 4. Select "Create from scratch", Give your agent name "RAG_agent", fill the description "This agent handles queries around employee benefits" as shown in image. Then click on "Create".
 <img width="1000" alt="image" src="hands-on-lab-assets/step4.png">
 
@@ -42,7 +42,7 @@ In this lab, you'll create three different agents. One is RAG agent, which extra
 8. Go back to "Manage agents".
 <img width="1000" alt="image" src="hands-on-lab-assets/step8.png">
 
-# Deploying HR profile management agent:
+#### Deploying HR profile management agent:
 9. Click on "Create agent +".
 <img width="1000" alt="image" src="hands-on-lab-assets/step9.png">
 10. Select "Create from scratch", give this agent a name "HR_profile_management_agent" and put the Description as shown in image.
@@ -71,7 +71,7 @@ address, update title, check profile data, show time off balance, request time o
 16. Again go back to "Manage agents", Click on "Create agent +".
 <img width="1000" alt="image" src="hands-on-lab-assets/step9.png">
 
-# Deploying Supervisory agent:
+#### Deploying Supervisory agent:
 17. Select "Create from scratch", give this agent a name "Supervisory_agent" and put the Description :
 "This agent should deligate the tasks to the respective collaboration agents. You have access to two agent, HR_profile_management_agent and RAG_agent. If query is about checking and updating profile information, checking time off balance, deligate the task to HR_profile_management_agent. For any other query deligate the task to RAG_agent."
 
