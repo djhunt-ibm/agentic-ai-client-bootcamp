@@ -1,4 +1,18 @@
 
+# 🧑‍💼 AskHR: Automate HR tasks with Agentic AI
+
+
+### Pre-requisites
+
+- Check with your instructor to make sure **all systems** are up and running before you continue.
+- Validate that you have access to the right techzone environment for this lab.
+- Validate that you have access to a credentials file that you instructor will share with you before starting the labs.
+- If you're an instructor running this lab, check the **Instructor's guides** to set up all environments and systems.
+
+In this lab, you'll create three different agents. One is RAG agent, which extracts information from a document to resolve user queries, second agent is HR profile management agent, which lets user check profile 
+
+
+### Step by step instructions to build agents: 
 1. When you launch "watsonx orchestrate", you'll be directed to this page. Click on hamburger menu of top left.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/step1.png">
@@ -10,6 +24,7 @@
 3. Click on "Create agent +".
 <img width="1000" alt="image" src="hands-on-lab-assets/step3.png">
 
+## Deploying RAG agent:
 4. Select "Create from scratch", Give your agent name "RAG_agent", fill the description "This agent handles queries around employee benefits" as shown in image. Then click on "Create".
 <img width="1000" alt="image" src="hands-on-lab-assets/step4.png">
 
@@ -24,6 +39,8 @@
 
 8. Go back to "Manage agents".
 <img width="1000" alt="image" src="hands-on-lab-assets/step8.png">
+
+## Deploying HR profile management agent:
 9. Click on "Create agent +".
 <img width="1000" alt="image" src="hands-on-lab-assets/step9.png">
 10. Select "Create from scratch", give this agent a name "HR_profile_management_agent" and put the Description as shown in image.
@@ -52,6 +69,7 @@ address, update title, check profile data, show time off balance, request time o
 16. Again go back to "Manage agents", Click on "Create agent +".
 <img width="1000" alt="image" src="hands-on-lab-assets/step9.png">
 
+## Deploying Supervisory agent:
 17. Select "Create from scratch", give this agent a name "Supervisory_agent" and put the Description :
 "This agent should deligate the tasks to the respective collaboration agents. You have access to two agent, HR_profile_management_agent and RAG_agent. If query is about checking and updating profile information, checking time off balance, deligate the task to HR_profile_management_agent. For any other query deligate the task to RAG_agent."
 
