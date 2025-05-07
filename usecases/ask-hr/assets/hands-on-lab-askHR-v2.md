@@ -16,7 +16,7 @@
 5. Scroll the next screen to Knowledge section. Click on "Upload files +".
 <img width="1000" alt="image" src="hands-on-lab-assets/step5.png">
 
-6. Drag or upload the "Employee Benefits.pdf" ([Employee Benefits.pdf](/Employee-Benefits.pdf)) here and click on "Upload".
+6. Drag or upload the "Employee Benefits.pdf" ([Employee Benefits.pdf](/usecases/ask-hr/assets/Employee-Benefits.pdf)) here and click on "Upload".
 <img width="1000" alt="image" src="hands-on-lab-assets/step6.png">  
 
 7. Scroll more to "Behavior" section, write the instructions as shown in below image, test your agent in chat window in right, finally click on "Deploy"
