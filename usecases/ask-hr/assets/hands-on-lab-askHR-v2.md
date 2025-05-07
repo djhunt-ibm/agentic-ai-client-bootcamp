@@ -27,7 +27,15 @@
 9. Click on "Create agent +".
 <img width="1000" alt="image" src="hands-on-lab-assets/step9.png">
 10. Select "Create from scratch", give this agent a name "HR_profile_management_agent" and put the Description as shown in image.
-<img width="1000" alt="image" src="hands-on-lab-assets/step10.png">
+<img width="1000" alt="image" src="hands-on-lab-assets/step11.png">
 
+11. Click on "Add tool +".
+<img width="1000" alt="image" src="hands-on-lab-assets/step12.png">
+
+12. Select "Import".
+<img width="1000" alt="image" src="hands-on-lab-assets/step13.png">
+
+13. Drag or upload openapi-agentic.json file here.
+<img width="1000" alt="image" src="hands-on-lab-assets/step14.png">    
 
 
