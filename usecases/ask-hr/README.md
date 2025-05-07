@@ -69,4 +69,4 @@ Reasoning agents to understand employee queries contextually and provide accurat
 
 ## 📄 Hands-on step-by-step lab
 
-Please find the step-by-step instructions [here](/assets/hands-on-lab-askHR-v2.md) on how you can implement this use case.
+Please find the step-by-step instructions [here](/usecases/assets/hands-on-lab-askHR-v2.md) on how you can implement this use case.
