@@ -35,7 +35,66 @@
 12. Select "Import".
 <img width="1000" alt="image" src="hands-on-lab-assets/step13.png">
 
-13. Drag or upload openapi-agentic.json file here.
+13. Drag or upload openapi-agentic.json file here and click on Next.
 <img width="1000" alt="image" src="hands-on-lab-assets/step14.png">    
+
+14. Select all the operations and click on Done.
+<img width="1000" alt="image" src="hands-on-lab-assets/step15.png">
+
+15. Scroll down to "Behavior" section, Put below in Instructions field: 
+
+"This agent helps users in managing and checking their profile data, like update
+address, update title, check profile data, show time off balance, request time off. When user asks to show profile data or check time off balance, system should first ask for the name to user then invoke the tool."
+
+ Test your agent in chat window in right and click on deploy.
+<img width="1000" alt="image" src="hands-on-lab-assets/step16.png">
+
+16. Again go back to "Manage agents", Click on "Create agent +".
+<img width="1000" alt="image" src="hands-on-lab-assets/step9.png">
+
+17. Select "Create from scratch", give this agent a name "Supervisory_agent" and put the Description :
+"This agent should deligate the tasks to the respective collaboration agents. You have access to two agent, HR_profile_management_agent and RAG_agent. If query is about checking and updating profile information, checking time off balance, deligate the task to HR_profile_management_agent. For any other query deligate the task to RAG_agent."
+
+Click on "Create".
+<img width="1000" alt="image" src="hands-on-lab-assets/step17.png">
+
+18. Scroll down to "Toolset" section and click on "Add agent +".
+<img width="1000" alt="image" src="hands-on-lab-assets/step18.png">
+
+19. Select "Add from local instance".
+<img width="1000" alt="image" src="hands-on-lab-assets/step19.png">
+
+20. Select "HR_profile_management_agent" and "RAG_agent", click on "Add to agent".
+<img width="1000" alt="image" src="hands-on-lab-assets/step20.png">
+
+21. Add the following Instructions in Behavior section:
+"This agent should deligate the tasks to the respective collaboration agents. You have access to two agent, HR_profile_management_agent and RAG_agent. If query is about checking and updating profile information, checking time off balance, deligate the task to HR_profile_management_agent. For any other query deligate the task to RAG_agent."
+
+Test your agent in chat window in right, finally click on deploy.
+<img width="1000" alt="image" src="hands-on-lab-assets/step21.png">
+
+
+22. Go back to "Manage agents". You should see all your agents listed here. Click on hamburger menu.
+<img width="1000" alt="image" src="hands-on-lab-assets/step22.png">
+
+23. Click on "Chat".
+<img width="1000" alt="image" src="hands-on-lab-assets/step23.png">
+
+24. Select "Supervisory_agent" in Agents.
+<img width="1000" alt="image" src="hands-on-lab-assets/step24.png">
+
+ 25. Test your agent now.
+<img width="1000" alt="image" src="hands-on-lab-assets/step25.png">
+
+
+
+
+
+
+
+.
+
+
+
 
 
