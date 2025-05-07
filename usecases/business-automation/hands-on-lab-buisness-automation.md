@@ -36,7 +36,7 @@ The sales department of ABC Motor Corp, an automotive large player, when prepari
 
 We will create one agent **Link Search Agent** in watsonx.ai's Agent Lab as part of this setup:  
 
-From the Home page of Agnet Lab, click on the Build an AI agent to automate tasks
+From the Home page of Agent Lab, click on the Build an AI agent to automate tasks
 
 ![Home page](assets/agent_lab_home.png) 
 
@@ -119,7 +119,7 @@ To deploy your agent on Orchestrate, follow the steps below:
    ```
    ![Create from scratch](assets/create_from_scratch.png)   
 
-10. After the agnet is created, you will be redirected to the agent configuration page.
+10. After the agent is created, you will be redirected to the agent configuration page.
 ![Agent configuration](assets/external_agent.png)
 
 11. Scroll down to the Toolset section, then under Agents, click on the Add Agent button.
