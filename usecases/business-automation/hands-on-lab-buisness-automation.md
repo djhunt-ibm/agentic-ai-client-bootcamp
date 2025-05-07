@@ -81,9 +81,10 @@ You are a skilled assistant specialized in locating URLs for similar products wi
 5. After clicking the deployoment button make sure your Targeted deployemnt has been seleceted if not please select it.(marked as 1), click Deploy to deploy the agent (marked as 2)
 ![Link Search Agent Chat](assets/deployment_config.png)
 
-Follow these steps to successfully create the Link Search Agent.  
+> **YOU DID IT! you just created and deployed your first AI Agent.**
+> Now let's build more agents and integrate them together.
 
-## Deploying watsonx.ai's External-Agent on Orchestrate
+## Deploying watsonx.ai's External-Agent on watsonx Orchestrate
 
 To deploy your agent on Orchestrate, follow the steps below: 
 
