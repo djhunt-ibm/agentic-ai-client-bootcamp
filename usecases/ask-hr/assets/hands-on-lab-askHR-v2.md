@@ -19,10 +19,15 @@
 6. Drag or upload the "Employee Benefits.pdf" here and click on "Upload".
 <img width="1000" alt="image" src="hands-on-lab-assets/step6.png">  
 
-7. Scroll more to "Behaviour" section, write the instructions as shown in below image, test your agent in chat window in right, finally click on "Deploy"
+7. Scroll more to "Behavior" section, write the instructions as shown in below image, test your agent in chat window in right, finally click on "Deploy"
 <img width="1000" alt="image" src="hands-on-lab-assets/step7.png">  
 
-
+8. Go back to "Manage agents".
+<img width="1000" alt="image" src="hands-on-lab-assets/step8.png">
+9. Click on "Create agent +".
+<img width="1000" alt="image" src="hands-on-lab-assets/step9.png">
+10. Select "Create from scratch", give this agent a name "HR_profile_management_agent" and put the Description as shown in image.
+<img width="1000" alt="image" src="hands-on-lab-assets/step10.png">
 
 
 
