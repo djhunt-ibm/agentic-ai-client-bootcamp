@@ -1,8 +1,32 @@
 
 # 🧑‍💼 AskHR: Automate HR tasks with Agentic AI
 
+## Table of Contents
 
-### Pre-requisites
+- [Use case description](#use-case-description)
+- [Architecture](#architecture)
+- [Pre-requisites](#pre-requisites)
+- [Step by step instructions to build agents](#step-by-step-instructions-to-build-agents)
+  - [Deploying RAG agent](#deploying-rag-agent)
+  - [Deploying HR profile management agent](#deploying-hr-profile-management-agent)
+  - [Deploying Supervisory agent](#deploying-supervisory-agent)
+
+    
+## Use Case Description
+
+This use case targets developing and deploying an AskHR agent leveraging IBM watsonx Orchestrate and watsonx.ai, as depicted in the provided architecture diagram. This agent will empower employees to interact with HR systems and access information efficiently through conversational AI. 
+
+We have 4 skills in watsonx Orchestrate, which leverages custom skills to connect to a simulated Human Capital Management System storing the employee data. Another agent in watsonx.ai can answer user queries using a grounded data source. Integrating these 5 agents, we will see how most of the routine HR operations can be brought under a single powerful Agent.
+
+
+## Architecture
+
+<img width="1000" alt="image" src="arch_diagm.png">
+
+
+
+
+## Pre-requisites
 
 - Check with your instructor to make sure **all systems** are up and running before you continue.
 - Validate that you have access to the right techzone environment for this lab.
@@ -14,7 +38,7 @@
 In this lab, you'll create three different agents. One is RAG agent, which extracts information from a document to resolve user queries, second agent is HR profile management agent, which lets user check profile, third agent is Supervisory agent, which delagate tasks to these two agents, RAG agent and HR profile management agent based on the query.
 
 
-### Step by step instructions to build agents: 
+## Step by step instructions to build agents: 
 1. When you launch "watsonx orchestrate", you'll be directed to this page. Click on hamburger menu of top left.
 
 <img width="1000" alt="image" src="hands-on-lab-assets/step1.png">
