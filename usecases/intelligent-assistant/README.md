@@ -1,6 +1,6 @@
 # Intelligent Assistant 
 
-![alt text](images/ComfyUI_00127_.png)
+![alt text](images/320f612f-526e-4bef-ab38-6bd5d8027f40.png)
 
 This use case is about an AI agent assisting an operational manager - a manager of a warehouse to be exact. One of the responsibilities of the manager is to monitor product arrivals and departures at the dock, make sure inventory is up to date, and that handling of surplus product happens in a cost-effective manner. We apply an agentic solution based on watsonx Orchestrate and watsonx.ai to optimize this process.
 
