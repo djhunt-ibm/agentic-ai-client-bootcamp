@@ -14,7 +14,7 @@ The primary objective is to design and implement an Agentic AI-enabled system fo
 The implementation of an Agentic AI-enabled system for warehouse management is expected to deliver substantial business value to SmartStorage. Firstly, it will automate many manual tasks, thereby accelerating business processes and reducing the time spent on coordinating logistics. This automation will also minimize the risk of human error, leading to more reliable and efficient operations. Secondly, the system's natural language interface will enable intuitive interactions, making it easier for warehouse managers to use the system and access critical information in real-time. Lastly, the system's design will allow for flexible control over AI autonomy and human intervention, ensuring that warehouse managers can intervene when necessary while still benefiting from the efficiency gains provided by AI. Overall, the Agentic AI solution is poised to transform SmartStorage's warehouse management operations, driving improvements in efficiency, customer satisfaction, and ultimately, business profitability.
 
 ## 🏛️ Architecture
-![alt text](images/Intelligent%20Assistant%20Architecture.jpeg)
+![alt text](images/Intelligent%20Assistant%20Architecture.jpg)
 
 ## 📄 Step-by-step Hands-on Instructions
 You can find step-by-step instructions in [this document](./Intelligent%20AI%20Assistant.md). It shows how you can implement the use case using watsonx.ai and watsonx Orchestrate. 
