@@ -13,7 +13,7 @@ TechCorp Inc., a global IT leader with a workforce of 100,000 employees, faced a
 ## 🎯 Objective
 
 With this use case, we are planning to tackle the challenge by adopting an enterprise-grade platform, watsonx, equipped with Agentic capabilities.
-In this lab, we will see how the out-of-the-box prebuilt skills in watsonx Orchestrate can connect to HR management tools such as Workday, SuccessFactors, etc., or create custom skills to connect to any such systems easily. With watsonx.ai's agent driven insights, let's help TechCorp fast-track information retrieval, reduce administrative overhead, and ensure a more efficient and effective workforce.
+In this lab, we will see how the out-of-the-box prebuilt tools in watsonx Orchestrate can connect to HR management tools such as Workday, SuccessFactors, etc., or create custom tools to connect to any such systems easily. With agent driven insights, let's help TechCorp fast-track information retrieval, reduce administrative overhead, and ensure a more efficient and effective workforce.
 
 
 ## 📈 Business value
@@ -22,7 +22,7 @@ The usage of an AI-backed system to optimize the HR process can have multi-dimen
 
 ## 🏛️ Architecture
 
-To streamline employee interactions with HR systems, we have designed an AI-driven AskHR agent using IBM watsonx. This solution leverages a multi-agent orchestration model that ensures intelligent reasoning, seamless action execution, and a responsive experience for employees. The architecture is built with watsonx Orchestrate and watsonx AI, enabling the HR agent to manage a wide range of HR-related queries and requests efficiently.
+To streamline employee interactions with HR systems, we have designed an AI-driven AskHR agent using IBM watsonx. This solution leverages a multi-agent orchestration model that ensures intelligent reasoning, seamless action execution, and a responsive experience for employees. The architecture is built with watsonx Orchestrate enabling the HR agent to manage a wide range of HR-related queries and requests efficiently.
 
 #### Key capabilities of the AskHR agent:
 
@@ -30,7 +30,7 @@ To streamline employee interactions with HR systems, we have designed an AI-driv
 
 2. Enables natural interaction between employees and backend HR systems through an intuitive app interface.
 
-3. Uses reasoning and actioning skills to fetch or update information securely and reliably.
+3. Uses reasoning and tools to fetch or update information securely and reliably.
 
 4. Seamlessly integrates with internal systems using OpenAPI connectors.
 
