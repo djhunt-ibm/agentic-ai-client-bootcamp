@@ -42,9 +42,9 @@ To streamline employee interactions with HR systems, we have designed an AI-driv
 ### Architecture Components
 
 
-- **Supervisory Agent and App (IBM watsonx Orchestrate)**: The Supervisory agent acts as the central orchestrator, managing user interactions and delegating tasks to appropriate tools in the HR App.
+- **HR Agent and App (IBM watsonx Orchestrate)**: The HR agent acts as the central orchestrator, managing user interactions and delegating tasks to appropriate tools in the HR App.
 
-- **HR App:** A collection of reusable tools, RAG agent powered by OpenAPI and metadata descriptions. Each tool is designed to perform a specific HR-related task, such as:
+It has a collection of reusable tools, RAG agent powered by OpenAPI and metadata descriptions. Each tool is designed to perform a specific HR-related task, such as:
 Checking time-off balances
 Submitting time-off requests
 Updating personal details (business title, home address)
