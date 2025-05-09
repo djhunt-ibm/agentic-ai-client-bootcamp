@@ -75,11 +75,16 @@ This use case targets developing and deploying an AskHR agent leveraging IBM wat
 <img width="1000" alt="image" src="hands-on-lab-assets/u_step12.png">
 
 13. Similarly, edit description of other tools as given below:
+
     
 GetTimeOffBalanceData : "Get time off balance data. First ask user their name, if it has not been provided yet. Once user provides name, invoke the tool and show user's time off balance."
+
 ToRequestTimeOff : "Request time off, apply for leaves. First ask user their name, if it has not been provided yet. Once user provides name, ask start date of leaves and end date of leaves , then invoke the tool and show the response." 
+
 ToUpdateTitle : "Update user title. First ask user their name, if it has not been provided yet. Once user provides name, ask user their new title, then invoke the tool and show response."
+
 ToUpdateAddress " "Update user address. First ask user their name, if it has not been provided yet. Once user provides name, ask user their new address, then invoke the tool and show response."
+
 
 14. Scroll down to Behavior section. Put below instructions in Instructiond field:
 
