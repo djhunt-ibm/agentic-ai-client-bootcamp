@@ -14,9 +14,9 @@
     
 ## Use Case Description
 
-This use case targets developing and deploying an AskHR agent leveraging IBM watsonx Orchestrate and watsonx.ai, as depicted in the provided architecture diagram. This agent will empower employees to interact with HR systems and access information efficiently through conversational AI. 
+This use case targets developing and deploying an AskHR agent leveraging IBM watsonx Orchestrate, as depicted in the provided architecture diagram. This agent will empower employees to interact with HR systems and access information efficiently through conversational AI. 
 
-We have 4 skills in watsonx Orchestrate, which leverages custom skills to connect to a simulated Human Capital Management System storing the employee data. Another agent in watsonx.ai can answer user queries using a grounded data source. Integrating these 5 agents, we will see how most of the routine HR operations can be brought under a single powerful Agent.
+ We have three agentsin watsonx Orchestrate, which leverages tools and external knowledge to connect to a simulated Human Capital Management System. The first is the RAG Agent, which retrieves relevant information from documents to answer user queries. The second is the HR Profile Management Agent, which allows users to view and manage their profiles. The third is the Supervisory Agent, which interprets the user’s query and delegates the task to either the RAG Agent or the HR Profile Management Agent as appropriate.
 
 
 ## Architecture
@@ -34,8 +34,6 @@ We have 4 skills in watsonx Orchestrate, which leverages custom skills to connec
 - If you're an instructor running this lab, check the **Instructor's guides** to set up all environments and systems.
 
 
-
-In this lab, you'll create three different agents. One is RAG agent, which extracts information from a document to resolve user queries, second agent is HR profile management agent, which lets user check profile, third agent is Supervisory agent, which delagate tasks to these two agents, RAG agent and HR profile management agent based on the query.
 
 
 ## Step by step instructions to build agents: 
