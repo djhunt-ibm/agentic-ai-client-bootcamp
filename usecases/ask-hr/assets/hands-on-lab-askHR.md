@@ -7,9 +7,7 @@
 - [Architecture](#architecture)
 - [Pre-requisites](#pre-requisites)
 - [Step by step instructions to build agents](#step-by-step-instructions-to-build-agents)
-  - [Deploying RAG agent](#deploying-rag-agent)
-  - [Deploying HR profile management agent](#deploying-hr-profile-management-agent)
-  - [Deploying Supervisory agent](#deploying-supervisory-agent)
+  - [Deploying HR agent](#deploying-hr-agent)
 
     
 ## Use Case Description
