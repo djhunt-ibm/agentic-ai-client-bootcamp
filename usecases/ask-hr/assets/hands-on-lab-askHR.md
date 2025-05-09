@@ -93,8 +93,7 @@ as shown in image.
 
 16. Scroll down to "Behavior" section, Put below in Instructions field: 
 
-"This agent helps users in managing and checking their profile data, like update
-address, update title, check profile data, show time off balance, request time off. When user asks to show profile data or check time off balance, system should first ask for the name to user then invoke the tool."
+"This agent helps users in managing and checking their profile data, like update address, update title, check profile data, show time off balance, request time off. When user asks to show profile data or check time off balance for the very first time, system should first ask for the name to user then invoke the tool and then use the same name in whole session without asking the name again."
 
  Test your agent in chat window in right and click on deploy.
 <img width="1000" alt="image" src="hands-on-lab-assets/step16.png">
