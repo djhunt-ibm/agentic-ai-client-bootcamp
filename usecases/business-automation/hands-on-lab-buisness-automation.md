@@ -200,7 +200,7 @@ Follow the steps above, then try interacting with the use case using these sampl
    Ask the following questions to get responses from the Product Agent:
    ```
    Q1: What are the products of ABC Motors.
-   Q2: Get me the info of Velocity S1.
+   Q2: Give me the info of Zenith X3.
    ```
    ![Product Agent Response](assets/chat_1.png)  
 
