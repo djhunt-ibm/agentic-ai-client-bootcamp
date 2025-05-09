@@ -14,7 +14,7 @@
 
 This use case targets developing and deploying an AskHR agent leveraging IBM watsonx Orchestrate, as depicted in the provided architecture diagram. This agent will empower employees to interact with HR systems and access information efficiently through conversational AI. 
 
- We have an HR agent in watsonx Orchestrate, which leverages tools and external knowledge to connect to a simulated Human Capital Management System. This agent retrieves relevant information from documents to answer user queries and  allows users to view and manage their profiles.
+In this lab we will build an HR agent in watsonx Orchestrate, leveraging tools and external knowledge to connect to a simulated Human Capital Management System. This agent retrieves relevant information from documents to answer user queries and  allows users to view and manage their profiles.
 
 ## Architecture
 
@@ -45,8 +45,8 @@ This use case targets developing and deploying an AskHR agent leveraging IBM wat
 3. Click on "Create agent +".
 <img width="1000" alt="image" src="hands-on-lab-assets/step3.png">
 
-#### Deploying HR agent:
-4. Select "Create from scratch", Give your agent name "HR agent", fill the description "This agent handles queries around employee benefits in short and crisp response keeping the output tokens within 200 words and helps users in managing and checking their profile data, checking time of balance, updating title and address and requesting time off." as shown in image. Then click on "Create".
+#### Implementing and deploying HR Agent:
+4. Select "Create from scratch", Give your agent name "HR agent", fill the description "This agent handles queries around employee benefits in short and crisp response keeping the output within 200 words and helps users in managing and checking their profile data, checking time of balance, updating title and address and requesting time off." as shown in image. Then click on "Create".
 <img width="1000" alt="image" src="hands-on-lab-assets/u_step4.png">
 
 5. Scroll the next screen to Knowledge section. Write the description in knowledge description section "This knowledge addresses information related to employee benefits".Click on "Upload files +".
@@ -67,33 +67,15 @@ This use case targets developing and deploying an AskHR agent leveraging IBM wat
 10. Select all the operations and click on Done.
 <img width="1000" alt="image" src="hands-on-lab-assets/step15.png">
 
-11. Click on three dots against "GetUserProfileDetails" and click on "Edit details".
-<img width="1000" alt="image" src="hands-on-lab-assets/u_step11.png">
-
-12. Edit the description with "Get complete profile data of user. First ask user their name, if it has not been provided yet. Once user provides name, invoke the tool and show user's profile data." and click on "Save".
-<img width="1000" alt="image" src="hands-on-lab-assets/u_step12.png">
-
-13. Similarly, edit description of other tools as given below:
-
-    
-GetTimeOffBalanceData : "Get time off balance data. First ask user their name, if it has not been provided yet. Once user provides name, invoke the tool and show user's time off balance."
-
-ToRequestTimeOff : "Request time off, apply for leaves. First ask user their name, if it has not been provided yet. Once user provides name, ask start date of leaves and end date of leaves , then invoke the tool and show the response." 
-
-ToUpdateTitle : "Update user title. First ask user their name, if it has not been provided yet. Once user provides name, ask user their new title, then invoke the tool and show response."
-
-ToUpdateAddress " "Update user address. First ask user their name, if it has not been provided yet. Once user provides name, ask user their new address, then invoke the tool and show response."
-
-
-14. Scroll down to Behavior section. Put below instructions in Instructiond field:
+11. Scroll down to Behavior section. Put below instructions in Instructiond field:
 
  "This agent handles queries around employee benefits and helps users in managing and checking their profile data, like update address, update title, check profile data, show time off balance, request time off. When user asks to show profile data or check time off balance or update title/address or request time off for the very first time, system should first ask "what is your name?", then invoke the tool and then use the same name in whole session without asking the name again. "
 
-Test your agent in chat interface in right and click on "Deploy".
+Test your agent in chat interface in the preview on the right side and click on "Deploy".
 <img width="1000" alt="image" src="hands-on-lab-assets/u_step13.png">
 
-15. Click on hamburger menu in top left and then clcik on "Chat".
+12. Click on hamburger menu in the top left corner and then click on "Chat".
    <img width="1000" alt="image" src="hands-on-lab-assets/u_step14.png">
 
-16. Make sure "HR agent" is selected in chat interface. You can test your agent now.
+13. Make sure "HR agent" is selected in chat interface. You can test your agent now.
 <img width="1000" alt="image" src="hands-on-lab-assets/u_step15.png">
