@@ -51,7 +51,7 @@ This use case targets developing and deploying an AskHR agent leveraging IBM wat
 <img width="1000" alt="image" src="hands-on-lab-assets/u_step4.png">
 
 5. Scroll the next screen to Knowledge section. Write the description in knowledge description section "This knowledge addresses information related to employee benefits".Click on "Upload files +".
-<img width="1000" alt="image" src="hands-on-lab-assets/step5.png">
+<img width="1000" alt="image" src="hands-on-lab-assets/u_step5.png">
 
 6. Drag or upload the "Employee Benefits.pdf" ([Employee Benefits.pdf](/usecases/ask-hr/assets/Employee-Benefits.pdf)) here and click on "Upload".
 <img width="1000" alt="image" src="hands-on-lab-assets/u_step6.png">  
