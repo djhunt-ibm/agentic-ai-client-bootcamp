@@ -34,7 +34,7 @@ To streamline employee interactions with HR systems, we have designed an AI-driv
 
 4. Seamlessly integrates with internal systems using OpenAPI connectors.
 
-5. This system leverages watsonx Orchestrate for coordination and watsonx Agent Lab for advanced reasoning and web-based tasks, offering a comprehensive AI-powered HR support experience.
+5. This system leverages watsonx Orchestrate for coordination and advanced reasoning and web-based tasks, offering a comprehensive AI-powered HR support experience.
 
 
 <img alt="AskHR" src="assets/arch_diagm.png">
@@ -42,18 +42,17 @@ To streamline employee interactions with HR systems, we have designed an AI-driv
 ### Architecture Components
 
 
-- **HR Agent and App (IBM watsonx Orchestrate)**: The HR agent acts as the central orchestrator, managing user interactions and delegating tasks to appropriate skills in the HR App. It uses the AI Agent Configurator and Skill Studio to define task flows.
+- **HR Agent and App (IBM watsonx Orchestrate)**: The HR agent acts as the central orchestrator, managing user interactions and delegating tasks to appropriate skills in the HR App.
 
-- **HR App:** A collection of reusable skills powered by OpenAPI and metadata descriptions. Each skill is designed to perform a specific HR-related task, such as:
+- **HR App:** A collection of reusable tools, RAG agent powered by OpenAPI and metadata descriptions. Each tool is designed to perform a specific HR-related task, such as:
 Checking time-off balances
 Submitting time-off requests
 Updating personal details (business title, home address)
 
+RAG Agent retrieves relevant information from documents to answer user queries
+
 - **Human Capital Management (HCM) System**: The HR app communicates with the underlying HCM system to fetch or update employee data, ensuring real-time synchronization and accuracy.
 
-- **Agent Lab (IBM watsonx.ai)**: The Agent Lab houses advanced AI capabilities, including:
-Web search and crawling tools for fetching external HR-related content or policies.
-Reasoning agents to understand employee queries contextually and provide accurate guidance.
 
 ## 🎥 Demo
 
