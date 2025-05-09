@@ -34,7 +34,7 @@ The sales department of ABC Motor Corp, an automotive large player, when prepari
 
 >**Note:** Before starting the Agent creation, ensure you have generated your API key of watsonx.ai instance. 
 
-We will create one agent **Link Search Agent** in watsonx.ai's Agent Lab as part of this setup:  
+We will create one agent **Comparison Agent** in watsonx.ai's Agent Lab as part of this setup:  
 
 From the Home page of Agent Lab, click on the Build an AI agent to automate tasks
 

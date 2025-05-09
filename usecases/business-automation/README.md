@@ -41,17 +41,15 @@ To streamline the competitive analysis process, we have designed a Multi-Agent A
   * Generates a structured competitive comparison table
   * Strengths, Weaknesses, Opportunities, and Threats (SWOT) Analysis
 
-This system harnesses the combined power of two Orchestrate agents and one watsonx.ai agent, working seamlessly together to automate competitive research, strengthen sales pitches, and minimize manual effort.
+This system harnesses the combined power of  a watsonx Orchestrate agent and a watsonx.ai agent, working seamlessly together to automate competitive research, strengthen sales pitches, and minimize manual effort.
 
 <img width="900" alt="image" src="assets/Business_Automation_Architecture.png">
 
-This use case utilizes the capabilities of two Orchestrate agents to extract product-specific information (such as names and features) from the product catalog and to perform product comparisons. These agents are supported by a specialized agent developed in the watsonx.ai Agent Lab, and all are integrated within watsonx Orchestrate. Through the watsonx Orchestrate chat assistant, the agents collaborate and delegate tasks smoothly, delivering comprehensive insights and enabling informed decision-making.
+This use case utilizes the capabilities of a watsonx Orchestrate agent to extract product-specific information (such as names and features) from the product catalog and to perform product comparisons. These agents are supported by a specialized agent developed in the watsonx.ai Agent Lab, and all are integrated within watsonx Orchestrate. Through the watsonx Orchestrate chat assistant, the agents collaborate and delegate tasks smoothly, delivering comprehensive insights and enabling informed decision-making.
 
-  * **Product Agent** : This agent serves as the entry point for all queries and is designed to search for a specified product, retrieving its details and features in a structured format from the product catalog. It ensures clarity and organization by systematically presenting key product information, making it easy to understand and utilize. Additionally, it delegates tasks to the Link Search Agent and Comparison Agent for further processing.
+  * **Product Agent** : This agent serves as the entry point for all queries and is designed to search for a specified product, retrieving its details and features in a structured format from the product catalog. It ensures clarity and organization by systematically presenting key product information, making it easy to understand and utilize. Additionally, it delegates tasks to the Comparison Agent for further processing.
 
-  * **Link Search Agent** : This agent is expert in finding URLs or links for similar products that share matching features, ensuring users can explore alternatives efficiently.
-
-  * **Comparison Agent** : This agent is designed to compare competitor products using these links, extract key insights, and return a SWOT analysis of all products. The findings should be presented in a well-structured table format, making it easy to understand and compare the information briefly.
+  * **Comparison Agent** : This agent handles the end-to-end process of product comparison. It first identifies and collects URLs for similar products based on matching features. Then, using these links, it analyzes competitor offerings, extracts key insights, and generates a detailed SWOT analysis for each product. The findings are presented in a clear, structured table format to enable quick and effective comparison.
 
 > **!IMPORTANT**
 > This lab uses a simulator for a Human Capital Management system. However, this could be easily changed to any real system running in production such as Workday or others.
