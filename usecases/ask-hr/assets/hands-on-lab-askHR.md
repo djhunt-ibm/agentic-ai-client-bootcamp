@@ -60,7 +60,11 @@ In this lab, you'll create three different agents. One is RAG agent, which extra
 6. Drag or upload the "Employee Benefits.pdf" ([Employee Benefits.pdf](/usecases/ask-hr/assets/Employee-Benefits.pdf)) here and click on "Upload".
 <img width="1000" alt="image" src="hands-on-lab-assets/step6.png">  
 
-7. Scroll more to "Behavior" section, write the instructions as shown in below image, test your agent in chat window in right, finally click on "Deploy"
+7. Scroll more to "Behavior" section, write the instructions:
+ "This agent handles queries around employee benefits in short and crisp response keeping the output tokens within 200 words."
+
+as shown in below image, test your agent in chat window in right, finally click on "Deploy"
+
 <img width="1000" alt="image" src="hands-on-lab-assets/step7.png">  
 
 8. Go back to "Manage agents".
