@@ -73,22 +73,25 @@ as shown in below image, test your agent in chat window in right, finally click 
 #### Deploying HR profile management agent:
 9. Click on "Create agent +".
 <img width="1000" alt="image" src="hands-on-lab-assets/step9.png">
-10. Select "Create from scratch", give this agent a name "HR_profile_management_agent" and put the Description as shown in image.
+10. Select "Create from scratch", give this agent a name "HR_profile_management_agent" and put the Description:
+"This agent helps users in managing and checking their profile data and checking time of balance."
+
+as shown in image.
 <img width="1000" alt="image" src="hands-on-lab-assets/step11.png">
 
-11. Click on "Add tool +".
+12. Click on "Add tool +".
 <img width="1000" alt="image" src="hands-on-lab-assets/step12.png">
 
-12. Select "Import".
+13. Select "Import".
 <img width="1000" alt="image" src="hands-on-lab-assets/step13.png">
 
-13. Drag or upload openapi-agentic.json file here and click on Next.
+14. Drag or upload openapi-agentic.json file here and click on Next.
 <img width="1000" alt="image" src="hands-on-lab-assets/step14.png">    
 
-14. Select all the operations and click on Done.
+15. Select all the operations and click on Done.
 <img width="1000" alt="image" src="hands-on-lab-assets/step15.png">
 
-15. Scroll down to "Behavior" section, Put below in Instructions field: 
+16. Scroll down to "Behavior" section, Put below in Instructions field: 
 
 "This agent helps users in managing and checking their profile data, like update
 address, update title, check profile data, show time off balance, request time off. When user asks to show profile data or check time off balance, system should first ask for the name to user then invoke the tool."
