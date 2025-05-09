@@ -16,7 +16,7 @@
 
 This use case targets developing and deploying an AskHR agent leveraging IBM watsonx Orchestrate, as depicted in the provided architecture diagram. This agent will empower employees to interact with HR systems and access information efficiently through conversational AI. 
 
- We have three agentsin watsonx Orchestrate, which leverages tools and external knowledge to connect to a simulated Human Capital Management System. The first is the RAG Agent, which retrieves relevant information from documents to answer user queries. The second is the HR Profile Management Agent, which allows users to view and manage their profiles. The third is the Supervisory Agent, which interprets the user’s query and delegates the task to either the RAG Agent or the HR Profile Management Agent as appropriate.
+ We have three agents in watsonx Orchestrate, which leverages tools and external knowledge to connect to a simulated Human Capital Management System. The first is the RAG Agent, which retrieves relevant information from documents to answer user queries. The second is the HR Profile Management Agent, which allows users to view and manage their profiles. The third is the Supervisory Agent, which interprets the user’s query and delegates the task to either the RAG Agent or the HR Profile Management Agent as appropriate.
 
 
 ## Architecture
