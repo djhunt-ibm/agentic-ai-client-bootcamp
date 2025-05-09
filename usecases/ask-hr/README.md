@@ -55,8 +55,8 @@ RAG Agent retrieves relevant information from documents to answer user queries
 
 
 ## 🎥 Demo
+https://github.ibm.com/skol/agentic-ai-client-bootcamp/usecases/ask-hr/ashHR_demo_new_version.mp4
 
-https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/204b381f-9cbd-4919-ae54-8c7211360239
 
 
 
