@@ -7,7 +7,7 @@
     },
     "servers": [
         {
-            "url": "https://hr-skills-app.1tcf4045jumq.us-south.codeengine.appdomain.cloud/",
+            "url": "https://hr-skills-app.1rqct68sp2fr.us-south.codeengine.appdomain.cloud",
             "description": "Production server"
         }
     ],
@@ -17,7 +17,7 @@
             "get": {
                 "summary": "Get User Profile",
                 "operationId": "GetUserProfileDetails",
-                "description": "Get complete profile data of user",
+                "description": "Get complete profile data of user. First ask user their name, if it has not been provided yet. Once user provides name, invoke the tool and show user's profile data.",
                 "parameters": [
                     {
                         "name": "name",
@@ -65,7 +65,7 @@
         "/time-off-balance/{name}": {
             "get": {
                 "summary": "Get Time Off Balance",
-                "description": "Get time off balance data",
+                "description": "Get time off balance data. First ask user their name, if it has not been provided yet. Once user provides name, invoke the tool and show user's time off balance",
                 "operationId": "GetTimeOffBalanceData",
                 "parameters": [
                     {
@@ -108,7 +108,7 @@
         "/request-time-off": {
             "post": {
                 "summary": "Request Time Off",
-                "description": "Request time off, apply for leaves",
+                "description": "Request time off, apply for leaves. First ask user their name, if it has not been provided yet. Once user provides name, ask start date of leaves and end date of leaves , then invoke the tool and show the response.",
                 "operationId": "ToRequestTimeOff",
                 "responses": {
                     "200": {
@@ -148,7 +148,7 @@
         "/update-title": {
             "put": {
                 "summary": "Update Title",
-                "description": "Update user title",
+                "description": "Update user title. First ask user their name, if it has not been provided yet. Once user provides name, ask user their new title, then invoke the tool and show response.",
                 "operationId": "ToUpdateTitle",
                 "responses": {
                     "200": {
@@ -188,7 +188,7 @@
         "/update-address": {
             "put": {
                 "summary": "Update Address",
-                "description": "Update user address",
+                "description": "Update user address. First ask user their name, if it has not been provided yet. Once user provides name, ask user their new address, then invoke the tool and show response.",
                 "operationId": "ToUpdateAddress",
                 "responses": {
                     "200": {
