@@ -153,7 +153,7 @@ In Orchestrate, we will create main agents, as outlined below:
    ```
    ![Knowledge](assets/product_knowledge.png)
 
-5. Scroll down to the Knowledge section, then in the Document section, click on the Upload file button nad upload the product catalog.
+5. Scroll down to the Knowledge section, then in the Document section, click on the Upload file button nad upload [the product catalog](./assets/ABC_Motor_Product_Catalog.pdf).
 ![Upload file](assets/upload_file.png)
 
 6. Scroll down to the Toolset section, then in the Agents section click on the Add Agent button.
