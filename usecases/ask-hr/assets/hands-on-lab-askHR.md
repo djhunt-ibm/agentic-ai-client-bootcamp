@@ -49,7 +49,7 @@ In this lab we will build an HR agent in watsonx Orchestrate, leveraging tools a
 4. Select "Create from scratch", Give your agent name "HR agent", fill the description "This agent handles queries around employee benefits in short and crisp response keeping the output within 200 words and helps users in managing and checking their profile data, checking time of balance, updating title and address and requesting time off." as shown in image. Then click on "Create".
 <img width="1000" alt="image" src="hands-on-lab-assets/u_step4.png">
 
-5. Scroll the next screen to Knowledge section. Write the description in knowledge description section "This knowledge addresses information related to employee benefits".Click on "Upload files +".
+5. Scroll the next screen to Knowledge section. Write the description in knowledge description section "This knowledge addresses  a curated list of modern and employee-centric workplace benefits aimed at boosting job satisfaction, well-being, and work-life balance. From unlimited paid time off and flexible work arrangements to wellness stipends, student loan assistance, and pet-friendly offices, it highlights 20+ innovative perks designed to attract and retain top talent while fostering a supportive and engaging work culture.". Click on "Upload files +".
 <img width="1000" alt="image" src="hands-on-lab-assets/u_step5.png">
 
 6. Drag or upload the "Employee Benefits.pdf" ([Employee Benefits.pdf](/usecases/ask-hr/assets/Employee-Benefits.pdf)) here and click on "Upload".
