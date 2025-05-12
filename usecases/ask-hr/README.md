@@ -6,7 +6,11 @@ One of the main challenges faced by any big organization is their HR operations 
 
 ## 🎥 Demo
 
-https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/204b381f-9cbd-4919-ae54-8c7211360239
+
+
+https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/aad473db-b0fc-48bc-9f2d-07bb1cb3c475
+
+
 
 
 
