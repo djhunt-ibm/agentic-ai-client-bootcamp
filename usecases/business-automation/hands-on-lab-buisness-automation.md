@@ -84,9 +84,15 @@ Once the agent is created.
 1. Click on the **Save As** button to save your Agent
 2. click on the **Deploy** button to deploy the agent.
 ![Comparison Agent 1](assets/config_CA_3.png) 
-4. After clicking on the save as button select Agent (marked as 1) and Click Save ((marked as 2))
+3. After clicking on the save as button select Agent (marked as 1) and Click Save ((marked as 2))
 ![Comparison Agent 2](assets/config_CA_4.png)
-5. After clicking the deployoment button make sure your Targeted deployemnt has been seleceted if not please select it.(marked as 1), click Deploy to deploy the agent (marked as 2)
+4. Once you click on deploy, you need to create a user api key.  Click on "Create".
+<img width="1000" alt="image" src="assets/image44.0.1.png">
+5. You'll be directed to another webpage. Click on "Create a key".
+<img width="1000" alt="image" src="assets/image44.0.2.png">
+6. Once a key is created, navigate back to deployment page. Click on "Reload".
+<img width="1000" alt="image" src="assets/image44.1.png">
+7. After clicking the deployoment button make sure your Targeted deployemnt has been seleceted if not please select it.(marked as 1), click Deploy to deploy the agent (marked as 2)
 ![Comparison Agent  3](assets/config_CA_5.png)
 
 > **YOU DID IT! you just created and deployed your first AI Agent.**
