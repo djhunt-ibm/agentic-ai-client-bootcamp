@@ -51,9 +51,6 @@ This use case utilizes the capabilities of a watsonx Orchestrate agent to extrac
 
   * **Comparison Agent** : This agent handles the end-to-end process of product comparison. It first identifies and collects URLs for similar products based on matching features. Then, using these links, it analyzes competitor offerings, extracts key insights, and generates a detailed SWOT analysis for each product. The findings are presented in a clear, structured table format to enable quick and effective comparison.
 
-> **!IMPORTANT**
-> This lab uses a simulator for a Human Capital Management system. However, this could be easily changed to any real system running in production such as Workday or others.
-
 ## 📝 Step-by-step Hands-on Lab
 You can find step-by-step instructions here :
 
