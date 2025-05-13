@@ -66,8 +66,11 @@ We are now ready to build the first agent. In the watsonx Orchestrate console, c
 
 ### The Dock Status Agent
 In the following screen, you can select if you want to create the new agent from scratch or from a template, and give it a name and a description.
-To create the solution, you will need to create a number of agents and we will go through them one by one, starting with the `Dock Status` agent. Let's start with giving it a name ("Dock Status Agent") and a description ("You are an agent who specializes in answering inquiries about warehouse dock status. 
-You should be compassionate to the user."). Note that in the world of AI Agents, these descriptions are not merely used as documentation, they are also used in making decisions about selecting the right agent for the job, so what you enter into this field is important.
+To create the solution, you will need to create a number of agents and we will go through them one by one, starting with the `Dock Status` agent. Let's start by giving it a name  and a description:
+- Name: Dock Status Agent
+- Description: The Dock Status Agent specializes in answering inquiries about current warehouse dock status. It has access to detailed and up-to-date data about which trucks are loading and unloading at docks, and information about the products they carry, and return detailed textual information about this data to the user.
+
+Note that in the world of AI Agents, these descriptions are not merely used as documentation, they are also used in making decisions about selecting the right agent for the job, so what you enter into this field is important.
 
 After you have entered the required information, click on `Create`.
 
@@ -80,13 +83,21 @@ On the following screen, we can enter more information about the new agent we ar
   - `Agents` are other agents, either within watsonx Orchestrate or running externally, e.g., in watsonx.ai that this agent can delegate the request, or part of a request, to.
 
 In a real production deployment, the Dock Status agent would sit in front of an existing enterprise backend system that can provide up-to-date data about trucks currently sitting at warehouse docks, and keep track of products and their quantity that are being unloaded.
-However, in this hands-on exercise, we will simulate that backend by simply hardcoding the data into the `Behavior` field of the agent. The content of this field drive the prompts that are sent to the underlying LLM, and adding the hardcoded data euqates to providing examples in the prompt. So, for the purpose of simulating data stemming from an enterprise system, we can use this workaround.
+However, in this hands-on exercise, we will simulate that backend by simply hardcoding the data into the `Behavior` field of the agent. The content of this field drive the prompts that are sent to the underlying LLM, and adding the hardcoded data euqates to providing examples in the prompt. So, for the purpose of simulating data stemming from an enterprise system, we can use this workaround. Note how the instructions provide detailed information about boththe persona and the context this agent operates with.
 
 On the agent definition page, scroll all the way down to `Behavior` and copy the following text into the text field:
 
 ```
-When asked about warehouse dock status, provide a concise summary of the current warehouse dock operations in a textual format. You need to include the truck payload descriptions as a concise bullet-point list. 
-Below is JSON-formatted data that you use to create your answer.
+Persona:
+- Your purpose is to provide information about warehouse dock status. I will ask about the status at the docks, or one specific dock identified by dock ID, and you will answer in a detailed textual format.
+
+Context:
+- Use the Dock status data below to create answers. The data below is formatted in JSON, but you will return the information as text in a bulleted list.
+- If no dock ID is specified, return data for all the docks.
+- the data is current, no timestamp is required or supported.
+- Provide as much detail as you can.
+
+Dock status data:
 {
   "dock_id": 1,
   "trucks": [
@@ -149,11 +160,12 @@ Below is JSON-formatted data that you use to create your answer.
 }
 ```
 
+
+Finally, make sure you uncheck the `Show agent` checkbox, as shown in the picture below. This switch controls whether the agent is available in the main chat window. We only want to expose the top level agent (which we haven't created yet) there. 
+
 ![alt text](images/image6.png)
 
-Finally, make sure you uncheck the `Show agent` checkbox, as shown in the picture above. This switch controls whether the agent is available in the main chat window. We only want to expose the top level agent (which we haven't created yet) there. 
-
-Let's now test the new agent. In the Preview window, enter a question for the agent, for example "Tell me about the status of the warehouse docks." Note how the agent is using the provided data to formulate its answer.
+Let's now test the new agent. In the Preview window, enter a question for the agent, for example "Can you tell me about the status of the warehouse docks?" Note how the agent is using the provided data to formulate its answer.
 
 ![alt text](images/image7.png)
 
@@ -179,8 +191,7 @@ In the Manage agents view, click on the `Create agent` button.
 
 Now leave the `Create from scratch` option selected, enter "Surplus Agent" as the name and enter the following into the Description field:
 ```
-You are an agent who specializes in giving recommendations for handling of surplus data. 
-You should be compassionate to the user.
+The Surplus Agent provides recommendations about the handling of surplus data. It has access to data including the allocation strategy, product SKU and total cost for the surplus on each truck, and it returns information about the recommended handling of surplus.
 ```
 ![alt text](images/image11.png)
 
@@ -188,7 +199,15 @@ Then click on `Create`.
 
 In the following view, scroll all the way down to the `Behavior` field, and enter the following:
 ```
-When asked about surplus handling, use the surplus data below, sorted by truck ID to reply with a report on  optimal allocation of surplus units.  When asked how to handle surplus, provide a distribution strategy based on allocations unit for each method along with truck id, Product SKU, total cost, surplus unit.
+- Persona:
+Your purpose is to provide information about surplus. I will ask about the recommended handling of surplus on a specific truck, and you will answer in a detailed format with the allocation strategy based on the given data, along with truck id, Product SKU, total cost, surplus unit.
+
+- Context:
+Use the Surplus data below to create answers. The data below is formatted in JSON, but you will return the information as text in a bulleted list.
+- If no allocation strategy is specified, return data according to the allocations given in the data below.
+- If no product SKU is provided, return data for all of the products within a given truck ID.
+- Provide as much detail as you can.
+
 Surplus data:
 {
   "truck_id": "T004",
