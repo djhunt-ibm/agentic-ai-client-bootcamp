@@ -33,53 +33,110 @@ In this lab we will build an HR agent in watsonx Orchestrate, leveraging tools a
 
 
 
-## Step by step instructions to build agents: 
-1. When you launch "watsonx orchestrate", you'll be directed to this page. Click on hamburger menu of top left.
+## Step by step instructions to build the HR Agent:
+
+1. When you launch watsonx Orchestrate, you'll be directed to this page. Click on the hamburger menu in the top left corner:
 
 <img width="1000" alt="image" src="hands-on-lab-assets/step1.png">
 
-2. Click on down arrow against "Build".
-   Then click on "Agent Builder".
+2. Click on the down arrow next to **Build**.  Then click on **Agent Builder**:
+
 <img width="1000" alt="image" src="hands-on-lab-assets/step2.png">
 
-3. Click on "Create agent +".
+3. Click on **Create agent +**:
+
 <img width="1000" alt="image" src="hands-on-lab-assets/step3.png">
 
-#### Implementing and deploying HR Agent:
-4. Select "Create from scratch", Give your agent name "HR agent", fill the description "This agent handles queries around employee benefits in short and crisp response keeping the output within 200 words and helps users in managing and checking their profile data, checking time of balance, updating title and address and requesting time off." as shown in image. Then click on "Create".
-<img width="1000" alt="image" src="hands-on-lab-assets/u_step4.png">
+4. Select "Create from scratch", give your agent a name, e.g. "HR Agent", and fill in the description as shown below: 
 
-5. Scroll the next screen to Knowledge section. Write the description in knowledge description section "This knowledge addresses  a curated list of modern and employee-centric workplace benefits aimed at boosting job satisfaction, well-being, and work-life balance. From unlimited paid time off and flexible work arrangements to wellness stipends, student loan assistance, and pet-friendly offices, it highlights 20+ innovative perks designed to attract and retain top talent while fostering a supportive and engaging work culture.". Click on "Upload files +".
-<img width="1000" alt="image" src="hands-on-lab-assets/u_step5.png">
+```
+You are an agent who handles employee HR queries.  You provide short and crisp responses, keeping the output to 200 words or less.  You can help users check their profile data, retrieve latest time off balance, update title or address, and request time off. You can also answer general questions about company benefits.
+```  
+Click on **Create**:
 
-6. Drag or upload the "Employee Benefits.pdf" ([Employee Benefits.pdf](/usecases/ask-hr/assets/Employee-Benefits.pdf)) here and click on "Upload".
-<img width="1000" alt="image" src="hands-on-lab-assets/u_step6.png">  
+<img width="1000" alt="image" src="hands-on-lab-assets/hr_step4.png">
 
-7. Scroll down to "Toolset" section. Click on "Add tool +".
-<img width="1000" alt="image" src="hands-on-lab-assets/u_step7.png">
+5. Scroll down the screen to the **Knowledge** section. Copy the following description into the **Knowledge Description** section:
 
-8. Select "Import".
+```
+This knowledge base addresses the company's employee benefits, including parental leaves, pet policy, flexible work arrangements, and student loan repayment.
+```
+
+Click on **Upload files**:
+
+<img width="1000" alt="image" src="hands-on-lab-assets/hr_step5.png">
+
+6. Drag and drop the [Employee Benefits.pdf](/usecases/ask-hr/assets/Employee-Benefits.pdf) and click on **Upload**:
+
+<img width="1000" alt="image" src="hands-on-lab-assets/hr_step6.png">  
+
+7. Wait until the file has been uploaded successfully and double check that it is now shown in the Knowledge section: 
+
+<img width="1000" alt="image" src="hands-on-lab-assets/hr_step7.png">  
+
+8. Scroll down to the **Toolset** section. Click on **Add tool +**:
+
+<img width="1000" alt="image" src="hands-on-lab-assets/hr_step8.png">
+
+9. Select **Import**:
+
 <img width="1000" alt="image" src="hands-on-lab-assets/step13.png">
 
-9. Drag or upload openapi-agentic.json file here and click on Next.
-<img width="1000" alt="image" src="hands-on-lab-assets/step14.png">    
+10. Drag and drop or click to upload the **hr.yaml** file, then click on **Next**:
 
-10. Select all the operations and click on Done.
-<img width="1000" alt="image" src="hands-on-lab-assets/step15.png">
+<img width="1000" alt="image" src="hands-on-lab-assets/hr_step10.png">    
 
-11. Scroll down to Behavior section. Put below instructions in Instructiond field:
+11. Select all the operations and click on **Done**:
 
- "This agent handles queries around employee benefits and helps users in managing and checking their profile data, like update address, update title, check profile data, show time off balance, request time off. When user asks to show profile data or check time off balance or update title/address or request time off for the very first time, system should first ask "what is your name?", then invoke the tool and then use the same name in whole session without asking the name again.
+<img width="1000" alt="image" src="hands-on-lab-assets/hr_step11.png">
 
-If the query is based on a range of innovative employee benefits designed to enhance well-being, flexibility, and job satisfaction, from unlimited PTO to wellness stipends and remote work options, use Employee Benefits.pdf to answer the query.
+12. Scroll down to the **Behavior** section. Insert the instructions below into the **Instructions** field:
 
-When user asks query, system should do the reasoning first, then answer the query either using toolset or knowledge. If query can't be answered without tools and knowledge, reply "I can't help you with this query".
+```
+Use your knowledge base to answer general questions about employee benefits. 
 
-Test your agent in chat interface in the preview on the right side and click on "Deploy".
-<img width="1000" alt="image" src="hands-on-lab-assets/u_step13.png">
+Use the tools to get or update user specific information.
 
-12. Click on hamburger menu in the top left corner and then click on "Chat".
-   <img width="1000" alt="image" src="hands-on-lab-assets/u_step14.png">
+When the user requests time off, convert the dates to YYYY-MM-DD format, e.g. 5/22/2025 should be converted to 2025-05-22 before passing the date to the post_request_time_off tool.
+ ```
 
-13. Make sure "HR agent" is selected in chat interface. You can test your agent now.
-<img width="1000" alt="image" src="hands-on-lab-assets/u_step15.png">
+ <img width="1000" alt="image" src="hands-on-lab-assets/hr_step12.png">
+
+13. Test your agent in the preview chat on the right side by asking the following questions and validating the responses.  They should look similar to what is shown in the screenshots below:
+
+```
+1. What is the pet policy? 
+
+2. Show me my profile data.
+
+3. I'd like to update my title. 
+
+4. Update my address
+
+5. What is my time off balance?
+
+6. Request time off
+
+7. Show my profile data.
+
+```
+
+<img width="1000" alt="image" src="hands-on-lab-assets/hr_step13.png">
+
+<img width="1000" alt="image" src="hands-on-lab-assets/hr_step13_2.png">
+
+<img width="1000" alt="image" src="hands-on-lab-assets/hr_step13_3.png">
+
+<img width="1000" alt="image" src="hands-on-lab-assets/hr_step13_4.png">
+
+14. Once you have validated the answers, click on **Deploy** in the top right corner to deploy your agent:
+
+<img width="1000" alt="image" src="hands-on-lab-assets/hr_step14.png">
+
+15. Click on the hamburger menu in the top left corner and then click on **Chat**:
+
+<img width="1000" alt="image" src="hands-on-lab-assets/hr_step15.png">
+
+16. Make sure **HR Agent** is selected. You can now test your agent:
+
+<img width="1000" alt="image" src="hands-on-lab-assets/hr_step16.png">
