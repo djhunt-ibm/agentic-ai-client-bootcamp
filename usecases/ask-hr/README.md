@@ -58,7 +58,10 @@ RAG Agent retrieves relevant information from documents to answer user queries
 
 
 
-https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/13552ca5-cc6c-4546-a7a4-b721db23072c
+
+https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/dc2facff-5922-44c4-93ff-e4d0bd0e27ad
+
+
 
 
 
