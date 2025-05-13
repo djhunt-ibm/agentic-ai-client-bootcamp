@@ -82,7 +82,7 @@ Click on **Upload files**:
 
 <img width="1000" alt="image" src="hands-on-lab-assets/step13.png">
 
-10. Drag and drop or click to upload the **hr.yaml** file, then click on **Next**:
+10. Drag and drop or click to upload the **hr.yaml** file (provided to you by the instructor), then click on **Next**:
 
 <img width="1000" alt="image" src="hands-on-lab-assets/hr_step10.png">    
 
