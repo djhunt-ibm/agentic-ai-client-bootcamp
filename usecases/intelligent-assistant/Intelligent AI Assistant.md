@@ -157,6 +157,8 @@ Let's now test the new agent. In the Preview window, enter a question for the ag
 
 ![alt text](images/image7.png)
 
+> When doing this in your own instance, you may see answers that differ from the ones shown in the screenshot above. Moreover, the agent will often ask follow-up questions before offering an answer. This is due to the undeterministic nature of the AI models involved. Feel free to experiment with different types of questions to see how the agent reacts. The same equally applies to all the agents described further down.
+
 You can now go ahead and deploy the agent, using the `Deploy` button at the top right of the page.
 
 ![alt text](images/image8.png)
@@ -334,7 +336,7 @@ Click on the `Add agent` button. Since we want to add the agents you created abo
 
 ![alt text](images/image19.png)
 
-Here you see all three agents listed that you have created. We want all of them to be used by the Warehouse Manager Agent, so check everyone of them and click on `Add to agent`.
+Here you see all three agents listed that you have created. We want all of them to be used by the Warehouse Manager Agent, so check everyone of them and click on `Add to agent`. Note that it is possible that you will see more than the three agents covered in this lab (you may have created agents from a different lab, or created some of your own), so make sure you are selecting the right set of three.
 
 ![alt text](images/image20.png)
 
