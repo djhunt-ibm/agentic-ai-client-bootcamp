@@ -1,4 +1,4 @@
- # 🥇 Business Automation - Competitive Insights 2.0
+ # 🥇 Business Automation - Competitive Insights
 
 <!--![image](https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/451557/b9fb42fc-4aa1-4010-b850-5c8f20e3e05a)-->
 ![image](assets/hypercar3.png)
@@ -51,20 +51,13 @@ This use case utilizes the capabilities of a watsonx Orchestrate agent to extrac
 
   * **Comparison Agent** : This agent handles the end-to-end process of product comparison. It first identifies and collects URLs for similar products based on matching features. Then, using these links, it analyzes competitor offerings, extracts key insights, and generates a detailed SWOT analysis for each product. The findings are presented in a clear, structured table format to enable quick and effective comparison.
 
-> **!IMPORTANT**
-> This lab uses a simulator for a Human Capital Management system. However, this could be easily changed to any real system running in production such as Workday or others.
-
 ## 📝 Step-by-step Hands-on Lab
 You can find step-by-step instructions here :
 
 [Step-by-step hands-on guide](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/staging/usecases/business-automation/hands-on-lab-buisness-automation.md)
 
 ## Demo Video
-A video demo of the solution is here:
+A video demo of the solution is below:
 
 
 https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/453165/79bf26c4-69c8-4096-ab88-5f9fc38791e5
-
-
-
-It shows how you can implement the use case using watsonx.ai and watsonx Orchestrate. 
