@@ -10,7 +10,7 @@
     - [Configuration](#configuration)
     - [Tools](#tools)
     - [Saving and Deploying](#saving-and-deploying)
-- [Deploying watsonx.ai's External-Agent on Orchestrate](#deploying-watsonxais-external-agent-on-orchestrate)
+- [Integrating watsonx.ai's agent as an External Agent in watsonx Orchestrate](#integrating-watsonxais-agent-as-an-external-agent-in-watsonx-orchestrate)
 - [Orchestrate Agent](#orchestrate-agent)
   - [Product Agent](#product-agent)
 - [Experience Agents in Action](#experience-agents-in-action)
