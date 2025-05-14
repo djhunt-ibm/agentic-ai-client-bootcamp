@@ -5,6 +5,8 @@
 One of the main challenges faced by any big organization is their HR operations management. As companies grow in size, it becomes increasingly difficult to get information faster and execute tasks with ease. With the advent of Agentic systems, and the power or reasoning models, it becomes easier to have a single entry point for doing mostly every HR operation.
 
 
+
+
 ## 🤔 The Problem
 
 TechCorp Inc., a global IT leader with a workforce of 100,000 employees, faced a significant challenge in managing its growing HR operations. As the company expanded, it struggled with efficiently handling employee profile data, time-off requests, and workforce management. Traditional HR systems were no longer sufficient to keep up with the scale and complexity. With multiple vendor tools used for different HR operations, it is difficult to integrate all of them together and provide a seamless experience to the user.
