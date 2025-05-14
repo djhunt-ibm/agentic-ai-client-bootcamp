@@ -88,18 +88,18 @@ Once the agent is created.
 3. After clicking on the save as button select Agent (marked as 1) and Click Save ((marked as 2))
 ![Comparison Agent 2](assets/config_CA_4.png)
 4. Once you click on deploy, you need to create a user api key.  Click on "Create".
-<img width="1000" alt="image" src="assets/image44.0.1.png">
+![Comparison Agent 3](assets/image44.0.1.png)
 5. You'll be directed to another webpage. Click on "Create a key".
-<img width="1000" alt="image" src="assets/image44.0.2.png">
+![Comparison Agent 4](assets/image44.0.2.png)
 6. Once a key is created, navigate back to deployment page. Click on "Reload".
-<img width="1000" alt="image" src="assets/image44.1.png">
-7. After clicking the deployoment button make sure your Targeted deployemnt has been seleceted if not please select it.(marked as 1), click Deploy to deploy the agent (marked as 2)
-![Comparison Agent  3](assets/config_CA_5.png)
+![Comparison Agent 4](assets/image44.1.png)
+7. After clicking the deployment button make sure your Targeted deployment space has been selected and completed if not please select it.(marked as 1), click Deploy to deploy the agent (marked as 2)
+![Comparison Agent 5](assets/config_CA_5.png)
 
 > **YOU DID IT! you just created and deployed your first AI Agent.**
 > Now let's build more agents and integrate them together.
 
-## Deploying watsonx.ai's External-Agent on watsonx Orchestrate
+## Integrating watsonx.ai's agent as an External Agent in watsonx Orchestrate
 
 To deploy your agent on Orchestrate, follow the steps below: 
 
@@ -127,8 +127,6 @@ Then let's go to Orchestrate and create other agent and import this agent in tha
 
 In Orchestrate, we will create main agents, as outlined below:
 
-1.  Product Agent
-
 ### Product Agent
 
 1. Go to the Orchestrate home page, click on the hamburger menu (☰), select Build, and then choose Agent Builder.
@@ -154,7 +152,7 @@ In Orchestrate, we will create main agents, as outlined below:
    ```
    ![Knowledge](assets/product_knowledge.png)
 
-5. Scroll down to the Knowledge section, then in the Document section, click on the Upload file button nad upload [the product catalog](./assets/ABC_Motor_Product_Catalog.pdf).
+5. Scroll down to the Knowledge section, then in the Document section, click on the Upload file button and upload [the product catalog](./assets/ABC_Motor_Product_Catalog.pdf).
 ![Upload file](assets/upload_file.png)
 
 6. Scroll down to the Toolset section, then in the Agents section click on the Add Agent button.
@@ -186,7 +184,7 @@ In Orchestrate, we will create main agents, as outlined below:
 10. Once the delegated agents are added, they will appear as shown in the image below.
 ![Delegation Agent](assets/agent_appear_delegation.png)
 
-10. Scroll down to the Behavior section, add the description shown in image as 1, and then click the Deploy button as shown in image as 2.
+11. Scroll down to the Behavior section, add the description shown in image as 1, and then click the Deploy button as shown in image as 2.
 
       For Product Agent use the below description in Behavior Section.
 
@@ -207,6 +205,8 @@ Follow the steps above, then try interacting with the use case using these sampl
    Ask the following questions to get responses from the Product Agent:
    ```
    Q1: What are the products of ABC Motors.
+   ```
+   ```
    Q2: Give me the info of Zenith X3.
    ```
    ![Product Agent Response](assets/chat_1.png)  
