@@ -125,7 +125,7 @@ Then let's go to Orchestrate and create other agent and import this agent in tha
 
 ## Orchestrate Agent
 
-In Orchestrate, we will create main agents, as outlined below:
+In Orchestrate, we will create our main agent, as outlined below:
 
 ### Product Agent
 
