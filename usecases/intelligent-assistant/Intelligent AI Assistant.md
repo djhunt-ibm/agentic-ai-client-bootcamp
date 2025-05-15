@@ -442,9 +442,14 @@ Once you are satisfied with the answer, deploy this agent using the `Deploy` but
 
 ![alt text](images/image29.png)
 
-Now you can enter your questions and requests in the main chat window. Note how the Warehouse Manager agent is already preselected under the Agents list on the left (it is the only agent appearing in that list anyway).
+Now you can enter your questions and requests in the main chat window. Note how the Warehouse Manager agent is already preselected under the Agents list on the left (it is the only agent appearing in that list anyway). You can use the same questions you asked when testing the individual agents above.
  
 ![alt text](images/image30.png)
+
+We encourage you to explore the behavior of the solution further, by asking more "loaded" questions, which involve more than one agent to answer. For example, you could ask "Please tell me about the status of the warehouse docks and let me know what to do with surplus if there is any." Note how you may get asked follow-up clarification questions by the agent, to retrieve more specific information, for example, which exact truck ID you are asking about.
+What this is trying to show is how you can send fairly detailed questions and instructions to an agent, but you can also give it more autonomy in how to address a request, by involving multiple agents and tools.
+
+![alt text](images/image32.png)
 
 Congratulations! You have create a complete agentic AI solution, without writing a single line of code! 
 
