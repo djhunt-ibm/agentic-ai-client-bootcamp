@@ -51,6 +51,11 @@ This opens the watsonx Orchestrate console.
 ![alt text](images/image2.png)
 
 ### The watsonx Orchestrate console
+
+> When opening the console for the very first time, you may be greeted by a pop-up window offering that you create your first agent. Click on `Skip for now`.
+
+![alt text](images/image31.png)
+
 In the console, it shows that no agents have been deployed yet. Thus, if you interact with watsonx Orchestrate at this point, not much will happen, since the system has no agents available to route any request to.
 
 However, you can already interact with the Large Language Model (LLM) that works behind the scenes, and ask general questions, like "Hw are you today?" or "What is the cpaital of France?". 
@@ -68,7 +73,10 @@ We are now ready to build the first agent. In the watsonx Orchestrate console, c
 In the following screen, you can select if you want to create the new agent from scratch or from a template, and give it a name and a description.
 To create the solution, you will need to create a number of agents and we will go through them one by one, starting with the `Dock Status` agent. Let's start by giving it a name  and a description:
 - Name: Dock Status Agent
-- Description: The Dock Status Agent specializes in answering inquiries about current warehouse dock status. It has access to detailed and up-to-date data about which trucks are loading and unloading at docks, and information about the products they carry, and return detailed textual information about this data to the user.
+- Description: 
+```
+The Dock Status Agent specializes in answering inquiries about current warehouse dock status. It has access to detailed and up-to-date data about which trucks are loading and unloading at docks, and information about the products they carry, and return detailed textual information about this data to the user.
+```
 
 Note that in the world of AI Agents, these descriptions are not merely used as documentation, they are also used in making decisions about selecting the right agent for the job, so what you enter into this field is important.
 
@@ -85,7 +93,7 @@ On the following screen, we can enter more information about the new agent we ar
 In a real production deployment, the Dock Status agent would sit in front of an existing enterprise backend system that can provide up-to-date data about trucks currently sitting at warehouse docks, and keep track of products and their quantity that are being unloaded.
 However, in this hands-on exercise, we will simulate that backend by simply hardcoding the data into the `Behavior` field of the agent. The content of this field drive the prompts that are sent to the underlying LLM, and adding the hardcoded data equates to providing examples in the prompt. So, for the purpose of simulating data stemming from an enterprise system, we can use this workaround. Note how the instructions provide detailed information about both the persona and the context this agent operates with.
 
-On the agent definition page, scroll all the way down to `Behavior` and copy the following text into the `Instructions` text field:
+On the agent definition page, scroll all the way down to the `Behavior` section and copy the following text into the `Instructions` text field:
 
 ```
 Persona:
@@ -274,7 +282,10 @@ Creating yet another agent should work like a breeze for you now! We want an age
 
 Click on Create agent and enter the following:
 - Name: Secretary Agent
-- Description: The Secretary Agent specializes in creating emails related to warehouse topics. 
+- Description: 
+```
+The Secretary Agent specializes in creating emails related to warehouse topics. 
+```
 
 Then click on Create and add the following text to the `Instructions` field in the Behavior section:
 ```
@@ -352,7 +363,12 @@ Click on `Create agent` once more.
 
 ![alt text](images/image16.png)
 
-Like the other agents you created already, this one will be created from scratch. The name is "Warehouse Manager Agent". The description differs from the previous agents, indicating that this one is an 'orchestrating', or 'supervising', or 'routing' agent: "The Warehouse Manager Agent is in charge of routing user requests to the most relevant agent working under it." After you have entered the information, click on `Create`.
+Like the other agents you created already, this one will be created from scratch. The name is "Warehouse Manager Agent". The description differs from the previous agents, indicating that this one is an 'orchestrating', or 'supervising', or 'routing' agent: 
+```
+The Warehouse Manager Agent is in charge of routing user requests to the most relevant agent working under it.
+``` 
+
+After you have entered the information, click on `Create`.
 
 ![alt text](images/image17.png)
 
