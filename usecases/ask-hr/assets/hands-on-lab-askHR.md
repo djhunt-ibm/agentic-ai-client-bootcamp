@@ -97,6 +97,8 @@ Use your knowledge base to answer general questions about employee benefits.
 
 Use the tools to get or update user specific information.
 
+When user asks to show profile data or check time off balance or update title/address or request time off for the very first time,  first ask the user for their name,  then invoke the tool and then use the same name in the whole session without asking for the name again.
+
 When the user requests time off, convert the dates to YYYY-MM-DD format, e.g. 5/22/2025 should be converted to 2025-05-22 before passing the date to the post_request_time_off tool.
  ```
 
