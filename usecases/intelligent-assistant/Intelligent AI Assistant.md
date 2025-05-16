@@ -51,6 +51,11 @@ This opens the watsonx Orchestrate console.
 ![alt text](images/image2.png)
 
 ### The watsonx Orchestrate console
+
+> When opening the console for the very first time, you may be greeted by a pop-up window offering that you create your first agent. Click on `Skip for now`.
+
+![alt text](images/image31.png)
+
 In the console, it shows that no agents have been deployed yet. Thus, if you interact with watsonx Orchestrate at this point, not much will happen, since the system has no agents available to route any request to.
 
 However, you can already interact with the Large Language Model (LLM) that works behind the scenes, and ask general questions, like "Hw are you today?" or "What is the cpaital of France?". 
@@ -68,7 +73,10 @@ We are now ready to build the first agent. In the watsonx Orchestrate console, c
 In the following screen, you can select if you want to create the new agent from scratch or from a template, and give it a name and a description.
 To create the solution, you will need to create a number of agents and we will go through them one by one, starting with the `Dock Status` agent. Let's start by giving it a name  and a description:
 - Name: Dock Status Agent
-- Description: The Dock Status Agent specializes in answering inquiries about current warehouse dock status. It has access to detailed and up-to-date data about which trucks are loading and unloading at docks, and information about the products they carry, and return detailed textual information about this data to the user.
+- Description: 
+```
+The Dock Status Agent specializes in answering inquiries about current warehouse dock status. It has access to detailed and up-to-date data about which trucks are loading and unloading at docks, and information about the products they carry, and return detailed textual information about this data to the user.
+```
 
 Note that in the world of AI Agents, these descriptions are not merely used as documentation, they are also used in making decisions about selecting the right agent for the job, so what you enter into this field is important.
 
@@ -85,7 +93,7 @@ On the following screen, we can enter more information about the new agent we ar
 In a real production deployment, the Dock Status agent would sit in front of an existing enterprise backend system that can provide up-to-date data about trucks currently sitting at warehouse docks, and keep track of products and their quantity that are being unloaded.
 However, in this hands-on exercise, we will simulate that backend by simply hardcoding the data into the `Behavior` field of the agent. The content of this field drive the prompts that are sent to the underlying LLM, and adding the hardcoded data equates to providing examples in the prompt. So, for the purpose of simulating data stemming from an enterprise system, we can use this workaround. Note how the instructions provide detailed information about both the persona and the context this agent operates with.
 
-On the agent definition page, scroll all the way down to `Behavior` and copy the following text into the text field:
+On the agent definition page, scroll all the way down to the `Behavior` section and copy the following text into the `Instructions` text field:
 
 ```
 Persona:
@@ -197,15 +205,15 @@ The Surplus Agent provides recommendations about the handling of surplus data. I
 
 Then click on `Create`.
 
-In the following view, scroll all the way down to the `Behavior` field, and enter the following:
+In the following view, scroll all the way down to the `Behavior` section, and enter the following into the `Instructions` field:
 ```
-- Persona:
-Your purpose is to provide information about surplus. I will ask about the recommended handling of surplus on a specific truck, and you will answer in a detailed format with the allocation strategy based on the given data, along with truck id, Product SKU, total cost, surplus unit.
+Persona:
+- Your purpose is to provide information about surplus. I will ask about the recommended handling of surplus on a specific truck, and you will answer in a detailed format with the allocation strategy based on the given data, along with truck id, Product SKU, total cost, surplus unit.
 
-- Context:
-Use the Surplus data below to create answers. The data below is formatted in JSON, but you will return the information as text in a bulleted list.
-- If no allocation strategy is specified, return data according to the allocations given in the data below.
-- If no product SKU is provided, return data for all of the products within a given truck ID.
+Context:
+- Use the Surplus data below to create answers. The data below is formatted in JSON, but you will return the information as text in a bulleted list.
+- If no allocation strategy is specified, return data according to the default allocation strategy given in the data below.
+- If no product SKU is provided by the user, return data for all of the product SKUs within a given truck ID.
 - Provide as much detail as you can.
 
 Surplus data:
@@ -270,15 +278,27 @@ You should now see two agents listed, and both should have the "Live" indicator.
 
 ### The Secretary Agent
 
-Creating yet another agent should work like a breeze for you now! We want an agent that handles communication with stakeholder, including sending out notifications about surplus handling. The process will be exactly the same as with the previous two agents, and we will once again provide output examples in the `Behavior` field. 
+Creating yet another agent should work like a breeze for you now! We want an agent that handles communication with stakeholder, including sending out notifications about surplus handling. The process will be exactly the same as with the previous two agents, and we will once again provide output examples in the `Instructions` field.
 
 Click on Create agent and enter the following:
 - Name: Secretary Agent
-- Description: You are an agent who specializes in creating emails related to warehouse topics.  You should be compassionate to the user.
-
-Then click on Create and add the following text to the `Behavior` field:
+- Description: 
 ```
-Write a concise and professional draft email about the surplus in the inventory.   The email should directly begin with the subject line, followed by the email body without any introductory statements or preambles. Below are examples of user prompts and the resulting generated email as guidance for your own generations. Use your knowledge of email writing as a guide to structure and tone, but do not limit yourself to specific teams or predefined examples.  Assume the audience and content are general unless specified otherwise.  Avoid mentioning any knowledge limitations or referencing specific teams unless explicitly required.  
+The Secretary Agent specializes in creating emails related to warehouse topics. 
+```
+
+Then click on Create and add the following text to the `Instructions` field in the Behavior section:
+```
+Persona:
+- Your persona is that of a secretary that drafts emails. I will ask you to create an email about a topic, and you will return a textual draft of that email.
+
+Context:
+- Write a concise and professional draft email about the surplus in the inventory.   The email should directly begin with the subject line, followed by the email body without any introductory statements or preambles. 
+- Use your knowledge of email writing as a guide to structure and tone, but do not limit yourself to specific teams or predefined examples.  
+- Assume the audience and content are general unless specified otherwise.  
+- Avoid mentioning any knowledge limitations or referencing specific teams unless explicitly required. 
+- Below are examples of user prompts and the resulting generated email as guidance for your own generations.  
+
 Examples:
 Example1:
 Input: 
@@ -343,7 +363,12 @@ Click on `Create agent` once more.
 
 ![alt text](images/image16.png)
 
-Like the other agents you created already, this one will be created from scratch. The name is "Warehouse Manager Agent". The description differs from the previous agents, indicating that this one is an 'orchestrating', or 'supervising', or 'routing' agent: "A manager agent in charge of routing user requests to the most relevant agent working under it.". After you have entered the information, click on `Create`.
+Like the other agents you created already, this one will be created from scratch. The name is "Warehouse Manager Agent". The description differs from the previous agents, indicating that this one is an 'orchestrating', or 'supervising', or 'routing' agent: 
+```
+The Warehouse Manager Agent is in charge of routing user requests to the most relevant agent working under it.
+``` 
+
+After you have entered the information, click on `Create`.
 
 ![alt text](images/image17.png)
 
@@ -375,7 +400,7 @@ On the following screen, enter details about the imported agent:
   - Service instance URL: enter the value provided to you by your instructor
 - Define new agent
   - Display name: `TrafficAgent` (the name cannot contain a space)
-  - Description of agent capabilities: `This agent returns information about traffic incidents at any given location.`
+  - Description of agent capabilities: `The TrafficAgent agent provides information about traffic in any given location.`
 
 ![alt text](images/image23.png)
 
@@ -383,11 +408,20 @@ Now click on `Import agent`. You should now see all four agents listed in the To
 
 ![alt text](images/image24.png)
 
+Finally, we give this agent instructions about how to use the collaborator agents we defined earlier. Enter the folllowing text in the `Instructions` field under Behavior.
+```
+Reasoning:
+- Use the Dock Status Agent for tasks related to dock status.
+- Use the Surplus Agent for tasks related to surplus.
+- Use the Secretary Agent for drafting of emails.
+- Use the TrafficAgent to find traffic information about a location.
+```
+
 Before we test this agent, scroll all the to the bottom and make sure the `Show agent` checkbox is actually checked! This is the agent we want to use in the main chat window and make it available to end users.
 
 ![alt text](images/image25.png)
 
-Let's test it. Since we haven't touched it before, let's start with the externale TrafficAgent agent. We can trigger it by asking about traffic in a given location, say, Sydney Australia. Enter the following into the Preview text input: "Please tell me about traffic around central Sydney, Australia." (Yuo can obviously pick any other location, too.)
+Let's test it. Since we haven't touched it before, let's start with the externale TrafficAgent agent. We can trigger it by asking about traffic in a given location, say, Sydney Australia. Enter the following into the Preview text input: "Please tell me about traffic around central Sydney, Australia." (You can obviously pick any other location, too.)
 
 ![alt text](images/image26.png)
 
@@ -408,9 +442,14 @@ Once you are satisfied with the answer, deploy this agent using the `Deploy` but
 
 ![alt text](images/image29.png)
 
-Now you can enter your questions and requests in the main chat window. Note how the Warehouse Manager agent is already preselected under the Agents list on the left (it is the only agent appearing in that list anyway).
+Now you can enter your questions and requests in the main chat window. Note how the Warehouse Manager agent is already preselected under the Agents list on the left (it is the only agent appearing in that list anyway). You can use the same questions you asked when testing the individual agents above.
  
 ![alt text](images/image30.png)
+
+We encourage you to explore the behavior of the solution further, by asking more "loaded" questions, which involve more than one agent to answer. For example, you could ask "Please tell me about the status of the warehouse docks and let me know what to do with surplus if there is any." Note how you may get asked follow-up clarification questions by the agent, to retrieve more specific information, for example, which exact truck ID you are asking about.
+What this is trying to show is how you can send fairly detailed questions and instructions to an agent, but you can also give it more autonomy in how to address a request, by involving multiple agents and tools.
+
+![alt text](images/image32.png)
 
 Congratulations! You have create a complete agentic AI solution, without writing a single line of code! 
 
