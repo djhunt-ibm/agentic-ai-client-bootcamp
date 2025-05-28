@@ -7,6 +7,8 @@ One of the critical processes in any enterprise is the Order-to-Cash (O2C) cycle
 ## 🎥 Demo
 
 
+https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/452897/ba04c942-cb09-4a4b-a56c-6a0aa57b9e7d
+
 
 
 ## 🔍 Problem Statement
