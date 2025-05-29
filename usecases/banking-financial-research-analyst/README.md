@@ -1,6 +1,6 @@
- # 🥇 Financial Analyst Agent
+# 🥇 Financial Analyst Agent
 
-
+<img width="900" alt="image" src="images/blue_aurum_img.png">
 
 ## 🤔 The Problem
 
@@ -56,5 +56,4 @@ You can find step-by-step instructions here :
 
 ## Demo Video
 A video demo of the solution is below:
-
 
