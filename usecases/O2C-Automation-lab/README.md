@@ -1,6 +1,6 @@
 # 💼 Transforming Order-to-Cash Process
 
-<img alt="Order-to-Cash" src="./practitioner_docs/order2cash/o2c.png" width="1000">
+<img alt="Order-to-Cash" src="./practitioner_docs/images/o2c.png" width="1000">
 
 One of the critical processes in any enterprise is the Order-to-Cash (O2C) cycle, which spans order placement, invoicing, and payment collection. As businesses scale, managing this workflow manually becomes time-consuming and prone to delays. By simulating interactions with the O2C system and leveraging automation, organizations can streamline order processing, accelerate invoice generation, and ensure timely payment collection. With the rise of Agentic systems and intelligent reasoning models, automating the entire O2C flow not only boosts operational efficiency but also enhances customer satisfaction through faster, more reliable service delivery.
 
@@ -31,12 +31,11 @@ The transformation of the Order-to-Cash process delivered substantial business i
 
 ## 🏛️ Architecture
 
+<img alt="Order-to-Cash" src="./practitioner_docs/images/o2c-arch-sb.png" width="1000">
 
 ## 📄 Hands-on step-by-step lab
 
-Please find the step-by-step instructions on how you can implement this use case, we have following two workflows.
+Please find the step-by-step instructions on how you can implement this use case with the two workflows.
 
-- [Order Management](./practitioner_docs/order_management.md)
-- [Customer Support](./practitioner_docs/customer_support.md)
-
+- [Order-to-Cash](./practitioner_docs/hands-on-lab.md)
 
