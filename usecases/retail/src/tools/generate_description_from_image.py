@@ -4,23 +4,24 @@ import requests
 import io
 import logging
 import argparse
+import os
+from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage, SystemMessage
-from langchain_ibm import WatsonxLLM, ChatWatsonx
+from langchain_ibm import ChatWatsonx
 from ibm_watsonx_ai.metanames import GenTextParamsMetaNames as GenParams
 from ibm_watsonx_orchestrate.agent_builder.tools import ToolPermission, tool
 from ibm_watsonx_orchestrate.run import connections
 from ibm_watsonx_orchestrate.client.connections import ConnectionType
 
 CONNECTION_WATSONX_AI = 'watsonxai'
+model_id=''
+api_key=''
+project_id=''
+is_called_from_orchestrate=True
 
 logger = logging.getLogger(__name__)
 
 def encode_image_to_base64(image_url: str) -> Optional[str]:
-    #     with open(image_path, "rb") as image_file:
-    #         return base64.b64encode(image_file.read()).decode("utf-8")
-    # except Exception as e:
-    #     logger.error(f"Error encoding image {image_path} to base64: {e}")
-    #     return None
     headers = {"User-Agent": "Mozilla/5.0"}
     response = requests.get(image_url, headers=headers)
     response.raise_for_status()  # Raise an error for bad responses
@@ -67,12 +68,14 @@ def generate_description_from_image(image_url: str) -> str:
     Returns:
     str: The generated description of the image.
     """
+    global model_id
+    global api_key
+    global project_id
 
-    model_id = connections.key_value(CONNECTION_WATSONX_AI)['modelid']
-    api_key = connections.key_value(CONNECTION_WATSONX_AI)['apikey']
-    project_id = connections.key_value(CONNECTION_WATSONX_AI)['projectid']
-
-    #MODEL_ID="meta-llama/llama-3-2-90b-vision-instruct"
+    if is_called_from_orchestrate == True:
+        model_id = connections.key_value(CONNECTION_WATSONX_AI)['modelid']
+        api_key = connections.key_value(CONNECTION_WATSONX_AI)['apikey']
+        project_id = connections.key_value(CONNECTION_WATSONX_AI)['projectid']
 
     # Set up logging
     logging.basicConfig(
@@ -121,6 +124,12 @@ if __name__ == "__main__":
     parser.add_argument("--url", required=True, help="Image URL")
 
     args = parser.parse_args()
+
+    load_dotenv()
+    model_id=os.getenv("MODEL_ID")
+    api_key=os.getenv("WATSONX_API_KEY")
+    project_id=os.getenv("PROJECT_ID")
+    is_called_from_orchestrate=False
 
     description = generate_description_from_image(args.url)
     print("Generated Description:", description)
