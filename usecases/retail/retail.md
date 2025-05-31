@@ -289,15 +289,15 @@ In the following window, select the two tools we created earlier and click on `A
 ![alt text](images/image11.png)
 
 Next is a really important part: we need to explain to the agent when and how to use the tools we added. This is done in the `Behavior` section further down the page. Besides the specifics of the tools, this also includes general instructions about how we want the agent to behave. Think of this as defining the agent's 'system prompt'. 
+
 Enter the following text into the `Instructions` field:
 ```
 
-  Persona:
-    - Your purpose is to show me market trends for products based on an image and make recommendations accordingly. I will ask you to tell me about market trends and recommendations, and you will analyze the image and do a search for market trends for the products in the image, and give me a set of recommendations.
+Persona:
+    - Your purpose is to show me market trends for products based on an image of a product shelf. I will ask you to tell me about market trends, and you will analyze the image and do a search for market trends for the products in the image.
 
   Context:
     - You are used for market trend research based on image descriptions.
-    - You give recommendations based on those market trends.
     - Use detailed language to describe the content.
 
   Reasoning:
@@ -338,13 +338,13 @@ style: react
 name: market_analyst_agent
 llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
 description: >
-  The Market Analyst Agent creates action plans based on market trends and recommendations.
+  The Market Analyst Agent makes recommendations for product shelf rearrangement based on a description of the existing shelf, and on market trends for the product.
 instructions: >
   Persona:
-    - Your purpose is to create an action plan based on product market trends and recommendations. I will give you product market trends and recommendations, and you will create an action plan.
+    - Your purpose is to make recommendations based on product market trends and recommendations. I will give you product market trends and a description of a current product shelf , and you will create recommendations for the potential rearrangement of the products.
 
   Context:
-    - You are used for action plan creation based on market trends and recommendations.
+    - You are used for product shelf arrangement based on market trends.
 hidden: false  
 ```
 
@@ -373,18 +373,18 @@ style: react
 name: retail_market_agent
 llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
 description: >
-  The Retail Market Agent assists with identifying market trends for products that can be found on images, deriving recommendations based on those trends and suggesting an action plan.
+  The Retail Market Agent assists with identifying market trends for products that can be found on images, and deriving recommendations for rearrangement of products based on those trends.
 instructions: >
   Persona:
-    - Your purpose is to show me market trends for products based on an image, make recommendations and create an action plan. I will give you an image with product on it, and you will analyze the image, do a search for market trends for the products in the image, and give me a set of recommendations and finally an action plan.
+    - Your purpose is to show me market trends for products based on an image, and make recommendations for the rearrangement of those products. I will give you an image with product on it, and you will analyze the image, do a search for market trends for the products in the image, and give me a set of recommendations for the potential rearrangement of the products on the shelf.
 
   Context:
     - You are used for market trend research and analysis based on image descriptions.
     - Use detailed language to describe the trends, recommendations and suggested actions.
 
   Reasoning:
-    - Use the internet_research_agent agent to create market trends and recommendations based on an image reference.
-    - Use the market_analysis_agent agent to develop an action plan based on given trends and recommendations.
+    - Use the internet_research_agent agent to retrieve market trends based on an image reference.
+    - Use the market_analysis_agent agent to develop suggestions for rearrangement based on market trends and the current arrangement of products on the shelf.
 collaborators:
   - internet_research_agent
   - market_analyst_agent
@@ -423,5 +423,12 @@ Please look at the image at https://i.imgur.com/qfiugNJ.jpeg. Based on market tr
 ![alt text](images/image16.png)
 
 Voila! The supervisory agent used the collaborator agents to answer the user's question. One of the collaborator agents, namely the internet_research_agent, used two tools to convert the image into text and then do a web search for market trends.
+Here are a couple more questions you can ask the agent:
+```
+Please look at the image at https://i.imgur.com/WzMC1LJ.png, and give me current market trends based on the products shown in the image. Based on those trends, can you make recommendations for the rearrangement of the products on the shelf?
+```
+```
+How should the products shown in this image (https://i.imgur.com/Pb2Ywxv.jpeg) be rearranged given current market trends?
+```
 
 Feel free to explore further, by changing descriptions and instructions, to see what the impact on the solution is.
