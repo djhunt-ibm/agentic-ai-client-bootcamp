@@ -58,7 +58,7 @@ This opens the watsonx Orchestrate console.
 
 In the console, it shows that no agents have been deployed yet. Thus, if you interact with watsonx Orchestrate at this point, not much will happen, since the system has no agents available to route any request to.
 
-However, you can already interact with the Large Language Model (LLM) that works behind the scenes, and ask general questions, like "Hw are you today?" or "What is the cpaital of France?". 
+However, you can already interact with the Large Language Model (LLM) that works behind the scenes, and ask general questions, like "How are you today?" or "What is the capital of France?". 
 
 ![alt text](images/image3.png)
 
