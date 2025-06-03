@@ -202,43 +202,5 @@ API 2:
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/28.png">
 
-
-**Information Agent:**
-
-- Click on Agent Builder.
-- Click on Create Agent
-- Follow the steps according the below screenshot.
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/29.png">
-
-- Now click on add tool to upload OpenAPI Specs. Click on Add Tool.
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/30.png">
-
-- Click on Import from External Tool
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/31.png">
-
-- Upload the required OpenAPI Specs
-[duckduckgo](/open_api_specs/duckduckgo.json)
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/32.png">
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/33.png">
-
-- Select the API. Then, select Done.
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/34.png">
-
-- Add Behviour as to how the Agent should behave and what it should expect.
-- Make sure to also Add Description of the Agent.
-- Refine the Tool Description what to expect from the tools.
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/35.png">
-
-- Test the Agent flow and then Click on Deploy.
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/36.png">
-
 ***Now, the Agents are deployed.***
 ***You can navigate to AI chat and select the required agent and test the flow.***
