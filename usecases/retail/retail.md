@@ -93,7 +93,7 @@ This indicates that we are using the [IBM watsonx extension to Langchain](https:
                         model_id=model_id,
                         url="https://us-south.ml.cloud.ibm.com",
                         apikey=api_key,
-                        project_id=project_id,
+                        space_id=space_id,
                         params={
                             GenParams.TEMPERATURE: 0.5,
                             GenParams.MAX_NEW_TOKENS: 1000
@@ -149,9 +149,9 @@ Another important element of the code extract above is the description. This des
 #### Local test
 As mentioned above, you can run this tool from the command line to test the code. Note, however, that it is expecting a file named `.env` to be available in the same folder as where you start the Python interpreter from. You will see later that the watsonx Orchestrate ADK also requires a .env file when being started. You can reuse the same file for both purposes. Note that because of the reuse, the actual file has more entries than shown below.
 ```
-MODEL_ID=meta-llama/llama-3-2-90b-vision-instruct
+WATSONX_MODEL_ID=meta-llama/llama-3-2-90b-vision-instruct
 WATSONX_APIKEY=oj5BW-...... [insert your API key here]
-WATSONX_PROJECT_ID=186ac9b7-35ec....... [insert your project ID here]
+WATSONX_SPACE_ID=186ac9b7-35ec....... [insert your space ID here]
 ```
 You call the tool from the command line like this (again, make sure you are in the right folder that has both the .py file and the .env file):
 `python generate_description_from_image.py --url https://i.imgur.com/qfiugNJ.jpeg`
@@ -182,7 +182,7 @@ source .env
 set +o allexport
 
 # Use the environment variables in a command
-orchestrate connections set-credentials -a watsonxai --env draft -e "modelid=${MODEL_ID}" -e "projectid=${WATSONX_PROJECT_ID}" -e "apikey=${WATSONX_APIKEY}"
+orchestrate connections set-credentials -a watsonxai --env draft -e "modelid=${WATSONX_MODEL_ID}" -e "spaceid=${WATSONX_SPACE_ID}" -e "apikey=${WATSONX_APIKEY}"
 ```
 After this, you are finally ready to import the tool. On the command line, enter the following command to do so (make sure you are in the right folder when calling it):
 ```
