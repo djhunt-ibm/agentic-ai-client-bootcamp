@@ -61,7 +61,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 - Add Behviour as to how the Agent should behave and what it should expect.
 - Make sure to also Add Description of the Agent.
 - Refine the Tool Description what to expect from the tools.
-- Find out what to add here: [Description and Behaviour](/description_and_behaviour/information_agent.txt)
+- Find out what to add here: [Description and Behaviour](/usecases/autoclaim-insurance/assets/description_and_behaviour/information_agent.txt)
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/35.png">
 
@@ -91,7 +91,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/4.png">
 
-- Upload "Policy.pdf" (/data/Policy.pdf) to the knowledge base by clicking on Upload files.
+- Upload "Policy.pdf"  [Claim Processor Knowledge Base](/data/Policy.pdf) to the knowledge base by clicking on Upload files.
 - Add Description of Knowledge Base as to what the Knowledge Base is about.
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/5.png">
@@ -139,7 +139,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 - Add Behviour as to how the Agent should behave and what it should expect.
 - Make sure to also Add Description of the Agent.
 - Refine the Tool Description what to expect from the tools.
-- Find out what to add here: [Description and Behaviour](/description_and_behaviour/claim_processor_insurance_agent.txt)
+- Find out what to add here: [Description and Behaviour](/usecases/autoclaim-insurance/assets/description_and_behaviour/claim_processor_insurance_agent.txt)
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/15.png">
 
@@ -162,7 +162,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/19.png">
 
-- Upload "Automobile Insurance Knowledge Base.pdf" (/data/Automobile Insurance Knowledge Base.pdf) to the knowledge base by clicking on Upload files.
+- Upload "Automobile Insurance Knowledge Base.pdf" [Customer Knowledge Base](</usecases/autoclaim-insurance/assets/data/Automobile Insurance Knowledge Base.pdf>) to the knowledge base by clicking on Upload files.
 - Add Description of Knowledge Base as to what the Knowledge Base is about.
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/20.png">
@@ -194,7 +194,7 @@ API 2:
 - Add Behviour as to how the Agent should behave and what it should expect.
 - Make sure to also Add Description of the Agent.
 - Refine the Tool Description what to expect from the tools.
-- Find out what to add here: [Description and Behaviour](/description_and_behaviour/customer_claims_agent.txt)
+- Find out what to add here: [Description and Behaviour](/usecases/autoclaim-insurance/assets/description_and_behaviour/customer_claims_agent.txt)
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/27.png">
 
