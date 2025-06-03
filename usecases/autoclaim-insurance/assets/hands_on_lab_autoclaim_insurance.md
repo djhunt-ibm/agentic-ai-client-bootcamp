@@ -61,6 +61,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 - Add Behviour as to how the Agent should behave and what it should expect.
 - Make sure to also Add Description of the Agent.
 - Refine the Tool Description what to expect from the tools.
+- Find out what to add here: [Description and Behaviour](/description_and_behaviour/information_agent.txt)
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/35.png">
 
@@ -112,9 +113,13 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/10.png">
 
+<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/10_2.png">
+
 - Select the API. Then, select Done.
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/11.png">
+
+<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/11_2.png">
 
 - Click on Add Agent. Add from Local Instance.
 
@@ -129,6 +134,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 - Add Behviour as to how the Agent should behave and what it should expect.
 - Make sure to also Add Description of the Agent.
 - Refine the Tool Description what to expect from the tools.
+- Find out what to add here: [Description and Behaviour](/description_and_behaviour/claim_processor_insurance_agent.txt)
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/15.png">
 
@@ -183,6 +189,7 @@ API 2:
 - Add Behviour as to how the Agent should behave and what it should expect.
 - Make sure to also Add Description of the Agent.
 - Refine the Tool Description what to expect from the tools.
+- Find out what to add here: [Description and Behaviour](/description_and_behaviour/customer_claims_agent.txt)
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/27.png">
 
