@@ -46,6 +46,9 @@ Imagine a scenario where a customer is involved in an accident and needs to file
 ## Demo
 
 
+https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/461826/082f28a8-3ca7-49e0-bdb3-c9013392a44c
+
+
 
 ## Business Value & Benefits:
 ### For Customers:
