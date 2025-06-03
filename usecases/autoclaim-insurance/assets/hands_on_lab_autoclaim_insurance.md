@@ -48,7 +48,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/31.png">
 
 - Upload the required OpenAPI Specs
-[duckduckgo](/open_api_specs/duckduckgo.json)
+[duckduckgo](/usecases/autoclaim-insurance/assets/open_api_specs/duckduckgo.json)
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/32.png">
 
@@ -106,9 +106,9 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/8.png">
 
 - Upload the required OpenAPI Specs
-[open_top_5_claims](/open_api_specs/open_top_5_claims.json)
-[claim_processor_fetch_claim](/open_api_specs/claim_processor_fetch_claim.json)
-[claim_status_update](/open_api_specs/claim_status_update.json)
+[open_top_5_claims](/usecases/autoclaim-insurance/assets/open_api_specs/open_top_5_claims.json)
+[claim_processor_fetch_claim](/usecases/autoclaim-insurance/assets/open_api_specs/claim_processor_fetch_claim.json)
+[claim_status_update](/usecases/autoclaim-insurance/assets/open_api_specs/claim_status_update.json)
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/9.png">
 
@@ -178,8 +178,8 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/23.png">
 
 - Upload the required OpenAPI Specs. Select the API. Then, select Done.
-[claim_status](/open_api_specs/claim_status.json)
-[tool_create_claim](/open_api_specs/tool_create_claim.json)
+[claim_status](/usecases/autoclaim-insurance/assets/open_api_specs/claim_status.json)
+[tool_create_claim](/usecases/autoclaim-insurance/assets/open_api_specs/tool_create_claim.json)
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/24.png">
 
