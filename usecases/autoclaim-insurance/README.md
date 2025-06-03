@@ -73,6 +73,6 @@ https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/461826/55793477-f5
   
   **Seamless dispute resolution** -– Data-backed insights help resolve conflicts faster.
 
-## Hands-on ste-by-step lab
+## Hands-on step-by-step lab
 
 Please find the step-by-step instructions [Hands-on Lab](/usecases/autoclaim-insurance/assets/hands_on_lab_autoclaim_insurance.md) on how you can implement this use case.
