@@ -16,7 +16,7 @@ from ibm_watsonx_orchestrate.client.connections import ConnectionType
 CONNECTION_WATSONX_AI = 'watsonxai'
 model_id=''
 api_key=''
-project_id=''
+space_id=''
 is_called_from_orchestrate=True
 
 logger = logging.getLogger(__name__)
@@ -70,12 +70,12 @@ def generate_description_from_image(image_url: str) -> str:
     """
     global model_id
     global api_key
-    global project_id
+    global space_id
 
     if is_called_from_orchestrate == True:
         model_id = connections.key_value(CONNECTION_WATSONX_AI)['modelid']
         api_key = connections.key_value(CONNECTION_WATSONX_AI)['apikey']
-        project_id = connections.key_value(CONNECTION_WATSONX_AI)['projectid']
+        space_id = connections.key_value(CONNECTION_WATSONX_AI)['space_id']
 
     # Set up logging
     logging.basicConfig(
@@ -87,7 +87,7 @@ def generate_description_from_image(image_url: str) -> str:
                         model_id=model_id,
                         url="https://us-south.ml.cloud.ibm.com",
                         apikey=api_key,
-                        project_id=project_id,
+                        space_id=space_id,
                         params={
                             GenParams.TEMPERATURE: 0.5,
                             GenParams.MAX_NEW_TOKENS: 1000
@@ -126,9 +126,9 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     load_dotenv()
-    model_id=os.getenv("MODEL_ID")
-    api_key=os.getenv("WATSONX_API_KEY")
-    project_id=os.getenv("PROJECT_ID")
+    model_id=os.getenv("WATSONX_MODEL_ID")
+    api_key=os.getenv("WATSONX_APIKEY")
+    space_id=os.getenv("WATSONX_SPACE_ID")
     is_called_from_orchestrate=False
 
     description = generate_description_from_image(args.url)
