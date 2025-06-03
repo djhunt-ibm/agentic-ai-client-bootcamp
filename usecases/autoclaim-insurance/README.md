@@ -40,7 +40,12 @@ Imagine a scenario where a customer is involved in an accident and needs to file
  * Approved claims are automatically forwarded for payout, reducing settlement time significantly.
 
 ## Architecture
-![Architecture](data/Autoclaim_Insurance_Architecture.png)
+![Architecture](./assets/Autoclaims_Insurance_Architecture.png)
+
+
+## Demo
+
+
 
 ## Business Value & Benefits:
 ### For Customers:

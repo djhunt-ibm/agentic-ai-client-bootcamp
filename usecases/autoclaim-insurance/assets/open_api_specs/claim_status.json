@@ -1,0 +1,72 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Auto Insurance Claim Status API",
+      "version": "1.0.0",
+      "description": "API to check the status of a specific insurance claim."
+    },
+    "servers": [
+      {
+        "url": "https://auto-insurance-fetch-insert-details.1v25kydgpc85.us-east.codeengine.appdomain.cloud"
+      }
+    ],
+    "paths": {
+      "/check_claim_status": {
+        "get": {
+          "summary": "Check Claim Status",
+          "description": "Retrieves the status of a claim using customer ID and claim number.",
+          "parameters": [
+            {
+              "name": "name",
+              "in": "query",
+              "required": true,
+              "schema": {
+                "type": "string"
+              },
+              "description": "Name of the customer"
+            },
+            {
+              "name": "claim_number",
+              "in": "query",
+              "required": true,
+              "schema": {
+                "type": "string"
+              },
+              "description": "Unique identifier of the claim"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successfully retrieved claim status",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "claim_number": {
+                        "type": "string"
+                      },
+                      "status": {
+                        "type": "string"
+                      },
+                      "last_updated": {
+                        "type": "string",
+                        "format": "date-time"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Claim not found"
+            },
+            "400": {
+              "description": "Missing or invalid parameters"
+            }
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,73 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Auto Insurance Claim API",
+    "version": "1.0.0",
+    "description": "API to create auto insurance claim requests."
+  },
+  "servers": [
+    {
+      "url": "https://auto-insurance-fetch-insert-details.1v25kydgpc85.us-east.codeengine.appdomain.cloud"
+    }
+  ],
+  "paths": {
+    "/create_claim_request": {
+      "post": {
+        "summary": "Create a Claim Request",
+        "description": "Creates a new insurance claim request with provided customer and accident details.",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Full name of the claimant"
+          },
+          {
+            "name": "estimated_cost",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number"
+            },
+            "description": "Estimated cost of repair or loss"
+          },
+          {
+            "name": "claim_request_details",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Details of the incident or accident"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Claim successfully created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "claim_number": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
