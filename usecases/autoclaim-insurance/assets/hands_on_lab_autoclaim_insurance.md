@@ -107,17 +107,22 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 - Upload the required OpenAPI Specs
 [open_top_5_claims](/open_api_specs/open_top_5_claims.json)
+[claim_processor_fetch_claim](/open_api_specs/claim_processor_fetch_claim.json)
 [claim_status_update](/open_api_specs/claim_status_update.json)
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/9.png">
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/10.png">
 
+<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/10_1.png">
+
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/10_2.png">
 
 - Select the API. Then, select Done.
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/11.png">
+
+<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/11_1.png">
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/11_2.png">
 
