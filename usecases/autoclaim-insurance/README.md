@@ -5,7 +5,7 @@ This lab shows how to build an intelligent auto insurance claim processing syste
 Traditionally, filing an insurance claim is a tedious, manual, and often frustrating process. Customers struggle with complex paperwork, poor communication, and long wait times, while claim reviewers are burdened with data overload, fraud detection challenges, and regulatory compliance.
 But what if we could change that? What if we could make claims processing seamless, intelligent, and highly efficient? That’s exactly what WatsonxAutoClaims delivers!
 
-## Problem Statement: 
+## Problem statement 
 Let’s take a quick look at the challenges faced by both customers and claim reviewers in the current process:
 ### Customers experience:
   - A complicated, time-consuming claim submission process.
