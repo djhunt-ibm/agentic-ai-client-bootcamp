@@ -1,4 +1,4 @@
-# Auto Insurance Claim Processing
+# Auto Insurance Claim Processing with Agentic AI
 
 ## Introduction: 
 Greetings introduce you to WatsonxAutoClaims, a revolutionary digital platform that transforms the auto insurance claim process through the power of Agentic AI.
