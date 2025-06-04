@@ -7,13 +7,13 @@ But what if we could change that? What if we could make claims processing seamle
 
 ## Problem statement 
 Let’s take a quick look at the challenges faced by both customers and claim reviewers in the current process:
-### Customers experience:
+### For customers
   - A complicated, time-consuming claim submission process.
   - Lack of communication and transparency.
   - Delayed settlements due to manual processing.
   - Unclear understanding of policy coverage.
 
-### Claim Reviewers face:
+### For claim reviewers
   - An overwhelming volume of claims.
   - Complex and time-consuming fraud detection.
   - Manual paperwork leading to inefficiencies and errors.
@@ -23,19 +23,19 @@ Clearly, the current system is outdated and inefficient. Now, let’s see how Wa
 
 ## Solution Overview – WatsonxAutoClaims in Action: 
 Imagine a scenario where a customer is involved in an accident and needs to file a claim.
-### 1.Seamless Claim Submission
+### 1. Seamless claim submission
  * The customer uploads a claim via the digital portal, using a simple, guided workflow.
  * AI automatically extracts and verifies key details from the uploaded documents and images.
-### 2.Intelligent Claim Processing
+### 2. Intelligent Claim Processing
  * The system cross-references policy documents and past claims to determine eligibility.
  * AI-powered recommendations suggest the most probable settlement amount based on historical data.
-### 3.Real-time Updates & Communication
+### 3. Real-time Updates & Communication
  * Customers receive instant notifications at every stage of the process.
  * AI-driven chatbots clarify policy coverage and answer questions in real time.
-### 4.AI-Driven Fraud Detection & Claim Assessment
+### 4. AI-Driven Fraud Detection & Claim Assessment
  * AI flags potentially fraudulent claims by analyzing patterns and anomalies.
  * Smart assessment tools estimate damage repair costs and recommend fair settlements.
-### 5.Automated Approvals & Faster Payouts
+### 5. Automated Approvals & Faster Payouts
  * The system ensures compliance with insurance regulations.
  * Approved claims are automatically forwarded for payout, reducing settlement time significantly.
 
