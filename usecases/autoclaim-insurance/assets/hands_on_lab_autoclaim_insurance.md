@@ -20,7 +20,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 <img width="1000" alt="image" src="Autoclaims_Insurance_Architecture.png">
 
-## WxO Implementation
+## Implementation
 
 ### Pre-requisites
 
@@ -29,7 +29,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 - Validate that you have access to a credentials file that you instructor will share with you before starting the labs.
 - If you're an instructor running this lab, check the **Instructor's guides** to set up all environments and systems.
 
-### Watsonx Orchestrate Deployment
+### Implementation
 
 **Information Agent:**
 
