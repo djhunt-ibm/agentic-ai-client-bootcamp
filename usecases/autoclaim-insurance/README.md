@@ -1,7 +1,7 @@
 # Auto Insurance Claim Processing with Agentic AI
 
 ## Introduction
-This lab shows how to mautomate auto insurance claim processing through the power of Agentic AI.
+This lab shows how to build an intelligent auto insurance claim processing system with Agentic AI.
 Traditionally, filing an insurance claim is a tedious, manual, and often frustrating process. Customers struggle with complex paperwork, poor communication, and long wait times, while claim reviewers are burdened with data overload, fraud detection challenges, and regulatory compliance.
 But what if we could change that? What if we could make claims processing seamless, intelligent, and highly efficient? That’s exactly what WatsonxAutoClaims delivers!
 
