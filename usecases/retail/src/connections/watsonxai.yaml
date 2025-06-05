@@ -5,3 +5,6 @@ environments:
     draft:
         kind: kv
         type: team
+    live:
+        kind: kv
+        type: team

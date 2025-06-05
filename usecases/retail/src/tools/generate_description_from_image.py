@@ -75,7 +75,7 @@ def generate_description_from_image(image_url: str) -> str:
     if is_called_from_orchestrate == True:
         model_id = connections.key_value(CONNECTION_WATSONX_AI)['modelid']
         api_key = connections.key_value(CONNECTION_WATSONX_AI)['apikey']
-        space_id = connections.key_value(CONNECTION_WATSONX_AI)['space_id']
+        space_id = connections.key_value(CONNECTION_WATSONX_AI)['spaceid']
 
     # Set up logging
     logging.basicConfig(
