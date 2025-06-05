@@ -19,6 +19,9 @@
     - [The Market Analyst Agent](#the-market-analyst-agent)
     - [The Retail Market Agent](#the-retail-market-agent)
   - [Final test and Summary](#final-test-and-summary)
+  - [(Optional) Uploading the solution to a watsonx Orchestrate SaaS instance](#optional-uploading-the-solution-to-a-watsonx-orchestrate-saas-instance)
+    - [Remote environment configuration](#remote-environment-configuration)
+    - [Importing connections, tools and agents](#importing-connections-tools-and-agents)
 
 ## Introduction
 This use case describes a scenario where a user can submit an image, i.e. a photograph that contains a shelf of products. Products are expected to be consumer products, that is, shoes, clothing, food, household supplies etc. The system will analyze the content of the image, i.e. identify the products shown, retrieve market trends for those products via web search, and finally develop recommendations and an action plan for how to reorganize the shelf to align with those market trends. 
@@ -167,7 +170,12 @@ environments:
     draft:
         kind: kv
         type: team
+    live:
+        kind: kv
+        type: team
 ```
+Note that the YAML defines two `environments`, namely `draft` and `live`. This allows setting credentials for different environments to different values. When using the ADK locally, there is only one environment supported, namely `draft`. The other definition will be ignored. However, we will need the `live` environment when uploading the solution to a remote SaaS instance (which is covered [further below](#optional-uploading-the-solution-to-a-watsonx-orchestrate-saas-instance)), so we have included it into the file.
+
 Create the Connection instance with the CLI like this:
 `orchestrate connections import -f watsonxai.yaml`
 
@@ -176,14 +184,19 @@ Below is a script that shows how you can use the same .env file we used earlier 
 ```
 #!/bin/bash
 
+# Use default if no argument was passed
+DEFAULT_TARGET_ENV="draft"
+TARGET_ENV="${1:-$DEFAULT_TARGET_ENV}"
+
 # Load variables from .env
 set -o allexport
 source .env
 set +o allexport
 
-# Use the environment variables in a command
-orchestrate connections set-credentials -a watsonxai --env draft -e "modelid=${WATSONX_MODEL_ID}" -e "spaceid=${WATSONX_SPACE_ID}" -e "apikey=${WATSONX_APIKEY}"
+# set the credentials
+orchestrate connections set-credentials -a watsonxai --env "${TARGET_ENV}" -e "modelid=${WATSONX_MODEL_ID}" -e "spaceid=${WATSONX_SPACE_ID}" -e "apikey=${WATSONX_APIKEY}"
 ```
+
 After this, you are finally ready to import the tool. On the command line, enter the following command to do so (make sure you are in the right folder when calling it):
 ```
 orchestrate tools import -k python -f generate_description_from_image.py -r requirements.txt -a watsonxai
@@ -217,24 +230,32 @@ environments:
     draft:
         kind: kv
         type: team
+    live:
+        kind: kv
+        type: team
 ```
 
 Create the new object by entering the following on the command line:
 ```
 orchestrate connections import -f tavily.yaml
 ```
+> You will see a warning about the configuration for the `live` environment, you can safely ignore that warning here, we will use the `live` environment only when connected to a remote SaaS instance.
 
 And as before, we use the `set-credentials` subommand to set the actual value of the Tavily API key that is used by the tool. We can use a slightly modified version of the script we used before:
 ```
 #!/bin/bash
+
+# Use default if no argument was passed
+DEFAULT_TARGET_ENV="draft"
+TARGET_ENV="${1:-$DEFAULT_TARGET_ENV}"
 
 # Load variables from .env
 set -o allexport
 source .env
 set +o allexport
 
-# Use the environment variables in a command
-orchestrate connections set-credentials -a tavily --env draft -e "apikey=${TAVILY_API_KEY}"
+# set the credentials
+orchestrate connections set-credentials -a tavily --env "${TARGET_ENV}" -e "apikey=${TAVILY_API_KEY}"
 ```
 
 The final step is to import the tool:
@@ -432,3 +453,171 @@ How should the products shown in this image (https://i.imgur.com/Pb2Ywxv.jpeg) b
 ```
 
 Feel free to explore further, by changing descriptions and instructions, to see what the impact on the solution is.
+
+## (Optional) Uploading the solution to a watsonx Orchestrate SaaS instance
+The idea behind the ADK is to allow developers to create agentic solutions on their laptops and test them in a local environment. Once tests have completed, the solution can be pushed into a separate instance, including one that runs in the cloud. It uses the exact same CLI commands for doing so. And since we stored all of the agent and tool definitions in YAML files, we can run the entire process via the command line.
+
+### Remote environment configuration
+As a first step, you need to create a configuration for the remote environment. To a remote SaaS environment, you need to know its endpoint and its API key. You can find both on the resource page for your watsonx Orchestrate instance in the IBM Cloud console.
+
+To find the endpoint URL, open the watsonx Orchestrate console and click on the profile button at the top right corner of the page. Then click on `Settings`:
+
+![alt text](images/image17.png)
+
+On the settings page, click on the `API details` tab.
+
+![alt text](images/image19.png)
+
+There you can copy the Service instance URL to the clipboard by clicking the icon next to the URL, as shown below:
+![alt text](images/image18.png)
+
+Now switch back to the command line and enter the following command on the command line:
+```
+export WXO_ENDPOINT=[copy the URL from the clipboard in here]
+orchestrate env add -n wxo-saas -u ${WXO_ENDPOINT}
+```
+You should see a confirmation message like this:
+```
+[INFO] - Environment 'wxo-saas' has been created
+```
+
+If you run the command `orchestrate env list`, it will show you two environments, the local one and the remote we just added, with the local labeled as "active". Before we activate the remote environment, we have to copy the instance's API key.
+Back on the API details tab of the Settings page, it will most likely not list any API keys (assuming this is a 'fresh' instance), but there is a button labeled `Generate API key`.
+
+![alt text](images/image20.png)
+
+Click on that button to generate a key. This will redirect you to the IBM Cloud IAM API keys page. You may see one or more keys already generated (as shown on the picture below), but go ahead and create a new one for this exercise, by clicking on the `Create` button.
+
+![alt text](images/image21.png)
+
+Give the new key a descriptive name and click on `Create` again.
+
+![alt text](images/image22.png)
+
+Make sure you copy the new key's value to the clipboard. 
+
+![alt text](images/image23.png)
+
+You may also want to copy it into an environment variable, in case you need to use it again later. You won't be able to look it up in the IBM Cloud IAM console after closing the window showing the `API key successfully created` message.
+```
+export myAPIkey=[copy the API key from the clipboard in here]
+```
+
+To activate the remote environment, simply enter 
+```
+orchestrate env activate wxo-saas
+```
+It will now ask you for the API key of your remote instance. You should still have it in the clipboard and can simply paste it here.
+
+After entering the key and hitting Enter, you should get a message saying `[INFO] - Environment 'wxo-saas' is now active`.
+
+A simple way to verify you can connect with the remote instance is to ask for any agents or tools it might contain, by using the `orchestrate agents list` and `orchestrate tools list` commands. In the example screenshot below, it shows as empty, but in your case it may list agents you created in a previous use case.
+
+![alt text](images/image24.png)
+
+### Importing connections, tools and agents
+Now we are ready to import the connections, tools and agents into the remote environment, reusing the definitions we created for the local instance. For convenience, you can find the commands in a [script](./src/import-all.sh) that runs the required steps:
+
+```
+#!/usr/bin/env bash
+set -x
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+for connection in tavily.yaml watsonxai.yaml; do
+  orchestrate connections import -f ${SCRIPT_DIR}/connections/${connection}
+done
+
+for python_tool in web_search.py generate_description_from_image.py; do
+  orchestrate tools import -k python -f ${SCRIPT_DIR}/tools/${python_tool} -r ${SCRIPT_DIR}/tools/requirements.txt -a watsonxai -a tavily
+done
+
+for agent in internet_research_agent.yaml market_analyst_agent.yaml retail_market_agent.yaml; do
+  orchestrate agents import -f ${SCRIPT_DIR}/agents/${agent} -a tavily -a watsonxai
+done
+```
+
+So go ahead and enter `./import-all.sh` on the command line.
+
+![alt text](images/image25.png)
+
+Now we you enter, for example, `orchestrate agents list`, you should see the agents listed.
+
+![alt text](images/image26.png)
+
+Before we can start testing, we also need to set the credentials in the connections, so that the tools can retrieve the correct API keys etc. We have automated this part into a separate [script](./src/set-credentials.sh):
+```
+#!/bin/bash
+
+# Use default if no argument was passed
+DEFAULT_TARGET_ENV="draft"
+TARGET_ENV="${1:-$DEFAULT_TARGET_ENV}"
+
+# Load variables from .env
+set -o allexport
+source .env
+set +o allexport
+
+# set the credentials
+orchestrate connections set-credentials -a watsonxai --env "${TARGET_ENV}" -e "modelid=${WATSONX_MODEL_ID}" -e "spaceid=${WATSONX_SPACE_ID}" -e "apikey=${WATSONX_APIKEY}"
+orchestrate connections set-credentials -a tavily --env "${TARGET_ENV}" -e "apikey=${TAVILY_API_KEY}"
+```
+Remember that the values for the credentials are retrieved from the .env file. This script also has a parameter controlling which environment is configured with values. As we mentioned above, the are two environments defined in each `Connection` we use, namely `draft` and `live`. The `live` environment was ignored when running against a local ADK instance, but we need it here. The `live` environment is used when running an agent that is in `deployed` state. We will deploy the agents below, but here, we just set the same values in both the draft and the live environment.
+
+Enter the following on the command line.
+```
+./set-credentials.sh draft
+./set-credentials.sh live
+```
+
+![alt text](images/image30.png)
+
+Let's test the agents in the SaaS instance now, to verify they work as expected. Open the watsonx Orchestrate console in your browser. You should still have a tab with the console open, from when we captured the service instance URL above. The easiest way to get back to the homepage is to simply click on `IBM watsons Orchestrate` in the top left of the window.
+
+![alt text](images/image27.png)
+
+On the homepage, you will not see the new agents available for chat. The reason is that in order to become visible there, we have to "deploy" the agents. Click on the `Manage agents` link at the bottom left of the page.
+
+![alt text](images/image28.png)
+
+All three agents shoud be listed there. Let's start with the internet_research_agent. Just click on its tile to open the details view.
+
+![alt text](images/image29.png)
+
+We can test this agent right here in the prevew, just like we did before when running locally. You can test it by entering, for example, the following text into the Preview tet field:
+```
+Can you show me market trends for the products shown in the image at https://i.imgur.com/WzMC1LJ.png
+```
+
+![alt text](images/image31.png)
+
+Assuming the results are satisfactory, let's deploy the agent by clicking on the `Deploy` button at the top right of the page.
+
+![alt text](images/image32.png)
+
+Once the agent is deployed, go back to the `Manage agents` page by clicking on the associated link at the top of the page.
+![alt text](images/image33.png)
+
+Now repeat the same exercise with the `market_analyst_agent`. We won't show detailed steps and screenshots here, because we are confident that by now, you are an expert in navigating the tool. :smile:
+
+Once you have deployed all three agents, they should all show the `Live` icon.
+
+![alt text](images/image34.png)
+
+Finally, let's go back to the homeage and run the solution there. On the homepage, make sure you have selected the `retail_market_agent` in the Agents drop-down list, since that is the agent we want the user to chat with.
+
+![alt text](images/image35.png)
+
+Remember that you control which agents show up in this list by checking or unchecking the `Show agent` flag in the agent details page.
+
+![alt text](images/image36.png)
+
+In the main chat window, let's enter the following prompt to see if the agents are working as expected. We'll simply reuse a prompt from our tests on the local instance.
+
+```
+Please look at the image at https://i.imgur.com/qfiugNJ.jpeg. Based on market trends for the products in the image, can you make recommendations for any rearrangement of the products on the shelf?
+```
+
+![alt text](images/image37.png)
+
+Feel free to run more expierments, switching the target environments the CLI is using between `local` and `wxo-saas` to see if the two environments behave differently. 
