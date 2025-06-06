@@ -35,7 +35,7 @@ Details about each agent and their purpose will be covered below. We will use th
 
 ### Pre-requisites
 - Check with your instructor to make sure **all systems** are up and running before you continue.
-- Make sure you have an instance of the watsonx Orchestrate ADK up and running, either on your own laptop or in a virtual machine provided to you by your instructor.
+- Make sure you completed the steps described in the [setup instructions for this use case](../../environment-setup/retail.md).
 - If you're an instructor running this lab, check the **Instructor's guides** to set up all environments and systems.
 
 ## watsonx Orchestrate ADK
