@@ -1,0 +1,275 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Financial AI API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://application-financial-bot.1vodacxpmyct.us-south.codeengine.appdomain.cloud/"
+    }
+  ],
+  "paths": {
+    "/search/wikipedia": {
+      "post": {
+        "summary": "Search Wikipedia",
+        "description": "Searches Wikipedia for a given topic and returns a list of results with detailed information.\n\nThis function performs a search query against the Wikipedia API and retrieves comprehensive\ninformation about each search result, including page content extracts and word counts.\n\nArgs:\n    search_input: The search parameters including:\n        - query: The search term or phrase to look for on Wikipedia\n        - limit: Maximum number of results to return (default: 10)",
+        "operationId": "search_wikipedia_search_wikipedia_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "query": {
+                    "type": "string",
+                    "title": "Query"
+                  },
+                  "limit": {
+                    "type": "integer",
+                    "title": "Limit",
+                    "default": 5
+                  }
+                },
+                "required": [
+                  "query"
+                ],
+                "description": "Input schema for Wikipedia search."
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "results": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "title": {
+                                "type": "string"
+                              },
+                              "pageid": {
+                                "type": "integer"
+                              },
+                              "snippet": {
+                                "type": "string"
+                              },
+                              "fullurl": {
+                                "type": "string"
+                              },
+                              "extract": {
+                                "type": "string"
+                              },
+                              "wordcount": {
+                                "type": "integer"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["success"]
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "detail": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "loc": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "msg": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/financial/earnings": {
+      "post": {
+        "summary": "Get Earnings Report",
+        "description": "Get earnings report for a specific company, quarter, and year.\n\nArgs:\n    ticker: The stock ticker symbol (e.g. AAPL, MSFT).\n    quarter: Quarter string (e.g., Q1, Q2, Q3, Q4).\n    year: Year string (e.g., 2023).",
+        "operationId": "get_earnings_report_financial_earnings_post",
+        "parameters": [
+          {
+            "name": "ticker",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ticker"
+            }
+          },
+          {
+            "name": "quarter",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Quarter"
+            }
+          },
+          {
+            "name": "year",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Year"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "data": {
+                      "type": "string",
+                      "description": "Earnings report content"
+                    },
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["success"]
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "detail": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "loc": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "msg": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "summary": "Root",
+        "operationId": "root__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health Check",
+        "operationId": "health_check_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "watsonx": {
+                      "type": "string"
+                    },
+                    "elasticsearch": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

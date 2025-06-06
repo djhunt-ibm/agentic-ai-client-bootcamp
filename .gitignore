@@ -2,3 +2,5 @@
 .env
 .venv
 autoclaim
+.env
+launch.json
