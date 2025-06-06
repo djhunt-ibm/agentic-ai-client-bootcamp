@@ -1,4 +1,4 @@
-# Auto Insurance Claim Processing with Agentic AI
+# AutoClaims Insurance: Intelligent Claims Automation with Agentic AI & Watsonx Orchestrate
 
 ## Introduction
 
