@@ -1,0 +1,62 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Auto Insurance Claim API",
+      "version": "1.0.2",
+      "description": "API to fetch open insurance claims for a customer."
+    },
+    "servers": [
+      {
+        "url": "https://auto-insurance-fetch-insert-details.1v25kydgpc85.us-east.codeengine.appdomain.cloud"
+      }
+    ],
+    "paths": {
+      "/fetch_open_claims": {
+        "get": {
+          "summary": "Fetch Open Claims",
+          "description": "Retrieves a list of currently open claims for a given customer.",
+          "parameters": [
+            {
+              "name": "customer_id",
+              "in": "query",
+              "required": true,
+              "schema": {
+                "type": "string"
+              },
+              "description": "Unique ID of the customer"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "List of open claims retrieved successfully",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "open_claims": [
+                      "Claim Number: CLM174074 | Status: Open\nRequest: The customer submitted a claim for a accident involving their truck. The incident occurred on November 25, 2024, with an estimated repair cost of $59300.31.\nRequest Date: 2024-11-25, Claim Type: Accident\nSum Insured: $288245.89, Total Payable: $8012.97\nVehicle: BlueViolet Yeah Truck, Coverage: No"
+                    ]
+                  },
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "open_claims": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "List of descriptions for each open claim"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Missing or invalid customer ID"
+            }
+          }
+        }
+      }
+    }
+  }
+  
