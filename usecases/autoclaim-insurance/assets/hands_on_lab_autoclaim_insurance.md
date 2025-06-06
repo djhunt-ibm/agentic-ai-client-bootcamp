@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-- [Autoclaims Insurance: Automate Insurance with Watsonx Orchestrate and Agentic AI](#autoclaims-insurance-automate-insurance-with-watsonx-orchestrate-and-agentic-ai)
+- [Autoclaims Insurance: Automate Insurance with watsonx Orchestrate and Agentic AI](#autoclaims-insurance-automate-insurance-with-watsonx-orchestrate-and-agentic-ai)
   - [Table of Contents](#table-of-contents)
   - [Use case description](#use-case-description)
   - [Architecture](#architecture)
@@ -13,23 +13,23 @@
 ## Use case description
 
 With the help of Agentic AI powered by watsonx Orchestrate, you will build an intelligent, agent-driven system that streamlines the entire claims process. This solution not only assists customers in effortlessly filing their claims but also empowers insurers to process them more efficiently, reducing manual effort and turnaround time.
-Customers can simply answer a few guided questions and initiate a claim using minimal information. From there, the agentic system intelligently handles the end-to-end filing process—including document generation, data extraction, and claim verification—ensuring speed, accuracy, and ease of use. Additionally, customers can quickly check the status of their claims at any time, improving transparency and enhancing their overall experience.
-On the insurer's side, submitted claims can be seamlessly fetched, and the agentic system automatically cross-verifies claim details against the customer’s policy documents. It extracts key information and validates it against predefined business rules and regulatory guidelines. Based on this analysis, the system generates intelligent, structured suggestions on whether a claim should be approved or rejected—significantly reducing manual effort and the risk of errors. The final decision, however, remains with the insurer, supported by a clear and concise summary of all relevant details.
+
+Customers can simply answer a few guided questions and initiate a claim using minimal information. From there, the agentic system intelligently handles the end-to-end filing process including document generation, data extraction, and claim verification.  This automated process ensures speed, accuracy, and ease of use. Additionally, customers can quickly check the status of their claims at any time, improving transparency and enhancing their overall experience.
+
+On the insurer's side, submitted claims can be seamlessly fetched, and the agentic system automatically cross-verifies claim details against the customer’s policy documents. It extracts key information and validates it against predefined business rules and regulatory guidelines. Based on this analysis, the system generates intelligent, structured suggestions on whether a claim should be approved or rejected, significantly reducing manual effort and the risk of errors. The final decision, however, remains with the insurer, supported by a clear and concise summary of all relevant details.
 
 ## Architecture
 
-<img width="1000" alt="image" src="Autoclaims_Insurance_Architecture.png">
+<img width="1000" alt="image" src="Insurance_Autoclaims_Architecture.png">
 
-## Implementation
-
-### Pre-requisites
+## Pre-requisites
 
 - Check with your instructor to make sure **all systems** are up and running before you continue.
 - Validate that you have access to the right techzone environment for this lab.
 - Validate that you have access to a credentials file that you instructor will share with you before starting the labs.
 - If you're an instructor running this lab, check the **Instructor's guides** to set up all environments and systems.
 
-### Implementation
+## Implementation
 
 **Information Agent:**
 
