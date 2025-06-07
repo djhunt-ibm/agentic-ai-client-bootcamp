@@ -18,3 +18,4 @@ Select an enterprise use case, learn about the business story, and implement it 
 - [HR automation](./usecases/ask-hr)
 - [Business automation](./usecases/business-automation)
 - [Auto insurance automation](./usecases/autoclaim-insurance)
+- [Retail](./usecases/retail/)
