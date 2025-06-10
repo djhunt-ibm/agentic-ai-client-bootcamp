@@ -1,0 +1,160 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Auto Insurance Claim API",
+    "version": "1.0.3",
+    "description": "API for managing auto insurance claims: fetching, updating, and listing top claims."
+  },
+  "servers": [
+    {
+      "url": "https://auto-insurance-fetch-insert-details.1v25kydgpc85.us-east.codeengine.appdomain.cloud",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/fetch_open_claims": {
+      "get": {
+        "summary": "Fetch Open Claims",
+        "description": "Retrieves a list of currently open claims for a given customer.",
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Unique ID of the customer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of open claims retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "open_claims": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "example": {
+                    "open_claims": [
+                      "Claim Number: CLM174074 | Status: Open\nRequest: The customer submitted a claim for a accident involving their truck. The incident occurred on November 25, 2024, with an estimated repair cost of $59300.31.\nRequest Date: 2024-11-25, Claim Type: Accident\nSum Insured: $288245.89, Total Payable: $8012.97\nVehicle: BlueViolet Yeah Truck, Coverage: No"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing or invalid customer ID"
+          }
+        }
+      }
+    },
+    "/update_claim_status": {
+      "post": {
+        "summary": "Update Claim Status",
+        "description": "Updates the status of a claim using claim number and new status as query parameters.",
+        "operationId": "updateClaimStatus",
+        "parameters": [
+          {
+            "name": "claim_status",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": ["Open", "In Progress", "Closed", "Rejected"]
+            },
+            "description": "The new status of the claim."
+          },
+          {
+            "name": "claim_number",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Unique identifier for the claim."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Claim status updated successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "claim_number": {
+                      "type": "string"
+                    },
+                    "new_status": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input parameters."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        }
+      }
+    },
+    "/top_5_open_claims": {
+      "get": {
+        "summary": "Get Top 5 Open Claims",
+        "description": "Retrieves the top 5 open insurance claims.",
+        "operationId": "getTop5OpenClaims",
+        "responses": {
+          "200": {
+            "description": "List of top 5 open claims",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "open_claims": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

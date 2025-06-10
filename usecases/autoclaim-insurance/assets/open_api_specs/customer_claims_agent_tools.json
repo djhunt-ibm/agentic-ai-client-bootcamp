@@ -3,7 +3,7 @@
   "info": {
     "title": "Auto Insurance Claim API",
     "version": "1.0.0",
-    "description": "API to create auto insurance claim requests."
+    "description": "API to create and check auto insurance claims."
   },
   "servers": [
     {
@@ -65,6 +65,62 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/check_claim_status": {
+      "get": {
+        "summary": "Check Claim Status",
+        "description": "Retrieves the status of a claim using customer name and claim number.",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Name of the customer"
+          },
+          {
+            "name": "claim_number",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Unique identifier of the claim"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully retrieved claim status",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "claim_number": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "last_updated": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Claim not found"
+          },
+          "400": {
+            "description": "Missing or invalid parameters"
           }
         }
       }
