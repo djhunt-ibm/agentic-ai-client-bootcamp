@@ -39,7 +39,7 @@ To run the steps in this hands-on lab portion of the bootcamp, you need access t
 
 
 ## watsonx Orchestrate
-As detailed in the [Solution Architecture](images/banking-fra-architecture.png), we will build and deploy the majority of the agents for the solution in watsonx Orchestrate. AI Agents are autonomous entities that can run tasks, decide and interact with their environment. In IBM watsonx Orchestrate, agents are a key component of our agentic AI framework, enabling the creation of complex, dynamic systems that can adapt and respond to changing conditions. 
+As detailed in the [Solution Architecture](images/banking-fra-architecture.png), we will build and deploy the majority of the agents for the solution in watsonx Orchestrate. AI Agents are autonomous entities that can run tasks, decide and interact with their environment. In IBM watsonx Orchestrate, agents are a key component enabling the creation of complex, dynamic systems that can adapt and respond to changing conditions. 
 
 ### Accessing watsonx Orchestrate
 To access watsonx Orchestrate, follow these steps:
@@ -71,7 +71,10 @@ In this section, you will go through the process of creating an AI agent in wats
 
 8- On the Create an agent page, select **Create from scratch** tile (annotated with red rectangle), provide a **Name** and a **Description** for the agent and click **Create** (annotated with red arrow).
 
-Name: ```Financial Analyst Agent```
+Name: 
+```
+Financial Analyst Agent
+```
 
 Description: 
 ```
@@ -109,7 +112,10 @@ Lastly, after you've completed your agent configuration and tested its performan
 
 10- On the agent configuration page, review the *Description* of the agent in the **Profile** section and keep as is (no edits necessary). Next, scroll down to the **Knowledge** section, or click the **Knowledge** shortcut (annotated with red oval). In the Knowledge section, add a description to inform the agent about the content of the knowledge. For this lab, add the following description as we will provide the agent with a number of recent earnings reports for a handful of companies.
 
-Description: ```This knowledge addresses all details about earning reports for the companies of interest. Research analysts can ask about any details from earning reports.```
+Description: 
+```
+This knowledge addresses all details about earning reports for the companies of interest. Research analysts can ask about any details from earning reports.
+```
 
 Next, you have to choose how to provide knowledge information to the agent. watsonx Orchestrate supports adding knowledge to the agent either by uploading files directly through the UI or by pointing to a content repository (Mivlus or ElasticSearch). The [Adding knowledge to agents](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-knowledge) documentation provides more details. For this lab, click the **Upload files** button (annotated with red arrow) to upload pdf files capturing earnings reports for AMZN, META, NVDA, and NFLX.
 
@@ -189,32 +195,97 @@ For purposes of the Financial API Agent, you will use the **Import** option to i
 
 ![wxo tool import openapi](images/wxo-tool-import-openapi.png) 
 
-18- Next, select the checkboxes for the **Search Wikipedia** and **Get Earnings Report** operations (annotated with red arrow) and click **Done**.
+18- Next, select the checkboxes for the **Get Stock Price Data**, **Get Stock Information**, **Get Financial Statements**, **Get Earnings Report**, and **Search Wikipedia** operations (annotated with red arrows) and click **Done**.
 
 ![wxo tool import operations](images/wxo-tool-import-operations.png) 
 
-19- At this point, you will see the two tools imported under the Tools subsection which means they are available for the **Financial API Agent** to use these tools in executing tasks that require retrieving market data or getting glossary information. 
+19- At this point, you will see the tools imported under the Tools subsection which means they are available for the **Financial API Agent** to use these tools in executing tasks that require retrieving market data or getting glossary information. 
 
 20- Next, scroll further down to the **Behavior** section or click the **Behavior** shortcut (annotated with red oval) and add the following Instructions to guide the agent in its reasoning and orchestration.
 
 Instructions:
-```Answer questions about financial terms by invoking the search wikipedia tool. For questions about earnings, using the financial earnings report to return those values.```
+```
+You are a Financial Analyst Agent that provides comprehensive financial research and analysis. Your capabilities include:
+
+**Stock Analysis:**
+- Get real-time stock price data and historical performance using Yahoo Finance
+- Retrieve comprehensive company information including financial metrics, market data, and business descriptions
+- Access detailed financial statements (income statement, balance sheet, cash flow statement) with both annual and quarterly data
+
+**Research & Information:**
+- Search the web for current financial news, analyst reports, and market insights using Brave Search
+- Find definitions of financial terms and company background information using Wikipedia search
+- Provide contextual analysis by combining multiple data sources
+
+**TOOL SELECTION GUIDE:**
+
+**GET STOCK INFORMATION tool** - Use for:
+- Current company metrics (P/E ratio, market cap, profit margin, beta)
+- Company fundamentals (sector, industry, business description)
+- Valuation ratios and financial statistics
+- Current stock price with key metrics
+- Company comparisons and analysis
+
+**GET STOCK PRICE DATA tool** - Use for:
+- Historical price performance and trends
+- Time-series analysis (1 day to 10 years)
+- Trading volume and volatility analysis
+- Technical analysis and price patterns
+- Performance over specific time periods
+
+**GET FINANCIAL STATEMENTS tool** - Use for:
+- Quarterly/annual financial data (Q1, Q2, Q3, Q4 results)
+- Income statements, balance sheets, cash flow statements
+- Historical financial trends and comparisons
+- Debt analysis, revenue growth, profitability metrics
+- Multi-year financial performance
+
+**SEARCH WIKIPEDIA tool** - Use for:
+- Financial term definitions and explanations
+- Educational content about financial concepts
+- Company background and historical information
+
+**Response Guidelines:**
+- For current metrics and ratios, use GET STOCK INFORMATION tool
+- For historical performance analysis, use GET STOCK PRICE DATA tool
+- For quarterly/annual financials, use GET FINANCIAL STATEMENTS tool
+- For definitions and education, use SEARCH WIKIPEDIA tool
+- Always provide data-driven insights with specific metrics when available
+- Cite your sources and indicate when data is real-time vs historical
+
+**Enhanced Example Use Cases:**
+- "What is Apple's current P/E ratio?" → Use GET STOCK INFORMATION tool
+- "How did Apple perform over the last 6 months?" → Use GET STOCK PRICE DATA tool
+- "Show me Apple's Q1 2024 results" → Use GET FINANCIAL STATEMENTS tool (with year: 2024, quarter: "Q1")
+- "Compare Apple and Tesla market caps" → Use GET STOCK INFORMATION tool for both companies
+- "Apple's 3-year revenue growth trend" → Use GET FINANCIAL STATEMENTS tool (with years_back: 3)
+- "What is EBITDA margin?" → Use SEARCH WIKIPEDIA tool
+- "Tesla's debt-to-equity ratio over last 3 years" → Use GET FINANCIAL STATEMENTS tool (statement_type: "balance", years_back: 3)
+
+**Multi-Tool Examples:**
+- "Analyze Apple's performance and valuation" → GET STOCK INFORMATION + GET STOCK PRICE DATA
+- "Compare Q1 results of Apple and Google with P/E ratios" → GET FINANCIAL STATEMENTS + GET STOCK INFORMATION for both
+- "Explain EBITDA and show Microsoft's EBITDA trend" → SEARCH WIKIPEDIA + GET FINANCIAL STATEMENTS
+```
 
 Also, switch the slide bar to the off position (annotated with red arrow) to disable making the **Financial API Agent** accessible on the chat interface. This agent is only a supporting agent to the **Financial Analyst Agent** only and as such, should be disabled from appearing on the chat interface.
 
 ![wxo financial agent behavior](images/wxo-financial-api-agent-behavior.png)
 
 21- Now that you have completed the creation of the agent and added the tools it requires, test the tools in the Preview section by asking a sample question such as:
-```what was Amazon's revenue and profit in Q4, 2023?```
 
-Observe the response which was based on the information returned by the Market Data tool. To verify that, click the **Show Reasoning** link (annotated with red arrow) to expand the agent's reasoning. Note that the agent is correctly calling the **get_earnings_report** tool (annotated with red oval) and it shows both input and output of the tool call.
+```
+what was Amazon's revenue and profit in 2023?
+```
+
+Observe the response which was based on the information returned by the Market Data tool. To verify that, click the **Show Reasoning** link (annotated with red arrow) to expand the agent's reasoning. Note that the agent is correctly calling the **Get_Financial_Statements** tool (annotated with red oval) and it shows both input and output of the tool call.
 
 ![wxo tool earnings](images/wxo-financial-api-agent-tool-earnings.png) 
 
 22- Test the **Financial API Agent** further by asking another question:
 ```What does EBITDA mean?```
 
-Again, observe the response and expand the **Show Reasoning** link to trace through the agent's reasoning which in this case correctly triggered the **search_wikipedia** tool (annotated with red oval).
+Again, observe the response and expand the **Show Reasoning** link to trace through the agent's reasoning which in this case correctly triggered the **Search_Wikipedia** tool (annotated with red oval).
 
 ![wxo tool glossary](images/wxo-financial-api-agent-tool-glossary.png) 
 
@@ -239,9 +310,15 @@ The architecture references multiple web search tools, namely, the **Brave Searc
 
 26- Repeat the steps you did earlier to create an agent from scratch and provide the following name and description for the web search agent. Click **Create** (annotated with red arrow).
 
-Name: ```Web Search Agent```
+Name: 
+```
+Web Search Agent
+```
 
-Description: ```This agent can search the web to retrieve information related to user query.```
+Description: 
+```
+This agent can search the web to retrieve information related to user query.
+```
 
 ![wxo create web search agent](images/wxo-create-web-search-agent.png) 
 
@@ -266,7 +343,10 @@ Description: ```This agent can search the web to retrieve information related to
 32- Scroll down further to the **Behavior** section of the agent configuration page and add the following 
 **Instructions** to help guide the agent's behavior.
 
-Instructions: ```For information about latest or recent news, use the brave search tool. Also, for general inquiries where the information is available on-line can be retrieved using a web search, use the duckduckgo search tool.```
+Instructions: 
+```
+For information about latest or recent news, use the brave search tool. Also, for general inquiries where the information is available on-line can be retrieved using a web search, use the duckduckgo search tool.
+```
 
 Next, test the functionality of the agent by asking a question such as ```Can you show top executives at Amazon?``` and observe the response of the agent. Click the **Show Reasoning** link (annotated with red arrow) and note how the agent is correctly invoking the **DuckDuckGo Search Tool** to retrieve relevant information.
 
@@ -311,9 +391,67 @@ Now that you have developed all agents and tools, in this section, you will work
 
 Instructions:
 ```
-Answer user questions related to financial research of companies. Always start with the supervisor agent. Always try to answer using the Knowledge you have first using the Financial_Research_Agent tool before invoking other agents. 
-For questions about glossary definitions of financial terms use the Financial API Agent. 
-Use the Web Search Agent only to obtain recent news about the company or information about the company management and leadership.
+You are a Financial Analyst Agent that provides comprehensive financial research and analysis. Your capabilities include:
+
+**Stock Analysis:**
+- Get real-time stock price data and historical performance using Yahoo Finance
+- Retrieve comprehensive company information including financial metrics, market data, and business descriptions
+- Access detailed financial statements (income statement, balance sheet, cash flow statement) with both annual and quarterly data
+
+**Research & Information:**
+- Search the web for current financial news, analyst reports, and market insights using Brave Search
+- Find definitions of financial terms and company background information using Wikipedia search
+- Provide contextual analysis by combining multiple data sources
+
+**TOOL SELECTION GUIDE:**
+
+**GET STOCK INFORMATION tool** - Use for:
+- Current company metrics (P/E ratio, market cap, profit margin, beta)
+- Company fundamentals (sector, industry, business description)
+- Valuation ratios and financial statistics
+- Current stock price with key metrics
+- Company comparisons and analysis
+
+**GET STOCK PRICE DATA tool** - Use for:
+- Historical price performance and trends
+- Time-series analysis (1 day to 10 years)
+- Trading volume and volatility analysis
+- Technical analysis and price patterns
+- Performance over specific time periods
+
+**GET FINANCIAL STATEMENTS tool** - Use for:
+- Quarterly/annual financial data (Q1, Q2, Q3, Q4 results)
+- Income statements, balance sheets, cash flow statements
+- Historical financial trends and comparisons
+- Debt analysis, revenue growth, profitability metrics
+- Multi-year financial performance
+
+**SEARCH WIKIPEDIA tool** - Use for:
+- Financial term definitions and explanations
+- Educational content about financial concepts
+- Company background and historical information
+
+**Response Guidelines:**
+- For current metrics and ratios, use GET STOCK INFORMATION tool
+- For historical performance analysis, use GET STOCK PRICE DATA tool
+- For quarterly/annual financials, use GET FINANCIAL STATEMENTS tool
+- For definitions and education, use SEARCH WIKIPEDIA tool
+- Always provide data-driven insights with specific metrics when available
+- Cite your sources and indicate when data is real-time vs historical
+
+**Enhanced Example Use Cases:**
+- "What is Apple's current P/E ratio?" → Use GET STOCK INFORMATION tool
+- "How did Apple perform over the last 6 months?" → Use GET STOCK PRICE DATA tool
+- "Show me Apple's Q1 2024 results" → Use GET FINANCIAL STATEMENTS tool (with year: 2024, quarter: "Q1")
+- "Compare Apple and Tesla market caps" → Use GET STOCK INFORMATION tool for both companies
+- "Apple's 3-year revenue growth trend" → Use GET FINANCIAL STATEMENTS tool (with years_back: 3)
+- "What is EBITDA margin?" → Use SEARCH WIKIPEDIA tool
+- "Tesla's debt-to-equity ratio over last 3 years" → Use GET FINANCIAL STATEMENTS tool (statement_type: "balance", years_back: 3)
+
+**Multi-Tool Examples:**
+- "Analyze Apple's performance and valuation" → GET STOCK INFORMATION + GET STOCK PRICE DATA
+- "Compare Q1 results of Apple and Google with P/E ratios" → GET FINANCIAL STATEMENTS + GET STOCK INFORMATION for both
+- "Explain EBITDA and show Microsoft's EBITDA trend" → SEARCH WIKIPEDIA + GET FINANCIAL STATEMENTS
 ```
 
 Test the agent behavior in the **Preview** section by asking the following sample question:
@@ -327,14 +465,20 @@ Expand the **Show Reasoning** and **Step 1** links to review the reasoning of th
 ![wxo knowledge base test](images/wxo-knowledge-base-test.png) 
 
 41- Continue testing your agent now by stressing the web search agent functionality. To do so, ask the following question.
-Question: ```Who are top executives for Amazon?```
+
+Question: 
+```
+Who are top executives for Amazon?
+```
 
 Expand the **Show Reasoning** and **Step 1** links (annotated with red arrows) to observe the agent's reasoning. Note that it transfers the request to **Web Search Agent** as expected (annotated with red oval).
 ![wxo topexecs reasoning](images/wxo-topexecs-reasoning.png) 
 
 42- Do some further testing by asking the agent the following question and then expanding the **Show Reasoning** and **Step 1** (annotated with red arrows) to observe the agent reasoning.
 Question:
-```what does EBITDA mean?```
+```
+what does EBITDA mean?
+```
 
 Note that it transfers the request to **Financial API Agent** as annotated with red oval.
 ![wxo reasoning ebitda step1](images/wxo-reasoning-ebitda-step1.png) 
@@ -398,6 +542,27 @@ Expand the **Step1**, **Step 2**, and **Step 3** sections and observe the agent 
 ![wxo chat q3 reasoning 2](images/wxo-chat-q3-reasoning-2.png)
 
 Feel free to explore and experience the power of Agents in action! 🚀 
+
+50- Explore further with queries such as:
+Query 1:
+```
+Compare Apple and Tesla's debt-to-equity ratios over the last 3 years, but I also want to understand what EBITDA margin means and how it relates to their operational efficiency. Which company has better free cash flow generation, and what does that tell us about their dividend sustainability?
+```
+
+Query 2:
+```
+I heard Meta is struggling with reality labs losses, but I can't remember if that's META or METS. Can you analyze their recent quarterly performance and tell me if the market overreacted to their AI investments? Also, what's the difference between operating income and net income in their case?
+```
+
+Query 3:
+```
+Microsoft has a high P/E ratio but everyone says it's a value stock. How is that possible? Compare it with Google's valuation metrics and explain why tech stocks trade at different multiples. What role does their cloud revenue growth play in justification?
+```
+
+Query 4:
+```
+I’m confused about Tesla's convertible bonds. How do they affect the diluted share count in their EPS calculation? And if their stock price is above the conversion price, shouldn't that be good for reducing debt? But I read somewhere that it actually dilutes shareholders. Can you explain this paradox?
+```
 
 ## Conclusion
 **Congratulations** on completing the hands-on lab portion of the bootcamp. 
