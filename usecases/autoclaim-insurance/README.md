@@ -32,10 +32,6 @@ In short, both sides struggle with inefficiency, lack of clarity, and missed exp
 
 ---
 
-## Solution Overview – Autoclaims Insurance in Action
-
-**Autoclaims Insurance** offers a smarter, AI-first alternative. Here’s how our agentic system transforms the experience:
-
 ## 💡 Solution Overview – Autoclaims Insurance in Action
 
 **Autoclaims Insurance** offers a smarter, AI-first alternative. Here’s how our agentic system transforms the experience:
@@ -64,7 +60,7 @@ In short, both sides struggle with inefficiency, lack of clarity, and missed exp
 
 ## Architecture
 
-![Architecture](./assets/Insurance_Autoclaims_Architecture.png)
+![Architecture](./assets/Insurance_Autoclaims_Architecture_v1.png)
 
 ---
 
