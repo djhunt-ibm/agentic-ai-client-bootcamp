@@ -1,4 +1,4 @@
-# AutoClaims Insurance: Intelligent Claims Automation with Agentic AI & Watsonx Orchestrate
+# InsuranceClaims Automation with Agentic AI & Watsonx Orchestrate
 
 ![](insurance-banner.png)
 
