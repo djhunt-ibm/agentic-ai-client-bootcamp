@@ -1,10 +1,13 @@
 # AutoClaims Insurance: Intelligent Claims Automation with Agentic AI & Watsonx Orchestrate
 
+![Uploading Screenshot 2025-06-10 at 5.35.33 PM.png…]()
+
 ## Introduction
 
 Welcome to **Autoclaims Insurance**—a groundbreaking digital solution that redefines how auto insurance claims are handled using the power of **Watsonx Orchestrate** and **Agentic AI**.
 
 In the traditional claims world, customers are met with confusing paperwork, delayed responses, and poor visibility into their claim’s status. At the same time, insurers face the burden of high claim volumes, manual data validation, and growing fraud risks—all under pressure to stay compliant.
+
 
 **Autoclaims Insurance** changes this paradigm by introducing an **intelligent, agent-driven ecosystem** that streamlines, accelerates, and simplifies the entire claim lifecycle—for both customers and insurers.
 
