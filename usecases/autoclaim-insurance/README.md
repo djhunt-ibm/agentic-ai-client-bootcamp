@@ -37,26 +37,26 @@ In short, both sides struggle with inefficiency, lack of clarity, and missed exp
 
 ## 💡 Solution Overview – Autoclaims Insurance in Action
 
-**Autoclaims Insurance** offers a smarter, AI-first alternative. Here’s how our agentic system transforms the experience:
+**Auto Insurance claim** offers a smarter, AI-first alternative. Here’s how our agentic system transforms the experience:
 
-### 1. Seamless Claim Submission
+### 1. Seamless claim submission
 
 * **No paperwork required**: Customers start the claim process through a simple, guided digital interface.
 * **AI-driven data extraction**: Key information from documents, images, and inputs is automatically extracted and validated in real-time, ensuring smooth submission.
 
-### 2. Intelligent Claim Processing
+### 2. Intelligent claim processing
 
 * **Automated validation**: Claims are cross-checked against policy details and claim history to ensure eligibility and reduce errors.
 * **AI-powered recommendations**: The system generates intelligent settlement recommendations based on historical data, policy conditions, and claim context.
 
-### 3. Real-Time Communication & Transparency
+### 3. Real-time communication & transparency
 
 * **Instant status updates**: Customers are kept in the loop with real-time claim status notifications at every step.
 * **AI-driven assistance**: Conversational AI agents clarify policy terms, answer questions, and guide customers through complex insurance concepts.
 
-### 4. RAG System Integration
+### 4. RAG system integration
 
-* **Customer & Claim Processor Support**: Our **Retrieval-Augmented Generation (RAG)** system is seamlessly integrated into the platform to answer all policy, claim processing, and insurance-related queries.
+* **Customer & claim processor support**: Our **Retrieval-Augmented Generation (RAG)** system is seamlessly integrated into the platform to answer all policy, claim processing, and insurance-related queries.
 * **Instant, context-driven responses**: Whether it's for customers seeking claim status or claim processors verifying details, the RAG system ensures fast, accurate, and compliant responses.
 
 ---
@@ -73,7 +73,7 @@ In short, both sides struggle with inefficiency, lack of clarity, and missed exp
 
 ---
 
-## **Business Value & Benefits**
+## **Business value & Benefits**
 
 ### For Customers POV
 
