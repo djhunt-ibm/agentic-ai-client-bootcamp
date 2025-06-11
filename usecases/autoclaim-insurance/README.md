@@ -1,4 +1,4 @@
-# InsuranceClaims Automation with Agentic AI & Watsonx Orchestrate
+# Insurance Claims Automation with Agentic AI & Watsonx Orchestrate
 
 ![](insurance-banner.png)
 
@@ -13,18 +13,18 @@ In the traditional claims world, customers are met with confusing paperwork, del
 
 ---
 
-## Problem Statement
+## Problem statement
 
 Despite technological advances, auto insurance claims continue to suffer from outdated systems and fragmented processes. Let’s examine the core pain points:
 
-### For Customers
+### For customers
 
 * Tedious, manual claim filing processes.
 * Poor communication and status tracking.
 * Delays due to manual verification and processing.
 * Confusing policy terms and unclear coverage limits.
 
-### For Claim Reviewers
+### For claim reviewers
 
 * Overflowing claim queues with limited prioritization.
 * Difficulty detecting fraud amidst massive volumes.
