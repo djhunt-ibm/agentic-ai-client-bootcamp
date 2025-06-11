@@ -6,9 +6,82 @@ This document contains the documentation for the setup of the environment to pre
 
 The use case takes you through the creation of tools and agents using the [IBM watsonx Orchestrate Agent Development Kit (ADK)](https://developer.watson-orchestrate.ibm.com/). This toolkit can be installed on a local machine and brings with it the core components of watsonx Orchestrate, as container images that are running in a container runtime like Docker or Rancher. It also installs a CLI that can be used to manage a locally running instance as well as remote instances running in the cloud.
 
+## Lab materials
+
+The materials for this lab will be given to you by your instructor in form of a zip file. You need to unzip this file into a folder on your machine. The file contains a set of markdown files that represent the instructions for various parts of the bootcamp (including this very file), as well as code samples that you are going to use. Where to unzip the file differs based on whether you are running this lab on your local machine, or on a virtual machine provided to you.
+
+### Local machine
+
+In this case, you can choose any folder as the base for the material. You should use that same folder as the current directory when installing the ADK (which is described in more detail [below](#watsonx-orchestrate-adk)). After unzipping, listing the files in a command terminal should look like shown below (this screenshot is taken on MacOS):
+
+![alt text](./assets/image20.png)
+
+#### VS Code
+We recommend you use VS Code to view the materials and edit files as needed. Assuming you have the command line starter installed, you should be able to start VS Code right from the command line by entering `code .`.
+
+### Virtual machine
+
+The virtual machine is using Windows as its operating system, however, we will be using the "Windows Subsystem for Linux (WSL)" to run the ADK. When downloading and unzipping the file with materials, you should put it into the folder that has been precreated.
+
+After you open the VM console in your browser, you will see the Windows user interface. There you can open a Firefix browser window and enter the address your instructor gave you. In the example below, the zip file exists as a downloadable file in Box:
+
+![alt text](assets/image21.png)
+
+When clicking on the Download button, the file will be donwloaded into the `Downloads` folder on the Windows machine. Open that folder by simply clicking on the `Show all downloads` button.
+
+![alt text](assets/image22.png)
+
+Then click on `Show in Folder` to open the file explorer window.
+
+![alt text](assets/image23.png)
+
+Right-click on the zip and file and select `Copy`.
+
+![alt text](assets/image24.png)
+
+Now navigate to the `Ubuntu` folder under `Linux` on the left side of the file explorer menu.
+
+![alt text](assets/image25.png)
+
+Under the folder, right click on `home -> techzone -> wxo_dev_edition` and click on Paste.
+
+![alt text](assets/image26.png)
+
+Open the folder and right click on the zip file. You may receive a warning that this file is from the Internet. Click OK.
+
+![alt text](assets/image27.png)
+
+In the context window for the zip file, select `Extract all`.
+
+![alt text](assets/image28.png)
+
+As the destination, make sure you enter the `wxo_dev_edition` (which is not the default), as shown below. Then click on `Extract`.
+
+![alt text](assets/image29.png)
+
+Note that the extraction process can take a couple of minutes. After it completes, your file explorer window should show the extracted files in the wxo_dev_edition folder. If they were placed into a subfolder, you can cut and paste them.
+
+![alt text](assets/image30.png)
+
+#### VS Code
+
+VS Code is already installed on the Windows based virtual machine. To open it, simply type "code" into the search field at the bottom left of the screen. The "VS Code" app will automatically be offered as a choice and you cna open it by clicking on the app icon.
+
+![alt text](assets/image31.png)
+
+Once the application is open, select the `File` -> `Open folder` menu option.
+
+![alt text](assets/image32.png)
+
+Select the folder named `wxo_dev_edition` from the list.
+
+![alt text](assets/image33.png)
+
+Click OK. This will open the folder with all files you are going to need during this lab.
+
 ## Environments
 
-To run this lab end to end, you need a number of environments.
+To run the lab end to end, you need a number of environments.
 
 ### watsonx.ai
 
@@ -54,7 +127,16 @@ The last step here is that we need to capture the Space GUID. You can find the G
 
 ![alt text](assets/image10.png)
 
-The Sapce GUID goes into a file called .env. You can create and edit this file with an editor of your choosing, or simply run the following command on the command line:
+#### The .env file
+
+The Space GUID, as well as a number of other environment variables, goes into a file called `.env`. This file should exist in **the root folder** of where you extracted the content of the repo that was provided to you by your instructor (this file is also in that repo, of course), in other words, it should be at the same level as the `usecases` or `environment-setup` subfolders.
+
+- If you are using the virtual machine with a pre-installed ADK, you already have this file in the `wxo_dev_edition` folder in the WSL environment within that virtual machine. 
+- If you are running this on your local machine, you should have already unziped the file with materials into a folder of your choosing, as described [above](#local-machine). Create an empty .env file and make sure you place the `.env` file in that same folder. 
+
+You can edit the file with an editor of your choosing. We recommend to use VS Code for this. 
+
+You can create and edit this file with an editor of your choosing, or simply run the following command on the command line:
 ```
 echo 'WATSONX_SPACE_ID=[paste the Space GUID from your clipboard here]' >> .env
 ```
