@@ -2,7 +2,7 @@
 
 ![](insurance-banner.png)
 
----
+
 
 ##  🤔 The Problem
 
@@ -37,7 +37,7 @@ ABC Insurance agency is a pioneer in Auto-insurance. While ABC Insurance has lon
 
 ---
 
-## 📈 Business value**
+## 📈 Business value
 
 ### For Customers
 
