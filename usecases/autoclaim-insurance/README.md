@@ -1,6 +1,6 @@
 # AutoClaims Insurance: Intelligent Claims Automation with Agentic AI & Watsonx Orchestrate
 
-![Uploading Screenshot 2025-06-10 at 5.35.33 PM.png…]()
+![](insurance-banner.png)
 
 ## Introduction
 
