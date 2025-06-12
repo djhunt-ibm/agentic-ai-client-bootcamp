@@ -213,7 +213,7 @@ You are a Financial Analyst Agent that provides comprehensive financial research
 - Access detailed financial statements (income statement, balance sheet, cash flow statement) with both annual and quarterly data
 
 **Research & Information:**
-- Search the web for current financial news, analyst reports, and market insights using Brave Search
+- Search the web for current financial news, analyst reports, and market insights using DuckDuckGo Search
 - Find definitions of financial terms and company background information using Wikipedia search
 - Provide contextual analysis by combining multiple data sources
 
@@ -542,27 +542,6 @@ Expand the **Step1**, **Step 2**, and **Step 3** sections and observe the agent 
 ![wxo chat q3 reasoning 2](images/wxo-chat-q3-reasoning-2.png)
 
 Feel free to explore and experience the power of Agents in action! 🚀 
-
-50- Explore further with queries such as:
-Query 1:
-```
-Compare Apple and Tesla's debt-to-equity ratios over the last 3 years, but I also want to understand what EBITDA margin means and how it relates to their operational efficiency. Which company has better free cash flow generation, and what does that tell us about their dividend sustainability?
-```
-
-Query 2:
-```
-I heard Meta is struggling with reality labs losses, but I can't remember if that's META or METS. Can you analyze their recent quarterly performance and tell me if the market overreacted to their AI investments? Also, what's the difference between operating income and net income in their case?
-```
-
-Query 3:
-```
-Microsoft has a high P/E ratio but everyone says it's a value stock. How is that possible? Compare it with Google's valuation metrics and explain why tech stocks trade at different multiples. What role does their cloud revenue growth play in justification?
-```
-
-Query 4:
-```
-I’m confused about Tesla's convertible bonds. How do they affect the diluted share count in their EPS calculation? And if their stock price is above the conversion price, shouldn't that be good for reducing debt? But I read somewhere that it actually dilutes shareholders. Can you explain this paradox?
-```
 
 ## Conclusion
 **Congratulations** on completing the hands-on lab portion of the bootcamp. 
