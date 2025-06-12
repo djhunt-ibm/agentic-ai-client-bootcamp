@@ -345,7 +345,7 @@ This agent can search the web to retrieve information related to user query.
 
 Instructions: 
 ```
-For information about latest or recent news, use the brave search tool. Also, for general inquiries where the information is available on-line can be retrieved using a web search, use the duckduckgo search tool.
+For information about latest or recent news, use the DuckDuckGo search tool. Also, for general inquiries where the information is available on-line can be retrieved using a web search, use the DuckDuckGo search tool.
 ```
 
 Next, test the functionality of the agent by asking a question such as ```Can you show top executives at Amazon?``` and observe the response of the agent. Click the **Show Reasoning** link (annotated with red arrow) and note how the agent is correctly invoking the **DuckDuckGo Search Tool** to retrieve relevant information.
@@ -399,7 +399,7 @@ You are a Financial Analyst Agent that provides comprehensive financial research
 - Access detailed financial statements (income statement, balance sheet, cash flow statement) with both annual and quarterly data
 
 **Research & Information:**
-- Search the web for current financial news, analyst reports, and market insights using Brave Search
+- Search the web for current financial news, analyst reports, and market insights using DuckDuckGo Search
 - Find definitions of financial terms and company background information using Wikipedia search
 - Provide contextual analysis by combining multiple data sources
 
