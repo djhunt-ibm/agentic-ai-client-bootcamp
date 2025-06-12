@@ -1,10 +1,54 @@
 # Setup for the Retail use case lab
-
-This document contains the documentation for the setup of the environment to prepare for the step-by-step walkthrough of the [Retail use case](../usecases/retail/).
+- [Setup for the Retail use case lab](#setup-for-the-retail-use-case-lab)
+  - [Introduction](#introduction)
+  - [Virtual machine option](#virtual-machine-option)
+  - [Lab materials](#lab-materials)
+    - [Local machine](#local-machine)
+      - [VS Code](#vs-code)
+    - [Virtual machine](#virtual-machine)
+      - [VS Code](#vs-code-1)
+  - [Environments](#environments)
+    - [watsonx.ai](#watsonxai)
+      - [The .env file](#the-env-file)
+      - [API key](#api-key)
+    - [Entitlement key](#entitlement-key)
+    - [watsonx Orchestrate ADK](#watsonx-orchestrate-adk)
+      - [Local machine](#local-machine-1)
+      - [Virtual machine](#virtual-machine-1)
+    - [watsonx Orchestrate](#watsonx-orchestrate)
+    - [Tavily](#tavily)
 
 ## Introduction
 
+This document contains the documentation for the setup of the environment to prepare for the step-by-step walkthrough of the [Retail use case](../usecases/retail/).
+
 The use case takes you through the creation of tools and agents using the [IBM watsonx Orchestrate Agent Development Kit (ADK)](https://developer.watson-orchestrate.ibm.com/). This toolkit can be installed on a local machine and brings with it the core components of watsonx Orchestrate, as container images that are running in a container runtime like Docker or Rancher. It also installs a CLI that can be used to manage a locally running instance as well as remote instances running in the cloud.
+
+## Virtual machine option
+
+For this lab, you have the option to define and run the agents locally on your own laptop, using the ADK. The system requirements are mentioned/referenced in the [ADK install section](#watsonx-orchestrate-adk) below.
+
+If you are unable to run the ADK locally, your instructor will provide you with access to a virtual machine that has the ADK already installed. You can access the VM by using a console link that opens a view of the VM's desktop UI in a browser tab.
+
+Click the **Ctrl-Alt-Delete CAD** button (annotated with red arrow) to be prompted to enter username and password. Keep the default username as **Administrator** and enter the password **IBMDem0s** in the password field (annotated with red rectangle) and hit **ENTER**.
+
+![alt text](assets/techzone-vm-login.png)
+
+*Optional* It is also recommended to resize the virtual screen to Full Screen. To do so, click the **Resize** icon (annotated with red arrow) and select **Fullscreen** (annotated with red rectangle).
+
+If you get a pop-up about Unplanned shutdown, cancel that pop-up. 
+
+Once logged into the Windows VM, you need to open a command line terminal with access to the WSL instance. To start, click the **Ubuntu** icon (annotated with red arrow) pinned to the taskbar to start the Ubuntu terminal. Alternatively, you can type **ubuntu** into the search field (annotated with a red oval) and click the **Ubuntu** app (annotated with a red rectangle).
+
+![alt text](assets/techzone-vm-ubuntu.png)
+
+In the Ubuntu terminal, you need to activate the Python environment which is already setup that has the watsonx Orchestrate ADK pre-installed.
+```
+source /home/techzone/wsl_wxoenv/bin/activate
+```
+
+![alt text](assets/techzone-vm-ubuntu-python-env.png)
+
 
 ## Lab materials
 
@@ -179,6 +223,8 @@ echo 'WO_ENTITLEMENT_KEY=[add the entitlement key you received from your instruc
 
 As mentioned above, the ADK allows hosting the core Orchestrate components on a developer laptop. For the lab, you can choose if you want to run the ADK on your own laptop or on a virtual machine that will be provided to you by your instructor. 
 
+#### Local machine
+
 To run it on your own laptop, you need to install 
 - [Docker](https://www.docker.com/products/docker-desktop/) or [Rancher](https://www.rancher.com/products/rancher-desktop)
   - the containers that run as part of the ADK will require ~12GB of memory, so you need to allocate at least that much to the virtual machine hosting the container runtime
@@ -191,8 +237,33 @@ Once you have these prerequistites available, you can install the ADK by followi
 
 You also need to install the watsonx Orchestrate Developer Edition, which is part of the ADK, by following the related [install instructions](https://developer.watson-orchestrate.ibm.com/getting_started/wxOde_setup). However, **DO NOT** set up the .env file as described in the instructions! You already have the right values in your .env file if you followed the instructions above.
 
-After you created the .env file with the values gven to you, you can follow the instructions to start the server for the first time as documented [here](https://developer.watson-orchestrate.ibm.com/getting_started/wxOde_setup#installing-the-watsonx-orchestrate-developer-edition-with-adk). Note that the first time you run it, it will download all the required container images from the IBM amige reigstry, which will take some time.
+After you created the .env file with the values given to you, you can follow the instructions to start the server for the first time as documented [here](https://developer.watson-orchestrate.ibm.com/getting_started/wxOde_setup#installing-the-watsonx-orchestrate-developer-edition-with-adk). Note that the first time you run it, it will download all the required container images from the IBM image registry, which will take some time.
 
+#### Virtual machine
+
+At this point, you should have filled in the required values into the .env file using VS Code as described above. You should also have a command line terminal open in the UI, with `wxo_dev_edition` as the current folder.
+
+Alternatively, you can also use the built-in terminal window in VS Code, which is located below the main editor window. Make sure you activate the Python environment as shown in the picture below.
+
+![alt text](assets/image34.png)
+
+> You don't need to set the Tavily API key here, we will show how to obtain and set that key [below](#tavily).
+
+You can start the Orchestrate server by entering the following command:
+```
+orchestrate server start --env-file .env
+```
+
+When running it for the first time, it may take a bit longer to start, depending on whether it has to download the latest versions of the container images.
+
+![alt text](assets/image35.png)
+
+Once you see the message that the server has been started and that you should activate the local environment, enter the following:
+```
+orchestrate env activate local
+```
+
+![alt text](assets/image36.png)
 
 ### watsonx Orchestrate 
 
