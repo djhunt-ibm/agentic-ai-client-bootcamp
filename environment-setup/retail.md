@@ -38,7 +38,15 @@ Click the **Ctrl-Alt-Delete CAD** button (annotated with red arrow) to be prompt
 
 If you get a pop-up about Unplanned shutdown, cancel that pop-up. 
 
-Once logged into the Windows VM, you need to open a command line terminal with access to the WSL instance. To start, click the **Ubuntu** icon (annotated with red arrow) pinned to the taskbar to start the Ubuntu terminal. Alternatively, you can type **ubuntu** into the search field (annotated with a red oval) and click the **Ubuntu** app (annotated with a red rectangle).
+Once logged into the Windows VM, let's start `Rancher Desktop`. This is the container runtime we will use later for the ADK. On the home screen, double-click the Rancher Desktop icon.
+
+![alt text](assets/image37.png)
+
+You will see in the Rancher console that is is starting up the serivce. Once that has completed, you can minimize the window, since we won't need it anymore.
+
+![alt text](assets/image38.png)
+
+Next you need to open a command line terminal with access to the WSL instance. To start, click the **Ubuntu** icon (annotated with red arrow) pinned to the taskbar to start the Ubuntu terminal. Alternatively, you can type **ubuntu** into the search field (annotated with a red oval) and click the **Ubuntu** app (annotated with a red rectangle).
 
 ![alt text](assets/techzone-vm-ubuntu.png)
 
@@ -254,7 +262,7 @@ You can start the Orchestrate server by entering the following command:
 orchestrate server start --env-file .env
 ```
 
-When running it for the first time, it may take a bit longer to start, depending on whether it has to download the latest versions of the container images.
+When running it for the first time, it may take a bit longer to start, depending on whether it has to download the latest versions of the container images (the images should all be cached in the virtual machine already, though).
 
 ![alt text](assets/image35.png)
 
