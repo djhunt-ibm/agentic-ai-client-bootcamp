@@ -14,8 +14,9 @@ In this bootcamp, you will build and deploy an Agentic AI application prototype 
 
 ## Pick a use case
 Select an enterprise use case, learn about the business story, and implement it using the hands-on step-by-step guides:
-- [Intelligent assistant](./usecases/intelligent-assistant)
+- [Intelligent assistant for Warehouse management](./usecases/intelligent-assistant)
 - [HR automation](./usecases/ask-hr)
-- [Business automation](./usecases/business-automation)
-- [Auto insurance automation](./usecases/autoclaim-insurance)
-- [Retail](./usecases/retail/)
+- [Business automation for Competitive Analysis](./usecases/business-automation)
+- [Auto insurance claims automation](./usecases/autoclaim-insurance)
+- [Retail Product Display Advisor](./usecases/retail/)
+- [Financial Research Analyst](./usecases/banking-financial-research-analyst)
