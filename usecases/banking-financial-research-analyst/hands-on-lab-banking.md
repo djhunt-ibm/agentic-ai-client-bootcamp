@@ -152,7 +152,7 @@ In this section, you will develop the Financial API Agent, one of the collaborat
 
 12- If you are not at the watsonx Orchestrate landing page (chat interface), repeat the steps above to make sure you are logged into IBM Cloud, find the watsonx Orchestrate service and launch it to access the landing page.
 
-13- From the watsonx Orchestrate langding page, click **Create agent** (annotated with red rectangle) to start developing a new agent, the Financial API Agent.
+13- From the watsonx Orchestrate landing page, click **Create agent** (annotated with red rectangle) to start developing a new agent, the Financial API Agent.
 
 ![wxo create agent chatUI](images/wxo-create-agent.png) 
 
