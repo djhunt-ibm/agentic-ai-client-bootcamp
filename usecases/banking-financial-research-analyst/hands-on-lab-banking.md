@@ -189,9 +189,9 @@ watsonx Orchestrate supports multiple approaches to adding tools to agents as ex
 Additionally, you can use the watsonx Orchestrate [Agentic Development Kit (ADK)](https://developer.watson-orchestrate.ibm.com/) to develop and upload Python and OpenAPI tools to a specific watsonx Orchestrate instance which you can then add to the agents.
 watsonx Orchestrate also supports the addition of [Model Context Protocol (MCP)](https://developer.watson-orchestrate.ibm.com/) tools. If you are not familiar with it, MCP is a standard for connecting AI Agents to systems where data lives including content repositories, business tools and development environments. MCP is becoming increasingly popular as the standard for enabling agents with tools.
 
-For purposes of the Financial API Agent, you will use the **Import** option to import an OpenAPI specification and define which operations to import as tools. You will need a [financial_api_openapi.json](openapi_files/financial_api_openapi.json) file which will be provided by your instructor. 
+For purposes of the Financial API Agent, you will use the **Import** option to import an OpenAPI specification and define which operations to import as tools. You will need a **financial_api_openapi.json** file which will be provided by your instructor. 
 
-17- On the Import tool page, drag and drop the [financial_api_openapi.json](openapi_files/financial_api_openapi.json) file provided by your instructor (annotated with red rectangle) and click **Next** (annotated with red arrow).
+17- On the Import tool page, drag and drop the **financial_api_openapi.json** file provided by your instructor (annotated with red rectangle) and click **Next** (annotated with red arrow).
 
 ![wxo tool import openapi](images/wxo-tool-import-openapi.png) 
 
@@ -330,7 +330,7 @@ This agent can search the web to retrieve information related to user query.
 
 ![wxo web search tool import](images/wxo-web-search-tool-import.png) 
 
-29- On the Import tool page, drag and drop the [websearch_openapi.json](openapi_files/websearch_openapi.json) file provided by your instructor (annotated with red rectangle) and click **Next** (annotated with red arrow).
+29- On the Import tool page, drag and drop the **websearch_openapi.json** file provided by your instructor (annotated with red rectangle) and click **Next** (annotated with red arrow).
 
 ![wxo web search agent tool import openapi](images/wxo-web-search-agent-tool-import-openapi.png) 
 
