@@ -1,4 +1,6 @@
-# Retail
+# Agentic Retail: Product shelf placement analysis
+
+<img src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/img/beta.png" width="100">
 
 ![](./images/d96343cd-808a-4f0e-971a-1e6bf9e58fb6.png)
 
@@ -29,4 +31,4 @@ Additionally, this solution can help retailers to better understand their custom
 You can find step-by-step instructions in [this document](./retail.md). It shows how you can implement the use case using watsonx.ai and watsonx Orchestrate.
 
 ## Demo Video
-tbd
+(Coming soon)
