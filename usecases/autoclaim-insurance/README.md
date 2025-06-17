@@ -21,7 +21,7 @@ ABC Insurance agency is a pioneer in Auto-insurance. While ABC Insurance has lon
 
 * **Automated sanity checks & vetting**
 
-  * utomated validation: Claims are cross-checked against policy details and claim history to ensure eligibility and reduce errors.
+  * Automated validation: Claims are cross-checked against policy details and claim history to ensure eligibility and reduce errors.
   * AI-powered recommendations: The system generates intelligent settlement recommendations based on historical data, policy conditions, and claim context.
 
 * **Better workflow & transparency**
