@@ -2,12 +2,9 @@
 
 ![](insurance-banner.png)
 
-
-
-##  🤔 The Problem
+## 🤔 The Problem
 
 ABC Insurance agency is a pioneer in Auto-insurance. While ABC Insurance has long led the way in auto coverage, its legacy systems and fragmented workflows have created a cumbersome experience for both **customers** and **claim processors**. Customers often face long wait times, confusing paperwork, and limited visibility into their claim status. Meanwhile, claim processors are bogged down by manual data entry, siloed information, and the increasing challenge of identifying fraud—all while striving to stay compliant.
-
 
 ---
 
@@ -47,14 +44,12 @@ ABC Insurance agency is a pioneer in Auto-insurance. While ABC Insurance has lon
 * Personalized Policy Explanations
 * Full Process Transparency
 
-
 ### For Claim processors & Insurence agency
 
 * AI-Driven Claim Prioritization & resource allocation
 * Automated Data Collection & Extraction
 * Smart Claim Assessment & Recommendations
 * Faster Dispute Resolution
-
 
 ---
 
@@ -71,7 +66,6 @@ ABC Insurance agency is a pioneer in Auto-insurance. While ABC Insurance has lon
 ---
 
 
-
-##  📝 Hands-on step-by-step lab
+## 📝 Hands-on step-by-step lab
 
 Please find the step-by-step instructions [Hands-on Lab](/usecases/autoclaim-insurance/assets/hands_on_lab_autoclaim_insurance.md) on how you can implement this use case.
