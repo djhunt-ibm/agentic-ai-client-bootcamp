@@ -122,7 +122,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/4.png">
 
-- Upload "Policy.pdf"  [Claim Processor Knowledge Base](/data/Policy.pdf) to the knowledge base by clicking on Upload files.
+- Upload "Policy.pdf"  [Claim Processor Knowledge Base](</usecases/autoclaim-insurance/assets/data/Policy.pdf>) to the knowledge base by clicking on Upload files.
 - Add Description of the Knowledge Base describing what the Knowledge Base is about:
 
 > This knowledge base is about insurance and claim process. This knowledge base will help the claim processor in processing the claims according to the rules and regulations defined by the insurance company. 
