@@ -35,11 +35,11 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 ### Implementation
 
-- Login into IBM Cloud. Navigate to Resource List. Click on Watsonx Orchestrate.
+- Login into IBM Cloud. Navigate to Resource List. Click on watsonx Orchestrate. 
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/0.png">
 
-- Welcome to Watsonx Orchestrate. Click on Build.
+- Welcome to watsonx Orchestrate. Click on Build.
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/1.png">
 
@@ -53,14 +53,14 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/3.png">
 
-- Follow the steps according the below screenshot.
+- Follow the steps according to the screenshot below.
 - Copy the following description:
 
 > **The Information agent will fetch the news and different articles and use this information to summarize results and share.**
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/29.png">
 
-- Now click on add tool to upload OpenAPI Specs. Click on Add Tool.
+- Now click on the add tool to upload OpenAPI Specs. Click on Add Tool.
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/30.png">
 
@@ -68,7 +68,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/31.png">
 
-- Upload the required OpenAPI Spec. The OpenAPI Spec must be provided by the instructor.
+- Upload the required OpenAPI Spec. The OpenAPI Spec will be provided by the instructor.
 - The OpenAPI spec will be of the name: **duckduckgo.json**
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/32.png">
@@ -80,18 +80,28 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/34.png">
 
-- Add Behviour as to how the Agent should behave and what it should expect.
+- Add Behviour which defines how the Agent should behave and what it should expect.
   
 - Add the following for the Agent Behaviour:
   
-> **The Information Agent will use the tool to search for information and return a summarized results.**
+> `The Information Agent will use the tool to search for information and return a summarized results.`
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/35.png">
 
 - Test the Agent flow
-- Here are the steps to Test the Agent flow: [Information Agent Flow](#information-agent-flow)
 
-- After testing the flow, then click on Deploy.
+- Step 1 : Type `Insurance laws for fire in California`
+
+<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/ia-flow-1.png">
+
+- Step 2 : You will get a summarized version of all the search results, you can click on the Step 1 and see the tool results
+
+<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/ia-flow-2.png">
+
+
+- You can find the agent testing steps here -  [Information Agent Flow](#information-agent-flow)
+
+- After testing the flow, then click on Deploy, to deploy the agent.
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/36.png">
 
@@ -105,7 +115,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/3.png">
 
-- Follow the steps according the below screenshot.
+- Follow the steps according the screenshot below.
 - Copy the following description:
 
 > **The Claim Processor agent assists the claim processor to fetch the open claim request, approve, validate and verify the open request. This agent will suggest to the claim processor if they should accept or reject the claim.**
@@ -113,14 +123,14 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/4.png">
 
 - Upload "Policy.pdf"  [Claim Processor Knowledge Base](/data/Policy.pdf) to the knowledge base by clicking on Upload files.
-- Add Description of Knowledge Base as to what the Knowledge Base is about:
+- Add Description of the Knowledge Base describing what the Knowledge Base is about:
 
-> This knowledge base is about insurance and claim process. This knowledge base will help the claim processor in processing the claims according to the rules and regulations of processing insurance claims.
+> This knowledge base is about insurance and claim process. This knowledge base will help the claim processor in processing the claims according to the rules and regulations defined by the insurance company. 
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/5.png">
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/6.png">
 
-- Now click on add tool to upload OpenAPI Specs. Click on Add Tool.
+- Now click on the add tool to upload OpenAPI Specs. Click on Add Tool.
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/7.png">
 
@@ -128,7 +138,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/8.png">
 
-- Upload the required OpenAPI Specs. The OpenAPI Spec must be provided by the instructor.
+- Upload the required OpenAPI Specs. The OpenAPI Spec will be provided by the instructor.
 - The OpenAPI spec will be of the name: **claim_processor_agent_tools.json**
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/9.png">
@@ -153,9 +163,9 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/14.png">
 
-- Add Behviour as to how the Agent should behave and what it should expect.
+- Add Behviour defining how the Agent should behave and what it should expect.
   
-- Add the following for the Agent Behaviour:
+- Add the following in the Agent Behaviour section :
   
 > You will begin by welcoming the claim processor and displaying the open claims in a table. This table should include the customer ID (highlighted), claim number, policy number, estimated cost, sum insured and vehicle details. Do not show duplicates.Ask the claim processor to select a customer ID.Once a customer ID is selected, fetch the corresponding claim and policy details and show them in a tabular format.
 > Then, generate a summary based on the following points:
@@ -178,7 +188,24 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/15.png">
 
 - Test the Agent flow.
-- Here are the steps to Test the Agent flow: [Claim Processor Flow](#claim-processor-flow)
+
+- Step 1 : Show open claims
+
+<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-1.png">
+
+- Step 2 : Input Customer ID: 15561010
+
+<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-2.png">
+
+- Step 3 : Yes
+
+<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-3.png">
+
+- Step 4 : Shows update confirmation
+
+<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-4.png">
+
+-  You will also find the steps to test here : [Claim Processor Flow](#claim-processor-flow)
 
 - After testing the flow, then click on Deploy.
 
@@ -194,10 +221,10 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/18.png">
 
-- Follow the steps according the below screenshot.
+- Follow the steps according the screenshots below.
 - Copy the following description:
 
-> **The Customer Claims agent will allow customers to query for the status of their claim request and create a new claim request. You will also answer questions based on claim process and insurance policy using the knowledge base.**
+> `The Customer Claims agent will allow customers to query for the status of their claim request and create a new claim request. You will also answer questions based on claim process and insurance policy using the knowledge base`
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/19.png">
 
@@ -261,8 +288,48 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/27.png">
 
-- Test the Agent flow
-- Here are the steps to Test the Agent flow: [Customer Flow](#customer-flow)
+- Test the Agent flow 
+
+- Step 1 : Check RAG/ Knowledge base
+  " What are the different types of automobile insurance?"
+
+<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claims-flow-1.png">
+
+<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claims-flow-2.png">
+
+- Step 2 : How to check the flow for creating a new claim
+  1. Submit a new claim
+
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-3.png">
+
+  1. Jordan Davenport
+
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-4.png">
+
+  1. St Mary's Street, San Francisco, California
+
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-5.png">
+
+  1. 23-05-2025
+
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-6.png">
+
+  1. I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Camry to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel.I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.
+
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-7.png">
+
+- Step 3 : How to check the flow for "Checking claim status"
+  1. Check claim status
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-8.png">
+
+  1. John Smith
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-10.png">
+
+  1. CLM187229
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-11.png">
+
+
+- You will also find the steps to test here : [Customer Flow](#customer-flow)
 
 - After testing the flow, then click on Deploy.
 
