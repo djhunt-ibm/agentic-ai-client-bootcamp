@@ -8,7 +8,10 @@
   - [Architecture](#architecture)
   - [Implementation](#implementation)
     - [Pre-requisites](#pre-requisites)
-    - [Implementation](#implementation-1)
+    - [Agent Builder Implementation](#agent-builder-implementation)
+      - [**Create Information Agent**](#create-information-agent)
+      - [**Create Customer Agent**](#create-customer-agent)
+      - [**Create Claim Processor Agent**](#create-claim-processor-agent)
   - [Testing the Flow](#testing-the-flow)
     - [Information Agent Flow](#information-agent-flow)
     - [Claim Processor Flow](#claim-processor-flow)
@@ -33,7 +36,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 - Validate that you have access to a credentials file that you instructor will share with you before starting the labs.
 - If you're an instructor running this lab, check the **Instructor's guides** to set up all environments and systems.
 
-### Implementation
+### Agent Builder Implementation
 
 - Login into IBM Cloud. Navigate to Resource List. Click on watsonx Orchestrate. 
 
@@ -43,8 +46,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/1.png">
 
-**Create Information Agent**
-**Information Agent:**
+#### **Create Information Agent**
 
 - Click on Agent Builder
   
@@ -113,8 +115,7 @@ Insurance laws for fire in California
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/36.png">
 
-**Create Customer Agent**
-**Customer Agent:**
+#### **Create Customer Agent**
 
 - Click on Agent Builder.
 
@@ -197,7 +198,7 @@ DO NOT REFER TO THIS KNOWLEDGE BASE WHEN WORKING WITH TOOLS.
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/27.png">
 
-- Test the Agent flow 
+- Test the Agent flow
 
 - Step 1 : Check RAG/ Knowledge base
   " What are the different types of automobile insurance?"
@@ -240,16 +241,13 @@ DO NOT REFER TO THIS KNOWLEDGE BASE WHEN WORKING WITH TOOLS.
   3. CLM187229
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-11.png">
 
-
 - You will also find the steps to test here : [Customer Flow](#customer-flow)
 
 - After testing the flow, then click on Deploy.
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/28.png">
 
-
-**Create Claim Processor Agent**
-**Claim_Processor_Agent:**
+#### **Create Claim Processor Agent**
 
 - Click on Agent Builder.
 
