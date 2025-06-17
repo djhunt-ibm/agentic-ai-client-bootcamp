@@ -57,7 +57,9 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 - Follow the steps according to the screenshot below.
 - Copy the following description:
 
-```The Information agent will fetch the news and different articles and use this information to summarize results and share```
+```
+The Information agent will fetch the news and different articles and use this information to summarize results and share.
+```
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/29.png">
 
