@@ -202,7 +202,9 @@ DO NOT REFER TO THIS KNOWLEDGE BASE WHEN WORKING WITH TOOLS.
 - Step 1 : Check RAG/ Knowledge base
   "What are the different types of automobile insurance?"
 
-  ```What are the different types of automobile insurance?```
+  ```
+  What are the different types of automobile insurance?
+  ```
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claims-flow-1.png">
 
@@ -211,37 +213,49 @@ DO NOT REFER TO THIS KNOWLEDGE BASE WHEN WORKING WITH TOOLS.
 - Step 2 : How to check the flow for creating a new claim
     1. Submit a new claim
 
-    ```Submit a new claim```
+    ```
+    Submit a new claim
+    ```
 
     <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-3.png">
 
     1. Jordan Davenport
 
-    ```Jordan Davenport```
+    ```
+    Jordan Davenport
+    ```
 
     <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-4.png">
 
     1. St Mary's Street, San Francisco, California
 
-    ```St Mary's Street, San Francisco, California```
+    ```
+    St Mary's Street, San Francisco, California
+    ```
 
     <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-5.png">
 
     1. 23-05-2025
 
-    ```23-05-2025```
+    ```
+    23-05-2025
+    ```
 
     <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-6.png">
 
     1. Toyota Corolla, 2003
 
-    ```Toyota Corolla, 2003```
+    ```
+    Toyota Corolla, 2003
+    ```
 
     <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/vehicle_details.png">
 
     1. I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Camry to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel.I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.
 
-    ```I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Camry to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel.I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.```
+    ```
+    I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Camry to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel.I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.
+    ```
 
 
     <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-7.png">
@@ -249,19 +263,25 @@ DO NOT REFER TO THIS KNOWLEDGE BASE WHEN WORKING WITH TOOLS.
 - Step 3 : How to check the flow for "Checking claim status"
   1. Check claim status
 
-  ```Check claim status```
+  ```
+  Check claim status
+  ```
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-8.png">
 
   1. John Smith
 
-  ```John Smith```
+  ```
+  John Smith
+  ```
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-10.png">
 
   1. CLM187229
 
-  ```CLM187229```
+  ```
+  CLM187229
+  ```
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-11.png">
 
@@ -362,19 +382,25 @@ You will begin by welcoming the claim processor and displaying the open claims i
 
   - Step 1 : Show open claims
 
-  ```Show open claims```
+  ```
+  Show open claims
+  ```
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-1.png">
 
   - Step 2 : Input Customer ID: 15561010
 
-  ```15561010```
+  ```
+  15561010
+  ```
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-2.png">
 
   - Step 3 : Yes
 
-  ```Yes```
+  ```
+  Yes
+  ```
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-3.png">
 
@@ -399,7 +425,9 @@ You will begin by welcoming the claim processor and displaying the open claims i
 
 - Step 1 : Insurance laws for fire in California
 
-```Insurance laws for fire in California```
+  ```
+  Insurance laws for fire in California
+  ```
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/ia-flow-1.png">
 
@@ -413,7 +441,9 @@ You will begin by welcoming the claim processor and displaying the open claims i
 - Step 1 : Check RAG/ Knowledge base
   "What are the different types of automobile insurance?"
 
-```What are the different types of automobile insurance?```
+  ```
+  What are the different types of automobile insurance?
+  ```
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claims-flow-1.png">
 
@@ -422,37 +452,49 @@ You will begin by welcoming the claim processor and displaying the open claims i
 - Step 2 : How to check the flow for creating a new claim
   1. Submit a new claim
 
-  ```Submit a new claim```
+  ```
+  Submit a new claim
+  ```
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-3.png">
 
   2. Jordan Davenport
 
-  ```Jordan Davenport```
+  ```
+  Jordan Davenport
+  ```
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-4.png">
 
   3. St Mary's Street, San Francisco, California
 
-  ```St Mary's Street, San Francisco, California```
+  ```
+  St Mary's Street, San Francisco, California
+  ```
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-5.png">
 
   4. 23-05-2025
 
-  ```23-05-2025```
+  ```
+  23-05-2025
+  ```
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-6.png">
 
   5. Toyota Corolla, 2003
 
-  ```Toyota Corolla, 2003```
+  ```
+  Toyota Corolla, 2003
+  ```
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/vehicle_details.png">
 
   6. I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Camry to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel.I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.
 
-  ```I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Camry to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel.I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.```
+  ```
+  I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Camry to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel.I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.
+  ```
 
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-7.png">
@@ -460,19 +502,25 @@ You will begin by welcoming the claim processor and displaying the open claims i
 - Step 3 : How to check the flow for "Checking claim status"
   1. Check claim status
 
-  ```Check claim status```
+  ```
+  Check claim status
+  ```
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-8.png">
 
   1. John Smith
 
-  ```John Smith```
+  ```
+  John Smith
+  ```
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-10.png">
 
   1. CLM187229
 
-  ```CLM187229```
+  ```
+  CLM187229
+  ```
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-11.png">
 
@@ -480,19 +528,25 @@ You will begin by welcoming the claim processor and displaying the open claims i
 
 - Step 1 : Show open claims
 
-```Show open claims```
+```
+Show open claims
+```
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-1.png">
 
 - Step 2 : Input Customer ID: 15561010
 
-```15561010```
+```
+15561010
+```
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-2.png">
 
 - Step 3 : Yes
 
-```Yes```
+```
+Yes
+```
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-3.png">
 
