@@ -87,13 +87,18 @@ The Information agent will fetch the news and different articles and use this in
   
 - Add the following for the Agent Behaviour:
   
-> `The Information Agent will use the tool to search for information and return a summarized results.`
+ ```
+ The Information Agent will use the tool to search for information and return a summarized results.
+ ```
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/35.png">
 
 - Test the Agent flow
 
-- Step 1 : Type `Insurance laws for fire in California`
+- Step 1 : Type 
+```
+Insurance laws for fire in California
+```
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/ia-flow-1.png">
 
@@ -122,14 +127,18 @@ The Information agent will fetch the news and different articles and use this in
 - Follow the steps according the screenshot below.
 - Copy the following description:
 
-> **The Claim Processor agent assists the claim processor to fetch the open claim request, approve, validate and verify the open request. This agent will suggest to the claim processor if they should accept or reject the claim.**
+```
+The Claim Processor agent assists the claim processor to fetch the open claim request, approve, validate and verify the open request. This agent will suggest to the claim processor if they should accept or reject the claim.
+```
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/4.png">
 
 - Upload "Policy.pdf"  [Claim Processor Knowledge Base](</usecases/autoclaim-insurance/assets/data/Policy.pdf>) to the knowledge base by clicking on Upload files.
 - Add Description of the Knowledge Base describing what the Knowledge Base is about:
 
-> This knowledge base is about insurance and claim process. This knowledge base will help the claim processor in processing the claims according to the rules and regulations defined by the insurance company. 
+```
+ This knowledge base is about insurance and claim process. This knowledge base will help the claim processor in processing the claims according to the rules and regulations defined by the insurance company. 
+ ```
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/5.png">
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/6.png">
@@ -170,8 +179,9 @@ The Information agent will fetch the news and different articles and use this in
 - Add Behviour defining how the Agent should behave and what it should expect.
   
 - Add the following in the Agent Behaviour section :
-  
-> You will begin by welcoming the claim processor and displaying the open claims in a table. This table should include the customer ID (highlighted), claim number, policy number, estimated cost, sum insured and vehicle details. Do not show duplicates.Ask the claim processor to select a customer ID.Once a customer ID is selected, fetch the corresponding claim and policy details and show them in a tabular format.
+
+``` 
+You will begin by welcoming the claim processor and displaying the open claims in a table. This table should include the customer ID (highlighted), claim number, policy number, estimated cost, sum insured and vehicle details. Do not show duplicates.Ask the claim processor to select a customer ID.Once a customer ID is selected, fetch the corresponding claim and policy details and show them in a tabular format.
 > Then, generate a summary based on the following points:
   >
   > 1. Compare the estimated cost with the sum insured and calculate the approved claim amount by subtracting the deductible. Highlight the approved amount.
@@ -188,6 +198,7 @@ The Information agent will fetch the news and different articles and use this in
 > Do not give next steps.
 >
 >Once a decision is made, update the claim status and send a message confirming that emails have been sent to the customer and finance team.
+```
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/15.png">
 
@@ -230,14 +241,18 @@ The Information agent will fetch the news and different articles and use this in
 - Follow the steps according the screenshots below.
 - Copy the following description:
 
-> ```The Customer Claims agent will allow customers to query for the status of their claim request and create a new claim request. You will also answer questions based on claim process and insurance policy using the knowledge base```
+ ```
+ The Customer Claims agent will allow customers to query for the status of their claim request and create a new claim request. You will also answer questions based on claim process and insurance policy using the knowledge base.
+ ```
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/19.png">
 
 - Upload "Automobile Insurance Knowledge Base.pdf" [Customer Knowledge Base](</usecases/autoclaim-insurance/assets/data/Automobile Insurance Knowledge Base.pdf>) to the knowledge base by clicking on Upload files.
 - Add Description of Knowledge Base as to what the Knowledge Base is about.
 
-> This knowledge base is about insurance and claim process. This knowledge base will help the customer in getting information about the claims process and the rules and regulations of processing insurance claims.
+```
+This knowledge base is about insurance and claim process. This knowledge base will help the customer in getting information about the claims process and the rules and regulations of processing insurance claims.
+```
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/20.png">
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/21.png">
@@ -267,7 +282,8 @@ The Information agent will fetch the news and different articles and use this in
 - Add Behviour as to how the Agent should behave and what it should expect.
 - Add the following for the Agent Behaviour:
 
-`> The agent has to ask the user questions about how the accident happened, like
+```
+ The agent has to ask the user questions about how the accident happened, like
 1. The location and date of the incident.
 2. Ask for vehicle details.
 3. Ask for a detailed description of the incident
@@ -290,7 +306,8 @@ When asked for status you will also help user get the status of the claim reques
 Once the status is shown please end the conversation.
 
 If a question is asked about insurance and the claim's process, use the Automobile Insurance Knowledge Base.pdf to answer questions, if you don't know the answer, reply with "I don't know". Please don't use this knowledge base when you are asking questions for a tool
-DO NOT REFER TO THIS KNOWLEDGE BASE WHEN WORKING WITH TOOLS.`
+DO NOT REFER TO THIS KNOWLEDGE BASE WHEN WORKING WITH TOOLS.
+```
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/27.png">
 
