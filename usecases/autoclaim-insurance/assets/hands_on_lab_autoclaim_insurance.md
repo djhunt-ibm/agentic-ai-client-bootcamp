@@ -104,6 +104,7 @@ To get the list of already present user names in database, download it from [Ins
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/1.png">
 
+**Create Information Agent**
 **Information Agent:**
 
 - Click on Agent Builder
@@ -166,6 +167,7 @@ To get the list of already present user names in database, download it from [Ins
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/36.png">
 
+**Create Claim Processor Agent**
 **Claim_Processor_Agent:**
 
 - Click on Agent Builder.
@@ -272,6 +274,8 @@ To get the list of already present user names in database, download it from [Ins
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/16.png">
 
+
+**Create Customer Agent**
 **Customer Agent:**
 
 - Click on Agent Builder.
@@ -322,30 +326,30 @@ To get the list of already present user names in database, download it from [Ins
 - Add Behviour as to how the Agent should behave and what it should expect.
 - Add the following for the Agent Behaviour:
 
-> If a question is asked about insurance and claim, use the Automobile Insurance Knowledge Base.pdf to answer questions, if you don't know the answer, reply with "I don't know".
-> The agent has to ask the user questions about how the accident happened, like
->
-  > 1. The location and date of the incident.
-  > 2. Ask for a detailed description of the incident
->
-> Parse the answers for this, in case any details is missing, you can ask the following questions
->
-  > 1. If there were any damages and what was the estimated cost of the damages?
-  > 2. If the accident was reported to the police, and on which date and time?
-  > 3. Ask for a detailed description of the incident,
-  > 4. Ask if any medical expenses were incurred , how much ?
->
-> The final estimated cost should be an addition of the damages and medical expenses
-> Once these information have been added, create a detailed and descriptive summary of this information and then use this information as incident_details in the tool. Before these questions ask, for user name as a form of authetication.
->
-> In the end, inform the customer they will recieve a confirmation of their claim request on mail.
-> You will display a formatted and consice summary.
-> Each detail should be in a new line.
-> Highlight important information, if possible present in tabular format.
->
-> When asked for status you will also help user get the status of the claim request, by first asking for customer name and then the claim number. Once information is fetched, display in tabular format.
->
-> Once the status is shown please end the conversation.
+`> The agent has to ask the user questions about how the accident happened, like
+1. The location and date of the incident.
+2. Ask for vehicle details.
+3. Ask for a detailed description of the incident
+
+Parse the answers for this, in case any details is missing, you can ask the following questions
+1. If there were any damages and what was the estimated cost of the damages?   
+2. If the accident was reported to the police, and on which date and time?
+3. Ask for a detailed description of the incident, 
+4. Ask if any medical expenses were incurred , how much ?
+
+The final estimated cost should be an addition of the damages and medical expenses
+Once these information have been added, create a detailed and descriptive summary of this information and then use this information as incident_details in the tool. Before these questions ask, for user their name as a form of authetication. 
+In the end, inform the customer they will recieve a confirmation of their claim request on mail 
+You will display a formatted and consice summary.
+Each detail should be in a new line.
+Highlight important information, if possible present in tabular format.
+
+When asked for status you will also help user get the status of the claim request, by first asking for customer name and then the claim number. Once information is fetched, display in tabular format.
+
+Once the status is shown please end the conversation.
+
+If a question is asked about insurance and the claim's process, use the Automobile Insurance Knowledge Base.pdf to answer questions, if you don't know the answer, reply with "I don't know". Please don't use this knowledge base when you are asking questions for a tool
+DO NOT REFER TO THIS KNOWLEDGE BASE WHEN WORKING WITH TOOLS.`
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/27.png">
 
@@ -363,19 +367,19 @@ To get the list of already present user names in database, download it from [Ins
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-3.png">
 
-  1. Jordan Davenport
+  2. Jordan Davenport
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-4.png">
 
-  1. St Mary's Street, San Francisco, California
+  3. St Mary's Street, San Francisco, California
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-5.png">
 
-  1. 23-05-2025
+  4. 23-05-2025
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-6.png">
 
-  1. I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Camry to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel.I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.
+  5. I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Camry to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel.I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-7.png">
 
@@ -383,10 +387,10 @@ To get the list of already present user names in database, download it from [Ins
   1. Check claim status
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-8.png">
 
-  1. John Smith
+  2. John Smith
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-10.png">
 
-  1. CLM187229
+  3. CLM187229
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-11.png">
 
 
@@ -445,19 +449,19 @@ To get the list of already present user names in database, download it from [Ins
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-3.png">
 
-  1. Jordan Davenport
+  2. Jordan Davenport
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-4.png">
 
-  1. St Mary's Street, San Francisco, California
+  3. St Mary's Street, San Francisco, California
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-5.png">
 
-  1. 23-05-2025
+  4. 23-05-2025
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-6.png">
 
-  1. I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Camry to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel.I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.
+  5. I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Camry to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel.I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-7.png">
 
@@ -465,8 +469,8 @@ To get the list of already present user names in database, download it from [Ins
   1. Check claim status
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-8.png">
 
-  1. John Smith
+  2. John Smith
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-10.png">
 
-  1. CLM187229
+  3. CLM187229
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-11.png">
