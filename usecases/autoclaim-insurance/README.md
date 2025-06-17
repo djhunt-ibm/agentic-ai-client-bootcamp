@@ -38,7 +38,7 @@ ABC Insurance agency is a pioneer in Auto-insurance. While ABC Insurance has lon
 
 ## 📈 Business value
 
-### For Customers
+### For customers
 
 * Frictionless Claim Submissions
 * Real-Time Claim Tracking & Updates
@@ -46,7 +46,7 @@ ABC Insurance agency is a pioneer in Auto-insurance. While ABC Insurance has lon
 * Personalized Policy Explanations
 * Full Process Transparency
 
-### For Claim processors & Insurence agency
+### For claim processors & insurance agency
 
 * AI-Driven Claim Prioritization & resource allocation
 * Automated Data Collection & Extraction
