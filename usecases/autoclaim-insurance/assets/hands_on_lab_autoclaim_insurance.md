@@ -57,7 +57,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 - Follow the steps according to the screenshot below.
 - Copy the following description:
 
-> **The Information agent will fetch the news and different articles and use this information to summarize results and share.**
+```> **The Information agent will fetch the news and different articles and use this information to summarize results and share.**```
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/29.png">
 
@@ -228,7 +228,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 - Follow the steps according the screenshots below.
 - Copy the following description:
 
-> `The Customer Claims agent will allow customers to query for the status of their claim request and create a new claim request. You will also answer questions based on claim process and insurance policy using the knowledge base`
+> ```The Customer Claims agent will allow customers to query for the status of their claim request and create a new claim request. You will also answer questions based on claim process and insurance policy using the knowledge base```
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/19.png">
 
