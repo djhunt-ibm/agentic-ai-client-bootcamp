@@ -1,5 +1,7 @@
 # Auto-Insurance claim automation with Agentic AI 
 
+<img src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/img/beta.png" width="100">
+
 ![](insurance-banner.png)
 
 ## 🤔 The Problem
@@ -61,8 +63,7 @@ ABC Insurance agency is a pioneer in Auto-insurance. While ABC Insurance has lon
 
 ## 🎥 Demo
 
-<https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/461826/55793477-f55d-42f0-8943-7de3d7a80d73>
-
+Coming soon...
 ---
 
 
