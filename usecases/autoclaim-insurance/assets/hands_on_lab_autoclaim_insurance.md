@@ -25,7 +25,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 ## Architecture
 
-![Architecture](Insurance_Autoclaims_Architecture_v1.png)
+![Architecture](Insurance_Autoclaims_Architecture_v2.png)
 
 ## Implementation
 
@@ -35,9 +35,9 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 - Validate that you have access to the right techzone environment for this lab.
 - Validate that you have access to a credentials file that you instructor will share with you before starting the labs.
 - If you're an instructor running this lab, check the **Instructor's guides** to set up all environments and systems.
-- Make sure that your instructors has provided the following:
+- Make sure that your instructor has provided the following:
   - **OpenAPI Specs**
-  - **An unique username to test the workflow.**
+  - **A customer username registered in the insurance database.**
 
 ### Agent Builder Implementation
 

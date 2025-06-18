@@ -26,7 +26,6 @@ ABC Insurance Agency is a pioneer in Auto-insurance. While ABC Insurance has lon
 
 * **Better workflow & transparency**
 
-  * Instant status updates: Customers can check real-time claim status notifications at every step with just a few words.
   * AI-driven assistance: Conversational AI agents clarify policy terms, answer questions, and guide customers through complex insurance concepts.
 
 * **Knowledge base integration**
@@ -57,7 +56,7 @@ ABC Insurance Agency is a pioneer in Auto-insurance. While ABC Insurance has lon
 
 ## 🏛 Architecture
 
-![Architecture](./assets/Insurance_Autoclaims_Architecture_v1.png)
+![Architecture](/usecases/autoclaim-insurance/assets/Insurance_Autoclaims_Architecture_v2.png)
 
 ---
 
