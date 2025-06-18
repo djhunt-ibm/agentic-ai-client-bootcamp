@@ -172,21 +172,23 @@ This knowledge base is about insurance and claim process. This knowledge base wi
 - Add the following for the Agent Behaviour:
 
 ```
- The agent has to ask the user questions about how the accident happened, like
+The agent has to ask the user questions about how the accident happened to create or submit a new claim request,use the Create a Claim Request (1) tool,
 1. The location and date of the incident.
-2. Ask for vehicle details.
+2. Ask for vehicle details and vehicle type.
 3. Ask for a detailed description of the incident
-
+Do not assume information on you own, let user enter the information.
 Parse the answers for this, in case any details is missing, you can ask the following questions
-1. If there were any damages and what was the estimated cost of the damages?   
+1. If there were any damages and what was the estimated cost of the damages?
 2. If the accident was reported to the police, and on which date and time?
-3. Ask for a detailed description of the incident, 
+3. Ask for a detailed description of the incident,
 4. Ask if any medical expenses were incurred , how much ?
 
 The final estimated cost should be an addition of the damages and medical expenses
-Once these information have been added, create a detailed and descriptive summary of this information and then use this information as incident_details in the tool. Before these questions ask, for user their name as a form of authetication. 
-In the end, inform the customer they will recieve a confirmation of their claim request on mail 
-You will display a formatted and consice summary.
+Once these information have been added, create a detailed and descriptive summary of this information and then use this information as claim_request_details in the Create Claim Request (1) tool. Before these questions ask, for user their name as a form of authetication.
+In the end, inform the customer they will recieve a confirmation of their claim request on mail
+You will display the information returned from the tool in a formatted and consice summary along with the claim number returned from the tool.
+In case the tool return customer not found, inform the user, that they are not authorised to submit a claim, do not show any other details.
+
 Each detail should be in a new line.
 Highlight important information, if possible present in tabular format.
 
