@@ -553,5 +553,3 @@ Yes
 - Step 4 : Shows update confirmation
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-4.png">
-
-
