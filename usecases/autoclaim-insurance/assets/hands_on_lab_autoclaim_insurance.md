@@ -214,54 +214,54 @@ DO NOT REFER TO THIS KNOWLEDGE BASE WHEN WORKING WITH TOOLS.
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claims-flow-2.png">
 
 - Step 2 : How to check the flow for creating a new claim
-    1. Submit a new claim
+1. Submit a new claim
 
-    ```
-    Submit a new claim
-    ```
+  ```
+  Submit a new claim
+  ```
 
-    <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-3.png">
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-3.png">
 
-    1. Jordan Davenport
+  2. Jordan Davenport
 
-    ```
-    Jordan Davenport
-    ```
+  ```
+  Jordan Davenport
+  ```
 
-    <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-4.png">
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-4.png">
 
-    1. St Mary's Street, San Francisco, California
+  3. St Mary's Street, San Francisco, California
 
-    ```
-    St Mary's Street, San Francisco, California
-    ```
+  ```
+  St Mary's Street, San Francisco, California
+  ```
 
-    <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-5.png">
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-5.png">
 
-    1. 23-05-2025
+  4. 23-05-2025
 
-    ```
-    23-05-2025
-    ```
+  ```
+  23-05-2025
+  ```
 
-    <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-6.png">
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-6.png">
 
-    1. Toyota Corolla, 2003
+  5. Toyota Corolla, 2003
 
-    ```
-    Toyota Corolla, 2003
-    ```
+  ```
+  Toyota Corolla, 2003
+  ```
 
-    <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/vehicle_details.png">
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/vehicle_details.png">
 
-    1. I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Camry to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel.I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.
+  6. I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Tata Study Truck to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel. I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.
 
-    ```
-    I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Camry to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel.I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.
-    ```
+  ```
+  I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Tata Study Truck to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel. I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.
+  ```
 
+<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-7.png">
 
-    <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-7.png">
 
 - Step 3 : How to check the flow for "Checking claim status"
   1. Check claim status
@@ -360,23 +360,36 @@ The Claim Processor agent assists the claim processor to fetch the open claim re
 - Add the following in the Agent Behaviour section :
 
 ```
-You will begin by welcoming the claim processor and displaying the open claims in a table. This table should include the customer ID (highlighted), claim number, policy number, estimated cost, sum insured and vehicle details. Do not show duplicates.Ask the claim processor to select a customer ID.Once a customer ID is selected, fetch the corresponding claim and policy details and show them in a tabular format.
-> Then, generate a summary based on the following points:
-  >
-  > 1. Compare the estimated cost with the sum insured and calculate the approved claim amount by subtracting the deductible. Highlight the approved amount.
-  > 2. Check if the policy is currently active and whether the claim falls within the coverage period.
-  > 3. Classify the accident into one of the following types: rear-end collision, head-on collision, side-impact, sideswipe, single-vehicle, multi-vehicle pileup, hit-and-run, parking lot, animal collision, weather-related, mechanical failure-related, vandalism, or theft.
-  > 4. Determine if the classified accident type is covered by the policy. If policy details are not clear, refer to the knowledge base to verify.
-  > 5. It is mandatory for you to use the information_agent to query for the accident type you discovered in step 4. Query: The rules and regulations for accident type in US. Use the result to verify if the claim details are compliant.
-  > 6. Provide a clear recommendation to accept or reject the claim based on these checks.
-  > 7. Highlight the total claim amount (estimated cost minus deductible).
-  > 8. Create a clear and concise summary for the claim processor, emphasizing key details like approved amount, claim number, and policy number.
-> HIGHLIGHT ALL THE DETAILS IN NEAR FORMAT.
->
-> Finally, ask the claim processor "Whether they accept the claim?"
-> Do not give next steps.
->
->Once a decision is made, update the claim status and send a message confirming that emails have been sent to the customer and finance team.
+You will begin by welcoming the claim processor and displaying the open claims in a table. 
+This table should include the customer ID (highlighted), claim number, policy number, estimated cost, sum insured and vehicle details. Do not show duplicates.
+
+Ask the claim processor to select a customer ID.
+
+Once a customer ID is selected, fetch the corresponding claim and policy details and show them in a tabular format.
+If there are more than open claims for a customer ID, ask claim processor to select a claim 
+Use the claim number and customer id to fetch details and then generate summary on the following points
+
+1. Compare the estimated cost with the sum insured and calculate the approved claim amount by subtracting the deductible. Highlight the approved amount.
+
+2. Check if the policy is currently active and whether the claim falls within the coverage period.
+
+3. Classify the accident into one of the following types: rear-end collision, head-on collision, side-impact, sideswipe, single-vehicle, multi-vehicle pileup, hit-and-run, parking lot, animal collision, weather-related, mechanical failure-related, vandalism, or theft.
+
+4. Determine if the classified accident type is covered by the policy. If policy details are not clear, refer to the knowledge base to verify.
+
+5. It is mandatory for you to use the information_agent to query for the accident type you discovered in step 4. Query: The rules and regulations for accident type in US. Use the result to verify if the claim details are compliant.
+
+6. Provide a clear recommendation to accept or reject the claim based on these checks.
+
+7. Highlight the total claim amount (estimated cost minus deductible).
+
+8. Create a clear and concise summary for the claim processor, emphasizing key details like approved amount, claim number, and policy number.
+HIGHLIGHT ALL THE DETAILS IN NEAR FORMAT.
+
+Finally, ask the claim processor "Whether they accept the claim?"
+Do not give next steps. 
+
+Once a decision is made, update the claim status and send a message confirming that emails have been sent to the customer and finance team.
 ```
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/15.png">
@@ -391,25 +404,31 @@ You will begin by welcoming the claim processor and displaying the open claims i
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-1.png">
 
-  - Step 2 : Input Customer ID: 15561010
+  - Step 2 : Input Customer ID: 60695904
 
   ```
-  15561010
+  60695904
   ```
+<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-2-new.png">
 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-2.png">
+  - Step 3 : Input Claim Number
 
-  - Step 3 : Yes
+ ```
+  CLM347697
+```
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-3.0-new.png">
+
+  - Step 4 : Yes
 
   ```
   Yes
   ```
 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-3.png">
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-4-new.png">
 
   - Step 4 : Shows update confirmation
 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-4.png">
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-5-new.png">
 
 - You will also find the steps to test here : [Claim Processor Flow](#claim-processor-flow)
 
@@ -493,14 +512,13 @@ You will begin by welcoming the claim processor and displaying the open claims i
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/vehicle_details.png">
 
-  6. I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Camry to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel.I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.
+  6. I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Tata Study Truck to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel. I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.
 
   ```
-  I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Camry to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel.I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.
+  I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Tata Study Truck to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel. I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.
   ```
 
-
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-7.png">
+<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-7.png">
 
 - Step 3 : How to check the flow for "Checking claim status"
   1. Check claim status
@@ -531,28 +549,35 @@ You will begin by welcoming the claim processor and displaying the open claims i
 
 - Step 1 : Show open claims
 
+  ```
+  Show open claims
+  ```
+
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-1.png">
+
+  - Step 2 : Input Customer ID: 60695904
+
+  ```
+  60695904
+  ```
+<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-2-new.png">
+
+  - Step 3 : Input Claim Number
+
+ ```
+  CLM347697
 ```
-Show open claims
-```
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-3.0-new.png">
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-1.png">
+  - Step 4 : Yes
 
-- Step 2 : Input Customer ID: 15561010
+  ```
+  Yes
+  ```
 
-```
-15561010
-```
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-4-new.png">
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-2.png">
+  - Step 4 : Shows update confirmation
 
-- Step 3 : Yes
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-5-new.png">
 
-```
-Yes
-```
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-3.png">
-
-- Step 4 : Shows update confirmation
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-4.png">

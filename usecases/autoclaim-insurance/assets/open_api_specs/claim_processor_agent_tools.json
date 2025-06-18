@@ -15,44 +15,69 @@
     "/fetch_open_claims": {
       "get": {
         "summary": "Fetch Open Claims",
-        "description": "Retrieves a list of currently open claims for a given customer.",
+        "description": "Retrieves open claims for a specific customer using customer ID and claim number.",
+        "operationId": "fetchOpenClaims",
         "parameters": [
           {
             "name": "customer_id",
             "in": "query",
             "required": true,
+            "description": "Unique ID of the customer",
             "schema": {
-              "type": "string"
-            },
-            "description": "Unique ID of the customer"
+              "type": "integer",
+              "example": 60695904
+            }
+          },
+          {
+            "name": "claim_number",
+            "in": "query",
+            "description": "Unique claim number",
+            "schema": {
+              "type": "string",
+              "example": "CLM347697"
+            }
           }
         ],
         "responses": {
           "200": {
-            "description": "List of open claims retrieved successfully",
+            "description": "Claim details found",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "open_claims": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
+                    "claim_number": {
+                      "type": "string",
+                      "example": "CLM347697"
+                    },
+                    "customer_id": {
+                      "type": "integer",
+                      "example": 60695904
+                    },
+                    "status": {
+                      "type": "string",
+                      "example": "Open"
+                    },
+                    "estimated_cost": {
+                      "type": "number",
+                      "example": 4500
+                    },
+                    "claim_request_details": {
+                      "type": "string",
+                      "example": "Rear bumper and tail light damage"
+                    },
+                    "vehicle_type": {
+                      "type": "string",
+                      "example": "Car"
+                    },
+                    "vehicle_details": {
+                      "type": "string",
+                      "example": "Toyota Corolla"
                     }
-                  },
-                  "example": {
-                    "open_claims": [
-                      "Claim Number: CLM174074 | Status: Open\nRequest: The customer submitted a claim for a accident involving their truck. The incident occurred on November 25, 2024, with an estimated repair cost of $59300.31.\nRequest Date: 2024-11-25, Claim Type: Accident\nSum Insured: $288245.89, Total Payable: $8012.97\nVehicle: BlueViolet Yeah Truck, Coverage: No"
-                    ]
                   }
                 }
               }
             }
-          },
-          "400": {
-            "description": "Missing or invalid customer ID"
           }
         }
       }
