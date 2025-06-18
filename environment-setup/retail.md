@@ -36,21 +36,21 @@ Click the **Ctrl-Alt-Delete CAD** button (annotated with red arrow) to be prompt
 
 *Optional* It is also recommended to resize the virtual screen to Full Screen. To do so, click the **Resize** icon (annotated with red arrow) and select **Fullscreen** (annotated with red rectangle).
 
-If you get a pop-up about Unplanned shutdown, cancel that pop-up. 
+If you get a pop-up about an Unplanned shutdown, cancel that pop-up. 
 
 Once logged into the Windows VM, let's start `Rancher Desktop`. This is the container runtime we will use later for the ADK. On the home screen, double-click the Rancher Desktop icon.
 
 ![alt text](assets/image37.png)
 
-You will see in the Rancher console that is is starting up the serivce. Once that has completed, you can minimize the window, since we won't need it anymore.
+You will see in the Rancher console that it is starting up the service. Once that has completed, you can minimize the window, since we won't need it anymore.
 
 ![alt text](assets/image38.png)
 
-Next you need to open a command line terminal with access to the WSL instance. To start, click the **Ubuntu** icon (annotated with red arrow) pinned to the taskbar to start the Ubuntu terminal. Alternatively, you can type **ubuntu** into the search field (annotated with a red oval) and click the **Ubuntu** app (annotated with a red rectangle).
+Next, you need to open a command line terminal with access to the WSL instance. To start, click the **Ubuntu** icon (annotated with red arrow) pinned to the taskbar to start the Ubuntu terminal. Alternatively, you can type **ubuntu** into the search field (annotated with a red oval) and click the **Ubuntu** app (annotated with a red rectangle).
 
 ![alt text](assets/techzone-vm-ubuntu.png)
 
-In the Ubuntu terminal, you need to activate the Python environment which is already setup that has the watsonx Orchestrate ADK pre-installed.
+In the Ubuntu terminal, you need to activate the Python environment, which is already setup and has the watsonx Orchestrate ADK pre-installed.
 ```
 source /home/techzone/wsl_wxoenv/bin/activate
 ```
@@ -60,7 +60,7 @@ source /home/techzone/wsl_wxoenv/bin/activate
 
 ## Lab materials
 
-The materials for this lab will be given to you by your instructor in form of a zip file. You need to unzip this file into a folder on your machine. The file contains a set of markdown files that represent the instructions for various parts of the bootcamp (including this very file), as well as code samples that you are going to use. Where to unzip the file differs based on whether you are running this lab on your local machine, or on a virtual machine provided to you.
+The materials for this lab will be given to you by your instructor in the form of a zip file. You need to unzip this file into a folder on your machine. The file contains a set of markdown files that represent the instructions for various parts of the bootcamp (including this very file), as well as code samples that you are going to use. Where to unzip the file differs based on whether you are running this lab on your local machine or on a virtual machine provided to you.
 
 ### Local machine
 
@@ -73,13 +73,13 @@ We recommend you use VS Code to view the materials and edit files as needed. Ass
 
 ### Virtual machine
 
-The virtual machine is using Windows as its operating system, however, we will be using the "Windows Subsystem for Linux (WSL)" to run the ADK. When downloading and unzipping the file with materials, you should put it into the folder that has been precreated.
+The virtual machine is using Windows as its operating system; however, we will be using the "Windows Subsystem for Linux (WSL)" to run the ADK. When downloading and unzipping the file with materials, you should put it into the folder that has been precreated.
 
-After you open the VM console in your browser, you will see the Windows user interface. There you can open a Firefix browser window and enter the address your instructor gave you. In the example below, the zip file exists as a downloadable file in Box:
+After you open the VM console in your browser, you will see the Windows user interface. There, you can open a Firefox browser window and enter the address your instructor gave you. In the example below, the zip file exists as a downloadable file in Box:
 
 ![alt text](assets/image21.png)
 
-When clicking on the Download button, the file will be donwloaded into the `Downloads` folder on the Windows machine. Open that folder by simply clicking on the `Show all downloads` button.
+When clicking on the Download button, the file will be downloaded into the `Downloads` folder on the Windows machine. Open that folder by simply clicking on the `Show all downloads` button.
 
 ![alt text](assets/image22.png)
 
@@ -87,7 +87,7 @@ Then click on `Show in Folder` to open the file explorer window.
 
 ![alt text](assets/image23.png)
 
-Right-click on the zip and file and select `Copy`.
+Right-click on the zip file and select `Copy`.
 
 ![alt text](assets/image24.png)
 
@@ -99,7 +99,7 @@ Under the folder, right click on `home -> techzone -> wxo_dev_edition` and click
 
 ![alt text](assets/image26.png)
 
-Open the folder and right click on the zip file. You may receive a warning that this file is from the Internet. Click OK.
+Open the folder and right-click on the zip file. You may receive a warning that this file is from the Internet. Click OK.
 
 ![alt text](assets/image27.png)
 
@@ -111,13 +111,13 @@ As the destination, make sure you enter the `wxo_dev_edition` (which is not the 
 
 ![alt text](assets/image29.png)
 
-Note that the extraction process can take a couple of minutes. After it completes, your file explorer window should show the extracted files in the wxo_dev_edition folder. If they were placed into a subfolder, you can cut and paste them.
+Note that the extraction process can take a couple of minutes. After it completes, your file explorer window should show the extracted files in the `wxo_dev_edition` folder. If they are placed into a subfolder, you can cut and paste them.
 
 ![alt text](assets/image30.png)
 
 #### VS Code
 
-VS Code is already installed on the Windows based virtual machine. To open it, simply type "code" into the search field at the bottom left of the screen. The "VS Code" app will automatically be offered as a choice and you cna open it by clicking on the app icon.
+VS Code is already installed on the Windows-based virtual machine. To open it, simply type "code" into the search field at the bottom left of the screen. The "VS Code" app will automatically be offered as a choice, and you can open it by clicking on the app icon.
 
 ![alt text](assets/image31.png)
 
@@ -129,7 +129,7 @@ Select the folder named `wxo_dev_edition` from the list.
 
 ![alt text](assets/image33.png)
 
-Click OK. This will open the folder with all files you are going to need during this lab.
+Click OK. This will open the folder with all the files you are going to need during this lab.
 
 ## Environments
 
@@ -139,7 +139,7 @@ To run the lab end to end, you need a number of environments.
 
 For the lab, as well as for the install of the Developer's Edition of watsonx Orchestrate, you will need access to an IBM watsonx.ai Runtime instance, and specifically, a `deployment space ID` for that instance as well as an `API key` for the IBM Cloud account the instance is running in. 
 
-Your instructor should have given you access to the instances of watsonx Orchestrate and watsonx.ai that you will use throughout the bootcamp. To access them, you start out by logging into your IBM Cloud account at https://cloud.ibm.com. You can find the resources that you have access to in that account when going to the so-called "hamburger menu" on the top left of the page and click on `Resource list`.
+Your instructor should have given you access to the instances of watsonx Orchestrate and watsonx.ai that you will use throughout the bootcamp. To access them, you start out by logging into your IBM Cloud account at https://cloud.ibm.com. You can find the resources that you have access to in that account when going to the so-called "hamburger menu" on the top left of the page and clicking on `Resource list`.
 
 ![alt text](assets/image1.png)
 
@@ -147,19 +147,19 @@ On the page with all your resources, you can find your watsonx.ai Runtime instan
 
 ![alt text](assets/image2.png)
 
-This will open the details page for the resource. Expand the `Launch in` drop down list and click on `IBM watsonx`.
+This will open the details page for the resource. Expand the `Launch in` drop-down list and click on `IBM watsonx`.
 
 ![alt text](assets/image3.png)
 
-After opening the watsonx console, you can close both the Welcome and the Dive deeper popup windows. Now click the 'hamburger menu' on this page, again at the top left of the page, and select `View all deployment spaces`.
+After opening the watsonx console, you can close both the Welcome and the Dive deeper pop-up windows. Now, click the 'hamburger menu' on this page, again at the top left of the page, and select `View all deployment spaces`.
 
 ![alt text](assets/image4.png)
 
-In the following view, depending on whether you already ran a different lab, you may or may not see any deployment spaces listed. However, here we will just create a new one. Click on the `New deployment space` button.
+In the following view, depending on whether you have already run a different lab, you may or may not see any deployment spaces listed. However, here we will just create a new one. Click on the `New deployment space` button.
 
 ![alt text](assets/image5.png)
 
-Give the new space a descriptive name. All other fields are optional. The `Storage` field should be already filled in. Click on `Create`.
+Give the new space a descriptive name. All other fields are optional. The `Storage` field should already be filled in. Click on `Create`.
 
 ![alt text](assets/image6.png)
 
@@ -171,7 +171,7 @@ On the details page for the new space, select the `Manage` tab.
 
 ![alt text](assets/image8.png)
 
-On the Manage page, make sure the space is associated with your watsonx.ai Runtime instance, and set it if it is not. (Hit Save if you need to set it).
+On the Manage page, make sure the space is associated with your watsonx.ai Runtime instance, and set it if it is not. (Hit Save if you need to set it.)
 
 ![alt text](assets/image9.png)
 
@@ -184,9 +184,9 @@ The last step here is that we need to capture the Space GUID. You can find the G
 The Space GUID, as well as a number of other environment variables, goes into a file called `.env`. This file should exist in **the root folder** of where you extracted the content of the repo that was provided to you by your instructor (this file is also in that repo, of course), in other words, it should be at the same level as the `usecases` or `environment-setup` subfolders.
 
 - If you are using the virtual machine with a pre-installed ADK, you already have this file in the `wxo_dev_edition` folder in the WSL environment within that virtual machine. 
-- If you are running this on your local machine, you should have already unziped the file with materials into a folder of your choosing, as described [above](#local-machine). Create an empty .env file and make sure you place the `.env` file in that same folder. 
+- If you are running this on your local machine, you should have already unzipped the file with materials into a folder of your choosing, as described [above](#local-machine). Create an empty .env file and make sure you place the `.env` file in that same folder. 
 
-You can edit the file with an editor of your choosing. We recommend to use VS Code for this. 
+You can edit the file with an editor of your choosing. We recommend using VS Code for this. 
 
 You can create and edit this file with an editor of your choosing, or simply run the following command on the command line:
 ```
@@ -198,7 +198,7 @@ You also need an API key for the IBM Cloud account that your watsonx.ai instance
 
 ![alt text](assets/image11.png)
 
-on the following page, select `API keys` from the menu on the left.
+On the following page, select `API keys` from the menu on the left.
 
 ![alt text](assets/image12.png)
 
@@ -220,7 +220,7 @@ echo 'WATSONX_APIKEY=[paste the API key from your clipboard here]' >> .env
 ```
 
 ### Entitlement key
-Below, you will install the watsonx Orchestrate Developer Edition, which consists of a number of container images that are downloaded from the IBM registry during install. To authenticate with this registry you need an "entitlement key". Your instructor will provide this key for you.
+Below, you will install the watsonx Orchestrate Developer Edition, which consists of a number of container images that are downloaded from the IBM registry during install. To authenticate with this registry, you need an "entitlement key". Your instructor will provide this key for you.
 
 You can add the key to your .env file via editor or by running the following on the command line:
 ```
@@ -239,7 +239,7 @@ To run it on your own laptop, you need to install
 - Python 3.11
 - Visual Studio Code
 
-Once you have these prerequistites available, you can install the ADK by following the instructions at [the ADK install page](https://developer.watson-orchestrate.ibm.com/getting_started/installing).
+Once you have these prerequisites available, you can install the ADK by following the instructions at [the ADK install page](https://developer.watson-orchestrate.ibm.com/getting_started/installing).
 
 > **Note**: These instructions were created for a specific version of the ADK, namely version **1.4.2**. We recommend you specify that version when running the install: `pip install ibm-watsonx-orchestrate==1.4.2`.
 
@@ -291,7 +291,7 @@ Now click on `Sign up`.
 
 ![alt text](assets/image17.png)
 
-You can sign up with your Google ID, or Github ID or your email address. Once you have successfully completed the signup process and can log into the service, your page should look like this: 
+You can sign up with your Google ID, or Github ID, or your email address. Once you have successfully completed the signup process and can log into the service, your page should look like this: 
 
 ![alt text](assets/image18.png)
 
