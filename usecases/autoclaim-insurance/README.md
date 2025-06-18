@@ -62,7 +62,11 @@ ABC Insurance Agency is a pioneer in Auto-insurance. While ABC Insurance has lon
 
 ## 🎥 Demo
 
-Coming soon...
+
+
+https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/448234/63965561-72ea-4e00-b829-b92599e6127f
+
+
 ---
 
 
