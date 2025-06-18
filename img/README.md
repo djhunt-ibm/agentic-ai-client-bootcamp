@@ -1,1 +1,1 @@
-Image file go here
+Image files go here
