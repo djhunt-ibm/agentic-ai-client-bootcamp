@@ -15,6 +15,7 @@
       - [Importing the tool](#importing-the-tool)
     - [Web search tool](#web-search-tool)
   - [The agents](#the-agents)
+    - [Starting the Chat UI](#starting-the-chat-ui)
     - [The Internet Research Agent](#the-internet-research-agent)
     - [The Market Analyst Agent](#the-market-analyst-agent)
     - [The Retail Market Agent](#the-retail-market-agent)
@@ -274,6 +275,22 @@ We will create three agents to implement this use case:
 - The Retail Market Agent is the supervisory agent that interacts with the user and collaborates with other agents, i.e. the two agents listed above, to create the final answer for the user.
 
 Each agent will be defined inside a YAML file that we can easily import into watsonx Orchestrate for testing, but we will also take you through the UI-based Agent Builder tool.
+
+### Starting the Chat UI
+
+Before we can start defining our first agent via the UI, we have to import at least one agent into the environment via YAML. The reason being that without having an agent defined, the UI will not start. We could simply import one of the agents discussed below, but since we want to take you through the UI to define those, we will import a sample agent here to allow the UI to start. 
+
+The sample agent offers insight into IBM, and it uses a "knowledge base" consisting of a number of PDF files as its source. First, we need to import this new knowledge base. Enter the following on the command line:
+```
+orchestrate knowledge-bases import -f ./usecases/retail/src/ibm_knowledge/knowledge_base/ibm_knowledge_base.yaml
+```
+
+After creating the knowledge base, we can import the actual agent:
+```
+orchestrate agents import -f ./usecases/retail/src/ibm_knowledge/agents/ibm_agent.yaml
+```
+
+You can try out this agent later, for now we will leave it alone and continue with our retail use case.
 
 ### The Internet Research Agent
 
