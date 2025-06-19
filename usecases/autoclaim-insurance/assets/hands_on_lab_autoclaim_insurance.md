@@ -88,7 +88,7 @@ The Information agent will fetch the news and different articles and use this in
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/34.png">
 
-- Add Behviour which defines how the Agent should behave and what it should expect.
+- Add behavior which defines how the Agent should behave and what it should expect.
   
 - Add the following for the Agent Behaviour:
   
