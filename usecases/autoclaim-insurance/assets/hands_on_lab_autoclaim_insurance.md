@@ -21,7 +21,7 @@
 
 With the help of Agentic AI powered by watsonx Orchestrate, you will build an intelligent, agent-driven system that streamlines the entire claims process. This solution not only assists customers in effortlessly filing their claims but also empowers insurers to process them more efficiently, reducing manual effort and turnaround time.
 Customers can simply answer a few guided questions and initiate a claim using minimal information. From there, the agentic system intelligently handles the end-to-end filing process—including document generation, data extraction, and claim verification—ensuring speed, accuracy, and ease of use. Additionally, customers can quickly check the status of their claims at any time, improving transparency and enhancing their overall experience.
-On the insurer's side, submitted claims can be seamlessly fetched, and the agentic system automatically cross-verifies claim details against the customer’s policy documents. It extracts key information and validates it against predefined business rules and regulatory guidelines. Based on this analysis, the system generates intelligent, structured suggestions on whether a claim should be approved or rejected—significantly reducing manual effort and the risk of errors. The final decision, however, remains with the insurer, supported by a clear and concise summary of all relevant details.
+On the insurer's side, submitted claims can be seamlessly fetched, and the agentic system automatically cross-verifies claim details against the customer’s policy documents. It extracts key information and validates it against predefined business rules and regulatory guidelines. Based on this analysis, the system generates intelligent, structured suggestions on whether a claim should be approved or rejected, significantly reducing manual effort and the risk of errors. The final decision, however, remains with the insurer, supported by a clear and concise summary of all relevant details.
 
 ## Architecture
 
@@ -31,9 +31,9 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 ### Pre-requisites
 
-- Check with your instructor to make sure **all systems** are up and running before you continue.
+- Check with your instructor to ensure **all systems** are up and running before you continue.
 - Validate that you have access to the right TechZone environment for this lab.
-- Validate that you have access to a credentials file that you instructor will share with you before starting the labs.
+- Validate that you have access to a credentials file that your instructor will share with you before starting the labs.
 - If you're an instructor running this lab, check the [Instructor's guides](https://github.ibm.com/skol/agentic-ai-client-bootcamp-instructors/blob/main/environment-setup/readme.md) to set up all environments and systems.
 - Make sure that your instructor has provided the following:
   - **OpenAPI Specs**
@@ -41,9 +41,13 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 ### Agent Builder Implementation
 
-- Login into IBM Cloud. Navigate to Resource List. Click on watsonx Orchestrate.
+- Log in to IBM Cloud (cloud.ibm.com). Navigate to top left hamburger menu, then to Resource List. Open the AI/Machine Learning section. You should see a **watsonx Orchestrate** service, click to open.
 
 <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/0.png">
+
+- Click the "Launch watsonx Orchestrate" button.
+
+<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/0.5.png">
 
 - Welcome to watsonx Orchestrate. Click on Build.
 
