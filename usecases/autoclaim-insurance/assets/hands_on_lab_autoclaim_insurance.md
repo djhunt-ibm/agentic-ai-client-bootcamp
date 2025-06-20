@@ -43,90 +43,76 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 - Log in to IBM Cloud (cloud.ibm.com). Navigate to top left hamburger menu, then to Resource List. Open the AI/Machine Learning section. You should see a **watsonx Orchestrate** service, click to open.
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/0.png">
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/0.png">
 
 - Click the "Launch watsonx Orchestrate" button.
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/0.5.png">
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/0.5.png">
 
-- Welcome to watsonx Orchestrate. Click on Build.
+- Welcome to watsonx Orchestrate. Open the hamburger menu, click on **Build**->**Agent Builder**.
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/1.png">
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/2.png">
 
 #### **Create Information Agent**
 
-- Click on Agent Builder
-  
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/2.png">
+- Click on **Create Agent**
 
-- Click on Create Agent
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/3.png">
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/3.png">
 
 - Follow the steps according to the screenshot below.
-- Copy the following description:
+  - Select **Create from scratch**
+  - Name the agent `information_agent`
+  - Use the following description:
+    ```
+    The Information agent will fetch the news and different articles and use this information to summarize results and share.
+    ```
+  - Click **Create** 
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/29.png">
 
-```
-The Information agent will fetch the news and different articles and use this information to summarize results and share.
-```
+- On the `information_agent` page, the **Profile** section should be filled in. Ignore **Knowledge** section. Under the **Toolset** section click on the **Add tool** button to upload OpenAPI Spec.
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/29.png">
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/30.png">
 
-- Now click on the add tool to upload OpenAPI Specs. Click on Add Tool.
+- Click on **Import**.
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/30.png">
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/31.png">
 
-- Click on Import.
+- Upload the required **duckduckgo.json** OpenAPI Spec which will be provided by the instructor.
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/31.png">
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/32.png">
+- Select the API file from local filesystem, then, select **Next**.
 
-- Upload the required OpenAPI Spec. The OpenAPI Spec will be provided by the instructor.
-- The OpenAPI spec will be of the name: **duckduckgo.json**
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/33.png">
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/32.png">
+- The tool description is already added in the OpenAPI Spec. It will be auto-filled. Select the tool and click **Done**
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/33.png">
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/34.png">
 
-- Select the API. Then, select Done.
-- The tool description is already added in the OpenAPI Spec. It will be auto-filled.
+- Got to the **Behavior** section. Add the following for **Agent behavior** which defines how the Agent should behave and what it should expect:
+  ```
+  The Information Agent will use the tool to search for information and return a summarized result.
+  ```
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/35.png">
+- Click on **Deploy** to deploy the agent
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/36.png">
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/34.png">
+- Test the Agent flow. Type
+  ```
+  Insurance laws for fire in California
+  ```
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/ia-flow-1.png">
 
-- Add behavior which defines how the Agent should behave and what it should expect.
-  
-- Add the following for the Agent Behaviour:
-  
- ```
- The Information Agent will use the tool to search for information and return a summarized results.
- ```
+- You will get a summarized version of all the search results, you can click on the **Step 1** and see the tool results
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/35.png">
-
-- Test the Agent flow
-
-- Step 1 : Type
-  
-```
-Insurance laws for fire in California
-```
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/ia-flow-1.png">
-
-- Step 2 : You will get a summarized version of all the search results, you can click on the Step 1 and see the tool results
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/ia-flow-2.png">
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/ia-flow-2.png">
 
 - You can find the agent testing steps here -  [Information Agent Flow](#information-agent-flow)
-
-- After testing the flow, then click on Deploy, to deploy the agent.
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/36.png">
 
 #### **Create Customer Agent**
 
 - Click on Agent Builder.
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/17.png">
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/17.png">
 
 - Click on Create Agent
 
