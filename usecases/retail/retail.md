@@ -178,7 +178,9 @@ environments:
 Note that the YAML defines two `environments`, namely `draft` and `live`. This allows setting credentials for different environments to different values. When using the ADK locally, there is only one environment supported, namely `draft`. The other definition will be ignored. However, we will need the `live` environment when uploading the solution to a remote SaaS instance (which is covered [further below](#optional-uploading-the-solution-to-a-watsonx-orchestrate-saas-instance)), so we have included it into the file.
 
 Create the Connection instance with the CLI like this:
-`orchestrate connections import -f watsonxai.yaml`
+```
+orchestrate connections import -f ./usecases/retail/src/connections/watsonxai.yaml
+```
 
 Next, we need to set the actual values for model ID, API key and project ID. Note that these values need to be added in one call, in other words, whenever you call the `set-credentials` subcommand, it will overwrite what had been defined before.
 Below is a script that shows how you can use the same .env file we used earlier to set up the Connections object:
@@ -200,7 +202,7 @@ orchestrate connections set-credentials -a watsonxai --env "${TARGET_ENV}" -e "m
 
 After this, you are finally ready to import the tool. On the command line, enter the following command to do so (make sure you are in the right folder when calling it):
 ```
-orchestrate tools import -k python -f generate_description_from_image.py -r requirements.txt -a watsonxai
+orchestrate tools import -k python -f ./usecases/retail/src/tools/generate_description_from_image.py -r ./usecases/retail/src/tools/requirements.txt -a watsonxai
 ```
 You can make sure that the tool was successfully imported by running the following command on the command line:
 ```
@@ -238,7 +240,7 @@ environments:
 
 Create the new object by entering the following on the command line:
 ```
-orchestrate connections import -f tavily.yaml
+orchestrate connections import -f ./usecases/retail/src/connections/tavily.yaml
 ```
 > You will see a warning about the configuration for the `live` environment, you can safely ignore that warning here, we will use the `live` environment only when connected to a remote SaaS instance.
 
@@ -261,7 +263,7 @@ orchestrate connections set-credentials -a tavily --env "${TARGET_ENV}" -e "apik
 
 The final step is to import the tool:
 ```
-orchestrate tools import -k python -f web_search.py -r requirements.txt -a tavily
+orchestrate tools import -k python -f ./usecases/retail/src/tools/web_search.py -r ./usecases/retail/src/tools/requirements.txt -a tavily
 ```
 
 Verify that the second tool was successfully imported by using the `orchestrate tools list` command.
@@ -360,9 +362,13 @@ Note how you can expand the `Show reasoning` link in the Preview window to see t
 
 ![alt text](images/image8.png)
 
-We can now export the metadata for this agent into a YAML file. This allows us to easily import the same agent in any watsonx Orchestrate environment, including a SaaS instance in IBM Cloud. To do so, we simply enter the following command on the command line:
+We can now export the metadata for this agent into a YAML file. This allows us to easily import the same agent in any watsonx Orchestrate environment, including a SaaS instance in IBM Cloud. However, you need to enter the name of the agent, which is not what you entered into the `Name` field when creating the agent. The tool will automatically append a unique identifier to the end. To get the name, you can run `orchestrate agents list`.
+
+![alt text](images/image38.png)
+
+To export, simply enter the following command on the command line (replace the name of the agent after the '-n' parameter with the name of your agent):
 ```
-orchestrate agents export -n internet_research_agent -k native --agent-only -o internet_research_agent.yaml
+orchestrate agents export -n internet_research_agent_3870Ix -k native --agent-only -o internet_research_agent.yaml
 ```
 Feel free to study the content of the created YAML file. It has all the same content as what we typed into the Agent Builder UI before. Another interesting detail is the `llm` section. It shows which model is being used by this agent - the UI did not offer that.
 
@@ -390,7 +396,7 @@ Note that the `instructions` section has a similar structure to the one in the i
 
 We can import the agent into our watsonx Orchestrate instance by entering the following command:
 ```
-orchestrate agents import -f market_analyst_agent.yaml
+orchestrate agents import -f ./usecases/retail/src/agents/market_analyst_agent.yaml
 ```
 
 Once imported, we can see and test the agent in the UI. Go back to your browser and click on the `Manage agents` link.
@@ -423,25 +429,38 @@ instructions: >
   Reasoning:
     - Use the internet_research_agent agent to retrieve market trends based on an image reference.
     - Use the market_analysis_agent agent to develop suggestions for rearrangement based on market trends and the current arrangement of products on the shelf.
-collaborators:
-  - internet_research_agent
-  - market_analyst_agent
 ```
 
-Here, we have a section with `collaborators`. Those are the agents this one has at its disposal, and which we created earlier. The instructions have a reasoning part that tells this agent which other agent to use for which purpose. 
+Note how the 'Reasoning' section contains details about how to use other agents, depending on the task at hand. We will add the related agents using the UI below.
 
 We import this agent just like the previous one:
 ```
-orchestrate agents import -f retail_market_agent.yaml
+orchestrate agents import -f ./usecases/retail/src/agents/retail_market_agent.yaml
 ```
 
 Back in the `Manage agents` view in the UI, you can reload the page and see the new agent listed next to the other ones.
 
 ![alt text](images/image12.png)
 
+Click on the `retail_market_agent` tile to open the configuration of the agent we just imported. On the details page, scroll down to the "Agents" section and click on `Add agent`.
+
+![alt text](images/image39.png)
+
+In the following dialog, select `Add from local instance`.
+
+![alt text](images/image40.png)
+
+In the following page, select the two agents we defined earlier as collaborators, by checking the box next to them. Then click on `Add to agent`.
+
+![alt text](images/image41.png)
+
+See how both agents have been added to the retail_market_agent. Remember that the instructions tell this agent when to involve them in addressing a task.
+
+![alt text](images/image42.png)
+
 ## Final test and Summary
 
-Since you have successfully created all the tools and agents you needed, you can finally test the solution end to end. We want end users to only interact with the supervisory agent, so we will turn the `Show agent` flag off for both the internet_research_agent and the market_analysis_agent. To do so, click on the internet_research_agent, scroll down to the very bottom and turn off the switch.
+Since you have successfully created all the tools and agents you needed, you can finally test the solution end to end. We want end users to only interact with the supervisory agent, so we will turn the `Show agent` flag off for both the internet_research_agent and the market_analysis_agent. To do so, go to the details page for the internet_research_agent, scroll down to the very bottom and turn off the switch.
 
 ![alt text](images/image13.png)
 
@@ -449,11 +468,11 @@ Repeat the same for the market_analysis_agent. Now click on `IBM watsonx Orchest
 
 ![alt text](images/image14.png)
 
-Note how in the main window, you are only offered one agent to chat with, namely the retail_market_agent. Which is exactly what we wanted, of course.
+Note how in the main window, you are only offered two agents to chat with, namely the retail_market_agent and the ibm_agent that we imported at the very beginning. Which is exactly what we wanted, of course.
 
 ![alt text](images/image15.png)
 
-Let's test the agent by entering the following into the chat:
+Make sure you have the retail_market_agent selected for th chat. Let's test the agent by entering the following into the chat:
 ```
 Please look at the image at https://i.imgur.com/qfiugNJ.jpeg. Based on market trends for the products in the image, can you make recommendations for any rearrangement of the products on the shelf?
 ```
