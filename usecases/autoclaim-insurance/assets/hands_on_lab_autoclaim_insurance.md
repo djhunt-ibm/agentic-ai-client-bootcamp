@@ -32,9 +32,9 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 ### Pre-requisites
 
 - Check with your instructor to make sure **all systems** are up and running before you continue.
-- Validate that you have access to the right techzone environment for this lab.
+- Validate that you have access to the right TechZone environment for this lab.
 - Validate that you have access to a credentials file that you instructor will share with you before starting the labs.
-- If you're an instructor running this lab, check the **Instructor's guides** to set up all environments and systems.
+- If you're an instructor running this lab, check the [Instructor's guides](https://github.ibm.com/skol/agentic-ai-client-bootcamp-instructors/blob/main/environment-setup/readme.md) to set up all environments and systems.
 - Make sure that your instructor has provided the following:
   - **OpenAPI Specs**
   - **A customer username registered in the insurance database.**
