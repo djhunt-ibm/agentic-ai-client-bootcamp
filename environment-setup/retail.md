@@ -241,7 +241,7 @@ To run it on your own laptop, you need to install
 
 Once you have these prerequisites available, you can install the ADK by following the instructions at [the ADK install page](https://developer.watson-orchestrate.ibm.com/getting_started/installing).
 
-> **Note**: These instructions were created for a specific version of the ADK, namely version **1.4.2**. We recommend you specify that version when running the install: `pip install ibm-watsonx-orchestrate==1.4.2`.
+> **Note**: These instructions were created for a specific version of the ADK, namely version **1.5.1**. We recommend you specify that version when running the install: `pip install ibm-watsonx-orchestrate==1.5.1`.
 
 You also need to install the watsonx Orchestrate Developer Edition, which is part of the ADK, by following the related [install instructions](https://developer.watson-orchestrate.ibm.com/getting_started/wxOde_setup). However, **DO NOT** set up the .env file as described in the instructions! You already have the right values in your .env file if you followed the instructions above.
 
