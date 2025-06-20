@@ -43,21 +43,21 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 - Log in to IBM Cloud (cloud.ibm.com). Navigate to top left hamburger menu, then to Resource List. Open the AI/Machine Learning section. You should see a **watsonx Orchestrate** service, click to open.
 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/0.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/0.png">
 
 - Click the "Launch watsonx Orchestrate" button.
 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/0.5.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/0.5.png">
 
 - Welcome to watsonx Orchestrate. Open the hamburger menu, click on **Build**->**Agent Builder**.
 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/2.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/2.png">
 
 #### **Create Information Agent**
 
 - Click on **Create Agent**
 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/3.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/3.png">
 
 - Follow the steps according to the screenshot below.
   - Select **Create from scratch**
@@ -67,168 +67,148 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
     The Information agent will fetch the news and different articles and use this information to summarize results and share.
     ```
   - Click **Create** 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/29.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/29.png">
 
-- On the `information_agent` page, the **Profile** section should be filled in. Ignore **Knowledge** section. Under the **Toolset** section click on the **Add tool** button to upload OpenAPI Spec.
+- On the `information_agent` page, take the defaults for **Profile** and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button to upload the OpenAPI Spec.
 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/30.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/30.png">
 
 - Click on **Import**.
 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/31.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/31.png">
 
-- Upload the required **duckduckgo.json** OpenAPI Spec which will be provided by the instructor.
+- Upload the **duckduckgo.json** OpenAPI Spec which will be provided by the instructor.
 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/32.png">
-- Select the API file from local filesystem, then, select **Next**.
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/32.png">
+- Once the file is uploaded, select **Next**.
 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/33.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/33.png">
 
-- The tool description is already added in the OpenAPI Spec. It will be auto-filled. Select the tool and click **Done**
+- The tool description is already added in the OpenAPI Spec; thus it will be auto-filled in. Select the tool and click **Done**
 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/34.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/34.png">
 
-- Got to the **Behavior** section. Add the following for **Agent behavior** which defines how the Agent should behave and what it should expect:
+- Go to the **Behavior** section. Add the following for **Agent behavior**, which defines how the Agent should behave and what it should expect:
   ```
   The Information Agent will use the tool to search for information and return a summarized result.
   ```
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/35.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/35.png">
 - Click on **Deploy** to deploy the agent
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/36.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/36.png">
 
 - Test the Agent flow. Type
   ```
   Insurance laws for fire in California
   ```
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/ia-flow-1.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/ia-flow-1.png">
 
 - You will get a summarized version of all the search results, you can click on the **Step 1** and see the tool results
 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/ia-flow-2.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/ia-flow-2.png">
 
-- You can find the agent testing steps here -  [Information Agent Flow](#information-agent-flow)
+- You can find additional testing steps here -  [Information Agent Flow](#information-agent-flow)
 
 #### **Create Customer Agent**
 
-- Click on Agent Builder.
+- Click on hamburger menu, then **Builder**->**Agent Builder**.
 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/17.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/17.png">
 
-- Click on Create Agent
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/18.png">
+- Click on **Create Agent**
 
 - Follow the steps according the screenshots below.
 - Copy the following description:
 
- ```
- The Customer Claims agent will allow customers to query for the status of their claim request and create a new claim request. You will also answer questions based on claim process and insurance policy using the knowledge base.
- ```
+  ```
+  The Customer Claims agent will allow customers to query for the status of their claim request and create a new claim request. You will also answer questions based on claim process and insurance policy using the knowledge base.
+  ```
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/19.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/19.png">
 
-- Upload "Automobile Insurance Knowledge Base.pdf" [Customer Knowledge Base](</usecases/autoclaim-insurance/assets/data/Automobile Insurance Knowledge Base.pdf>) to the knowledge base by clicking on Upload files.
-- Add Description of Knowledge Base as to what the Knowledge Base is about.
+- In the **Knowledge** section, upload [Automobile Insurance Knowledge Base.pdf](</usecases/autoclaim-insurance/assets/data/Automobile Insurance Knowledge Base.pdf>)  by clicking on **Upload files**.
+- Add a Description of the Knowledge Base as to what the Knowledge Base is about.
+  ```
+  This knowledge base is about insurance and the claim process. This knowledge base will help the customer in getting information about the claims process and the rules and regulations of processing insurance claims.
+  ```
 
-```
-This knowledge base is about insurance and claim process. This knowledge base will help the customer in getting information about the claims process and the rules and regulations of processing insurance claims.
-```
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/20.png">
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/21.png">
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/21_1.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/20.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/21.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/21_1.png">
 
 - Now click on add tool to upload OpenAPI Specs. Click on Add Tool.
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/22.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/22.png">
 
-- Click on Import. The OpenAPI Spec must be provided by the instructor.
-- The OpenAPI spec will be of the name: **customer_claims_agent_tools.json**
+- Click on **Import**. Import the **customer_claims_agent_tools.json** OpenAPI Spec provided by the instructor.
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/23.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/23.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/24.png">
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/24.png">
+- Upload the required OpenAPI Spec. Select the API. Then, select **Done**.
 
-- Upload the required OpenAPI Specs. Select the API. Then, select Done.
-- The tool description is already added in the OpenAPI Spec. It will be auto-filled.
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/25.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/26.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/26_1.png">
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/25.png">
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/26.png">
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/26_1.png">
-
-- Add Behviour as to how the Agent should behave and what it should expect.
-- Add the following for the Agent Behaviour:
-
-```
-The agent has to ask the user questions about how the accident happened to create or submit a new claim request,use the Create a Claim Request (1) tool,
-1. The location and date of the incident.
-2. Ask for vehicle details and vehicle type.
-3. Ask for a detailed description of the incident
-Do not assume information on you own, let user enter the information.
-Parse the answers for this, in case any details is missing, you can ask the following questions
-1. If there were any damages and what was the estimated cost of the damages?
-2. If the accident was reported to the police, and on which date and time?
-3. Ask for a detailed description of the incident,
-4. Ask if any medical expenses were incurred , how much ?
-
-The final estimated cost should be an addition of the damages and medical expenses
-Once these information have been added, create a detailed and descriptive summary of this information and then use this information as claim_request_details in the Create Claim Request (1) tool. Before these questions ask, for user their name as a form of authetication.
-In the end, inform the customer they will recieve a confirmation of their claim request on mail
-You will display the information returned from the tool in a formatted and consice summary along with the claim number returned from the tool.
-In case the tool return customer not found, inform the user, that they are not authorised to submit a claim, do not show any other details.
-
-Each detail should be in a new line.
-Highlight important information, if possible present in tabular format.
-
-When asked for status you will also help user get the status of the claim request, by first asking for customer name and then the claim number. Once information is fetched, display in tabular format.
-
-Once the status is shown please end the conversation.
-
-If a question is asked about insurance and the claim's process, use the Automobile Insurance Knowledge Base.pdf to answer questions, if you don't know the answer, reply with "I don't know". Please don't use this knowledge base when you are asking questions for a tool
-DO NOT REFER TO THIS KNOWLEDGE BASE WHEN WORKING WITH TOOLS.
-```
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/27.png">
-
-- Test the Agent flow
-
-- Step 1 : Check RAG/ Knowledge base
-  "What are the different types of automobile insurance?"
+- In the **Behavior** section, add the following for the Agent Behavior:
 
   ```
-  What are the different types of automobile insurance?
+  The agent has to ask the user questions about how the accident happened to create or submit a new claim request,use the Create a Claim Request (1) tool,
+  1. The location and date of the incident.
+  2. Ask for vehicle details and vehicle type.
+  3. Ask for a detailed description of the incident
+  Do not assume information on you own, let user enter the information.
+  Parse the answers for this, in case any details is missing, you can ask the following questions
+  1. If there were any damages and what was the estimated cost of the damages?
+  2. If the accident was reported to the police, and on which date and time?
+  3. Ask for a detailed description of the incident,
+  4. Ask if any medical expenses were incurred , how much ?
+  
+  The final estimated cost should be an addition of the damages and medical expenses
+  Once these information have been added, create a detailed and descriptive summary of this information and then use this information as claim_request_details in the Create Claim Request (1) tool. Before these questions ask, for user their name as a form of authetication.
+  In the end, inform the customer they will recieve a confirmation of their claim request on mail
+  You will display the information returned from the tool in a formatted and consice summary along with the claim number returned from the tool.
+  In case the tool return customer not found, inform the user, that they are not authorised to submit a claim, do not show any other details.
+  
+  Each detail should be in a new line.
+  Highlight important information, if possible present in tabular format.
+  
+  When asked for status you will also help user get the status of the claim request, by first asking for customer name and then the claim number. Once information is fetched, display in tabular format.
+  
+  Once the status is shown please end the conversation.
+  
+  If a question is asked about insurance and the claim's process, use the Automobile Insurance Knowledge Base.pdf to answer questions, if you don't know the answer, reply with "I don't know". Please don't use this knowledge base when you are asking questions for a tool
+  DO NOT REFER TO THIS KNOWLEDGE BASE WHEN WORKING WITH TOOLS.
   ```
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claims-flow-1.png">
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/27.png">
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claims-flow-2.png">
+- Test the Agent
+  
+  1. Enter a basic query:
+    ```
+    What are the different types of automobile insurance?
+    ```
+  
+    <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claims-flow-1.png">
+  
+    <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claims-flow-2.png">
 
-- Step 2 : How to check the flow for creating a new claim
-1. Submit a new claim
+   2. Check the flow for creating a new claim
 
-  ```
-  Submit a new claim
-  ```
+      Enter the following:
+      ```
+      Submit a new claim
+      ```
+      <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-3.png">
 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-3.png">
+      Enter `Jordan Davenport`
 
-  2. Jordan Davenport
+      <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-4.png">
 
-  ```
-  Jordan Davenport
-  ```
+      Enter `St Mary's Street, San Francisco, California`
 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-4.png">
-
-  3. St Mary's Street, San Francisco, California
-
-  ```
-  St Mary's Street, San Francisco, California
-  ```
-
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-5.png">
+      <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-5.png">
 
   4. 23-05-2025
 
