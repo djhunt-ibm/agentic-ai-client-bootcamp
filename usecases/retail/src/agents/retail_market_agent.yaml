@@ -15,6 +15,4 @@ instructions: >
   Reasoning:
     - Use the internet_research_agent agent to retrieve market trends based on an image reference.
     - Use the market_analysis_agent agent to develop suggestions for rearrangement based on market trends and the current arrangement of products on the shelf.
-collaborators:
-  - internet_research_agent
-  - market_analyst_agent
+
