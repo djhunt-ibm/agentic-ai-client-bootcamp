@@ -12,10 +12,6 @@
       - [**Create Information Agent**](#create-information-agent)
       - [**Create Customer Agent**](#create-customer-agent)
       - [**Create Claim Processor Agent**](#create-claim-processor-agent)
-  - [Testing the Flow](#testing-the-flow)
-    - [Information Agent Flow](#information-agent-flow)
-    - [Customer Flow](#customer-flow)
-    - [Claim Processor Flow](#claim-processor-flow)
 
 ## Use case description
 
@@ -222,7 +218,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
 - Test the Agent
   
-  1) Enter a basic query:
+  Step 1. Enter a basic query:
      ```
      What are the different types of automobile insurance?
      ```
@@ -231,7 +227,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
   
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/claims-flow-2.png">
 
-  2) Check the flow for creating a new claim
+  Step 2. Check the flow for creating a new claim
 
      Enter the following:
      ```
@@ -262,7 +258,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-7.png">
 
-  3) Check the flow for claim status:
+  Step 3. Check the flow for claim status
 
      Enter the query
 
@@ -384,7 +380,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
 - Test the Agent
 
-  1) Enter the basic query
+  Step 1. Enter the basic query
 
      ```
      Show open claims
@@ -392,21 +388,21 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
     <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-1.png">
 
-  2) Enter a Customer ID
+  Step 2. Enter a Customer ID
 
      ```
      60695904
      ```
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-2-new.png">
 
-  3) Input Claim Number
+  Step 3. Input Claim Number
 
      ```
      CLM347697
      ```
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-3.0-new.png">
 
-  4) When prompted to accept the claim respond:
+  Step 4. When prompted to accept the claim respond:
 
      ```
      Yes
@@ -414,7 +410,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-4-new.png">
 
-  5) You should see an update confirmation
+  Step 5. You should see an update confirmation
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-5-new.png">
 
@@ -423,143 +419,4 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 > ***Now, the Agents are deployed.***
 > ***You can navigate to AI chat and select the required agent and test the flow.***
 
-## Testing entire the Flow
-
-### Information Agent Flow
-
-- Step 1 : Insurance laws for fire in California
-
-  ```
-  Insurance laws for fire in California
-  ```
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/ia-flow-1.png">
-
-- Step 2 : You will get a summarized version of all the search results, you can click on the Step 1 and see the tool results
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/ia-flow-2.png">
-
-
-### Customer Flow
-
-- Step 1 : Check RAG/ Knowledge base
-  "What are the different types of automobile insurance?"
-
-  ```
-  What are the different types of automobile insurance?
-  ```
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claims-flow-1.png">
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claims-flow-2.png">
-
-- Step 2 : How to check the flow for creating a new claim
-  1. Submit a new claim
-
-  ```
-  Submit a new claim
-  ```
-
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-3.png">
-
-  2. Jordan Davenport
-
-  ```
-  Jordan Davenport
-  ```
-
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-4.png">
-
-  3. St Mary's Street, San Francisco, California
-
-  ```
-  St Mary's Street, San Francisco, California
-  ```
-
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-5.png">
-
-  4. 23-05-2025
-
-  ```
-  23-05-2025
-  ```
-
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-6.png">
-
-  5. Toyota Corolla, 2003
-
-  ```
-  Toyota Corolla, 2003
-  ```
-
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/vehicle_details.png">
-
-  6. I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Tata Study Truck to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel. I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.
-
-  ```
-  I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Tata Study Truck to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel. I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.
-  ```
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-7.png">
-
-- Step 3 : How to check the flow for "Checking claim status"
-  1. Check claim status
-
-  ```
-  Check claim status
-  ```
-
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-8.png">
-
-  1. John Smith
-
-  ```
-  John Smith
-  ```
-
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-10.png">
-
-  1. CLM187229
-
-  ```
-  CLM187229
-  ```
-
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/claim-flow-11.png">
-
-### Claim Processor Flow
-
-- Step 1 : Show open claims
-
-  ```
-  Show open claims
-  ```
-
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-1.png">
-
-  - Step 2 : Input Customer ID: 60695904
-
-  ```
-  60695904
-  ```
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-2-new.png">
-
-  - Step 3 : Input Claim Number
-
- ```
-  CLM347697
-```
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-3.0-new.png">
-
-  - Step 4 : Yes
-
-  ```
-  Yes
-  ```
-
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-4-new.png">
-
-  - Step 4 : Shows update confirmation
-
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-5-new.png">
 
