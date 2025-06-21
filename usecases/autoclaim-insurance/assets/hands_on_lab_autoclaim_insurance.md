@@ -19,12 +19,11 @@
 
 ## Use case description
 
-With the help of Agentic AI powered by **watsonx Orchestrate**, you will build an intelligent, agent-driven system that streamlines the entire claims process. This solution not only assists customers in effortlessly filing their claims but also empowers insurers to process them more efficiently, reducing manual effort and turnaround time.
+Powered by Agentic AI and watsonx Orchestrate, this solution enables the creation of an intelligent, agent-driven system that transforms and streamlines the entire claims process. It simplifies claim submission for customers while equipping insurers with automation to reduce manual effort and accelerate processing times.
 
-Customers can simply answer a few guided questions and initiate a claim using minimal information. From there, the agentic system intelligently handles the end-to-end filing process—including document generation, data extraction, and claim verification—ensuring speed, accuracy, and ease of use. Additionally, customers can quickly check the status of their claims at any time, improving transparency and enhancing their overall experience.
+Customers can initiate a claim by answering a few guided questions, even with minimal initial information. From there, the agentic system orchestrates the full claims workflow—automatically handling document generation, data extraction, and verification. This ensures a fast, accurate, and user-friendly experience, with real-time claim status updates that enhance transparency and customer satisfaction.
 
-On the insurer's side, submitted claims can be seamlessly fetched, and the agentic system automatically cross-verifies claim details against the customer’s policy documents. It extracts key information and validates it against predefined business rules and regulatory guidelines. Based on this analysis, the system generates intelligent, structured suggestions on whether a claim should be approved or rejected, significantly reducing manual effort and the risk of errors. The final decision, however, remains with the insurer, supported by a clear and concise summary of all relevant details.
-
+For insurers, incoming claims are automatically retrieved and intelligently cross-verified against policy documents. The system extracts critical data and evaluates it against business rules and regulatory standards, generating structured recommendations for claim approval or denial. While final decisions remain with the insurer, each recommendation is backed by a clear, concise summary of all supporting details—minimizing errors and enabling faster, more informed decision-making.
 ## Architecture
 
 ![Architecture](Insurance_Autoclaims_Architecture_v2.png)
@@ -90,7 +89,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/34.png">
 
-- Go to the **Behavior** section. Add the following for **Agent behavior**, which defines how the Agent should behave and what it should expect:
+- Go to the **Behavior** section. Add the following for **Instructions**. This will define how the Agent should behave and what it should expect:
   ```
   The Information Agent will use the tool to search for information and return a summarized result.
   ```
@@ -98,29 +97,28 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 - Click on **Deploy** to deploy the agent
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/36.png">
 
-- Test the Agent flow. Type
+- Test the Agent
+
+  Type this query:
   ```
   Insurance laws for fire in California
   ```
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/ia-flow-1.png">
 
-- You will get a summarized version of all the search results, you can click on the **Step 1** and see the tool results
+- You will get a summarized version of all the search results. You can click on the **Step 1** and see the tool results
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/ia-flow-2.png">
 
-- You can find additional testing steps here -  [Information Agent Flow](#information-agent-flow)
-
 #### **Create Customer Claims Agent**
 
-- Click on hamburger menu, then **Builder**->**Agent Builder**
+- Click on hamburger menu, then **Build**->**Agent Builder**
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/17.png">
 
 - On the next screen, click on **Create Agent**
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/18.png">
 
-
-- Follow the steps according the screenshots below
+- Follow the steps according the screenshot below
   - Select **Create from scratch**
   - Name the agent `customer_claims_agent`
   - Use the following description:
@@ -148,13 +146,13 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/23.png">
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/24.png">
 
-- Upload the OpenAPI Spec. Then, select **Done**
+- Select **Next**
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/25.png">
+- Select all of the **Operations** and click **Done**
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/26.png">
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/26_1.png">
 
-- In the **Behavior** section, add the following prompt:
+- In the **Behavior** section, add the following prompt to the **Instructions**:
 
   ```
   Primary Task: Submit a New Claim
@@ -216,7 +214,6 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
   If the answer is not in the knowledge base, reply: “I don’t know.”
   Do not reference the knowledge base while interacting with tools.
   ```
-
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/27.png">
 
 - Click on **Deploy** to deploy the agent
@@ -225,7 +222,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 - Test the Agent
   
-  1. Enter a basic query:
+  1) Enter a basic query:
      ```
      What are the different types of automobile insurance?
      ```
@@ -234,7 +231,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
   
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/claims-flow-2.png">
 
-  2. Check the flow for creating a new claim
+  2) Check the flow for creating a new claim
 
      Enter the following:
      ```
@@ -265,7 +262,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-7.png">
 
-  3. Check the flow for claim status:
+  3) Check the flow for claim status:
 
      Enter the query
 
@@ -282,8 +279,6 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
      For claim number, enter `CLM187229`
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-11.png">
-
-- You will also find the steps to test here : [Customer Flow](#customer-flow)
 
 
 #### **Create Claim Processor Agent**
