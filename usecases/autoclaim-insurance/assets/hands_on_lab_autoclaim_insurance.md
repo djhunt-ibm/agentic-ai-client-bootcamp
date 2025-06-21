@@ -325,15 +325,16 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/10.png">
 
-- Select all of the APIs. Then, select **Done**.
+- Select all of the **Operations**. Then, select **Done**.
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/11.png">
 
   <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/11_1.png">
 
-- Click on **Add Agent**. Click **Add from Local Instance**
+- Click on **Add Agent**
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/12.png">
+- Click **Add from local instance**
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/13.png">
 
@@ -341,7 +342,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/14.png">
 
-- In the **Behavior** section, Add the following for **Instructions**:
+- In the **Behavior** section, add the following for **Instructions**:
   ```
   You will begin by welcoming the claim processor and displaying the open claims in a table. 
   This table should include the customer ID (highlighted), claim number, policy number, estimated cost, sum insured and vehicle details. Do not show duplicates.
@@ -377,13 +378,13 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/15.png">
 
-- Click on **Deploy** to deploy the agent.
+- Click on **Deploy** to deploy the agent
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/16.png">
 
 - Test the Agent
 
-  1. Enter the basic query
+  1) Enter the basic query
 
      ```
      Show open claims
@@ -391,21 +392,21 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
     <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-1.png">
 
-  2. Enter a Customer ID
+  2) Enter a Customer ID
 
      ```
      60695904
      ```
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-2-new.png">
 
-  3. Input Claim Number
+  3) Input Claim Number
 
      ```
      CLM347697
      ```
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-3.0-new.png">
 
-  4. When prompted to accept the claim respond:
+  4) When prompted to accept the claim respond:
 
      ```
      Yes
@@ -413,7 +414,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-4-new.png">
 
-  5. You should see an update confirmation
+  5) You should see an update confirmation
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-5-new.png">
 
