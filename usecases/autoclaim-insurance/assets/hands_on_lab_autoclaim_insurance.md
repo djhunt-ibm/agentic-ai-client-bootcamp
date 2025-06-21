@@ -19,8 +19,10 @@
 
 ## Use case description
 
-With the help of Agentic AI powered by watsonx Orchestrate, you will build an intelligent, agent-driven system that streamlines the entire claims process. This solution not only assists customers in effortlessly filing their claims but also empowers insurers to process them more efficiently, reducing manual effort and turnaround time.
+With the help of Agentic AI powered by **watsonx Orchestrate**, you will build an intelligent, agent-driven system that streamlines the entire claims process. This solution not only assists customers in effortlessly filing their claims but also empowers insurers to process them more efficiently, reducing manual effort and turnaround time.
+
 Customers can simply answer a few guided questions and initiate a claim using minimal information. From there, the agentic system intelligently handles the end-to-end filing process—including document generation, data extraction, and claim verification—ensuring speed, accuracy, and ease of use. Additionally, customers can quickly check the status of their claims at any time, improving transparency and enhancing their overall experience.
+
 On the insurer's side, submitted claims can be seamlessly fetched, and the agentic system automatically cross-verifies claim details against the customer’s policy documents. It extracts key information and validates it against predefined business rules and regulatory guidelines. Based on this analysis, the system generates intelligent, structured suggestions on whether a claim should be approved or rejected, significantly reducing manual effort and the risk of errors. The final decision, however, remains with the insurer, supported by a clear and concise summary of all relevant details.
 
 ## Architecture
@@ -84,7 +86,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/33.png">
 
-- The tool description is already added in the OpenAPI Spec; thus it will be auto-filled in. Select the tool and click **Done**
+- Select the tool and click **Done**
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/34.png">
 
@@ -110,7 +112,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 #### **Create Customer Claims Agent**
 
-- Click on hamburger menu, then **Builder**->**Agent Builder**.
+- Click on hamburger menu, then **Builder**->**Agent Builder**
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/17.png">
 
@@ -118,7 +120,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/18.png">
 
 
-- Follow the steps according the screenshots below.
+- Follow the steps according the screenshots below
   - Select **Create from scratch**
   - Name the agent `customer_claims_agent`
   - Use the following description:
@@ -132,7 +134,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
   This knowledge base is about insurance and the claim process. This knowledge base will help the customer in getting information about the claims process and the rules and regulations of processing insurance claims.
   ```
 
-- Download [Automobile Insurance Knowledge Base.pdf](<./data/Automobile Insurance Knowledge Base.pdf>) to your local system, then upload by clicking on **Upload files** under **Documents**. 
+- Download [Automobile Insurance Knowledge Base.pdf](<./data/Automobile Insurance Knowledge Base.pdf>) to your local system, then upload by clicking on **Upload files** under **Documents**
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/20.png">
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/21.png">
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/21_1.png">
@@ -146,7 +148,7 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/23.png">
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/24.png">
 
-- Upload the required OpenAPI Spec. Select the API. Then, select **Done**.
+- Upload the OpenAPI Spec. Then, select **Done**
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/25.png">
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/26.png">
@@ -263,8 +265,8 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-7.png">
 
-  3. Check the flow for claim status
-  
+  3. Check the flow for claim status:
+
      Enter the query
 
      ```
@@ -286,152 +288,146 @@ On the insurer's side, submitted claims can be seamlessly fetched, and the agent
 
 #### **Create Claim Processor Agent**
 
-- Click on Agent Builder.
+- Click on hamburger menu, then **Builder**->**Agent Builder**.
 
-<img width="1000" alt="image" src="./screenshots_hands_on_lab/2.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/2.png">
 
-- Click on Create Agent
+- Click on **Create Agent**
 
-<img width="1000" alt="image" src="./screenshots_hands_on_lab/3.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/3.png">
 
 - Follow the steps according the screenshot below.
-- Copy the following description:
+  - Select **Create from scratch**
+  - Name the agent `claim_processor_insurance_agent`
+  - Use the following description:
 
-```
-The Claim Processor agent assists the claim processor to fetch the open claim request, approve, validate and verify the open request. This agent will suggest to the claim processor if they should accept or reject the claim.
-```
+    ```
+    The Claim Processor agent assists the claim processor to fetch the open claim request, approve, validate and verify the open request. This agent will suggest to the claim processor if they should accept or reject the claim.
+    ```
 
-<img width="1000" alt="image" src="./screenshots_hands_on_lab/4.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/4.png">
 
-- Upload "Policy.pdf"  [Claim Processor Knowledge Base](</usecases/autoclaim-insurance/assets/data/Policy.pdf>) to the knowledge base by clicking on Upload files.
-- Add Description of the Knowledge Base describing what the Knowledge Base is about:
-
-```
- This knowledge base is about insurance and claim process. This knowledge base will help the claim processor in processing the claims according to the rules and regulations defined by the insurance company. 
- ```
-
-<img width="1000" alt="image" src="./screenshots_hands_on_lab/5.png">
-<img width="1000" alt="image" src="./screenshots_hands_on_lab/6.png">
-
-- Now click on the add tool to upload OpenAPI Specs. Click on Add Tool.
-
-<img width="1000" alt="image" src="./screenshots_hands_on_lab/7.png">
-
-- Click on Import.
-
-<img width="1000" alt="image" src="./screenshots_hands_on_lab/8.png">
-
-- Upload the required OpenAPI Specs. The OpenAPI Spec will be provided by the instructor.
-- The OpenAPI spec will be of the name: **claim_processor_agent_tools.json**
-
-<img width="1000" alt="image" src="./screenshots_hands_on_lab/9.png">
-
-<img width="1000" alt="image" src="./screenshots_hands_on_lab/10.png">
-
-- Select the API. Then, select Done.
-- The tool description is already added in the OpenAPI Spec. It will be auto-filled.
-
-<img width="1000" alt="image" src="./screenshots_hands_on_lab/11.png">
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/11_1.png">
-
-- Click on Add Agent. Add from Local Instance.
-
-<img width="1000" alt="image" src="./screenshots_hands_on_lab/12.png">
-
-<img width="1000" alt="image" src="./screenshots_hands_on_lab/13.png">
-
-- Add information-agent
-
-<img width="1000" alt="image" src="./screenshots_hands_on_lab/14.png">
-
-- Add Behviour defining how the Agent should behave and what it should expect.
-  
-- Add the following in the Agent Behaviour section :
-
-```
-You will begin by welcoming the claim processor and displaying the open claims in a table. 
-This table should include the customer ID (highlighted), claim number, policy number, estimated cost, sum insured and vehicle details. Do not show duplicates.
-
-Ask the claim processor to select a customer ID.
-
-Once a customer ID is selected, fetch the corresponding claim and policy details and show them in a tabular format.
-If there are more than open claims for a customer ID, ask claim processor to select a claim 
-Use the claim number and customer id to fetch details and then generate summary on the following points
-
-1. Compare the estimated cost with the sum insured and calculate the approved claim amount by subtracting the deductible. Highlight the approved amount.
-
-2. Check if the policy is currently active and whether the claim falls within the coverage period.
-
-3. Classify the accident into one of the following types: rear-end collision, head-on collision, side-impact, sideswipe, single-vehicle, multi-vehicle pileup, hit-and-run, parking lot, animal collision, weather-related, mechanical failure-related, vandalism, or theft.
-
-4. Determine if the classified accident type is covered by the policy. If policy details are not clear, refer to the knowledge base to verify.
-
-5. It is mandatory for you to use the information_agent to query for the accident type you discovered in step 4. Query: The rules and regulations for accident type in US. Use the result to verify if the claim details are compliant.
-
-6. Provide a clear recommendation to accept or reject the claim based on these checks.
-
-7. Highlight the total claim amount (estimated cost minus deductible).
-
-8. Create a clear and concise summary for the claim processor, emphasizing key details like approved amount, claim number, and policy number.
-HIGHLIGHT ALL THE DETAILS IN NEAR FORMAT.
-
-Finally, ask the claim processor "Whether they accept the claim?"
-Do not give next steps. 
-
-Once a decision is made, update the claim status and send a message confirming that emails have been sent to the customer and finance team.
-```
-
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/15.png">
-
-- Test the Agent flow.
-
-  - Step 1 : Show open claims
-
+- In the **Knowledge** section, add the following to the **Description**:
   ```
-  Show open claims
+  This knowledge base is about insurance and claim process. This knowledge base will help the claim processor in processing the claims according to the rules and regulations defined by the insurance company. 
+  ```
+- Download [Policy.pdf](<./data/Policy.pdf>) to your local system, then upload by clicking on **Upload files** under **Documents**. 
+
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/5.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/6.png">
+
+- In the **Toolset** section, click on **Add tool**
+
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/37.png">
+
+- Click on **Import**
+
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/8.png">
+
+- Upload the **claim_processor_agent_tools.json** OpenAPI Spec provided by the instructor
+
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/9.png">
+
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/10.png">
+
+- Select all of the APIs. Then, select **Done**.
+
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/11.png">
+
+  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/11_1.png">
+
+- Click on **Add Agent**. Click **Add from Local Instance**
+
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/12.png">
+
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/13.png">
+
+- Select **information_agent** and then the **Add to Agent button**
+
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/14.png">
+
+- In the **Behavior** section, Add the following for **Instructions**:
+  ```
+  You will begin by welcoming the claim processor and displaying the open claims in a table. 
+  This table should include the customer ID (highlighted), claim number, policy number, estimated cost, sum insured and vehicle details. Do not show duplicates.
+
+  Ask the claim processor to select a customer ID.
+
+  Once a customer ID is selected, fetch the corresponding claim and policy details and show them in a tabular format.
+  If there are more than open claims for a customer ID, ask claim processor to select a claim 
+  Use the claim number and customer id to fetch details and then generate summary on the following points
+
+  1. Compare the estimated cost with the sum insured and calculate the approved claim amount by subtracting the deductible. Highlight the approved amount.
+
+  2. Check if the policy is currently active and whether the claim falls within the coverage period.
+
+  3. Classify the accident into one of the following types: rear-end collision, head-on collision, side-impact, sideswipe, single-vehicle, multi-vehicle pileup, hit-and-run, parking lot, animal collision, weather-related, mechanical failure-related, vandalism, or theft.
+
+  4. Determine if the classified accident type is covered by the policy. If policy details are not clear, refer to the knowledge base to verify.
+
+  5. It is mandatory for you to use the information_agent to query for the accident type you discovered in step 4. Query: The rules and regulations for accident type in US. Use the result to verify if the claim details are compliant.
+
+  6. Provide a clear recommendation to accept or reject the claim based on these checks.
+
+  7. Highlight the total claim amount (estimated cost minus deductible).
+
+  8. Create a clear and concise summary for the claim processor, emphasizing key details like approved amount, claim number, and policy number.
+  HIGHLIGHT ALL THE DETAILS IN NEAR FORMAT.
+
+  Finally, ask the claim processor "Whether they accept the claim?"
+  Do not give next steps. 
+
+  Once a decision is made, update the claim status and send a message confirming that emails have been sent to the customer and finance team.
   ```
 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-1.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/15.png">
 
-  - Step 2 : Input Customer ID: 60695904
+- Click on **Deploy** to deploy the agent.
 
-  ```
-  60695904
-  ```
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-2-new.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/16.png">
 
-  - Step 3 : Input Claim Number
+- Test the Agent
 
- ```
-  CLM347697
-```
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-3.0-new.png">
+  1. Enter the basic query
 
-  - Step 4 : Yes
+     ```
+     Show open claims
+     ```
 
-  ```
-  Yes
-  ```
+    <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-1.png">
 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-4-new.png">
+  2. Enter a Customer ID
 
-  - Step 4 : Shows update confirmation
+     ```
+     60695904
+     ```
+     <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-2-new.png">
 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/cp-flow-5-new.png">
+  3. Input Claim Number
 
-- You will also find the steps to test here : [Claim Processor Flow](#claim-processor-flow)
+     ```
+     CLM347697
+     ```
+     <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-3.0-new.png">
 
-- After testing the flow, then click on Deploy.
+  4. When prompted to accept the claim respond:
 
-<img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/16.png">
+     ```
+     Yes
+     ```
+
+     <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-4-new.png">
+
+  5. You should see an update confirmation
+
+     <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-5-new.png">
 
 >
 > ***You can also test the flow before deploying the agents to AI chat.***
 > ***Now, the Agents are deployed.***
 > ***You can navigate to AI chat and select the required agent and test the flow.***
 
-## Testing the Flow
+## Testing entire the Flow
 
 ### Information Agent Flow
 
