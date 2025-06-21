@@ -85,7 +85,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/33.png">
 
-- Select the tool and click **Done**
+- Select the all of the **Operations** and click **Done**
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/34.png">
 
