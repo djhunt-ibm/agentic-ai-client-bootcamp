@@ -9,9 +9,9 @@
   - [Implementation](#implementation)
     - [Pre-requisites](#pre-requisites)
     - [Agent Builder Implementation](#agent-builder-implementation)
-      - [**Create Information Agent**](#create-information-agent)
-      - [**Create Customer Agent**](#create-customer-agent)
-      - [**Create Claim Processor Agent**](#create-claim-processor-agent)
+      - [Create Information Agent](#create-information-agent)
+      - [Create Customer Agent](#create-customer-agent)
+      - [Create Claim Processor Agent](#create-claim-processor-agent)
 
 ## Use case description
 
@@ -107,7 +107,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
 #### **Create Customer Claims Agent**
 
-- Click on hamburger menu, then **Build**->**Agent Builder**
+- Click on hamburger menu, then **Build** -> **Agent Builder**
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/17.png">
 
@@ -151,12 +151,8 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 - In the **Behavior** section, add the following prompt to the **Instructions**:
 
   ```
-  Primary Task: Submit a New Claim
-
-  When a user wants to submit a claim, follow these steps:
-  1. Collect Required Information (no assumptions)
-
-  Ask the user to provide the following details:
+  If the user requests to submit a claim, follow these steps:
+  1. Collect Required Information (no assumptions). Ask the user to provide the following details:
   - Full name (for authentication)
   - The location of the incident
   - The date of the incident
@@ -165,22 +161,19 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
   If any of these are missing, pause and request them before continuing.
 
-  2. Request Additional Information (only if not already provided)
-
-  If needed, ask:
+  2. Request the following additional information (only if not already provided):
   - Were there any damages? What is the estimated cost?
   - Was the incident reported to the police? If yes, what date and time?
   - Were there any medical expenses? If yes, how much?
 
-  Compute the total estimated cost by summing damages and medical expenses.
+  Compute the total estimated cost by summing up damages and medical expenses.
 
-  3. Create and Use the Claim Request
+  3. Create the Claim Request. Once all necessary information is collected:
+  - Create a concise, structured summary of the incident and related details in bullet points.
+  - Use this information as claim_request_details in the ‘Create a Claim Request’ tool.
 
-  Once all necessary information is collected:
-  - Create a concise, structured summary of the incident and related details.
-  - Use this information as claim_request_details in the Create Claim Request tool.
-
-  After Tool Response – Display to User
+  Each detail should be in a new line.
+  Highlight important information, if possible present in tabular format.
 
   If the tool returns a successful claim:
   - Display the results in a formatted table, with each detail on a new line
@@ -191,23 +184,22 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
   - Respond with: “You are not authorized to submit a claim.”
   - Do not display any additional tool output.
 
-  Claim Status Requests
+  If the user asks about Claim Status, follow these steps:
+  1. Ask for their name 
+  2. Ask for the claim number
+  3. Use the ‘Check Claim Status’ tool to retrieve the claim status
+  4. Display the result in a clean, tabular format
+  5. End the conversation after displaying the claim status
 
-  If the user asks for claim status:
-  1.	Ask for their name and claim number
-  2.	Use the appropriate tool to retrieve the claim status
-  3.	Display the result in a clean, tabular format
-  4.	End the conversation after displaying the claim status
-
-  General Insurance Questions
+  Each detail should be in a new line.
+  Highlight important information, if possible present in tabular format.
 
   If the user asks questions about:
   - Insurance processes
   - Claim eligibility
   - Documentation
+  Refer to the “Automobile Insurance Knowledge Base.pdf” knowledge base only. If the answer is not in the knowledge base, reply: “I don’t know.”
 
-  Refer to the “Automobile Insurance Knowledge Base.pdf” only.
-  If the answer is not in the knowledge base, reply: “I don’t know.”
   Do not reference the knowledge base while interacting with tools.
   ```
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/27.png">
@@ -235,15 +227,15 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
      ```
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-3.png">
 
-     Enter the name provided to you by the lab instructor from the preloaded database.  Each participant needs to use a different name.
+     **NOTE** your instructor will provide you with a name from the deployed database to use for all of your claims entries. Enter the name provided. Each participant needs to use a different name.
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-4.png">
 
-     For location, enter `St Mary's Street, San Francisco, California`
+     For location, enter `St Mary's Street, San Francisco, California` or any other address.
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-5.png">
 
-     For date, enter `23-05-2025`
+     For date, enter `23-05-2025` or any other date
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-6.png">
 
@@ -268,24 +260,25 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-8.png">
 
-     For name, enter `John Smith`
+     For name, enter the name you were provided
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-10.png">
 
-     For claim number, enter `CLM187229`
+     For claim number, enter the claim number from the summary of the claim you just created
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-11.png">
 
+You can create additional claims for your user to test the next agent.
 
 #### **Create Claim Processor Agent**
 
-- Click on hamburger menu, then **Builder**->**Agent Builder**.
+- Click on hamburger menu, then **Build** -> **Agent Builder**.
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/2.png">
 
 - Click on **Create Agent**
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/3.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/38.png">
 
 - Follow the steps according the screenshot below.
   - Select **Create from scratch**
@@ -388,19 +381,13 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
     <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-1.png">
 
-  Step 2. Enter a Customer ID
+  Step 2. Enter a Customer ID from the list
 
-     ```
-     60695904
-     ```
-     <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-2-new.png">
+    <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-2-new.png">
 
-  Step 3. Input Claim Number
+  Step 3. Input Claim Number from the list
 
-     ```
-     CLM347697
-     ```
-     <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-3.0-new.png">
+    <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-3.0-new.png">
 
   Step 4. When prompted to accept the claim respond:
 
@@ -415,8 +402,12 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-5-new.png">
 
 >
-> ***You can also test the flow before deploying the agents to AI chat.***
-> ***Now, the Agents are deployed.***
-> ***You can navigate to AI chat and select the required agent and test the flow.***
+> ***You can also test the agents from AI chat.***
 
+Navigate to AI chat by going to the hamburger menu at top left and and selecting Chat.
 
+<img width="1000" alt="image" src="./screenshots_hands_on_lab/39.png">
+
+Then select the agent to test: 
+
+<img width="1000" alt="image" src="./screenshots_hands_on_lab/40.png">
