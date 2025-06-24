@@ -10,14 +10,14 @@
     - [Pre-requisites](#pre-requisites)
     - [Open Agent Builder](#open-agent-builder)
       - [Information Agent](#information-agent)
-        - [Create the Agent](#create-the-agent)
-        - [Test the Agent](#test-the-agent)
+        - [Create the Information Agent](#create-the-information-agent)
+        - [Test the Information Agent](#test-the-information-agent)
       - [Customer Claims Agent](#customer-claims-agent)
-        - [Create the Agent](#create-the-agent)
-        - [Test the Agent](#test-the-agent)
+        - [Create the Customer Claims Agent](#create-the-customer-claims-agent)
+        - [Test the Customer Claims Agent](#test-the-customer-claims-agent)
       - [Claim Processor Agent](#claim-processor-agent)
-        - [Create the Agent](#create-the-agent)
-        - [Test the Agent](#test-the-agent)
+        - [Create the Claim Processor Agent](#create-the-claim-processor-agent)
+        - [Test the Claim Processor Agent](#test-the-claim-processor-agent)
     - [Further testing via AI Chat](#further-testing-via-ai-chat)
 
 ## Use case description
@@ -53,12 +53,12 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/0.5.png">
 
-- Welcome to watsonx Orchestrate. Open the hamburger menu, click on **Build**->**Agent Builder**.
+- Welcome to watsonx Orchestrate. Open the hamburger menu, click on **Build** -> **Agent Builder**.
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/2.png">
 
 ### Information Agent
-#### Create the Agent
+#### Create the Information Agent
 
 - Click on **Create Agent**
 
@@ -101,7 +101,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 - Click on **Deploy** to deploy the agent
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/36.png">
 
-#### Test the Agent
+#### Test the Information Agent
 
   Type this query:
   ```
@@ -114,7 +114,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/ia-flow-2.png">
 
 ### Customer Claims Agent
-#### Create Agent
+#### Create the Customer Claims Agent
 
 - Click on hamburger menu, then **Build** -> **Agent Builder**
 
@@ -211,7 +211,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/28.png">
 
-#### Test the Agent
+#### Test the Customer Claims Agent
   
   Step 1. Enter a basic query:
      ```
@@ -274,7 +274,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 You can create additional claims for your assigned name to test the next agent.
 
 ### Claim Processor Agent
-#### Create the Agent
+#### Create the Claim Processor Agent
 
 - Click on hamburger menu, then **Build** -> **Agent Builder**.
 
@@ -375,7 +375,7 @@ You can create additional claims for your assigned name to test the next agent.
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/16.png">
 
-#### Test the Agent
+#### Test the Claim Processor Agent
 
   Step 1. Enter the basic query
 
