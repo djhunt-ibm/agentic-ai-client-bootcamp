@@ -74,7 +74,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/31.png">
 
-- Upload the **duckduckgo.json** OpenAPI Spec which will be provided by the instructor.
+- Upload the `duckduckgo.json` OpenAPI Spec which will be provided by the instructor.
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/32.png">
 - Once the file is uploaded, select **Next**.
@@ -137,7 +137,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/22.png">
 
-- Click on **Import**. Import the **customer_claims_agent_tools.json** OpenAPI Spec file provided by your instructor
+- Click on **Import**. Import the `customer_claims_agent_tools.json` OpenAPI Spec file provided by your instructor
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/23.png">
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/24.png">
@@ -161,21 +161,18 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
   If any of these are missing, pause and request them before continuing.
 
-  2. Request the following additional information (only if not already provided):
-  - Were there any damages? What is the estimated cost?
+  2. Request the all of the following additional information (only if not already provided):
   - Was the incident reported to the police? If yes, what date and time?
+  - Were there any damages? What is the estimated cost?
   - Were there any medical expenses? If yes, how much?
 
   Compute the total estimated cost by summing up damages and medical expenses.
 
   3. Create the Claim Request. Once all necessary information is collected:
-  - Create a concise, structured summary of the incident and related details in bullet points.
+  - Create a concise, structured summary of the incident and related details.
   - Use this information as claim_request_details in the ‘Create a Claim Request’ tool.
 
-  Each detail should be in a new line.
-  Highlight important information, if possible present in tabular format.
-
-  If the tool returns a successful claim:
+  If the tool returns a successful claim, do all of the following:
   - Display the results in a formatted table, with each detail on a new line
   - Highlight the claim number
   - Inform the user: “You will receive a confirmation of your claim request by mail.”
@@ -188,11 +185,8 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
   1. Ask for their name 
   2. Ask for the claim number
   3. Use the ‘Check Claim Status’ tool to retrieve the claim status
-  4. Display the result in a clean, tabular format
+  4. Display the result in a clean, tabular format. Each detail should be on a new line.
   5. End the conversation after displaying the claim status
-
-  Each detail should be in a new line.
-  Highlight important information, if possible present in tabular format.
 
   If the user asks questions about:
   - Insurance processes
@@ -239,13 +233,13 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-6.png">
 
-     For vehicle information, enter `Toyota Corolla, 2003`
+     For vehicle information, enter `Toyota Corolla, 2003` any other vehicle details
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/vehicle_details.png">
 
      For details, enter: 
      ```
-     I was driving to work when a red pickup truck ran a red light and collided with the rear right side of his vehicle at the intersection. The impact caused the Tata Study Truck to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel. I was wearing a seatbelt and did not sustain serious injuries, but reported minor back pain and visited a doctor the same day. Medical expenses were 3400 and the damages repair cost was 4500.
+     I was driving to work when a red pickup truck ran a red light and collided with the rear right side of my vehicle at the intersection. The impact caused my car to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel. I was wearing a seatbelt and did not sustain serious injuries, but I reported minor back pain and visited a doctor the same day. Medical expenses were $3400 and the damages repair cost was $4500.
      ```
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-7.png">
@@ -260,7 +254,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-8.png">
 
-     For name, enter the name you were provided
+     Enter the name you were provided
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-10.png">
 
@@ -268,7 +262,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-11.png">
 
-You can create additional claims for your user to test the next agent.
+You can create additional claims for your assigned name to test the next agent.
 
 #### **Create Claim Processor Agent**
 
@@ -286,14 +280,14 @@ You can create additional claims for your user to test the next agent.
   - Use the following description:
 
     ```
-    The Claim Processor agent assists the claim processor to fetch the open claim request, approve, validate and verify the open request. This agent will suggest to the claim processor if they should accept or reject the claim.
+    The Claim Processor agent assists the claim processor to fetch the open claim request, approve, validate, and verify the open request. This agent will suggest to the claim processor whether they should accept or reject the claim.
     ```
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/4.png">
 
 - In the **Knowledge** section, add the following to the **Description**:
   ```
-  This knowledge base is about insurance and claim process. This knowledge base will help the claim processor in processing the claims according to the rules and regulations defined by the insurance company. 
+  This knowledge base is about insurance and the claim process. This knowledge base will help the claim processor in processing the claims according to the rules and regulations defined by the insurance company. 
   ```
 - Download [Policy.pdf](<./data/Policy.pdf>) to your local system, then upload by clicking on **Upload files** under **Documents**. 
 
@@ -308,7 +302,7 @@ You can create additional claims for your user to test the next agent.
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/8.png">
 
-- Upload the **claim_processor_agent_tools.json** OpenAPI Spec provided by the instructor
+- Upload the `claim_processor_agent_tools.json` OpenAPI Spec provided by the instructor
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/9.png">
 
@@ -334,13 +328,13 @@ You can create additional claims for your user to test the next agent.
 - In the **Behavior** section, add the following for **Instructions**:
   ```
   You will begin by welcoming the claim processor and displaying the open claims in a table. 
-  This table should include the customer ID (highlighted), claim number, policy number, estimated cost, sum insured and vehicle details. Do not show duplicates.
+  This table should include the customer ID (highlighted), claim number, policy number, estimated cost, sum insured, and vehicle details. Do not show duplicates.
 
   Ask the claim processor to select a customer ID.
 
   Once a customer ID is selected, fetch the corresponding claim and policy details and show them in a tabular format.
-  If there are more than open claims for a customer ID, ask claim processor to select a claim 
-  Use the claim number and customer id to fetch details and then generate summary on the following points
+  If there are more than open claims for a customer ID, ask the claim processor to select a claim 
+  Use the claim number and customer ID to fetch details, and then generatea  summary on the following points
 
   1. Compare the estimated cost with the sum insured and calculate the approved claim amount by subtracting the deductible. Highlight the approved amount.
 
@@ -350,7 +344,7 @@ You can create additional claims for your user to test the next agent.
 
   4. Determine if the classified accident type is covered by the policy. If policy details are not clear, refer to the knowledge base to verify.
 
-  5. It is mandatory for you to use the information_agent to query for the accident type you discovered in step 4. Query: The rules and regulations for accident type in US. Use the result to verify if the claim details are compliant.
+  5. It is mandatory for you to use the 'information_agent' to query for the accident type you discovered in the previous step. Query: The rules and regulations for accident types in the US. Use the result to verify if the claim details are compliant.
 
   6. Provide a clear recommendation to accept or reject the claim based on these checks.
 
@@ -359,7 +353,7 @@ You can create additional claims for your user to test the next agent.
   8. Create a clear and concise summary for the claim processor, emphasizing key details like approved amount, claim number, and policy number.
   HIGHLIGHT ALL THE DETAILS IN NEAR FORMAT.
 
-  Finally, ask the claim processor "Whether they accept the claim?"
+  Finally, ask the claim processor, "Do they accept the claim?"
   Do not give next steps. 
 
   Once a decision is made, update the claim status and send a message confirming that emails have been sent to the customer and finance team.
@@ -404,7 +398,7 @@ You can create additional claims for your user to test the next agent.
 >
 > ***You can also test the agents from AI chat.***
 
-Navigate to AI chat by going to the hamburger menu at top left and and selecting Chat.
+Navigate to AI chat by going to the hamburger menu at top left and select **Chat**.
 
 <img width="1000" alt="image" src="./screenshots_hands_on_lab/39.png">
 
