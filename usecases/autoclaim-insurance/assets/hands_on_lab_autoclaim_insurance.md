@@ -8,10 +8,17 @@
   - [Architecture](#architecture)
   - [Implementation](#implementation)
     - [Pre-requisites](#pre-requisites)
-    - [Agent Builder Implementation](#agent-builder-implementation)
-      - [Create Information Agent](#create-information-agent)
-      - [Create Customer Agent](#create-customer-agent)
-      - [Create Claim Processor Agent](#create-claim-processor-agent)
+    - [Open Agent Builder](#open-agent-builder)
+      - [Information Agent](#information-agent)
+        - [Create the Agent](#create-the-agent)
+        - [Test the Agent](#test-the-agent)
+      - [Customer Claims Agent](#customer-claims-agent)
+        - [Create the Agent](#create-the-agent)
+        - [Test the Agent](#test-the-agent)
+      - [Claim Processor Agent](#claim-processor-agent)
+        - [Create the Agent](#create-the-agent)
+        - [Test the Agent](#test-the-agent)
+    - [Further testing via AI Chat](#further-testing-via-ai-chat)
 
 ## Use case description
 
@@ -36,7 +43,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
   - **OpenAPI Specs**
   - **A customer username registered in the insurance database.**
 
-### Agent Builder Implementation
+### Open Agent Builder
 
 - Log in to IBM Cloud (cloud.ibm.com). Navigate to top left hamburger menu, then to Resource List. Open the AI/Machine Learning section. You should see a **watsonx Orchestrate** service, click to open.
 
@@ -50,7 +57,8 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/2.png">
 
-#### **Create Information Agent**
+### Information Agent
+#### Create the Agent
 
 - Click on **Create Agent**
 
@@ -93,7 +101,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 - Click on **Deploy** to deploy the agent
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/36.png">
 
-- Test the Agent
+#### Test the Agent
 
   Type this query:
   ```
@@ -105,7 +113,8 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/ia-flow-2.png">
 
-#### **Create Customer Claims Agent**
+### Customer Claims Agent
+#### Create Agent
 
 - Click on hamburger menu, then **Build** -> **Agent Builder**
 
@@ -202,7 +211,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/28.png">
 
-- Test the Agent
+#### Test the Agent
   
   Step 1. Enter a basic query:
      ```
@@ -264,7 +273,8 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
 You can create additional claims for your assigned name to test the next agent.
 
-#### **Create Claim Processor Agent**
+### Claim Processor Agent
+#### Create the Agent
 
 - Click on hamburger menu, then **Build** -> **Agent Builder**.
 
@@ -365,7 +375,7 @@ You can create additional claims for your assigned name to test the next agent.
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/16.png">
 
-- Test the Agent
+#### Test the Agent
 
   Step 1. Enter the basic query
 
@@ -395,6 +405,7 @@ You can create additional claims for your assigned name to test the next agent.
 
      <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-5-new.png">
 
+### Further testing via AI Chat
 >
 > ***You can also test the agents from AI chat.***
 
