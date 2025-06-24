@@ -214,62 +214,62 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 #### Test the Customer Claims Agent
   
   Step 1. Enter a basic query:
-     ```
-     What are the different types of automobile insurance?
-     ```
-  
-     <img width="1000" alt="image" src="./screenshots_hands_on_lab/claims-flow-1.png">
-  
-     <img width="1000" alt="image" src="./screenshots_hands_on_lab/claims-flow-2.png">
+   ```
+   What are the different types of automobile insurance?
+   ```
+
+   <img width="1000" alt="image" src="./screenshots_hands_on_lab/claims-flow-1.png">
+
+   <img width="1000" alt="image" src="./screenshots_hands_on_lab/claims-flow-2.png">
 
   Step 2. Check the flow for creating a new claim
 
-     Enter the following:
-     ```
-     Submit a new claim
-     ```
-     <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-3.png">
+   Enter the following:
+   ```
+   Submit a new claim
+   ```
+   <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-3.png">
 
-     **NOTE** your instructor will provide you with a name from the deployed database to use for all of your claims entries. Enter the name provided. Each participant needs to use a different name.
+   **NOTE** your instructor will provide you with a name from the deployed database to use for all of your claims entries. Enter the name provided. Each participant needs to use a different name.
 
-     <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-4.png">
+   <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-4.png">
 
-     For location, enter `St Mary's Street, San Francisco, California` or any other address.
+   For location, enter `St Mary's Street, San Francisco, California` or any other address.
 
-     <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-5.png">
+   <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-5.png">
 
-     For date, enter `23-05-2025` or any other date
+   For date, enter `23-05-2025` or any other date
 
-     <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-6.png">
+   <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-6.png">
 
-     For vehicle information, enter `Toyota Corolla, 2003` any other vehicle details
+   For vehicle information, enter `Toyota Corolla, 2003` any other vehicle details
 
-     <img width="1000" alt="image" src="./screenshots_hands_on_lab/vehicle_details.png">
+   <img width="1000" alt="image" src="./screenshots_hands_on_lab/vehicle_details.png">
 
-     For details, enter: 
-     ```
-     I was driving to work when a red pickup truck ran a red light and collided with the rear right side of my vehicle at the intersection. The impact caused my car to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel. I was wearing a seatbelt and did not sustain serious injuries, but I reported minor back pain and visited a doctor the same day. Medical expenses were $3400 and the damages repair cost was $4500.
-     ```
+   For details, enter: 
+   ```
+   I was driving to work when a red pickup truck ran a red light and collided with the rear right side of my vehicle at the intersection. The impact caused my car to spin slightly, resulting in damage to the rear bumper, right-side tail light, and a dent in the rear quarter panel. I was wearing a seatbelt and did not sustain serious injuries, but I reported minor back pain and visited a doctor the same day. Medical expenses were $3400 and the damages repair cost was $4500.
+   ```
 
-     <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-7.png">
+   <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-7.png">
 
   Step 3. Check the flow for claim status
 
-     Enter the query
+   Enter the query
 
-     ```
-     Check claim status
-     ```
+   ```
+   Check claim status
+   ```
 
-     <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-8.png">
+   <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-8.png">
 
-     Enter the name you were provided
+   Enter the name you were provided
 
-     <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-10.png">
+   <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-10.png">
 
-     For claim number, enter the claim number from the summary of the claim you just created
+   For claim number, enter the claim number from the summary of the claim you just created
 
-     <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-11.png">
+   <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim-flow-11.png">
 
 You can create additional claims for your assigned name to test the next agent.
 
@@ -379,31 +379,31 @@ You can create additional claims for your assigned name to test the next agent.
 
   Step 1. Enter the basic query
 
-     ```
-     Show open claims
-     ```
+   ```
+   Show open claims
+   ```
 
-    <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-1.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-1.png">
 
   Step 2. Enter a Customer ID from the list
 
-    <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-2-new.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-2-new.png">
 
   Step 3. Input Claim Number from the list
 
-    <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-3.0-new.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-3.0-new.png">
 
   Step 4. When prompted to accept the claim respond:
 
-     ```
-     Yes
-     ```
+   ```
+   Yes
+   ```
 
-     <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-4-new.png">
+   <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-4-new.png">
 
   Step 5. You should see an update confirmation
 
-     <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-5-new.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/cp-flow-5-new.png">
 
 ### Further testing via AI Chat
 >
