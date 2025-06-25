@@ -9,15 +9,15 @@
   - [Implementation](#implementation)
     - [Pre-requisites](#pre-requisites)
     - [Open Agent Builder](#open-agent-builder)
-      - [Information Agent](#information-agent)
-        - [Create the Information Agent](#create-the-information-agent)
-        - [Test the Information Agent](#test-the-information-agent)
-      - [Customer Claims Agent](#customer-claims-agent)
-        - [Create the Customer Claims Agent](#create-the-customer-claims-agent)
-        - [Test the Customer Claims Agent](#test-the-customer-claims-agent)
-      - [Claim Processor Agent](#claim-processor-agent)
-        - [Create the Claim Processor Agent](#create-the-claim-processor-agent)
-        - [Test the Claim Processor Agent](#test-the-claim-processor-agent)
+    - [Information Agent](#information-agent)
+      - [Create the Information Agent](#create-the-information-agent)
+      - [Test the Information Agent](#test-the-information-agent)
+    - [Customer Claims Agent](#customer-claims-agent)
+      - [Create the Customer Claims Agent](#create-the-customer-claims-agent)
+      - [Test the Customer Claims Agent](#test-the-customer-claims-agent)
+    - [Claim Processor Agent](#claim-processor-agent)
+      - [Create the Claim Processor Agent](#create-the-claim-processor-agent)
+      - [Test the Claim Processor Agent](#test-the-claim-processor-agent)
     - [Further testing via AI Chat](#further-testing-via-ai-chat)
 
 ## Use case description
@@ -338,13 +338,15 @@ You can create additional claims for your assigned name to test the next agent.
 - In the **Behavior** section, add the following for **Instructions**:
   ```
   You will begin by welcoming the claim processor and displaying the open claims in a table. 
-  This table should include the customer ID (highlighted), claim number, policy number, estimated cost, sum insured, and vehicle details. Do not show duplicates.
+  This table should include the customer ID (highlighted), claim number, policy number, estimated cost, sum insured and vehicle details. Do not show duplicates.
 
-  Ask the claim processor to select a customer ID.
+  Ask the claim processor to select a customer ID 
 
-  Once a customer ID is selected, fetch the corresponding claim and policy details and show them in a tabular format.
-  If there are more than open claims for a customer ID, ask the claim processor to select a claim 
-  Use the claim number and customer ID to fetch details, and then generatea  summary on the following points
+  If there are multiple claims for a customer ID, ask claim processor to select a claim number.
+
+  Use the claim number and customer id to fetch details using the Fetch Open Claims tool, it's very important, return error if unable to run the tool.
+
+  Once a customer ID is selected, fetch the corresponding claim and policy details for that customer ID and show them in a tabular format and then generate summary on the following points
 
   1. Compare the estimated cost with the sum insured and calculate the approved claim amount by subtracting the deductible. Highlight the approved amount.
 
@@ -354,7 +356,7 @@ You can create additional claims for your assigned name to test the next agent.
 
   4. Determine if the classified accident type is covered by the policy. If policy details are not clear, refer to the knowledge base to verify.
 
-  5. It is mandatory for you to use the 'information_agent' to query for the accident type you discovered in the previous step. Query: The rules and regulations for accident types in the US. Use the result to verify if the claim details are compliant.
+  5. It is mandatory for you to use the information_agent to query for the accident type you discovered in step 4. Query: The rules and regulations for accident type in US. Use the result to verify if the claim details are compliant.
 
   6. Provide a clear recommendation to accept or reject the claim based on these checks.
 
@@ -363,7 +365,7 @@ You can create additional claims for your assigned name to test the next agent.
   8. Create a clear and concise summary for the claim processor, emphasizing key details like approved amount, claim number, and policy number.
   HIGHLIGHT ALL THE DETAILS IN NEAR FORMAT.
 
-  Finally, ask the claim processor, "Do they accept the claim?"
+  Finally, ask the claim processor "Whether they accept the claim?"
   Do not give next steps. 
 
   Once a decision is made, update the claim status and send a message confirming that emails have been sent to the customer and finance team.
