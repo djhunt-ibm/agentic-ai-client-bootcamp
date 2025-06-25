@@ -217,6 +217,8 @@ This tool is executing a simple web search, using a service called [Tavily](http
 
 Here you will practice your coding skills! The [provided Python file](./src/tools/web_search.py) is incomplete, and we are asking you to fill in the blanks, so to speak. You can use [the image description tool](#image-to-text-tool) discussed above as a reference example for what the code should look like.
 
+> You can choose to skip this exercise and simply use the completed code in the [web_search.py.complete](./src/tools/web_search.py.complete) file.
+
 The required import statements are already filled into the file. Note how it declares a variable called `CONNECTION_TAVILY`; this represents the name of the connection that is used to retrieve the Tavily API key. You can find sample code showing how to retrieve the value from the connection in the image description tool.
 
 The tool contains one function called web_search. In the @tool declaration, add the definition of the connection so that it is available in the body of the function.
