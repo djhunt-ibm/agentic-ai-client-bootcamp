@@ -200,7 +200,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
 ## 2. Create your first AI agents
 
-![Create New Agent](images/1.png)
+![Create New Agent](images/i4.png)
 
 ### 2.1 GFM Teller Agent
 
