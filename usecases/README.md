@@ -190,9 +190,13 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
   ![Watsonx Orchestrate instance](images/i1.png)
 
+- Click the "Launch watsonx Orchestrate" button
 
+  ![Watsonx Orchestrate instance](images/i2.png)
 
-Access the watsonx Orchestrate instance provided by your instructor.
+- Welcome to watsonx Orchestrate. Open the hamburger menu, click on Build -> Agent Builder
+
+  ![Watsonx Orchestrate instance](images/i3.png)
 
 ## 2. Create your first AI agents
 
