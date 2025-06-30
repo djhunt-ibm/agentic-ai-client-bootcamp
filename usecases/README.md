@@ -188,7 +188,8 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
 - Log in to IBM Cloud (cloud.ibm.com). Navigate to top left hamburger menu, then to Resource List. Open the AI/Machine Learning section. You should see a watsonx Orchestrate service, click to open
 
-  ![Screenshot](../images/1.png)
+  ![Screenshot](https://github.ibm.com/raw/bkar/agentic-ai-client-bootcamp/main/images/1.png)
+
 
 
 Access the watsonx Orchestrate instance provided by your instructor.
