@@ -159,7 +159,10 @@ The entire process takes minutes instead of hours, and John never has to leave h
 In this lab, you'll build a complete Agentic AI solution for GFM Bank using watsonx Orchestrate. You'll create multiple specialized agents that work together to handle customer requests.
 
 ### Prerequisites
-- Access to your assigned watsonx Orchestrate instance
+- Check with your instructor to ensure all systems are up and running before you continue
+- Validate that you have access to the right TechZone environment for this lab
+- Validate that you have access to a credentials file that your instructor will share with you before starting the labs
+- If you're an instructor running this lab, check the Instructor's guides to set up all environments and systems
 - Basic understanding of banking operations (e.g. transfer, balance check, overdraft...)
 - Familiarity with AI agent concepts (e.g. instructions, tools, collaborators...)
 
@@ -182,6 +185,10 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
 
 ## 1. Connect to your assigned Watsonx Orchestrate instance
+
+- Log in to IBM Cloud (cloud.ibm.com). Navigate to top left hamburger menu, then to Resource List. Open the AI/Machine Learning section. You should see a watsonx Orchestrate service, click to open
+
+  ![Watsonx Orchestrate instance](img (1).png).
 
 Access the watsonx Orchestrate instance provided by your instructor.
 
