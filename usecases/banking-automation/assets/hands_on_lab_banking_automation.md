@@ -2,46 +2,46 @@
 
 ## Table of content <!-- omit in toc -->
 
-- [🔍 Introduction](#-introduction)
-- [📊 Current Banking Operations](#-current-banking-operations)
-- [🏗️ Target Architecture with Agentic AI](#️-target-architecture-with-agentic-ai)
-- [👤 User Scenario](#-user-scenario)
-  - [Current Situation](#current-situation)
-  - [Future with Agentic AI](#future-with-agentic-ai)
-- [\_\_\_\_\_\_\_\_\_\_ 🔧 Lab Instructions \_\_\_\_\_\_\_\_\_\_](#__________--lab-instructions-__________)
-  - [Prerequisites](#prerequisites)
-  - [Lab Steps Overview](#lab-steps-overview)
-  - [Extra Resources](#extra-resources)
-- [1. Connect to your assigned Watsonx Orchestrate instance](#1-connect-to-your-assigned-watsonx-orchestrate-instance)
-- [2. Create your first AI agents](#2-create-your-first-ai-agents)
-  - [2.1 GFM Teller Agent](#21-gfm-teller-agent)
-    - [2.1.1. Add a name and description to your agent](#211-add-a-name-and-description-to-your-agent)
-    - [2.1.2 Add Tools to the Agent](#212-add-tools-to-the-agent)
-    - [2.1.3. Agent Behavior](#213-agent-behavior)
-    - [2.1.4. Test the new Agent](#214-test-the-new-agent)
-    - [2.1.5. Deploy the agent](#215-deploy-the-agent)
-  - [2.2 GFM Backoffice Agent](#22-gfm-backoffice-agent)
-    - [2.2.1. Add a name and description to your agent](#221-add-a-name-and-description-to-your-agent)
-    - [2.2.2 Add Tools to the Agent](#222-add-tools-to-the-agent)
-    - [2.2.3. Agent Behavior](#223-agent-behavior)
-    - [2.2.4. Test the new Agent](#224-test-the-new-agent)
-    - [2.2.5. Deploy the agent](#225-deploy-the-agent)
-  - [2.3. GFM Product Information Agent](#23-gfm-product-information-agent)
-    - [2.3.1. Name and Describe the new agent](#231-name-and-describe-the-new-agent)
-    - [2.3.2 Add Knowledge to the Agent](#232-add-knowledge-to-the-agent)
-    - [2.3.3. Agent Behavior](#233-agent-behavior)
-    - [2.3.4. Test the new Agent](#234-test-the-new-agent)
-    - [2.3.5. Deploy the agent](#235-deploy-the-agent)
-  - [2.4 GFM Bank Orchestrator](#24-gfm-bank-orchestrator)
-    - [2.4.1. Add a name and description to your agent](#241-add-a-name-and-description-to-your-agent)
-    - [2.4.2 Add collaborative Agents](#242-add-collaborative-agents)
-    - [2.4.3. Agent Behavior](#243-agent-behavior)
-    - [2.4.4. Test the new Agent](#244-test-the-new-agent)
-    - [2.4.5. Deploy the agent](#245-deploy-the-agent)
-- [3. Test Your Agentic AI Banking Solution](#3-test-your-agentic-ai-banking-solution)
-- [🎉 Congratulations! You have completed the lab!](#-congratulations-you-have-completed-the-lab)
-- [🔄 Challenge Extensions](#-challenge-extensions)
-- [📚 Resources](#-resources)
+- [🔍 Automate Banking with Agentic AI](#-introduction)
+  - [📊 Current Banking Operations](#-current-banking-operations)
+  - [🏗️ Target Architecture with Agentic AI](#️-target-architecture-with-agentic-ai)
+  - [👤 User Scenario](#-user-scenario)
+    - [Current Situation](#current-situation)
+    - [Future with Agentic AI](#future-with-agentic-ai)
+  - [\_\_\_\_\_\_\_\_\_\_ 🔧 Lab Instructions \_\_\_\_\_\_\_\_\_\_](#__________--lab-instructions-__________)
+    - [Prerequisites](#prerequisites)
+    - [Lab Steps Overview](#lab-steps-overview)
+    - [Extra Resources](#extra-resources)
+  - [Connect to your assigned Watsonx Orchestrate instance](#1-connect-to-your-assigned-watsonx-orchestrate-instance)
+  - [Open Agent Builder](#2-create-your-first-ai-agents)
+    - [Create GFM Teller Agent](#21-gfm-teller-agent)
+      - [2.1.1. Add a name and description to your agent](#211-add-a-name-and-description-to-your-agent)
+      - [2.1.2 Add Tools to the Agent](#212-add-tools-to-the-agent)
+      - [2.1.3. Agent Behavior](#213-agent-behavior)
+      - [2.1.4. Test the new Agent](#214-test-the-new-agent)
+      - [2.1.5. Deploy the agent](#215-deploy-the-agent)
+    - [2.2 GFM Backoffice Agent](#22-gfm-backoffice-agent)
+      - [2.2.1. Add a name and description to your agent](#221-add-a-name-and-description-to-your-agent)
+      - [2.2.2 Add Tools to the Agent](#222-add-tools-to-the-agent)
+      - [2.2.3. Agent Behavior](#223-agent-behavior)
+      - [2.2.4. Test the new Agent](#224-test-the-new-agent)
+      - [2.2.5. Deploy the agent](#225-deploy-the-agent)
+    - [2.3. GFM Product Information Agent](#23-gfm-product-information-agent)
+      - [2.3.1. Name and Describe the new agent](#231-name-and-describe-the-new-agent)
+      - [2.3.2 Add Knowledge to the Agent](#232-add-knowledge-to-the-agent)
+      - [2.3.3. Agent Behavior](#233-agent-behavior)
+      - [2.3.4. Test the new Agent](#234-test-the-new-agent)
+      - [2.3.5. Deploy the agent](#235-deploy-the-agent)
+    - [2.4 GFM Bank Orchestrator](#24-gfm-bank-orchestrator)
+      - [2.4.1. Add a name and description to your agent](#241-add-a-name-and-description-to-your-agent)
+      - [2.4.2 Add collaborative Agents](#242-add-collaborative-agents)
+      - [2.4.3. Agent Behavior](#243-agent-behavior)
+      - [2.4.4. Test the new Agent](#244-test-the-new-agent)
+      - [2.4.5. Deploy the agent](#245-deploy-the-agent)
+  - [3. Test Your Agentic AI Banking Solution](#3-test-your-agentic-ai-banking-solution)
+  - [🎉 Congratulations! You have completed the lab!](#-congratulations-you-have-completed-the-lab)
+  - [🔄 Challenge Extensions](#-challenge-extensions)
+  - [📚 Resources](#-resources)
 
 
 
@@ -198,88 +198,93 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
   ![Watsonx Orchestrate instance](images/i3.png)
 
-## 2. Create your first AI agents
+## 2. Open Agent Builder
 
 ![Create New Agent](images/i4.png)
 
-### 2.1 GFM Teller Agent
+### GFM Teller Agent
 
-#### 2.1.1. Add a name and description to your agent
+#### Create GFM Teller Agent
 
-![Create New Agent](images/2.png)
+- Click on **Create Agent**
 
-- Agent Name: GFM Teller
-- Agent Description:
+![Create New Agent](images/i5.png)
 
-```
-You are the GFM Bank Teller Agent for GFM Bank, responsible for providing accurate, professional assistance with banking transactions. Your role is to respond precisely to what customers ask without making assumptions about their next actions.
-Your Capabilities:
-
-Check account balances using the check_balance tool with an IBAN number
-Process money transfers using the make_transfer tool with source IBAN, destination IBAN, and amount
-
-Key Instructions:
-- Respond ONLY to what the customer explicitly asks for - do not anticipate or suggest next steps
-- After displaying balance information, simply end your response - DO NOT ask for transfer information or suggest making a transfer
-- When processing a transfer request, confirm the details and clearly indicate whether it was successful
-- If a transfer fails due to insufficient funds, inform the customer without suggesting solutions
-- Only discuss overdraft options if the customer specifically asks about overdrafts
-- Never make assumptions about what the customer wants to do next
-
-Response Guidelines:
-- For balance inquiries: Display the current balance, overdraft limit if available, and recent transactions. Then stop.
-- For transfer requests: Confirm the transfer details, process it, and report the outcome with the new balance.
-- For ambiguous requests: Ask for clarification rather than making assumptions.
-Keep responses concise and focused only on the requested information.
-
-Example Interactions:
-Balance inquiry - good response:
-- Customer: "What's my account balance for IBAN DE12345678?"
-Agent: "Your current balance is 500 EUR. Your recent transactions include a deposit of 200 EUR on May 15 and a withdrawal of 50 EUR on May 16."
-Transfer request - good response:
-- Customer: "I want to transfer 100 EUR from my account DE12345678 to DE87654321."
-Agent: "I've processed your transfer of 100 EUR from DE12345678 to DE87654321. The transfer was successful. Your new balance is 400 EUR."
-
-Maintain a professional, helpful tone without unnecessary small talk or follow-up questions unless the customer asks for additional assistance.
-```
+- Follow the steps according to the screenshot below.
+  - Select **Create from scratch**
+  - Name the Agent: GFM Teller
+  - Use the following description:
+    ```
+    You are the GFM Bank Teller Agent for GFM Bank, responsible for providing accurate, professional assistance with banking transactions. Your role is to respond precisely to what customers ask without making assumptions about their next actions.
+    Your Capabilities:
+    
+    Check account balances using the check_balance tool with an IBAN number
+    Process money transfers using the make_transfer tool with source IBAN, destination IBAN, and amount
+    
+    Key Instructions:
+    - Respond ONLY to what the customer explicitly asks for - do not anticipate or suggest next steps
+    - After displaying balance information, simply end your response - DO NOT ask for transfer information or suggest making a transfer
+    - When processing a transfer request, confirm the details and clearly indicate whether it was successful
+    - If a transfer fails due to insufficient funds, inform the customer without suggesting solutions
+    - Only discuss overdraft options if the customer specifically asks about overdrafts
+    - Never make assumptions about what the customer wants to do next
+    
+    Response Guidelines:
+    - For balance inquiries: Display the current balance, overdraft limit if available, and recent transactions. Then stop.
+    - For transfer requests: Confirm the transfer details, process it, and report the outcome with the new balance.
+    - For ambiguous requests: Ask for clarification rather than making assumptions.
+    Keep responses concise and focused only on the requested information.
+    
+    Example Interactions:
+    Balance inquiry - good response:
+    - Customer: "What's my account balance for IBAN DE12345678?"
+    Agent: "Your current balance is 500 EUR. Your recent transactions include a deposit of 200 EUR on May 15 and a withdrawal of 50 EUR on May 16."
+    Transfer request - good response:
+    - Customer: "I want to transfer 100 EUR from my account DE12345678 to DE87654321."
+    Agent: "I've processed your transfer of 100 EUR from DE12345678 to DE87654321. The transfer was successful. Your new balance is 400 EUR."
+    
+    Maintain a professional, helpful tone without unnecessary small talk or follow-up questions unless the customer asks for additional assistance.
+    ```
+  - Click **Create**
 
 ![Create New Agent](images/3.png)
 
-#### 2.1.2 Add Tools to the Agent
+- On the `GFM Teller` page, take the defaults for **Profile** and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button to upload the Specs.
+  - account_balance_check-wxo.json
+  - money_transfer-wxo.json
+ 
+![Create New Agent](images/i6.png)
 
-Go to the Toolset, and click on the "Add tool" button to import 2 new tools. Upload the following tools one by one:
-- account_balance_check-wxo.json
-- money_transfer-wxo.json
+- Click on **Import**.
 
-![Create New Agent](images/4.png)
+![Create New Agent](images/i7.png)
 
-![Create New Agent](images/5.png)
+- Upload the `account_balance_check-wxo.json` which will be provided by the instructor.
+  
+![Create New Agent](images/i9.png)
 
-![Create New Agent](images/6.png)
+- Once the file is uploaded, select **Next**.
+  
+![Create New Agent](images/i8.png)
 
-![Create New Agent](images/7.png)
+- Select the all of the **Operations** and click **Done**
+  
+![Create New Agent](images/i10.png)
 
-![Create New Agent](images/8.png)
+- Go to the **Behavior** section. Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator Agent, we don't want to Enable it for direct chat on the chat homepage Disable the **Show agent** feature
 
-![Create New Agent](images/9.png)
+![Create New Agent](images/i11.png)
 
-#### 2.1.3. Agent Behavior
+#### Test the GFM Teller Agent
 
-- Because this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator Agent, we don't want to Enable it for direct chat on the chat homepage
-- Disable the "Show agent" feature
+In the preview window on the right, test with the following query:
+```
+What's the balance of my account IBAN DE89320895326389021994
+```
 
-![Create New Agent](images/10.png)
+![Create New Agent](images/i12.png)
 
-#### 2.1.4. Test the new Agent
-
-In the preview window on the right, test with the following question:
-- "What's the balance of my account IBAN DE89320895326389021994"
-
-![Create New Agent](images/12.png)
-
-#### 2.1.5. Deploy the agent
-
-- Choose the top right corner "Deploy" button to deploy the agent and make it available for the chat.
+- Click on **Deploy** to deploy the agent
 
 
 
