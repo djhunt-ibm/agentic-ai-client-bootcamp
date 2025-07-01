@@ -83,7 +83,7 @@ When clicking on the Download button, the file will be downloaded into the `Down
 
 ![alt text](assets/image22.png)
 
-Then click on `Show in Folder` to open the file explorer window.
+Then click on the `Show in Folder` icon to open the file explorer window,as shown below.
 
 ![alt text](assets/image23.png)
 
@@ -95,15 +95,11 @@ Now navigate to the `Ubuntu` folder under `Linux` on the left side of the file e
 
 ![alt text](assets/image25.png)
 
-Under the folder, right click on `home -> techzone -> wxo_dev_edition` and click on Paste.
+In the folder, navigate to `home -> techzone -> wxo_dev_edition`, right click and click on Paste.
 
 ![alt text](assets/image26.png)
 
-Open the folder and right-click on the zip file. You may receive a warning that this file is from the Internet. Click OK.
-
-![alt text](assets/image27.png)
-
-In the context window for the zip file, select `Extract all`.
+Open the folder and right-click on the zip file. In the context window for the zip file, select `Extract all`. You may receive a warning that this file is from the Internet. Click OK.
 
 ![alt text](assets/image28.png)
 
@@ -119,17 +115,9 @@ Note that the extraction process can take a couple of minutes. After it complete
 
 VS Code is already installed on the Windows-based virtual machine. To open it, simply type "code" into the search field at the bottom left of the screen. The "VS Code" app will automatically be offered as a choice, and you can open it by clicking on the app icon.
 
-![alt text](assets/image31.png)
-
-Once the application is open, select the `File` -> `Open folder` menu option.
+ The application will automatically open the folder with all the files you are going to need during this lab.
 
 ![alt text](assets/image32.png)
-
-Select the folder named `wxo_dev_edition` from the list.
-
-![alt text](assets/image33.png)
-
-Click OK. This will open the folder with all the files you are going to need during this lab.
 
 ## Environments
 
