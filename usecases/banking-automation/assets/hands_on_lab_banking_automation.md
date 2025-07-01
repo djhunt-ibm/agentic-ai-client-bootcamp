@@ -200,13 +200,13 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
 ## Open Agent Builder
 
-![Create New Agent](images/i4.png)
-
 ### GFM Teller Agent
 
 #### Create GFM Teller Agent
 
 - Click on **Create Agent**
+
+![Create New Agent](images/i4.png)
 
 ![Create New Agent](images/i5.png)
 
@@ -246,8 +246,8 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
     Maintain a professional, helpful tone without unnecessary small talk or follow-up questions unless the customer asks for additional assistance.
     ```
   - Click **Create**
-
-![Create New Agent](images/3.png)
+ 
+![Create New Agent](images/i5.png)
 
 - On the `GFM Teller` page, take the defaults for **Profile** and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button to upload the Specs.
   - account_balance_check-wxo.json
@@ -259,7 +259,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
 ![Create New Agent](images/i7.png)
 
-- Upload the `account_balance_check-wxo.json` which will be provided by the instructor.
+- Upload the `account_balance_check-wxo.json` and `money_transfer-wxo.json`, which will be provided by the instructor.
   
 ![Create New Agent](images/i9.png)
 
