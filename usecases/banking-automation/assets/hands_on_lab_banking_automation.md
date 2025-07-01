@@ -184,7 +184,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 ### 🚀🚀🚀 Let's get started! 🚀🚀🚀 <!-- omit in toc -->
 
 
-## 1. Connect to your assigned Watsonx Orchestrate instance
+## Connect to your assigned Watsonx Orchestrate instance
 
 - Log in to IBM Cloud (cloud.ibm.com). Navigate to top left hamburger menu, then to Resource List. Open the AI/Machine Learning section. You should see a watsonx Orchestrate service, click to open
 
@@ -198,7 +198,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
   ![Watsonx Orchestrate instance](images/i3.png)
 
-## 2. Open Agent Builder
+## Open Agent Builder
 
 ![Create New Agent](images/i4.png)
 
@@ -368,13 +368,21 @@ In the preview window from the right, test with the following query:
 
 ![Create New Agent](images/i22.png)
 
-### 2.3. GFM Product Information Agent
+### GFM Product Information Agent
+#### Create GFM Product Information Agent
 
-#### 2.3.1. Name and Describe the new agent
+- Click on hamburger menu, then **Build** -> **Agent Builder**
 
-- Agent Name: GFM Product Information
-- Agent Description:
+![Create New Agent](images/i4.png)
 
+- On the next screen, click on **Create Agent**
+
+![Create New Agent](images/i15.png)
+
+- Follow the steps according to the screenshot below
+  - Select **Create from scratch**
+  - Name the agent `GFM Product Information`
+  - Use the following description:
 ```
 You are the GFM Bank Products Specialist, the expert resource for all banking products and services offered by GFM Bank. Your role is to provide accurate, helpful information about banking solutions while delivering an exceptional customer experience.
 
@@ -444,19 +452,9 @@ Handling limitations:
 
 Keep your tone professional yet conversational, balancing technical accuracy with accessibility. Your goal is to educate customers so they can make informed financial decisions while fostering trust in GFM Bank's expertise and customer focus.
 ```
+![Create New Agent](images/i23.png)
 
-![Create New Agent](images/23.png)
-
-![Create New Agent](images/24.png)
-
-#### 2.3.2 Add Knowledge to the Agent
-
-Go to the Knowledge section, and click on the "Upload files" button to import 3 new documents. Upload the documents at once:
-- list-of-prices-and-Services.pdf
-- ser-terms-conditions-debit-cards.pdf
-- Overdraft Services FAQ
-
-After the uploaded files have been processed, add the following description to the Knowledge:
+- In the **Knowledge** section, add the following to the **Description**:
 
 ```
 This comprehensive knowledge base contains detailed information on GFM Bank's products, services, fees, and operational procedures, organized into the following categories:
@@ -513,21 +511,24 @@ Lost/Stolen Card Procedures: Reporting process, emergency replacement, liability
 
 Each topic includes up-to-date information, regulatory disclosures where applicable, and internal cross-references to related products or services to facilitate comprehensive customer assistance.
 ```
+- Download listed documents below to your local system, then upload by clicking on **Upload files** under **Documents**:
 
-![Create New Agent](images/25.png)
+```
+list-of-prices-and-Services.pdf
+ser-terms-conditions-debit-cards.pdf
+Overdraft Services FAQ
+```
 
-![Create New Agent](images/26.png)
+**NOTE:**
+Source of documents:
+- Terms and Conditions for Debit Cards: https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-terms-conditions-debit-cards.pdf
+- List of Prices: https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/kontakt-und-service/list-of-prices-and-Services-deutsche-bank-ag.pdf
+  
+![Create New Agent](images/i24.png)
 
-![Create New Agent](images/27.png)
+![Create New Agent](images/i25.png)
 
-![Create New Agent](images/28.png)
-
-
-#### 2.3.3. Agent Behavior
-
-- Because this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator Agent, we don't want to Enable it for direct chat on the chat homepage
-- Disable the "Show agent" feature
-- Introduce this text as Behavior Instructions:
+- In the **Behavior** section. Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator, we don't want to Enable it for direct chat on the chat homepage **disable the "Show agent" feature**, and add the following for **Instructions**:
 
 ```
 When to Respond
@@ -593,32 +594,36 @@ Never Provide:
 - Speculative financial advice or investment recommendations
 ```
 
-![Create New Agent](images/29.png)
+![Create New Agent](images/i26.png)
 
-#### 2.3.4. Test the new Agent
+#### Test the GFM Product Information Agent
 
-In the preview window from the right, test with the following questions:
-- "What is a card overdraft?"
-- "If I enter the PIN 5 times on my card what's happening?"
+In the preview window from the right, test with the following query:
+  ```
+  What is a card overdraft?
+  If I enter the PIN 5 times on my card what's happening?
+  ```
 
-![Create New Agent](images/30.png)
+![Create New Agent](images/i27.png)
 
-#### 2.3.5. Deploy the agent
+- Click on **Deploy** to deploy the agent
 
-- Choose the top right corner "Deploy" button to deploy the agent and make it available for the chat.
 
-**NOTE:**
-Source of documents:
-- Terms and Conditions for Debit Cards: https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-terms-conditions-debit-cards.pdf
-- List of Prices: https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/kontakt-und-service/list-of-prices-and-Services-deutsche-bank-ag.pdf
+### GFM Bank Orchestrator Agent
+#### Create GFM Bank Orchestrator Agent
 
-### 2.4 GFM Bank Orchestrator
+- Click on hamburger menu, then **Build** -> **Agent Builder**
 
-#### 2.4.1. Add a name and description to your agent
+![Create New Agent](images/i4.png)
 
-- Agent Name: GFM Bank Orchestrator
-- Agent Description:
+- On the next screen, click on **Create Agent**
 
+![Create New Agent](images/i15.png)
+
+- Follow the steps according to the screenshot below
+  - Select **Create from scratch**
+  - Name the agent `GFM Bank Orchestrator`
+  - Use the following description:
 ```
 You are the GFM Bank Branch Welcome Agent, the first point of contact for all customers visiting the bank branch virtually. Your primary role is to greet customers warmly, understand their needs, and connect them with the appropriate specialized banking agent.
 
@@ -676,28 +681,26 @@ Important Guidelines:
 
 Your role is crucial as the first impression of GFM Bank's service quality. Focus on accurate routing and creating a positive, seamless customer experience.
 ```
-![Create New Agent](images/31.png)
+![Create New Agent](images/i28.png)
 
-#### 2.4.2 Add collaborative Agents
+#### Add collaborative Agents
 
-Go to the Toolset, and click on the "Add agents" button to import the 3 previously defined agents. Select from local instance, and then mark all the 3 available agents:
-- GFM Teller
-- GFM Backoffice
-- GFM Product Information
+- Click on **Add Agent**
 
-![Create New Agent](images/33.png)
+![Create New Agent](images/i29.png)
 
-![Create New Agent](images/34.png)
+- Click **Add from local instance**
 
-![Create New Agent](images/35.png)
+![Create New Agent](images/i30.png)
 
-![Create New Agent](images/36.png)
+- Select **GFM Teller**, **GFM Backoffice**, **GFM Product Information** and then the **Add to Agent button**
 
-#### 2.4.3. Agent Behavior
+![Create New Agent](images/i31.png)
 
-- This agent needs to be enabled for direct chat
-- Enter the following Agent Instructions Behavior:
+![Create New Agent](images/i32.png)
 
+
+- In the **Behavior** section, add the following for **Instructions**:
 ```
 Respond to all initial customer inquiries in the banking virtual branch
 Activate when customers begin a new conversation or session
@@ -749,45 +752,44 @@ For returning customers, acknowledge their return with "Welcome back to GFM Bank
 This Orchestrator Agent serves as the central routing hub for customer inquiries, ensuring each customer is directed to the specialized agent best equipped to address their specific banking needs efficiently and accurately.
 ```
 
-![Create New Agent](images/37.png)
+![Create New Agent](images/i33.png)
 
-#### 2.4.4. Test the new Agent
+#### Test the GFM Bank Orchestrator Agent
 
-In the preview window from the right, test with the following questions:
-- "What is a card overdraft?"
-- "What's the balance of my account IBAN DE89320895326389021994"
+In the preview window from the right, test with the following query:
+  ```
+  What is a card overdraft?
+  What's the balance of my account IBAN DE89320895326389021994
+  ```
+![Create New Agent](images/i34.png)
 
-![Create New Agent](images/38.png)
+- Click on **Deploy** to deploy the agent
 
-#### 2.4.5. Deploy the agent
+## Test Your Agentic AI Banking Solution
 
-- Choose the top right corner "Deploy" button to deploy the agent and make it available for the chat.
+- Click on the sandwich icon on the Top Left corner of Watsonx Orchestrate window, and select Chat. On the top right, you should see only one Agent called "GFM Bank Orchestrator".
 
-## 3. Test Your Agentic AI Banking Solution
+![Create New Agent](images/i35.png)
 
-Click on the sandwich icon on the Top Left corner of Watsonx Orchestrate window, and select Chat. On the top right, you should see only one Agent called "GFM Bank Orchestrator".
+In the chat window, test with the following queries:
 
-In the chat window, you can try fewquestions, for example:
+  ```
+  What's the balance of my account IBAN DE89320895326389021994
+  I want to transfer 20 EURO from IBAN DE89320895326389021994 to IBAN DE89929842579913662103
+  I want to transfer 4000 EURO from IBAN DE89320895326389021994 to IBAN DE89929842579913662103
+  What is a bank card overdraft?
+  How can I avoid overdraft fees?
+  I want to request an overdraft of 4000 EURO for my account IBAN DE89320895326389021994
+  Please approve an overdraft of 4000 EURO for my account IBAN DE89320895326389021994
+  What's the balance of my account IBAN DE89320895326389021994
+  I want to transfer 4000 EURO from IBAN DE89320895326389021994 to IBAN DE89929842579913662103
+  Oh, I did a mistake, can you do a reversal of my previous 4000 EURO payment to my IBAN DE89320895326389021994
+  Please do a reversal of my previous 4000 EURO payment to my IBAN DE89320895326389021994
+  ```
 
-- What's the balance of my account IBAN DE89320895326389021994
-- I want to transfer 20 EURO from IBAN DE89320895326389021994 to IBAN DE89929842579913662103
-- I want to transfer 4000 EURO from IBAN DE89320895326389021994 to IBAN DE89929842579913662103
-- What is a bank card overdraft?
-- How can I avoid overdraft fees?
-- I want to request an overdraft of 4000 EURO for my account IBAN DE89320895326389021994
-- Please approve an overdraft of 4000 EURO for my account IBAN DE89320895326389021994
-- What's the balance of my account IBAN DE89320895326389021994
-- I want to transfer 4000 EURO from IBAN DE89320895326389021994 to IBAN DE89929842579913662103
-- Oh, I did a mistake, can you do a reversal of my previous 4000 EURO payment to my IBAN DE89320895326389021994
-- Please do a reversal of my previous 4000 EURO payment to my IBAN DE89320895326389021994
+![Create New Agent](images/i36.png)
 
-
-![Create New Agent](images/39.png)
-
-![Create New Agent](images/40.png)
-
-![Create New Agent](images/41.png)
-
+![Create New Agent](images/i37.png)
 
 ## 🎉 Congratulations! You have completed the lab!
 
