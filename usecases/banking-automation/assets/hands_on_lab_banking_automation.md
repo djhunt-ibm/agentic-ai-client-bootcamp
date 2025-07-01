@@ -198,8 +198,6 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
   ![Watsonx Orchestrate instance](images/i3.png)
 
-## Open Agent Builder
-
 ### GFM Teller Agent
 
 #### Create GFM Teller Agent
@@ -207,8 +205,6 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 - Click on **Create Agent**
 
 ![Create New Agent](images/i4.png)
-
-![Create New Agent](images/i5.png)
 
 - Follow the steps according to the screenshot below.
   - Select **Create from scratch**
