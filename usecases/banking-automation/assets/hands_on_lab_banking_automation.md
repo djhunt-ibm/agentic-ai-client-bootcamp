@@ -212,7 +212,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
 - Follow the steps according to the screenshot below.
   - Select **Create from scratch**
-  - Name the Agent: GFM Teller
+  - Name the Agent `GFM Teller`
   - Use the following description:
     ```
     You are the GFM Bank Teller Agent for GFM Bank, responsible for providing accurate, professional assistance with banking transactions. Your role is to respond precisely to what customers ask without making assumptions about their next actions.
@@ -288,82 +288,85 @@ What's the balance of my account IBAN DE89320895326389021994
 
 
 
-### 2.2 GFM Backoffice Agent
+### GFM Backoffice Agent
+#### Create the GFM Backoffice Agent
 
-#### 2.2.1. Add a name and description to your agent
+- Click on hamburger menu, then **Build** -> **Agent Builder**
 
-- Agent Name: GFM Backoffice
-- Agent Description:
+![Create New Agent](images/i4.png)
 
-```
-You are the GFM Bank Backoffice Agent, responsible for handling special banking operations that require elevated privileges. You work for GFM Bank operations center and have authority to approve overdrafts and process fee reversals.
+- On the next screen, click on **Create Agent**
 
-Your Capabilities:
-1. Approve overdraft limits using the `approve_overdraft` tool with an IBAN and amount (0-10,000 EUR)
-2. Process fee reversals using the `fee_reversal` tool with an IBAN and amount
+![Create New Agent](images/i15.png)
 
-Key Instructions:
-- Only execute operations that customers explicitly request
-- Verify details before performing any operation
-- Confirm all successfully completed operations
-- Explain any errors or limitations clearly
+- Follow the steps according the screenshot below
+  - Select **Create from scratch**
+  - Name the agent `GFM Backoffice`
+  - Use the following description:
+    ```
+    You are the GFM Bank Backoffice Agent, responsible for handling special banking operations that require elevated privileges. You work for GFM Bank operations center and have authority to approve overdrafts and process fee reversals.
+    
+    Your Capabilities:
+    1. Approve overdraft limits using the `approve_overdraft` tool with an IBAN and amount (0-10,000 EUR)
+    2. Process fee reversals using the `fee_reversal` tool with an IBAN and amount
+    
+    Key Instructions:
+    - Only execute operations that customers explicitly request
+    - Verify details before performing any operation
+    - Confirm all successfully completed operations
+    - Explain any errors or limitations clearly
+    
+    Rules and Limitations:
+    - Overdraft limits must be between 1000 and 10,000 EUR
+    - Only process fee reversals when the customer provides a clear business reason
+    - Always verify the IBAN before processing any operation
+    - Maintain a professional and efficient demeanor
+    
+    Response Guidelines:
+    - For overdraft approvals: Confirm the new limit and account details
+    - For fee reversals: Confirm the amount reversed and the new account balance
+    - For errors: Explain the issue clearly and suggest alternative solutions when appropriate
+    - Always use clear, concise language that explains what was done
+    
+    Maintain a professional tone with appropriate formality for a banking representative with elevated privileges.
+    ```
+![Create New Agent](images/i13.png)
 
-Rules and Limitations:
-- Overdraft limits must be between 1000 and 10,000 EUR
-- Only process fee reversals when the customer provides a clear business reason
-- Always verify the IBAN before processing any operation
-- Maintain a professional and efficient demeanor
+  - Click **Create**
 
-Response Guidelines:
-- For overdraft approvals: Confirm the new limit and account details
-- For fee reversals: Confirm the amount reversed and the new account balance
-- For errors: Explain the issue clearly and suggest alternative solutions when appropriate
-- Always use clear, concise language that explains what was done
+- In the **Toolset** section, click on **Add tool**
 
-Maintain a professional tone with appropriate formality for a banking representative with elevated privileges.
-```
+  ![Create New Agent](images/i16.png)
 
-![Create New Agent](images/13.png)
+  
+- Click on **Import**. Import the `fee_reversal-wxo.json` and `set_overdraft_limit-wxo.json` tools one by one provided by your instructor
 
-![Create New Agent](images/14.png)
+![Create New Agent](images/i17.png)
 
-![Create New Agent](images/15.png)
+- Select **Next**
 
-#### 2.2.2 Add Tools to the Agent
+![Create New Agent](images/i18.png)
 
-Go to the Toolset, and click on the "Add tool" button to import 2 new tools. Upload the following tools one by one:
-- fee_reversal-wxo.json
-- set_overdraft_limit-wxo.json
-
-![Create New Agent](images/16.png)
-
-![Create New Agent](images/17.png)
-
-![Create New Agent](images/18.png)
-
-![Create New Agent](images/19.png)
+- Select all of the **Operations** and click **Done**
+![Create New Agent](images/i19.png)
 
 
-#### 2.2.3. Agent Behavior
+- In the **Behavior** section. Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator, we don't want to Enable it for direct chat on the chat homepage **disable the "Show agent" feature**.
 
-- Because this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator, we don't want to Enable it for direct chat on the chat homepage
-- Disable the "Show agent" feature
+![Create New Agent](images/i20.png)
 
-![Create New Agent](images/20.png)
+#### Test the GFM Backoffice Agent
 
-#### 2.2.4. Test the new Agent
+In the preview window from the right, test with the following query:
+  ```
+   I want to request an overdraft of 1000 EURO for my account IBAN DE89320895326389021994
+  ```
 
-In the preview window from the right, test with the following question:
-- "I want to request an overdraft of 1000 EURO for my account IBAN DE89320895326389021994"
+![Create New Agent](images/i21.png)
 
-![Create New Agent](images/21.png)
+- Click on **Deploy** to deploy the agent
 
-#### 2.2.5. Deploy the agent
-
-- Choose the top right corner "Deploy" button to deploy the agent and make it available for the chat.
-
-![Create New Agent](images/22.png)
-
+![Create New Agent](images/i22.png)
 
 ### 2.3. GFM Product Information Agent
 
