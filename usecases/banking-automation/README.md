@@ -1,5 +1,6 @@
 # 🏦 Banking-Automation with Agentic AI
 
+![](banking-automation-banner.png)
 
 ## 🤔 The Problem
 GFM Bank, a leader in financial services, is navigating the challenges of modern banking with legacy systems and fragmented workflows. Traditional teller and back-office operations are manual, time-consuming, and prone to delays. Customers face long wait times, limited access to services outside business hours, and inconsistent support. Meanwhile, bank staff are overwhelmed with repetitive tasks, compliance checks, and customer service demands.
@@ -43,3 +44,15 @@ GFM Bank, a leader in financial services, is navigating the challenges of modern
 * Automated Compliance Checks
 * Faster Customer Issue Resolution
 * Freed-Up Staff for High-Value Interactions
+
+---
+
+## 🏛 Architecture
+
+![Architecture](banking-architecture.png)
+
+---
+
+## 📝 Hands-on step-by-step lab
+
+Please find the step-by-step instructions [Hands-on Lab](/usecases/banking-automation/assets/hands_on_lab_banking_automation.md) on how you can implement this use case.
