@@ -50,7 +50,7 @@ In this lab we will build an HR agent in watsonx Orchestrate, leveraging tools a
 ### Create HR Agent
 1. Click on **Create agent +**:
 
-   <img width="1000" alt="image" src="hands-on-lab-assets/step2_v2.png">
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_2_v2.png">
 
 2. Select **Create from scratch**, give your agent a name, e.g. `HR Agent`, and fill in the **Description** as shown below: 
 
