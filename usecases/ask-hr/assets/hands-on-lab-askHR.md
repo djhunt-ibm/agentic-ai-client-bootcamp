@@ -45,41 +45,53 @@ In this lab we will build an HR agent in watsonx Orchestrate, leveraging tools a
 
 - Welcome to watsonx Orchestrate. Open the hamburger menu, click on the down arrow next to **Build**.  Then click on **Agent Builder**:
 
-  <img width="1000" alt="image" src="../../../environment-setup/assets/wxo-agent-builder.png">
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_1_v2.png">
 
 ### Create HR Agent
 1. Click on **Create agent +**:
 
-   <img width="1000" alt="image" src="hands-on-lab-assets/step3.png">
+   <img width="1000" alt="image" src="hands-on-lab-assets/step2_v2.png">
 
-1. Select **Create from scratch**, give your agent a name, e.g. `HR Agent`, and fill in the **Description** as shown below: 
+2. Select **Create from scratch**, give your agent a name, e.g. `HR Agent`, and fill in the **Description** as shown below: 
 
    ```
    You are an agent who handles employee HR queries.  You provide short and crisp responses, keeping the output to 200 words or less.  You can help users check their profile data, retrieve latest time off balance, update title or address, and request time off. You can also answer general questions about company benefits.
    ```  
    Click on **Create**:
 
-   <img width="1000" alt="image" src="hands-on-lab-assets/hr_step4.png">
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_3_v2.png">
+   
+3. Click on the down arrow against **Model**. Select Model "llama-3-405b-instruct"
 
-1. Scroll down the screen to the **Knowledge** section. Copy the following description into the **Description** section:
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_4_v2.png">
+   
+4. Select "Default" in **Agent style** section.
+5. 
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_5_v2.png">
+   
+6. Scroll down the screen to the **Knowledge** section. Copy the following description into the **Description** section:
 
    ```
    This knowledge base addresses the company's employee benefits, including parental leaves, pet policy, flexible work arrangements, and student loan repayment.
    ```
 
-1. Download the [Employee Benefits.pdf](/usecases/ask-hr/assets/Employee-Benefits.pdf) onto your system, then upload by clicking on **Upload files**:
+7. Download the [Employee Benefits.pdf](/usecases/ask-hr/assets/Employee-Benefits.pdf) onto your system, then upload by clicking on **Upload files**:
 
-   <img width="1000" alt="image" src="hands-on-lab-assets/hr_step5.png">
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_6_v2.png">
    <img width="1000" alt="image" src="hands-on-lab-assets/hr_step6.png">  
-   <img width="1000" alt="image" src="hands-on-lab-assets/hr_step7.png">  
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_8_v2.png">  
 
-1. Scroll down to the **Toolset** section. Click on **Add tool +**:
+8. Scroll down to the **Toolset** section. Click on **Add tool +**:
 
-   <img width="1000" alt="image" src="hands-on-lab-assets/hr_step8.png">
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_9_v2.png">
 
-1. Select **Import**:
+9. Select **Import**:
 
-   <img width="1000" alt="image" src="hands-on-lab-assets/step13.png">
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_10_v2.png">
+
+10. Select "Import from file.
+
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_11_v2.png">
 
 1. Drag and drop or click to upload the **hr.yaml** file (provided to you by the instructor), then click on **Next**:
 
@@ -100,10 +112,13 @@ In this lab we will build an HR agent in watsonx Orchestrate, leveraging tools a
 
    When the user requests time off, convert the dates to YYYY-MM-DD format, e.g. 5/22/2025 should be converted to 2025-05-22 before passing the date to the post_request_time_off tool.
    ```
-   <img width="1000" alt="image" src="hands-on-lab-assets/hr_step12.png">
+   Turn on the toggle button for "Show agent".
+   
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_14_v2.png">
+   
 1. Click on **Deploy** in the top right corner to deploy your agent:
 
-   <img width="1000" alt="image" src="hands-on-lab-assets/hr_step14.png">
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_15_v2.png">
 
 ### Test HR Agent in Preview
 Test your agent in the preview chat on the right side by asking the following questions and validating the responses.  They should look similar to what is shown in the screenshots below:
@@ -137,7 +152,7 @@ Show my profile data.
 
 Test the Agent from the AI Chat window. Click on the hamburger menu in the top left corner and then click on **Chat**:
 
-<img width="1000" alt="image" src="hands-on-lab-assets/hr_step15.png">
+<img width="1000" alt="image" src="hands-on-lab-assets/step_16_v2.png">
 
 Make sure **HR Agent** is selected. You can now test your agent:
 
