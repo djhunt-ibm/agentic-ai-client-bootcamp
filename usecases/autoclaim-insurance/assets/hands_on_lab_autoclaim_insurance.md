@@ -62,7 +62,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
 - Click on **Create Agent**
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/3.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/0.png">
 
 - Follow the steps according to the screenshot below.
   - Select **Create from scratch**
@@ -72,34 +72,46 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
     The Information agent will fetch the news and different articles and use this information to summarize results and share.
     ```
   - Click **Create** 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/29.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/1-ia.png">
 
-- On the `information_agent` page, take the defaults for **Profile** and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button to upload the OpenAPI Spec.
+- Choose the `model` On the `information_agent` page, take the defaults for **Profile** and **Knowledge** sections. .
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/30.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/2-ia.png">
+- Choose Agent Style. Keep it as `default`. Keep Voice Modality as `No voice configuration`.
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/3-ia.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/4-ia.png">
+
+- Under the **Toolset** section, click on the **Add tool** button to upload the OpenAPI Spec
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/5-ia.png">
 
 - Click on **Import**.
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/31.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/6-ia.png">
 
 - Upload the `duckduckgo.json` OpenAPI Spec which will be provided by the instructor.
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/32.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/7-ia.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/8-ia.png">
+
 - Once the file is uploaded, select **Next**.
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/33.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/10-ia.png">
 
 - Select the all of the **Operations** and click **Done**
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/34.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/11-ia.png">
 
 - Go to the **Behavior** section. Add the following for **Instructions**. This will define how the Agent should behave and what it should expect:
   ```
   The Information Agent will use the tool to search for information and return a summarized result.
   ```
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/35.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/12-ia.png">
+
+- Keep the channels setting as it is.
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/13-ia.png">
+
 - Click on **Deploy** to deploy the agent
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/36.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/14-ia.png">
 
 #### Test the Information Agent
 
@@ -107,7 +119,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
   ```
   Insurance laws for fire in California
   ```
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/ia-flow-1.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/15-ia.png">
 
 - You will get a summarized version of all the search results. You can click on the **Step 1** and see the tool results
 
@@ -121,7 +133,7 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/17.png">
 
 - On the next screen, click on **Create Agent**
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/18.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/customer/0.png">
 
 - Follow the steps according the screenshot below
   - Select **Create from scratch**
@@ -130,32 +142,44 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
     ```
     The Customer Claims agent will allow customers to query the status of their claim request and create a new claim request. You will also answer questions based on the claim process and insurance policy using the knowledge base.
     ```
-    <img width="1000" alt="image" src="./screenshots_hands_on_lab/19.png">
+    <img width="1000" alt="image" src="./screenshots_hands_on_lab/customer/customer-1.png">
   - Click **Create**
+
+- Choose `Model`. Change the model or keep it as the default one.
+
+<img width="1000" alt="image" src="./screenshots_hands_on_lab/customer/customer-2.png">
+
+- Choose Agent Style. Keep it as `default`. Keep Voice Modality as `No voice configuration`.
+
+<img width="1000" alt="image" src="./screenshots_hands_on_lab/customer/customer-3.png">
+<img width="1000" alt="image" src="./screenshots_hands_on_lab/customer/customer-4.png">
+
+
 - In the **Knowledge** section, add the following to the **Description**:
   ```
   This knowledge base is about insurance and the claim process. This knowledge base will help the customer in getting information about the claims process and the rules and regulations of processing insurance claims.
   ```
 
 - Download [Automobile Insurance Knowledge Base.pdf](<./data/Automobile Insurance Knowledge Base.pdf>) to your local system, then upload by clicking on **Upload files** under **Documents**
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/20.png">
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/21.png">
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/21_1.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/customer/customer-5.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/customer/customer-6.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/customer/customer-7.png">
 
 - In the **Toolset** section, click on **Add tool** 
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/22.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/customer/customer-8.png">
 
 - Click on **Import**. Import the `customer_claims_agent_tools.json` OpenAPI Spec file provided by your instructor
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/23.png">
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/24.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/customer/customer-9.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/customer/customer-10.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/customer/customer-11.png">
 
 - Select **Next**
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/25.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/customer/customer-13.png">
 - Select all of the **Operations** and click **Done**
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/26.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/customer/customer-14.png">
 
 - In the **Behavior** section, add the following prompt to the **Instructions**:
 
@@ -205,12 +229,13 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 
   Do not reference the knowledge base while interacting with tools.
   ```
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/27.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/customer/customer-15.png">
 
-- Click on **Deploy** to deploy the agent
+- No need to change `Channels` settings. Click on **Deploy** to deploy the agent.
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/28.png">
-
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/customer/customer-16.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/customer/customer-17.png">
+  
 #### Test the Customer Claims Agent
   
   Step 1. Enter a basic query:
@@ -282,7 +307,7 @@ You can create additional claims for your assigned name to test the next agent.
 
 - Click on **Create Agent**
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/38.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim_processor_insurance_agent/0.png">
 
 - Follow the steps according the screenshot below.
   - Select **Create from scratch**
@@ -293,7 +318,16 @@ You can create additional claims for your assigned name to test the next agent.
     The Claim Processor agent assists the claim processor to fetch the open claim request, approve, validate, and verify the open request. This agent will suggest to the claim processor whether they should accept or reject the claim.
     ```
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/4.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim_processor_insurance_agent/cp-1.png">
+
+- Select the `model`.
+
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim_processor_insurance_agent/cp-2.png">
+
+- Select the Agent Style as `Default`. Also no changes needed for Voice Modality. Keep it as No Voice Configuration
+
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim_processor_insurance_agent/cp-3.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim_processor_insurance_agent/cp-4.png">
 
 - In the **Knowledge** section, add the following to the **Description**:
   ```
@@ -301,39 +335,41 @@ You can create additional claims for your assigned name to test the next agent.
   ```
 - Download [Policy.pdf](<./data/Policy.pdf>) to your local system, then upload by clicking on **Upload files** under **Documents**. 
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/5.png">
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/6.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim_processor_insurance_agent/cp-5.0.png">
+
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim_processor_insurance_agent/cp-5.1.png">
 
 - In the **Toolset** section, click on **Add tool**
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/37.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim_processor_insurance_agent/cp-6.0.png">
 
 - Click on **Import**
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/8.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim_processor_insurance_agent/cp-6.1.png">
 
 - Upload the `claim_processor_agent_tools.json` OpenAPI Spec provided by the instructor
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/9.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim_processor_insurance_agent/cp-7.png">
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/10.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim_processor_insurance_agent/cp-8.png">
+
+    <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim_processor_insurance_agent/cp-10.png">
 
 - Select all of the **Operations**. Then, select **Done**.
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/11.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim_processor_insurance_agent/cp-11.png">
 
-  <img width="1000" alt="image" src="/usecases/autoclaim-insurance/assets/screenshots_hands_on_lab/11_1.png">
 
 - Click on **Add Agent**
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/12.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim_processor_insurance_agent/cp-12.png">
 - Click **Add from local instance**
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/13.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim_processor_insurance_agent/cp-13.png">
 
 - Select **information_agent** and then the **Add to Agent button**
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/14.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim_processor_insurance_agent/cp-14.png">
 
 - In the **Behavior** section, add the following for **Instructions**:
   ```
@@ -371,11 +407,11 @@ You can create additional claims for your assigned name to test the next agent.
   Once a decision is made, update the claim status and send a message confirming that emails have been sent to the customer and finance team.
   ```
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/15.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim_processor_insurance_agent/cp-15.png">
 
-- Click on **Deploy** to deploy the agent
+- Keep the Channels as it is. Click on **Deploy** to deploy the agent
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/16.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim_processor_insurance_agent/cp-18.png">
 
 #### Test the Claim Processor Agent
 
