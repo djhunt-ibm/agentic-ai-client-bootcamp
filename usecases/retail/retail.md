@@ -623,7 +623,7 @@ All three agents shoud be listed there. Let's start with the internet_research_a
 
 ![alt text](images/image29.png)
 
-We can test this agent right here in the prevew, just like we did before when running locally. You can test it by entering, for example, the following text into the Preview tet field:
+We can test this agent right here in the preview, just like we did before when running locally. You can test it by entering, for example, the following text into the Preview tet field:
 ```
 Can you show me market trends for the products shown in the image at https://i.imgur.com/WzMC1LJ.png
 ```
