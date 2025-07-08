@@ -3,48 +3,47 @@
 ![](banking-automation-banner.png)
 
 ## 🤔 The Problem
-GFM Bank, a leader in financial services, is navigating the challenges of modern banking with legacy systems and fragmented workflows. Traditional teller and back-office operations are manual, time-consuming, and prone to delays. Customers face long wait times, limited access to services outside business hours, and inconsistent support. Meanwhile, bank staff are overwhelmed with repetitive tasks, compliance checks, and customer service demands.
+GFM Bank is facing significant operational challenges due to its reliance on traditional, manual banking processes. Customers often endure long wait times—20 to 30 minutes to speak with a teller, and up to 45 minutes more for back-office approvals. These delays are especially problematic during peak seasons and for complex requests, such as overdraft approvals or fee reversals. Additionally, services are only available during business hours, limiting accessibility and convenience. Staff are burdened with repetitive tasks, leading to inefficiencies and inconsistent customer experiences.
 
 ---
 
 ## 🎯 Objective
-**The GFM Bank Agentic AI System**, powered by watsonx Orchestrate, revolutionizes banking operations by introducing intelligent, collaborative AI agents that streamline services, enhance compliance, and elevate customer satisfaction:
+The **GFM Bank Agentic AI System**, powered by **Watson Orchestrate**, aims to modernize banking operations by deploying a network of intelligent, collaborative AI agents. These agents automate routine tasks, streamline complex workflows, and provide customers with fast, reliable, and 24/7 service—all while ensuring compliance with banking regulations.
 
 ### 💡 Key Capabilities
 
 * **Frictionless Customer Interactions**
   
-  * 24/7 Digital Banking Assistant: Customers can check balances, transfer funds, and request information anytime via a conversational interface.
-  * Guided Workflows: AI agents walk users through complex tasks like overdraft approvals or fee reversals with clarity and ease.
-
+  * 24/7 AI-powered support for balance inquiries, transfers, overdraft requests, and more.
+  * Seamless conversational interface that guides users through complex banking tasks.
+    
 * **Intelligent Automation & Decisioning**
 
-  * AI-Powered Transaction Vetting: Transfers and overdraft requests are automatically validated against account history and policy rules.
-  * Smart Recommendations: The system suggests overdraft approvals or fee waivers based on customer profiles, transaction patterns, and risk models.
+  * Automated validation of transactions and overdraft requests based on account history and policy rules.
+  * Smart routing of requests to the appropriate AI agent (e.g., Teller, Backoffice, Product Info).
 
 * **Enhanced Transparency & Support**
   
-  * Conversational AI for Banking Queries: Customers receive instant, accurate answers about products, fees, and account details.
-  * RAG-Enabled Knowledge Base: Integrated Retrieval-Augmented Generation ensures fast, compliant responses for both customers and bank staff.
+  * Instant, accurate responses to customer queries using a RAG-enabled knowledge base.
+  * Clear, guided workflows that reduce confusion and improve customer confidence.
 
 ---
 
 ## 📈 Business Value
 
 ### For Customers
-* 24/7 Access to Banking Services
-* Instant Balance Checks & Transfers
-* Faster Approvals for Overdrafts & Fee Reversals
-* Personalized Product Recommendations
-* Transparent, Guided Banking Experience
+* Access to banking services anytime, anywhere
+* Rapid processing of transactions and approvals
+* Reduced need to visit physical branches
+* Personalized, conversational banking experience
+* Faster resolution of issues like overdrafts and fee reversals
 
 ### For Bank Staff & Operations
-* Reduced Manual Workload
-* AI-Driven Task Prioritization
-* Automated Compliance Checks
-* Faster Customer Issue Resolution
-* Freed-Up Staff for High-Value Interactions
-
+* Significant reduction in manual workload
+* More time for staff to focus on high-value, complex customer needs
+* Automated compliance checks and decision-making
+* Improved operational efficiency and customer satisfaction
+* Scalable solution that adapts to seasonal demand and customer volume
 ---
 
 ## 🏛 Architecture
