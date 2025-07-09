@@ -29,7 +29,7 @@ Customers can initiate a claim by answering a few guided questions, even with mi
 For insurers, incoming claims are automatically retrieved and intelligently cross-verified against policy documents. The system extracts critical data and evaluates it against business rules and regulatory standards, generating structured recommendations for claim approval or denial. While final decisions remain with the insurer, each recommendation is backed by a clear, concise summary of all supporting details—minimizing errors and enabling faster, more informed decision-making.
 ## Architecture
 
-![Architecture](Insurance_Autoclaims_Architecture_v2.png)
+![Architecture](Autoclaims_Insurance_Architecture_v4.png)
 
 ## Implementation
 
