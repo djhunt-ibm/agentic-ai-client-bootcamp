@@ -10,6 +10,7 @@
   - [Agent Configuration with Knowledge Base](#agent-configuration-with-knowledge-base)
 - [Financial API Agent Creation and Configuration](#financial-api-agent-creation-and-configuration)
 - [Web Search Agent Creation and Configuration](#web-search-agent-creation-and-configuration)
+  - [Web Search with MCP](#web-search-with-mcp)
 - [Pulling it together - Complete Agent Collaboration](#pulling-it-together)
 - [Experience Agents in Action using watsonx Orchestrate Chat UI](#experience-agents-in-action-using-watsonx-orchestrate-chat-ui)
 - [Conclusion](#conclusion)
@@ -396,7 +397,66 @@ On the *Deploy Agent* page, you have the opportunity to provide connection detai
 
 ![wxo web search agent deploy conn](images/wxo-web-search-agent-deploy-conn.png)
 
-*Congratulations!!* You have just completed developing the **Web Search Agent** empowered with tools for searching the web and retrieving relevant information.
+### Web Search with MCP (Optional) <a id="web-search-with-mcp"></a>
+This section is optional and highlights how to leverage an existing [MCP (Model Context Protocol)](https://modelcontextprotocol.io/introduction) server to expose another web search tool, in this case, DuckDuckGo search.
+MCP is an open protocol that standardizes how applications provide context to LLMs. It provides a standardized approach for LLM agents to access external tools and data.
+
+a- If not there, navigate back to the configuration page for the **Web Search Agent** (you can click Main Navigation Menu ==> Build ==> Agent Builder and then selecting the Web Search Agent.)
+
+b- On the **Web Search Agent** configruation page, scroll down to the **Toolset** section or click the **Toolset** shortcut (annotated with red oval), then click **Add tool** (annotated with red arrow).
+
+![wxo web search agent toolset](images/wxo-web-search-agent-toolset.png) 
+
+c- For importing the MCP Server, you will leverage the **Import** functionality like you did earlier. Click the **Import** tile (annotated with red rectangle).
+
+![wxo web search tool import](images/wxo-web-search-tool-import.png) 
+
+d- Next, select the **Import from MCP server** tile (annotated with red rectangle).
+
+![wxo web search tool import](images/wxo-web-search-mcp-tool.png)
+
+e- Click the **Add MCP server** button (annotated with red arrow).
+
+![wxo web search mcp add server](images/wxo-web-search-mcp-add-server.png)
+
+f- Provide a **Server name**, **Description** and the **Install command** (annotated with red rectangle) to connect to that mcp server. This mcp server is a third party mcp server which exposes DuckDuckGo search functionality. There are thousands of MCP server that are being made available for various purposes. Please be careful to review the MCP servers from a security perspective. 
+Name: 
+```
+ddgsearchmcp
+```
+
+Description: 
+```
+Perform web search leveraging DuckDuckGo mcp server
+```
+
+Install command:
+```
+npx -y @oevortex/ddg_search
+```
+
+
+*Note* There are various articles about some security risks associated with MCP servers so please review and research what MCP servers are okay to leverage for your needs
+
+![wxo web search mcp server ddg](images/wxo-web-search-mcp-server-ddg.png)
+
+g- On the **Import or remove tools from MCP server** page, select all the tools by turning the **Activation toggle** to the *On* position as illustrated in the figure below (annotated with red arrows). Then click the top right x icon (annotated with red oval) to close this page
+
+![wxo web search mcp server tool selection](images/wxo-web-search-mcp-tool-selection.png)
+
+h- Next, review the **Tools** section on the agent configuration page to confirm that you see all four tools imported (annotated with red rectangle) into the agent and available for the agent to leverage. Then ask a question in **Preview** and review the results.
+
+Question:
+```
+use duckduckgo search to find latest news about IBM
+```
+
+Expand the **Show reasoning** and **Step 1** to confirm it is correctly triggering the correct tool, which in this case is **web-search** (annotated with red oval), that is being pulled from the MCP server.
+
+![wxo web search mcp ddg results](images/wxo-web-search-mcp-ddg-results.png)
+
+
+*Congratulations!!* You have just completed developing the **Web Search Agent** empowered with tools for searching the web and retrieving relevant information. If you ran through the optional section, you've also experienced how easy it is to import tools into watsonx Orchestrate from an MCP server.
 
 ## Pulling it together - Complete Agent Collaboration <a id="pulling-it-together"></a>
 Now that you have developed all agents and tools, in this section, you will work through the process of integrating the collaborator agents, testing and deploying the **Financial Analyst Agent**.
