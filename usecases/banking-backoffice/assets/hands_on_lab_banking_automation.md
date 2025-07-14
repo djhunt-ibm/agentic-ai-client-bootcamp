@@ -4,7 +4,7 @@
 
 - [Automate Banking with Agentic AI](#-introduction)
   - [Current Banking Operations](#-current-banking-operations)
-  - [Target Architecture with Agentic AI](#-target-architecture-with-agentic-ai)
+  - [Target Architecture with Agentic AI](#%EF%B8%8F-target-architecture-with-agentic-ai)
   - [User Scenario](#-user-scenario)
     - [Current Situation](#current-situation)
     - [Future with Agentic AI](#future-with-agentic-ai)
