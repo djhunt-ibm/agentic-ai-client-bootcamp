@@ -320,7 +320,7 @@ What's the balance of my account IBAN DE89320895326389021994
     
     Maintain a professional tone with appropriate formality for a banking representative with elevated privileges.
     ```
-  ![Create New Agent](images/i13.png)
+    ![Create New Agent](images/i13.png)
 
   - Click **Create**
 
@@ -328,10 +328,11 @@ What's the balance of my account IBAN DE89320895326389021994
 
   ![Create New Agent](images/i16.png)
 
-- Click on **Import**. Import the `fee_reversal-wxo.json` and `set_overdraft_limit-wxo.json` files provided by your instructor
+- Click on **Import**. 
 
   ![Create New Agent](images/i17.png)
-
+  
+  Import the `fee_reversal-wxo.json` and `set_overdraft_limit-wxo.json` files provided by your instructor
 - Select **Next**
 
   ![Create New Agent](images/i18.png)
