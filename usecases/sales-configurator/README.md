@@ -1,8 +1,7 @@
 # Sales Configurator
 
-The Sales Configurator use case is about an Agentic AI poswered assistant for a cloud and server provider (we are assuming IBM in this example) that helps understanding the challenges and requirments of cusotmers as they are looking to build a new solution or upgrade what they have. It simulates how a business might use AI agents to improve product search, comparison, and information retrieval using a catalog.
+The Sales Configurator use case is about an Agentic AI poswered assistant for a cloud and server provider (we are assuming IBM in this example) that helps understanding the challenges and requirments of cusotmers as they are looking to build a new solution or upgrade what they have. It simulates how a business might use AI agents to improve interactions with the customers, solution architects' job in gathering business and workload requirements, and information retrieval using a catalog.
 
-![image](assets/overview.png)
 
 ## 🤔 The Problem
 
