@@ -157,8 +157,8 @@ WATSONX_MODEL_ID=meta-llama/llama-3-2-90b-vision-instruct
 WATSONX_APIKEY=oj5BW-...... [insert your API key here]
 WATSONX_SPACE_ID=186ac9b7-35ec....... [insert your space ID here]
 ```
-You call the tool from the command line like this (again, make sure you are in the right folder that has both the .py file and the .env file):
-`python generate_description_from_image.py --url https://i.imgur.com/qfiugNJ.jpeg`
+You call the tool from the command line like this (make sure you are in the root folder of the content repo):
+`python usecases/retail/src/tools/generate_description_from_image.py --url https://i.imgur.com/qfiugNJ.jpeg`
 
 #### Importing the tool
 The easiest way to import the tool into your ADK instance is to use the CLI. Remember that we are using the concept of a `Connection` to insert the right values for API key etc? Before we can import the tool, we need to create the Connection instance (the import will fail otherwise).
@@ -344,7 +344,7 @@ Persona:
 
   Reasoning:
     - Use the generate_description_from_image tool to create a description of a specific image. Pass in the URL of the image the description is requested for. 
-    - Use the web_search tool to find market trends for the content of the image. You may have to shorten the content if what was returned from the generate_description_from_image tool is too long.
+    - Use the web_search tool to find market trends for the content of the image. Summarize the content that was returned from the generate_description_from_image tool.
 ```
 
 Note how we divided the instructions into separate sections for persona, context and reasoning. The reasoning part contains instructions about the tools.
@@ -368,11 +368,12 @@ We can now export the metadata for this agent into a YAML file. This allows us t
 
 ![alt text](images/image38.png)
 
+In the example above, the name of the agent is `internet_research_agent_4813Rr`.
 To export, simply enter the following command on the command line (replace the name of the agent after the '-n' parameter with the name of your agent):
 ```
-orchestrate agents export -n internet_research_agent_3870Ix -k native --agent-only -o internet_research_agent.yaml
+orchestrate agents export -n internet_research_agent_4813Rr -k native --agent-only -o internet_research_agent.yaml
 ```
-Feel free to study the content of the created YAML file. It has all the same content as what we typed into the Agent Builder UI before. Another interesting detail is the `llm` section. It shows which model is being used by this agent - the UI did not offer that.
+Feel free to study the content of the created YAML file. It has all the same content as what we typed into the Agent Builder UI before. Another interesting detail is the `llm` section. It shows which model is being used by this agent. If the agent you are creating does not perform to your satisfaction, you may want to try a different model.
 
 ### The Market Analyst Agent
 
@@ -405,7 +406,7 @@ Once imported, we can see and test the agent in the UI. Go back to your browser 
 
 ![alt text](images/image9.png)
 
-The new agent is now listed next to the first agent we deployed. Instad of testing this new agent individually, we will go ahead and define (and then test) the superviroy agent that puts it all together.
+The new agent is now listed next to the first two agents we deployed. Instad of testing this new agent individually, we will go ahead and define (and then test) the supervisory agent that puts it all together.
 
 ![alt text](images/image10.png)
 
@@ -474,7 +475,7 @@ Note how in the main window, you are only offered two agents to chat with, namel
 
 ![alt text](images/image15.png)
 
-Make sure you have the retail_market_agent selected for th chat. Let's test the agent by entering the following into the chat:
+Make sure you have the retail_market_agent selected for the chat. Let's test the agent by entering the following into the chat:
 ```
 Please look at the image at https://i.imgur.com/qfiugNJ.jpeg. Based on market trends for the products in the image, can you make recommendations for any rearrangement of the products on the shelf?
 ```
@@ -575,7 +576,7 @@ for agent in internet_research_agent.yaml market_analyst_agent.yaml retail_marke
 done
 ```
 
-So go ahead and enter `./import-all.sh` on the command line.
+So go ahead and enter `./usecases/retail/src/import-all.sh` on the command line.
 
 ![alt text](images/image25.png)
 
@@ -604,8 +605,8 @@ Remember that the values for the credentials are retrieved from the .env file. T
 
 Enter the following on the command line.
 ```
-./set-credentials.sh draft
-./set-credentials.sh live
+./usecases/reatil/src/set-credentials.sh draft
+./usecases/reatil/src/set-credentials.sh live
 ```
 
 ![alt text](images/image30.png)
@@ -622,7 +623,7 @@ All three agents shoud be listed there. Let's start with the internet_research_a
 
 ![alt text](images/image29.png)
 
-We can test this agent right here in the prevew, just like we did before when running locally. You can test it by entering, for example, the following text into the Preview tet field:
+We can test this agent right here in the preview, just like we did before when running locally. You can test it by entering, for example, the following text into the Preview tet field:
 ```
 Can you show me market trends for the products shown in the image at https://i.imgur.com/WzMC1LJ.png
 ```
@@ -633,16 +634,25 @@ Assuming the results are satisfactory, let's deploy the agent by clicking on the
 
 ![alt text](images/image32.png)
 
+Note how in the following screen, the connections we are using are listed here. Click on `Deploy` again.
+
+![alt text](images/image43.png)
+
 Once the agent is deployed, go back to the `Manage agents` page by clicking on the associated link at the top of the page.
+
 ![alt text](images/image33.png)
 
-Now repeat the same exercise with the `market_analyst_agent`. We won't show detailed steps and screenshots here, because we are confident that by now, you are an expert in navigating the tool. :smile:
+Now repeat the same exercise with the `market_analyst_agent`. However, you also need to add the two agents as collaborators, just like you did when using the ADK earlier.
+
+We won't show detailed steps and screenshots here, because we are confident that by now, you are an expert in navigating the tool. 
+
+![alt text](images/image44.png)
 
 Once you have deployed all three agents, they should all show the `Live` icon.
 
 ![alt text](images/image34.png)
 
-Finally, let's go back to the homeage and run the solution there. On the homepage, make sure you have selected the `retail_market_agent` in the Agents drop-down list, since that is the agent we want the user to chat with.
+Finally, let's go back to the homepage and run the solution there. On the homepage, make sure you have selected the `retail_market_agent` in the Agents drop-down list, since that is the agent we want the user to chat with.
 
 ![alt text](images/image35.png)
 
@@ -658,4 +668,4 @@ Please look at the image at https://i.imgur.com/qfiugNJ.jpeg. Based on market tr
 
 ![alt text](images/image37.png)
 
-Feel free to run more expierments, switching the target environments the CLI is using between `local` and `wxo-saas` to see if the two environments behave differently. 
+Feel free to run more experiments, switching the target environments the CLI is using between `local` and `wxo-saas` to see if the two environments behave differently. 

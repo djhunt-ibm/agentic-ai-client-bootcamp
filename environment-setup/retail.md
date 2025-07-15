@@ -12,9 +12,11 @@
       - [The .env file](#the-env-file)
       - [API key](#api-key)
     - [Entitlement key](#entitlement-key)
-    - [watsonx Orchestrate ADK](#watsonx-orchestrate-adk)
       - [Local machine](#local-machine-1)
       - [Virtual machine](#virtual-machine-1)
+    - [watsonx Orchestrate ADK](#watsonx-orchestrate-adk)
+      - [Local machine](#local-machine-2)
+      - [Virtual machine](#virtual-machine-2)
     - [watsonx Orchestrate](#watsonx-orchestrate)
     - [Tavily](#tavily)
 
@@ -176,10 +178,10 @@ The Space GUID, as well as a number of other environment variables, goes into a 
 
 You can edit the file with an editor of your choosing. We recommend using VS Code for this. 
 
-You can create and edit this file with an editor of your choosing, or simply run the following command on the command line:
-```
-echo 'WATSONX_SPACE_ID=[paste the Space GUID from your clipboard here]' >> .env
-```
+Add the Space GUID value that you captured above to the `WATSONX_SPACE_ID` variable.
+
+![alt text](assets/image39.png)
+
 #### API key
 
 You also need an API key for the IBM Cloud account that your watsonx.ai instance is on. To obtain one, open the IBM Cloud console (https://cloud.ibm.com) as before and select `Access (IAM)` option from the `Manage` dropdown at the top of the page.
@@ -202,18 +204,22 @@ Once the key has been successfully created, make sure you copy its value to the 
 
 ![alt text](assets/image15.png)
 
-The API key also goes into the .env file, and you can add it via editor or command line:
-```
-echo 'WATSONX_APIKEY=[paste the API key from your clipboard here]' >> .env
-```
+The API key also goes into the .env file, add it to the `WATSONX_APIKEY` variable.
+
+![alt text](assets/image40.png)
+
 
 ### Entitlement key
-Below, you will install the watsonx Orchestrate Developer Edition, which consists of a number of container images that are downloaded from the IBM registry during install. To authenticate with this registry, you need an "entitlement key". Your instructor will provide this key for you.
+The watsonx Orchestrate Developer Edition, which you will use extensively in this lab, consists of a number of container images that are downloaded from the IBM registry during install. To authenticate with this registry, you need an "entitlement key".
 
-You can add the key to your .env file via editor or by running the following on the command line:
-```
-echo 'WO_ENTITLEMENT_KEY=[add the entitlement key you received from your instructor here]' >> .env
-```
+#### Local machine
+Your instructor will provide the entitlement key for you.
+You can add the key to your .env file via editor, to the `WO_ENTITLEMENT_KEY` variable.
+
+Also, make sure you have the `WO_DEVELOPER_EDITION_SKIP` variable set to `false`.
+
+#### Virtual machine
+The Developer Edition is already preinstalled on the virtual machine, which includes downloading the container images. Since they are cached on the virtual machine, no entitlement key is required and you can leave the variable unset. However, make sure that the `WO_DEVELOPER_EDITION_SKIP` variable set to `true`.
 
 ### watsonx Orchestrate ADK
 
@@ -229,7 +235,7 @@ To run it on your own laptop, you need to install
 
 Once you have these prerequisites available, you can install the ADK by following the instructions at [the ADK install page](https://developer.watson-orchestrate.ibm.com/getting_started/installing).
 
-> **Note**: These instructions were created for a specific version of the ADK, namely version **1.5.1**. We recommend you specify that version when running the install: `pip install ibm-watsonx-orchestrate==1.5.1`.
+> **Note**: These instructions were created for a specific version of the ADK, namely version **1.6.0**. We recommend you specify that version when running the install: `pip install ibm-watsonx-orchestrate==1.6.0`.
 
 You also need to install the watsonx Orchestrate Developer Edition, which is part of the ADK, by following the related [install instructions](https://developer.watson-orchestrate.ibm.com/getting_started/wxOde_setup). However, **DO NOT** set up the .env file as described in the instructions! You already have the right values in your .env file if you followed the instructions above.
 
@@ -287,9 +293,6 @@ Click on the Plus sign as shown in the image above. Name your key "default". Aft
 
 ![alt text](assets/image19.png)
 
-To complete the setup for this use case, we will add the Tavily API key to the .env file as before, either with an editor of your choice or via command line:
-```
-echo 'TAVILY_API_KEY=[copy the Tavily API key from your clipboard here]' >> .env
-```
+To complete the setup for this use case, we will add the Tavily API key to the .env file as before, with an editor of your choice. Add your key to the `TAVILY_API_KEY` variable.
 
 This is it! You are now ready to proceed to the [detailed lab instructions](../usecases/retail/retail.md).

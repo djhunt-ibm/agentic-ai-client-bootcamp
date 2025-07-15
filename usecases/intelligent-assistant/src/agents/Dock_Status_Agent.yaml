@@ -1,0 +1,65 @@
+kind: native
+name: Dock_Status_Agent
+display_name: Dock Status Agent
+description: The Dock Status Agent specializes in answering inquiries about current
+  warehouse dock status. It has access to detailed and up-to-date data about which
+  trucks are loading and unloading at docks, and information about the products they
+  carry, and return detailed textual information about this data to the user.
+context_access_enabled: true
+context_variables: []
+llm: watsonx/meta-llama/llama-3-405b-instruct
+style: react
+instructions: "Persona:\n- Your purpose is to provide information about warehouse\
+  \ dock status. I will ask about the status at the docks, or one specific dock identified\
+  \ by dock ID, and you will answer in a detailed textual format.\n\nContext:\n- Use\
+  \ the Dock status data below to create answers. The data below is formatted in JSON,\
+  \ but you will return the information as text in a bulleted list.\n- If no dock\
+  \ ID is specified, return data for all the docks.\n- the data is current, no timestamp\
+  \ is required or supported.\n- Provide as much detail as you can.\n\nDock status\
+  \ data:\n{\n  \"dock_id\": 1,\n  \"trucks\": [\n    {\n      \"truck_id\": \"T001\"\
+  ,\n      \"status\": \"Unloading\",\n      \"ETA\": \"2 hours\",\n      \"details\"\
+  : {\n        \"SKU\": \"199464599\",\n        \"Payload_Quantity\": 250,\n     \
+  \   \"Surplus_Status\": \"Received surplus\"\n      }\n    },\n    {\n      \"truck_id\"\
+  : \"T002\",\n      \"status\": \"Unloading\",\n      \"ETA\": \"1.5 hours\",\n \
+  \     \"details\": {\n        \"SKU\": \"226814212\",\n        \"Payload_Quantity\"\
+  : 150,\n        \"Surplus_Status\": \"No Surplus\"\n      }\n    },\n    {\n   \
+  \   \"truck_id\": \"T003\",\n      \"status\": \"Unloading\",\n      \"ETA\": \"\
+  1 hour\",\n      \"details\": {\n        \"SKU\": \"404108299\",\n        \"Payload_Quantity\"\
+  : 200,\n        \"Surplus_Status\": \"No Surplus\"\n      }\n    }\n  ]\n},\n{\n\
+  \  \"dock_id\": 2,\n  \"trucks\": [\n    {\n      \"truck_id\": \"T004\",\n    \
+  \  \"status\": \"Unloading\",\n      \"ETA\": \"1.5 hours\",\n      \"details\"\
+  : {\n        \"SKU\": \"102209199\",\n        \"Payload_Quantity\": 50,\n      \
+  \  \"Surplus_Status\": \"Received surplus\"\n      }\n    },\n    {\n      \"truck_id\"\
+  : \"T005\",\n      \"status\": \"Unloading\",\n      \"ETA\": \"2 hours\",\n   \
+  \   \"details\": {\n        \"SKU\": \"148183199\",\n        \"Payload_Quantity\"\
+  : 80,\n        \"Surplus_Status\": \"No Surplus\"\n      }\n    }\n  ]\n}"
+guidelines: []
+collaborators: []
+tools: []
+knowledge_base: []
+chat_with_docs:
+  enabled: false
+  vector_index:
+    chunk_size: 400
+    chunk_overlap: 50
+    limit: 10
+  generation:
+    prompt_instruction: ''
+    generated_response_length: Moderate
+    display_text_no_results_found: I searched my knowledge base, but did not find
+      anything related to your query
+    display_text_connectivity_issue: I might have information related to your query
+      to share, but am unable to connect to my knowledge base at the moment
+  query_rewrite:
+    enabled: true
+  confidence_thresholds:
+    retrieval_confidence_threshold: Lowest
+    response_confidence_threshold: Lowest
+  citations:
+    citation_title: How do we know?
+    citations_shown: -1
+  hap_filtering:
+    output:
+      enabled: false
+      threshold: 0.5
+spec_version: v1

@@ -1,0 +1,17 @@
+kind: external
+name: TrafficAgent
+description: The TrafficAgent agent provides information about traffic in any given
+  location.
+context_access_enabled: true
+context_variables: []
+title: TrafficAgent
+api_url: <hidden>
+auth_scheme: API_KEY
+auth_config: {}
+provider: wx.ai
+chat_params: {}
+config:
+  hidden: false
+  enable_cot: false
+nickname: TrafficAgent
+spec_version: v1

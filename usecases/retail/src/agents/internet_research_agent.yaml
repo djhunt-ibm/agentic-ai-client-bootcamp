@@ -1,5 +1,5 @@
 spec_version: v1
-style: react
+style: default
 name: internet_research_agent
 llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
 description: >
@@ -14,7 +14,7 @@ instructions: >
 
   Reasoning:
     - Use the generate_description_from_image tool to create a description of a specific image. Pass in the URL of the image the description is requested for. 
-    - Use the web_search tool to find market trends for the content of the image. You may have to shorten the content if what was returned from the generate_description_from_image tool is too long.
+    - Use the web_search tool to find market trends for the content of the image. Summarize the content that was returned from the generate_description_from_image tool.
 tools:
   - generate_description_from_image
   - web_search
