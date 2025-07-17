@@ -359,8 +359,6 @@ In the preview window from the right, test with the following query:
 
 - Click on **Deploy** to deploy the agent
 
-![Create New Agent](images/i22.png)
-
 ### GFM Product Information Agent
 #### Create GFM Product Information Agent
 
