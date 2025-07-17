@@ -193,7 +193,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
 - Click on **Create Agent**
 
-![Create New Agent](teller_ag_imgs/i4.png)
+  ![Create New Agent](teller_ag_imgs/i4.png)
 
 - Follow the steps according to the screenshot below.
   - Select **Create from scratch**
