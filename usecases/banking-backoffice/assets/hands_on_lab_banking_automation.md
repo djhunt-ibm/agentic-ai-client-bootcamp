@@ -600,11 +600,11 @@ In the preview window from the right, test with the following query:
 
 - Click on hamburger menu, then **Build** -> **Agent Builder**
 
-![Create New Agent](images/i4.png)
+![Create New Agent](images/i3.png)
 
 - On the next screen, click on **Create Agent**
 
-![Create New Agent](images/i15.png)
+![Create New Agent](bank_orch_ag_imgs/i1.png)
 
 - Follow the steps according to the screenshot below
   - Select **Create from scratch**
@@ -667,23 +667,23 @@ Important Guidelines:
 
 Your role is crucial as the first impression of GFM Bank's service quality. Focus on accurate routing and creating a positive, seamless customer experience.
 ```
-![Create New Agent](images/i28.png)
+![Create New Agent](bank_orch_ag_imgs/i2.png)
 
 #### Add collaborative Agents
 
 - Click on **Add Agent**
 
-![Create New Agent](images/i29.png)
+![Create New Agent](bank_orch_ag_imgs/i3.png)
 
 - Click **Add from local instance**
 
-![Create New Agent](images/i30.png)
+![Create New Agent](bank_orch_ag_imgs/i4.png)
 
 - Select **GFM Teller**, **GFM Backoffice**, **GFM Product Information** and then the **Add to Agent button**
+- 
+![Create New Agent](bank_orch_ag_imgs/i5.png)
 
-![Create New Agent](images/i31.png)
-
-![Create New Agent](images/i32.png)
+![Create New Agent](bank_orch_ag_imgs/i6.png)
 
 
 - In the **Behavior** section, add the following for **Instructions**:
@@ -738,7 +738,7 @@ For returning customers, acknowledge their return with "Welcome back to GFM Bank
 This Orchestrator Agent serves as the central routing hub for customer inquiries, ensuring each customer is directed to the specialized agent best equipped to address their specific banking needs efficiently and accurately.
 ```
 
-![Create New Agent](images/i33.png)
+![Create New Agent](bank_orch_ag_imgs/i7.png)
 
 #### Test the GFM Bank Orchestrator Agent
 
@@ -747,7 +747,7 @@ In the preview window from the right, test with the following query:
   What is a card overdraft?
   What's the balance of my account IBAN DE89320895326389021994
   ```
-![Create New Agent](images/i34.png)
+![Create New Agent](bank_orch_ag_imgs/i8.png)
 
 - Click on **Deploy** to deploy the agent
 
