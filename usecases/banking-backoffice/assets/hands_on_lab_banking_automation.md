@@ -284,7 +284,7 @@ What's the balance of my account IBAN DE89320895326389021994
 
 - On the next screen, click on **Create Agent**
 
-![Create New Agent](images/i15.png)
+![Create New Agent](backoffice_ag_imgs/i1.png)
 
 - Follow the steps according the screenshot below
   - Select **Create from scratch**
@@ -323,20 +323,26 @@ What's the balance of my account IBAN DE89320895326389021994
 
 - In the **Toolset** section, click on **Add tool**
 
-  ![Create New Agent](images/i16.png)
+![Create New Agent](backoffice_ag_imgs/i3.png)
 
   
-- Click on **Import**. Import the `fee_reversal-wxo.json` and `set_overdraft_limit-wxo.json` tools one by one provided by your instructor
+- Click on **Import**.
 
-![Create New Agent](images/i17.png)
+![Create New Agent](backoffice_ag_imgs/i4.png)
 
-- Select **Next**
+- Upload the `fee_reversal-wxo.json` and `set_overdraft_limit-wxo.json`, which will be provided by the instructor.
 
-![Create New Agent](images/i18.png)
+![Create New Agent](backoffice_ag_imgs/i5.png)
+![Create New Agent](backoffice_ag_imgs/i6.png)
+
+- Once the file is uploaded, select **Next**.
+
+![Create New Agent](backoffice_ag_imgs/i7.png)
+![Create New Agent](backoffice_ag_imgs/i8.png)
 
 - Select all of the **Operations** and click **Done**
-![Create New Agent](images/i19.png)
 
+![Create New Agent](backoffice_ag_imgs/i9.png)
 
 - In the **Behavior** section. Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator, we don't want to Enable it for direct chat on the chat homepage **disable the "Show agent" feature**.
 
@@ -349,7 +355,7 @@ In the preview window from the right, test with the following query:
    I want to request an overdraft of 1000 EURO for my account IBAN DE89320895326389021994
   ```
 
-![Create New Agent](images/i21.png)
+![Create New Agent](backoffice_ag_imgs/i10.png)
 
 - Click on **Deploy** to deploy the agent
 
