@@ -280,7 +280,7 @@ What's the balance of my account IBAN DE89320895326389021994
 
 - Click on hamburger menu, then **Build** -> **Agent Builder**
 
-![Create New Agent](images/i4.png)
+![Create New Agent](images/i3.png)
 
 - On the next screen, click on **Create Agent**
 
