@@ -193,7 +193,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
 - Click on **Create Agent**
 
-![Create New Agent](images/i4.png)
+![Create New Agent](teller_ag_imgs/i4.png)
 
 - Follow the steps according to the screenshot below.
   - Select **Create from scratch**
@@ -232,29 +232,31 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
     ```
   - Click **Create**
  
-![Create New Agent](images/i5.png)
+![Create New Agent](teller_ag_imgs/i5.png)
 
 - On the `GFM Teller` page, take the defaults for **Profile** and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button to upload the Specs.
   - account_balance_check-wxo.json
   - money_transfer-wxo.json
  
-![Create New Agent](images/i6.png)
+![Create New Agent](teller_ag_imgs/i6.png)
 
 - Click on **Import**.
 
-![Create New Agent](images/i7.png)
+![Create New Agent](teller_ag_imgs/i7.png)
 
 - Upload the `account_balance_check-wxo.json` and `money_transfer-wxo.json`, which will be provided by the instructor.
   
-![Create New Agent](images/i9.png)
+![Create New Agent](teller_ag_imgs/i8.png)
+![Create New Agent](teller_ag_imgs/i9.png)
 
 - Once the file is uploaded, select **Next**.
   
-![Create New Agent](images/i8.png)
+![Create New Agent](teller_ag_imgs/i10.png)
+![Create New Agent](teller_ag_imgs/i11.png)
 
 - Select the all of the **Operations** and click **Done**
   
-![Create New Agent](images/i10.png)
+![Create New Agent](teller_ag_imgs/i12.png)
 
 - Go to the **Behavior** section. Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator Agent, we don't want to Enable it for direct chat on the chat homepage Disable the **Show agent** feature
 
