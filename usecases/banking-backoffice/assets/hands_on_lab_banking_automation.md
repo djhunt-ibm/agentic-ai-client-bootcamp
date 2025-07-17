@@ -260,7 +260,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
 - Go to the **Behavior** section. Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator Agent, we don't want to Enable it for direct chat on the chat homepage Disable the **Show agent** feature
 
-![Create New Agent](images/i11.png)
+![Create New Agent](teller_ag_imgs/i14.png)
 
 #### Test the GFM Teller Agent
 
@@ -346,7 +346,7 @@ What's the balance of my account IBAN DE89320895326389021994
 
 - In the **Behavior** section. Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator, we don't want to Enable it for direct chat on the chat homepage **disable the "Show agent" feature**.
 
-![Create New Agent](images/i20.png)
+![Create New Agent](backoffice_ag_imgs/i11.png)
 
 #### Test the GFM Backoffice Agent
 
@@ -755,7 +755,7 @@ In the preview window from the right, test with the following query:
 
 - Click on the sandwich icon on the Top Left corner of Watsonx Orchestrate window, and select Chat. On the top right, you should see only one Agent called "GFM Bank Orchestrator".
 
-![Create New Agent](images/i35.png)
+![Create New Agent](bank_orch_ag_imgs/i9.png)
 
 In the chat window, test with the following queries:
 
