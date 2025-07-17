@@ -232,35 +232,35 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
     ```
   - Click **Create**
  
-![Create New Agent](teller_ag_imgs/i5.png)
+    ![Create New Agent](teller_ag_imgs/i5.png)
 
 - On the `GFM Teller` page, take the defaults for **Profile** and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button to upload the Specs.
   - account_balance_check-wxo.json
   - money_transfer-wxo.json
  
-![Create New Agent](teller_ag_imgs/i6.png)
+    ![Create New Agent](teller_ag_imgs/i6.png)
 
 - Click on **Import**.
 
-![Create New Agent](teller_ag_imgs/i7.png)
+  ![Create New Agent](teller_ag_imgs/i7.png)
 
 - Upload the `account_balance_check-wxo.json` and `money_transfer-wxo.json`, which will be provided by the instructor.
   
-![Create New Agent](teller_ag_imgs/i8.png)
-![Create New Agent](teller_ag_imgs/i9.png)
+  ![Create New Agent](teller_ag_imgs/i8.png)
+  ![Create New Agent](teller_ag_imgs/i9.png)
 
 - Once the file is uploaded, select **Next**.
   
-![Create New Agent](teller_ag_imgs/i10.png)
-![Create New Agent](teller_ag_imgs/i11.png)
+  ![Create New Agent](teller_ag_imgs/i10.png)
+  ![Create New Agent](teller_ag_imgs/i11.png)
 
 - Select the all of the **Operations** and click **Done**
   
-![Create New Agent](teller_ag_imgs/i12.png)
+  ![Create New Agent](teller_ag_imgs/i12.png)
 
 - Go to the **Behavior** section. Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator Agent, we don't want to Enable it for direct chat on the chat homepage Disable the **Show agent** feature
 
-![Create New Agent](teller_ag_imgs/i14.png)
+  ![Create New Agent](teller_ag_imgs/i14.png)
 
 #### Test the GFM Teller Agent
 
@@ -280,11 +280,11 @@ What's the balance of my account IBAN DE89320895326389021994
 
 - Click on hamburger menu, then **Build** -> **Agent Builder**
 
-![Create New Agent](images/i3.png)
+  ![Create New Agent](images/i3.png)
 
 - On the next screen, click on **Create Agent**
 
-![Create New Agent](backoffice_ag_imgs/i1.png)
+  ![Create New Agent](backoffice_ag_imgs/i1.png)
 
 - Follow the steps according the screenshot below
   - Select **Create from scratch**
@@ -317,36 +317,36 @@ What's the balance of my account IBAN DE89320895326389021994
     
     Maintain a professional tone with appropriate formality for a banking representative with elevated privileges.
     ```
-![Create New Agent](images/i13.png)
+    ![Create New Agent](images/i13.png)
 
   - Click **Create**
 
 - In the **Toolset** section, click on **Add tool**
 
-![Create New Agent](backoffice_ag_imgs/i3.png)
+  ![Create New Agent](backoffice_ag_imgs/i3.png)
 
   
 - Click on **Import**.
 
-![Create New Agent](backoffice_ag_imgs/i4.png)
+  ![Create New Agent](backoffice_ag_imgs/i4.png)
 
 - Upload the `fee_reversal-wxo.json` and `set_overdraft_limit-wxo.json`, which will be provided by the instructor.
 
-![Create New Agent](backoffice_ag_imgs/i5.png)
-![Create New Agent](backoffice_ag_imgs/i6.png)
+  ![Create New Agent](backoffice_ag_imgs/i5.png)
+  ![Create New Agent](backoffice_ag_imgs/i6.png)
 
 - Once the file is uploaded, select **Next**.
 
-![Create New Agent](backoffice_ag_imgs/i7.png)
-![Create New Agent](backoffice_ag_imgs/i8.png)
+  ![Create New Agent](backoffice_ag_imgs/i7.png)
+  ![Create New Agent](backoffice_ag_imgs/i8.png)
 
 - Select all of the **Operations** and click **Done**
 
-![Create New Agent](backoffice_ag_imgs/i9.png)
+  ![Create New Agent](backoffice_ag_imgs/i9.png)
 
 - In the **Behavior** section. Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator, we don't want to Enable it for direct chat on the chat homepage **disable the "Show agent" feature**.
 
-![Create New Agent](backoffice_ag_imgs/i11.png)
+  ![Create New Agent](backoffice_ag_imgs/i11.png)
 
 #### Test the GFM Backoffice Agent
 
@@ -364,11 +364,11 @@ In the preview window from the right, test with the following query:
 
 - Click on hamburger menu, then **Build** -> **Agent Builder**
 
-![Create New Agent](images/i3.png)
+  ![Create New Agent](images/i3.png)
 
 - On the next screen, click on **Create Agent**
 
-![Create New Agent](prod_info_ag_imgs/i1.png)
+  ![Create New Agent](prod_info_ag_imgs/i1.png)
 
 - Follow the steps according to the screenshot below
   - Select **Create from scratch**
@@ -443,7 +443,7 @@ Handling limitations:
 
 Keep your tone professional yet conversational, balancing technical accuracy with accessibility. Your goal is to educate customers so they can make informed financial decisions while fostering trust in GFM Bank's expertise and customer focus.
 ```
-![Create New Agent](prod_info_ag_imgs/i2.png)
+  ![Create New Agent](prod_info_ag_imgs/i2.png)
 
 - In the **Knowledge** section, add the following to the **Description**:
 
@@ -510,9 +510,9 @@ ser-terms-conditions-debit-cards.pdf
 Overdraft Services FAQ
 ```
   
-![Create New Agent](prod_info_ag_imgs/i3.png)
+  ![Create New Agent](prod_info_ag_imgs/i3.png)
 
-![Create New Agent](prod_info_ag_imgs/i4.png)
+  ![Create New Agent](prod_info_ag_imgs/i4.png)
 
 - In the **Behavior** section. Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator, we don't want to Enable it for direct chat on the chat homepage **disable the "Show agent" feature**, and add the following for **Instructions**:
 
@@ -580,7 +580,7 @@ Never Provide:
 - Speculative financial advice or investment recommendations
 ```
 
-![Create New Agent](prod_info_ag_imgs/i5.png)
+  ![Create New Agent](prod_info_ag_imgs/i5.png)
 
 #### Test the GFM Product Information Agent
 
@@ -600,11 +600,11 @@ In the preview window from the right, test with the following query:
 
 - Click on hamburger menu, then **Build** -> **Agent Builder**
 
-![Create New Agent](images/i3.png)
+  ![Create New Agent](images/i3.png)
 
 - On the next screen, click on **Create Agent**
 
-![Create New Agent](bank_orch_ag_imgs/i1.png)
+  ![Create New Agent](bank_orch_ag_imgs/i1.png)
 
 - Follow the steps according to the screenshot below
   - Select **Create from scratch**
@@ -667,23 +667,22 @@ Important Guidelines:
 
 Your role is crucial as the first impression of GFM Bank's service quality. Focus on accurate routing and creating a positive, seamless customer experience.
 ```
-![Create New Agent](bank_orch_ag_imgs/i2.png)
+  ![Create New Agent](bank_orch_ag_imgs/i2.png)
 
 #### Add collaborative Agents
 
 - Click on **Add Agent**
 
-![Create New Agent](bank_orch_ag_imgs/i3.png)
+  ![Create New Agent](bank_orch_ag_imgs/i3.png)
 
 - Click **Add from local instance**
 
-![Create New Agent](bank_orch_ag_imgs/i4.png)
+  ![Create New Agent](bank_orch_ag_imgs/i4.png)
 
 - Select **GFM Teller**, **GFM Backoffice**, **GFM Product Information** and then the **Add to Agent button**
-- 
-![Create New Agent](bank_orch_ag_imgs/i5.png)
-
-![Create New Agent](bank_orch_ag_imgs/i6.png)
+  
+  ![Create New Agent](bank_orch_ag_imgs/i5.png)
+  ![Create New Agent](bank_orch_ag_imgs/i6.png)
 
 
 - In the **Behavior** section, add the following for **Instructions**:
@@ -738,7 +737,7 @@ For returning customers, acknowledge their return with "Welcome back to GFM Bank
 This Orchestrator Agent serves as the central routing hub for customer inquiries, ensuring each customer is directed to the specialized agent best equipped to address their specific banking needs efficiently and accurately.
 ```
 
-![Create New Agent](bank_orch_ag_imgs/i7.png)
+  ![Create New Agent](bank_orch_ag_imgs/i7.png)
 
 #### Test the GFM Bank Orchestrator Agent
 
@@ -755,7 +754,7 @@ In the preview window from the right, test with the following query:
 
 - Click on the sandwich icon on the Top Left corner of Watsonx Orchestrate window, and select Chat. On the top right, you should see only one Agent called "GFM Bank Orchestrator".
 
-![Create New Agent](bank_orch_ag_imgs/i9.png)
+  ![Create New Agent](bank_orch_ag_imgs/i9.png)
 
 In the chat window, test with the following queries:
 
