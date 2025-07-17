@@ -21,3 +21,5 @@ Select an enterprise use case, learn about the business story, and implement it 
 - (beta) [Auto insurance claims automation](./usecases/autoclaim-insurance)
 - (beta) [Retail Product Display Advisor](./usecases/retail/)
 
+For additional use cases, please check out the [Agentic AI Bootcamp Community Repository](https://github.ibm.com/skol/agentic-ai-client-bootcamp-community).
+
