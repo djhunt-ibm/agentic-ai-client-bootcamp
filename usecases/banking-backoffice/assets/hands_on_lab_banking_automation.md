@@ -368,7 +368,7 @@ In the preview window from the right, test with the following query:
 
 - On the next screen, click on **Create Agent**
 
-![Create New Agent](images/i15.png)
+![Create New Agent](prod_info_ag_imgs/i1.png)
 
 - Follow the steps according to the screenshot below
   - Select **Create from scratch**
@@ -443,7 +443,7 @@ Handling limitations:
 
 Keep your tone professional yet conversational, balancing technical accuracy with accessibility. Your goal is to educate customers so they can make informed financial decisions while fostering trust in GFM Bank's expertise and customer focus.
 ```
-![Create New Agent](images/i23.png)
+![Create New Agent](prod_info_ag_imgs/i2.png)
 
 - In the **Knowledge** section, add the following to the **Description**:
 
@@ -502,22 +502,17 @@ Lost/Stolen Card Procedures: Reporting process, emergency replacement, liability
 
 Each topic includes up-to-date information, regulatory disclosures where applicable, and internal cross-references to related products or services to facilitate comprehensive customer assistance.
 ```
-- Download listed documents below to your local system, then upload by clicking on **Upload files** under **Documents**:
+- Upload the listed documents below by clicking **Upload files** under **Documents**, which will be provided by the instructor.
 
 ```
 list-of-prices-and-Services.pdf
 ser-terms-conditions-debit-cards.pdf
 Overdraft Services FAQ
 ```
-
-**NOTE:**
-Source of documents:
-- Terms and Conditions for Debit Cards: https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-terms-conditions-debit-cards.pdf
-- List of Prices: https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/kontakt-und-service/list-of-prices-and-Services-deutsche-bank-ag.pdf
   
-![Create New Agent](images/i24.png)
+![Create New Agent](prod_info_ag_imgs/i3.png)
 
-![Create New Agent](images/i25.png)
+![Create New Agent](prod_info_ag_imgs/i4.png)
 
 - In the **Behavior** section. Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator, we don't want to Enable it for direct chat on the chat homepage **disable the "Show agent" feature**, and add the following for **Instructions**:
 
@@ -585,7 +580,7 @@ Never Provide:
 - Speculative financial advice or investment recommendations
 ```
 
-![Create New Agent](images/i26.png)
+![Create New Agent](prod_info_ag_imgs/i5.png)
 
 #### Test the GFM Product Information Agent
 
@@ -595,7 +590,7 @@ In the preview window from the right, test with the following query:
   If I enter the PIN 5 times on my card what's happening?
   ```
 
-![Create New Agent](images/i27.png)
+![Create New Agent](prod_info_ag_imgs/i6.png)
 
 - Click on **Deploy** to deploy the agent
 
