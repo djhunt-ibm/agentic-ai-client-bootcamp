@@ -269,7 +269,7 @@ In the preview window on the right, test with the following query:
 What's the balance of my account IBAN DE89320895326389021994
 ```
 
-![Create New Agent](images/i12.png)
+![Create New Agent](teller_ag_imgs/i13.png)
 
 - Click on **Deploy** to deploy the agent
 
