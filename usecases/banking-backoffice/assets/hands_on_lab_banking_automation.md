@@ -175,15 +175,15 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
 ## Connect to your assigned Watsonx Orchestrate instance
 
-- Log in to IBM Cloud (cloud.ibm.com). Navigate to top left hamburger menu, then to Resource List. Open the AI/Machine Learning section. You should see a watsonx Orchestrate service, click to open
+- Log in to IBM Cloud (cloud.ibm.com). Navigate to top left hamburger menu, then to Resource List. Open the AI/Machine Learning section. You should see a **watsonx Orchestrate** service, click to open
 
   ![Watsonx Orchestrate instance](images/i1.png)
 
-- Click the "Launch watsonx Orchestrate" button
+- Click the **Launch watsonx Orchestrate** button
 
   ![Watsonx Orchestrate instance](images/i2.png)
 
-- Welcome to watsonx Orchestrate. Open the hamburger menu, click on Build -> Agent Builder
+- Welcome to watsonx Orchestrate. Open the hamburger menu, click on **Build** -> **Agent Builder**
 
   ![Watsonx Orchestrate instance](images/i3.png)
 
@@ -234,17 +234,19 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
  
     ![Create New Agent](teller_ag_imgs/i5.png)
 
-- On the `GFM Teller` page, take the defaults for **Profile** and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button to upload the Specs.
-  - account_balance_check-wxo.json
-  - money_transfer-wxo.json
- 
+- On the `GFM Teller` page, take the defaults for **Profile**, **Voice modality**, and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button.
+
     ![Create New Agent](teller_ag_imgs/i6.png)
 
 - Click on **Import**.
 
   ![Create New Agent](teller_ag_imgs/i7.png)
 
-- Upload the `account_balance_check-wxo.json` and `money_transfer-wxo.json`, which will be provided by the instructor.
+- Click on **Import from file**.
+
+  ![Create New Agent](teller_ag_imgs/i15.png)
+
+- Upload the `account_balance_check-wxo.json` and `money_transfer-wxo.json`api specs, which will be provided by the instructor.
   
   ![Create New Agent](teller_ag_imgs/i8.png)
   ![Create New Agent](teller_ag_imgs/i9.png)
@@ -254,7 +256,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
   ![Create New Agent](teller_ag_imgs/i10.png)
   ![Create New Agent](teller_ag_imgs/i11.png)
 
-- Select the all of the **Operations** and click **Done**
+- Select the all of the **Operations** and click **Done**. You should see the following under **Tools**:
   
   ![Create New Agent](teller_ag_imgs/i12.png)
 
@@ -272,7 +274,6 @@ What's the balance of my account IBAN DE89320895326389021994
 ![Create New Agent](teller_ag_imgs/i13.png)
 
 - Click on **Deploy** to deploy the agent
-
 
 
 ### GFM Backoffice Agent
@@ -321,7 +322,7 @@ What's the balance of my account IBAN DE89320895326389021994
 
   - Click **Create**
 
-- In the **Toolset** section, click on **Add tool**
+- take the defaults for **Profile**, **Voice modality**, and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button.
 
   ![Create New Agent](backoffice_ag_imgs/i3.png)
 
@@ -330,7 +331,7 @@ What's the balance of my account IBAN DE89320895326389021994
 
   ![Create New Agent](backoffice_ag_imgs/i4.png)
 
-- Upload the `fee_reversal-wxo.json` and `set_overdraft_limit-wxo.json`, which will be provided by the instructor.
+- Upload the `fee_reversal-wxo.json` and `set_overdraft_limit-wxo.json` API specs provided by the instructor.
 
   ![Create New Agent](backoffice_ag_imgs/i5.png)
   ![Create New Agent](backoffice_ag_imgs/i6.png)
