@@ -49,7 +49,7 @@ Key business benefits observed through this transformation include:
 
 ## 🏛️ Architecture
 
-<img alt="Order-to-Cash" src="./practitioner_docs/images/o2c--arch.png" width="1000">
+<img alt="Order-to-Cash" src="./practitioner_docs/images/arch.png" width="1000">
 
 ## 📄 Hands-on step-by-step lab
 
