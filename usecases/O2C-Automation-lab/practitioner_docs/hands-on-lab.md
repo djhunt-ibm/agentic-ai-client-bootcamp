@@ -24,7 +24,7 @@ In this lab, we will build an O2C agent in watsonx Orchestrate that simulates in
 
 ## 🏛 Architecture  <a id="architecture"></a>
 
-<img width="900" alt="image" src="./images/o2c-arch-sb.png">
+<img width="900" alt="image" src="./images/arch.png">
 
 ## Pre-requisites
 To run the steps in this hands-on lab portion of the bootcamp, you need access to **watsonx Orchestrate** and **watsonx.ai** which are provided for you as part of the preparation for this bootcamp.
