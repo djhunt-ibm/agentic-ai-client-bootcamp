@@ -228,7 +228,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
   
   ![Create New Agent](../assets/images/i38.png)
 
-- Select the all of the **Operations** and click **Done**.
+- Select the "Get Account Balance" and "Transfer Money" **Operations** and click **Done**.
 
   ![Create New Agent](./teller_ag_imgs/i10.png)
 
