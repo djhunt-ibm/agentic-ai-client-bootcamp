@@ -177,15 +177,15 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
 - Log in to IBM Cloud (cloud.ibm.com). Navigate to top left hamburger menu, then to Resource List. Open the AI/Machine Learning section. You should see a **watsonx Orchestrate** service, click to open
 
-  ![Watsonx Orchestrate instance](./images/i1.png)
+  ![Watsonx Orchestrate service](./images/i1.png)
 
 - Click the **Launch watsonx Orchestrate** button
 
-  ![Watsonx Orchestrate instance](./images/i2.png)
+  ![Launch Watsonx Orchestrate](./images/i2.png)
 
 - Welcome to watsonx Orchestrate. Open the hamburger menu, click on **Build** -> **Agent Builder**
 
-  ![Watsonx Orchestrate instance](./images/i3.png)
+  ![Agent Builder](./images/i3.png)
 
 ### GFM Teller Agent
 
@@ -193,7 +193,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
 - Click on **Create Agent**
 
-  ![Create New Agent](./teller_ag_imgs/i4.png)
+  ![Create Agent](./teller_ag_imgs/i4.png)
 
 - Follow the steps according to the screenshot below.
   - Select **Create from scratch**
@@ -210,11 +210,15 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
     ```
   - Click **Create**
  
-    ![Create New Agent](./teller_ag_imgs/i5.png)
+    ![Create](./teller_ag_imgs/i5.png)
 
-- On the `GFM Teller` page, take the defaults for **Profile**, **Voice modality**, and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button.
+- On the `GFM Teller` page, select the "llama-30405b-instruct" model from the dropdown menu at the top middle of the page.
 
-    ![Create New Agent](./teller_ag_imgs/i6.png)
+  ![Select model](./images/i4.png)
+
+- Take the defaults for **Profile**, **Voice modality**, and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button.
+
+  ![Add Tool](./teller_ag_imgs/i6.png)
 
 - Click on **Import**.
 
@@ -222,19 +226,19 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
 - Click on **Import from file**.
 
-  ![Create New Agent](./teller_ag_imgs/i15.png)
+  ![Import from file](./images/i15.png)
 
 - Upload the `bank.yaml` API spec provided by the instructor. Once the file is uploaded, select **Next**.
   
-  ![Create New Agent](../assets/images/i38.png)
+  ![Upload spec file](./images/i38.png)
 
 - Select the "Get Account Balance" and "Transfer Money" **Operations** and click **Done**.
 
-  ![Create New Agent](./teller_ag_imgs/i10.png)
+  ![Select Operations](./teller_ag_imgs/i10.png)
 
 - You should see the following under **Tools**:
   
-  ![Create New Agent](./teller_ag_imgs/i12.png)
+  ![Uploaded tools](./teller_ag_imgs/i12.png)
 
 - Go to the **Behavior** section. Add the following to the **Instructions**:
 
@@ -262,11 +266,10 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
   Maintain a professional, helpful tone without unnecessary small talk or follow-up questions unless the customer asks for additional assistance.
   ```
-  ![Behavior Instructions](teller_ag_imgs/ixx.png)
 
 - Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator Agent, we don't want to Enable it for direct chat on the chat homepage Disable the **Show agent** feature
 
-  ![Create New Agent](teller_ag_imgs/i14.png)
+  ![Show agent toggle](teller_ag_imgs/i14.png)
 
 #### Test the GFM Teller Agent
 
@@ -275,10 +278,9 @@ In the preview window on the right, test with the following query:
 What's the balance of my account IBAN DE89320895326389021994
 ```
 
-![Create New Agent](teller_ag_imgs/i13.png)
-
 - Click on **Deploy** to deploy the agent
 
+![Deploy](teller_ag_imgs/i13.png)
 
 ### GFM Backoffice Agent
 #### Create the GFM Backoffice Agent
