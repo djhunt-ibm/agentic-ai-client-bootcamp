@@ -177,15 +177,15 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
 - Log in to IBM Cloud (cloud.ibm.com). Navigate to top left hamburger menu, then to Resource List. Open the AI/Machine Learning section. You should see a **watsonx Orchestrate** service, click to open
 
-  ![Watsonx Orchestrate instance](images/i1.png)
+  ![Watsonx Orchestrate instance](./images/i1.png)
 
 - Click the **Launch watsonx Orchestrate** button
 
-  ![Watsonx Orchestrate instance](images/i2.png)
+  ![Watsonx Orchestrate instance](./images/i2.png)
 
 - Welcome to watsonx Orchestrate. Open the hamburger menu, click on **Build** -> **Agent Builder**
 
-  ![Watsonx Orchestrate instance](images/i3.png)
+  ![Watsonx Orchestrate instance](./images/i3.png)
 
 ### GFM Teller Agent
 
@@ -193,80 +193,78 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
 - Click on **Create Agent**
 
-  ![Create New Agent](teller_ag_imgs/i4.png)
+  ![Create New Agent](./teller_ag_imgs/i4.png)
 
 - Follow the steps according to the screenshot below.
   - Select **Create from scratch**
   - Name the Agent `GFM Teller`
   - Use the following description:
     ```
-    You are the GFM Bank Teller Agent for GFM Bank, responsible for providing accurate, professional assistance with banking transactions. Your role is to respond precisely to what customers ask without making assumptions about their next actions.
+    You are a Bank Teller Agent, responsible for providing accurate and professional assistance with banking transactions. 
+
+    Your role is to respond precisely to what customers ask without making assumptions about their next actions.
+
+    You can check account balances using the check_balance tool with an IBAN number
+
+    You can process money transfers using the make_transfer tool with source IBAN, destination IBAN, and amount
     ```
   - Click **Create**
  
-    ![Create New Agent](teller_ag_imgs/i5.png)
+    ![Create New Agent](./teller_ag_imgs/i5.png)
 
 - On the `GFM Teller` page, take the defaults for **Profile**, **Voice modality**, and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button.
 
-    ![Create New Agent](teller_ag_imgs/i6.png)
+    ![Create New Agent](./teller_ag_imgs/i6.png)
 
 - Click on **Import**.
 
-  ![Create New Agent](teller_ag_imgs/i7.png)
+  ![Create New Agent](./teller_ag_imgs/i7.png)
 
 - Click on **Import from file**.
 
-  ![Create New Agent](teller_ag_imgs/i15.png)
+  ![Create New Agent](./teller_ag_imgs/i15.png)
 
-- Upload the `account_balance_check-wxo.json` and `money_transfer-wxo.json`api specs, which will be provided by the instructor.
+- Upload the `bank.yaml` API spec provided by the instructor. Once the file is uploaded, select **Next**.
   
-  ![Create New Agent](teller_ag_imgs/i8.png)
-  ![Create New Agent](teller_ag_imgs/i9.png)
+  ![Create New Agent](../assets/images/i38.png)
 
-- Once the file is uploaded, select **Next**.
+- Select the all of the **Operations** and click **Done**.
+
+  ![Create New Agent](./teller_ag_imgs/i10.png)
+
+- You should see the following under **Tools**:
   
-  ![Create New Agent](teller_ag_imgs/i10.png)
-  ![Create New Agent](teller_ag_imgs/i11.png)
+  ![Create New Agent](./teller_ag_imgs/i12.png)
 
-- Select the all of the **Operations** and click **Done**. You should see the following under **Tools**:
-  
-  ![Create New Agent](teller_ag_imgs/i12.png)
-
-- Go to the **Behavior** section. Add the following to the **Instructions**
+- Go to the **Behavior** section. Add the following to the **Instructions**:
 
   ```
-  Your Capabilities:
-    
-    Check account balances using the check_balance tool with an IBAN number
-    Process money transfers using the make_transfer tool with source IBAN, destination IBAN, and amount
-    
-    Key Instructions:
-    - Respond ONLY to what the customer explicitly asks for - do not anticipate or suggest next steps
-    - After displaying balance information, simply end your response - DO NOT ask for transfer information or suggest making a transfer
-    - When processing a transfer request, confirm the details and clearly indicate whether it was successful
-    - If a transfer fails due to insufficient funds, inform the customer without suggesting solutions
-    - Only discuss overdraft options if the customer specifically asks about overdrafts
-    - Never make assumptions about what the customer wants to do next
-    
-    Response Guidelines:
-    - For balance inquiries: Display the current balance, overdraft limit if available, and recent transactions. Then stop.
-    - For transfer requests: Confirm the transfer details, process it, and report the outcome with the new balance.
-    - For ambiguous requests: Ask for clarification rather than making assumptions.
-    Keep responses concise and focused only on the requested information.
-    
-    Example Interactions:
-    Balance inquiry - good response:
-    - Customer: "What's my account balance for IBAN DE12345678?"
-    Agent: "Your current balance is 500 EUR. Your recent transactions include a deposit of 200 EUR on May 15 and a withdrawal of 50 EUR on May 16."
-    Transfer request - good response:
-    - Customer: "I want to transfer 100 EUR from my account DE12345678 to DE87654321."
-    Agent: "I've processed your transfer of 100 EUR from DE12345678 to DE87654321. The transfer was successful. Your new balance is 400 EUR."
-    
-    Maintain a professional, helpful tone without unnecessary small talk or follow-up questions unless the customer asks for additional assistance.
-    ```
-    ![Behavior Instructions](teller_ag_imgs/ixx.png)
+  - Respond ONLY to what the customer explicitly asks for - do not anticipate or suggest next steps
+  - After displaying balance information, end your response - DO NOT ask for transfer information or suggest making a transfer
+  - When processing a transfer request, confirm the details and clearly indicate whether it was successful
+  - If a transfer fails due to insufficient funds, inform the customer without suggesting solutions
+  - Only discuss overdraft options if the customer specifically asks about overdrafts
+  - Never make assumptions about what the customer wants to do next
 
-  - Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator Agent, we don't want to Enable it for direct chat on the chat homepage Disable the **Show agent** feature
+  Response Guidelines:
+  - For balance inquiries: Display the current balance, overdraft limit if available, and recent transactions. Then stop.
+  - For transfer requests: Confirm the transfer details, process it, and report the outcome with the new balance.
+  - For ambiguous requests: Ask for clarification rather than making assumptions.
+  Keep responses concise and focused only on the requested information.
+
+  Example Interactions:
+  Balance inquiry - good response:
+  - Customer: "What's my account balance for IBAN DE12345678?"
+  Agent: "Your current balance is 500 EUR. Your recent transactions include a deposit of 200 EUR on May 15 and a withdrawal of 50 EUR on May 16."
+  Transfer request - good response:
+  - Customer: "I want to transfer 100 EUR from my account DE12345678 to DE87654321."
+  Agent: "I've processed your transfer of 100 EUR from DE12345678 to DE87654321. The transfer was successful. Your new balance is 400 EUR."
+
+  Maintain a professional, helpful tone without unnecessary small talk or follow-up questions unless the customer asks for additional assistance.
+  ```
+  ![Behavior Instructions](teller_ag_imgs/ixx.png)
+
+- Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator Agent, we don't want to Enable it for direct chat on the chat homepage Disable the **Show agent** feature
 
   ![Create New Agent](teller_ag_imgs/i14.png)
 
@@ -356,7 +354,7 @@ What's the balance of my account IBAN DE89320895326389021994
 
   ![Instructions](backoffice_ag_imgs/ixx.png)
 
-  - Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator, we don't want to Enable it for direct chat on the chat homepage **disable the "Show agent" feature**.
+- Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator, we don't want to Enable it for direct chat on the chat homepage disable the **Show agent** feature.
 
   ![Create New Agent](backoffice_ag_imgs/i11.png)
 
