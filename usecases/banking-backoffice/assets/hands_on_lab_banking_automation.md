@@ -267,7 +267,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
   Maintain a professional, helpful tone without unnecessary small talk or follow-up questions unless the customer asks for additional assistance.
   ```
 
-- Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator Agent, we don't want to Enable it for direct chat on the chat homepage Disable the **Show agent** feature
+- Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator Agent, we don't want to enable it for direct chat on the chat homepage. Disable the **Show agent** feature.
 
   ![Show agent toggle](teller_ag_imgs/i14.png)
 
