@@ -282,6 +282,10 @@ What's the balance of my account IBAN DE89320895326389021994
 
 ![Deploy](teller_ag_imgs/i13.png)
 
+- On the **Deploy Agent** screen, click on **Deploy**. The Agent is now available for others to interact with.
+
+![Deploy](teller_ag_imgs/i1.png)
+
 ### GFM Backoffice Agent
 #### Create the GFM Backoffice Agent
 
