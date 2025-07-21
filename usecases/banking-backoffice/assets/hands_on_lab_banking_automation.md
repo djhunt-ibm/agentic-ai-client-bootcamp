@@ -228,11 +228,11 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
   ![Import from file](./images/i15.png)
 
-- Upload the `bank.yaml` API spec provided by the instructor. Once the file is uploaded, select **Next**.
+- Upload the `bank.json` API spec provided by the instructor. Once the file is uploaded, select **Next**.
   
   ![Upload spec file](./images/i38.png)
 
-- Select the "Get Account Balance" and "Transfer Money" **Operations** and click **Done**.
+- Select the "Check account balance by IBAN" and "Transfer Money between IBANs" **Operations** and click **Done**.
 
   ![Select Operations](./teller_ag_imgs/i10.png)
 
