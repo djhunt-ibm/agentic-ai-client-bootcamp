@@ -435,7 +435,7 @@ In the preview window from the right, test with the following query:
     - Insurance products (life, property, casualty offerings)
     - Financial planning services (retirement, education, estate planning)
     ```
-  ![Prod Agent Description](prod_info_ag_imgs/i4.png)
+  ![Prod Agent Description](prod_info_ag_imgs/i2.png)
 
 - In the **Knowledge** section, add the following to the **Description**:
 
@@ -494,6 +494,8 @@ In the preview window from the right, test with the following query:
 
   Each topic includes up-to-date information, regulatory disclosures where applicable, and internal cross-references to related products or services to facilitate comprehensive customer assistance.
   ```
+    ![Prod Agent Description](prod_info_ag_imgs/i4.png)
+  
 - Upload the listed documents below which will be provided by the instructor by clicking **Upload files** under **Documents**
 
   ```
