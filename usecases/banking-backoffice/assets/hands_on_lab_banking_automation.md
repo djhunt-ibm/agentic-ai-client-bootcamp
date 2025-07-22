@@ -437,9 +437,9 @@ In the preview window from the right, test with the following query:
     ```
   ![Prod Agent Description](prod_info_ag_imgs/i2.png)
 
-  - On the `GFM Teller` page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
+- On the `GFM Product Information` page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
 
-  ![Select model](prod_info_ag_imgs/i7.png)
+  ![Select model](./images/i4.png)
 
 - In the **Knowledge** section, add the following to the **Description**:
 
@@ -696,9 +696,9 @@ Your role is crucial as the first impression of GFM Bank's service quality. Focu
 ```
   ![Create New Agent](bank_orch_ag_imgs/i2.png)
 
-    - On the `GFM Teller` page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
+- On the `GFM Bank Orchestrator` page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
 
-  ![Select model](bank_orch_ag_imgs/i10.png)
+  ![Select model](./images/i4.png)
 
 #### Add collaborative Agents
 
