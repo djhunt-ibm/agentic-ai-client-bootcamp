@@ -617,10 +617,13 @@ In the preview window from the right, test with the following query:
   If I enter the PIN 5 times on my card what's happening?
   ```
 
-  ![Create New Agent](prod_info_ag_imgs/i6.png)
-
 - Click on **Deploy** to deploy the agent
 
+  ![Create New Agent](prod_info_ag_imgs/i6.png)
+
+- On the **Deploy Agent** page, click on **Deploy**
+
+  ![Deploy](prod_info_ag_imgs/i8.png)
 
 ### GFM Bank Orchestrator Agent
 #### Create GFM Bank Orchestrator Agent
@@ -777,9 +780,13 @@ In the preview window from the right, test with the following query:
   What is a card overdraft?
   What's the balance of my account IBAN DE89320895326389021994
   ```
-![Create New Agent](bank_orch_ag_imgs/i8.png)
-
 - Click on **Deploy** to deploy the agent
+
+  ![Create New Agent](bank_orch_ag_imgs/i8.png)
+
+- On the **Deploy Agent** page, click on **Deploy**
+
+  ![Deploy](bank_orch_ag_imgs/i11.png)
 
 ## Test Your Agentic AI Banking Solution
 
