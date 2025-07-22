@@ -435,7 +435,7 @@ In the preview window from the right, test with the following query:
     - Insurance products (life, property, casualty offerings)
     - Financial planning services (retirement, education, estate planning)
     ```
-  ![Prod Agent Description](prod_info_ag_imgs/ixx.png)
+  ![Prod Agent Description](prod_info_ag_imgs/i4.png)
 
 - In the **Knowledge** section, add the following to the **Description**:
 
@@ -503,8 +503,6 @@ In the preview window from the right, test with the following query:
   ```
   
   ![Create New Agent](prod_info_ag_imgs/i3.png)
-
-  ![Create New Agent](prod_info_ag_imgs/i4.png)
 
 - In the **Behavior** section, add the following to **Instructions**:
   ```
@@ -601,7 +599,7 @@ In the preview window from the right, test with the following query:
   - Speculative financial advice or investment recommendations
 
   ```
-  ![Prod Agent Instructions](prod_info_ag_imgs/ixx.png)
+  ![Prod Agent Instructions](prod_info_ag_imgs/i6.png) 
 
 - Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator, we don't want to Enable it for direct chat on the chat homepage disable the **Show agent** toggle
 
