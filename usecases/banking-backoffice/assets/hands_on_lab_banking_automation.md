@@ -280,11 +280,11 @@ What's the balance of my account IBAN DE89320895326389021994
 
 - Click on **Deploy** to deploy the agent
 
-![Deploy](teller_ag_imgs/i13.png)
+  ![Deploy](teller_ag_imgs/i13.png)
 
 - On the **Deploy Agent** screen, click on **Deploy**. The Agent is now available for others to interact with.
 
-![Deploy](teller_ag_imgs/i1.png)
+  ![Deploy](teller_ag_imgs/i1.png)
 
 ### GFM Backoffice Agent
 #### Create the GFM Backoffice Agent
@@ -375,11 +375,11 @@ In the preview window from the right, test with the following query:
 
 - Click on **Deploy** to deploy the agent
 
-![Deploy](backoffice_ag_imgs/i10.png)
+  ![Deploy](backoffice_ag_imgs/i10.png)
 
 - On the **Deploy Agent** page, click on **Deploy**
 
-![Deploy](backoffice_ag_imgs/i13.png)
+  ![Deploy](backoffice_ag_imgs/i13.png)
 
 ### GFM Product Information Agent
 #### Create GFM Product Information Agent
@@ -435,7 +435,7 @@ In the preview window from the right, test with the following query:
     - Insurance products (life, property, casualty offerings)
     - Financial planning services (retirement, education, estate planning)
     ```
-  ![Prod Agent Description](prod_info_ag_imgs/i2.png)
+    ![Prod Agent Description](prod_info_ag_imgs/i2.png)
 
 - On the `GFM Product Information` page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
 
@@ -617,7 +617,7 @@ In the preview window from the right, test with the following query:
   If I enter the PIN 5 times on my card what's happening?
   ```
 
-![Create New Agent](prod_info_ag_imgs/i6.png)
+  ![Create New Agent](prod_info_ag_imgs/i6.png)
 
 - Click on **Deploy** to deploy the agent
 
