@@ -1,4 +1,4 @@
-# Manufacturing Operation Automation
+# 🏭 Manufacturing Operation Automation
 
 ![image](assets/manufacturing.png)
 
