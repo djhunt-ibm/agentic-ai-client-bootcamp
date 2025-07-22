@@ -501,7 +501,7 @@ In the preview window from the right, test with the following query:
   ```
     ![Prod Agent Knowledge Description](./prod_info_ag_imgs/i4.png)
   
-- Upload the listed documents below, which will be provided by the instructor,r by clicking **Upload files** under **Documents**
+- Click **Upload files** under **Documents** to upload the listed documents below provided by the instructor
 
   ```
   list-of-prices-and-Services.pdf
@@ -615,7 +615,7 @@ In the preview window from the right, test with the following query:
 In the preview window from the right, test with the following query:
   ```
   What is a card overdraft?
-  If I enter the PIN 5 times on my card what will happen?
+  If I enter the PIN 5 times on my card, what will happen?
   ```
 
 - Click on **Deploy** to deploy the agent
