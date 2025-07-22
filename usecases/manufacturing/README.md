@@ -103,4 +103,7 @@ You can find step-by-step instructions here :
 ## Demo Video
 A video demo of the solution is below:
 
+https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/453165/88ff3a77-0b52-4a31-9b62-f277fb071e31
+
+
 
