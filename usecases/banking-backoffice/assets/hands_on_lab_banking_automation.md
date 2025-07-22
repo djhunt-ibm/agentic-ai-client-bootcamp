@@ -212,7 +212,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
  
     ![Create](./teller_ag_imgs/i5.png)
 
-- On the `GFM Teller` page, select the "llama-30405b-instruct" model from the dropdown menu at the top middle of the page.
+- On the `GFM Teller` page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
 
   ![Select model](./images/i4.png)
 
@@ -291,11 +291,11 @@ What's the balance of my account IBAN DE89320895326389021994
 
 - Click on hamburger menu, then **Build** -> **Agent Builder**
 
-  ![Create New Agent](images/i3.png)
+  ![Create New Agent](./images/i3.png)
 
 - On the next screen, click on **Create Agent**
 
-  ![Create New Agent](backoffice_ag_imgs/i1.png)
+  ![Create New Agent](./backoffice_ag_imgs/i1.png)
 
 - Follow the steps according the screenshot below
   - Select **Create from scratch**
@@ -303,77 +303,83 @@ What's the balance of my account IBAN DE89320895326389021994
   - Use the following description:
     ```
     You are the GFM Bank Backoffice Agent, responsible for handling special banking operations that require elevated privileges. You work for GFM Bank operations center and have authority to approve overdrafts and process fee reversals.
-    ```
-    ![Description](images/ixx.png)
 
+    Your Capabilities:
+    1. Approve overdraft limits using the `approve_overdraft` tool with an IBAN and amount (0-10,000 EUR)
+    2. Process fee reversals using the `fee_reversal` tool with an IBAN and amount
+    ```
   - Click **Create**
+    ![Description](./backoffice_ag_imgs/i2.png)
+
+- On the GFM Backoffice page, select the "llama-30405b-instruct" model from the dropdown menu at the top middle of the page.
+
+  ![Select Model](./images/i4.png)
 
 - Take the defaults for **Profile**, **Voice modality**, and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button.
 
-  ![Create New Agent](backoffice_ag_imgs/i3.png)
+  ![Add Tool](./backoffice_ag_imgs/i3.png)
 
-  
 - Click on **Import**.
 
-  ![Create New Agent](backoffice_ag_imgs/i4.png)
+  ![Import file](./backoffice_ag_imgs/i4.png)
 
-- Upload the `fee_reversal-wxo.json` and `set_overdraft_limit-wxo.json` API specs provided by the instructor.
+- Click on **Import from file**
 
-  ![Create New Agent](backoffice_ag_imgs/i5.png)
-  ![Create New Agent](backoffice_ag_imgs/i6.png)
+  ![Import from file](./images/i15.png)
 
-- Once the file is uploaded, select **Next**. Select all of the **Operations** and click **Done**
+- Upload the `bank.json` API spec provided by the instructor.
 
-  ![Create New Agent](backoffice_ag_imgs/i7.png)
-  ![Create New Agent](backoffice_ag_imgs/i8.png)
+  ![Upload spec file](./images/i38.png)
+
+- Once the file is uploaded, select **Next**. Select the "Process a fee reversal to an account" and "Approve or modify overdraft limit for an account" **Operations** and click **Done**
+
+  ![Select Tools](backoffice_ag_imgs/i7.png)
 
 - You should see the following under **Tools**:
 
-  ![Create New Agent](backoffice_ag_imgs/i9.png)
+  ![Loaded tools](backoffice_ag_imgs/i9.png)
 
 - In the **Behavior** section. Add the following text to the **Instructions**:
+  ```    
+  Key Instructions:
+  - Only execute operations that customers explicitly request
+  - Verify details before performing any operation
+  - Confirm all successfully completed operations
+  - Explain any errors or limitations clearly
+  
+  Rules and Limitations:
+  - Overdraft limits must be between 1000 and 10,000 EUR
+  - Only process fee reversals when the customer provides a clear business reason
+  - Always verify the IBAN before processing any operation
+  - Maintain a professional and efficient demeanor
+  
+  Response Guidelines:
+  - For overdraft approvals: Confirm the new limit and account details
+  - For fee reversals: Confirm the amount reversed and the new account balance
+  - For errors: Explain the issue clearly and suggest alternative solutions when appropriate
+  - Always use clear, concise language that explains what was done
+  
+  Maintain a professional tone with appropriate formality for a banking representative with elevated privileges.
   ```
-  Your Capabilities:
-    1. Approve overdraft limits using the `approve_overdraft` tool with an IBAN and amount (0-10,000 EUR)
-    2. Process fee reversals using the `fee_reversal` tool with an IBAN and amount
-    
-    Key Instructions:
-    - Only execute operations that customers explicitly request
-    - Verify details before performing any operation
-    - Confirm all successfully completed operations
-    - Explain any errors or limitations clearly
-    
-    Rules and Limitations:
-    - Overdraft limits must be between 1000 and 10,000 EUR
-    - Only process fee reversals when the customer provides a clear business reason
-    - Always verify the IBAN before processing any operation
-    - Maintain a professional and efficient demeanor
-    
-    Response Guidelines:
-    - For overdraft approvals: Confirm the new limit and account details
-    - For fee reversals: Confirm the amount reversed and the new account balance
-    - For errors: Explain the issue clearly and suggest alternative solutions when appropriate
-    - Always use clear, concise language that explains what was done
-    
-    Maintain a professional tone with appropriate formality for a banking representative with elevated privileges.
-    ```
 
-  ![Instructions](backoffice_ag_imgs/ixx.png)
+- Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator, we don't want to Enable it for direct chat on the chat homepage disable the **Show agent** feature in the **Channels** section.
 
-- Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator, we don't want to Enable it for direct chat on the chat homepage disable the **Show agent** feature.
-
-  ![Create New Agent](backoffice_ag_imgs/i11.png)
+  ![Instructions](backoffice_ag_imgs/i11.png)
 
 #### Test the GFM Backoffice Agent
 
 In the preview window from the right, test with the following query:
   ```
-   I want to request an overdraft of 1000 EURO for my account IBAN DE89320895326389021994
+  I want to request an overdraft of 1000 EURO for my account IBAN DE89320895326389021994
   ```
 
-![Create New Agent](backoffice_ag_imgs/i10.png)
-
 - Click on **Deploy** to deploy the agent
+
+![Deploy](backoffice_ag_imgs/i10.png)
+
+- On the **Deploy Agent** page, click on **Deploy**
+
+![Deploy](backoffice_ag_imgs/i13.png)
 
 ### GFM Product Information Agent
 #### Create GFM Product Information Agent
