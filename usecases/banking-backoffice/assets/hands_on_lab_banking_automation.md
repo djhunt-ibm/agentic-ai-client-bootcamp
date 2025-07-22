@@ -291,11 +291,11 @@ What's the balance of my account IBAN DE89320895326389021994
 
 - Click on hamburger menu, then **Build** -> **Agent Builder**
 
-  ![Create New Agent](./images/i3.png)
+  ![Agent Builder](./images/i3.png)
 
 - On the next screen, click on **Create Agent**
 
-  ![Create New Agent](./backoffice_ag_imgs/i1.png)
+  ![Create Agent](./backoffice_ag_imgs/i1.png)
 
 - Follow the steps according the screenshot below
   - Select **Create from scratch**
@@ -386,11 +386,11 @@ In the preview window from the right, test with the following query:
 
 - Click on hamburger menu, then **Build** -> **Agent Builder**
 
-  ![Create New Agent](images/i3.png)
+  ![Agent Builder](images/i3.png)
 
 - On the next screen, click on **Create Agent**
 
-  ![Create New Agent](prod_info_ag_imgs/i1.png)
+  ![Create Agent](prod_info_ag_imgs/i1.png)
 
 - Follow the steps according to the screenshot below
   - Select **Create from scratch**
@@ -509,7 +509,7 @@ In the preview window from the right, test with the following query:
   Overdraft Services FAQ
   ```
   
-  ![Create New Agent](prod_info_ag_imgs/i3.png)
+  ![Upload Documents](prod_info_ag_imgs/i3.png)
 
 - In the **Behavior** section, add the following to **Instructions**:
   ```
@@ -608,7 +608,7 @@ In the preview window from the right, test with the following query:
   ```
 - Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator, we don't want to Enable it for direct chat on the chat homepage disable the **Show agent** toggle
 
-  ![Create New Agent](prod_info_ag_imgs/i5.png)
+  ![Disable toggle](prod_info_ag_imgs/i5.png)
 
 #### Test the GFM Product Information Agent
 
@@ -620,7 +620,7 @@ In the preview window from the right, test with the following query:
 
 - Click on **Deploy** to deploy the agent
 
-  ![Create New Agent](prod_info_ag_imgs/i6.png)
+  ![Deploy Agent](prod_info_ag_imgs/i6.png)
 
 - On the **Deploy Agent** page, click on **Deploy**
 
@@ -631,11 +631,11 @@ In the preview window from the right, test with the following query:
 
 - Click on hamburger menu, then **Build** -> **Agent Builder**
 
-  ![Create New Agent](images/i3.png)
+  ![Agent Builder](images/i3.png)
 
 - On the next screen, click on **Create Agent**
 
-  ![Create New Agent](bank_orch_ag_imgs/i1.png)
+  ![Create Agent](bank_orch_ag_imgs/i1.png)
 
 - Follow the steps according to the screenshot below
   - Select **Create from scratch**
@@ -699,7 +699,7 @@ In the preview window from the right, test with the following query:
     Your role is crucial as the first impression of GFM Bank's service quality. Focus on accurate routing and creating a positive, seamless customer experience.
     ```
   - Click **Create**
-  ![Create New Agent](bank_orch_ag_imgs/i2.png)
+  ![Agent Description(bank_orch_ag_imgs/i2.png)
 
 - On the `GFM Bank Orchestrator` page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
 
@@ -709,16 +709,16 @@ In the preview window from the right, test with the following query:
 
 - In the **Agents** section, click on **Add Agent**
 
-  ![Create New Agent](bank_orch_ag_imgs/i3.png)
+  ![Add Agents](bank_orch_ag_imgs/i3.png)
 
 - Click **Add from local instance**
 
-  ![Create New Agent](bank_orch_ag_imgs/i4.png)
+  ![Local Instance](bank_orch_ag_imgs/i4.png)
 
 - Select **GFM Teller**, **GFM Backoffice**, **GFM Product Information** and then the **Add to Agent button**
   
-  ![Create New Agent](bank_orch_ag_imgs/i5.png)
-  ![Create New Agent](bank_orch_ag_imgs/i6.png)
+  ![Select Agents](bank_orch_ag_imgs/i5.png)
+  ![Select Agents](bank_orch_ag_imgs/i6.png)
 
 
 - In the **Behavior** section, add the following for **Instructions**:
@@ -773,7 +773,7 @@ In the preview window from the right, test with the following query:
   This Orchestrator Agent serves as the central routing hub for customer inquiries, ensuring each customer is directed to the specialized agent best equipped to address their specific banking needs efficiently and accurately.
   ```
 
-  ![Create New Agent](bank_orch_ag_imgs/i7.png)
+  ![Agent Behaviour](bank_orch_ag_imgs/i7.png)
 
 #### Test the GFM Bank Orchestrator Agent
 
@@ -784,7 +784,7 @@ In the preview window from the right, test with the following query:
   ```
 - Click on **Deploy** to deploy the agent
 
-  ![Create New Agent](bank_orch_ag_imgs/i8.png)
+  ![Agent Deploy](bank_orch_ag_imgs/i8.png)
 
 - On the **Deploy Agent** page, click on **Deploy**
 
@@ -794,7 +794,7 @@ In the preview window from the right, test with the following query:
 
 - Click on the sandwich icon on the Top Left corner of Watsonx Orchestrate window, and select Chat. On the top right, you should see only one Agent called "GFM Bank Orchestrator".
 
-  ![Create New Agent](bank_orch_ag_imgs/i9.png)
+  ![Select Orchestrator Agent](bank_orch_ag_imgs/i9.png)
 
 In the chat window, test with the following queries:
 
@@ -812,9 +812,9 @@ In the chat window, test with the following queries:
   Please do a reversal of my previous 4000 EURO payment to my IBAN DE89320895326389021994
   ```
 
-![Create New Agent](images/i36.png)
+![Text Queries](images/i36.png)
 
-![Create New Agent](images/i37.png)
+![Text Queries](images/i37.png)
 
 ## 🎉 Congratulations! You have completed the lab!
 
