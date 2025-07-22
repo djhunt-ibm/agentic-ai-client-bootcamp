@@ -437,6 +437,10 @@ In the preview window from the right, test with the following query:
     ```
   ![Prod Agent Description](prod_info_ag_imgs/i2.png)
 
+  - On the `GFM Teller` page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
+
+  ![Select model](prod_info_ag_imgs/i7.png)
+
 - In the **Knowledge** section, add the following to the **Description**:
 
   ```
@@ -691,6 +695,10 @@ Important Guidelines:
 Your role is crucial as the first impression of GFM Bank's service quality. Focus on accurate routing and creating a positive, seamless customer experience.
 ```
   ![Create New Agent](bank_orch_ag_imgs/i2.png)
+
+    - On the `GFM Teller` page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
+
+  ![Select model](bank_orch_ag_imgs/i10.png)
 
 #### Add collaborative Agents
 
