@@ -599,8 +599,6 @@ In the preview window from the right, test with the following query:
   - Speculative financial advice or investment recommendations
 
   ```
-  ![Prod Agent Instructions](prod_info_ag_imgs/i6.png) 
-
 - Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator, we don't want to Enable it for direct chat on the chat homepage disable the **Show agent** toggle
 
   ![Create New Agent](prod_info_ag_imgs/i5.png)
