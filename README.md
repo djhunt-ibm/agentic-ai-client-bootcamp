@@ -21,5 +21,6 @@ Select an enterprise use case, learn about the business story, and implement it 
 - (beta) [Auto insurance claims automation](./usecases/autoclaim-insurance)
 - (beta) [Retail Product Display Advisor](./usecases/retail/)
 
-For additional use cases, please check out the [Agentic AI Bootcamp Community Repository](https://github.ibm.com/skol/agentic-ai-client-bootcamp-community).
+For additional use cases, please check out the [Agentic AI Bootcamp Community Repository](https://github.ibm.com/skol/agentic-ai-client-bootcamp-community) -- **see note below**
 
+‼️ **The [community repo](https://github.ibm.com/skol/agentic-ai-client-bootcamp-community) is not curated or maintained by the CE WW Agentic AI bootcamp team, so there may be some variation of lab structure/ setup instructions depending on the use case. Please reach out to each individual use case / lab owner if you have questions or need help.**
