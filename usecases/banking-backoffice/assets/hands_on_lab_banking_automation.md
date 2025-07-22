@@ -707,7 +707,7 @@ In the preview window from the right, test with the following query:
 
 #### Add collaborative Agents
 
-- Click on **Add Agent**
+- In the **Agents** section, click on **Add Agent**
 
   ![Create New Agent](bank_orch_ag_imgs/i3.png)
 
