@@ -223,4 +223,4 @@ Follow the steps above, then try interacting with the use case using these sampl
    ![Comparison Agent Response](assets/chat_2.png)  
    ![Comparison Agent Response 2](assets/chat_3.png)
 
-Now, explore and experience the power of Skills & Agents in action! 🚀 
+
