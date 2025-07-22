@@ -311,7 +311,7 @@ What's the balance of my account IBAN DE89320895326389021994
   - Click **Create**
     ![Back Office Agent Description](./backoffice_ag_imgs/i2.png)
 
-- On the GFM Backoffice page, select the "llama-30405b-instruct" model from the dropdown menu at the top middle of the page.
+- On the GFM Backoffice page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
 
   ![Select Model](./images/i4.png)
 
