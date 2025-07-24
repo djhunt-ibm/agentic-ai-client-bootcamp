@@ -29,7 +29,7 @@ In this lab, we will build an O2C agent in watsonx Orchestrate that simulates in
 ## Pre-requisites
 To run the steps in this hands-on lab portion of the bootcamp, you need access to **watsonx Orchestrate** and **watsonx.ai** which are provided for you as part of the preparation for this bootcamp.
 
-- Please go the through the [environment-setup](https://github.ibm.com/skol/agentic-ai-client-bootcamp/tree/staging/environment-setup) guide for steps on API key creation, and project setup.
+- Please go the through the [environment-setup](https://github.ibm.com/skol/agentic-ai-client-bootcamp/tree/release/v3.0.0/environment-setup) guide for steps on API key creation, and project setup.
 
 - Check with your instructor to make sure **all systems** are up and running before you continue.
 
@@ -43,7 +43,8 @@ To access watsonx Orchestrate, follow these steps:
 1. If not already logged into your IBM Cloud account, navigate your preferred browser to https://cloud.ibm.com and log in with your credentials (which you used for your TechZone reservation).
 
 2. On your IBM Cloud landing page, click the top left navigation menu (hamburger menu) and select **Resource list** (annotated with red rectangle).
-*Note: If you are a member of multiple IBM Cloud accounts, make sure you are working in the correct account (annotated with red oval) which has the required services available as explained in the [environment-setup](https://github.ibm.com/skol/agentic-ai-client-bootcamp/tree/staging/environment-setup) guide.*
+*Note: If you are a member of multiple IBM Cloud accounts, make sure you are working in the correct account (annotated with red oval) which has the required services available as explained in the [environment-setup](https://github.ibm.com/skol/agentic-ai-client-bootcamp/tree/release/v3.0.0/environment-setup) guide.*
+
 ![IBM Cloud Resource List](./images/ibm_cloud_resources.png) 
 
 3. On the Resource List page, expand the **AI / Machine Learning** section (annotated with red arrow), and click the **Watsonx Orchestrate** service (annotated with red rectangle) service name.
@@ -78,14 +79,12 @@ The Supervisor Agent oversees two domain-specific agents:
 It also handles general queries by routing them to a knowledge base.
 ```
 
-The natural language description of an agent is important as it is leveraged by the agentic solution to route user messages to the right agent skilled in addressing the request. For more details, please review the [Understanding the description attribute for AI Agent](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-creating#understanding-the-description-attribute-for-ai-agent) documentation.
-
 watsonx Orchestrate supports creating an agent from scratch or from a template which involves browsing a catalog of existing agents and using attributed of another agent as a template for the new agent. For this lab, you will be creating agents from scratch.
 
 *Note: It is recommended to review the [What are AI Agents?](https://www.ibm.com/think/topics/ai-agents) blog for some background on how AI agents work.*
 ![wxo order to cash agent](./images/img20.png) 
 
-### Agent Configuration with Knowledge Base
+### Agent Configuration 
 After the AI Agent is created, in this section, you will go through the process of configuring the agent with knowledge and tools to enable it to respond to queries using information from the knowledge base and perform tasks using the tools.
 
 9. Next, you will go through the process of configuring your agent. The Order-to-Cash Agent page is split in two halves. The right half is a **Preview** (annotated with red oval) chat interface that allows you to test the behavior of your agent. The left half of the page consits of four key sections (annotated with red rectangles) that you can use to configure your agent.
@@ -108,8 +107,11 @@ Lastly, after you've completed your agent configuration and tested its performan
 
 ![wxo create agent config](./images/img21.png) 
 
-10. On the agent configuration page, review the *Description* of the agent in the **Profile** section and keep as is (no edits necessary). Next, scroll down to the **Knowledge** section, or click the **Knowledge** shortcut (annotated with red oval). In the Knowledge section, add a description to inform the agent about the content of the knowledge. For this lab, add the following description as we will provide the agent with a Standard Operating Procedure(SOP) document.
-Description: ```This knowledge addresses all the queries related to Standard Operating Procedure (SOP).```
+10. On the agent configuration page, review the *Description* of the agent in the **Profile** section and keep as is (no edits necessary). Next, scroll down to the **Knowledge** section, or click the **Knowledge** shortcut (annotated with red oval). In the Knowledge section, add a description to inform the agent about the content of the knowledge. For this lab, add the following description as we will provide the agent with a Order to Cash process FAQs document.
+
+Description: 
+
+```This knowledge addresses all the queries related to Order to Cash process.```
 
 Next, you have to choose how to provide knowledge information to the agent. Watsonx Orchestrate supports adding knowledge to the agent either by uploading files directly through the UI or by pointing to a content repository (Mivlus or ElasticSearch). The [Adding knowledge to agents](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-knowledge) documentation provides more details. For this lab, click the **Upload files** button (annotated with red arrow) to upload pdf files.
 
@@ -117,14 +119,14 @@ Next, you have to choose how to provide knowledge information to the agent. Wats
 
 
 Drag and drop the following pdf files to upload to the knowledge for the agent :
-   - [SOP_Fulfilling_Orders.pdf](./SOP_Fulfilling_Orders.pdf)
-
-![wxo knowledge upload files](./images/img36.png) 
+   - [Order to Cash FAQs.pdf](./Order_to_Cash_FAQs.pdf)
 
 
 11. Once the files are all uploaded to the knowledge base, you can start testing the agent to validate how it can respond to questions using this knowledge base. The uploaded files get processed and prepared to be leveraged by the agent. After the upload completes, test the agent by asking a few questions such as:
-```Why Do You Need an SOP for Order Fulfilment? ```
-```How to Create an SOP for Order Fulfilment```
+
+```What should I do if there is an issue with my order delivery, such as delays or damaged goods? ```
+
+```What payment methods are accepted?```
 
 You should see the responses being retrieved from the uploaded documents and then the final response generated by the agent as illustrated in the figure below.
 
@@ -175,9 +177,9 @@ watsonx Orchestrate supports multiple approaches to adding tools to agents as ex
 Additionally, you can use the watsonx Orchestrate [Agentic Development Kit (ADK)](https://developer.watson-orchestrate.ibm.com/) to develop and upload Python and OpenAPI tools to a specific watsonx Orchestrate instance which you can then add to the agents.
 watsonx Orchestrate also supports the addition of [Model Context Protocol (MCP)](https://developer.watson-orchestrate.ibm.com/) tools. If you are not familiar with it, MCP is a standard for connecting AI Agents to systems where data lives including content repositories, business tools and development environments. MCP is becoming increasingly popular as the standard for enabling agents with tools.
 
-For purposes of the Order-to-Cash Agent, you will use the **Import** option to import an OpenAPI specification and define which operations to import as tools. You will need a [customer_support.yml](./customer_support.yml) file which will be provided by your instructor. 
+For purposes of the Order-to-Cash Agent, you will use the **Import** option to import an OpenAPI specification and define which operations to import as tools. You will need a Openapi spec file which will be provided by your instructor. 
 
-17. On the Import tool page, drag and drop the [customer_support.yml](./customer_support.yml) file provided by your instructor (annotated with red rectangle) and click **Next** (annotated with red arrow).
+17. On the Import tool page, drag and drop the customer_support spec file provided by your instructor (annotated with red rectangle) and click **Next** (annotated with red arrow).
 
 ![wxo tool import openapi](./images/img2.png) 
 
@@ -189,27 +191,110 @@ For purposes of the Order-to-Cash Agent, you will use the **Import** option to i
 
 20. Next, scroll further down to the **Behavior** section or click the **Behavior** shortcut (annotated with red oval) and add the following Instructions to guide the agent in its reasoning and orchestration.
 
-Behavior instructions: [Instructions](./customer_support_behavior.md)
+Behavior instructions: 
+
+```
+### **Trigger Condition**
+When a user initiates a conversation or asks a question containing the keyword
+```show me all my emails, customer service, i want to do customer support or related phrases```
+
+### **Step 1**: Display All Customer Emails
+* **Action**: Trigger the get_all_mails tool to fetch email all the data
+* **Response Format**: Present the table with all key columns: Email name, address, cc, bcc, subject, from the fetched data.
+* **Prompt**:
+    ```Here is the list of all available emails. 
+    | To Name                     | To Email Address                                              | Cc | Bcc | Subject                            |
+    | --------------------------- | ------------------------------------------------------------- | -- | --- | ---------------------------------- |
+    | Acme Corp - John Smith      | [john.smith@acmecorp.com](mailto:john.smith@acmecorp.com)     | —  | —   | Declined: Project Onboarding Call  |
+    | Globex Ltd - Maria Gonzales | [maria.gonzales@globex.com](mailto:maria.gonzales@globex.com) | —  | —   | Accepted: Quarterly Review Meeting |
+
+    Please select the email name/address you'd like to investigate further.	
+    ```
+
+### **Step 2**: Email Input & Validation
+* **Actio**n: Wait for the user to input an email name or address.
+* **Validation**:
+    * If not found, respond with: 
+    ```The selected email address is not in the list. Please choose a valid one from above.```
+    * If valid, proceed to the next step.
+
+### **Step 3**: Ask for Order ID to get the order update.
+* **Prompt**:
+    ```Please enter the Order ID for which you want to check the order update.```
+* **Action**: Wait for user input.
+
+### **Step 4**: Display Order Update
+* **Action**: Trigger the get_order_details_po_get tool with the provided Order ID.
+* **Response Format**: Display order update cleanly in a table format.
+
+### **Step 5**: Ask to Curate Email
+* **Prompt**:
+```Would you like me to draft an email with the above order update to the selected customer? (yes/no)```
+
+### **Step 6**: Draft Email
+* **Trigger Condition**: If user responds yes.
+* **Action**: Auto-generate email.
+* **Email Format**:
+    ```To:abc@acmecorp.com  
+    Subject: Update on Your Order xyzzy  
+    Dear abc,
+    Thank you for reaching out. Here are the details of your order:
+    - Order ID: xyzzy  
+    - Order Date: 25-01-2025  
+
+    Order is delayed as the ordered quantity is not available in the current inventory.  
+    Updated delivery date: 25-01-2025  
+
+    If you have any questions or require further assistance, please don't hesitate to contact us.
+
+    Best regards,  
+    Customer Support Team```
+* **Prompt**:
+```Would you like to send the above email to the customer now? (yes/no)```
+
+### **Step 7**: Send the Email
+* **Trigger Condition**: If the user selects yes to send the email.
+* **Response:
+```Email sent successfully to john.smith@acmecorp.com.```
+
+### **Design Principles**
+* Clean and intuitive step-by-step interaction
+* Input validation to reduce errors
+* Clear prompts at each stage to guide the user
+* Structured formatting for easy reading
+* Follows a real-world support workflow
+```
 
 ![wxo customer support agent behavior](./images/img6.png)
 
 21. Now that you have completed the creation of the agent and added the tools it requires, test the tools in the Preview section by asking a sample question such as:
-```I need to go to customer support ```
+
+```show me all emails ```
+
+```customer support```
 
 Observe the response which was based on the information returned by the Mail tool. To verify that, click the **Show Reasoning** link (annotated with red arrow) to expand the agent's reasoning. Note that the agent is correctly calling the **Get All Mails** tool (annotated with red oval) and it shows both input and output of the tool call.
 
 ![wxo tool mails](./images/img7.png) 
 ![wxo tool mails](./images/img8.png) 
 
-22. Test the **Customer Support Agent** further by giving follow-up responses for the questions.
+22. Test the **Customer Support Agent** further by giving the order_id to fetch the order details and later draft and send an email.
+You can use the order_ids given below to test:
+```
+716484927
+```
+```
+716000927
+```
 
 Again, observe the response and expand the **Show Reasoning** link to trace through the agent's reasoning which in this case correctly triggered the **Get Order Details** tool (annotated with red oval).
 
 ![wxo tool order](./images/img9.png) 
 ![wxo tool order](./images/img10.png)
 
-23. At this point, click the **Deploy** button to deploy the agent and makes it available to be used as a collaborator agent.
+23. At this point, you are ready to deploy your Agent. To do so, scroll to the bottom of the configuration page and make sure the slide bar next to Show agent (annotated with red arrow) is enabled (green) to make the Agent accessible on the chat interface. Click the **Deploy** button to deploy the agent and makes it available to be used as a collaborator agent.
 
+![wxo order managemen agent deploy](./images/show-chat.png)
 ![wxo o2c deploy](./images/img11.png) 
 
 *Congratulations!!* You have just completed developing the **Customer Support Agent** empowered with tools for returning email data and order updates.
@@ -227,7 +312,9 @@ In this section, you will build the **Order Management Agent**, a key collaborat
 
 Name: ```Order Management Agent```
 
-Description: ```This agent is designed to handle user queries related to order management. It retrieves purchase order (PO) details along with the corresponding quotation information, ensuring users receive accurate and up-to-date data. Once the information is retrieved, the agent responds with a confirmation message: "Your order has been placed successfully."```
+Description: 
+
+```This agent is designed to handle user queries related to order management. It retrieves purchase order (PO) details along with the corresponding quotation information, ensuring users receive accurate and up-to-date data. Once the information is retrieved, the agent responds with a confirmation message: "Your order has been placed successfully."```
 
 ![wxo create order management agent](./images/img12.png)
 
@@ -235,28 +322,90 @@ Description: ```This agent is designed to handle user queries related to order m
 
 28. As explained earlier, watsonx Orchestrate supports multiple approaches for adding tools to agents. For the Order Management Agent, you will leverage the **Import** functionality like you did earlier. Click the **Import** tile.
 
-29. On the Import tool page, drag and drop the [order_management.yml](./order_management.yml) file provided by your instructor (annotated with red rectangle) and click **Next** (annotated with red arrow).
+29. On the Import tool page, drag and drop the order_management spec file provided by your instructor (annotated with red rectangle) and click **Next** (annotated with red arrow).
 
 ![wxo order managemen agent tool import openapi](./images/img13.png) 
 
 30. Next, select the checkboxes for the **Fetch All POs**, **Get Po Detail**, **Get Quotation Details**, **Get Matching Details** and **Display Confirmation** operation (annotated with red arrow) and click **Done**.
 
-![wxo order managemen agent tool import operations](./images/img38.png) 
+![wxo order management agent tool import operations](./images/img38.png) 
 
 31. At this point, you will see the tool imported under the Tools subsection which means it is available for the **Order Management Agent**. 
 
 32. Scroll down further to the **Behavior** section of the agent configuration page and add the following **Instructions** to help guide the agent's behavior.
 
-Behavior instructions: [Instructions](./order_management_behavior.md)
+Behavior instructions: 
+```
+### **Trigger Condition**
+When a user initiates a conversation or asks a question containing the keyword 
+```show all orders or order management or i want to do order management or related phrases.```
 
-Next, test the functionality of the agent by asking a question such as ```I want some updates on Order management``` and its follow up questions and observe the response of the agent. Click the **Show Reasoning** link and note how the agent is correctly invoking the **Get All PO Details**, **Get Po Detail**, **Get Quotation Details**, **Get Matching Details** and **Display Confirmation** to retrieve relevant information.
+### **Step 1: Fetch and Display All POs**
+* **Action**: Automatically trigger the `fetch_all_pos` tool.
+* **Response Format (Example)**:
+  ```Here is a list of all purchase orders:
+  | PO Number   | POM ID | Submitted By     | User ID           |
+  |-------------|--------|------------------|-------------------|
+  | 4300016793  | 4697   | Sailendu Patra   | sailendu.patra    |
+  | 4200054529  | 3426   | Tannavi Snehal   | tannavi.snehal    |
+  Please enter the PO number you would like to view or manage.```
+
+### **Step 2: PO Number Input & Validation**
+* **Action**: Wait for user input (PO number).
+* **Validation**:
+  * If not found:
+    ```
+    No PO details found for the given PO number. Please try again or check your input.
+    ```
+  * If valid: Proceed to Step 3.
+
+### **Step 3: Retrieve & Display PO Number only**
+* **Action**: Call `get_po_details(po_number)` tool.
+* **Response Example**:
+  If the PO number is `4300016793`:
+  ```PO Number: 4300016793
+
+  Please confirm the PO details shown above. Do you want to proceed with this PO? (Yes/No)```
+
+### **Step 4: Fetch & Display Quotation number only**
+* **Trigger Condition**: If the user confirms the PO.
+* **Action**: Extract `quotation_number` from PO details and call `get_quotation_details(quotation_number)` tool.
+* **Response Example**:
+  If the extracted quotation number is `23MS2022002018`:
+  ```Quotation Number: 23MS2022002018
+
+  Please confirm the quotation details. Shall we proceed with placing the order? (Yes/No)```
+
+### **Step 5: Confirm and Place Order**
+* **Trigger Condition**: If the user confirms the quotation.
+* **Action**: Call `display_confirmation` tool.
+* **Response Example**:
+
+  ```The order was placed successfully. You can track your order with Order ID: #710004927```
+
+### **Design Principles**
+* Ensure **one confirmation at a time** — first PO, then quotation.
+* Avoid overwhelming the user with too much information at once.
+* Validate user inputs and provide friendly recovery prompts if something goes wrong.
+* Format messages clearly with clean markdown-style tables and highlights.
+```
+
+Next, test the functionality of the agent by asking a question such as
+
+ ```order management``` 
+
+  ```Show all orders``` 
+  
+  and its follow up questions and observe the response of the agent. Click the **Show Reasoning** link and note how the agent is correctly invoking the **Get All PO Details**, **Get Po Detail**, **Get Quotation Details**, **Get Matching Details** and **Display Confirmation** to retrieve relevant information.
 
 ![wxo order management agent behavior](./images/img16.png) 
 ![wxo order management agent behavior](./images/img17.png)
 ![wxo order management agent behavior](./images/img18.png)
+![wxo chat q3 reasoning](./images/img34.png)
 
-33. Next, click the **Deploy** button to deploy the agent and makes it available to be used as a collaborator agent.
+33. At this point, you are ready to deploy your Agent. To do so, scroll to the bottom of the configuration page and make sure the slide bar next to Show agent (annotated with red arrow) is enabled (green) to make the Agent accessible on the chat interface. Next, click the **Deploy** button to deploy the agent and makes it available to be used as a collaborator agent.
 
+![wxo order managemen agent deploy](./images/show-chat.png)
 ![wxo order managemen agent deploy](./images/img19.png) 
 
 *Congratulations!!* You have just completed developing the **Order Management Agent** empowered with tools for helping users retrieve PO and quotation details, validate input, and place orders efficiently.
@@ -286,22 +435,64 @@ Now that you have developed all agents and tools, in this section, you will work
 
 40. Scroll further down to the **Behavior** section or click the **Behavior** shortcut (annotated with red oval) and add the following **Instructions** to guide the agent in its reasoning and orchestration.
 
-Behavior instructions: [Instructions](./order-to-cash_behavior.md)
+Behavior instructions: 
+```
+## **Agent Role: Supervisor Agent** 
+  - This **Supervisor Agent** orchestrates and manages the flow of conversation by intelligently routing user queries to the appropriate   specialized agents based on the context.
+---
+
+###  **Responsibilities & Behavior**
+The Supervisor Agent oversees two domain-specific agents:
+1. **Order Management Agent**
+2. **Customer Support Agent**
+---
+
+###  **Triggering Logic**
+* **Order Management Queries**
+  *Trigger Condition*: When a user initiates a conversation or asks a question containing the keyword `order management` or related phrases.
+  *Action*: Automatically delegates the conversation to the **Order Management Agent**, which follows a structured step-by-step workflow to fetch and manage purchase orders and quotations.
+
+* **Customer Support Queries**
+  *Trigger Condition*: When the user asks for help using the keyword `customer support` or related intent.
+  *Action*: Passes control to the **Customer Support Agent**, which handles email-based inquiries, order updates, and customer communication workflows.
+---
+
+###  **Fallback Behavior for General Queries**
+* **Non-Domain-Specific Queries (e.g., O2C questions)**
+  *Trigger Condition*: When the user query does not relate to either order management or customer support.
+  *Action*: Supervisor Agent routes the query to a **knowledge retrieval system** and returns the most relevant answer **directly without stating fallback context**.
+---
+
+###  **Design Principles**
+* **Intent Recognition First**: Clearly detect and route based on user input context.
+* **Delegation, Not Duplication**: Does not handle detailed tasks but ensures the right agent is activated.
+* **Natural Interaction Flow**: Smooth transitions without disrupting the user experience.
+* **No Overlap Between Agents**: Maintains clear boundaries to avoid confusion.
+* **Direct Answers for O2C and Other Topics**: No extra framing or disclaimers—only the relevant response.
+
+```
 
 Test the agent behavior in the **Preview** section by asking the following sample question:
 
-Question: ```I want to go to customer support or customer support```
+Question: 
+
+```Show me all emails for customer service```
+
+``` customer support```
 
 Expand the **Show Reasoning** and **Step 1** links to review the reasoning of the agent. Note that it is correctly retreiving information as it references the **Customer Support Agent** tool.
 
 ![wxo knowledge base test](./images/img25.png) 
 
 41. Continue testing your agent now by stressing the order management agent functionality and Knowledge base. To do so, ask the following question.
-Question: ```I need some updates on order management or How to Create an SOP for Order Fulfilment``` 
+
+Question:
+
+ ```Show me all order details``` 
 
 42. At this point, you are ready to deploy your **Order-to-Cash Agent**. To do so, scroll to the bottom of the configuration page and make sure the slide bar next to **Show agent** (annotated with red arrow) is enabled (green) to make the **Order-to-Cash Agent** accessible on the chat interface. Click **Deploy** button (annotated with red arrow) to deploy your agent.
 
-![wxo financial analyst agent deploy](./images/img24.png)
+![wxo  agent deploy](./images/img24.png)
 
 *Congratulations!!* You have just developed and deployed the **Order-to-Cash Agent**.
 
@@ -316,29 +507,43 @@ Now that you have deployed your **Order-to-Cash Agent**, you can interact with t
 44. On the **Chat UI**, note that now you have the **Order-to-Cash Agent** (annotated with red rectangle) as one of the available agents you can chat with. As you add more and more agents, you can select which agent you'd like to interact with by selecting the agent drop down list (annotated with red arrow).
 With the **Order-to-Cash Agent** selected, try interacting by asking the following question and observe the response.
 
-Question: ```I need to go to customer support```
+Question: 
+
+```Show me all emails for customer service```
+
+``` customer support```
 
 ![wxo chat q1](./images/img26.png)
 
-45. Expand the **Show Reasoning** and **Step 1** sections (annotated with red arrows) to investigate the agent's reasoning in retrieving the response from **customer support agent** tool and continue to have a conversation with the customer support workflow.
+45. Expand the **Show Reasoning** and **Step 1** sections (annotated with red arrows) to investigate the agent's reasoning in retrieving the response from **customer support agent** tool and continue to have a conversation with the customer support workflow. 
+You can use the order_id given below to test:
+```
+716484927
+```
+```
+716000927
+```
 
 ![wxo chat q1 reasoning](./images/img26copy.png)
 ![wxo chat q1](./images/img27.png)
 
 46. Next, ask the following question to get response from knowledge base.
 
-Question: ```Why Do You Need an SOP for Order Fulfilment? or  What is a Standard Operating Procedure (SOP)? or How to Create an SOP for Order Fulfilment```
+Question:
+
+```What should I do if there is an issue with my order delivery, such as delays or damaged goods ```
+
+```What payment methods are accepted?```
+
+Expand the **Show Reasoning** and **Step 1** sections to investigate the agent's reasoning in retrieving the response. In this case, the agent leverages the **knowledge base** to retrieve the response.
 
 ![wxo chat q2](./images/img28.png)
 
-Again, expand the **Show Reasoning** and **Step 1** sections to investigate the agent's reasoning in retrieving the response. In this case, the agent leverages the **knowledge base** to retrieve the response.
+47. Next, try another question to retrieve the order details.
 
-![wxo chat q2 reasoning](./images/img29.png)
-![wxo chat q2 reasoning](./images/img30.png)
+Question: 
 
-47. Next, try another question to retrieve the order management details.
-
-Question: ```I want some updates on Order management```
+```I want some updates on my Order```
 
 Expand the **Show Reasoning** section and observe that the agent took 2 steps to retrieve the response for this question.
 
@@ -355,6 +560,6 @@ Feel free to explore and experience the power of Agents in action!
 ## Conclusion
 **Congratulations** on completing the hands-on lab portion of the bootcamp. 
 
-To recap, you have used watsonx Orchestrate no-code functionality to develop a **Order-to-Cash Agent** skilled at helping order placement, invoicing, enhance customer satisfaction, accelerate cash flow, and deliver measurable impact to the bottom line by integrating intelligent agents and enterprise systems. You then added knowledge to the agent by uploading knowledge documents in the form of pdf files capturing SOP information.
+To recap, you have used watsonx Orchestrate no-code functionality to develop a **Order-to-Cash Agent** skilled at helping order placement, invoicing, enhance customer satisfaction, accelerate cash flow, and deliver measurable impact to the bottom line by integrating intelligent agents and enterprise systems. You then added knowledge to the agent by uploading knowledge documents in the form of pdf files capturing O2C information.
 
-Next, you augrmented the **Order-to-Cash Agent** capabilities by developing two other agents, the **Order Management** and the **Customer Support Agent** which are empowered with tools to execute order management queries and also retrieve information from customer support regarding you order.
+Next, you augmented the **Order-to-Cash Agent** capabilities by developing two other agents, the **Order Management** and the **Customer Support Agent** which are empowered with tools to execute order management queries and also retrieve information from customer support regarding you order.

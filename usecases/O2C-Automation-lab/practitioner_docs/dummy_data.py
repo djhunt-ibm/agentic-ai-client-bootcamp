@@ -122,7 +122,13 @@ order_data = [{
     "order_id":"716484927",
     "order_date":"25-01-2025",
     "order_update":"Order is delayed as the ordered quantity is not available in the current inventory. Updated delivery date is 31-01-2025"
-}]
+},
+    {
+    "order_id":"716000927",
+    "order_date":"15-01-2025",
+    "order_update":"Order is shipped. Updated delivery date is 21-01-2025"
+    }
+              ]
 
 
 # Convert to DataFrames

@@ -21,7 +21,7 @@ The traditional approach of managing O2C through siloed systems and human interv
 
 ## 🎯 Objective
 
-This project aims to revolutionize the Order-to-Cash (O2C) process, one of the most critical pillars of business operations, by leveraging AI-powered agentic automation to eliminate manual inefficiencies, reduce errors, and accelerate cash realization. The goal is to design and deploy a multi-agent intelligent system that supports end-to-end automation of the O2C workflow, empowering business teams to deliver faster, more accurate, and customer-centric outcomes.
+This solution aims to revolutionize the Order-to-Cash (O2C) process, one of the most critical pillars of business operations, by leveraging AI-powered agentic automation to eliminate manual inefficiencies, reduce errors, and accelerate cash realization. The goal is to design and deploy a multi-agent intelligent system that supports end-to-end automation of the O2C workflow, empowering business teams to deliver faster, more accurate, and customer-centric outcomes.
 
 The AI-powered agentic solution will assist in executing the following key tasks:
 
