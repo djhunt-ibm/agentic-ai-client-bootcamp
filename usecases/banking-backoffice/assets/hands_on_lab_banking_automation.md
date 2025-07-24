@@ -442,7 +442,25 @@ In the preview window from the right, test with the following query:
 
   ![Select model](./images/i4.png)
 
-- In the **Knowledge** section, add the following to the **Description**:
+- In the **Knowledge** section. click on **Choose knowledge**.
+
+  ![Choose knowledge](./prod_info_ag_imgs/i13.png)
+
+- Click on **Upload files**.
+
+  ![Choose knowledge](./prod_info_ag_imgs/i12.png)
+
+- Click **Upload** to upload the listed documents below provided by the instructor
+
+  ```
+  list-of-prices-and-Services.pdf
+  ser-terms-conditions-debit-cards.pdf
+  Overdraft Services FAQ
+  ```
+  
+  ![Upload Documents](./prod_info_ag_imgs/i11.png)
+
+- In the **Description** section, add the following:
 
   ```
   This comprehensive knowledge base contains detailed information on GFM Bank's products, services, fees, and operational procedures, organized into the following categories:
@@ -499,17 +517,11 @@ In the preview window from the right, test with the following query:
 
   Each topic includes up-to-date information, regulatory disclosures where applicable, and internal cross-references to related products or services to facilitate comprehensive customer assistance.
   ```
-    ![Prod Agent Knowledge Description](./prod_info_ag_imgs/i4.png)
-  
-- Click **Upload files** under **Documents** to upload the listed documents below provided by the instructor
+    ![Prod Agent Knowledge Description](./prod_info_ag_imgs/i10.png)
 
-  ```
-  list-of-prices-and-Services.pdf
-  ser-terms-conditions-debit-cards.pdf
-  Overdraft Services FAQ
-  ```
-  
-  ![Upload Documents](./prod_info_ag_imgs/i3.png)
+- All the uploaded files and description will look like this:
+
+  ![Prod Agent Knowledge Description](./prod_info_ag_imgs/i9.png)
 
 - In the **Behavior** section, add the following to **Instructions**:
   ```
