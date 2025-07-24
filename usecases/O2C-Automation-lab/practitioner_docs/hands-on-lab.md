@@ -42,31 +42,31 @@ To access watsonx Orchestrate, follow these steps:
 
 1. If not already logged into your IBM Cloud account, navigate your preferred browser to https://cloud.ibm.com and log in with your credentials (which you used for your TechZone reservation).
 
-2. On your IBM Cloud landing page, click the top left navigation menu (hamburger menu) and select **Resource list** (annotated with red rectangle).
-*Note: If you are a member of multiple IBM Cloud accounts, make sure you are working in the correct account (annotated with red oval) which has the required services available as explained in the [environment-setup](https://github.ibm.com/skol/agentic-ai-client-bootcamp/tree/release/v3.0.0/environment-setup) guide.*
+2. On your IBM Cloud landing page, click the top left navigation menu (hamburger menu) and select **Resource list**.
+*Note: If you are a member of multiple IBM Cloud accounts, make sure you are working in the correct account which has the required services available as explained in the [environment-setup](https://github.ibm.com/skol/agentic-ai-client-bootcamp/tree/release/v3.0.0/environment-setup) guide.*
 
 ![IBM Cloud Resource List](./images/ibm_cloud_resources.png) 
 
-3. On the Resource List page, expand the **AI / Machine Learning** section (annotated with red arrow), and click the **Watsonx Orchestrate** service (annotated with red rectangle) service name.
+3. On the Resource List page, expand the **AI / Machine Learning** section, and click the **Watsonx Orchestrate** service service name.
 ![IBM Cloud wxo](./images/ibm_cloud_wxo.png) 
 
-4. Click **Launch watsonx Orchestrate** (annotated with red arrow) to launch the service.
+4. Click **Launch watsonx Orchestrate** to launch the service.
 ![wxo launch](./images/wxo-launch.png) 
 
-5. Once watsonx Orchestrate service is launched, you would be at its landing page as illustrated in the figure below. You will see an intuitive conversational interface with a chat field (annotated with red rectangle) where you can type any text to start interacting with watsonx Orchestrate. When you start with a new service instance, there will be no custom agents defined and thus, the section under **Agents** will state *No agents available*. You can either click **Create or Deploy** an agent under the Agents section or you can click **Create new agent** (annotated with red arrow) to start developing new agents. You can also select the **Manage agents** link to navigate to the agent management page.
+5. Once watsonx Orchestrate service is launched, you would be at its landing page as illustrated in the figure below. You will see an intuitive conversational interface with a chat field where you can type any text to start interacting with watsonx Orchestrate. When you start with a new service instance, there will be no custom agents defined and thus, the section under **Agents** will state *No agents available*. You can either click **Create or Deploy** an agent under the Agents section or you can click **Create new agent** to start developing new agents. You can also select the **Manage agents** link to navigate to the agent management page.
 Try to type a few generic questions and observe the responses from the large language model (LLM) powering the prebuilt agent in watsonx Orchestrate which ensures basic functionality until custom agents are created.
 ![wxo landing page](./images/wxo-landing-page.png) 
 
 ## Order-to-Cash Agent Creation
 In this section, you will go through the process of creating an AI agent in watsonx Orchestrate:
 
-6. To start building agents, you can click the **Create new agent** link as referenced in step 5 or alternatively, click the top left navigation menu, expand the **Build** section (annotated with red arrow) and select **Agent Builder** (annotated with red rectangle). This will redirect you to the Manage agents page.
+6. To start building agents, you can click the **Create new agent** link as referenced in step 5 or alternatively, click the top left navigation menu, expand the **Build** section and select **Agent Builder**. This will redirect you to the Manage agents page.
 ![wxo agent builder](./images/wxo-nav-menu-agent-builder.png) 
 
-7. The Manage agents page will initially be blank since no agents have been created yet. As you create more and more AI agents that can reason and act, the Manage agents page will be populated with those agents. Click **Create agent** button (annotated with red arrow) to start building your first agent.
+7. The Manage agents page will initially be blank since no agents have been created yet. As you create more and more AI agents that can reason and act, the Manage agents page will be populated with those agents. Click **Create agent** button to start building your first agent.
 ![wxo create agent](./images/wxo-create-agent-manage-agents-empty.png) 
 
-8. On the Create an agent page, select **Create from scratch** tile (annotated with red rectangle), provide a **Name** and a **Description** for the agent and click **Create** (annotated with red arrow).
+8. On the Create an agent page, select **Create from scratch** tile, provide a **Name** and a **Description** for the agent and click **Create**.
 
 Name: ```Order-to-Cash Agent```
 
@@ -87,7 +87,7 @@ watsonx Orchestrate supports creating an agent from scratch or from a template w
 ### Agent Configuration 
 After the AI Agent is created, in this section, you will go through the process of configuring the agent with knowledge and tools to enable it to respond to queries using information from the knowledge base and perform tasks using the tools.
 
-9. Next, you will go through the process of configuring your agent. The Order-to-Cash Agent page is split in two halves. The right half is a **Preview** (annotated with red oval) chat interface that allows you to test the behavior of your agent. The left half of the page consits of four key sections (annotated with red rectangles) that you can use to configure your agent.
+9. Next, you will go through the process of configuring your agent. The Order-to-Cash Agent page is split in two halves. The right half is a **Preview** chat interface that allows you to test the behavior of your agent. The left half of the page consits of four key sections that you can use to configure your agent.
 
    - Profile: The **Profile** section consists of the description of the agent which you provided as part of creating the agent. You can always go to this section to edit and refine the description of the agent as needed.
 
@@ -103,17 +103,17 @@ After the AI Agent is created, in this section, you will go through the process 
 
    *Note: For more details, please consult the [Adding instructions to agents](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-instructions) documentation.
 
-Lastly, after you've completed your agent configuration and tested its performance, you can **Deploy** the agent (annotated with red arrow) to make it available through the selected channel. At this time, the main channel supported is the *Chat* home page you access when you first launched watsonx Orchestrate. The product will be adding support for additional channels where you can deploy your agent(s).
+Lastly, after you've completed your agent configuration and tested its performance, you can **Deploy** the agent to make it available through the selected channel. At this time, the main channel supported is the *Chat* home page you access when you first launched watsonx Orchestrate. The product will be adding support for additional channels where you can deploy your agent(s).
 
 ![wxo create agent config](./images/img21.png) 
 
-10. On the agent configuration page, review the *Description* of the agent in the **Profile** section and keep as is (no edits necessary). Next, scroll down to the **Knowledge** section, or click the **Knowledge** shortcut (annotated with red oval). In the Knowledge section, add a description to inform the agent about the content of the knowledge. For this lab, add the following description as we will provide the agent with a Order to Cash process FAQs document.
+10. On the agent configuration page, review the *Description* of the agent in the **Profile** section and keep as is (no edits necessary). Next, scroll down to the **Knowledge** section, or click the **Knowledge** shortcut. In the Knowledge section, add a description to inform the agent about the content of the knowledge. For this lab, add the following description as we will provide the agent with a Order to Cash process FAQs document.
 
 Description: 
 
 ```This knowledge addresses all the queries related to Order to Cash process.```
 
-Next, you have to choose how to provide knowledge information to the agent. Watsonx Orchestrate supports adding knowledge to the agent either by uploading files directly through the UI or by pointing to a content repository (Mivlus or ElasticSearch). The [Adding knowledge to agents](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-knowledge) documentation provides more details. For this lab, click the **Upload files** button (annotated with red arrow) to upload pdf files.
+Next, you have to choose how to provide knowledge information to the agent. Watsonx Orchestrate supports adding knowledge to the agent either by uploading files directly through the UI or by pointing to a content repository (Mivlus or ElasticSearch). The [Adding knowledge to agents](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-knowledge) documentation provides more details. For this lab, click the **Upload files** button to upload pdf files.
 
 ![wxo agent config knowledge](./images/img35.png) 
 
@@ -140,11 +140,11 @@ In this section, you will create the Customer Support Agent, a collaborator agen
 
 12. If you are not at the watsonx Orchestrate landing page (chat interface), repeat the steps above to make sure you are logged into IBM Cloud, find the watsonx Orchestrate service and launch it to access the landing page.
 
-13. From the watsonx Orchestrate langding page, click **Create agent** (annotated with red rectangle) to start developing a new agent, the Customer Support Agent. 
+13. From the watsonx Orchestrate langding page, click **Create agent** to start developing a new agent, the Customer Support Agent. 
 
 ![wxo landing page create agent](./images/wxo-landing-page-create-agent.png) 
 
-14. On the Create an agent page, select **Create from scratch** tile , provide a **Name** and a **Description** for the agent and click **Create** (annotated with red arrow).
+14. On the Create an agent page, select **Create from scratch** tile , provide a **Name** and a **Description** for the agent and click **Create**.
 
 Name: ```Customer Support Agent```
 
@@ -156,11 +156,11 @@ As explained earlier, the decription of an agent is important as it is leveraged
 
 ![wxo create customer support agent](./images/img1.png) 
 
-15. On the agent configuration page, scroll down to **Toolset** section or click the shortcut (annotated with red oval). Then cick the **Add tool** button (annotated with red arrow) to bring up the window for adding tools to the agent.
+15. On the agent configuration page, scroll down to **Toolset** section or click the shortcut. Then cick the **Add tool** button to bring up the window for adding tools to the agent.
 
 ![wxo agent tools](./images/img3.png) 
 
-16. On the tool options pop-up, select **Import** (annotated with red rectangle) as illustrated in the figure below. 
+16. On the tool options pop-up, select **Import** as illustrated in the figure below. 
 
 ![wxo tool options](./images/img4.png) 
 
@@ -179,17 +179,17 @@ watsonx Orchestrate also supports the addition of [Model Context Protocol (MCP)]
 
 For purposes of the Order-to-Cash Agent, you will use the **Import** option to import an OpenAPI specification and define which operations to import as tools. You will need a Openapi spec file which will be provided by your instructor. 
 
-17. On the Import tool page, drag and drop the customer_support spec file provided by your instructor (annotated with red rectangle) and click **Next** (annotated with red arrow).
+17. On the Import tool page, drag and drop the **customer_support.yml** spec file provided by your instructor and click **Next**.
 
 ![wxo tool import openapi](./images/img2.png) 
 
-18. Next, select the checkboxes for the **Get Order Details** and **Get All Mails** operations (annotated with red arrow) and click **Done**.
+18. Next, select the checkboxes for the **Get Order Details** and **Get All Mails** operations and click **Done**.
 
 ![wxo tool import operations](./images/img5.png) 
 
 19. At this point, you will see the two tools imported under the Tools subsection which means they are available for the **Customer Support Agent** to use these tools in executing tasks. 
 
-20. Next, scroll further down to the **Behavior** section or click the **Behavior** shortcut (annotated with red oval) and add the following Instructions to guide the agent in its reasoning and orchestration.
+20. Next, scroll further down to the **Behavior** section or click the **Behavior** shortcut and add the following Instructions to guide the agent in its reasoning and orchestration.
 
 Behavior instructions: 
 
@@ -273,7 +273,7 @@ When a user initiates a conversation or asks a question containing the keyword
 
 ```customer support```
 
-Observe the response which was based on the information returned by the Mail tool. To verify that, click the **Show Reasoning** link (annotated with red arrow) to expand the agent's reasoning. Note that the agent is correctly calling the **Get All Mails** tool (annotated with red oval) and it shows both input and output of the tool call.
+Observe the response which was based on the information returned by the Mail tool. To verify that, click the **Show Reasoning** link to expand the agent's reasoning. Note that the agent is correctly calling the **Get All Mails** tool and it shows both input and output of the tool call.
 
 ![wxo tool mails](./images/img7.png) 
 ![wxo tool mails](./images/img8.png) 
@@ -287,12 +287,12 @@ You can use the order_ids given below to test:
 716000927
 ```
 
-Again, observe the response and expand the **Show Reasoning** link to trace through the agent's reasoning which in this case correctly triggered the **Get Order Details** tool (annotated with red oval).
+Again, observe the response and expand the **Show Reasoning** link to trace through the agent's reasoning which in this case correctly triggered the **Get Order Details** tool.
 
 ![wxo tool order](./images/img9.png) 
 ![wxo tool order](./images/img10.png)
 
-23. At this point, you are ready to deploy your Agent. To do so, scroll to the bottom of the configuration page and make sure the slide bar next to Show agent (annotated with red arrow) is enabled (green) to make the Agent accessible on the chat interface. Click the **Deploy** button to deploy the agent and makes it available to be used as a collaborator agent.
+23. At this point, you are ready to deploy your Agent. To do so, scroll to the bottom of the configuration page and make sure the slide bar next to Show agent is enabled (green) to make the Agent accessible on the chat interface. Click the **Deploy** button to deploy the agent and makes it available to be used as a collaborator agent.
 
 ![wxo order managemen agent deploy](./images/show-chat.png)
 ![wxo o2c deploy](./images/img11.png) 
@@ -304,17 +304,19 @@ In this section, you will build the **Order Management Agent**, a key collaborat
 
 24. If you are not at the watsonx Orchestrate landing page (chat interface), repeat the earlier steps to make sure you are logged into IBM Cloud, find the watsonx Orchestrate service and launch it to access the landing page.
 
-25. On the watsonx Orchestrate landing page, which is the Chat UI, click **Create new agent** link (annotated with red arrow) to start creating the Order Management Agent.
+25. On the watsonx Orchestrate landing page, which is the Chat UI, click **Create new agent** link to start creating the Order Management Agent.
 
 ![wxo landing page create agent](./images/wxo-landing-page-create-agent.png) 
 
-26. Repeat the steps you did earlier to create an agent from scratch and provide the following name and description for the order management agent. Click **Create** (annotated with red arrow).
+26. Repeat the steps you did earlier to create an agent from scratch and provide the following name and description for the order management agent. Click **Create**.
 
 Name: ```Order Management Agent```
 
 Description: 
 
-```This agent is designed to handle user queries related to order management. It retrieves purchase order (PO) details along with the corresponding quotation information, ensuring users receive accurate and up-to-date data. Once the information is retrieved, the agent responds with a confirmation message: "Your order has been placed successfully."```
+```
+This agent is designed to handle user queries related to order management. It retrieves purchase order (PO) details along with the corresponding quotation information, ensuring users receive accurate and up-to-date data. Once the information is retrieved, the agent responds with a confirmation message: "Your order has been placed successfully."
+```
 
 ![wxo create order management agent](./images/img12.png)
 
@@ -322,11 +324,11 @@ Description:
 
 28. As explained earlier, watsonx Orchestrate supports multiple approaches for adding tools to agents. For the Order Management Agent, you will leverage the **Import** functionality like you did earlier. Click the **Import** tile.
 
-29. On the Import tool page, drag and drop the order_management spec file provided by your instructor (annotated with red rectangle) and click **Next** (annotated with red arrow).
+29. On the Import tool page, drag and drop the **order_management.yml** spec file provided by your instructor and click **Next**.
 
 ![wxo order managemen agent tool import openapi](./images/img13.png) 
 
-30. Next, select the checkboxes for the **Fetch All POs**, **Get Po Detail**, **Get Quotation Details**, **Get Matching Details** and **Display Confirmation** operation (annotated with red arrow) and click **Done**.
+30. Next, select the checkboxes for the **Fetch All POs**, **Get Po Detail**, **Get Quotation Details**, **Get Matching Details** and **Display Confirmation** operation and click **Done**.
 
 ![wxo order management agent tool import operations](./images/img38.png) 
 
@@ -403,7 +405,7 @@ Next, test the functionality of the agent by asking a question such as
 ![wxo order management agent behavior](./images/img18.png)
 ![wxo chat q3 reasoning](./images/img34.png)
 
-33. At this point, you are ready to deploy your Agent. To do so, scroll to the bottom of the configuration page and make sure the slide bar next to Show agent (annotated with red arrow) is enabled (green) to make the Agent accessible on the chat interface. Next, click the **Deploy** button to deploy the agent and makes it available to be used as a collaborator agent.
+33. At this point, you are ready to deploy your Agent. To do so, scroll to the bottom of the configuration page and make sure the slide bar next to Show agent is enabled (green) to make the Agent accessible on the chat interface. Next, click the **Deploy** button to deploy the agent and makes it available to be used as a collaborator agent.
 
 ![wxo order managemen agent deploy](./images/show-chat.png)
 ![wxo order managemen agent deploy](./images/img19.png) 
@@ -415,25 +417,25 @@ Now that you have developed all agents and tools, in this section, you will work
 
 34. If you are not at the watsonx Orchestrate landing page (chat interface), repeat the earlier steps to make sure you are logged into IBM Cloud, find the watsonx Orchestrate service and launch it to access the landing page.
 
-35. On the watsonx Orchestrate landing page, which is the Chat UI, click **Manage agents** (annotated with red arrow).
+35. On the watsonx Orchestrate landing page, which is the Chat UI, click **Manage agents**.
 
 ![wxo landing page manage agents](./images/wxo-landing-page-manage-agents.png) 
 
-36. On the Manage agents page, select the **Order-to-Cash Agent** (annotated with red rectangle).
+36. On the Manage agents page, select the **Order-to-Cash Agent**.
 
 ![wxo collaborator agents](./images/img39.png) 
 
-37. On the **Order-to-Cash Agent** configuration page, scroll down to the **Toolset** section or click the **Toolset** shortcut (annotated with red oval), and then click **Add agent** (annotated with red arrow) to add a collaborator agent.
+37. On the **Order-to-Cash Agent** configuration page, scroll down to the **Toolset** section or click the **Toolset** shortcut, and then click **Add agent** to add a collaborator agent.
 
 38. On the pop-up, select **Add from local instance** tile. For reference, watsonx Orchestrate supports multiple approaches for adding collaborator agents. Please take a minute to consult the [Adding agents for orchestration](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-orchestration) documentation for an overview of the different approaches including the option to add a collaborator agent from a rich catalog of pre-built agents or from other agents defined on the local instance or even importing an external agent.
 
 ![wxo collaborator agents](./images/img22.png)  
 
-39. Select the checkbox next to both, the **Customer Support** and the **Order Management Agent** (annotated with red arrows) and click **Add to agent** button (annotated with red oval).
+39. Select the checkbox next to both, the **Customer Support** and the **Order Management Agent** and click **Add to agent** button.
 
 ![wxo financial analyst add collaborators](./images/img23.png) 
 
-40. Scroll further down to the **Behavior** section or click the **Behavior** shortcut (annotated with red oval) and add the following **Instructions** to guide the agent in its reasoning and orchestration.
+40. Scroll further down to the **Behavior** section or click the **Behavior** shortcut and add the following **Instructions** to guide the agent in its reasoning and orchestration.
 
 Behavior instructions: 
 ```
@@ -490,7 +492,7 @@ Question:
 
  ```Show me all order details``` 
 
-42. At this point, you are ready to deploy your **Order-to-Cash Agent**. To do so, scroll to the bottom of the configuration page and make sure the slide bar next to **Show agent** (annotated with red arrow) is enabled (green) to make the **Order-to-Cash Agent** accessible on the chat interface. Click **Deploy** button (annotated with red arrow) to deploy your agent.
+42. At this point, you are ready to deploy your **Order-to-Cash Agent**. To do so, scroll to the bottom of the configuration page and make sure the slide bar next to **Show agent** is enabled (green) to make the **Order-to-Cash Agent** accessible on the chat interface. Click **Deploy** button to deploy your agent.
 
 ![wxo  agent deploy](./images/img24.png)
 
@@ -500,11 +502,11 @@ Question:
 
 Now that you have deployed your **Order-to-Cash Agent**, you can interact with the agent using watsonx Orchestrate Conversational Interface.
 
-43. Click the top left navigation menu and select **Chat** (annotated with red rectangle) to access the conversational interface.
+43. Click the top left navigation menu and select **Chat** to access the conversational interface.
 
 ![wxo chat ui](./images/wxo-chat-ui.png)
 
-44. On the **Chat UI**, note that now you have the **Order-to-Cash Agent** (annotated with red rectangle) as one of the available agents you can chat with. As you add more and more agents, you can select which agent you'd like to interact with by selecting the agent drop down list (annotated with red arrow).
+44. On the **Chat UI**, note that now you have the **Order-to-Cash Agent** as one of the available agents you can chat with. As you add more and more agents, you can select which agent you'd like to interact with by selecting the agent drop down list.
 With the **Order-to-Cash Agent** selected, try interacting by asking the following question and observe the response.
 
 Question: 
@@ -515,7 +517,7 @@ Question:
 
 ![wxo chat q1](./images/img26.png)
 
-45. Expand the **Show Reasoning** and **Step 1** sections (annotated with red arrows) to investigate the agent's reasoning in retrieving the response from **customer support agent** tool and continue to have a conversation with the customer support workflow. 
+45. Expand the **Show Reasoning** and **Step 1** sections to investigate the agent's reasoning in retrieving the response from **customer support agent** tool and continue to have a conversation with the customer support workflow. 
 You can use the order_id given below to test:
 ```
 716484927
@@ -543,7 +545,7 @@ Expand the **Show Reasoning** and **Step 1** sections to investigate the agent's
 
 Question: 
 
-```I want some updates on my Order```
+```I want some updates on my order```
 
 Expand the **Show Reasoning** section and observe that the agent took 2 steps to retrieve the response for this question.
 
