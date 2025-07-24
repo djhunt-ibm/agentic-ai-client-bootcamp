@@ -1,7 +1,5 @@
 # Agentic Retail: Product shelf placement analysis
 
-<img src="https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/main/img/beta.png" width="100">
-
 ![](./images/d96343cd-808a-4f0e-971a-1e6bf9e58fb6.png)
 
 This use case is about an agent performing analysis of a product shelf, based on an image taken of that shelf. It will perform a search for market trends of the products, and make recommendations and create an action plan for potentially restructuring the shelf based on those trends. 
@@ -31,4 +29,6 @@ Additionally, this solution can help retailers to better understand their custom
 You can find step-by-step instructions in [this document](./retail.md). It shows how you can implement the use case using watsonx.ai and watsonx Orchestrate.
 
 ## Demo Video
-(Coming soon)
+https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/13654/3610ae1d-0c4f-424d-be83-115ce82c33f6
+
+
