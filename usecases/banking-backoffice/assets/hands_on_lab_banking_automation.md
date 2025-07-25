@@ -101,11 +101,12 @@ graph TD
     Orchestrator --> Teller[GFM Teller Agent]
     Orchestrator --> ProductInfo[GFM Product Information Agent]
 
+    Teller --> |balance-inquiry| API[Core Banking API]
+    Teller --> |iban-transfer| API
     Teller --> Backoffice[GFM Backoffice Agent]
-    Teller --> |check_balance| API[Core Banking API]
-    Teller --> |make_transfer| API
-    Backoffice --> |approve_overdraft| API
-    Backoffice --> |fee_reversal| API
+
+    Backoffice --> |approve-overdraft| API
+    Backoffice --> |fee-reversal| API
     ProductInfo --> |query| Knowledge[Knowledge Base]
     
     subgraph "Core Banking System"
