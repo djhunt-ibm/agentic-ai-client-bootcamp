@@ -45,7 +45,7 @@ Retrieves log-based insights using two external tools:
 ## 📝 Step-by-step Hands-on Lab
 You can find step-by-step instructions here :
 
-[Step-by-step hands-on guide]
+[Step-by-step hands-on guide](https://github.ibm.com/skol/agentic-ai-client-bootcamp/blob/release/v3.0.0/usecases/manufacturing/Manufacture_Hands_on.md)
 
 ## Demo Video
 A video demo of the solution is below:
