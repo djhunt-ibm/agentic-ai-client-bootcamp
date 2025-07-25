@@ -99,9 +99,9 @@ graph TD
 graph TD
     Customer[Customer] --> Orchestrator[GFM Bank Orchestrator Agent]
     Orchestrator --> Teller[GFM Teller Agent]
-    Orchestrator --> Backoffice[GFM Backoffice Agent]
     Orchestrator --> ProductInfo[GFM Product Information Agent]
-    
+
+    Teller --> Backoffice[GFM Backoffice Agent]
     Teller --> |check_balance| API[Core Banking API]
     Teller --> |make_transfer| API
     Backoffice --> |approve_overdraft| API
@@ -109,7 +109,7 @@ graph TD
     ProductInfo --> |query| Knowledge[Knowledge Base]
     
     subgraph "Core Banking System"
-        API --> |https://gfm-corebanking-backend.1944johjccn7.eu-de.codeengine.appdomain.cloud|Backend[Backend Services]
+        API --> Backend[Backend Services]
     end
 ```
 
@@ -158,17 +158,16 @@ In this lab, you'll build a complete Agentic AI solution for GFM Bank using wats
 ### Lab Steps Overview
 
 1. Connect to **watsonx Orchestrate**
-2. Create the GFM Teller Agent
-3. Create the GFM Backoffice Agent
-4. Create the GFM Product Information Agent
-5. Create the GFM Bank Orchestrator Agent
-6. Test the complete solution
+1. Create the GFM Backoffice Agent
+1. Create the GFM Teller Agent
+1. Create the GFM Product Information Agent
+1. Create the GFM Bank Orchestrator Agent
+1. Test the complete solution
 
 ### Extra Resources
 
 For additional support, you can access a [screen recording](https://ibm.box.com/s/vlnfp4b2kgdtczxufhhhdhqsheqslovy) of the instructions being completed on the watsonx Orchestrate UI.
 
-<br>
 
 ### 🚀🚀🚀 Let's get started! 🚀🚀🚀 <!-- omit in toc -->
 
@@ -198,7 +197,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 - Follow the steps according to the screenshot below.
   - Select **Create from scratch**
   - Name the Agent `GFM Teller`
-  - Use the following description:
+  - Add the following to **Description**:
     ```
     You are a Bank Teller Agent, responsible for providing accurate and professional assistance with banking transactions. 
 
@@ -300,13 +299,13 @@ What's the balance of my account IBAN DE89320895326389021994
 - Follow the steps according to the screenshot below
   - Select **Create from scratch**
   - Name the agent `GFM Backoffice`
-  - Use the following description:
+  - Add the following to **Description**:
     ```
     You are the GFM Bank Backoffice Agent, responsible for handling special banking operations that require elevated privileges. You work for GFM Bank operations center and have the authority to approve overdrafts and process fee reversals.
 
     Your Capabilities:
-    1. Approve overdraft limits using the `approve_overdraft` tool with an IBAN and amount (0-10,000 EUR)
-    2. Process fee reversals using the `fee_reversal` tool with an IBAN and amount
+    1. Approve overdraft limits using the `approve-overdraft` tool with an IBAN and amount (0-10,000 EUR)
+    2. Process fee reversals using the `fee-reversal` tool with an IBAN and amount
     ```
   - Click **Create**
     ![Back Office Agent Description](./backoffice_ag_imgs/i2.png)
@@ -395,7 +394,7 @@ In the preview window from the right, test with the following query:
 - Follow the steps according to the screenshot below
   - Select **Create from scratch**
   - Name the agent `GFM Product Information`
-  - Use the following **Description**:
+  - Add the following to **Description**:
     ```
     You are the GFM Bank Products Specialist, the expert resource for all banking products and services offered by GFM Bank. Your role is to provide accurate, helpful information about banking solutions while delivering an exceptional customer experience.
 
@@ -652,7 +651,7 @@ In the preview window from the right, test with the following query:
 - Follow the steps according to the screenshot below
   - Select **Create from scratch**
   - Name the agent `GFM Bank Orchestrator`
-  - Use the following description:
+  - Add the following to **Description**:
     ```
     You are the GFM Bank Branch Welcome Agent, the first point of contact for all customers visiting the bank branch virtually. Your primary role is to greet customers warmly, understand their needs, and connect them with the appropriate specialized banking agent.
     
