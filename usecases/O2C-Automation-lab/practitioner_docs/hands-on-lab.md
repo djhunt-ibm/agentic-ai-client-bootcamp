@@ -79,9 +79,8 @@ The Supervisor Agent oversees two domain-specific agents:
 It also handles general queries by routing them to a knowledge base.
 ```
 
-watsonx Orchestrate supports creating an agent from scratch or from a template which involves browsing a catalog of existing agents and using attributed of another agent as a template for the new agent. For this lab, you will be creating agents from scratch.
+Watsonx Orchestrate supports creating an agent from scratch or from a template which involves browsing a catalog of existing agents and using attributed of another agent as a template for the new agent. For this lab, you will be creating agents from scratch.
 
-*Note: It is recommended to review the [What are AI Agents?](https://www.ibm.com/think/topics/ai-agents) blog for some background on how AI agents work.*
 ![wxo order to cash agent](./images/img20.png) 
 
 ### Agent Configuration 
@@ -92,16 +91,10 @@ After the AI Agent is created, in this section, you will go through the process 
    - Profile: The **Profile** section consists of the description of the agent which you provided as part of creating the agent. You can always go to this section to edit and refine the description of the agent as needed.
 
    - Knowledge: The **Knowledge** section is where you can add knowledge to the agent. Adding knowledge to agents plays a crucial role in enhancing their conversational capabilities by providing them with the necessary information to generate accurate and contextually relevant responses for specific use cases. You can directly upload files to the agent, or connect to a Milvus or Elasticsearch instance as a content repository. Through this **Knowledge** interface, you can enable your AI agents to implement the Retrieval Augmented Generation (RAG) pattern which is a very popular AI pattern for grounding responses to a trusted source of data such as enterprise knowledge base.
-   
-   *Note: For more details, please consult the [Adding knowledge to agents](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-knowledge) documentation.*
 
    - Toolset: While *Knowledge* is how you empower agents with a trusted knowledge base, then **Toolset** is how you enable agents to take action by providing them with *Tools* and *Agents*. Agents can accomplish tasks by using **Tools** or can delegate tasks to other **Agents** which are deeply skilled in such tasks.
-
-   *Note: For more details, please consult the [Adding tools to an agent](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-tools) and [Adding agents for orchestration](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-orchestration) sections of the documentation.*
    
    - Behavior: The **Behavior** section of the agent configuration is where you provide instructions to the agent to define how it responds to user requests and situations. You can configure rules that dictate when and how the agent should take action. These rules help the agent behave in a predictable and consistent manner, delivering a seamless user experience.
-
-   *Note: For more details, please consult the [Adding instructions to agents](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-instructions) documentation.
 
 Lastly, after you've completed your agent configuration and tested its performance, you can **Deploy** the agent to make it available through the selected channel. At this time, the main channel supported is the *Chat* home page you access when you first launched watsonx Orchestrate. The product will be adding support for additional channels where you can deploy your agent(s).
 
@@ -113,7 +106,7 @@ Description:
 
 ```This knowledge addresses all the queries related to Order to Cash process.```
 
-Next, you have to choose how to provide knowledge information to the agent. Watsonx Orchestrate supports adding knowledge to the agent either by uploading files directly through the UI or by pointing to a content repository (Mivlus or ElasticSearch). The [Adding knowledge to agents](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-knowledge) documentation provides more details. For this lab, click the **Upload files** button to upload pdf files.
+Next, you have to choose how to provide knowledge information to the agent. Watsonx Orchestrate supports adding knowledge to the agent either by uploading files directly through the UI or by pointing to a content repository (Mivlus or ElasticSearch). For this lab, click the **Upload files** button to upload pdf files.
 
 ![wxo agent config knowledge](./images/img35.png) 
 
@@ -164,7 +157,7 @@ As explained earlier, the decription of an agent is important as it is leveraged
 
 ![wxo tool options](./images/img4.png) 
 
-watsonx Orchestrate supports multiple approaches to adding tools to agents as explained in the [Adding tools to an agent](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-tools) documentation:
+watsonx Orchestrate supports multiple approaches to adding tools to agents:
 
    - Add from catalog: The **Add from catalog** option enables you to add a tool from a rich catalog of pre-defined tools. The catalog of tools is actively being developed to make it even easier to add tools to agents.
 
@@ -173,9 +166,6 @@ watsonx Orchestrate supports multiple approaches to adding tools to agents as ex
    - Import: The **Import** option enables you to import an external tool using an OpenAPI specification and selecting which operations you want to import as tools.
 
    - Create a new flow: The **Create a new flow** option provides you with a drag and drop tool builder interface to create a sequence of steps that utilize conditional controls and activities. 
-
-Additionally, you can use the watsonx Orchestrate [Agentic Development Kit (ADK)](https://developer.watson-orchestrate.ibm.com/) to develop and upload Python and OpenAPI tools to a specific watsonx Orchestrate instance which you can then add to the agents.
-watsonx Orchestrate also supports the addition of [Model Context Protocol (MCP)](https://developer.watson-orchestrate.ibm.com/) tools. If you are not familiar with it, MCP is a standard for connecting AI Agents to systems where data lives including content repositories, business tools and development environments. MCP is becoming increasingly popular as the standard for enabling agents with tools.
 
 For purposes of the Order-to-Cash Agent, you will use the **Import** option to import an OpenAPI specification and define which operations to import as tools. You will need a Openapi spec file which will be provided by your instructor. 
 
@@ -292,7 +282,7 @@ Again, observe the response and expand the **Show Reasoning** link to trace thro
 ![wxo tool order](./images/img9.png) 
 ![wxo tool order](./images/img10.png)
 
-23. At this point, you are ready to deploy your Agent. To do so, scroll to the bottom of the configuration page and make sure the slide bar next to Show agent is enabled (green) to make the Agent accessible on the chat interface. Click the **Deploy** button to deploy the agent and makes it available to be used as a collaborator agent.
+23. At this point, you are ready to deploy your Agent. To do so, scroll to the bottom of the configuration page and make sure the slide bar next to Show agent is disabled. Click the **Deploy** button to deploy the agent and makes it available to be used as a collaborator agent.
 
 ![wxo order managemen agent deploy](./images/show-chat.png)
 ![wxo o2c deploy](./images/img11.png) 
@@ -405,7 +395,7 @@ Next, test the functionality of the agent by asking a question such as
 ![wxo order management agent behavior](./images/img18.png)
 ![wxo chat q3 reasoning](./images/img34.png)
 
-33. At this point, you are ready to deploy your Agent. To do so, scroll to the bottom of the configuration page and make sure the slide bar next to Show agent is enabled (green) to make the Agent accessible on the chat interface. Next, click the **Deploy** button to deploy the agent and makes it available to be used as a collaborator agent.
+33. At this point, you are ready to deploy your Agent. To do so, scroll to the bottom of the configuration page and make sure the slide bar next to Show agent is disabled. Next, click the **Deploy** button to deploy the agent and makes it available to be used as a collaborator agent.
 
 ![wxo order managemen agent deploy](./images/show-chat.png)
 ![wxo order managemen agent deploy](./images/img19.png) 
@@ -427,7 +417,7 @@ Now that you have developed all agents and tools, in this section, you will work
 
 37. On the **Order-to-Cash Agent** configuration page, scroll down to the **Toolset** section or click the **Toolset** shortcut, and then click **Add agent** to add a collaborator agent.
 
-38. On the pop-up, select **Add from local instance** tile. For reference, watsonx Orchestrate supports multiple approaches for adding collaborator agents. Please take a minute to consult the [Adding agents for orchestration](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-adding-orchestration) documentation for an overview of the different approaches including the option to add a collaborator agent from a rich catalog of pre-built agents or from other agents defined on the local instance or even importing an external agent.
+38. On the pop-up, select **Add from local instance** tile. For reference, watsonx Orchestrate supports multiple approaches for adding collaborator agents.
 
 ![wxo collaborator agents](./images/img22.png)  
 
