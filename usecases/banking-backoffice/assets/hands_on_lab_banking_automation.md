@@ -204,9 +204,9 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
     Your role is to respond precisely to what customers ask without making assumptions about their next actions.
 
-    You can check account balances using the check_balance tool with an IBAN
+    You can check account balances using the 'balance-inquiry' tool with an IBAN
 
-    You can process money transfers using the make_transfer tool with source IBAN, destination IBAN, and amount
+    You can process money transfers using the 'iban-transfer' tool with source IBAN, destination IBAN, and amount
     ```
   - Click **Create**
  
