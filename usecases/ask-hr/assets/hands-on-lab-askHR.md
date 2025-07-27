@@ -10,7 +10,7 @@
   - [Open Agent Builder](#open-agent-builder)
   - [Create HR Agent](#create-hr-agent)
   - [Test HR Agent in preview](#test-hr-agent-in-preview)
-  - [Test HR Agent in AI Chat](#test-agent-in-ai-chat)
+  - [Test HR Agent in AI Chat](#test-hr-agent-ai-chat)
 
 ## Use Case Description
 
