@@ -187,13 +187,109 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
   ![Agent Builder](./images/i3.png)
 
-### GFM Teller Agent
-
-#### Create GFM Teller Agent
+### GFM Backoffice Agent
+#### Create the GFM Backoffice Agent
 
 - Click on **Create Agent**
 
-  ![Create Agent](./teller_ag_imgs/i4.png)
+  ![Create Agent](./backoffice_ag_imgs/i1.png)
+
+- Follow the steps according to the screenshot below.
+  - Select **Create from scratch**
+  - Name the Agent `GFM Backoffice`
+  - Add the following to **Description**:
+    ```
+    You are the GFM Bank Backoffice Agent, responsible for handling special banking operations that require elevated privileges. You work for GFM Bank operations center and have the authority to approve overdrafts and process fee reversals.
+
+    Your Capabilities:
+    1. Approve overdraft limits using the `approve-overdraft` tool with an IBAN and amount (0-10,000 EUR)
+    2. Process fee reversals using the `fee-reversal` tool with an IBAN and amount
+    
+    ```
+  - Click **Create**
+ 
+    ![Back Office Agent Description](./backoffice_ag_imgs/i2.png)
+
+- On the GFM Backoffice page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
+
+  ![Select Model](./images/i4.png)
+
+- Take the defaults for **Profile**, **Voice modality**, and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button.
+
+  ![Add Tool](./backoffice_ag_imgs/i3.png)
+
+- Click on **Import**.
+
+  ![Import file](./backoffice_ag_imgs/i4.png)
+
+- Click on **Import from file**
+
+  ![Import from file](./images/i15.png)
+
+- Upload the `bank.json` API spec provided by the instructor.
+
+  ![Upload spec file](./images/i38.png)
+
+- Once the file is uploaded, select **Next**. Select the "Process a fee reversal to an account" and "Approve or modify overdraft limit for an account" **Operations** and click **Done**
+
+  ![Select Tools](./backoffice_ag_imgs/i7.png)
+
+- You should see the following under **Tools**:
+
+  ![Loaded tools](./backoffice_ag_imgs/i9.png)
+
+- In the **Behavior** section. Add the following text to the **Instructions**:
+  ```    
+  Key Instructions:
+  - Only execute operations that customers explicitly request
+  - Verify details before performing any operation
+  - Confirm all completed operations
+  - Explain any errors or limitations clearly
+  
+  Rules and Limitations:
+  - Overdraft limits must be between 1000 and 10,000 EUR
+  - Only process fee reversals when the customer provides a clear business reason
+  - Always verify the IBAN before processing any operation
+  - Maintain a professional and efficient demeanor
+  
+  Response Guidelines:
+  - For overdraft approvals: Confirm the new limit and account details
+  - For fee reversals: Confirm the amount reversed and the new account balance
+  - For errors: Explain the issue clearly and suggest alternative solutions when appropriate
+  - Always use clear, concise language that explains what was done
+  
+  Maintain a professional tone with appropriate formality for a banking representative with elevated privileges.
+  ```
+
+- Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator, we don't want to enable it for direct chat on the chat homepage. Disable the **Show agent** feature in the **Channels** section.
+
+  ![Instructions](./backoffice_ag_imgs/i11.png)
+
+#### Test the GFM Backoffice Agent
+
+In the preview window from the right, test with the following query:
+  ```
+  I want to request an overdraft of 1000 EURO for my account IBAN DE89320895326389021994
+  ```
+
+- Click on **Deploy** to deploy the agent
+
+  ![Deploy](./backoffice_ag_imgs/i10.png)
+
+- On the **Deploy Agent** page, click on **Deploy**
+
+  ![Deploy agent](./backoffice_ag_imgs/i13.png)
+
+### GFM Teller Agent
+#### Create GFM Teller Agent
+
+- Click on hamburger menu, then **Build** -> **Agent Builder**
+
+  ![Agent Builder](./images/i3.png)
+
+- Click on **Create Agent**
+
+  ![Create Agent](./teller_ag_imgs/i2.png)
 
 - Follow the steps according to the screenshot below.
   - Select **Create from scratch**
@@ -285,102 +381,7 @@ What's the balance of my account IBAN DE89320895326389021994
 - On the **Deploy Agent** screen, click on **Deploy**. The Agent is now available for others to interact with.
 
   ![Deploy agent](./teller_ag_imgs/i1.png)
-
-### GFM Backoffice Agent
-#### Create the GFM Backoffice Agent
-
-- Click on hamburger menu, then **Build** -> **Agent Builder**
-
-  ![Agent Builder](./images/i3.png)
-
-- On the next screen, click on **Create Agent**
-
-  ![Create Agent](./backoffice_ag_imgs/i1.png)
-
-- Follow the steps according to the screenshot below
-  - Select **Create from scratch**
-  - Name the agent `GFM Backoffice`
-  - Add the following to **Description**:
-    ```
-    You are the GFM Bank Backoffice Agent, responsible for handling special banking operations that require elevated privileges. You work for GFM Bank operations center and have the authority to approve overdrafts and process fee reversals.
-
-    Your Capabilities:
-    1. Approve overdraft limits using the `approve-overdraft` tool with an IBAN and amount (0-10,000 EUR)
-    2. Process fee reversals using the `fee-reversal` tool with an IBAN and amount
-    ```
-  - Click **Create**
-    ![Back Office Agent Description](./backoffice_ag_imgs/i2.png)
-
-- On the GFM Backoffice page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
-
-  ![Select Model](./images/i4.png)
-
-- Take the defaults for **Profile**, **Voice modality**, and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button.
-
-  ![Add Tool](./backoffice_ag_imgs/i3.png)
-
-- Click on **Import**.
-
-  ![Import file](./backoffice_ag_imgs/i4.png)
-
-- Click on **Import from file**
-
-  ![Import from file](./images/i15.png)
-
-- Upload the `bank.json` API spec provided by the instructor.
-
-  ![Upload spec file](./images/i38.png)
-
-- Once the file is uploaded, select **Next**. Select the "Process a fee reversal to an account" and "Approve or modify overdraft limit for an account" **Operations** and click **Done**
-
-  ![Select Tools](./backoffice_ag_imgs/i7.png)
-
-- You should see the following under **Tools**:
-
-  ![Loaded tools](./backoffice_ag_imgs/i9.png)
-
-- In the **Behavior** section. Add the following text to the **Instructions**:
-  ```    
-  Key Instructions:
-  - Only execute operations that customers explicitly request
-  - Verify details before performing any operation
-  - Confirm all completed operations
-  - Explain any errors or limitations clearly
   
-  Rules and Limitations:
-  - Overdraft limits must be between 1000 and 10,000 EUR
-  - Only process fee reversals when the customer provides a clear business reason
-  - Always verify the IBAN before processing any operation
-  - Maintain a professional and efficient demeanor
-  
-  Response Guidelines:
-  - For overdraft approvals: Confirm the new limit and account details
-  - For fee reversals: Confirm the amount reversed and the new account balance
-  - For errors: Explain the issue clearly and suggest alternative solutions when appropriate
-  - Always use clear, concise language that explains what was done
-  
-  Maintain a professional tone with appropriate formality for a banking representative with elevated privileges.
-  ```
-
-- Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator, we don't want to enable it for direct chat on the chat homepage. Disable the **Show agent** feature in the **Channels** section.
-
-  ![Instructions](./backoffice_ag_imgs/i11.png)
-
-#### Test the GFM Backoffice Agent
-
-In the preview window from the right, test with the following query:
-  ```
-  I want to request an overdraft of 1000 EURO for my account IBAN DE89320895326389021994
-  ```
-
-- Click on **Deploy** to deploy the agent
-
-  ![Deploy](./backoffice_ag_imgs/i10.png)
-
-- On the **Deploy Agent** page, click on **Deploy**
-
-  ![Deploy agent](./backoffice_ag_imgs/i13.png)
-
 ### GFM Product Information Agent
 #### Create GFM Product Information Agent
 
