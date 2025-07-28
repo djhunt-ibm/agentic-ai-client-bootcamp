@@ -235,11 +235,11 @@ To run it on your own laptop, you need to install
 
 Once you have these prerequisites available, you can install the ADK by following the instructions at [the ADK install page](https://developer.watson-orchestrate.ibm.com/getting_started/installing).
 
-> **Note**: These instructions were created for a specific version of the ADK, namely version **1.6.0**. We recommend you specify that version when running the install: `pip install ibm-watsonx-orchestrate==1.6.0`.
+> **Note**: These instructions were created for a specific version of the ADK, namely version **1.8.0**. We recommend you specify that version when running the install: `pip install ibm-watsonx-orchestrate==1.8.0`.
 
 You also need to install the watsonx Orchestrate Developer Edition, which is part of the ADK, by following the related [install instructions](https://developer.watson-orchestrate.ibm.com/getting_started/wxOde_setup). However, **DO NOT** set up the .env file as described in the instructions! You already have the right values in your .env file if you followed the instructions above.
 
-After you created the .env file with the values given to you, you can follow the instructions to start the server for the first time as documented [here](https://developer.watson-orchestrate.ibm.com/getting_started/wxOde_setup#installing-the-watsonx-orchestrate-developer-edition-with-adk). Note that the first time you run it, it will download all the required container images from the IBM image registry, which will take some time.
+After you created the .env file with the values given to you, you can follow the instructions to start the server for the first time as documented [here](https://developer.watson-orchestrate.ibm.com/getting_started/wxOde_setup#installing-the-watsonx-orchestrate-developer-edition-with-adk). Note that the first time you run it, it will download all the required container images from the IBM image registry, which will take some time. Also, make sure you specify the `-i` option to allow the server to collect telemetry data.
 
 #### Virtual machine
 
@@ -253,10 +253,10 @@ Alternatively, you can also use the built-in terminal window in VS Code, which i
 
 You can start the Orchestrate server by entering the following command:
 ```
-orchestrate server start --env-file .env
+orchestrate server start --env-file .env -i
 ```
 
-When running it for the first time, it may take a bit longer to start, depending on whether it has to download the latest versions of the container images (the images should all be cached in the virtual machine already, though).
+When running it for the first time, it may take a bit longer to start, depending on whether it has to download the latest versions of the container images (the images should all be cached in the virtual machine already, though). Note that the `-i` option tells the server to collect elemetry data that we can later use to monitor it.
 
 ![alt text](assets/image35.png)
 

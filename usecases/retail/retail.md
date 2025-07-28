@@ -351,7 +351,7 @@ Note how we divided the instructions into separate sections for persona, context
 
 ![alt text](images/image6.png)
 
-The `Show agent` switch controls whether or not the agent will be visible on the main watsonx Orchestrate page. We will leave this on for now, but eventually we will switch it off, because we want users to only use the supervisory agent (which we will create below).
+The `Show agent` switch, at the bottom of the agent configuration page, controls whether or not the agent will be visible on the main watsonx Orchestrate page. We will leave this on for now, but eventually we will switch it off, because we want users to only use the supervisory agent (which we will create below).
 
 We can now test our new agent right here in this page, using the `Preview` window. Let's test if both tools are properly invoked if we give the agent the right task. For example, we can give the agent a URL with the image, and then ask it to tell us about related market trends, like this:
 ```
@@ -368,10 +368,10 @@ We can now export the metadata for this agent into a YAML file. This allows us t
 
 ![alt text](images/image38.png)
 
-In the example above, the name of the agent is `internet_research_agent_4813Rr`.
+In the example above, the name of the agent is `internet_research_agent_9292aQ`.
 To export, simply enter the following command on the command line (replace the name of the agent after the '-n' parameter with the name of your agent):
 ```
-orchestrate agents export -n internet_research_agent_4813Rr -k native --agent-only -o internet_research_agent.yaml
+orchestrate agents export -n internet_research_agent_9292aQ -k native --agent-only -o internet_research_agent.yaml
 ```
 Feel free to study the content of the created YAML file. It has all the same content as what we typed into the Agent Builder UI before. Another interesting detail is the `llm` section. It shows which model is being used by this agent. If the agent you are creating does not perform to your satisfaction, you may want to try a different model.
 
@@ -381,7 +381,7 @@ Next we will define the `Market Analyst Agent`. Unlike in the previous example, 
 
 ```
 spec_version: v1
-style: react
+style: default
 name: market_analyst_agent
 llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
 description: >
@@ -410,13 +410,15 @@ The new agent is now listed next to the first two agents we deployed. Instad of 
 
 ![alt text](images/image10.png)
 
+Note how the test invocation we ran earlier is reflected in the `Total messages` section of this page. We will take a closer look at it later.
+
 ### The Retail Market Agent
 
 This agent is the user-facing agent, so to speak, that all requests go to. It will engage the other agents to address the task at hand. 
 We will import it the same way as the previous agent, namely by [YAML file](./src/agents/retail_market_agent.yaml). But let's first take a look at the content of that file:
 ```
 spec_version: v1
-style: react
+style: default
 name: retail_market_agent
 llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
 description: >
@@ -605,8 +607,8 @@ Remember that the values for the credentials are retrieved from the .env file. T
 
 Enter the following on the command line.
 ```
-./usecases/reatil/src/set-credentials.sh draft
-./usecases/reatil/src/set-credentials.sh live
+./usecases/retail/src/set-credentials.sh draft
+./usecases/retail/src/set-credentials.sh live
 ```
 
 ![alt text](images/image30.png)
@@ -642,7 +644,7 @@ Once the agent is deployed, go back to the `Manage agents` page by clicking on t
 
 ![alt text](images/image33.png)
 
-Now repeat the same exercise with the `market_analyst_agent`. However, you also need to add the two agents as collaborators, just like you did when using the ADK earlier.
+Now repeat the same exercise with the `market_analyst_agent` and the `retail_market_agent`. However, for the `retail_market_agent`, you also need to add the two agents as collaborators, just like you did when using the ADK earlier.
 
 We won't show detailed steps and screenshots here, because we are confident that by now, you are an expert in navigating the tool. 
 
