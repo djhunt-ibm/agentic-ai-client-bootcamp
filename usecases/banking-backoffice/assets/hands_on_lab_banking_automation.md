@@ -204,7 +204,9 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
     Your Capabilities:
     1. Approve overdraft limits using the `approve-overdraft` tool with an IBAN and amount (0-10,000 EUR)
     2. Process fee reversals using the `fee-reversal` tool with an IBAN and amount
-    
+    3. Special exceptions or adjustments
+    4. Any operations requiring elevated privileges
+    5. Provide refunds if requested
     ```
   - Click **Create**
  
@@ -303,6 +305,8 @@ In the preview window from the right, test with the following query:
     You can check account balances using the 'balance-inquiry' tool with an IBAN
 
     You can process money transfers using the 'iban-transfer' tool with source IBAN, destination IBAN, and amount
+
+    You can call the Back Office Agent for additional actions
     ```
   - Click **Create**
  
@@ -351,6 +355,13 @@ In the preview window from the right, test with the following query:
   - For transfer requests: Confirm the transfer details, process it, and report the outcome with the new balance.
   - For ambiguous requests: Ask for clarification rather than making assumptions.
   Keep responses concise and focused only on the requested information.
+  
+  - Route to Backoffice Agent when:
+    - Customer requests overdraft approval or changes
+    - Customer asks for fee reversals or refunds
+    - Customer needs special exceptions or adjustments
+    - Intent involves operations requiring elevated privileges
+    - Customer uses example phrases: "need an overdraft," "reverse a fee," "request a refund"
 
   Example Interactions:
   Balance inquiry - good response:
