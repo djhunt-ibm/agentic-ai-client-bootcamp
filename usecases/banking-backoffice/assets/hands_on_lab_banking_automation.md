@@ -13,12 +13,12 @@
   - [Lab Steps Overview](#lab-steps-overview)
   - [Extra Resources](#extra-resources)
 - [Connect to your assigned Watsonx Orchestrate instance](#connect-to-your-assigned-watsonx-orchestrate-instance)
-  - [GFM Teller Agent](#gfm-teller-agent)
-    - [Create GFM Teller Agent](#create-gfm-teller-agent)
-    - [Test the GFM Teller Agent](#test-the-gfm-teller-agent)
   - [GFM Backoffice Agent](#gfm-backoffice-agent)
     - [Create the GFM Backoffice Agent](#create-the-gfm-backoffice-agent)
     - [Test the GFM Backoffice Agent](#test-the-gfm-backoffice-agent)
+  - [GFM Teller Agent](#gfm-teller-agent)
+    - [Create GFM Teller Agent](#create-gfm-teller-agent)
+    - [Test the GFM Teller Agent](#test-the-gfm-teller-agent)
   - [GFM Product Information Agent](#gfm-product-information-agent)
     - [Create GFM Product Information Agent](#create-gfm-product-information-agent)
     - [Test the GFM Product Information Agent](#test-the-gfm-product-information-agent)
@@ -32,8 +32,6 @@
 - [📚 Resources](#-resources)
 - [📄 IBM Sample Code Disclaimer](#-ibm-sample-code-disclaimer)
 
-
-
 ## 🔍 Introduction
 
 Welcome to the GFM Bank Agentic AI Lab! In this hands-on workshop, you'll transform a traditional banking application into a modern, AI-powered solution using **watsonx Orchestrate**. The banking industry is undergoing rapid digital transformation, and GFM Bank is leading the way by implementing innovative AI agents to handle customer interactions.
@@ -46,7 +44,7 @@ GFM Bank faces challenges with traditional teller and back-office operations tha
 - Improve customer satisfaction through faster service
 - Free up human staff to handle more complex customer needs
 
-In this lab, you'll build a system of collaborating AI agents that can handle banking operations including:
+In this lab, you'll build a system of collaborating AI agents that can handle banking operations, including:
 
 - Account balance inquiries
 - Money transfers between accounts
@@ -354,7 +352,6 @@ In the preview window from the right, test with the following query:
   - For balance inquiries: Display the current balance, overdraft limit if available, and recent transactions. Then stop.
   - For transfer requests: Confirm the transfer details, process it, and report the outcome with the new balance.
   - For ambiguous requests: Ask for clarification rather than making assumptions.
-  Keep responses concise and focused only on the requested information.
   
   - Route to Backoffice Agent when:
     - Customer requests overdraft approval or changes
@@ -362,6 +359,8 @@ In the preview window from the right, test with the following query:
     - Customer needs special exceptions or adjustments
     - Intent involves operations requiring elevated privileges
     - Customer uses example phrases: "need an overdraft," "reverse a fee," "request a refund"
+
+  Keep responses concise and focused only on the requested information.
 
   Example Interactions:
   Balance inquiry - good response:
