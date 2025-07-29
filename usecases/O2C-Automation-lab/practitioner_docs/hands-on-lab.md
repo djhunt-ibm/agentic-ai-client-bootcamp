@@ -173,7 +173,7 @@ For purposes of the Order-to-Cash Agent, you will use the **Import** option to i
 
 ![wxo tool import openapi](./images/img2.png) 
 
-18. Next, select the checkboxes for the **Get Order Details** and **Get All Mails** operations and click **Done**.
+18. Next, select the checkboxes for the **Get Order Details**, **Get All Orders** and **Get All Mails** operations and click **Done**.
 
 ![wxo tool import operations](./images/img5.png) 
 
@@ -208,10 +208,10 @@ When a user initiates a conversation or asks a question containing the keyword
     ```The selected email address is not in the list. Please choose a valid one from above.```
     * If valid, proceed to the next step.
 
-### **Step 3**: Ask for Order ID to get the order update.
+### **Step 3**: Display all the orders from 'get All Order details' and Ask for Order ID to get the order update.
 * **Prompt**:
-    ```Please enter the Order ID for which you want to check the order update.```
-* **Action**: Wait for user input.
+    ```Here are the order details, please enter the Order ID for which you want to check the order update.```
+* **Action**: Display the all the order-ids and Wait for user input.
 
 ### **Step 4**: Display Order Update
 * **Action**: Trigger the get_order_details_po_get tool with the provided Order ID.
@@ -268,18 +268,12 @@ Observe the response which was based on the information returned by the Mail too
 ![wxo tool mails](./images/img7.png) 
 ![wxo tool mails](./images/img8.png) 
 
-22. Test the **Customer Support Agent** further by giving the order_id to fetch the order details and later draft and send an email.
-You can use the order_ids given below to test:
-```
-716484927
-```
-```
-716000927
-```
+22. Test the **Customer Support Agent** further by selecting the order_id to fetch the order details and later draft and send an email.
 
 Again, observe the response and expand the **Show Reasoning** link to trace through the agent's reasoning which in this case correctly triggered the **Get Order Details** tool.
 
-![wxo tool order](./images/img9.png) 
+![wxo tool order](./images/img9.1.png)
+![wxo tool order](./images/img9.png)  
 ![wxo tool order](./images/img10.png)
 
 23. At this point, you are ready to deploy your Agent. To do so, scroll to the bottom of the configuration page and make sure the slide bar next to Show agent is disabled. Click the **Deploy** button to deploy the agent and makes it available to be used as a collaborator agent.
@@ -508,13 +502,6 @@ Question:
 ![wxo chat q1](./images/img26.png)
 
 45. Expand the **Show Reasoning** and **Step 1** sections to investigate the agent's reasoning in retrieving the response from **customer support agent** tool and continue to have a conversation with the customer support workflow. 
-You can use the order_id given below to test:
-```
-716484927
-```
-```
-716000927
-```
 
 ![wxo chat q1 reasoning](./images/img26copy.png)
 ![wxo chat q1](./images/img27.png)
