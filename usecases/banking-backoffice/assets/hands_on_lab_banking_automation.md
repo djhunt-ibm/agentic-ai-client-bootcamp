@@ -13,12 +13,12 @@
   - [Lab Steps Overview](#lab-steps-overview)
   - [Extra Resources](#extra-resources)
 - [Connect to your assigned Watsonx Orchestrate instance](#connect-to-your-assigned-watsonx-orchestrate-instance)
-  - [GFM Teller Agent](#gfm-teller-agent)
-    - [Create GFM Teller Agent](#create-gfm-teller-agent)
-    - [Test the GFM Teller Agent](#test-the-gfm-teller-agent)
   - [GFM Backoffice Agent](#gfm-backoffice-agent)
     - [Create the GFM Backoffice Agent](#create-the-gfm-backoffice-agent)
     - [Test the GFM Backoffice Agent](#test-the-gfm-backoffice-agent)
+  - [GFM Teller Agent](#gfm-teller-agent)
+    - [Create GFM Teller Agent](#create-gfm-teller-agent)
+    - [Test the GFM Teller Agent](#test-the-gfm-teller-agent)
   - [GFM Product Information Agent](#gfm-product-information-agent)
     - [Create GFM Product Information Agent](#create-gfm-product-information-agent)
     - [Test the GFM Product Information Agent](#test-the-gfm-product-information-agent)
@@ -32,8 +32,6 @@
 - [📚 Resources](#-resources)
 - [📄 IBM Sample Code Disclaimer](#-ibm-sample-code-disclaimer)
 
-
-
 ## 🔍 Introduction
 
 Welcome to the GFM Bank Agentic AI Lab! In this hands-on workshop, you'll transform a traditional banking application into a modern, AI-powered solution using **watsonx Orchestrate**. The banking industry is undergoing rapid digital transformation, and GFM Bank is leading the way by implementing innovative AI agents to handle customer interactions.
@@ -46,7 +44,7 @@ GFM Bank faces challenges with traditional teller and back-office operations tha
 - Improve customer satisfaction through faster service
 - Free up human staff to handle more complex customer needs
 
-In this lab, you'll build a system of collaborating AI agents that can handle banking operations including:
+In this lab, you'll build a system of collaborating AI agents that can handle banking operations, including:
 
 - Account balance inquiries
 - Money transfers between accounts
@@ -99,17 +97,18 @@ graph TD
 graph TD
     Customer[Customer] --> Orchestrator[GFM Bank Orchestrator Agent]
     Orchestrator --> Teller[GFM Teller Agent]
-    Orchestrator --> Backoffice[GFM Backoffice Agent]
     Orchestrator --> ProductInfo[GFM Product Information Agent]
-    
-    Teller --> |check_balance| API[Core Banking API]
-    Teller --> |make_transfer| API
-    Backoffice --> |approve_overdraft| API
-    Backoffice --> |fee_reversal| API
+
+    Teller --> |balance-inquiry| API[Core Banking API]
+    Teller --> |iban-transfer| API
+    Teller --> Backoffice[GFM Backoffice Agent]
+
+    Backoffice --> |approve-overdraft| API
+    Backoffice --> |fee-reversal| API
     ProductInfo --> |query| Knowledge[Knowledge Base]
     
     subgraph "Core Banking System"
-        API --> |https://gfm-corebanking-backend.1944johjccn7.eu-de.codeengine.appdomain.cloud|Backend[Backend Services]
+        API --> Backend[Backend Services]
     end
 ```
 
@@ -158,17 +157,16 @@ In this lab, you'll build a complete Agentic AI solution for GFM Bank using wats
 ### Lab Steps Overview
 
 1. Connect to **watsonx Orchestrate**
-2. Create the GFM Teller Agent
-3. Create the GFM Backoffice Agent
-4. Create the GFM Product Information Agent
-5. Create the GFM Bank Orchestrator Agent
-6. Test the complete solution
+1. Create the GFM Backoffice Agent
+1. Create the GFM Teller Agent
+1. Create the GFM Product Information Agent
+1. Create the GFM Bank Orchestrator Agent
+1. Test the complete solution
 
 ### Extra Resources
 
 For additional support, you can access a [screen recording](https://ibm.box.com/s/vlnfp4b2kgdtczxufhhhdhqsheqslovy) of the instructions being completed on the watsonx Orchestrate UI.
 
-<br>
 
 ### 🚀🚀🚀 Let's get started! 🚀🚀🚀 <!-- omit in toc -->
 
@@ -187,128 +185,29 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
   ![Agent Builder](./images/i3.png)
 
-### GFM Teller Agent
-
-#### Create GFM Teller Agent
-
-- Click on **Create Agent**
-
-  ![Create Agent](./teller_ag_imgs/i4.png)
-
-- Follow the steps according to the screenshot below.
-  - Select **Create from scratch**
-  - Name the Agent `GFM Teller`
-  - Use the following description:
-    ```
-    You are a Bank Teller Agent, responsible for providing accurate and professional assistance with banking transactions. 
-
-    Your role is to respond precisely to what customers ask without making assumptions about their next actions.
-
-    You can check account balances using the check_balance tool with an IBAN
-
-    You can process money transfers using the make_transfer tool with source IBAN, destination IBAN, and amount
-    ```
-  - Click **Create**
- 
-    ![Create agent](./teller_ag_imgs/i5.png)
-
-- On the `GFM Teller` page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
-
-  ![Select model](./images/i4.png)
-
-- Take the defaults for **Profile**, **Voice modality**, and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button.
-
-  ![Add Tool](./teller_ag_imgs/i6.png)
-
-- Click on **Import**.
-
-  ![Import](./teller_ag_imgs/i7.png)
-
-- Click on **Import from file**.
-
-  ![Import from file](./images/i15.png)
-
-- Upload the `bank.json` API spec provided by the instructor. Once the file is uploaded, select **Next**.
-  
-  ![Upload spec file](./images/i38.png)
-
-- Select the "Check account balance by IBAN" and "Transfer Money between IBANs" **Operations** and click **Done**.
-
-  ![Select Operations](./teller_ag_imgs/i10.png)
-
-- You should see the following under **Tools**:
-  
-  ![Uploaded tools](./teller_ag_imgs/i12.png)
-
-- Go to the **Behavior** section. Add the following to the **Instructions**:
-
-  ```
-  - Respond ONLY to what the customer explicitly asks for - do not anticipate or suggest next steps
-  - After displaying balance information, end your response - DO NOT ask for transfer information or suggest making a transfer
-  - When processing a transfer request, confirm the details and clearly indicate whether it was successful
-  - If a transfer fails due to insufficient funds, inform the customer without suggesting solutions
-  - Only discuss overdraft options if the customer specifically asks about overdrafts
-  - Never make assumptions about what the customer wants to do next
-
-  Response Guidelines:
-  - For balance inquiries: Display the current balance, overdraft limit if available, and recent transactions. Then stop.
-  - For transfer requests: Confirm the transfer details, process it, and report the outcome with the new balance.
-  - For ambiguous requests: Ask for clarification rather than making assumptions.
-  Keep responses concise and focused only on the requested information.
-
-  Example Interactions:
-  Balance inquiry - good response:
-  - Customer: "What's my account balance for IBAN DE12345678?"
-  Agent: "Your current balance is 500 EUR. Your recent transactions include a deposit of 200 EUR on May 15 and a withdrawal of 50 EUR on May 16."
-  Transfer request - good response:
-  - Customer: "I want to transfer 100 EUR from my account DE12345678 to DE87654321."
-  Agent: "I've processed your transfer of 100 EUR from DE12345678 to DE87654321. The transfer was successful. Your new balance is 400 EUR."
-
-  Maintain a professional, helpful tone without unnecessary small talk or follow-up questions unless the customer asks for additional assistance.
-  ```
-
-- Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator Agent, we don't want to enable it for direct chat on the chat homepage. Disable the **Show agent** feature.
-
-  ![Show agent toggle](./teller_ag_imgs/i14.png)
-
-#### Test the GFM Teller Agent
-
-In the preview window on the right, test with the following query:
-```
-What's the balance of my account IBAN DE89320895326389021994
-```
-
-- Click on **Deploy** to deploy the agent
-
-  ![Deploy](./teller_ag_imgs/i13.png)
-
-- On the **Deploy Agent** screen, click on **Deploy**. The Agent is now available for others to interact with.
-
-  ![Deploy agent](./teller_ag_imgs/i1.png)
-
 ### GFM Backoffice Agent
 #### Create the GFM Backoffice Agent
 
-- Click on hamburger menu, then **Build** -> **Agent Builder**
-
-  ![Agent Builder](./images/i3.png)
-
-- On the next screen, click on **Create Agent**
+- Click on **Create Agent**
 
   ![Create Agent](./backoffice_ag_imgs/i1.png)
 
-- Follow the steps according to the screenshot below
+- Follow the steps according to the screenshot below.
   - Select **Create from scratch**
-  - Name the agent `GFM Backoffice`
-  - Use the following description:
+  - Name the Agent `GFM Backoffice`
+  - Add the following to **Description**:
     ```
     You are the GFM Bank Backoffice Agent, responsible for handling special banking operations that require elevated privileges. You work for GFM Bank operations center and have the authority to approve overdrafts and process fee reversals.
 
     Your Capabilities:
-    1. Approve overdraft limits using the `approve_overdraft` tool with an IBAN and amount (0-10,000 EUR)
-    2. Process fee reversals using the `fee_reversal` tool with an IBAN and amount
+    1. Approve overdraft limits using the `approve-overdraft` tool with an IBAN and amount (0-10,000 EUR)
+    2. Process fee reversals using the `fee-reversal` tool with an IBAN and amount
+    3. Special exceptions or adjustments
+    4. Any operations requiring elevated privileges
+    5. Provide refunds if requested
     ```
   - Click **Create**
+ 
     ![Back Office Agent Description](./backoffice_ag_imgs/i2.png)
 
 - On the GFM Backoffice page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
@@ -381,6 +280,130 @@ In the preview window from the right, test with the following query:
 
   ![Deploy agent](./backoffice_ag_imgs/i13.png)
 
+### GFM Teller Agent
+#### Create GFM Teller Agent
+
+- Click on hamburger menu, then **Build** -> **Agent Builder**
+
+  ![Agent Builder](./images/i3.png)
+
+- Click on **Create Agent**
+
+  ![Create Agent](./teller_ag_imgs/i2.png)
+
+- Follow the steps according to the screenshot below.
+  - Select **Create from scratch**
+  - Name the Agent `GFM Teller`
+  - Add the following to **Description**:
+    ```
+    You are a Bank Teller Agent, responsible for providing accurate and professional assistance with banking transactions. 
+
+    Your role is to respond precisely to what customers ask without making assumptions about their next actions.
+
+    You can check account balances using the 'balance-inquiry' tool with an IBAN
+
+    You can process money transfers using the 'iban-transfer' tool with source IBAN, destination IBAN, and amount
+
+    Route to Backoffice Agent when:
+      - Customer requests overdraft approval or changes
+      - Customer asks for fee reversals or refunds
+      - Customer needs special exceptions or adjustments
+      - Intent involves operations requiring elevated privileges
+      - Customer uses example phrases: "need an overdraft," "reverse a fee," "request a refund"
+    ```
+  - Click **Create**
+ 
+    ![Create agent](./teller_ag_imgs/i5.png)
+
+- On the `GFM Teller` page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
+
+  ![Select model](./images/i4.png)
+
+- Take the defaults for **Profile**, **Voice modality**, and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button.
+
+  ![Add Tool](./teller_ag_imgs/i6.png)
+
+- Click on **Import**.
+
+  ![Import](./teller_ag_imgs/i7.png)
+
+- Click on **Import from file**.
+
+  ![Import from file](./images/i15.png)
+
+- Upload the `bank.json` API spec provided by the instructor. Once the file is uploaded, select **Next**.
+  
+  ![Upload spec file](./images/i38.png)
+
+- Select the "Check account balance by IBAN" and "Transfer Money between IBANs" **Operations** and click **Done**.
+
+  ![Select Operations](./teller_ag_imgs/i10.png)
+
+- You should see the following under **Tools**:
+  
+  ![Uploaded tools](./teller_ag_imgs/i12.png)
+
+- In the **Agents** section, click on **Add Agent**
+
+  ![Uploaded tools](./teller_ag_imgs/i16.png)
+
+- Click **Add from local instance**
+
+  ![Uploaded tools](./teller_ag_imgs/i17.png)
+
+- Select **GFM Backoffice** and then the **Add to Agent button**
+
+  ![Uploaded tools](./teller_ag_imgs/i18.png)
+
+  ![Uploaded tools](./teller_ag_imgs/i19.png)
+
+- Go to the **Behavior** section. Add the following to the **Instructions**:
+
+  ```
+  - Respond ONLY to what the customer explicitly asks for - do not anticipate or suggest next steps
+  - After displaying balance information, end your response - DO NOT ask for transfer information or suggest making a transfer
+  - When processing a transfer request, confirm the details and clearly indicate whether it was successful
+  - If a transfer fails due to insufficient funds, inform the customer without suggesting solutions
+  - Only discuss overdraft options if the customer specifically asks about overdrafts
+  - Never make assumptions about what the customer wants to do next
+
+  Response Guidelines:
+  - For balance inquiries: Display the current balance, overdraft limit if available, and recent transactions. Then stop.
+  - For transfer requests: Confirm the transfer details, process it, and report the outcome with the new balance.
+  - For ambiguous requests: Ask for clarification rather than making assumptions.
+
+  Keep responses concise and focused only on the requested information.
+
+  Example Interactions:
+  Balance inquiry - good response:
+  - Customer: "What's my account balance for IBAN DE12345678?"
+  Agent: "Your current balance is 500 EUR. Your recent transactions include a deposit of 200 EUR on May 15 and a withdrawal of 50 EUR on May 16."
+  Transfer request - good response:
+  - Customer: "I want to transfer 100 EUR from my account DE12345678 to DE87654321."
+  Agent: "I've processed your transfer of 100 EUR from DE12345678 to DE87654321. The transfer was successful. Your new balance is 400 EUR."
+
+  Maintain a professional, helpful tone without unnecessary small talk or follow-up questions unless the customer asks for additional assistance.
+  ```
+
+- Since this agent will be a collaborator agent and will be invoked by GFM Bank Orchestrator Agent, we don't want to enable it for direct chat on the chat homepage. Disable the **Show agent** feature.
+
+  ![Show agent toggle](./teller_ag_imgs/i14.png)
+
+#### Test the GFM Teller Agent
+
+In the preview window on the right, test with the following query:
+```
+What's the balance of my account IBAN DE89320895326389021994
+```
+
+- Click on **Deploy** to deploy the agent
+
+  ![Deploy](./teller_ag_imgs/i13.png)
+
+- On the **Deploy Agent** screen, click on **Deploy**. The Agent is now available for others to interact with.
+
+  ![Deploy agent](./teller_ag_imgs/i1.png)
+  
 ### GFM Product Information Agent
 #### Create GFM Product Information Agent
 
@@ -395,7 +418,7 @@ In the preview window from the right, test with the following query:
 - Follow the steps according to the screenshot below
   - Select **Create from scratch**
   - Name the agent `GFM Product Information`
-  - Use the following **Description**:
+  - Add the following to **Description**:
     ```
     You are the GFM Bank Products Specialist, the expert resource for all banking products and services offered by GFM Bank. Your role is to provide accurate, helpful information about banking solutions while delivering an exceptional customer experience.
 
@@ -442,7 +465,25 @@ In the preview window from the right, test with the following query:
 
   ![Select model](./images/i4.png)
 
-- In the **Knowledge** section, add the following to the **Description**:
+- In the **Knowledge** section. click on **Choose knowledge**.
+
+  ![Choose knowledge](./prod_info_ag_imgs/i13.png)
+
+- Click on **Upload files** and then **Next**.
+
+  ![Choose knowledge](./prod_info_ag_imgs/i12.png)
+
+- Upload the listed documents below provided by the instructor and click **Next**
+
+  ```
+  list-of-prices-and-Services.pdf
+  ser-terms-conditions-debit-cards.pdf
+  Overdraft Services FAQ
+  ```
+  
+  ![Upload Documents](./prod_info_ag_imgs/i11.png)
+
+- In the **Description** section, add the following, then click **Save**:
 
   ```
   This comprehensive knowledge base contains detailed information on GFM Bank's products, services, fees, and operational procedures, organized into the following categories:
@@ -484,7 +525,7 @@ In the preview window from the right, test with the following query:
   - Foreign Currency Services: Exchange rates, currency availability, ordering procedures
   - International Wire Transfers: Fees, processing times, required information
   - Foreign Transaction Policies: Card usage abroad, international fees, currency conversion rates
-  - Foreign ATM Access: Global ATM network partnerships, withdrawal limits, associated fees
+  - Foreign ATM Access: Global ATM network partnerships, withdrawal limits, and associated fees
   
   7. Investment Services
   - Investment Account Options: Individual accounts, retirement accounts, education savings
@@ -499,17 +540,11 @@ In the preview window from the right, test with the following query:
 
   Each topic includes up-to-date information, regulatory disclosures where applicable, and internal cross-references to related products or services to facilitate comprehensive customer assistance.
   ```
-    ![Prod Agent Knowledge Description](./prod_info_ag_imgs/i4.png)
-  
-- Click **Upload files** under **Documents** to upload the listed documents below provided by the instructor
+    ![Prod Agent Knowledge Description](./prod_info_ag_imgs/i10.png)
 
-  ```
-  list-of-prices-and-Services.pdf
-  ser-terms-conditions-debit-cards.pdf
-  Overdraft Services FAQ
-  ```
-  
-  ![Upload Documents](./prod_info_ag_imgs/i3.png)
+- All the uploaded files and description will look like this:
+
+  ![Prod Agent Knowledge Description](./prod_info_ag_imgs/i9.png)
 
 - In the **Behavior** section, add the following to **Instructions**:
   ```
@@ -640,7 +675,7 @@ In the preview window from the right, test with the following query:
 - Follow the steps according to the screenshot below
   - Select **Create from scratch**
   - Name the agent `GFM Bank Orchestrator`
-  - Use the following description:
+  - Add the following to **Description**:
     ```
     You are the GFM Bank Branch Welcome Agent, the first point of contact for all customers visiting the bank branch virtually. Your primary role is to greet customers warmly, understand their needs, and connect them with the appropriate specialized banking agent.
     
@@ -658,15 +693,13 @@ In the preview window from the right, test with the following query:
     - Customer needs to check recent transactions
     - Intent involves day-to-day banking operations
     - Example phrases: "check my balance," "transfer money," "recent transactions"
-    
-    2. Route to Backoffice Agent when:
     - Customer requests overdraft approval or changes
     - Customer asks for fee reversals or refunds
     - Customer needs special exceptions or adjustments
     - Intent involves operations requiring elevated privileges
     - Example phrases: "need an overdraft," "reverse a fee," "request a refund"
     
-    3. Route to Banking Products Agent when:
+    2. Route to Banking Products Agent when:
     - Customer asks about available banking products
     - Customer wants information on interest rates
     - Customer inquires about loans, credit cards, or savings accounts
@@ -715,10 +748,10 @@ In the preview window from the right, test with the following query:
 
   ![Local Instance](./bank_orch_ag_imgs/i4.png)
 
-- Select **GFM Teller**, **GFM Backoffice**, **GFM Product Information** and then the **Add to Agent button**
+- Select **GFM Teller**, **GFM Product Information** and then the **Add to Agent button**
   
-  ![Select Agents](./bank_orch_ag_imgs/i5.png)
-  ![Add to Agent](./bank_orch_ag_imgs/i6.png)
+  ![Select Agents](./bank_orch_ag_imgs/i12.png)
+  ![Add to Agent](./bank_orch_ag_imgs/i13.png)
 
 - In the **Behavior** section, add the following for **Instructions**:
   ```
@@ -814,6 +847,10 @@ In the chat window, test with the following queries:
 ![Text Queries](./images/i36.png)
 
 ![Text Queries](./images/i37.png)
+
+- Example of **Backoffice Agent** functionality under **Teller Agent**
+
+  ![Text Queries](./bank_orch_ag_imgs/i14.png)
 
 ## 🎉 Congratulations! You have completed the lab!
 
