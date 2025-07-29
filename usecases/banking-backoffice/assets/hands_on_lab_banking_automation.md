@@ -304,7 +304,12 @@ In the preview window from the right, test with the following query:
 
     You can process money transfers using the 'iban-transfer' tool with source IBAN, destination IBAN, and amount
 
-    You can call the Back Office Agent for additional actions
+    Route to Backoffice Agent when:
+      - Customer requests overdraft approval or changes
+      - Customer asks for fee reversals or refunds
+      - Customer needs special exceptions or adjustments
+      - Intent involves operations requiring elevated privileges
+      - Customer uses example phrases: "need an overdraft," "reverse a fee," "request a refund"
     ```
   - Click **Create**
  
@@ -352,13 +357,6 @@ In the preview window from the right, test with the following query:
   - For balance inquiries: Display the current balance, overdraft limit if available, and recent transactions. Then stop.
   - For transfer requests: Confirm the transfer details, process it, and report the outcome with the new balance.
   - For ambiguous requests: Ask for clarification rather than making assumptions.
-  
-  - Route to Backoffice Agent when:
-    - Customer requests overdraft approval or changes
-    - Customer asks for fee reversals or refunds
-    - Customer needs special exceptions or adjustments
-    - Intent involves operations requiring elevated privileges
-    - Customer uses example phrases: "need an overdraft," "reverse a fee," "request a refund"
 
   Keep responses concise and focused only on the requested information.
 
