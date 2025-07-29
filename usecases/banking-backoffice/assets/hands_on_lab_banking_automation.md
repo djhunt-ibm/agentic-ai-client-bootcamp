@@ -471,7 +471,7 @@ What's the balance of my account IBAN DE89320895326389021994
   
   ![Upload Documents](./prod_info_ag_imgs/i11.png)
 
-- In the **Description** section, add the following:
+- In the **Description** section, add the following, then click **Save**:
 
   ```
   This comprehensive knowledge base contains detailed information on GFM Bank's products, services, fees, and operational procedures, organized into the following categories:
@@ -513,7 +513,7 @@ What's the balance of my account IBAN DE89320895326389021994
   - Foreign Currency Services: Exchange rates, currency availability, ordering procedures
   - International Wire Transfers: Fees, processing times, required information
   - Foreign Transaction Policies: Card usage abroad, international fees, currency conversion rates
-  - Foreign ATM Access: Global ATM network partnerships, withdrawal limits, associated fees
+  - Foreign ATM Access: Global ATM network partnerships, withdrawal limits, and associated fees
   
   7. Investment Services
   - Investment Account Options: Individual accounts, retirement accounts, education savings
