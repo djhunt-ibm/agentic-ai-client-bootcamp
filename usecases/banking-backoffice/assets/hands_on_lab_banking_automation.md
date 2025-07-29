@@ -457,11 +457,11 @@ What's the balance of my account IBAN DE89320895326389021994
 
   ![Choose knowledge](./prod_info_ag_imgs/i13.png)
 
-- Click on **Upload files**.
+- Click on **Upload files** and then **Next**.
 
   ![Choose knowledge](./prod_info_ag_imgs/i12.png)
 
-- Click **Upload** to upload the listed documents below provided by the instructor
+- Upload the listed documents below provided by the instructor and click **Next**
 
   ```
   list-of-prices-and-Services.pdf
