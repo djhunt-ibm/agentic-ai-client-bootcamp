@@ -693,15 +693,13 @@ In the preview window from the right, test with the following query:
     - Customer needs to check recent transactions
     - Intent involves day-to-day banking operations
     - Example phrases: "check my balance," "transfer money," "recent transactions"
-    
-    2. Route to Backoffice Agent when:
     - Customer requests overdraft approval or changes
     - Customer asks for fee reversals or refunds
     - Customer needs special exceptions or adjustments
     - Intent involves operations requiring elevated privileges
     - Example phrases: "need an overdraft," "reverse a fee," "request a refund"
     
-    3. Route to Banking Products Agent when:
+    2. Route to Banking Products Agent when:
     - Customer asks about available banking products
     - Customer wants information on interest rates
     - Customer inquires about loans, credit cards, or savings accounts
