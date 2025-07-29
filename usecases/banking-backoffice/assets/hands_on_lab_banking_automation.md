@@ -748,10 +748,10 @@ In the preview window from the right, test with the following query:
 
   ![Local Instance](./bank_orch_ag_imgs/i4.png)
 
-- Select **GFM Teller**, **GFM Backoffice**, **GFM Product Information** and then the **Add to Agent button**
+- Select **GFM Teller**, **GFM Product Information** and then the **Add to Agent button**
   
-  ![Select Agents](./bank_orch_ag_imgs/i5.png)
-  ![Add to Agent](./bank_orch_ag_imgs/i6.png)
+  ![Select Agents](./bank_orch_ag_imgs/i12.png)
+  ![Add to Agent](./bank_orch_ag_imgs/i13.png)
 
 - In the **Behavior** section, add the following for **Instructions**:
   ```
@@ -847,6 +847,10 @@ In the chat window, test with the following queries:
 ![Text Queries](./images/i36.png)
 
 ![Text Queries](./images/i37.png)
+
+- Example of **Backoffice Agent** functionality under **Teller Agent**
+
+  ![Text Queries](./bank_orch_ag_imgs/i14.png)
 
 ## 🎉 Congratulations! You have completed the lab!
 
