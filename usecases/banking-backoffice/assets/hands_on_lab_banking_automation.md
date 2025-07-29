@@ -343,6 +343,20 @@ In the preview window from the right, test with the following query:
   
   ![Uploaded tools](./teller_ag_imgs/i12.png)
 
+- In the **Agents** section, click on **Add Agent**
+
+  ![Uploaded tools](./teller_ag_imgs/i16.png)
+
+- Click **Add from local instance**
+
+  ![Uploaded tools](./teller_ag_imgs/i17.png)
+
+- Select **GFM Backoffice** and then the **Add to Agent button**
+
+  ![Uploaded tools](./teller_ag_imgs/i18.png)
+
+  ![Uploaded tools](./teller_ag_imgs/i19.png)
+
 - Go to the **Behavior** section. Add the following to the **Instructions**:
 
   ```
