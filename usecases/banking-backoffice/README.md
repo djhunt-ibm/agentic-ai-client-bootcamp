@@ -48,7 +48,24 @@ The **GFM Bank Agentic AI System**, powered by **Watson Orchestrate**, aims to m
 
 ## 🏛 Architecture
 
-![Architecture](banking-architecture.png)
+```mermaid
+graph TD
+    Customer[Customer] --> Orchestrator[GFM Bank Orchestrator Agent]
+    Orchestrator --> Teller[GFM Teller Agent]
+    Orchestrator --> ProductInfo[GFM Product Information Agent]
+
+    Teller --> |balance-inquiry| API[Core Banking API]
+    Teller --> |iban-transfer| API
+    Teller --> Backoffice[GFM Backoffice Agent]
+
+    Backoffice --> |approve-overdraft| API
+    Backoffice --> |fee-reversal| API
+    ProductInfo --> |query| Knowledge[Knowledge Base]
+    
+    subgraph "Core Banking System"
+        API --> Backend[Backend Services]
+    end
+```
 
 ---
 
