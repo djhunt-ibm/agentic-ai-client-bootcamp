@@ -82,24 +82,24 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/4-ia.png">
 
 - Under the **Toolset** section, click on the **Add tool** button to upload the OpenAPI Spec
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/5-ia.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/ia_tool_1.png">
 
 - Click on **Import**.
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/6-ia.png">
 
-- Upload the `duckduckgo.json` OpenAPI Spec which will be provided by the instructor.
+- Upload the `tavily.json` OpenAPI Spec which will be provided by the instructor.
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/7-ia.png">
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/8-ia.png">
 
 - Once the file is uploaded, select **Next**.
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/10-ia.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/ia_tool_2.png">
 
 - Select the all of the **Operations** and click **Done**
 
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/11-ia.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/ia_tool_3.png">
 
 - Go to the **Behavior** section. Add the following for **Instructions**. This will define how the Agent should behave and what it should expect:
   ```
