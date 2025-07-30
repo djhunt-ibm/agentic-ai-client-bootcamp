@@ -130,6 +130,13 @@ order_data = [{
     }
               ]
 
+user_emails = [
+    {"name": "Acme Corp - John Smith", "email": "john.smith@acmecorp.com"},
+    {"name": "Globex Ltd - Maria Gonzales", "email": "maria.gonzales@globex.com"},
+    {"name": "Initech Solutions - Raj Mehta", "email": "raj.mehta@initech.com"},
+    {"name": "Umbrella Inc - Lily Tran", "email": "lily.tran@umbrella.com"},
+    {"name": "Wayne Enterprises - Bruce Wayne", "email": "bruce.wayne@wayneenterprises.com"}
+]
 
 # Convert to DataFrames
 all_po_data_df = pd.DataFrame(all_po_data)
@@ -139,6 +146,7 @@ all_remittance_df = pd.DataFrame(all_remittance_data)
 remittance_data_df = pd.DataFrame(remittance_data)
 invoice_data_df = pd.DataFrame(invoice_data)
 order_data_df = pd.DataFrame(order_data)
+user_emails_df = pd.DataFrame(user_emails)
 
 
 selected_columns = ["payment_terms",

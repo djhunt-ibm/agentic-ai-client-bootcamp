@@ -96,6 +96,8 @@ After the AI Agent is created, in this section, you will go through the process 
    
    - Behavior: The **Behavior** section of the agent configuration is where you provide instructions to the agent to define how it responds to user requests and situations. You can configure rules that dictate when and how the agent should take action. These rules help the agent behave in a predictable and consistent manner, delivering a seamless user experience.
 
+   - Channels: The **Channels** section is where you can connect your agent to the channels your team uses to communicate (under preview). You can enable your agent to communicate via teams, WhatsApp with Twilio, Facebook messenger, Genesys Bot Connector.
+
 Lastly, after you've completed your agent configuration and tested its performance, you can **Deploy** the agent to make it available through the selected channel. At this time, the main channel supported is the *Chat* home page you access when you first launched watsonx Orchestrate. The product will be adding support for additional channels where you can deploy your agent(s).
 
 ![wxo create agent config](./images/img21.png) 
@@ -139,7 +141,7 @@ In this section, you will create the Customer Support Agent, a collaborator agen
 
 14. On the Create an agent page, select **Create from scratch** tile , provide a **Name** and a **Description** for the agent and click **Create**.
 
-Name: ```Customer Support Agent```
+Name: ```Customer Support```
 
 Description: 
 ```
@@ -156,6 +158,7 @@ As explained earlier, the decription of an agent is important as it is leveraged
 16. On the tool options pop-up, select **Import** as illustrated in the figure below. 
 
 ![wxo tool options](./images/img4.png) 
+![wxo tool options](./images/img4.1.png) 
 
 watsonx Orchestrate supports multiple approaches to adding tools to agents:
 
@@ -167,7 +170,7 @@ watsonx Orchestrate supports multiple approaches to adding tools to agents:
 
    - Create a new flow: The **Create a new flow** option provides you with a drag and drop tool builder interface to create a sequence of steps that utilize conditional controls and activities. 
 
-For purposes of the Order-to-Cash Agent, you will use the **Import** option to import an OpenAPI specification and define which operations to import as tools. You will need a Openapi spec file which will be provided by your instructor. 
+For purposes of the Order-to-Cash Agent, you will use the **Import** option and then **Import from file** to import an OpenAPI specification and define which operations to import as tools. You will need a Openapi spec file which will be provided by your instructor. 
 
 17. On the Import tool page, drag and drop the **customer_support.yml** spec file provided by your instructor and click **Next**.
 
@@ -193,35 +196,39 @@ When a user initiates a conversation or asks a question containing the keyword
 * **Response Format**: Present the table with all key columns: Email name, address, cc, bcc, subject, from the fetched data.
 * **Prompt**:
     ```Here is the list of all available emails. 
-    | To Name                     | To Email Address                                              | Cc | Bcc | Subject                            |
-    | --------------------------- | ------------------------------------------------------------- | -- | --- | ---------------------------------- |
-    | Acme Corp - John Smith      | [john.smith@acmecorp.com](mailto:john.smith@acmecorp.com)     | —  | —   | Declined: Project Onboarding Call  |
-    | Globex Ltd - Maria Gonzales | [maria.gonzales@globex.com](mailto:maria.gonzales@globex.com) | —  | —   | Accepted: Quarterly Review Meeting |
+    | To Name                     | To Email Address                                              |
+| --------------------------- | ------------------------------------------------------------- |
+| Acme Corp - John Smith      | [john.smith@acmecorp.com](mailto:john.smith@acmecorp.com)     |
+| Globex Ltd - Maria Gonzales | [maria.gonzales@globex.com](mailto:maria.gonzales@globex.com) |
 
-    Please select the email name/address you'd like to investigate further.	
+    Please select the customer name or email.	
     ```
 
 ### **Step 2**: Email Input & Validation
-* **Actio**n: Wait for the user to input an email name or address.
+* **Action**: Wait for the user to input an name or mail.
 * **Validation**:
     * If not found, respond with: 
     ```The selected email address is not in the list. Please choose a valid one from above.```
     * If valid, proceed to the next step.
 
-### **Step 3**: Display all the orders from 'get All Order details' and Ask for Order ID to get the order update.
+### **Step 3**: Display all the orders from 'get All Orders(2) ' first and Ask the user for Order ID from the displayed list to get the order update.
 * **Prompt**:
-    ```Here are the order details, please enter the Order ID for which you want to check the order update.```
+    ```Here are the list of order ids, please select an Order ID for which you want to check the order update.```
 * **Action**: Display the all the order-ids and Wait for user input.
 
 ### **Step 4**: Display Order Update
-* **Action**: Trigger the get_order_details_po_get tool with the provided Order ID.
+* **Action**: Trigger the get_order_details tool with the provided Order ID.
 * **Response Format**: Display order update cleanly in a table format.
 
-### **Step 5**: Ask to Curate Email
+### **Step 5**: Ask to contact the customer
+* **Prompt**:
+```Would you like to contact this customer regarding this order? (yes/no)```
+
+### **Step 6**: Ask to Curate Email
 * **Prompt**:
 ```Would you like me to draft an email with the above order update to the selected customer? (yes/no)```
 
-### **Step 6**: Draft Email
+### **Step 7**: Draft Email
 * **Trigger Condition**: If user responds yes.
 * **Action**: Auto-generate email.
 * **Email Format**:
@@ -242,7 +249,7 @@ When a user initiates a conversation or asks a question containing the keyword
 * **Prompt**:
 ```Would you like to send the above email to the customer now? (yes/no)```
 
-### **Step 7**: Send the Email
+### **Step 8**: Send the Email
 * **Trigger Condition**: If the user selects yes to send the email.
 * **Response:
 ```Email sent successfully to john.smith@acmecorp.com.```
@@ -253,6 +260,7 @@ When a user initiates a conversation or asks a question containing the keyword
 * Clear prompts at each stage to guide the user
 * Structured formatting for easy reading
 * Follows a real-world support workflow
+
 ```
 
 ![wxo customer support agent behavior](./images/img6.png)
@@ -268,11 +276,10 @@ Observe the response which was based on the information returned by the Mail too
 ![wxo tool mails](./images/img7.png) 
 ![wxo tool mails](./images/img8.png) 
 
-22. Test the **Customer Support Agent** further by selecting the order_id to fetch the order details and later draft and send an email.
+22. Test the **Customer Support Agent** further by selecting the order_id to fetch the order details and later contact the customer and draft and send an email.
 
 Again, observe the response and expand the **Show Reasoning** link to trace through the agent's reasoning which in this case correctly triggered the **Get Order Details** tool.
 
-![wxo tool order](./images/img9.1.png)
 ![wxo tool order](./images/img9.png)  
 ![wxo tool order](./images/img10.png)
 
@@ -294,7 +301,7 @@ In this section, you will build the **Order Management Agent**, a key collaborat
 
 26. Repeat the steps you did earlier to create an agent from scratch and provide the following name and description for the order management agent. Click **Create**.
 
-Name: ```Order Management Agent```
+Name: ```Order Management```
 
 Description: 
 
@@ -306,7 +313,7 @@ This agent is designed to handle user queries related to order management. It re
 
 27. On the agent configuration page, scroll down to the **Toolset** section or click the **Toolset** shortcut, then click **Add tool**.
 
-28. As explained earlier, watsonx Orchestrate supports multiple approaches for adding tools to agents. For the Order Management Agent, you will leverage the **Import** functionality like you did earlier. Click the **Import** tile.
+28. As explained earlier, watsonx Orchestrate supports multiple approaches for adding tools to agents. For the Order Management Agent, you will leverage the **Import** functionality like you did earlier. Click the **Import from file** tile.
 
 29. On the Import tool page, drag and drop the **order_management.yml** spec file provided by your instructor and click **Next**.
 
@@ -345,22 +352,18 @@ When a user initiates a conversation or asks a question containing the keyword
     ```
   * If valid: Proceed to Step 3.
 
-### **Step 3: Retrieve & Display PO Number only**
+### **Step 3: Retrieve & Display PO details in a table format**
 * **Action**: Call `get_po_details(po_number)` tool.
 * **Response Example**:
-  If the PO number is `4300016793`:
-  ```PO Number: 4300016793
 
-  Please confirm the PO details shown above. Do you want to proceed with this PO? (Yes/No)```
+  ```Please confirm the PO details shown above. Do you want to proceed with this PO? (Yes/No)```
 
-### **Step 4: Fetch & Display Quotation number only**
+### **Step 4: Fetch & Display Quotation details in table format**
 * **Trigger Condition**: If the user confirms the PO.
 * **Action**: Extract `quotation_number` from PO details and call `get_quotation_details(quotation_number)` tool.
 * **Response Example**:
-  If the extracted quotation number is `23MS2022002018`:
-  ```Quotation Number: 23MS2022002018
 
-  Please confirm the quotation details. Shall we proceed with placing the order? (Yes/No)```
+  ```  Please confirm the quotation details. Shall we proceed with placing the order? (Yes/No)```
 
 ### **Step 5: Confirm and Place Order**
 * **Trigger Condition**: If the user confirms the quotation.
@@ -374,6 +377,7 @@ When a user initiates a conversation or asks a question containing the keyword
 * Avoid overwhelming the user with too much information at once.
 * Validate user inputs and provide friendly recovery prompts if something goes wrong.
 * Format messages clearly with clean markdown-style tables and highlights.
+
 ```
 
 Next, test the functionality of the agent by asking a question such as
@@ -387,7 +391,7 @@ Next, test the functionality of the agent by asking a question such as
 ![wxo order management agent behavior](./images/img16.png) 
 ![wxo order management agent behavior](./images/img17.png)
 ![wxo order management agent behavior](./images/img18.png)
-![wxo chat q3 reasoning](./images/img34.png)
+![wxo chat q3 reasoning](./images/img34.0.png)
 
 33. At this point, you are ready to deploy your Agent. To do so, scroll to the bottom of the configuration page and make sure the slide bar next to Show agent is disabled. Next, click the **Deploy** button to deploy the agent and makes it available to be used as a collaborator agent.
 
@@ -490,7 +494,7 @@ Now that you have deployed your **Order-to-Cash Agent**, you can interact with t
 
 ![wxo chat ui](./images/wxo-chat-ui.png)
 
-44. On the **Chat UI**, note that now you have the **Order-to-Cash Agent** as one of the available agents you can chat with. As you add more and more agents, you can select which agent you'd like to interact with by selecting the agent drop down list.
+44. On the **Chat UI**, note that now you have the **Order-to-Cash** as one of the available agents you can chat with. As you add more and more agents, you can select which agent you'd like to interact with by selecting the agent drop down list.
 With the **Order-to-Cash Agent** selected, try interacting by asking the following question and observe the response.
 
 Question: 
