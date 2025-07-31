@@ -44,7 +44,6 @@ To access watsonx Orchestrate, follow these steps:
 
 2. On your IBM Cloud landing page, click the top left navigation menu (hamburger menu) and select **Resource list**.
 *Note: If you are a member of multiple IBM Cloud accounts, make sure you are working in the correct account which has the required services available as explained in the [environment-setup](https://github.ibm.com/skol/agentic-ai-client-bootcamp/tree/release/v3.0.0/environment-setup) guide.*
-
 ![IBM Cloud Resource List](./images/ibm_cloud_resources.png) 
 
 3. On the Resource List page, expand the **AI / Machine Learning** section, and click the **Watsonx Orchestrate** service service name.
@@ -439,11 +438,11 @@ The Supervisor Agent oversees two domain-specific agents:
 
 ###  **Triggering Logic**
 * **Order Management Queries**
-  *Trigger Condition*: When a user initiates a conversation or asks a question containing the keyword `order management` or related phrases.
+  *Trigger Condition*: When a user initiates a conversation or asks a question containing the keyword `show me all orders`,'manage orders' or related phrases.
   *Action*: Automatically delegates the conversation to the **Order Management Agent**, which follows a structured step-by-step workflow to fetch and manage purchase orders and quotations.
 
 * **Customer Support Queries**
-  *Trigger Condition*: When the user asks for help using the keyword `customer support` or related intent.
+  *Trigger Condition*: When the user asks for help using the keyword 'show me all emails', `customer support` or related intent.
   *Action*: Passes control to the **Customer Support Agent**, which handles email-based inquiries, order updates, and customer communication workflows.
 ---
 
@@ -509,6 +508,7 @@ Question:
 
 ![wxo chat q1 reasoning](./images/img26copy.png)
 ![wxo chat q1](./images/img27.png)
+![wxo chat q1](./images/img27.1.png)
 
 46. Next, ask the following question to get response from knowledge base.
 
@@ -526,7 +526,7 @@ Expand the **Show Reasoning** and **Step 1** sections to investigate the agent's
 
 Question: 
 
-```I want some updates on my order```
+```Show me all orders```
 
 Expand the **Show Reasoning** section and observe that the agent took 2 steps to retrieve the response for this question.
 
@@ -536,7 +536,7 @@ Expand the **Step 1** and **Step 2** sections and observe the agent transferring
 ![wxo chat q3 reasoning](./images/img31.png)
 ![wxo chat q3 reasoning](./images/img32.png)
 ![wxo chat q3 reasoning](./images/img33.png)
-![wxo chat q3 reasoning](./images/img34.png)
+
 
 Feel free to explore and experience the power of Agents in action! 
 
