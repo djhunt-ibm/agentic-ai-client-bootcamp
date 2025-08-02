@@ -66,25 +66,25 @@ In this lab we will build an HR agent in watsonx Orchestrate, leveraging tools a
    <img width="1000" alt="image" src="hands-on-lab-assets/step_4_v2.png">
    
 4. Select "Default" in **Agent style** section.
-5. 
+
    <img width="1000" alt="image" src="hands-on-lab-assets/step_5_v2.png">
    
-6. Scroll down the screen to the **Knowledge** section.
+5. Scroll down the screen to the **Knowledge** section.
    Click on "Choose knowledge".
    
-  <img width="1000" alt="image" src="hands-on-lab-assets/step_6_v3.png">
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_6_v3.png">
   
-7. Select Upload files.
+6. Select Upload files.
    Click on Next.
    
-     <img width="1000" alt="image" src="hands-on-lab-assets/step_7_v3.png">
+  <img width="1000" alt="image" src="hands-on-lab-assets/step_7_v3.png">
      
-9. Download the [Employee Benefits.pdf](/usecases/ask-hr/assets/Employee-Benefits.pdf) onto your system, then upload the file here.
+7. Download the [Employee Benefits.pdf](/usecases/ask-hr/assets/Employee-Benefits.pdf) onto your system, then upload the file here.
    Click on Next.
 
- <img width="1000" alt="image" src="hands-on-lab-assets/step_8_v3.png">
+  <img width="1000" alt="image" src="hands-on-lab-assets/step_8_v3.png">
 
- 9.   Copy the following description into the **Description** section:
+ 8.   Copy the following description into the **Description** section:
 
    ```
    This knowledge base addresses the company's employee benefits, including parental leaves, pet policy, flexible work arrangements, and student loan repayment.
@@ -92,29 +92,29 @@ In this lab we will build an HR agent in watsonx Orchestrate, leveraging tools a
 
    Click on "Save".
    
- <img width="1000" alt="image" src="hands-on-lab-assets/step_8.1_v3.png">
+  <img width="1000" alt="image" src="hands-on-lab-assets/step_8.1_v3.png">
 
-9. Scroll down to the **Toolset** section. Click on **Add tool +**:
+ 9. Scroll down to the **Toolset** section. Click on **Add tool +**:
 
-   <img width="1000" alt="image" src="hands-on-lab-assets/step_9_v3.png">
+  <img width="1000" alt="image" src="hands-on-lab-assets/step_9_v3.png">
 
-10. Select **Import**:
+ 10. Select **Import**:
 
-   <img width="1000" alt="image" src="hands-on-lab-assets/step_10_v3.png">
+  <img width="1000" alt="image" src="hands-on-lab-assets/step_10_v3.png">
 
-11. Select "Import from file.
+ 11. Select "Import from file.
 
-   <img width="1000" alt="image" src="hands-on-lab-assets/step_11_v3.png">
+  <img width="1000" alt="image" src="hands-on-lab-assets/step_11_v3.png">
 
-12. Drag and drop or click to upload the **hr.yaml** file (provided to you by the instructor), then click on **Next**:
+ 12. Drag and drop or click to upload the **hr.yaml** file (provided to you by the instructor), then click on **Next**:
 
-   <img width="1000" alt="image" src="hands-on-lab-assets/step_12_v3.png">    
+  <img width="1000" alt="image" src="hands-on-lab-assets/step_12_v3.png">    
 
-13. Select all the operations and click on **Done**:
+ 13. Select all the operations and click on **Done**:
 
-   <img width="1000" alt="image" src="hands-on-lab-assets/step_13_v3.png">
+  <img width="1000" alt="image" src="hands-on-lab-assets/step_13_v3.png">
 
-14. Scroll down to the **Behavior** section. Insert the instructions below into the **Instructions** field:
+ 14. Scroll down to the **Behavior** section. Insert the instructions below into the **Instructions** field:
 
    ```
    Use your knowledge base to answer general questions about employee benefits. 
@@ -131,7 +131,7 @@ In this lab we will build an HR agent in watsonx Orchestrate, leveraging tools a
    
    Click on **Deploy** in the top right corner to deploy your agent:
 
-   <img width="1000" alt="image" src="hands-on-lab-assets/step_14_v3.png">
+  <img width="1000" alt="image" src="hands-on-lab-assets/step_14_v3.png">
 
 ### Test HR Agent in Preview
 Test your agent in the preview chat on the right side by asking the following questions and validating the responses.  They should look similar to what is shown in the screenshots below:
