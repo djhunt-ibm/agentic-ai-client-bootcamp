@@ -76,9 +76,10 @@ In this lab we will build an HR agent in watsonx Orchestrate, leveraging tools a
   
 7. Select Upload files.
    Click on Next.
+   
      <img width="1000" alt="image" src="hands-on-lab-assets/step_7_v3.png">
      
-8. Download the [Employee Benefits.pdf](/usecases/ask-hr/assets/Employee-Benefits.pdf) onto your system, then upload the file here.
+9. Download the [Employee Benefits.pdf](/usecases/ask-hr/assets/Employee-Benefits.pdf) onto your system, then upload the file here.
    Click on Next.
 
  <img width="1000" alt="image" src="hands-on-lab-assets/step_8_v3.png">
@@ -88,6 +89,9 @@ In this lab we will build an HR agent in watsonx Orchestrate, leveraging tools a
    ```
    This knowledge base addresses the company's employee benefits, including parental leaves, pet policy, flexible work arrangements, and student loan repayment.
    ```
+
+   Click on "Save".
+   
  <img width="1000" alt="image" src="hands-on-lab-assets/step_8.1_v3.png">
 
 9. Scroll down to the **Toolset** section. Click on **Add tool +**:
@@ -104,7 +108,7 @@ In this lab we will build an HR agent in watsonx Orchestrate, leveraging tools a
 
 12. Drag and drop or click to upload the **hr.yaml** file (provided to you by the instructor), then click on **Next**:
 
-   <img width="1000" alt="image" src="hands-on-lab-assetsstep_12_v3.png">    
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_12_v3.png">    
 
 13. Select all the operations and click on **Done**:
 
