@@ -133,7 +133,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
 ### GFM Back Office Agent
 
-Handles special banking operations for GFM Bank that require elevated privileges, such as approving overdrafts and processing fee reversals. Operates from the GFM Bank operations center.
+**Handles special banking operations for GFM Bank that require elevated privileges, such as approving overdrafts and processing fee reversals. Operates from the GFM Bank operations center.**
 
 #### Create the GFM Back Office Agent
 
@@ -230,6 +230,9 @@ In the preview window from the right, test with the following query:
   ![Deploy agent](./backoffice_ag_imgs/i13.png)
 
 ### GFM Teller Agent
+
+**Assists customers with everyday banking tasks such as balance inquiries and money transfers. Responds only to what is asked, avoiding assumptions or proactive actions.**
+
 #### Create GFM Teller Agent
 
 - Click on hamburger menu, then **Build** -> **Agent Builder**
@@ -354,6 +357,9 @@ What's the balance of my account IBAN DE89320895326389021994
   ![Deploy agent](./teller_ag_imgs/i1.png)
   
 ### GFM Product Information Agent
+
+**Acts as the trusted expert on all banking products and services offered by GFM Bank. Helps customers explore and understand available financial solutions with clarity and precision.**
+
 #### Create GFM Product Information Agent
 
 - Click on hamburger menu, then **Build** -> **Agent Builder**
@@ -611,6 +617,9 @@ In the preview window from the right, test with the following query:
   ![Deploy](./prod_info_ag_imgs/i8.png)
 
 ### GFM Bank Orchestrator Agent
+
+**Acts as the virtual front desk of GFM Bank, welcoming customers, identifying their needs, and connecting them with the right specialist for a smooth and professional experience.**
+
 #### Create GFM Bank Orchestrator Agent
 
 - Click on hamburger menu, then **Build** -> **Agent Builder**
