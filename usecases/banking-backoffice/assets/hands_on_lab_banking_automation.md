@@ -774,7 +774,7 @@ In the preview window from the right, test with the following query:
 
   ![Select Orchestrator Agent](./bank_orch_ag_imgs/i9.png)
 
-In the chat window, test with the following queries:
+- In the chat window, test with the following queries:
 
   ```
   What's the balance of my account IBAN DE89320895326389021994
