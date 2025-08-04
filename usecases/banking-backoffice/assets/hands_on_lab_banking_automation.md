@@ -54,50 +54,7 @@ In this lab, you'll build a system of collaborating AI agents that can handle ba
 
 ## 📊 Current Banking Operations
 
-```mermaid
-graph TD
-    Customer[Customer] -->|Arrives at branch| WaitLine[Wait in Line]
-    WaitLine -->|20-30 min wait| Teller[Human Teller]
-    
-    subgraph "Branch Banking Experience"
-        Teller -->|Simple Request| ProcessSimple[Process Simple Transaction]
-        Teller -->|"Complex Request<br>(e.g., overdraft)"| EscalateRequest[Escalate to Back-office]
-        
-        EscalateRequest -->|Customer waits again| BackOfficeQueue[Back-office Queue]
-        BackOfficeQueue -->|15-45 min wait| BackOfficeStaff[Back-office Staff]
-        
-        BackOfficeStaff -->|Review & Approval| Decision{Approval Decision}
-        Decision -->|Approved| ReturnToTeller[Return to Teller]
-        Decision -->|Denied| Rejection[Inform Customer]
-        
-        ReturnToTeller -->|Customer waits again| WaitForTeller[Wait for Teller]
-        WaitForTeller -->|10-20 min wait| CompleteTransaction[Complete Transaction]
-        
-        ProcessSimple --> Completion[Transaction Complete]
-        CompleteTransaction --> Completion
-        Rejection --> Completion
-    end
-    
-    Completion -->|"Additional request<br>(e.g., transfer reversal)"| StartOver[Start Process Again]
-    StartOver --> WaitLine
-    
-    style WaitLine fill:#ffcccc
-    style BackOfficeQueue fill:#ffcccc
-    style WaitForTeller fill:#ffcccc
-    style EscalateRequest fill:#ffffcc
-    style Decision fill:#ccffcc
-
-```
-
-*Currently, GFM Bank relies on human tellers for basic transactions and back-office staff for approvals, leading to delays and inconsistent customer experiences in peak season.*
-
-## 🏗️ Target Architecture with Agentic AI
-
-![Architecture](banking-backoffice-architecture.png)
-
-## 👤 User Scenario
-
-### Current Situation
+### 👤 User Scenario
 John, a GFM Bank customer, needs to make an urgent payment of €8,000, but he only has €5,000 in his account. 
 
 1. John visits the bank branch and waits in line to speak with a teller
@@ -122,6 +79,12 @@ With the AI-powered system you'll build today:
 7. If John needs a reversal, it's handled quickly within the same conversation
 
 The entire process takes minutes instead of hours, and John never has to leave his home.
+
+*Currently, GFM Bank relies on human tellers for basic transactions and back-office staff for approvals, leading to delays and inconsistent customer experiences in peak season.*
+
+## 🏗️ Target Architecture with Agentic AI
+
+![Architecture](banking-backoffice-architecture.png)
 
 <br>
 
