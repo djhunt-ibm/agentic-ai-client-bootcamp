@@ -8,7 +8,7 @@
 - [👤 User Scenario](#-user-scenario)
   - [Current Situation](#current-situation)
   - [Future with Agentic AI](#future-with-agentic-ai)
-- [\_\_\_\_\_\_\_\_\_\_ 🔧 Lab Instructions \_\_\_\_\_\_\_\_\_\_](#__________--lab-instructions-__________)
+- [🔧 Lab Instructions](#--lab-instructions-)
   - [Prerequisites](#prerequisites)
   - [Lab Steps Overview](#lab-steps-overview)
   - [Extra Resources](#extra-resources)
@@ -125,7 +125,7 @@ The entire process takes minutes instead of hours, and John never has to leave h
 
 <br>
 
-## __________ 🔧 Lab Instructions __________
+## 🔧 Lab Instructions
 
 In this lab, you'll build a complete Agentic AI solution for GFM Bank using watsonx Orchestrate. You'll create multiple specialized agents that work together to handle customer requests.
 
