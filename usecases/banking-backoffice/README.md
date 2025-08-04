@@ -48,7 +48,7 @@ The **GFM Bank Agentic AI System**, powered by **Watson Orchestrate**, aims to m
 
 ## 🏛 Architecture
 
-![Architecture](banking-architecture.png)
+![Architecture](banking-backoffice-architecture.png)
 
 ---
 
