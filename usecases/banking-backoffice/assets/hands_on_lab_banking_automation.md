@@ -132,6 +132,9 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
   ![Agent Builder](./images/i3.png)
 
 ### GFM Back Office Agent
+
+Handles special banking operations for GFM Bank that require elevated privileges, such as approving overdrafts and processing fee reversals. Operates from the GFM Bank operations center.
+
 #### Create the GFM Back Office Agent
 
 - Click on **Create Agent**
