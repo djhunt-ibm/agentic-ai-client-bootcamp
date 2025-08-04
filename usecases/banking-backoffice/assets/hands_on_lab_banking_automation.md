@@ -102,7 +102,7 @@ John, a GFM Bank customer, needs to make an urgent payment of €8,000, but he o
 
 1. John visits the bank branch and waits in line to speak with a teller
 2. The teller checks his balance and informs him he has insufficient funds
-3. John requests an overdraft of €5,000
+3. John requests an overdraft of €3,000
 4. The teller must escalate the request to a back-office manager
 5. John waits again for approval
 6. Once approved, he returns to the teller to complete the transfer
