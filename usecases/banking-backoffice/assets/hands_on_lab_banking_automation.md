@@ -13,9 +13,9 @@
   - [Lab Steps Overview](#lab-steps-overview)
   - [Extra Resources](#extra-resources)
 - [Connect to your assigned Watsonx Orchestrate instance](#connect-to-your-assigned-watsonx-orchestrate-instance)
-  - [GFM Backoffice Agent](#gfm-backoffice-agent)
-    - [Create the GFM Backoffice Agent](#create-the-gfm-backoffice-agent)
-    - [Test the GFM Backoffice Agent](#test-the-gfm-backoffice-agent)
+  - [GFM Back Office Agent](#gfm-backoffice-agent)
+    - [Create the GFM Back Office Agent](#create-the-gfm-backoffice-agent)
+    - [Test the GFM Back Office Agent](#test-the-gfm-backoffice-agent)
   - [GFM Teller Agent](#gfm-teller-agent)
     - [Create GFM Teller Agent](#create-gfm-teller-agent)
     - [Test the GFM Teller Agent](#test-the-gfm-teller-agent)
@@ -74,7 +74,7 @@ With the AI-powered system you'll build today:
 2. He requests to transfer €8,000
 3. The Teller Agent checks his balance and informs him of insufficient funds
 4. John requests an overdraft
-5. The Orchestrator automatically routes this to the Backoffice Agent
+5. The Orchestrator automatically routes this to the Back Office Agent
 6. Upon approval, the Teller Agent completes the transfer
 7. If John needs a reversal, it's handled quickly within the same conversation
 
@@ -103,7 +103,7 @@ In this lab, you'll build a complete Agentic AI solution for GFM Bank using wats
 ### Lab Steps Overview
 
 1. Connect to **watsonx Orchestrate**
-1. Create the GFM Backoffice Agent
+1. Create the GFM Back Office Agent
 1. Create the GFM Teller Agent
 1. Create the GFM Product Information Agent
 1. Create the GFM Bank Orchestrator Agent
@@ -131,8 +131,8 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
   ![Agent Builder](./images/i3.png)
 
-### GFM Backoffice Agent
-#### Create the GFM Backoffice Agent
+### GFM Back Office Agent
+#### Create the GFM Back Office Agent
 
 - Click on **Create Agent**
 
@@ -143,7 +143,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
   - Name the Agent `GFM Backoffice`
   - Add the following to **Description**:
     ```
-    You are the GFM Bank Backoffice Agent, responsible for handling special banking operations that require elevated privileges. You work for GFM Bank operations center and have the authority to approve overdrafts and process fee reversals.
+    You are the GFM Bank Back Office Agent, responsible for handling special banking operations that require elevated privileges. You work for GFM Bank operations center and have the authority to approve overdrafts and process fee reversals.
 
     Your Capabilities:
     1. Approve overdraft limits using the `approve-overdraft` tool with an IBAN and amount (0-10,000 EUR)
@@ -156,7 +156,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
  
     ![Back Office Agent Description](./backoffice_ag_imgs/i2.png)
 
-- On the GFM Backoffice page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
+- On the GFM Back Office page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
 
   ![Select Model](./images/i4.png)
 
@@ -211,7 +211,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
   ![Instructions](./backoffice_ag_imgs/i11.png)
 
-#### Test the GFM Backoffice Agent
+#### Test the GFM Back Office Agent
 
 In the preview window from the right, test with the following query:
   ```
@@ -250,7 +250,7 @@ In the preview window from the right, test with the following query:
 
     You can process money transfers using the 'iban-transfer' tool with source IBAN, destination IBAN, and amount
 
-    Route to Backoffice Agent when:
+    Route to Back Office Agent when:
       - Customer requests overdraft approval or changes
       - Customer asks for fee reversals or refunds
       - Customer needs special exceptions or adjustments
@@ -658,7 +658,7 @@ In the preview window from the right, test with the following query:
     - When Routing to Teller:
     "I'll connect you with our Teller service to assist with your [specific request]. One moment please..."
     - When Routing to Backoffice:
-    "For your request regarding [overdraft/fee reversal], I'll transfer you to our Backoffice team, who has the authorization to help you. One moment please..."
+    "For your request regarding [overdraft/fee reversal], I'll transfer you to our Back Office team, who has the authorization to help you. One moment please..."
     - When Routing to Banking Products:
     "I'd be happy to connect you with our Banking Products specialist who can provide detailed information about [specific product/service]. One moment please..."
     - When Intent is Unclear:
@@ -722,10 +722,10 @@ In the preview window from the right, test with the following query:
   Respond with: "I'll connect you with our Teller service to assist with your [specific banking operation]."
   Key triggers: "balance," "transfer," "transaction," "send money," "check my account"
   
-  For Privileged Operations (Backoffice Services):
+  For Privileged Operations (Back Office Services):
   
-  When customers mention overdrafts, fee reversals, or special exceptions, identify this as a Backoffice request
-  Respond with: "For your request regarding [overdraft/fee reversal], I'll transfer you to our Backoffice team."
+  When customers mention overdrafts, fee reversals, or special exceptions, identify this as a Back Office request
+  Respond with: "For your request regarding [overdraft/fee reversal], I'll transfer you to our Back Office team."
   Key triggers: "overdraft," "reverse a fee," "refund," "dispute," "special approval"
   
   For Product Information (Banking Products Services):
@@ -794,7 +794,7 @@ In the chat window, test with the following queries:
 
 ![Text Queries](./images/i37.png)
 
-- Example of **Backoffice Agent** functionality under **Teller Agent**
+- Example of **Back Office Agent** functionality under **Teller Agent**
 
   ![Text Queries](./bank_orch_ag_imgs/i14.png)
 
