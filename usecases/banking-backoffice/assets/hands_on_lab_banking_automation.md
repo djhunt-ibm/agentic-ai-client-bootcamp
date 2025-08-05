@@ -6,7 +6,7 @@
 - [📊 Banking Operations](#-banking-operations)
   - [Current User Scenario](#current-user-scenario)
   - [Future with Agentic AI](#future-with-agentic-ai)
-- [🏗️ Target Architecture with Agentic AI](#-target-architecture-with-agentic-ai)
+- [🏗️ Target Architecture with Agentic AI](%EF%B8%8F-target-architecture-with-agentic-ai)
 - [🔧 Lab Instructions](#-lab-instructions)
   - [Prerequisites](#prerequisites)
   - [Lab Steps Overview](#lab-steps-overview)
