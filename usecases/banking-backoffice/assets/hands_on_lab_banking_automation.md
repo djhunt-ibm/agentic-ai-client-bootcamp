@@ -269,7 +269,7 @@ In the preview window from the right, test with the following query:
 
 - On the `GFM Teller` page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
 
-  ![Select model](./images/i4.png)
+  ![Select model](./teller_ag_imgs/i20.png)
 
 - Take the defaults for **Profile**, **Voice modality**, and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button.
 
@@ -281,7 +281,7 @@ In the preview window from the right, test with the following query:
 
 - Click on **Import from file**.
 
-  ![Import from file](./images/i15.png)
+  ![Import from file](./teller_ag_imgs/i21.png)
 
 - Upload the `bank.json` API spec provided by the instructor. Once the file is uploaded, select **Next**.
   
@@ -418,7 +418,7 @@ What's the balance of my account IBAN DE89320895326389021994
 
 - On the `GFM Product Information` page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
 
-  ![Select model](./images/i4.png)
+  ![Select model](./prod_info_ag_imgs/i14.png)
 
 - In the **Knowledge** section. click on **Choose knowledge**.
 
@@ -694,7 +694,7 @@ In the preview window from the right, test with the following query:
 
 - On the `GFM Bank Orchestrator` page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
 
-  ![Select model](./images/i4.png)
+  ![Select model](./bank_orch_ag_imgs/i15.png)
 
 #### Add collaborative Agents
 
