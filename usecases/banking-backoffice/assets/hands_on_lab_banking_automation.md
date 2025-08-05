@@ -791,15 +791,15 @@ This Agent acts as the virtual front desk of GFM Bank, welcoming customers, iden
 
   ```
   What's the balance of my account IBAN DE89320895326389021994
-  I want to transfer 20 EURO from IBAN DE89320895326389021994 to IBAN DE89929842579913662103
+  I want to transfer 20 euros from IBAN DE89320895326389021994 to IBAN DE89929842579913662103
   I want to transfer 4000 EURO from IBAN DE89320895326389021994 to IBAN DE89929842579913662103
   What is a bank card overdraft?
   How can I avoid overdraft fees?
-  I want to request an overdraft of 4000 EURO for my account IBAN DE89320895326389021994
+  I want to request an overdraft of 4000 euros for my account IBAN DE89320895326389021994
   Please approve an overdraft of 4000 EURO for my account IBAN DE89320895326389021994
   What's the balance of my account IBAN DE89320895326389021994
   I want to transfer 4000 EURO from IBAN DE89320895326389021994 to IBAN DE89929842579913662103
-  Oh, I did a mistake, can you do a reversal of my previous 4000 EURO payment to my IBAN DE89320895326389021994
+  Oh, I made a mistake, can you do a reversal of my previous 4000 EURO payment to my IBAN DE89320895326389021994
   Please do a reversal of my previous 4000 EURO payment to my IBAN DE89320895326389021994
   ```
 
@@ -811,13 +811,9 @@ This Agent acts as the virtual front desk of GFM Bank, welcoming customers, iden
 
   ![Text Queries](./bank_orch_ag_imgs/i14.png)
 
-- Example of **Backoffice Agent** functionality under **Teller Agent**
-
-  ![Text Queries](./bank_orch_ag_imgs/i14.png)
-
 ## 🎉 Congratulations! You have completed the lab!
 
-You've successfully created an Agentic AI solution for GFM Bank using watsonx Orchestrate! Your system can now handle customer inquiries, provide product information, process transactions, and manage overdraft requests and reversals - all without human intervention.
+You've successfully created an Agentic AI solution for GFM Bank using **watsonx Orchestrate**! Your system can now handle customer inquiries, provide product information, process transactions, and manage overdraft requests and reversals - all without human intervention.
 
 This lab demonstrates how AI agents can transform banking operations by:
 - Reducing wait times for customers
@@ -825,32 +821,9 @@ This lab demonstrates how AI agents can transform banking operations by:
 - Ensuring consistent application of banking policies
 - Freeing human staff for more complex tasks
 
-## 🔄 Challenge Extensions
-
-If you have time, try these additional challenges:
-
-1. Add authentication verification before processing transactions
-2. Create a specialized agent for credit card applications
-3. Implement a notification system for large transactions
-4. Add multi-language support for international customers
-
 ## 📚 Resources
 
 For more information on Watsonx Orchestrate and Agentic AI:
 - [Watsonx Orchestrate Documentation](https://www.ibm.com/products/watsonx-orchestrate)
 - [IBM Agentic AI Guide](https://www.ibm.com/think/ai-agents)
 - [Banking Industry AI Transformation](https://www.ibm.com/industries/banking-financial-markets)
-
----
-## 📄 IBM Sample Code Disclaimer
-
-```text
-IBM SAMPLE CODE DISCLAIMER
-© Copyright IBM Corporation 2025. All Rights Reserved.
-
-This sample code is provided solely for instructional use in IBM lab exercises. It is supplied “AS IS,” without warranties of any kind, express or implied, including (but not limited to) warranties of merchantability, fitness for a particular purpose, and non-infringement. IBM makes no commitment to update the code and assumes no responsibility for errors or omissions or for any damages arising out of its use.
-
-You may copy, modify, and distribute this code in whole or in part, at your own risk, provided you retain this notice. The code is not part of any IBM product and is not officially supported by IBM. Use in production environments is entirely at your discretion and must comply with all applicable laws, regulations, and third-party license terms.
-
-IBM, the IBM logo, and ibm.com are trademarks or registered trademarks of International Business Machines Corporation. Other product and service names might be trademarks of IBM or other companies.
-```
