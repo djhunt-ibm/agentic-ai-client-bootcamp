@@ -28,9 +28,7 @@
     - [Test the GFM Bank Orchestrator Agent](#test-the-gfm-bank-orchestrator-agent)
 - [Test Your Agentic AI Banking Solution](#test-your-agentic-ai-banking-solution)
 - [🎉 Congratulations! You have completed the lab!](#-congratulations-you-have-completed-the-lab)
-- [🔄 Challenge Extensions](#-challenge-extensions)
 - [📚 Resources](#-resources)
-- [📄 IBM Sample Code Disclaimer](#-ibm-sample-code-disclaimer)
 
 ## 🔍 Introduction
 
