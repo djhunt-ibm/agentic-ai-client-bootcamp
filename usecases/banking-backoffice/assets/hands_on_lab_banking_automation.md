@@ -13,17 +13,17 @@
 - [Connect to your assigned Watsonx Orchestrate instance](#connect-to-your-assigned-watsonx-orchestrate-instance)
 - [GFM Back Office Agent](#gfm-back-office-agent)
   - [Create the GFM Back Office Agent](#create-the-gfm-back-office-agent)
-  - [Test the GFM Back Office Agent](#test-the-gfm-back-office-agent)
+  - [Test and deploy the GFM Back Office Agent](#test-and-deploythe-gfm-back-office-agent)
 - [GFM Teller Agent](#gfm-teller-agent)
   - [Create GFM Teller Agent](#create-gfm-teller-agent)
-  - [Test the GFM Teller Agent](#test-the-gfm-teller-agent)
+  - [Test and deploy the GFM Teller Agent](#test-and-deploy-the-gfm-teller-agent)
 - [GFM Product Information Agent](#gfm-product-information-agent)
   - [Create GFM Product Information Agent](#create-gfm-product-information-agent)
-  - [Test the GFM Product Information Agent](#test-the-gfm-product-information-agent)
+  - [Test and deploy the GFM Product Information Agent](#test-and-deploy-the-gfm-product-information-agent)
 - [GFM Bank Orchestrator Agent](#gfm-bank-orchestrator-agent)
   - [Create GFM Bank Orchestrator Agent](#create-gfm-bank-orchestrator-agent)
   - [Add collaborative Agents](#add-collaborative-agents)
-  - [Test the GFM Bank Orchestrator Agent](#test-the-gfm-bank-orchestrator-agent)
+  - [Test and deploy the GFM Bank Orchestrator Agent](#test-and-deploy-the-gfm-bank-orchestrator-agent)
 - [Test Your Agentic AI Banking Solution](#test-your-agentic-ai-banking-solution)
 - [🎉 Congratulations! You have completed the lab!](#-congratulations-you-have-completed-the-lab)
 - [🔄 Challenge Extensions](#-challenge-extensions)
@@ -156,7 +156,8 @@ This Agent handles special banking operations for GFM Bank that require elevated
 
   ![Select Model](./backoffice_ag_imgs/i15.png)
 
-- Take the defaults for **Profile**, **Voice modality**, and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button.
+- Take the defaults for **Profile**, **Voice modality**, and **Knowledge** sections.
+- Under the **Toolset** section, click on the **Add tool** button.
 
   ![Add Tool](./backoffice_ag_imgs/i3.png)
 
@@ -207,7 +208,7 @@ This Agent handles special banking operations for GFM Bank that require elevated
 
   ![Instructions](./backoffice_ag_imgs/i11.png)
 
-#### Test the GFM Back Office Agent
+#### Test and deploy the GFM Back Office Agent
 
 - In the preview window from the right, test with the following query:
   ```
@@ -358,7 +359,7 @@ This Agent assists customers with everyday banking tasks such as balance inquiri
 
   ![Show agent toggle](./teller_ag_imgs/i14.png)
 
-#### Test the GFM Teller Agent
+#### Test and deploy the GFM Teller Agent
 
 - In the preview window on the right, test with the following query:
 ```
@@ -597,7 +598,7 @@ This Agent acts as the trusted expert on all banking products and services offer
 
   ![Disable toggle](./prod_info_ag_imgs/i5.png)
 
-#### Test the GFM Product Information Agent
+#### Test the and deploy GFM Product Information Agent
 
 - In the preview window from the right, test with the following queries:
   ```
@@ -765,9 +766,9 @@ This Agent acts as the virtual front desk of GFM Bank, welcoming customers, iden
 
   ![Agent Behavior](./bank_orch_ag_imgs/i7.png)
 
-#### Test the GFM Bank Orchestrator Agent
+#### Test and deploy the GFM Bank Orchestrator Agent
 
-In the preview window from the right, test with the following query:
+- In the preview window on the right, test with the following queries:
   ```
   What is a card overdraft?
   What's the balance of my account IBAN DE89320895326389021994
