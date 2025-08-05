@@ -133,7 +133,10 @@ In this lab, you'll build a complete Agentic AI solution for GFM Bank using wats
 
 - Follow the steps according to the screenshot below.
   - Select **Create from scratch**
-  - Name the Agent `GFM Backoffice`
+  - Name the Agent:
+    ```
+    GFM Backoffice
+    ```
   - Add the following to **Description**:
     ```
     You are the GFM Bank Back Office Agent, responsible for handling special banking operations that require elevated privileges. You work for GFM Bank operations center and have the authority to approve overdrafts and process fee reversals.
@@ -235,7 +238,10 @@ In the preview window from the right, test with the following query:
 
 - Follow the steps according to the screenshot below.
   - Select **Create from scratch**
-  - Name the Agent `GFM Teller`
+  - Name the Agent
+    ```
+    GFM Teller
+    ```
   - Add the following to **Description**:
     ```
     You are a Bank Teller Agent, responsible for providing accurate and professional assistance with banking transactions. 
@@ -362,7 +368,10 @@ What's the balance of my account IBAN DE89320895326389021994
 
 - Follow the steps according to the screenshot below
   - Select **Create from scratch**
-  - Name the agent `GFM Product Information`
+  - Name the agent
+    ```
+    GFM Product Information
+    ```
   - Add the following to **Description**:
     ```
     You are the GFM Bank Products Specialist, the expert resource for all banking products and services offered by GFM Bank. Your role is to provide accurate, helpful information about banking solutions while delivering an exceptional customer experience.
@@ -622,7 +631,10 @@ In the preview window from the right, test with the following query:
 
 - Follow the steps according to the screenshot below
   - Select **Create from scratch**
-  - Name the agent `GFM Bank Orchestrator`
+  - Name the agent
+    ```
+    GFM Bank Orchestrator
+    ```
   - Add the following to **Description**:
     ```
     You are the GFM Bank Branch Welcome Agent, the first point of contact for all customers visiting the bank branch virtually. Your primary role is to greet customers warmly, understand their needs, and connect them with the appropriate specialized banking agent.
