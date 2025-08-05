@@ -19,7 +19,7 @@ Select an enterprise use case, learn about the business story, and implement it 
 - [Business automation for Competitive Analysis](./usecases/business-automation)
 - [Financial Research Analyst](./usecases/banking-financial-research-analyst)
 - (beta) [Auto insurance claims automation](./usecases/autoclaim-insurance)
-- (beta) [Retail Product Display Advisor](./usecases/retail/)
+- [Retail Product Display Advisor](./usecases/retail/)
 - [Order to Cash Automation](./usecases/order-to-cash/)
 
 For additional use cases, please check out the [Agentic AI Bootcamp Community Repository](https://github.ibm.com/skol/agentic-ai-client-bootcamp-community) -- **see note below**
