@@ -209,7 +209,7 @@ This Agent handles special banking operations for GFM Bank that require elevated
 
 #### Test the GFM Back Office Agent
 
-In the preview window from the right, test with the following query:
+- In the preview window from the right, test with the following query:
   ```
   I want to request an overdraft of 1000 EURO for my account IBAN DE89320895326389021994
   ```
@@ -339,7 +339,7 @@ This Agent assists customers with everyday banking tasks such as balance inquiri
 
 #### Test the GFM Teller Agent
 
-In the preview window on the right, test with the following query:
+- In the preview window on the right, test with the following query:
 ```
 What's the balance of my account IBAN DE89320895326389021994
 ```
@@ -601,7 +601,7 @@ This Agent acts as the trusted expert on all banking products and services offer
 
 #### Test the GFM Product Information Agent
 
-In the preview window from the right, test with the following query:
+- In the preview window from the right, test with the following queries:
   ```
   What is a card overdraft?
   If I enter the PIN 5 times on my card, what will happen?
