@@ -8,14 +8,14 @@
 - [👤 User Scenario](#-user-scenario)
   - [Current Situation](#current-situation)
   - [Future with Agentic AI](#future-with-agentic-ai)
-- [\_\_\_\_\_\_\_\_\_\_ 🔧 Lab Instructions \_\_\_\_\_\_\_\_\_\_](#__________--lab-instructions-__________)
+- [🔧 Lab Instructions](#--lab-instructions-)
   - [Prerequisites](#prerequisites)
   - [Lab Steps Overview](#lab-steps-overview)
   - [Extra Resources](#extra-resources)
 - [Connect to your assigned Watsonx Orchestrate instance](#connect-to-your-assigned-watsonx-orchestrate-instance)
-  - [GFM Backoffice Agent](#gfm-backoffice-agent)
-    - [Create the GFM Backoffice Agent](#create-the-gfm-backoffice-agent)
-    - [Test the GFM Backoffice Agent](#test-the-gfm-backoffice-agent)
+  - [GFM Back Office Agent](#gfm-backoffice-agent)
+    - [Create the GFM Back Office Agent](#create-the-gfm-backoffice-agent)
+    - [Test the GFM Back Office Agent](#test-the-gfm-backoffice-agent)
   - [GFM Teller Agent](#gfm-teller-agent)
     - [Create GFM Teller Agent](#create-gfm-teller-agent)
     - [Test the GFM Teller Agent](#test-the-gfm-teller-agent)
@@ -54,72 +54,12 @@ In this lab, you'll build a system of collaborating AI agents that can handle ba
 
 ## 📊 Current Banking Operations
 
-```mermaid
-graph TD
-    Customer[Customer] -->|Arrives at branch| WaitLine[Wait in Line]
-    WaitLine -->|20-30 min wait| Teller[Human Teller]
-    
-    subgraph "Branch Banking Experience"
-        Teller -->|Simple Request| ProcessSimple[Process Simple Transaction]
-        Teller -->|"Complex Request<br>(e.g., overdraft)"| EscalateRequest[Escalate to Back-office]
-        
-        EscalateRequest -->|Customer waits again| BackOfficeQueue[Back-office Queue]
-        BackOfficeQueue -->|15-45 min wait| BackOfficeStaff[Back-office Staff]
-        
-        BackOfficeStaff -->|Review & Approval| Decision{Approval Decision}
-        Decision -->|Approved| ReturnToTeller[Return to Teller]
-        Decision -->|Denied| Rejection[Inform Customer]
-        
-        ReturnToTeller -->|Customer waits again| WaitForTeller[Wait for Teller]
-        WaitForTeller -->|10-20 min wait| CompleteTransaction[Complete Transaction]
-        
-        ProcessSimple --> Completion[Transaction Complete]
-        CompleteTransaction --> Completion
-        Rejection --> Completion
-    end
-    
-    Completion -->|"Additional request<br>(e.g., transfer reversal)"| StartOver[Start Process Again]
-    StartOver --> WaitLine
-    
-    style WaitLine fill:#ffcccc
-    style BackOfficeQueue fill:#ffcccc
-    style WaitForTeller fill:#ffcccc
-    style EscalateRequest fill:#ffffcc
-    style Decision fill:#ccffcc
-
-```
-
-*Currently, GFM Bank relies on human tellers for basic transactions and back-office staff for approvals, leading to delays and inconsistent customer experiences in peak season.*
-
-## 🏗️ Target Architecture with Agentic AI
-
-```mermaid
-graph TD
-    Customer[Customer] --> Orchestrator[GFM Bank Orchestrator Agent]
-    Orchestrator --> Teller[GFM Teller Agent]
-    Orchestrator --> ProductInfo[GFM Product Information Agent]
-
-    Teller --> |balance-inquiry| API[Core Banking API]
-    Teller --> |iban-transfer| API
-    Teller --> Backoffice[GFM Backoffice Agent]
-
-    Backoffice --> |approve-overdraft| API
-    Backoffice --> |fee-reversal| API
-    ProductInfo --> |query| Knowledge[Knowledge Base]
-    
-    subgraph "Core Banking System"
-        API --> Backend[Backend Services]
-    end
-```
-
-## 👤 User Scenario
-
-### Current Situation
+### 👤 User Scenario
 John, a GFM Bank customer, needs to make an urgent payment of €8,000, but he only has €5,000 in his account. 
 
 1. John visits the bank branch and waits in line to speak with a teller
 2. The teller checks his balance and informs him he has insufficient funds
-3. John requests an overdraft of €5,000
+3. John requests an overdraft of €3,000
 4. The teller must escalate the request to a back-office manager
 5. John waits again for approval
 6. Once approved, he returns to the teller to complete the transfer
@@ -134,15 +74,21 @@ With the AI-powered system you'll build today:
 2. He requests to transfer €8,000
 3. The Teller Agent checks his balance and informs him of insufficient funds
 4. John requests an overdraft
-5. The Orchestrator automatically routes this to the Backoffice Agent
+5. The Orchestrator automatically routes this to the Back Office Agent
 6. Upon approval, the Teller Agent completes the transfer
 7. If John needs a reversal, it's handled quickly within the same conversation
 
 The entire process takes minutes instead of hours, and John never has to leave his home.
 
+*Currently, GFM Bank relies on human tellers for basic transactions and back-office staff for approvals, leading to delays and inconsistent customer experiences in peak season.*
+
+## 🏗️ Target Architecture with Agentic AI
+
+![Architecture](banking-backoffice-architecture.png)
+
 <br>
 
-## __________ 🔧 Lab Instructions __________
+## 🔧 Lab Instructions
 
 In this lab, you'll build a complete Agentic AI solution for GFM Bank using watsonx Orchestrate. You'll create multiple specialized agents that work together to handle customer requests.
 
@@ -157,7 +103,7 @@ In this lab, you'll build a complete Agentic AI solution for GFM Bank using wats
 ### Lab Steps Overview
 
 1. Connect to **watsonx Orchestrate**
-1. Create the GFM Backoffice Agent
+1. Create the GFM Back Office Agent
 1. Create the GFM Teller Agent
 1. Create the GFM Product Information Agent
 1. Create the GFM Bank Orchestrator Agent
@@ -185,8 +131,11 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
   ![Agent Builder](./images/i3.png)
 
-### GFM Backoffice Agent
-#### Create the GFM Backoffice Agent
+### GFM Back Office Agent
+
+**Handles special banking operations for GFM Bank that require elevated privileges, such as approving overdrafts and processing fee reversals. Operates from the GFM Bank operations center.**
+
+#### Create the GFM Back Office Agent
 
 - Click on **Create Agent**
 
@@ -197,7 +146,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
   - Name the Agent `GFM Backoffice`
   - Add the following to **Description**:
     ```
-    You are the GFM Bank Backoffice Agent, responsible for handling special banking operations that require elevated privileges. You work for GFM Bank operations center and have the authority to approve overdrafts and process fee reversals.
+    You are the GFM Bank Back Office Agent, responsible for handling special banking operations that require elevated privileges. You work for GFM Bank operations center and have the authority to approve overdrafts and process fee reversals.
 
     Your Capabilities:
     1. Approve overdraft limits using the `approve-overdraft` tool with an IBAN and amount (0-10,000 EUR)
@@ -210,9 +159,9 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
  
     ![Back Office Agent Description](./backoffice_ag_imgs/i2.png)
 
-- On the GFM Backoffice page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
+- On the GFM Back Office page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
 
-  ![Select Model](./images/i4.png)
+  ![Select Model](./backoffice_ag_imgs/i15.png)
 
 - Take the defaults for **Profile**, **Voice modality**, and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button.
 
@@ -224,7 +173,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
 - Click on **Import from file**
 
-  ![Import from file](./images/i15.png)
+  ![Import from file](./backoffice_ag_imgs/i16.png)
 
 - Upload the `bank.json` API spec provided by the instructor.
 
@@ -265,7 +214,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
   ![Instructions](./backoffice_ag_imgs/i11.png)
 
-#### Test the GFM Backoffice Agent
+#### Test the GFM Back Office Agent
 
 In the preview window from the right, test with the following query:
   ```
@@ -281,6 +230,9 @@ In the preview window from the right, test with the following query:
   ![Deploy agent](./backoffice_ag_imgs/i13.png)
 
 ### GFM Teller Agent
+
+**Assists customers with everyday banking tasks such as balance inquiries and money transfers. Responds only to what is asked, avoiding assumptions or proactive actions.**
+
 #### Create GFM Teller Agent
 
 - Click on hamburger menu, then **Build** -> **Agent Builder**
@@ -304,7 +256,7 @@ In the preview window from the right, test with the following query:
 
     You can process money transfers using the 'iban-transfer' tool with source IBAN, destination IBAN, and amount
 
-    Route to Backoffice Agent when:
+    Route to Back Office Agent when:
       - Customer requests overdraft approval or changes
       - Customer asks for fee reversals or refunds
       - Customer needs special exceptions or adjustments
@@ -317,7 +269,7 @@ In the preview window from the right, test with the following query:
 
 - On the `GFM Teller` page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
 
-  ![Select model](./images/i4.png)
+  ![Select model](./teller_ag_imgs/i20.png)
 
 - Take the defaults for **Profile**, **Voice modality**, and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button.
 
@@ -329,7 +281,7 @@ In the preview window from the right, test with the following query:
 
 - Click on **Import from file**.
 
-  ![Import from file](./images/i15.png)
+  ![Import from file](./teller_ag_imgs/i21.png)
 
 - Upload the `bank.json` API spec provided by the instructor. Once the file is uploaded, select **Next**.
   
@@ -405,6 +357,9 @@ What's the balance of my account IBAN DE89320895326389021994
   ![Deploy agent](./teller_ag_imgs/i1.png)
   
 ### GFM Product Information Agent
+
+**Acts as the trusted expert on all banking products and services offered by GFM Bank. Helps customers explore and understand available financial solutions with clarity and precision.**
+
 #### Create GFM Product Information Agent
 
 - Click on hamburger menu, then **Build** -> **Agent Builder**
@@ -463,7 +418,7 @@ What's the balance of my account IBAN DE89320895326389021994
 
 - On the `GFM Product Information` page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
 
-  ![Select model](./images/i4.png)
+  ![Select model](./prod_info_ag_imgs/i14.png)
 
 - In the **Knowledge** section. click on **Choose knowledge**.
 
@@ -662,6 +617,9 @@ In the preview window from the right, test with the following query:
   ![Deploy](./prod_info_ag_imgs/i8.png)
 
 ### GFM Bank Orchestrator Agent
+
+**Acts as the virtual front desk of GFM Bank, welcoming customers, identifying their needs, and connecting them with the right specialist for a smooth and professional experience.**
+
 #### Create GFM Bank Orchestrator Agent
 
 - Click on hamburger menu, then **Build** -> **Agent Builder**
@@ -712,7 +670,7 @@ In the preview window from the right, test with the following query:
     - When Routing to Teller:
     "I'll connect you with our Teller service to assist with your [specific request]. One moment please..."
     - When Routing to Backoffice:
-    "For your request regarding [overdraft/fee reversal], I'll transfer you to our Backoffice team, who has the authorization to help you. One moment please..."
+    "For your request regarding [overdraft/fee reversal], I'll transfer you to our Back Office team, who has the authorization to help you. One moment please..."
     - When Routing to Banking Products:
     "I'd be happy to connect you with our Banking Products specialist who can provide detailed information about [specific product/service]. One moment please..."
     - When Intent is Unclear:
@@ -736,7 +694,7 @@ In the preview window from the right, test with the following query:
 
 - On the `GFM Bank Orchestrator` page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
 
-  ![Select model](./images/i4.png)
+  ![Select model](./bank_orch_ag_imgs/i15.png)
 
 #### Add collaborative Agents
 
@@ -776,10 +734,10 @@ In the preview window from the right, test with the following query:
   Respond with: "I'll connect you with our Teller service to assist with your [specific banking operation]."
   Key triggers: "balance," "transfer," "transaction," "send money," "check my account"
   
-  For Privileged Operations (Backoffice Services):
+  For Privileged Operations (Back Office Services):
   
-  When customers mention overdrafts, fee reversals, or special exceptions, identify this as a Backoffice request
-  Respond with: "For your request regarding [overdraft/fee reversal], I'll transfer you to our Backoffice team."
+  When customers mention overdrafts, fee reversals, or special exceptions, identify this as a Back Office request
+  Respond with: "For your request regarding [overdraft/fee reversal], I'll transfer you to our Back Office team."
   Key triggers: "overdraft," "reverse a fee," "refund," "dispute," "special approval"
   
   For Product Information (Banking Products Services):
@@ -828,7 +786,7 @@ In the preview window from the right, test with the following query:
 
   ![Select Orchestrator Agent](./bank_orch_ag_imgs/i9.png)
 
-In the chat window, test with the following queries:
+- In the chat window, test with the following queries:
 
   ```
   What's the balance of my account IBAN DE89320895326389021994
@@ -844,9 +802,13 @@ In the chat window, test with the following queries:
   Please do a reversal of my previous 4000 EURO payment to my IBAN DE89320895326389021994
   ```
 
-![Text Queries](./images/i36.png)
+  ![Text Queries](./images/i36.png)
 
-![Text Queries](./images/i37.png)
+  ![Text Queries](./images/i37.png)
+
+- Example of **Back Office Agent** functionality under **Teller Agent**
+
+  ![Text Queries](./bank_orch_ag_imgs/i14.png)
 
 - Example of **Backoffice Agent** functionality under **Teller Agent**
 
