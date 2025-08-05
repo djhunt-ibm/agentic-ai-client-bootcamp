@@ -3,7 +3,7 @@
 ## Table of contents <!-- omit in toc -->
 
 - [🔍 Introduction](#-introduction)
-- [📊 Current Banking Operations](#-current-banking-operations)
+- [📊 Banking Operations](#-banking-operations)
 - [🏗️ Target Architecture with Agentic AI](#️-target-architecture-with-agentic-ai)
 - [👤 User Scenario](#-user-scenario)
   - [Current Situation](#current-situation)
@@ -52,9 +52,9 @@ In this lab, you'll build a system of collaborating AI agents that can handle ba
 - Fee reversals
 - Product information requests
 
-## 📊 Current Banking Operations
+## 📊 Banking Operations
 
-### 👤 User Scenario
+### 👤 Current User Scenario
 John, a GFM Bank customer, needs to make an urgent payment of €8,000, but he only has €5,000 in his account. 
 
 1. John visits the bank branch and waits in line to speak with a teller
@@ -74,7 +74,7 @@ With the AI-powered system you'll build today:
 2. He requests to transfer €8,000
 3. The Teller Agent checks his balance and informs him of insufficient funds
 4. John requests an overdraft
-5. The Teller routes this request to the Back Office Agent
+5. The Teller Agent routes this request to the Back Office Agent
 6. Upon approval from the Back Office Agent, the Teller Agent completes the transfer
 7. If John needs a reversal, it's handled quickly within the same conversation
 
@@ -107,17 +107,11 @@ In this lab, you'll build a complete Agentic AI solution for GFM Bank using wats
 1. Create the GFM Bank Orchestrator Agent
 1. Test the complete solution
 
-### Extra Resources
-
-For additional support, you can access a [screen recording](https://ibm.box.com/s/vlnfp4b2kgdtczxufhhhdhqsheqslovy) of the instructions being completed on the watsonx Orchestrate UI.
-
-
 ### 🚀🚀🚀 Let's get started! 🚀🚀🚀 <!-- omit in toc -->
 
+### Connect to your assigned Watsonx Orchestrate instance
 
-## Connect to your assigned Watsonx Orchestrate instance
-
-- Log in to IBM Cloud (cloud.ibm.com). Navigate to top left hamburger menu, then to Resource List. Open the AI/Machine Learning section. You should see a **watsonx Orchestrate** service, click to open
+- Log in to IBM Cloud (cloud.ibm.com). Navigate to the top-left hamburger menu, then to the Resource List. Open the AI/Machine Learning section. You should see a **watsonx Orchestrate** service, click to open
 
   ![Watsonx Orchestrate service](./images/i1.png)
 
