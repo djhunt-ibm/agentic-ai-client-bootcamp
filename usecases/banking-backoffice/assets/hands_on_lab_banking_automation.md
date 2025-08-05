@@ -802,9 +802,9 @@ In the preview window from the right, test with the following query:
   Please do a reversal of my previous 4000 EURO payment to my IBAN DE89320895326389021994
   ```
 
-![Text Queries](./images/i36.png)
+  ![Text Queries](./images/i36.png)
 
-![Text Queries](./images/i37.png)
+  ![Text Queries](./images/i37.png)
 
 - Example of **Back Office Agent** functionality under **Teller Agent**
 
