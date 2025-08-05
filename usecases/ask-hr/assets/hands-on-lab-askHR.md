@@ -41,7 +41,7 @@ In this lab we will build an HR agent in watsonx Orchestrate, leveraging tools a
 
 - Click the "Launch watsonx Orchestrate" button.
 
-  <img width="1000" alt="image" src="../../../environment-setup/assets/cloud-wxo.png">
+   <img width="1000" alt="image" src="../../../environment-setup/assets/cloud-wxo.png">
 
 - Welcome to watsonx Orchestrate. Open the hamburger menu, click on the down arrow next to **Build**.  Then click on **Agent Builder**:
 
@@ -52,7 +52,7 @@ In this lab we will build an HR agent in watsonx Orchestrate, leveraging tools a
 
    <img width="1000" alt="image" src="hands-on-lab-assets/step_2_v2.png">
 
-2. Select **Create from scratch**, give your agent a name, e.g. `HR Agent`, and fill in the **Description** as shown below: 
+1. Select **Create from scratch**, give your agent a name, e.g. `HR Agent`, and fill in the **Description** as shown below: 
 
    ```
    You are an agent who handles employee HR queries.  You provide short and crisp responses, keeping the output to 200 words or less.  You can help users check their profile data, retrieve latest time off balance, update title or address, and request time off. You can also answer general questions about company benefits.
@@ -60,61 +60,59 @@ In this lab we will build an HR agent in watsonx Orchestrate, leveraging tools a
    Click on **Create**:
 
    <img width="1000" alt="image" src="hands-on-lab-assets/step_3_v2.png">
-   
-3. Click on the down arrow against **Model**. Select Model "llama-3-405b-instruct"
+<!--   
+1. Click on the down arrow against **Model**. Select Model "llama-3-405b-instruct"
 
    <img width="1000" alt="image" src="hands-on-lab-assets/step_4_v2.png">
-   
-4. Select "Default" in **Agent style** section.
+-->   
+1. Select **Default** in **Agent style** section.
 
    <img width="1000" alt="image" src="hands-on-lab-assets/step_5_v2.png">
    
-5. Scroll down the screen to the **Knowledge** section.
-   Click on "Choose knowledge".
+1. Scroll down the screen to the **Knowledge** section.
+   Click on **Choose knowledge**.
    
    <img width="1000" alt="image" src="hands-on-lab-assets/step_6_v3.png">
   
-6. Select Upload files.
-   Click on Next.
+1. Select **Upload files**.
+   Click on **Next**.
    
-  <img width="1000" alt="image" src="hands-on-lab-assets/step_7_v3.png">
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_7_v3.png">
      
-7. Download the [Employee Benefits.pdf](/usecases/ask-hr/assets/Employee-Benefits.pdf) onto your system, then upload the file here.
-   Click on Next.
+1. Download the [Employee Benefits.pdf](/usecases/ask-hr/assets/Employee-Benefits.pdf) onto your system, then upload the file here.
+   Click on **Next**.
 
-  <img width="1000" alt="image" src="hands-on-lab-assets/step_8_v3.png">
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_8_v3.png">
 
- 8.   Copy the following description into the **Description** section:
+1. Copy the following description into the **Description** section and then click on **Save**:
 
    ```
    This knowledge base addresses the company's employee benefits, including parental leaves, pet policy, flexible work arrangements, and student loan repayment.
    ```
-
-   Click on "Save".
    
-  <img width="1000" alt="image" src="hands-on-lab-assets/step_8.1_v3.png">
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_8.1_v3.png">
 
- 9. Scroll down to the **Toolset** section. Click on **Add tool +**:
+1. Scroll down to the **Toolset** section. Click on **Add tool +**:
 
-  <img width="1000" alt="image" src="hands-on-lab-assets/step_9_v3.png">
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_9_v3.png">
 
- 10. Select **Import**:
+1. Select **Import**:
 
-  <img width="1000" alt="image" src="hands-on-lab-assets/step_10_v3.png">
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_10_v3.png">
 
- 11. Select "Import from file.
+1. Select **Import from file**:
 
-  <img width="1000" alt="image" src="hands-on-lab-assets/step_11_v3.png">
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_11_v3.png">
 
- 12. Drag and drop or click to upload the **hr.yaml** file (provided to you by the instructor), then click on **Next**:
+1. Drag and drop or click to upload the **hr.yaml** file (provided to you by the instructor), then click on **Next**:
 
-  <img width="1000" alt="image" src="hands-on-lab-assets/step_12_v3.png">    
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_12_v3.png">    
 
- 13. Select all the operations and click on **Done**:
+1. Select all the operations and click on **Done**:
 
-  <img width="1000" alt="image" src="hands-on-lab-assets/step_13_v3.png">
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_13_v3.png">
 
- 14. Scroll down to the **Behavior** section. Insert the instructions below into the **Instructions** field:
+1. Scroll down to the **Behavior** section. Insert the instructions below into the **Instructions** field:
 
    ```
    Use your knowledge base to answer general questions about employee benefits. 
@@ -125,13 +123,9 @@ In this lab we will build an HR agent in watsonx Orchestrate, leveraging tools a
 
    When the user requests time off, convert the dates to YYYY-MM-DD format, e.g. 5/22/2025 should be converted to 2025-05-22 before passing the date to the post_request_time_off tool.
    ```
-   Turn on the toggle button for "Chat with documents". Select None in "Citations show in webchat".
-   
-   Turn on the toggle button for "Show agent".
-   
-   Click on **Deploy** in the top right corner to deploy your agent:
+1. Turn on the toggle button for **Chat with documents**. Select **None** in **Citations show in webchat**. Turn on the toggle button for **Show agent**. Click on **Deploy** in the top right corner to deploy your agent:
 
-  <img width="1000" alt="image" src="hands-on-lab-assets/step_14_v3.png">
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_14_v3.png">
 
 ### Test HR Agent in Preview
 Test your agent in the preview chat on the right side by asking the following questions and validating the responses.  They should look similar to what is shown in the screenshots below:
@@ -153,12 +147,10 @@ What is my time off balance?
 ```
 <img width="1000" alt="image" src="hands-on-lab-assets/hr_step13_3.png">
 
-
 ```
 Request time off
 Show my profile data.
 ```
-
 <img width="1000" alt="image" src="hands-on-lab-assets/hr_step13_4.png">
 
 #### Test HR Agent AI Chat
