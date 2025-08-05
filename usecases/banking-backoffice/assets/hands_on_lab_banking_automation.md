@@ -52,6 +52,8 @@ In this lab, you'll build a system of collaborating AI agents that can handle ba
 
 ## 📊 Banking Operations
 
+*Currently, GFM Bank relies on human tellers for basic transactions and back-office staff for approvals, leading to delays and inconsistent customer experiences in peak season.*
+
 ### Current User Scenario
 John, a GFM Bank customer, needs to make an urgent payment of €8,000, but he only has €5,000 in his account. 
 
@@ -77,8 +79,6 @@ With the AI-powered system you'll build today:
 7. If John needs a reversal, it's handled quickly within the same conversation
 
 The entire process takes minutes instead of hours, and John never has to leave his home.
-
-*Currently, GFM Bank relies on human tellers for basic transactions and back-office staff for approvals, leading to delays and inconsistent customer experiences in peak season.*
 
 ## 🏗️ Target Architecture with Agentic AI
 
