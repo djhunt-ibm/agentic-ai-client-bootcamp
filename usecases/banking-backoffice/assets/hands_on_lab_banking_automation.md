@@ -805,8 +805,6 @@ This Agent acts as the virtual front desk of GFM Bank, welcoming customers, iden
 
   ![Text Queries](./images/i36.png)
 
-  ![Text Queries](./images/i37.png)
-
 - Example of **Back Office Agent** functionality under **Teller Agent**
 
   ![Text Queries](./bank_orch_ag_imgs/i14.png)
