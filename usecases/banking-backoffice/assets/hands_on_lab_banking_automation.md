@@ -74,8 +74,8 @@ With the AI-powered system you'll build today:
 2. He requests to transfer €8,000
 3. The Teller Agent checks his balance and informs him of insufficient funds
 4. John requests an overdraft
-5. The Orchestrator automatically routes this to the Back Office Agent
-6. Upon approval, the Teller Agent completes the transfer
+5. The Teller routes this request to the Back Office Agent
+6. Upon approval from the Back Office Agent, the Teller Agent completes the transfer
 7. If John needs a reversal, it's handled quickly within the same conversation
 
 The entire process takes minutes instead of hours, and John never has to leave his home.
@@ -85,8 +85,6 @@ The entire process takes minutes instead of hours, and John never has to leave h
 ## 🏗️ Target Architecture with Agentic AI
 
 ![Architecture](banking-backoffice-architecture.png)
-
-<br>
 
 ## 🔧 Lab Instructions
 
