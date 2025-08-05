@@ -161,7 +161,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
 - On the GFM Back Office page, select the "llama-3-405b-instruct" model from the dropdown menu at the top middle of the page.
 
-  ![Select Model](./images/i4.png)
+  ![Select Model](./backoffice_ag_imgs/i15.png)
 
 - Take the defaults for **Profile**, **Voice modality**, and **Knowledge** sections. Under the **Toolset** section, click on the **Add tool** button.
 
@@ -173,7 +173,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
 - Click on **Import from file**
 
-  ![Import from file](./images/i15.png)
+  ![Import from file](./images/i16.png)
 
 - Upload the `bank.json` API spec provided by the instructor.
 
