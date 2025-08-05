@@ -123,7 +123,7 @@ In this lab, you'll build a complete Agentic AI solution for GFM Bank using wats
 
 ### GFM Back Office Agent
 
-**Handles special banking operations for GFM Bank that require elevated privileges, such as approving overdrafts and processing fee reversals. Operates from the GFM Bank operations center.**
+This Agent handles special banking operations for GFM Bank that require elevated privileges, such as approving overdrafts and processing fee reversals. Operates from the GFM Bank operations center.
 
 #### Create the GFM Back Office Agent
 
@@ -224,7 +224,7 @@ In the preview window from the right, test with the following query:
 
 ### GFM Teller Agent
 
-**Assists customers with everyday banking tasks such as balance inquiries and money transfers. Responds only to what is asked, avoiding assumptions or proactive actions.**
+This Agent assists customers with everyday banking tasks such as balance inquiries and money transfers. Responds only to what is asked, avoiding assumptions or proactive actions.
 
 #### Create GFM Teller Agent
 
@@ -354,7 +354,7 @@ What's the balance of my account IBAN DE89320895326389021994
   
 ### GFM Product Information Agent
 
-**Acts as the trusted expert on all banking products and services offered by GFM Bank. Helps customers explore and understand available financial solutions with clarity and precision.**
+This Agent acts as the trusted expert on all banking products and services offered by GFM Bank. It helps customers explore and understand available financial solutions with clarity and precision.
 
 #### Create GFM Product Information Agent
 
@@ -617,7 +617,7 @@ In the preview window from the right, test with the following query:
 
 ### GFM Bank Orchestrator Agent
 
-**Acts as the virtual front desk of GFM Bank, welcoming customers, identifying their needs, and connecting them with the right specialist for a smooth and professional experience.**
+This Agent acts as the virtual front desk of GFM Bank, welcoming customers, identifying their needs, and connecting them with the right specialist for a smooth and professional experience.
 
 #### Create GFM Bank Orchestrator Agent
 
