@@ -173,7 +173,7 @@ For additional support, you can access a [screen recording](https://ibm.box.com/
 
 - Click on **Import from file**
 
-  ![Import from file](./images/i16.png)
+  ![Import from file](./backoffice_ag_imgs/i16.png)
 
 - Upload the `bank.json` API spec provided by the instructor.
 
