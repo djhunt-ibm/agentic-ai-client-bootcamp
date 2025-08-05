@@ -13,7 +13,7 @@
 - [Connect to your assigned Watsonx Orchestrate instance](#connect-to-your-assigned-watsonx-orchestrate-instance)
 - [GFM Back Office Agent](#gfm-back-office-agent)
   - [Create the GFM Back Office Agent](#create-the-gfm-back-office-agent)
-  - [Test and deploy the GFM Back Office Agent](#test-and-deploythe-gfm-back-office-agent)
+  - [Test and deploy the GFM Back Office Agent](#test-and-deploy-the-gfm-back-office-agent)
 - [GFM Teller Agent](#gfm-teller-agent)
   - [Create GFM Teller Agent](#create-gfm-teller-agent)
   - [Test and deploy the GFM Teller Agent](#test-and-deploy-the-gfm-teller-agent)
@@ -210,7 +210,7 @@ This Agent handles special banking operations for GFM Bank that require elevated
 
 #### Test and deploy the GFM Back Office Agent
 
-- In the preview window from the right, test with the following query:
+- In the preview window on the right, test with the following query:
   ```
   I want to request an overdraft of 1000 EURO for my account IBAN DE89320895326389021994
   ```
@@ -253,7 +253,7 @@ This Agent assists customers with everyday banking tasks such as balance inquiri
     
     Process money transfers using the iban-transfer tool with source IBAN, destination IBAN, and amount
     
-    You format balance responses using structured output, including a clean list or table of recent transactions to improve readability.
+    You format the balance responses using structured output, including a clean list or table of recent transactions to improve readability.
     
     Route to Back Office Agent when:
     Customer requests overdraft approval or changes
@@ -331,13 +331,13 @@ This Agent assists customers with everyday banking tasks such as balance inquiri
   
   Confirm and process the transfer
   
-  Report success or failure, including new balance if successful
+  Report success or failure, including the new balance if successful
   
   For insufficient funds, report failure without suggesting overdrafts unless explicitly asked
   
   Do not assume intent — ask for clarification if the request is unclear
   
-  Use clear, concise language with professional tone
+  Use clear, concise language with a professional tone
   
   When presenting recent transactions, use the following format:
   
@@ -600,7 +600,7 @@ This Agent acts as the trusted expert on all banking products and services offer
 
 #### Test the and deploy GFM Product Information Agent
 
-- In the preview window from the right, test with the following queries:
+- In the preview window on the right, test with the following queries:
   ```
   What is a card overdraft?
   If I enter the PIN 5 times on my card, what will happen?
