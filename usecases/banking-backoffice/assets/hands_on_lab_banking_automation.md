@@ -4,28 +4,26 @@
 
 - [🔍 Introduction](#-introduction)
 - [📊 Banking Operations](#-banking-operations)
-- [🏗️ Target Architecture with Agentic AI](#️-target-architecture-with-agentic-ai)
-- [👤 User Scenario](#-user-scenario)
-  - [Current Situation](#current-situation)
+  - [Current User Scenario](#current-user-scenario)
   - [Future with Agentic AI](#future-with-agentic-ai)
-- [🔧 Lab Instructions](#--lab-instructions-)
+- [🏗️ Target Architecture with Agentic AI](#-target-architecture-with-agentic-ai)
+- [🔧 Lab Instructions](#-lab-instructions)
   - [Prerequisites](#prerequisites)
   - [Lab Steps Overview](#lab-steps-overview)
-  - [Extra Resources](#extra-resources)
 - [Connect to your assigned Watsonx Orchestrate instance](#connect-to-your-assigned-watsonx-orchestrate-instance)
-  - [GFM Back Office Agent](#gfm-backoffice-agent)
-    - [Create the GFM Back Office Agent](#create-the-gfm-backoffice-agent)
-    - [Test the GFM Back Office Agent](#test-the-gfm-backoffice-agent)
-  - [GFM Teller Agent](#gfm-teller-agent)
-    - [Create GFM Teller Agent](#create-gfm-teller-agent)
-    - [Test the GFM Teller Agent](#test-the-gfm-teller-agent)
-  - [GFM Product Information Agent](#gfm-product-information-agent)
-    - [Create GFM Product Information Agent](#create-gfm-product-information-agent)
-    - [Test the GFM Product Information Agent](#test-the-gfm-product-information-agent)
-  - [GFM Bank Orchestrator Agent](#gfm-bank-orchestrator-agent)
-    - [Create GFM Bank Orchestrator Agent](#create-gfm-bank-orchestrator-agent)
-    - [Add collaborative Agents](#add-collaborative-agents)
-    - [Test the GFM Bank Orchestrator Agent](#test-the-gfm-bank-orchestrator-agent)
+- [GFM Back Office Agent](#gfm-backoffice-agent)
+  - [Create the GFM Back Office Agent](#create-the-gfm-backoffice-agent)
+  - [Test the GFM Back Office Agent](#test-the-gfm-backoffice-agent)
+- [GFM Teller Agent](#gfm-teller-agent)
+  - [Create GFM Teller Agent](#create-gfm-teller-agent)
+  - [Test the GFM Teller Agent](#test-the-gfm-teller-agent)
+- [GFM Product Information Agent](#gfm-product-information-agent)
+  - [Create GFM Product Information Agent](#create-gfm-product-information-agent)
+  - [Test the GFM Product Information Agent](#test-the-gfm-product-information-agent)
+- [GFM Bank Orchestrator Agent](#gfm-bank-orchestrator-agent)
+  - [Create GFM Bank Orchestrator Agent](#create-gfm-bank-orchestrator-agent)
+  - [Add collaborative Agents](#add-collaborative-agents)
+  - [Test the GFM Bank Orchestrator Agent](#test-the-gfm-bank-orchestrator-agent)
 - [Test Your Agentic AI Banking Solution](#test-your-agentic-ai-banking-solution)
 - [🎉 Congratulations! You have completed the lab!](#-congratulations-you-have-completed-the-lab)
 - [🔄 Challenge Extensions](#-challenge-extensions)
@@ -54,7 +52,7 @@ In this lab, you'll build a system of collaborating AI agents that can handle ba
 
 ## 📊 Banking Operations
 
-### 👤 Current User Scenario
+### Current User Scenario
 John, a GFM Bank customer, needs to make an urgent payment of €8,000, but he only has €5,000 in his account. 
 
 1. John visits the bank branch and waits in line to speak with a teller
