@@ -73,7 +73,7 @@ With the AI-powered system you'll build today:
 3. The Teller Agent checks his balance and informs him of insufficient funds
 4. John requests an overdraft
 5. The Teller Agent routes this request to the Back Office Agent
-6. Upon approval from the Back Office Agent, the Teller Agent completes the transfer
+6. Upon approval (if the request is less than €10,000) from the Back Office Agent, the Teller Agent completes the transfer
 7. If John needs a reversal, it's handled quickly within the same conversation
 
 The entire process takes minutes instead of hours, and John never has to leave his home.
