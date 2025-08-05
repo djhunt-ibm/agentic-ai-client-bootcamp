@@ -188,7 +188,7 @@ Behavior instructions:
 ```
 ### **Trigger Condition**
 When a user initiates a conversation or asks a question containing the keyword
-```show me all my emails, customer service, i want to do customer support or related phrases```
+```show me all my emails, customer service, customers list or related phrases```
 
 ### **Step 1**: Display All Customer Emails
 * **Action**: Trigger the get_all_mails tool to fetch email all the data
@@ -268,7 +268,7 @@ When a user initiates a conversation or asks a question containing the keyword
 
 ```show me all emails ```
 
-```customer support```
+```customers list```
 
 Observe the response which was based on the information returned by the Mail tool. To verify that, click the **Show Reasoning** link to expand the agent's reasoning. Note that the agent is correctly calling the **Get All Mails** tool and it shows both input and output of the tool call.
 
@@ -330,7 +330,7 @@ Behavior instructions:
 ```
 ### **Trigger Condition**
 When a user initiates a conversation or asks a question containing the keyword 
-```show all orders or order management or i want to do order management or related phrases.```
+```show all orders or order management or manage orders or related phrases.```
 
 ### **Step 1: Fetch and Display All POs**
 * **Action**: Automatically trigger the `fetch_all_pos` tool.
@@ -381,7 +381,7 @@ When a user initiates a conversation or asks a question containing the keyword
 
 Next, test the functionality of the agent by asking a question such as
 
- ```order management``` 
+ ```manage orders``` 
 
   ```Show all orders``` 
   
@@ -467,7 +467,7 @@ Question:
 
 ```Show me all emails for customer service```
 
-``` customer support```
+``` customers list```
 
 Expand the **Show Reasoning** and **Step 1** links to review the reasoning of the agent. Note that it is correctly retreiving information as it references the **Customer Support Agent** tool.
 
@@ -478,6 +478,8 @@ Expand the **Show Reasoning** and **Step 1** links to review the reasoning of th
 Question:
 
  ```Show me all order details``` 
+
+ ```manage orders```
 
 42. At this point, you are ready to deploy your **Order-to-Cash Agent**. To do so, scroll to the bottom of the configuration page and make sure the slide bar next to **Show agent** is enabled (green) to make the **Order-to-Cash Agent** accessible on the chat interface. Click **Deploy** button to deploy your agent.
 
@@ -500,7 +502,7 @@ Question:
 
 ```Show me all emails for customer service```
 
-``` customer support```
+``` customers list```
 
 ![wxo chat q1](./images/img26.png)
 
