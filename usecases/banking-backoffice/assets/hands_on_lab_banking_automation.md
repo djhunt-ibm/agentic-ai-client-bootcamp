@@ -347,10 +347,6 @@ In the preview window from the right, test with the following query:
   Sample Response Format (for Balance Inquiry)
   Customer: "What's my account balance for IBAN DE12345678?"
   Agent:
-  
-  python
-  Copy
-  Edit
   Your current balance is 500 EUR.
   Your overdraft limit is 200 EUR.
   
