@@ -94,6 +94,14 @@ On the following screen, we can enter more information about the new agent we ar
   - `Tools` are functions an agent can call. It can be either an API call or an invocation of custom code. This allows to extend the agent's capabilitiy beyond what the LLM has been trained with.
   - `Agents` are other agents, either within watsonx Orchestrate or running externally, e.g., in watsonx.ai that this agent can delegate the request, or part of a request, to.
 
+Moreover, you can specify the Large Language Model that he agent will use, as well as the "style" of the agent. For this agent (as well as all others below), we will pick the `llama-3-405b-instruct` model. 
+
+![alt text](images/image35.png)
+
+For the style, we will pick the `ReAct` style.
+
+![alt text](images/image36.png)
+
 In a real production deployment, the Dock Status agent would sit in front of an existing enterprise backend system that can provide up-to-date data about trucks currently sitting at warehouse docks, and keep track of products and their quantity that are being unloaded.
 However, in this hands-on exercise, we will simulate that backend by simply hardcoding the data into the `Behavior` field of the agent. The content of this field drive the prompts that are sent to the underlying LLM, and adding the hardcoded data equates to providing examples in the prompt. So, for the purpose of simulating data stemming from an enterprise system, we can use this workaround. Note how the instructions provide detailed information about both the persona and the context this agent operates with.
 
@@ -181,7 +189,7 @@ Let's now test the new agent. In the Preview window, enter a question for the ag
 
 ![alt text](images/image7.png)
 
-> When doing this in your own instance, you may see answers that differ from the ones shown in the screenshot above. Moreover, the agent will often ask follow-up questions before offering an answer. This is due to the undeterministic nature of the AI models involved. Feel free to experiment with different types of questions to see how the agent reacts. The same equally applies to all the agents described further down.
+> When doing this in your own instance, you may see answers that differ from the ones shown in the screenshot above. In some cases, the agent might ask follow-up questions before offering an answer. This is due to the undeterministic nature of the AI models involved. Feel free to experiment with different types of questions to see how the agent reacts. The same equally applies to all the agents described further down.
 
 You can now go ahead and deploy the agent, using the `Deploy` button at the top right of the page.
 
@@ -213,7 +221,7 @@ The Surplus Agent provides recommendations about the handling of surplus data. I
 
 Then click on `Create`.
 
-In the following view, scroll all the way down to the `Behavior` section, and enter the following into the `Instructions` field:
+In the following view, select the `llama-3-405b-instruct` model and set the agent style to `RAct`. Then scroll all the way down to the `Behavior` section, and enter the following into the `Instructions` field:
 ```
 Persona:
 - Your purpose is to provide information about surplus. I will ask about the recommended handling of surplus on a specific truck, and you will answer in a detailed format with the allocation strategy based on the given data, along with truck id, Product SKU, total cost, surplus unit.
@@ -295,7 +303,7 @@ Click on Create agent and enter the following:
 The Secretary Agent specializes in creating emails related to warehouse topics. 
 ```
 
-Then click on Create and add the following text to the `Instructions` field in the Behavior section:
+Then click on Create. Select the `llama-3-405b-instruct` model (leave the agent style on `Default`) and add the following text to the `Instructions` field in the Behavior section:
 ```
 Persona:
 - Your persona is that of a secretary that drafts emails. I will ask you to create an email about a topic, and you will return a textual draft of that email.
@@ -379,6 +387,8 @@ The Warehouse Manager Agent is in charge of routing user requests to the most re
 After you have entered the information, click on `Create`.
 
 ![alt text](images/image17.png)
+
+And as before, change the model to `llama-3-405b-instruct` and set the agent style to `ReAct`.
 
 We had mentioned above that an agent can collaborate with other agents to fulfill a certain task. You enter those collaborator agents in the `Agents` section under `Toolset` in the agent definition window.
 

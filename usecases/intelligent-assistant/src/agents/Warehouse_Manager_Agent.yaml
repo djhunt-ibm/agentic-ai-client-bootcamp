@@ -1,0 +1,52 @@
+kind: native
+name: Warehouse_Manager_Agent
+display_name: Warehouse Manager Agent
+description: The Warehouse Manager Agent is in charge of routing user requests to
+  the most relevant agent working under it.
+context_access_enabled: true
+context_variables: []
+llm: watsonx/meta-llama/llama-3-405b-instruct
+style: react
+instructions: 'Reasoning:
+
+  - Use the Dock Status Agent for tasks related to dock status.
+
+  - Use the Surplus Agent for tasks related to surplus.
+
+  - Use the Secretary Agent for drafting of emails.
+
+  - Use the TrafficAgent to find traffic information about a location.'
+guidelines: []
+collaborators:
+- Secretary_Agent
+- Surplus_Agent
+- Dock_Status_Agent
+- TrafficAgent
+tools: []
+knowledge_base: []
+chat_with_docs:
+  enabled: false
+  vector_index:
+    chunk_size: 400
+    chunk_overlap: 50
+    limit: 10
+  generation:
+    prompt_instruction: ''
+    generated_response_length: Moderate
+    display_text_no_results_found: I searched my knowledge base, but did not find
+      anything related to your query
+    display_text_connectivity_issue: I might have information related to your query
+      to share, but am unable to connect to my knowledge base at the moment
+  query_rewrite:
+    enabled: true
+  confidence_thresholds:
+    retrieval_confidence_threshold: Lowest
+    response_confidence_threshold: Lowest
+  citations:
+    citation_title: How do we know?
+    citations_shown: -1
+  hap_filtering:
+    output:
+      enabled: false
+      threshold: 0.5
+spec_version: v1

@@ -132,10 +132,10 @@ In Orchestrate, we will create our main agent, as outlined below:
 ### Product Agent
 
 1. Go to the Orchestrate home page, click on the hamburger menu (☰), select Build, and then choose Agent Builder.
-![Agent Builder](assets/wxo_home.png)
+![Agent Builder](assets/BAP_1.png)
 
 2. Click on the Create Agent button.
-![Create Agent](assets/wxo_create_agent.png)
+![Create Agent](assets/BAP_2.png)
 
 3. Select Create from scratch (as shown in image 1 below), enter your agent’s name (as shown in image 2), provide a description (as shown in image 3), and then click the Create button (as shown in image 4).
 
@@ -144,33 +144,45 @@ In Orchestrate, we will create our main agent, as outlined below:
    ```
    This agent is designed to search for a specified product and retrieve its details and features using Retrieval-Augmented Generation (RAG) on the product catalog. It presents the information in a clear and structured format, ensuring systematic organization of key product data, making it easy to understand and use.
    ```
-   ![Create from scratch](assets/wxo_product_scratch.png)
+   ![Create from scratch](assets/BAP_3.png)
 
 4. Once the agent is created, go to the Agent Configuration page and set the model to llama-3-405b-instruct and the Agent style to Default.
-   ![Agent Style](assets/wxo_product_config_1.png)
+   ![Agent Style](assets/BAP_4.png)
 
-5. Scroll down to the Knowledge section and add the below description in it.
+5. Scroll down to the Knowledge section and click on the Choose knowledge button.
+   ![Knowledge](assets/BAP_5_K.png)
+
+6. After clicking the Choose knowledge button, a pop-up window will appear. Select Upload Files, then click Next.
+   ![Knowledge](assets/BAP_5_K_2.png)
+
+7. Next, choose the knowledge source. In our case, it's the [Product Catalog](./assets/ABC_Motor_Product_Catalog.pdf). Drag and drop the file into the designated area.
+   ![Knowledge](assets/BAP_6_K.png)
+
+8. Once the file is uploaded, the screen will look like the one below. Click Next to proceed.
+  ![Knowledge](assets/BAP_7_K.png)
+
+9. Add the description below in the Description field, and then click Save.
    **Description:**
    ```
    Your knowledge base is the document that contains all the product-related information. All queries related to the product will be addressed using this document as the primary source.
    ```
-   ![Knowledge](assets/wxo_knowledge.png)
+   ![Knowledge](assets/BAP_8_K.png)
 
-6. Then in the Document section, click on the Upload file button and upload [the product catalog](./assets/ABC_Motor_Product_Catalog.pdf).
-![Upload file](assets/wxo_upload.png)
+10. After completing all the above steps, your knowledge source will be added and will appear as shown in the image below.
+   ![Upload file](assets/BAP_9.png)
 
-7. Scroll down to the Toolset section, then in the Agents section click on the Add Agent button.
-![Add Agent](assets/wxo_add_agent.png)
+11. Scroll down to the Toolset section, then in the Agents section click on the Add Agent button.
+   ![Add Agent](assets/BAP_10.png)
 
-8. From the pop-up menu, select the Import.
-![Add from local instance](assets/wxo_import.png)
+12. From the pop-up menu, select the Import.
+   ![Add from local instance](assets/BAP_11.png)
 
 > **Note:** : We are now adding the Comparison Agent (an external agent) to the Product Agent, enabling it to delegate tasks to them.
 
-9. On the next page, ensure that External Agent is selected (as shown in image 1 below). If it’s not already selected, please choose it, then click the Next button (as shown in image 2).
+13. On the next page, ensure that External Agent is selected (as shown in image 1 below). If it’s not already selected, please choose it, then click the Next button (as shown in image 2).
 ![Select External Agent](assets/wxo_external.png)
 
-10. On the next page, enter the following information:
+14. On the next page, enter the following information:
       1. Provide: From the drop down select watsonx.ai.
       2. API key: Enter the watsonx.ai API key.
       3. Service instance URL: Enter the public endpoint URL of the agent that we copied in step 6.
@@ -184,10 +196,10 @@ In Orchestrate, we will create our main agent, as outlined below:
       ```
     ![External Agent](assets/wxo_external_agent_setup.png)
 
-11. Once the delegated agents are added, they will appear as shown in the image below.
-![Delegation Agent](assets/wxo_agent_appear.png)
+15. Once the delegated agents are added, they will appear as shown in the image below.
+    ![Delegation Agent](assets/BAP_12.png)
 
-12. Scroll down to the Behavior section, add the description shown in image as 1, and then click the Deploy button as shown in image as 2.
+16. Scroll down to the Behavior section, add the description shown in image as 1, and then click the Deploy button as shown in image as 2.
 
       For Product Agent use the below description in Behavior Section.
 
@@ -196,12 +208,15 @@ In Orchestrate, we will create our main agent, as outlined below:
       For general product queries, it retrieves structured information directly from the knowledge base.
       For queries involving URLs or web references or comparison, it delegates the task to the Comparison Agent.
       ```
-      ![Behavior](assets/wxo_behavior.png)
+      ![Behavior](assets/BAP_13.png)
 
 > **Note:** : The Product Agent is now ready to handle product-related queries, delegating tasks to the Link Search Agent and Comparison Agent as needed.
 
 ## Experience Agents in Action
 Follow the steps above, then try interacting with the use case using these sample queries:
+
+Select the Product Agent from the dropdown menu, and you should be good to go.
+![Behavior](assets/BAP_14.png)
 
 1. Product Agent
 
@@ -223,4 +238,4 @@ Follow the steps above, then try interacting with the use case using these sampl
    ![Comparison Agent Response](assets/chat_2.png)  
    ![Comparison Agent Response 2](assets/chat_3.png)
 
-Now, explore and experience the power of Skills & Agents in action! 🚀 
+

@@ -1,0 +1,60 @@
+kind: native
+name: Surplus_Agent
+display_name: Surplus Agent
+description: The Surplus Agent provides recommendations about the handling of surplus
+  data. It has access to data including the allocation strategy, product SKU and total
+  cost for the surplus on each truck, and it returns information about the recommended
+  handling of surplus.
+context_access_enabled: true
+context_variables: []
+llm: watsonx/meta-llama/llama-3-405b-instruct
+style: react
+instructions: "Persona:\n- Your purpose is to provide information about surplus. I\
+  \ will ask about the recommended handling of surplus on a specific truck, and you\
+  \ will answer in a detailed format with the allocation strategy based on the given\
+  \ data, along with truck id, Product SKU, total cost, surplus unit.\n\nContext:\n\
+  - Use the Surplus data below to create answers. The data below is formatted in JSON,\
+  \ but you will return the information as text in a bulleted list.\n- If no allocation\
+  \ strategy is specified, return data according to the default allocation strategy\
+  \ given in the data below.\n- If no product SKU is provided by the user, return\
+  \ data for all of the product SKUs within a given truck ID.\n- Provide as much detail\
+  \ as you can.\n\nSurplus data:\n{\n  \"truck_id\": \"T004\",\n  \"SKU\": \"102209199\"\
+  ,\n  \"total_surplus\": 15,\n  \"allocation\": [\n    {\n      \"destination\":\
+  \ \"Marketing\",\n      \"units\": 12\n    },\n    {\n      \"destination\": \"\
+  Relocation\",\n      \"units\": 3\n    }\n  ],\n  \"total_cost\": 69\n},\n{\n  \"\
+  truck_id\": \"T001\",\n  \"SKU\": \"199464599\",\n  \"total_surplus\": 50,\n  \"\
+  allocation\": [\n    {\n      \"destination\": \"Holding\",\n      \"units\": 15\n\
+  \    },\n    {\n      \"destination\": \"Marketing\",\n      \"units\": 19\n   \
+  \ },\n    {\n      \"destination\": \"Relocation\",\n      \"units\": 12\n    },\n\
+  \    {\n      \"destination\": \"Dropship\",\n      \"units\": 4\n    }\n  ],\n\
+  \  \"total_cost\": 684\n}"
+guidelines: []
+collaborators: []
+tools: []
+knowledge_base: []
+chat_with_docs:
+  enabled: false
+  vector_index:
+    chunk_size: 400
+    chunk_overlap: 50
+    limit: 10
+  generation:
+    prompt_instruction: ''
+    generated_response_length: Moderate
+    display_text_no_results_found: I searched my knowledge base, but did not find
+      anything related to your query
+    display_text_connectivity_issue: I might have information related to your query
+      to share, but am unable to connect to my knowledge base at the moment
+  query_rewrite:
+    enabled: true
+  confidence_thresholds:
+    retrieval_confidence_threshold: Lowest
+    response_confidence_threshold: Lowest
+  citations:
+    citation_title: How do we know?
+    citations_shown: -1
+  hap_filtering:
+    output:
+      enabled: false
+      threshold: 0.5
+spec_version: v1

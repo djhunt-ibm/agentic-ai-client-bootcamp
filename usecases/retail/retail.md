@@ -23,6 +23,10 @@
   - [(Optional) Uploading the solution to a watsonx Orchestrate SaaS instance](#optional-uploading-the-solution-to-a-watsonx-orchestrate-saas-instance)
     - [Remote environment configuration](#remote-environment-configuration)
     - [Importing connections, tools and agents](#importing-connections-tools-and-agents)
+  - [(Optional) Headless Agent](#optional-headless-agent)
+    - [Code Walkthrough](#code-walkthrough)
+      - [The local HTTP server](#the-local-http-server)
+      - [Running the app](#running-the-app)
 
 ## Introduction
 This use case describes a scenario where a user can submit an image, i.e. a photograph that contains a shelf of products. Products are expected to be consumer products, that is, shoes, clothing, food, household supplies etc. The system will analyze the content of the image, i.e. identify the products shown, retrieve market trends for those products via web search, and finally develop recommendations and an action plan for how to reorganize the shelf to align with those market trends. 
@@ -351,7 +355,7 @@ Note how we divided the instructions into separate sections for persona, context
 
 ![alt text](images/image6.png)
 
-The `Show agent` switch controls whether or not the agent will be visible on the main watsonx Orchestrate page. We will leave this on for now, but eventually we will switch it off, because we want users to only use the supervisory agent (which we will create below).
+The `Show agent` switch, at the bottom of the agent configuration page, controls whether or not the agent will be visible on the main watsonx Orchestrate page. We will leave this on for now, but eventually we will switch it off, because we want users to only use the supervisory agent (which we will create below).
 
 We can now test our new agent right here in this page, using the `Preview` window. Let's test if both tools are properly invoked if we give the agent the right task. For example, we can give the agent a URL with the image, and then ask it to tell us about related market trends, like this:
 ```
@@ -368,10 +372,10 @@ We can now export the metadata for this agent into a YAML file. This allows us t
 
 ![alt text](images/image38.png)
 
-In the example above, the name of the agent is `internet_research_agent_4813Rr`.
+In the example above, the name of the agent is `internet_research_agent_9292aQ`.
 To export, simply enter the following command on the command line (replace the name of the agent after the '-n' parameter with the name of your agent):
 ```
-orchestrate agents export -n internet_research_agent_4813Rr -k native --agent-only -o internet_research_agent.yaml
+orchestrate agents export -n internet_research_agent_9292aQ -k native --agent-only -o internet_research_agent.yaml
 ```
 Feel free to study the content of the created YAML file. It has all the same content as what we typed into the Agent Builder UI before. Another interesting detail is the `llm` section. It shows which model is being used by this agent. If the agent you are creating does not perform to your satisfaction, you may want to try a different model.
 
@@ -381,7 +385,7 @@ Next we will define the `Market Analyst Agent`. Unlike in the previous example, 
 
 ```
 spec_version: v1
-style: react
+style: default
 name: market_analyst_agent
 llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
 description: >
@@ -410,13 +414,15 @@ The new agent is now listed next to the first two agents we deployed. Instad of 
 
 ![alt text](images/image10.png)
 
+Note how the test invocation we ran earlier is reflected in the `Total messages` section of this page. We will take a closer look at it later.
+
 ### The Retail Market Agent
 
 This agent is the user-facing agent, so to speak, that all requests go to. It will engage the other agents to address the task at hand. 
 We will import it the same way as the previous agent, namely by [YAML file](./src/agents/retail_market_agent.yaml). But let's first take a look at the content of that file:
 ```
 spec_version: v1
-style: react
+style: default
 name: retail_market_agent
 llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
 description: >
@@ -605,8 +611,8 @@ Remember that the values for the credentials are retrieved from the .env file. T
 
 Enter the following on the command line.
 ```
-./usecases/reatil/src/set-credentials.sh draft
-./usecases/reatil/src/set-credentials.sh live
+./usecases/retail/src/set-credentials.sh draft
+./usecases/retail/src/set-credentials.sh live
 ```
 
 ![alt text](images/image30.png)
@@ -623,7 +629,7 @@ All three agents shoud be listed there. Let's start with the internet_research_a
 
 ![alt text](images/image29.png)
 
-We can test this agent right here in the prevew, just like we did before when running locally. You can test it by entering, for example, the following text into the Preview tet field:
+We can test this agent right here in the preview, just like we did before when running locally. You can test it by entering, for example, the following text into the Preview tet field:
 ```
 Can you show me market trends for the products shown in the image at https://i.imgur.com/WzMC1LJ.png
 ```
@@ -642,7 +648,7 @@ Once the agent is deployed, go back to the `Manage agents` page by clicking on t
 
 ![alt text](images/image33.png)
 
-Now repeat the same exercise with the `market_analyst_agent`. However, you also need to add the two agents as collaborators, just like you did when using the ADK earlier.
+Now repeat the same exercise with the `market_analyst_agent` and the `retail_market_agent`. However, for the `retail_market_agent`, you also need to add the two agents as collaborators, just like you did when using the ADK earlier.
 
 We won't show detailed steps and screenshots here, because we are confident that by now, you are an expert in navigating the tool. 
 
@@ -669,3 +675,172 @@ Please look at the image at https://i.imgur.com/qfiugNJ.jpeg. Based on market tr
 ![alt text](images/image37.png)
 
 Feel free to run more experiments, switching the target environments the CLI is using between `local` and `wxo-saas` to see if the two environments behave differently. 
+
+## (Optional) Headless Agent
+
+In this section, we will use the agents above in a "headless" form. That is, the agent is triggered not by a human typing into a chat window, but by an event. "Event" in this context can be represented by a number of concrete implementations: for example, receiving a message through a pub/sub system, sent by a sensor, triggered by an incoming email, triggered by a stock price dropping below or rising above a certain level - the possibilities are endless. What they all have in common is that the agent is always on, listening and waiting for the event to occur, and then acting on that event, without any human intervention.
+
+The example scenario we will walk through here is one where a new photo of a product shelf is taken, stored in a folder in the cloud, and the appearance of that file will trigger the agent to download the image and create rearrangement recommendations. And to make things practical, instead of uploading the picture to a cloud store, we will show you an application that watches a file folder on the local machine, and will invoke the agent running in the ADK locally whenever a new image file appears. The result of the agent's work, i.e. recommendations for how to rearrange the product shelf, will be stored in a text file.
+
+### Code Walkthrough
+
+ > Note: the code for the app is in the file [image_listener.py](./src/app/image_listener.py).
+
+To implement the headless agent, we need an application that calls the Retail Market Agent using the watsonx Orchestrate REST API, and specifically, the "Caht with Agents" API. You can see the spec for this API [here](https://developer.watson-orchestrate.ibm.com/apis/orchestrate-agent/chat-with-agents). 
+
+For our app, we need three parameters:
+
+1. **The Bearer token**
+
+This token has to be sent as part of the header in the HTTP POST request. For a locally running ADK instance, you can find it in the `~/.cache/orchestrate/credentials.yaml` file, under `auth -> local -> wxo_mcsp_token`. 
+
+![alt text](images/image45.png)
+
+Note in the screenshot that ths file has two tokens, one for the local environment and one for the SaaS environment that we set up in the previous section. We will only use the local one here. Since we are passing it to the application as a parameter later, you might want to copy it from the file into your clipboard, and then store it in an environment variable for later use.
+
+```export BEARER_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...```
+
+2. **The agent ID**
+
+Every agent created in watsonx Orchestrate has an ID, which is used as an identifier in the target URL of the REST API. So we need to find the ID of the `retail_market_agent` agent, which can be done by using the `orchestrate agents list --verbose` command. The command returns a detailed list of all defined agents in JSON format. One of the fields is labeled `id`, and that is the one we need.
+
+![alt text](images/image46.png)
+
+We will pass this as a parameter as well, so copy it to the clipboard and from there to an environment variable for later use.
+
+```export AGENT_ID=725eeb8b-489a-4c42-8a15-140a6b7bd020```
+
+3. **The target folder**
+
+As mentioned above, the app will watch for the creation of new image files in a specific local folder. With this parameter, you specify which folder you would like to use. The app will not only look for image files in that folder, it will put the reults of the agent invocation into a text file in a subfolder named `output`.
+
+```export TARGET_FOLDER=/Users/andretost/retail-images```
+
+At the start of the program, it will collect the input parameters passed in and store them in local variables for later use.
+
+```
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(description="Process an image file with an AI agent.")
+    parser.add_argument("--agent_id", required=True, help="The ID of the target agent.")
+    parser.add_argument("--target_folder", required=True, help="The base folder for images and responses.")
+    parser.add_argument("--token", required=True, help="The bearer token of the local instance.")
+    args = parser.parse_args()
+
+    agent_id = args.agent_id
+    url = f"http://localhost:4321/api/v1/orchestrate/{agent_id}/chat/completions"
+    watched_folder = args.target_folder
+    bearer_token = args.token
+```
+Note how the target URL for the REST call to the ADK instance has the agent ID embedded into it.
+
+Next it sets up an `Observer` and a `FileEventHandler`. The combination of both allows us to start watching for events related to the defined target folder. This is all we need in the "main" part of the program.
+
+```
+    event_handler = NewFileHandler()
+    observer = Observer()
+    observer.schedule(event_handler, path=watched_folder, recursive=False)
+
+    print(f"Watching folder: {watched_folder}")
+    observer.start()
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        print("Stopping observer...")
+        observer.stop()
+    observer.join()
+```
+
+Now we will look at the implementation of the event handler class, i.e. the code that is called when a new file is added to the target folder.
+
+```
+class NewFileHandler(FileSystemEventHandler):
+    def on_created(self, event):
+        if not event.is_directory:
+            file_path = os.path.abspath(event.src_path)
+            filename = os.path.basename(file_path)
+            ext = os.path.splitext(file_path)[1].lower()
+            # Only process image files
+            if ext not in [".png", ".jpg", ".jpeg"]:
+                print(f"Ignored file (unsupported type): {file_path}")
+                return
+
+            print(f"New file detected: {file_path}")
+```
+
+It reacts to the `on_created` event, determines the name of the new file, and will only continue to process it if it is a jpeg or png file.
+
+#### The local HTTP server
+
+Remember that when we set up the agents for this use case, we assumed that the location of the image is passed as a URL. For example, one of the test prompts you used above was: 
+```
+Please look at the image at https://i.imgur.com/qfiugNJ.jpeg. Based on market trends for the products in the image, can you make recommendations for any rearrangement of the products on the shelf?
+```
+
+So here we need to convert the filename into a URL that the agent can retrieve. For this, you need to start a local HTTP server. This will allow retrieving local files - including the image files we are interesed in here - through an HTTP GET request. The easiest way to do so is to simply run the following command in (a) a new command terminal (since it will be blocked), and (b) running the command below **in the target folder** where your images are going to be stored.
+
+```
+python -m http.server 8001
+```
+
+![alt text](images/image47.png)
+
+You can test it by opening a browser window with `localhost:8001` as the address. It should show a file listing of your target folder. We assume it is empty for now, but even if there are files in there, remember that we are looking only for new files in our program, any existing files will simply be ignored.
+
+Another interesting element is that the tool that is interpreting the image is running inside the ADK instance, in a Docker container. Inside the container, the hostname "localhost" will not point to the hostname of your machine, it will be the container's local IP address. To reach the HTTP server we just started, we have to use the address `host.docker.internal`, because that maps to the hostname of your actual computer.
+
+```
+            try:
+                file_url = f"http://host.docker.internal:8001/{filename}"
+                payload = {
+                    "stream": False,
+                    "messages": [
+                        {
+                            "role": "user",
+                            "content": f"Please look at the image at {file_url}, and give me current market trends based on the products shown in the image. Based on those trends, can you make recommendations for the rearrangement of the products on the shelf?"
+                        }
+                    ]
+                }
+
+                response = requests.post(
+                    url,
+                    headers={"Content-Type": "application/json", "Authorization": f"Bearer {bearer_token}"},
+                    data=json.dumps(payload)
+                )
+                status = response.status_code
+                result = response.json()
+                text = result["choices"][0]["message"]["content"]
+                print(f"POST response: {status} - {text}")
+```
+
+In the above, you see that we use the filename of the new file and append it to `http://host.docker.internal:8001`. That will allow the tool running inside the container to retrieve the file.
+
+That URL is then inserted into the prompt as a variable. Otherwise this is the same prompt we would enter into the Chat UI, just in this case it is sent as a message within the REST call. The agent will start its work and return the result in the response message.
+
+```
+                answer = f"""
+New File Processed: {os.path.basename(file_path)}
+
+Response: {text}
+"""
+                save_text_to_responses_file(answer, image_filename=filename)
+```
+
+The returned message is embedded into a piece of text, and then saved into the output file. The saving happens in a function called `save_text_to_responses_file()`, which is pretty straightforward Python code and we will not print it out here separately. Again, you can see the entire Python code for the program in [this .py file](./src/app/image_listener.py).
+
+#### Running the app
+
+It's now time to run the application and test it! You have saved the three parameters it requires as environment variables above, so you can call it right away:
+
+```
+python ./usecases/retail/src/app/image_listener.py --agent_id $AGENT_ID --target_folder $TARGET_FOLDER --token $BEARER_TOKEN
+```
+
+Now let's copy an image file into the target folder. You can use any of the files in the [./usecases/retail/src/app/images/](./src/app/images/) folder for this test. Copy an paste the file either using your File Explorer or run a `cp` command in a separate command terminal - either will do the trick.
+
+![alt text](images/image48.png)
+
+Note how the program runs in an endless loop, and you can add more image files to the target folder. To stop it, simply hit ctrl-c. You can also see the file that was produced in the `output` folder.
+
+![alt text](images/image49.png)
