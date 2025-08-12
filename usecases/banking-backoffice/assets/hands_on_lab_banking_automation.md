@@ -195,8 +195,10 @@ This Agent handles special banking operations for GFM Bank that require elevated
   
   Response Guidelines:
   - For overdraft approvals: Confirm when overdraft has been approved or denied and display new limit and account details
-    Sample response:
-    Your overdraft for the amount of 2,000 EUR has been approved
+  
+  Sample response:
+  Your overdraft for the amount of 2,000 EUR has been approved
+
   - For fee reversals: Confirm the amount reversed and the new account balance
   - For errors: Explain the issue clearly and suggest alternative solutions when appropriate
   - Always use clear, concise language that explains what was done
@@ -210,7 +212,7 @@ This Agent handles special banking operations for GFM Bank that require elevated
 
 #### Test and deploy the GFM Back Office Agent
 
-- In the preview window on the right, test with the following query:
+- In the preview window on the right, test with the following query, using the IBAN you have been assigned:
   ```
   I want to request an overdraft of 1000 EURO for my account IBAN DE89320895326389021994
   ```
@@ -309,38 +311,26 @@ This Agent assists customers with everyday banking tasks such as balance inquiri
 
   ```
   Respond only to what the customer explicitly asks for — never anticipate or suggest next steps
-  
-  For balance inquiries:
-  
-  Display the current balance
-  
-  Display overdraft limit if available
-  
-  Display recent transactions formatted as a table or bulleted list
-  
-  End the response — do not suggest further actions
-  
-  For transfer requests:
-  
-  Confirm and process the transfer
-
-  Report success or failure, including the new balance if successful
-  
-  For insufficient funds, report failure without suggesting overdrafts unless explicitly asked
-  
-  Do not assume intent — ask for clarification if the request is unclear
-  
-
+  Do not assume intent — ask for clarification if the inquiry or request is unclear
   Use clear, concise language with a professional tone
-  
-  When presenting recent transactions, use the following format:
-  
-  Sample Response Format (for Balance Inquiry)
+
+  For transfer requests, do the following:
+  Confirm and process the transfer
+  Report success or failure, including the new transfer if successful
+  For insufficient funds, report failure without suggesting overdrafts unless explicitly asked
+
+  For balance inquiries:
+  Display the current balance
+  Display overdraft limit if available
+  Display recent transactions formatted as a table or bulleted list
+  End the response — do not suggest further actions
+
+  When presenting recent transactions for Balance Inquiry, use the following format:
   Customer: "What's my account balance for IBAN DE12345678?"
   Agent:
   Your current balance is 500 EUR.
   Your overdraft limit is 200 EUR.
-  
+
   Recent Transactions:
   | Date       | Type     | Amount  | Description         |
   |------------|----------|---------|----------------------|
@@ -357,7 +347,7 @@ This Agent assists customers with everyday banking tasks such as balance inquiri
 
 - In the preview window on the right, test with the following query:
 ```
-What's the balance of my account IBAN DE89320895326389021994
+What is the balance of my account IBAN DE89320895326389021994
 ```
 
 - Click on **Deploy** to deploy the agent
@@ -412,13 +402,13 @@ This Agent acts as the trusted expert on all banking products and services offer
 
   ![Select model](./prod_info_ag_imgs/i14.png)
 
-- In the **Knowledge** section. click on **Choose knowledge**.
+- In the **Knowledge source** section. click on **Choose knowledge**.
 
   ![Choose knowledge](./prod_info_ag_imgs/i13.png)
 
 - Click on **Upload files** and then **Next**.
 
-  ![Choose knowledge](./prod_info_ag_imgs/i12.png)
+  ![Upload Files](./prod_info_ag_imgs/i12.png)
 
 - Upload the listed documents below provided by the instructor and click **Next**
 
@@ -436,56 +426,48 @@ This Agent acts as the trusted expert on all banking products and services offer
   This comprehensive knowledge base contains detailed information on GFM Bank's products, services, fees, and operational procedures, organized into the following categories:
   
   1. Personal Banking Accounts
-  - Checking Accounts: Types, features, minimum balances, monthly fees, fee waiver conditions
-  - Savings Accounts: Interest rates, withdrawal limitations, minimum deposit requirements
-  - Personal Account Overdraft: Eligibility, limits, application process, fees, repayment terms
-  - Youth & Student Accounts: Age requirements, special features, transition to adult accounts
-  - Account Opening Requirements: Documentation, eligibility criteria, online vs. in-branch processes
+  - Checking & Savings Accounts
+  - Youth & Student Accounts
+  - Personal Account Overdraft
+  - Account Opening Requirements
   
   2. Card Products & Services
-  - Debit Cards: Features, security measures, contactless payment capabilities
-  - Debit Card Terms & Conditions: Complete cardholder agreement, liabilities, dispute resolution
-  - Card Overdraft Protection: Opt-in requirements, coverage limits, associated fees
-  - Card Transaction Limits: Daily ATM withdrawal limits, purchase limits, adjustment procedures
-  - Card Security: PIN management, card replacement, fraud protection measures
-  Lost/Stolen Card Procedures: Reporting process, emergency replacement, liability limitations
+  - Debit Cards
+  - Card Overdraft Protection, Transaction Limits and Security
   
   3. Digital Banking Services
-  - Mobile Banking: App features, device compatibility, security measures
-  - Online Banking: Account management, bill pay services, transfer capabilities
-  - Security Features: Authentication methods, fraud prevention, customer protection guarantees
+  - Mobile and Online Banking
+  - Security Features
   
   4. Fees & Pricing Structure
-  - Comprehensive Fee Schedule: Service charges, transaction fees, penalty fees
-  - Fee Waiver Programs: Requirements for avoiding monthly maintenance fees
-  - ATM Fee Structure: In-network vs. out-of-network fees, international ATM usage costs
-  - Investment Services Pricing: Commission schedules, management fees, account minimums
-  - Special Fee Considerations: Military discounts, senior citizen benefits, student exemptions
+  - Comprehensive Fee Schedule
+  - Fee Waiver Programs
+  - ATM Fee Structure
+  - Investment Services Pricing
+  - Special Fee Considerations
   
   5. Lending Products
-  - Personal Loans: Rates, terms, application requirements, approval timelines
-  - Home Loans: Mortgage options, equity lines, refinancing opportunities
-  - Auto Loans: New and used vehicle financing, rate structures, pre-approval process
-  - Credit Builder Products: Secured credit options, credit improvement programs
-  
+  - Personal, Home, Auto Loans
+  - Credit Builder Products
+
   6. International Banking
-  - Foreign Currency Services: Exchange rates, currency availability, ordering procedures
-  - International Wire Transfers: Fees, processing times, required information
-  - Foreign Transaction Policies: Card usage abroad, international fees, currency conversion rates
-  - Foreign ATM Access: Global ATM network partnerships, withdrawal limits, and associated fees
+  - Foreign Currency Services
+  - International Wire Transfers
+  - Foreign Transaction Policies
+  - Foreign ATM Access
   
   7. Investment Services
-  - Investment Account Options: Individual accounts, retirement accounts, education savings
-  - Investment Products: Mutual funds, bonds, stocks, certificates of deposit
-  - Advisory Services: Managed account options, financial planning resources
-  - Investment Fee Structure: Management fees, transaction costs, minimum balance requirements
+  - Investment Account Options
+  - Investment Products
+  - Advisory Services
+  - Investment Fee Structure
   
   8. Customer Support Resources
-  - Service Center Information: Contact numbers, operating hours, escalation procedures
-  - Branch Banking Details: Locations, hours of operation, available services
-  - Appointment Scheduling: Process for meeting with specialists, required preparation
+  - Service Center Information
+  - Branch Banking Details
+  - Appointment Scheduling
 
-  Each topic includes up-to-date information, regulatory disclosures where applicable, and internal cross-references to related products or services to facilitate comprehensive customer assistance.
+  Each topic includes up-to-date information, regulatory disclosures where applicable, and internal cross-references to related products or services, facilitating comprehensive customer assistance.
   ```
     ![Prod Agent Knowledge Description](./prod_info_ag_imgs/i10.png)
 
@@ -523,27 +505,19 @@ This Agent acts as the trusted expert on all banking products and services offer
   Customer asks about products, rates, fees, features, comparisons, or application processes.
   
   How to Respond
-  Start with a direct answer.
-  Use clear, scannable formatting.
-  Personalize when possible.
-  For comparisons: brief bullet points showing key differences.
-  For rates/fees: note that they may change or vary by qualification.
+  Start with a direct answer. Use clear, scannable formatting. Personalize when possible. For comparisons, use brief bullet points showing key differences. For rates/fees, note that they may change or vary by qualification.
   
   Patterns
   Product Info:
-  
   Benefits → Features/requirements → Fees/rates → Next steps.
   
   Recommendations:
-  
   Acknowledge need → Present 1–3 relevant products → Compare briefly → Suggest next step.
   
   Applications:
-  
   List documentation → Steps in order → Timelines → Application channels.
   
   Complex Questions:
-  
   Use plain language, analogies, or step-by-step instructions.
 
   ```
@@ -691,7 +665,7 @@ This Agent acts as the virtual front desk of GFM Bank, welcoming customers, iden
   For Privileged Operations (Back Office Services):
   
   When customers mention overdrafts, fee reversals, or special exceptions, identify this as a Back Office request
-  Respond with: "For your request regarding [overdraft/fee reversal], I'll transfer you to our Back Office team."
+  Respond with: "For your request regarding [overdraft/fee reversal], you will be transferred to our Back Office team."
   Key triggers: "overdraft," "reverse a fee," "refund," "dispute," "special approval"
   
   For Product Information (Banking Products Services):
@@ -745,15 +719,14 @@ This Agent acts as the virtual front desk of GFM Bank, welcoming customers, iden
   ```
   What's the balance of my account IBAN DE89320895326389021994
   I want to transfer 20 euros from IBAN DE89320895326389021994 to IBAN DE89929842579913662103
-  I want to transfer 4000 EURO from IBAN DE89320895326389021994 to IBAN DE89929842579913662103
-  What is a bank card overdraft?
+  What's the balance of my account IBAN DE89320895326389021994
   How can I avoid overdraft fees?
+  What are the fees for personal banking account?
   I want to request an overdraft of 4000 euros for my account IBAN DE89320895326389021994
   Please approve an overdraft of 4000 EURO for my account IBAN DE89320895326389021994
   What's the balance of my account IBAN DE89320895326389021994
   I want to transfer 4000 EURO from IBAN DE89320895326389021994 to IBAN DE89929842579913662103
   Oh, I made a mistake, can you do a reversal of my previous 4000 EURO payment to my IBAN DE89320895326389021994
-  Please do a reversal of my previous 4000 EURO payment to my IBAN DE89320895326389021994
   ```
 
   ![Text Queries](./images/i36.png)
