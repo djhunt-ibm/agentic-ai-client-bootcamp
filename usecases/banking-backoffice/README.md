@@ -1,4 +1,4 @@
-# 🏦 Banking-Automation with Agentic AI
+# 🏦 Banking Automation with Agentic AI
 
 ![](banking-automation-banner.png)
 
