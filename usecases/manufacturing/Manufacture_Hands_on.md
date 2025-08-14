@@ -153,7 +153,7 @@ A structured and intelligent answer is generated containing:
       Troubleshooting reference for packaging-line error codes across conveyors, packaging machines, fillers, labelers, cappers, and mixers. Includes code descriptions, severity, categories, typical causes, and affected machines to support quick diagnosis and proper escalation.
       ```
       ![Error Data](images/error_know4.jpg)
-10. This is how the knowledge Source looks like
+10. Knowledge source configuration view
 ![Error Agent](images/error_know5.jpg)
 
 11. Add behavior instructions:
@@ -168,7 +168,10 @@ A structured and intelligent answer is generated containing:
 12. Click **Create Agent** → Create from scratch
 13. Configure Machine Agent:
     - **Name**: `machine_agent`
-    - **Description**: `An AI powered agent that specializes in providing machine data from its knowledge-base`
+    - **Description**: 
+    ```
+    An AI powered agent that specializes in providing machine data from its knowledge-base
+    ```
 ![Machine Agent](images/up_new_10_1.jpg)
 
 14. Set configuration:
@@ -185,7 +188,7 @@ A structured and intelligent answer is generated containing:
       ```
       ![Machine Data](images/machine_know4.jpg)
 
-15. This is how the knowledge Source looks like
+15. Knowledge source configuration view
 ![Machine Data](images/machine_know5.jpg)
 
 16. Add behavior instructions:
@@ -200,7 +203,10 @@ A structured and intelligent answer is generated containing:
 17. Click **Create Agent** → Create from scratch
 18. Configure Log Agent:
     - **Name**: `log_agent`
-    - **Description**: `This agent helps to get all types of log data`
+    - **Description**: 
+    ```
+    This agent helps to get all types of log data
+    ```
 ![Log Agent](images/up_new_14.jpg)
 
 19. Set configuration:
