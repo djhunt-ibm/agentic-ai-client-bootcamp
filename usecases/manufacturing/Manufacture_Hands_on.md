@@ -134,16 +134,27 @@ A structured and intelligent answer is generated containing:
 7. Click **Create Agent** → Create from scratch
 8. Configure Error Agent:
    - **Name**: `error_agent`
-   - **Description**: `An AI powered agent that specializes in providing error data from its knowledge-base`
+   - **Description**: 
+   ```
+   An AI powered agent that specializes in providing error data from its knowledge-base
+   ```
 ![Error Agent](images/up_new_6.jpg)
 
 9. Set configuration:
    - **Model**: `llama-3-405b-instruct`
-   - Go to Documents section → Click **Upload Files**
-![Error Data](images/up_new_7.jpg)
-
-10. Upload `error_codes_updated.csv` and click **Upload**
-![Error Agent](images/up_new_8.jpg)
+   - Go to Knowledge section → Click **Choose Knowledge**
+![Error Data](images/error_know1.jpg)
+   - Select →  **Upload Files**
+      ![Error Data](images/error_know2.jpg)
+   - Upload `error_codes_updated.csv` and click **Next**
+      ![Error Data](images/error_know3.jpg)
+   - Add Description →  **Click Next**
+      ```
+      Troubleshooting reference for packaging-line error codes across conveyors, packaging machines, fillers, labelers, cappers, and mixers. Includes code descriptions, severity, categories, typical causes, and affected machines to support quick diagnosis and proper escalation.
+      ```
+      ![Error Data](images/error_know4.jpg)
+10. This is how the knowledge Source looks like
+![Error Agent](images/error_know5.jpg)
 
 11. Add behavior instructions:
     ```
@@ -162,11 +173,20 @@ A structured and intelligent answer is generated containing:
 
 14. Set configuration:
     - **Model**: `llama-3-405b-instruct`
-    - Go to Documents section → Click **Upload Files**
-![Machine Data](images/up_new_11.jpg)
+   - Go to Knowledge section → Click **Choose Knowledge**
+![Machine Data](images/machine_know1.jpg)
+   - Select →  **Upload Files**
+      ![Machine Data](images/machine_know2.jpg)
+   - Upload `machine_codes_updated.csv` and click **Next**
+      ![Machine Data](images/machine_know3.jpg)
+   - Add Description →  **Click Next**
+      ```
+      Troubleshooting reference for packaging-line error codes across conveyors, packaging machines, fillers, labelers, cappers, and mixers. Includes code descriptions, severity, categories, typical causes, and affected machines to support quick diagnosis and proper escalation.
+      ```
+      ![Machine Data](images/machine_know4.jpg)
 
-15. Upload `machine_codes_updated.csv` and click **Upload**
-![Machine Data](images/up_new_12.jpg)
+15. This is how the knowledge Source looks like
+![Machine Data](images/machine_know5.jpg)
 
 16. Add behavior instructions:
     ```
