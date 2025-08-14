@@ -1,4 +1,4 @@
-# 🧑‍💼 AskHR
+# 🧑‍💼 Talent Acquisition with Agentic AI
 
 <img alt="AskHR" src="assets/hr_landscape.jpg">
 
