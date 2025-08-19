@@ -27,8 +27,8 @@ The sales department of ABC Motor Corp, an automotive large player, when prepari
 ## Pre-requisites
 
 - Check with your instructor to make sure **all systems** are up and running before you continue.
-- Please go the through the [environment-setup](./environment-setup) guide for steps on API key creation and related configurations.
-- Make sure you have created a [**watsonx** project](./environment-setup/create-project.md) and a [Deployment Space](https://www.ibm.com/docs/en/watsonx/saas?topic=spaces-creating-deployment) in your **watsonx** project. 
+- Please go the through the [environment-setup](../../environment-setup) guide for steps on API key creation and related configurations.
+- Make sure you have created a [**watsonx** project](../../environment-setup/create-project.md) and a [Deployment Space](https://www.ibm.com/docs/en/watsonx/saas?topic=spaces-creating-deployment) in your **watsonx** project. 
 - If you're an instructor running this lab, check the **Instructor's guides** to set up all environments and systems.
 
 ## Agent Lab - watsonx.ai
