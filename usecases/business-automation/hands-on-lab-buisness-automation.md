@@ -4,14 +4,14 @@
 - [Architecture](#-architecture)
 - [Use Case Description](#use-case-description)
 - [Pre-requisites](#pre-requisites)
-- [Agent Lab - watsonx.ai](#agent-lab---watsonxai)
+- [Create a watsonx.ai Agent](#create-a-watsonxai-agent)
   - [Comparison Agent](#comparison-agent)
     - [Setup](#setup)
     - [Configuration](#configuration)
     - [Tools](#tools)
     - [Saving and Deploying](#saving-and-deploying)
-- [Integrating watsonx.ai's agent as an External Agent in watsonx Orchestrate](#integrating-watsonxais-agent-as-an-external-agent-in-watsonx-orchestrate)
-- [Orchestrate Agent](#orchestrate-agent)
+- [Integrating watsonx.ai agent as an External Agent in watsonx Orchestrate](#integrating-watsonxai-agent-as-an-external-agent-in-watsonx-orchestrate)
+- [Create an Orchestrate Agent](#create-an-orchestrate-agent)
   - [Product Agent](#product-agent)
 - [Experience Agents in Action](#experience-agents-in-action)
 
@@ -31,7 +31,7 @@ The sales department of ABC Motor Corp, an automotive large player, when prepari
 - Make sure you have created a [**watsonx** project](../../environment-setup/create-project.md) and a [Deployment Space](https://www.ibm.com/docs/en/watsonx/saas?topic=spaces-creating-deployment) in your **watsonx** project. 
 - If you're an instructor running this lab, check the **Instructor's guides** to set up all environments and systems.
 
-## Agent Lab - watsonx.ai
+## Create a watsonx.ai Agent
 
 We will create a **Comparison Agent** in watsonx.ai's **Agent Lab** as part of this setup:  
 
@@ -100,7 +100,7 @@ Once the agent is created, save and deploy:
 > **YOU DID IT! you just created and deployed your first AI Agent.**
 > Now let's build more agents and integrate them together.
 
-## Integrating watsonx.ai's agent as an External Agent in watsonx Orchestrate
+## Integrating watsonx.ai agent as an External Agent in watsonx Orchestrate
 
 To deploy your agent on Orchestrate, follow the steps below: 
 
@@ -124,7 +124,7 @@ To deploy your agent on Orchestrate, follow the steps below:
 
 Now let's go to Orchestrate, create other agent and import this agent in that one.
 
-## Orchestrate Agent
+## Create an Orchestrate Agent
 
 In Orchestrate, we will create our main agent, as outlined below:
 
