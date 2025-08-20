@@ -112,8 +112,9 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
 - Keep the channels setting as it is.
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/13-ia.png">
 
-- Click on **Deploy** to deploy the agent
+- Click on **Deploy** in both the screens to deploy the agent.
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/information-agent/14-ia.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/deploy/ia_20.png">
 
 #### Test the Information Agent
 
@@ -233,10 +234,13 @@ For insurers, incoming claims are automatically retrieved and intelligently cros
   ```
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/customer/customer-15.png">
 
-- No need to change `Channels` settings. Click on **Deploy** to deploy the agent.
+- No need to change `Channels` settings.
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/customer/customer-16.png">
+
+- Click on **Deploy** on both the screens to deploy the agent.
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/customer/customer-17.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/deploy/cca_20.png">
   
 #### Test the Customer Claims Agent
   
@@ -411,9 +415,14 @@ You can create additional claims for your assigned name to test the next agent.
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim_processor_insurance_agent/cp-15.png">
 
-- Keep the Channels as it is. Click on **Deploy** to deploy the agent
+- Keep the `Channels` as it is.
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/claim_processor_insurance_agent/cp-18.png">
+
+- Click on **Deploy** on both the screens to deploy the agent
+
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/deploy/cpa_19.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/deploy/cpa_20.png">
 
 #### Test the Claim Processor Agent
 
@@ -560,12 +569,20 @@ You can create additional claims for your assigned name to test the next agent.
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/supervisor_agent/sa_5.png">
 
-- Keep the Channels as it is. Click on **Deploy** to deploy the agent.
+- Keep the `Channels` as it is. 
 
   <img width="1000" alt="image" src="./screenshots_hands_on_lab/supervisor_agent/sa_6.png">
-  <img width="1000" alt="image" src="./screenshots_hands_on_lab/supervisor_agent/sa_7.png">
 
-- You can do all the agent testing mentioned above in the Supevisor Agent.
+- Click on **Deploy** on both the screens to deploy the agent.
+
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/supervisor_agent/sa_7.png">
+  <img width="1000" alt="image" src="./screenshots_hands_on_lab/deploy/sa_20.png">
+
+- You can do the supervisor agent testing according to the below flow. Follow the flow in the sequence mentioned.
+  [Test the Information Agent](#test-the-information-agent)
+  [Test the Customer Claims Agent](#test-the-customer-claims-agent)
+  [Test the Claim Processor Agent](#test-the-claim-processor-agent)
+
 
 ### Further testing via AI Chat
 >
@@ -578,3 +595,4 @@ Navigate to AI chat by going to the hamburger menu at top left and select **Chat
 Then select the agent to test: 
 
 <img width="1000" alt="image" src="./screenshots_hands_on_lab/40.png">
+<img width="1000" alt="image" src="./screenshots_hands_on_lab/deploy/ai_chat_20.png">
