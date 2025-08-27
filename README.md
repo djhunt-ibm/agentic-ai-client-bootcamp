@@ -24,6 +24,6 @@ Select an enterprise use case, learn about the business story, and implement it 
 - [Banking Back Office Automation](./usecases/banking-backoffice/)
 
 
-For additional use cases, please check out the [Agentic AI Bootcamp Community Repository](https://github.ibm.com/skol/agentic-ai-client-bootcamp-community) -- **COMING SOON - see note below**
+For additional use cases, please check out the [Agentic AI Bootcamp Community Repository](https://github.ibm.com/skol/agentic-ai-client-bootcamp-community) -- **see note below**
 
-‼️ **COMING SOON** **The [community repo](https://github.ibm.com/skol/agentic-ai-client-bootcamp-community) is not curated or maintained by the CE WW Agentic AI bootcamp team, so there may be some variation of lab structure/ setup instructions depending on the use case. Please reach out to each individual use case / lab owner if you have questions or need help.**
+‼️ **The [community repo](https://github.ibm.com/skol/agentic-ai-client-bootcamp-community) is not owned by the CE WW Agentic AI bootcamp team, so there may be some variation of lab structure/ setup instructions depending on the use case. Please reach out to each individual use case / lab owner if you have questions or need help.**
