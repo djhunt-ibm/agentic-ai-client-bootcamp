@@ -4,17 +4,17 @@
 
 ## 🤔 The Problem
 
-XYZ Motors, a car manufacturer, spends a significant amount of time with handling equipment malfunction which slows situational awareness, widens quarantines, and drags out root-cause hunts, so every alarm costs time and yield.
+XYZ FMCG Packaging Manufacturer spends a significant amount of time handling equipment malfunctions, which slows situational awareness, widens quarantines, and drags out root-cause hunts, so every alarm costs time and yield.
 
 ## 🎯 Objective
 
-XYZ Motors' manufacturing division faced persistent delays in resolving equipment malfunctions across their production lines. These disruptions often led to extended downtime, increased scrap, and slower recovery cycles. Key issues included:
+XYZ FMCG Packaging Manufacturer faced persistent delays in resolving equipment malfunctions across their production lines. These disruptions often led to extended downtime, increased scrap, and slower recovery cycles. Key issues included:
 
 * Manual fault diagnosis delayed resolution and reduced operational efficiency.
 * Lack of contextual insights limited root-cause visibility.
 * Broader quarantines occurred due to insufficient traceability and real-time data.
 
-To address these challenges, XYZ Motors implemented an AI-powered fault management system driven by cooperating agents that streamline fault detection, analysis, and documentation.
+To address these challenges, XYZ FMCG Packaging Manufacturer implemented an AI-powered fault management system driven by cooperating agents that streamline fault detection, analysis, and documentation.
 
 ## 📈 Business Value
 
@@ -24,7 +24,7 @@ To address these challenges, XYZ Motors implemented an AI-powered fault manageme
 
 ## 🏛 Architecture
 
-To streamline fault diagnosis and resolution across production lines, XYZ Motors has developed a **Multi-Agent AI Fault Management System** that intelligently processes machine-related incidents in real time. This system leverages a collaborative multi-agent framework powered by **Watsonx Orchestrate** and **Watsonx.ai**, allowing operational teams to respond faster, minimize downtime, and retain critical knowledge.
+To streamline fault diagnosis and resolution across production lines, XYZ FMCG Packaging has developed a **Multi-Agent AI Fault Management System** that intelligently processes machine-related incidents in real time. This system leverages a collaborative multi-agent framework powered by **Watsonx Orchestrate** and **Watsonx.ai**, allowing operational teams to respond faster, minimize downtime, and retain critical knowledge.
 
 The architecture consists of specialized AI agents, each designed to handle specific tasks, working together to deliver an intelligent, structured, and actionable response to equipment failures.
 
