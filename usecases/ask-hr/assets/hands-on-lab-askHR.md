@@ -67,8 +67,8 @@ In this lab we will build an HR agent in watsonx Orchestrate, leveraging tools a
 -->   
 1. Select **Default** in **Agent style** section.
 
-   <img width="1000" alt="image" src="hands-on-lab-assets/step_5_v2.png">
-   
+   <img width="1000" alt="image" src="hands-on-lab-assets/step_5_v3.png">
+  
 1. Scroll down the screen to the **Knowledge** section.
    Click on **Choose knowledge**.
    
