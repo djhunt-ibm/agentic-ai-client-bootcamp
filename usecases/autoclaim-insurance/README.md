@@ -56,7 +56,7 @@ ABC Insurance Agency is a pioneer in Auto-insurance. While ABC Insurance has lon
 
 ## 🏛 Architecture
 
-![Architecture](/usecases/autoclaim-insurance/assets/Autoclaims_Insurance_Architecture_v4.png)
+![Architecture](/usecases/autoclaim-insurance/assets/Autoclaims_Insurance_Architecture_v5.png)
 
 ---
 
