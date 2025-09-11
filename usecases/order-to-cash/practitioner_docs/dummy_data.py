@@ -45,6 +45,57 @@ po_data = [
         "unit_rate": "430.35",
         "taxable_value": "3,387,715.20",
         "total_amount": "3,997,503.00"
+    },
+    {
+        "po_date": "23-12-2023",
+        "po_number": "4200054529",
+        "payment_terms": "A012",
+        "quote_number": "23MS2022002018",
+        "bill_to_party_name": "AMBA RIVER COKE LTD. _TOP_1",
+        "bill_to_party_address": "Geetapuram, Village Dolvi, Tai-Pen Raigad, Dolvi -402107, State Maharashtra",
+        "bill_to_party_gstin": "27AAACG5394G1ZH",
+        "ship_to_party_name": "AMBA RIVER COKE LTD. _TOP_1",
+        "ship_to_party_address": "Geetapuram, Village Dolvi, Tai - PenRaigad, Dolvi-402107, State Maharashtra",
+        "ship_to_party_gstin": "27AAACG5394G1ZH",
+        "product_desc": "SVC.SEAFRT JSW ARJUNGAD",
+        "qty": "7,872.000",
+        "unit_rate": "430.35",
+        "taxable_value": "3,387,715.20",
+        "total_amount": "3,997,503.00"
+    },
+    {
+        "po_date": "23-12-2023",
+        "po_number": "4100096723",
+        "payment_terms": "A012",
+        "quote_number": "23MS2022002018",
+        "bill_to_party_name": "AMBA RIVER COKE LTD. _TOP_1",
+        "bill_to_party_address": "Geetapuram, Village Dolvi, Tai-Pen Raigad, Dolvi -402107, State Maharashtra",
+        "bill_to_party_gstin": "27AAACG5394G1ZH",
+        "ship_to_party_name": "AMBA RIVER COKE LTD. _TOP_1",
+        "ship_to_party_address": "Geetapuram, Village Dolvi, Tai - PenRaigad, Dolvi-402107, State Maharashtra",
+        "ship_to_party_gstin": "27AAACG5394G1ZH",
+        "product_desc": "SVC.SEAFRT JSW ARJUNGAD",
+        "qty": "7,872.000",
+        "unit_rate": "430.35",
+        "taxable_value": "3,387,715.20",
+        "total_amount": "3,997,503.00"
+    },
+    {
+        "po_date": "23-12-2023",
+        "po_number": "4900048319",
+        "payment_terms": "A012",
+        "quote_number": "23MS2022002018",
+        "bill_to_party_name": "AMBA RIVER COKE LTD. _TOP_1",
+        "bill_to_party_address": "Geetapuram, Village Dolvi, Tai-Pen Raigad, Dolvi -402107, State Maharashtra",
+        "bill_to_party_gstin": "27AAACG5394G1ZH",
+        "ship_to_party_name": "AMBA RIVER COKE LTD. _TOP_1",
+        "ship_to_party_address": "Geetapuram, Village Dolvi, Tai - PenRaigad, Dolvi-402107, State Maharashtra",
+        "ship_to_party_gstin": "27AAACG5394G1ZH",
+        "product_desc": "SVC.SEAFRT JSW ARJUNGAD",
+        "qty": "7,872.000",
+        "unit_rate": "430.35",
+        "taxable_value": "3,387,715.20",
+        "total_amount": "3,997,503.00"
     }
 ]
 
@@ -130,6 +181,7 @@ order_data = [{
     }
               ]
 
+
 user_emails = [
     {"name": "Acme Corp - John Smith", "email": "john.smith@acmecorp.com"},
     {"name": "Globex Ltd - Maria Gonzales", "email": "maria.gonzales@globex.com"},
@@ -137,6 +189,8 @@ user_emails = [
     {"name": "Umbrella Inc - Lily Tran", "email": "lily.tran@umbrella.com"},
     {"name": "Wayne Enterprises - Bruce Wayne", "email": "bruce.wayne@wayneenterprises.com"}
 ]
+
+
 
 # Convert to DataFrames
 all_po_data_df = pd.DataFrame(all_po_data)
@@ -147,7 +201,6 @@ remittance_data_df = pd.DataFrame(remittance_data)
 invoice_data_df = pd.DataFrame(invoice_data)
 order_data_df = pd.DataFrame(order_data)
 user_emails_df = pd.DataFrame(user_emails)
-
 
 selected_columns = ["payment_terms",
         "bill_to_party_name",
@@ -207,5 +260,3 @@ for column in selected_columns:
 
 # Convert to DataFrame for better visualization
 inv_comparison_df = pd.DataFrame(inv_comparison_data)
-
-
