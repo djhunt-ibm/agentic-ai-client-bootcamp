@@ -91,8 +91,8 @@ In this lab, you'll build a complete Agentic AI solution for GFM Bank using wats
 ### Prerequisites
 **Instructors**: 
 - Check the [Instructor's guide](https://github.ibm.com/skol/agentic-ai-client-bootcamp-instructors/tree/main/usecase-setup/banking-backoffice) to set up all environments and backend services.
-- Ensure you have provided an updated [bank.json](https://github.ibm.com/skol/agentic-ai-client-bootcamp-instructors/blob/main/usecase-setup/banking-backoffice/CoreBank-backend/bank.json) with the correct url to your deployed backend service for the lab participants.
-- If participant plans to complete the optional Voice interaction steps at the end of the lab, you will need to have **Speech to Text** and/or **Text to Speech** services provisioned in the Instructor's cloud environment and retrieve the service URL and api key to share with the participant.
+- Ensure you have provided an updated [bank.json](https://github.ibm.com/skol/agentic-ai-client-bootcamp-instructors/blob/main/usecase-setup/banking-backoffice/CoreBank-backend/bank.json) with the correct URL to your deployed backend service for the lab participants.
+- If participant plans to complete the optional Voice interaction steps at the end of the lab, instructor will need to provision **Speech to Text** and/or **Text to Speech** services in the Instructor's cloud environment and retrieve the service URL and service API key to share with the participant.
   
 **Participants**:
 - Validate that you have access to the right TechZone environment for this lab
