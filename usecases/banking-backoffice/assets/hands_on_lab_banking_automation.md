@@ -6,26 +6,28 @@
 - [📊 Banking Operations](#-banking-operations)
   - [Current User Scenario](#current-user-scenario)
   - [Future with Agentic AI](#future-with-agentic-ai)
-- [🏗️ Target Architecture with Agentic AI](#%EF%B8%8F-target-architecture-with-agentic-ai)
+- [🏗️ Target Architecture with Agentic AI](#️-target-architecture-with-agentic-ai)
 - [🔧 Lab Instructions](#-lab-instructions)
   - [Prerequisites](#prerequisites)
   - [Lab Steps Overview](#lab-steps-overview)
-- [Connect to your assigned Watsonx Orchestrate instance](#connect-to-your-assigned-watsonx-orchestrate-instance)
-- [GFM Back Office Agent](#gfm-back-office-agent)
-  - [Create the GFM Back Office Agent](#create-the-gfm-back-office-agent)
-  - [Test and deploy the GFM Back Office Agent](#test-and-deploy-the-gfm-back-office-agent)
-- [GFM Teller Agent](#gfm-teller-agent)
-  - [Create GFM Teller Agent](#create-gfm-teller-agent)
-  - [Test and deploy the GFM Teller Agent](#test-and-deploy-the-gfm-teller-agent)
-- [GFM Product Information Agent](#gfm-product-information-agent)
-  - [Create GFM Product Information Agent](#create-gfm-product-information-agent)
-  - [Test and deploy the GFM Product Information Agent](#test-and-deploy-the-gfm-product-information-agent)
-- [GFM Bank Orchestrator Agent](#gfm-bank-orchestrator-agent)
-  - [Create GFM Bank Orchestrator Agent](#create-gfm-bank-orchestrator-agent)
-  - [Add collaborative Agents](#add-collaborative-agents)
-  - [Test and deploy the GFM Bank Orchestrator Agent](#test-and-deploy-the-gfm-bank-orchestrator-agent)
+  - [Connect to your assigned Watsonx Orchestrate instance](#connect-to-your-assigned-watsonx-orchestrate-instance)
+  - [GFM Back Office Agent](#gfm-back-office-agent)
+    - [Create the GFM Back Office Agent](#create-the-gfm-back-office-agent)
+    - [Test and deploy the GFM Back Office Agent](#test-and-deploy-the-gfm-back-office-agent)
+  - [GFM Teller Agent](#gfm-teller-agent)
+    - [Create GFM Teller Agent](#create-gfm-teller-agent)
+    - [Test and deploy the GFM Teller Agent](#test-and-deploy-the-gfm-teller-agent)
+  - [GFM Product Information Agent](#gfm-product-information-agent)
+    - [Create GFM Product Information Agent](#create-gfm-product-information-agent)
+    - [Test the and deploy GFM Product Information Agent](#test-the-and-deploy-gfm-product-information-agent)
+  - [GFM Bank Orchestrator Agent](#gfm-bank-orchestrator-agent)
+    - [Create GFM Bank Orchestrator Agent](#create-gfm-bank-orchestrator-agent)
+    - [Add collaborative Agents](#add-collaborative-agents)
+    - [Test and deploy the GFM Bank Orchestrator Agent](#test-and-deploy-the-gfm-bank-orchestrator-agent)
 - [Test Your Agentic AI Banking Solution](#test-your-agentic-ai-banking-solution)
 - [🎉 Congratulations! You have completed the lab!](#-congratulations-you-have-completed-the-lab)
+- [🔊 Additional Feature to Try: Voice Interaction](#-additional-feature-to-try-voice-interaction)
+  - [✨ You successfully added Voice Configuration to your agent!](#-you-successfully-added-voice-configuration-to-your-agent)
 - [📚 Resources](#-resources)
 
 ## 🔍 Introduction
@@ -87,10 +89,13 @@ The entire process takes minutes instead of hours, and John never has to leave h
 In this lab, you'll build a complete Agentic AI solution for GFM Bank using watsonx Orchestrate. You'll create multiple specialized agents that work together to handle customer requests.
 
 ### Prerequisites
-- Check with your instructor to ensure all systems are up and running before you continue
+**Instructors**: 
+- Check the [Instructor's guide](https://github.ibm.com/skol/agentic-ai-client-bootcamp-instructors/tree/main/usecase-setup/banking-backoffice) to set up all environments and backend services.
+- Ensure you have provided an updated [bank.json](https://github.ibm.com/skol/agentic-ai-client-bootcamp-instructors/blob/main/usecase-setup/banking-backoffice/CoreBank-backend/bank.json) with the correct url to your deployed backend service for the lab participants.
+  
+**Participants**:
 - Validate that you have access to the right TechZone environment for this lab
 - Validate that you have access to a credentials file that your instructor will share with you before starting the labs
-- If you're an instructor running this lab, check the Instructor's guides to set up all environments and systems
 - Basic understanding of banking operations (e.g., transfer, balance check, overdraft...)
 - Familiarity with AI agent concepts (e.g., instructions, tools, collaborators...)
 
@@ -410,13 +415,12 @@ This Agent acts as the trusted expert on all banking products and services offer
 
   ![Upload Files](./prod_info_ag_imgs/i12.png)
 
-- Upload the listed documents below provided by the instructor and click **Next**
+- Upload the listed documents below (may need to be provided by instructor if you don't have access) and click **Next**
 
-  ```
-  list-of-prices-and-Services.pdf
-  ser-terms-conditions-debit-cards.pdf
-  Overdraft Services FAQ
-  ```
+  [list-of-prices-and-Services.pdf](./prod_info_ag_imgs/list-of-prices-and-Services-deutsche-bank-ag.pdf)  
+  [ser-terms-conditions-debit-cards.pdf](./prod_info_ag_imgs/ser-terms-conditions-debit-cards.pdf)  
+  [Overdraft Services FAQ.docx](./prod_info_ag_imgs/Overdraft%20Services%20FAQ.docx)
+
   
   ![Upload Documents](./prod_info_ag_imgs/i11.png)
 
@@ -719,7 +723,6 @@ This Agent acts as the virtual front desk of GFM Bank, welcoming customers, iden
   ```
   What's the balance of my account IBAN DE89320895326389021994
   I want to transfer 20 euros from IBAN DE89320895326389021994 to IBAN DE89929842579913662103
-  What's the balance of my account IBAN DE89320895326389021994
   How can I avoid overdraft fees?
   What are the fees for personal banking account?
   I want to request an overdraft of 4000 euros for my account IBAN DE89320895326389021994
@@ -745,6 +748,66 @@ This lab demonstrates how AI agents can transform banking operations by:
 - Ensuring consistent application of banking policies
 - Freeing human staff for more complex tasks
 
+## 🔊 Additional Feature to Try: Voice Interaction
+You can record and interact with agents using your voice!
+
+⚠️ **Disclaimer:** This feature is currently only available in **preview** and not on deployed Agents.
+
+> Check with the instructor regarding provisioned **Speech to Text** and **Text to Speech** instances and their service URLs and API Keys for the following steps.
+
+- Open the hamburger menu, click on **Manage**->**Voice**.
+
+  ![Manage voice](./images/v1.png)
+
+- Click on **Create voice configuration**
+
+  ![Voice configuration create](./images/v2.png)
+
+- In the **Details** tab, enter a name for the voice configuration and click **Next**.
+
+  ![Voice configuration create](./images/v3.png)
+
+- If enabling **Speech to Text**, on the **Speech to Text** tab:
+
+  - Enter the API URL of the **Watson Speech to Text** instance provided by your instructor.
+  - Enter the API key of this instance.
+  - Select the **Speech to Text** language model.
+  - Click **Next**
+
+  ![Voice configuration get APIKEY and URL](./images/v4.png)
+
+- If enabling **Text to Speech**, on the **Text to Speech** tab:
+
+  - Enter the API URL of the **Watson Text to Speech** instance provided by your instructor.
+  - Enter the API key of this instance.
+  - Select the language of the voice.
+  - Select the type of voice.
+  - Define the speed and pitch of the voice.
+  - Click **Finish**.
+
+  ![Voice configuration get APIKEY and URL](./images/v5.png)
+
+- You should see the created **Voice Configuration**
+
+  ![Created voice configuration](./images/v6.png)
+
+  For more information on enabling Voice in **Agent Builder**, refer to [Voice Configuration](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=agents-configuring-voice-preview)
+
+- To add **Voice Configuration** to your agent, go to **Build**->**Agent Builder**
+
+  ![Agent builder](./images/v7.png)  
+
+- Select the **Agent** you want to add the **Voice Configuration** to
+
+  ![Select agent voice](./images/v8.png)
+
+- Under the **Voice modality** section, select the created **Voice assistant**
+
+  ![Select voice configuration](./images/v9.png)
+
+### ✨ You successfully added Voice Configuration to your agent!
+Now you can test the voice configuration with the prompts in the preview page!
+  
 ## 📚 Resources
 
 For more information on Watsonx Orchestrate and Agentic AI:
