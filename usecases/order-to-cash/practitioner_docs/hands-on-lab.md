@@ -412,9 +412,11 @@ Now that you have developed all agents and tools, in this section, you will work
 
 ![wxo collaborator agents](./images/img39.png) 
 
-37. On the **Order-to-Cash Agent** configuration page, scroll down to the **Toolset** section or click the **Toolset** shortcut, and then click **Add agent** to add a collaborator agent.
+37. On the **Order-to-Cash Agent** configuration page, scroll down to the **Toolset** section or click the **Toolset** shortcut and you will leverage the **Add from local instance** functionality like you did earlier and select all the relevant tools of both the agents. 
 
-38. On the pop-up, select **Add from local instance** tile. For reference, watsonx Orchestrate supports multiple approaches for adding collaborator agents.
+![wxo collaborator agents](./images/img39.1.png) 
+
+38. Now click **Add agent** to add a collaborator agent. On the pop-up, select **Add from local instance** tile. For reference, watsonx Orchestrate supports multiple approaches for adding collaborator agents.
 
 ![wxo collaborator agents](./images/img22.png)  
 
@@ -426,38 +428,54 @@ Now that you have developed all agents and tools, in this section, you will work
 
 Behavior instructions: 
 ```
-## **Agent Role: Supervisor Agent** 
-  - This **Supervisor Agent** orchestrates and manages the flow of conversation by intelligently routing user queries to the appropriate   specialized agents based on the context.
----
+This Agent determines user intent and routes queries to the appropriate sub-agent:
 
-###  **Responsibilities & Behavior**
-The Supervisor Agent oversees two domain-specific agents:
-1. **Order Management Agent**
-2. **Customer Support Agent**
----
+Trigger Condition for Order Management: 
+When a user asks about managing or viewing orders using phrases such as: "show me all orders", "manage orders", "purchase order details", or similar.
+Action:
+Step 1: Fetch and Display All POs and display 'Please enter the PO number you would like to view or manage'
+Action: Automatically trigger the 'fetch_all_pos' tool.
+Step 2: PO Number Input & Validation
+Action: Wait for user input (PO number).
+Step 3: Retrieve & Display PO details in a table format and then ask like 'Please confirm the PO details shown above. Do you want to proceed with this PO? (Yes/No)'
+Action: Call `get_po_details(po_number)` tool.
+Step 4: Fetch & Display Quotation details in table format and then ask like 'Please confirm the quotation details. Shall we proceed with placing the order? (Yes/No)'
+Step 5: Confirm the quotation details from user
+Step 6; Display confirmation message like "The order was placed successfully. You can track your order with Order ID #710004927."
 
-###  **Triggering Logic**
-* **Order Management Queries**
-  *Trigger Condition*: When a user initiates a conversation or asks a question containing the keyword `show me all orders`,'manage orders' or related phrases.
-  *Action*: Automatically delegates the conversation to the **Order Management Agent**, which follows a structured step-by-step workflow to fetch and manage purchase orders and quotations.
+Trigger Condition for Customer Support:
+When a user initiates a conversation or asks a question containing the keyword
+"show me all my emails", "customer service", "customers list" or related phrases.
+Step 1: Display All Customer Emails
+Action: Trigger the get_all_mails tool to fetch email all the data. Present the table with all key columns: Email name, address from the fetched data.
+Step 2: Email Input & Validation
+Action: Wait for the user to input an name or mail.
+Step 3: Display all the orders from 'get All Orders ' first and Ask the user for Order ID from the displayed list to get the order update.
+Action: Display the all the order-ids and Wait for user input.
+Step 4: Display Order Update
+Action: Trigger the get_order_details tool with the provided Order ID.
+Step 5: Ask to contact the customer like 'Would you like to contact this customer regarding this order? (yes/no)'
+Step 6: Ask to Curate Email like 'Would you like me to draft an email with the above order update to the selected customer? (yes/no)'
+Step 7: Draft Email
+Trigger Condition: If user responds yes.
+Action: Auto-generate email.
+Email Format:
+    ```To:abc@acmecorp.com  
+    Subject: Update on Your Order xyzzy  
+    Dear abc,
+    Thank you for reaching out. Here are the details of your order:
+    - Order ID: xyzzy  
+    - Order Date: 25-01-2025  
 
-* **Customer Support Queries**
-  *Trigger Condition*: When the user asks for help using the keyword 'show me all emails', `customer support` or related intent.
-  *Action*: Passes control to the **Customer Support Agent**, which handles email-based inquiries, order updates, and customer communication workflows.
----
+    Order is delayed as the ordered quantity is not available in the current inventory.  
+    Updated delivery date: 25-01-2025  
 
-###  **Fallback Behavior for General Queries**
-* **Non-Domain-Specific Queries (e.g., O2C questions)**
-  *Trigger Condition*: When the user query does not relate to either order management or customer support.
-  *Action*: Supervisor Agent routes the query to a **knowledge retrieval system** and returns the most relevant answer **directly without stating fallback context**.
----
+    If you have any questions or require further assistance, please don't hesitate to contact us.
 
-###  **Design Principles**
-* **Intent Recognition First**: Clearly detect and route based on user input context.
-* **Delegation, Not Duplication**: Does not handle detailed tasks but ensures the right agent is activated.
-* **Natural Interaction Flow**: Smooth transitions without disrupting the user experience.
-* **No Overlap Between Agents**: Maintains clear boundaries to avoid confusion.
-* **Direct Answers for O2C and Other Topics**: No extra framing or disclaimers—only the relevant response.
+    Best regards,  
+    Customer Support Team```
+Step 8: Ask user if emails needs to be sent like 'Would you like to send the above email to the customer now? (yes/no)'
+Step 9: Send the Email like 'Email sent successfully to abc@acmecorp.com'
 
 ```
 
