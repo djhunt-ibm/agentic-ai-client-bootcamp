@@ -104,7 +104,7 @@ In this lab we will build an HR agent in watsonx Orchestrate, leveraging tools a
 
    <img width="1000" alt="image" src="hands-on-lab-assets/step_11_v3.png">
 
-1. Drag and drop or click to upload the **hr.yaml** file (provided to you by the instructor), then click on **Next**:
+1. Download the [hr.yaml](/usecases/ask-hr/assets/hr.yaml) onto your system, then upload the file here, then click on **Next**:
 
    <img width="1000" alt="image" src="hands-on-lab-assets/step_12_v3.png">    
 
